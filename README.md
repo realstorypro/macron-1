@@ -8,5 +8,5 @@ The Instruction Manual
 ```bash
   foreman run rails db:create
   foreman run rails db:migrate
-  foreman run rails s
+  foreman run rails S
 ```
