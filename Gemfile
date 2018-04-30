@@ -45,6 +45,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'rubocop'
+  gem "rubocop-rails"
   gem 'rspec-rails'
   gem 'rspec-cells'
   gem 'factory_bot_rails'
