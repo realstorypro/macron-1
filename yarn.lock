@@ -7600,7 +7600,7 @@ selfsigned@^1.9.1:
   dependencies:
     node-forge "0.7.1"
 
-semantic-ui@^2.2.13:
+semantic-ui@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/semantic-ui/-/semantic-ui-2.3.1.tgz#ff33ac086e9a9daf63ab2b729f15b436d67bb859"
   dependencies:
