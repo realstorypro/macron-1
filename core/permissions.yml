@@ -1,0 +1,29 @@
+abilities:
+  - 'all'
+  - 'create'
+  - 'read'
+  - 'update'
+  - 'delete'
+  - 'moderate'
+
+
+# This maps controller actions to abilities defined above
+actions:
+  index:
+    'read'
+  show:
+    'read'
+  edit:
+    'update'
+  update:
+    'update'
+  destroy:
+    'delete'
+  new:
+    'create'
+  create:
+    'create'
+  ban:
+    'moderate'
+  unban:
+    'moderate'
