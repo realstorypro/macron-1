@@ -24,8 +24,18 @@
       "plan": "heroku-postgresql:hobby-dev"
     }
   ],
-  "scripts": {
-    "db-create": "bin/rails db:create",
-    "test-setup": "bin/rails assets:precompile"
+  "environments": {
+    "test": {
+      "addons": ["heroku-postgresql:in-dyno", "heroku-redis:in-dyno"],
+      "scripts": {
+        "test-setup": "gem install rubocop",
+        "test": "rubocop ."
+      }
+    }
   }
+  // ,
+  //  "scripts": {
+  //    "db-create": "bin/rails db:create",
+  //    "test-setup": "bin/rails assets:precompile"
+  //  }
 }
