@@ -15,11 +15,3 @@ var
 ;
 gulp.task('watch ui', watch);
 ```
-
-## Semantic UI
-Installation
-
-```bash
-npm install semantic-ui
-rm package-lock.json
-```

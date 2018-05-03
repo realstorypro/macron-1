@@ -1,0 +1,11 @@
+{
+  "name": "Aquarius1",
+  "description": "Implementation of Aquarius1 Platform",
+  "keywords": [
+    "platform",
+    "ruby",
+    "rails"
+  ],
+  "website": "https://aquarius1.tech/",
+  "repository": "https://github.com/leouofa/aquarius1.tech"
+}
