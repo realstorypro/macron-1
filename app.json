@@ -23,5 +23,8 @@
     {
       "plan": "heroku-postgresql:hobby-dev"
     }
-  ]
+  ],
+  "scripts": {
+    "test-setup": "bin/rails assets:precompile"
+  }
 }
