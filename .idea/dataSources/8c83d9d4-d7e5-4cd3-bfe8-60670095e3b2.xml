@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Rails aquarius: test">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.8">
+    <root id="1">
+      <ServerVersion>9.5.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="aquarius_test">
+      <ObjectId>202840</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12641</ObjectId>
+    </database>
+    <database id="4" parent="1" name="lmedovyy">
+      <ObjectId>16385</ObjectId>
+    </database>
+    <database id="5" parent="1" name="dragon_core/layouts_development">
+      <ObjectId>41302</ObjectId>
+    </database>
+    <database id="6" parent="1" name="dragon_core/layouts_test">
+      <ObjectId>41304</ObjectId>
+    </database>
+    <database id="7" parent="1" name="dragon_core_dummy_development">
+      <ObjectId>41404</ObjectId>
+    </database>
+    <database id="8" parent="1" name="dragon_core_dummy_test">
+      <ObjectId>41405</ObjectId>
+    </database>
+    <database id="9" parent="1" name="shell_development">
+      <ObjectId>44396</ObjectId>
+    </database>
+    <database id="10" parent="1" name="shell_test">
+      <ObjectId>44397</ObjectId>
+    </database>
+    <database id="11" parent="1" name="heantos_development">
+      <ObjectId>45148</ObjectId>
+    </database>
+    <database id="12" parent="1" name="heantos_test">
+      <ObjectId>47916</ObjectId>
+    </database>
+    <database id="13" parent="1" name="destinationtravel_development">
+      <ObjectId>56108</ObjectId>
+    </database>
+    <database id="14" parent="1" name="destinationtravel_test">
+      <ObjectId>56109</ObjectId>
+    </database>
+    <database id="15" parent="1" name="aniwa_development">
+      <ObjectId>57713</ObjectId>
+    </database>
+    <database id="16" parent="1" name="aniwa_test">
+      <ObjectId>57714</ObjectId>
+    </database>
+    <database id="17" parent="1" name="dc_dummy_development">
+      <ObjectId>82908</ObjectId>
+    </database>
+    <database id="18" parent="1" name="radiant9_development">
+      <ObjectId>125018</ObjectId>
+    </database>
+    <database id="19" parent="1" name="core_dummy_development">
+      <ObjectId>125565</ObjectId>
+    </database>
+    <database id="20" parent="1" name="squasher">
+      <ObjectId>125982</ObjectId>
+    </database>
+    <database id="21" parent="1" name="dc_dummy_test">
+      <ObjectId>128658</ObjectId>
+    </database>
+    <database id="22" parent="1" name="radiant9_test">
+      <ObjectId>139110</ObjectId>
+    </database>
+    <database id="23" parent="1" name="gravity_development">
+      <ObjectId>154739</ObjectId>
+    </database>
+    <database id="24" parent="1" name="aniwaco_development">
+      <ObjectId>155331</ObjectId>
+    </database>
+    <database id="25" parent="1" name="aniwaco_test">
+      <ObjectId>155332</ObjectId>
+    </database>
+    <database id="26" parent="1" name="gravity_test">
+      <ObjectId>183276</ObjectId>
+    </database>
+    <database id="27" parent="1" name="core_dummy_test">
+      <ObjectId>202120</ObjectId>
+    </database>
+    <database id="28" parent="1" name="aquarius_development">
+      <ObjectId>202839</ObjectId>
+    </database>
+    <role id="29" parent="1" name="lmedovyy">
+      <ObjectId>16384</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="30" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="31" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-04-30.00:50:22.167</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="32" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="33" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="34" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="35" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="36" parent="2" name="information_schema">
+      <ObjectId>12349</ObjectId>
+    </schema>
+  </database-model>
+</dataSource>

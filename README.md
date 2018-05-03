@@ -1,15 +1,12 @@
-# Aquarius.AI
+## AQUARIUS1.TECH
 
-The Instruction Manual
-
-## Installation
+This is a WIP instruction manual for the platform.
 
 ## Running It
 ```bash
-  foreman run rails db:create
-  foreman run rails db:migrate
-  foreman run rails S
+  foreman s
 ```
 
-## To Read
+#### Helpful Documents
+##### Testing
 - https://wyeworks.com/blog/2018/1/16/Testing-Vuejs-in-Rails-with-Webpacker-and-Jest
