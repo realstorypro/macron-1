@@ -25,6 +25,7 @@
     }
   ],
   "scripts": {
+    "db-create": "bin/rails db:create",
     "test-setup": "bin/rails assets:precompile"
   }
 }
