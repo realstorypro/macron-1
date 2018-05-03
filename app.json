@@ -7,5 +7,35 @@
     "rails"
   ],
   "website": "https://aquarius1.tech/",
-  "repository": "https://github.com/leouofa/aquarius1.tech"
+  "repository": "https://github.com/leouofa/aquarius1.tech",
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "addons": [
+    {
+      "plan": "sendgrid:starter"
+    },
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    }
+  ],
+  "environments": {
+    "test": {
+      "addons": ["heroku-postgresql:in-dyno", "heroku-redis:in-dyno"],
+      "scripts": {
+        "test-setup": "gem install rubocop",
+        "test": "rubocop ."
+      }
+    }
+  }
+  // ,
+  //  "scripts": {
+  //    "db-create": "bin/rails db:create",
+  //    "test-setup": "bin/rails assets:precompile"
+  //  }
 }
