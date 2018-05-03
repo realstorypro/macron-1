@@ -15,5 +15,10 @@
     {
       "url": "heroku/nodejs"
     }
+  ],
+  "addons": [
+    {
+      "plan": "sendgrid:starter"
+    }
   ]
 }
