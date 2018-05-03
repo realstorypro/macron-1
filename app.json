@@ -7,5 +7,13 @@
     "rails"
   ],
   "website": "https://aquarius1.tech/",
-  "repository": "https://github.com/leouofa/aquarius1.tech"
+  "repository": "https://github.com/leouofa/aquarius1.tech",
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
 }
