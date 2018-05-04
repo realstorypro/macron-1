@@ -22,8 +22,20 @@
     },
     {
       "plan": "heroku-postgresql:hobby-dev"
+    },
+    {
+      "plan": "heroku-redis:hobby-dev"
+    },
+    {
+      "plan": "papertrail:choklad"
     }
   ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  },
   "environments": {
     "test": {
       "addons": ["heroku-postgresql:in-dyno", "heroku-redis:in-dyno"],

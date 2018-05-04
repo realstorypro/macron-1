@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+FactoryBot.define do
+  factory :user, class: User do
+    email { Faker::Internet.unique.email }
+    username { Faker::Internet.unique.email }
+    password { Faker::Internet.password }
+
+    trait :admin do
+      after(:create) do |user|
+        user.add_role(:admin)
+      end
+    end
+  end
+end
