@@ -5,33 +5,67 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.3.1"
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "~> 5.2.0"
-# Use postgresql as the database for Active Record
-gem "pg", ">= 0.18", "< 2.0"
-# Use Puma as the app server
-gem "puma", "~> 3.11"
-# Use SCSS for stylesheets
-gem "sass-rails", "~> 5.0"
-# Use Uglifier as compressor for JavaScript assets
-gem "uglifier", ">= 1.3.0"
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem "webpacker"
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
-
-# Use CoffeeScript for .coffee assets and views
-gem "coffee-rails", "~> 4.2"
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem "turbolinks", "~> 5"
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "jbuilder", "~> 2.5"
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-
-gem "slim-rails"
-
+# Backend
+gem "ahoy_matey"
+gem "analytics-ruby"
+gem "blazer"
 gem "bootsnap", ">= 1.1.0", require: false
+gem "iso_country_codes"
+gem "nexmo"
+gem "rails", "~> 5.2.0"
+gem "pg", ">= 0.18", "< 2.0"
+gem "phonelib"
+gem "puma", "~> 3.11"
+gem "redis"
+gem "redis-namespace"
+gem "redis-rails"
+gem "redis-rack-cache"
+gem "rack-mini-profiler"
+gem "chronic"
+gem "config"
+gem "erubis"
+gem "friendly_id", "~> 5.1.0"
+gem "groupdate"
+gem "httparty"
+gem "validate_url"
+gem "wicked"
+
+# Pagination
+gem "kaminari"
+
+# Active Record
+gem "store_base_sti_class"
+
+# Authentication
+gem "devise"
+gem "rolify"
+gem "pundit"
+
+# SEO
+gem "meta-tags"
+
+# Javascript
+gem "uglifier", ">= 1.3.0"
+gem "jbuilder", "~> 2.5"
+gem "coffee-rails", "~> 4.2"
+gem "turbolinks", "~> 5"
+
+# Presentation
+gem "webpacker", "~> 3.0"
+gem "slim-rails"
+gem "semantic-ui-sass" # Still needed because we're using the breadcrumb helper
+gem "cells"
+gem "cells-rails"
+gem "cells-slim"
+gem "chartkick"
+gem "simple_form"
+gem "readingtime"
+
+# File Upload
+gem "uploadcare-rails"
+
+# Errors
+gem "rollbar"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
