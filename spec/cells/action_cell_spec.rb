@@ -1,7 +1,9 @@
-# rubocop:disable BlockLength
-require 'rails_helper'
+# frozen_string_literal: true
 
-describe Admin::ActionsCell, type: 'feature' do
+# rubocop:disable BlockLength
+require "rails_helper"
+
+describe Admin::ActionsCell, type: "feature" do
   before :each do
     @actions = []
     @cell = Admin::ActionsCell
@@ -12,35 +14,35 @@ describe Admin::ActionsCell, type: 'feature' do
     @cell = nil
   end
 
-  describe 'buttons' do
-    it 'does not render a cell without permission' do
+  describe "buttons" do
+    it "does not render a cell without permission" do
       @actions << {
-        text: 'Test Action',
+        text: "Test Action",
         permission: false
       }
 
       expect(@cell.call(nil,
                         actions: @actions,
                         show: :buttons)
-       .call).to_not have_content('Test Action')
+       .call).to_not have_content("Test Action")
     end
 
-    it 'renders with permissions' do
+    it "renders with permissions" do
       @actions << {
-        text: 'Test Action',
+        text: "Test Action",
         permission: true
       }
 
       expect(@cell.call(nil,
                         actions: @actions,
                         show: :buttons)
-       .call).to have_content('Test Action')
+       .call).to have_content("Test Action")
     end
 
-    it 'renders an icon' do
+    it "renders an icon" do
       @actions << {
-        text: 'Test Action',
-        icon: 'edit',
+        text: "Test Action",
+        icon: "edit",
         permission: true
       }
 
@@ -48,13 +50,13 @@ describe Admin::ActionsCell, type: 'feature' do
                         actions: @actions,
                         icons: true,
                         show: :buttons)
-       .call).to have_css('.icon.edit')
+       .call).to have_css(".icon.edit")
     end
 
-    it 'renders a left labeled button' do
+    it "renders a left labeled button" do
       @actions << {
-        text: 'Test Action',
-        icon: 'edit',
+        text: "Test Action",
+        icon: "edit",
         permission: true
       }
 
@@ -63,13 +65,13 @@ describe Admin::ActionsCell, type: 'feature' do
                         icons: true,
                         labeled: true,
                         show: :buttons)
-       .call).to have_css('.left.labeled.icon')
+       .call).to have_css(".left.labeled.icon")
     end
 
-    it 'renders a right labeled button' do
+    it "renders a right labeled button" do
       @actions << {
-        text: 'Test Action',
-        icon: 'edit',
+        text: "Test Action",
+        icon: "edit",
         permission: true
       }
 
@@ -79,33 +81,33 @@ describe Admin::ActionsCell, type: 'feature' do
                         icon_position: :right,
                         labeled:
                         true, show: :buttons)
-       .call).to have_css('.right.labeled.icon')
+       .call).to have_css(".right.labeled.icon")
     end
   end
 
-  describe 'dropdown' do
-    it 'does not render a cell without permission' do
+  describe "dropdown" do
+    it "does not render a cell without permission" do
       @actions << {
-        text: 'Test Action',
+        text: "Test Action",
         permission: false
       }
 
       expect(@cell.call(nil,
                         actions: @actions,
                         show: :dropdown)
-       .call).to_not have_content('Test Action')
+       .call).to_not have_content("Test Action")
     end
 
-    it 'renders with permissions' do
+    it "renders with permissions" do
       @actions << {
-        text: 'Test Action',
+        text: "Test Action",
         permission: true
       }
 
       expect(@cell.call(nil,
                         actions: @actions,
                         show: :dropdown)
-       .call).to have_content('Test Action')
+       .call).to have_content("Test Action")
     end
   end
 end

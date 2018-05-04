@@ -1,10 +1,12 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 include ApplicationHelper
 include PathHelper
 
-@components = s('components')
-tests = s('tests')
+@components = s("components")
+tests = s("tests")
 
 # Returns the constanized class name
 def build_class(test)
@@ -42,8 +44,8 @@ end
 
 tests.each do |test|
   next unless test.implementation == true
-  next unless test.actions.include?('index') || test.actions.include?('show')
-  @testing << build_test_hash(test, 'admin') if test.admin
+  next unless test.actions.include?("index") || test.actions.include?("show")
+  @testing << build_test_hash(test, "admin") if test.admin
   @testing << build_test_hash(test) if test.frontend
 end
 
@@ -62,14 +64,14 @@ end
       sign_out @admin
     end
 
-    if t[:actions].include? 'index'
+    if t[:actions].include? "index"
       it "can successfully load an index page in :: #{t[:namespace]}" do
         visit meta_index_path t[:namespace], t[:component]
         expect(page.status_code).to be 200
       end
     end
 
-    if t[:actions].include? 'show'
+    if t[:actions].include? "show"
       it "can successfully load a show page in :: #{t[:namespace]}" do
         build_factory t
         last_entry = build_class(t).last
