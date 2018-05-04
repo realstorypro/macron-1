@@ -72,20 +72,43 @@ group :development, :test do
 end
 
 group :development do
-  gem "web-console", ">= 3.3.0"
+  gem "rb-readline"
+
+  gem "better_errors"
+  gem "binding_of_caller"
+
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+
+  # guard files
+  gem "guard"
+  gem "guard-rspec", require: false
+  gem "guard-rubocop"
+  gem "terminal-notifier-guard", "~> 1.6.1"
+
+  gem "web-console", ">= 3.3.0"
 end
 
 group :test do
-  gem "capybara", ">= 2.15", "< 4.0"
-  gem "selenium-webdriver"
-  gem "chromedriver-helper"
+
+  # code quality
+  gem "simplecov", require: false
+  gem "codecov", require: false
+
+  # rubocop
   gem "rubocop"
   gem "rubocop-rails"
+
+  # browser testing
+  gem "selenium-webdriver"
+  gem "chromedriver-helper"
+  gem "capybara", ">= 2.15", "< 4.0"
+
+  # testing
   gem "rspec-rails"
   gem "rspec-cells"
+  gem "rails-controller-testing"
   gem "factory_bot_rails"
   gem "faker"
 end
