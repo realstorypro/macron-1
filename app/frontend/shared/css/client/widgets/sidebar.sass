@@ -1,0 +1,65 @@
+.sidebar.widget
+  background: $w-sidebar-background
+  padding: $w-sidebar-padding
+
+  .segment.closing.wrapper
+    padding: 0
+    margin-bottom: 0
+
+    .header
+      padding: 0
+      margin: 0
+
+    .button
+      padding: 0
+      box-shadow: none
+
+      &:hover, &:focus
+        background: none !important
+
+  .ui.divider.top.navigation
+    margin: 0.5em 0 0
+
+  .ui.divider.bottom.navigation
+    margin: 0
+
+
+  .ui.inverted.vertical.text.menu
+    width: 100%
+    background: none
+    box-shadow: none
+    border: 0
+    margin: 0
+
+    a.item
+      padding: 0.6em 0
+      font-size: 1.0em
+      color: $w-sidebar-item-font-color
+      font-weight: $w-sidebar-item-font-weight
+      text-transform: $w-sidebar-text-case
+
+      &.active
+        color: $w-sidebar-item-active-font-color
+        font-weight: $w-sidebar-item-active-font-weight
+
+  &.ui
+    width: $w-sidebar-width
+    @include media("<tablet")
+      width: 100%
+
+  .heading.segment
+    padding: 0.5em 0 0 0
+    margin: 0.2em 0 0 0
+    align-items: center
+
+    .header
+      text-transform: $w-sidebar-text-case
+      margin: 0
+
+    .right
+      margin-top: -3px // bumping the close button
+      cursor: pointer
+
+      .icon
+        margin-right: 0 // removing the margin off the close button
+

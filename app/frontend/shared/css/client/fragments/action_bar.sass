@@ -1,0 +1,51 @@
+.action.bar.fragment
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: $f-action-bar-padding-top
+  padding-bottom: $f-action-bar-padding-bottom
+  border-top: $f-action-bar-border-top
+  border-bottom: $f-action-bar-border-bottom
+  @include media("<tablet")
+    padding-top: $f-action-bar-mobile-padding-top
+    border-top: $f-action-bar-mobile-border-top
+    border-bottom: $f-action-bar-mobile-border-bottom
+    display: block
+
+  .breadcrumb
+    @include media("<tablet")
+      display: none
+
+    .section
+      padding-top: $f-action-bar-breadcrumb-padding-top
+      text-transform: uppercase
+
+  .filter
+    display: inline-block
+    @include media("<tablet")
+      display: block
+      margin-right: 0
+      margin-bottom: 1em
+
+
+
+    .ui.dropdown
+      @include media("<tablet")
+        display: block
+        width: 100%
+        min-width: 0em
+
+  .header
+    margin: 0
+    line-height: 43px
+    @include media("<tablet")
+      margin-bottom: 0.5em
+
+  // making drawer buttons *almost* perfect for the mobile
+  // ok since drawer is rarley used
+  // if we use it more it needs to be refactored into something prettier
+  @include media("<tablet")
+    .ui.right
+      .button
+        width: 48%
+

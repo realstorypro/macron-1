@@ -1,0 +1,25 @@
+.component.videos.listing
+  padding-top: $header-external-padding
+  padding-bottom: $footer-padding
+  @include media("<tablet")
+    padding-top: $header-external-mobile-padding
+    padding-bottom: $footer-mobile-padding
+
+  .segment
+    @include media("<tablet")
+      padding: 0
+
+.component.videos.details
+  padding-top: $header-padding
+  padding-bottom: $footer-padding
+  @include media("<tablet")
+    padding-top: $header-mobile-padding
+    padding-bottom: $footer-mobile-padding
+
+.video.details.component
+  .header.fragment
+    .video
+      margin-top: 1.2em
+      @include media("<desktop")
+        margin-top: 2em
+        margin-bottom: 1em

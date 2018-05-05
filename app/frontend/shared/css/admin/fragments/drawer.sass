@@ -1,0 +1,20 @@
+.fragment.ui.right.sidebar.huge
+  @include media("≥desktop")
+    width: 100%
+  @include media("≥tablet", "<desktop")
+    width: 100%
+  @include media("≥phone", "<tablet")
+    width: 100%
+
+  // Pusher & Overlay
+  &.right
+    background: white !important
+
+  .head.wrapper
+    padding-top: 0
+
+  .dividing.header
+    font-weight: normal
+
+    &:not(:first-child)
+      margin-top: 3em

@@ -1,0 +1,147 @@
+.widget.comments
+  max-width: 100%
+
+  .post
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 3.0em
+    border-bottom: $w-comments-post-bottom-border
+    background: $w-comments-post-background
+    box-shadow: $w-comments-post-box-shadow
+
+    .ui.dropdown .menu
+      left: auto !important
+      right: 0px !important
+
+    & .meta
+      width: 100%
+      background: $w-comments-post-meta-background
+      display: flex
+      justify-content: space-between
+      padding: 0.5em 0.9em
+      color: $w-comments-post-meta-font-color
+      font-weight: bold
+
+
+    & .profile
+      width: 25%
+      padding: 1em
+      background: $w-comments-post-profile-background
+      border-right: $w-comments-post-profile-right-border
+      border-left: $w-comments-post-profile-left-border
+      @include media("<tablet")
+        width: 100%
+
+      .author
+        font-weight: bold
+        font-size: 1.2em
+        @include media("<tablet")
+          display: none
+
+      .title
+        margin-bottom: 0.5em
+        @include media("<tablet")
+          display: none
+
+      .joined
+        margin-top: 0.5em
+
+        @include media("<tablet")
+          display: none
+
+      .location
+        @include media("<tablet")
+          display: none
+
+      .age
+        @include media("<tablet")
+          display: none
+
+      .posts
+        @include media("<tablet")
+          display: none
+
+      .desktop.actions
+        margin-top: 2em
+        @include media("<tablet")
+          display: none
+
+      .mobile.left.wrapper
+        @include media("<tablet")
+          margin-right: 1em
+          float: left
+
+      .mobile.right.wrapper
+        @include media("<tablet")
+          float: left
+          display: flex
+          align-items: center
+          height: 100%
+
+        .author, .title
+          display: none
+          @include media("<tablet")
+            display: block
+
+
+
+    & .content
+      width: 75%
+      padding: 1em 1.5em 1.5em
+      border-right: $w-comments-post-content-right-border
+      @include media("<tablet")
+        width: 100%
+        padding: 1em
+        border-left: $w-comments-post-content-mobile-left-border
+        border-top: $w-comments-post-content-mobile-top-border
+
+      img
+        max-width: 100%
+
+      h2, h4
+        text-transform: uppercase
+
+      h2
+        font-size: $w-comments-large-header-font-size
+        margin-bottom: 0.5em
+
+      h4
+        font-size: $w-comments-small-header-font-size
+        margin-bottom: 0.5em
+        margin-top: 0
+
+  .new.comment
+    padding: 2em
+    border: $w-comments-new-comment-border
+
+    h5
+      margin-bottom: 1.5em
+
+
+    .submit.button, .button.reset
+      margin-top: 1em
+
+    .submit.button
+      margin-right: 5px
+
+    .button.reset
+      margin-left: 5px
+
+
+  .unregistered.segment
+    padding: 3.5em 2em
+
+    h5
+      margin-bottom: 2em
+
+// Redactor Styling
+
+.redactor-dropdown-item-large-header
+  text-transform: uppercase
+  font-weight: bold
+  font-size: $w-comments-large-header-font-size
+
+.redactor-dropdown-item-small-header
+  text-transform: uppercase
+  font-weight: bold
+  font-size: $w-comments-small-header-font-size

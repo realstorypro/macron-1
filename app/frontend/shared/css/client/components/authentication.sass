@@ -1,0 +1,41 @@
+.authentication.component
+  .header.fragment
+    padding: $c-auth-padding
+    display: flex
+    align-items: center
+
+    p
+      color: black
+      text-shadow: none
+
+  .segment.auth.box
+    background: rgba(255,255,255,1)
+
+
+  &.signup,
+  &.signin,
+  &.reset.password,
+  &.edit.password,
+  &.edit.account,
+  &.verify.phone
+
+    .segment.auth.box
+      margin: 0 auto
+
+      @include media("≥phone", "<tablet")
+        margin : 4em auto 1em
+        width: 90%
+
+      @include media("≥tablet")
+        width: 30em
+
+      .forgot.remember.separator
+        font-size: 28px
+        line-height: 24px
+        color: $black
+        font-weight: bold
+        margin: 0 0.3em
+
+  &.edit.account
+    .segment.auth.box
+      margin-top: 3em

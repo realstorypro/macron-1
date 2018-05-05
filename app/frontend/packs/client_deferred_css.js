@@ -1,0 +1,1 @@
+import '../shared/css/client/plugins/redactor/redactor'

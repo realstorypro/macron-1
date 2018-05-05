@@ -1,0 +1,118 @@
+.page.home .navigation.widget
+  background: white
+
+@include media(">=desktop")
+  .articles.show .navigation.widget,
+  .videos.show .navigation.widget,
+  .verifications .navigation.widget,
+  .registrations .navigation.widget,
+  .sessions .navigation.widget,
+  .passwords .navigation.widget,
+  .after_signup .navigation.widget
+    background: rgba(0,0,0,0)
+
+    .logo.image.normal
+      display: none
+
+    .logo.image.inverted
+      display: block
+
+    i
+      color: $white
+
+    &.mini
+      background: $white
+
+      .logo.image.normal
+        display: block
+
+      .logo.image.inverted
+        display: none
+
+      i
+        color: $black
+
+.navigation.widget
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: $w-navigation-z-index
+  border-bottom: $w-navigation-border
+  box-shadow: $w-navigation-box-shadow
+  background: $w-navigation-background
+  transition: $w-navigation-up-transition
+
+
+  // Hiding Inverted Logo
+  .logo.image.inverted
+    display: none
+
+  // Link Adjustments
+  .item.icon.hamburger
+    margin-left: -3px
+
+  .logo.link
+    transition: $w-navigation-logo-up-transition
+    padding-left: 0
+    margin-left: 0
+
+  .menu a.link.item:hover
+    background: none
+
+  .sign.in.button
+    margin-right: -12px
+
+
+  .profile.dropdown
+    margin-right: -12px
+
+    &:hover, &:active
+      background: transparent !important
+
+    .menu
+      margin: -7px -1px 0 0 !important
+
+      .header
+        font-size: 0.9em !important
+        font-weight: normal
+
+        .username
+          font-weight: bold
+
+      .divider
+        margin: 0
+
+      .item
+        display: block
+        width: 100%
+
+
+  .desktop.logo.image
+    width: $w-navigation-logo-width
+    height: $w-navigation-logo-height
+    padding: $w-navigation-logo-padding
+    transition: $w-navigation-down-transition
+    @include media("<desktop")
+      display: none
+
+
+  .mobile.logo.image
+    display: none
+    width: $w-navigation-mobile-logo-width
+    height: $w-navigation-mobile-logo-height
+    padding: $w-navigation-mobile-logo-padding
+    transition: $w-navigation-down-transition
+    @include media("<desktop")
+      display: block
+      
+.navigation.widget.mini
+  border-bottom: $w-navigation-mini-border
+  box-shadow: $w-navigation-mini-box-shadow
+  background: $w-navigation-mini-background
+  transition: $w-navigation-down-transition
+
+  .logo.link
+    transition: $w-navigation-logo-down-transition
+    padding-top: 0
+    padding-bottom: 0

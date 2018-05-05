@@ -70,7 +70,8 @@ gem "readingtime"
 gem "webpacker", "~> 3.0"
 
 # File Upload
-gem "uploadcare-rails"
+# gem "uploadcare-rails"
+gem "uploadcare-rails", :git => 'https://github.com/uploadcare/uploadcare-rails.git', :tag => 'v1.2.0-alpha'
 gem "fog-aws"
 
 # Errors

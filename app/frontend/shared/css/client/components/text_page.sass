@@ -1,0 +1,23 @@
+.text.page.component
+  padding-top: $header-external-padding
+  padding-bottom: $footer-padding
+  @include media("<tablet")
+    padding-top: $header-external-mobile-padding
+    padding-bottom: $footer-mobile-padding
+
+  .segment
+    @include media("<tablet")
+      padding: 0
+
+  h1.ui.header
+    border-top: $c-text-page-header-top-border
+    margin-top: $c-text-page-header-top-margin
+    padding-top: $c-text-page-header-top-padding
+    font-size: $c-text-page-header-size
+    @include media("<tablet")
+      margin-top: $c-text-page-mobile-header-top-margin
+
+  h5, p, ul
+    max-width: 80%
+    @include media("<tablet")
+      max-width: 100%
