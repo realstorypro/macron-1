@@ -1,0 +1,14 @@
+= widget name: 'newsletter', class: 'hidden', id: 'newsletter', vue: :on
+  = h5 text: 'Get Our Updates'
+  p v-if="!errorMessage && !successMessage" transition="fade"
+    | Receive a weekly newsletter with our new articles & discussions.
+  p v-if="errorMessage && !successMessage" transition="fade"
+    | {{ hardcodedErrorMessage }}
+  p v-if="successMessage" transition="fade"
+    | {{ hardcodedSuccessMessage }}
+  form.ui.form @submit.prevent="subscribe($event)" v-if="!successMessage"
+    = field 'field fluid'
+      input type='email' placeholder='Email Address' name="email" v-model='email' required='true'
+    button.ui.primary.icon.button.right.labeled.fluid type='submit' v-bind:class='{ loading: sending }'
+      = icon 'right chevron'
+      | Subscribe

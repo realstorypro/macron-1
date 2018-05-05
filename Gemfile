@@ -5,30 +5,37 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.3.1"
 
-# Backend
-gem "ahoy_matey"
-gem "analytics-ruby"
-gem "blazer"
-gem "bootsnap", ">= 1.1.0", require: false
-gem "iso_country_codes"
-gem "nexmo"
+# Core
 gem "rails", "~> 5.2.0"
-gem "pg", ">= 0.18", "< 2.0"
-gem "phonelib"
+gem "bootsnap", ">= 1.1.0", require: false
 gem "puma", "~> 3.11"
-gem "redis"
-gem "redis-namespace"
-gem "redis-rails"
-gem "redis-rack-cache"
-gem "rack-mini-profiler"
+gem "httparty"
+gem "validate_url"
 gem "chronic"
 gem "config"
 gem "erubis"
 gem "friendly_id", "~> 5.1.0"
-gem "groupdate"
-gem "httparty"
-gem "validate_url"
 gem "wicked"
+
+# Analytics
+gem "ahoy_matey"
+gem "analytics-ruby"
+gem "blazer"
+gem "groupdate"
+
+# Databases
+gem "pg", ">= 0.18", "< 2.0"
+gem "redis"
+gem "redis-namespace"
+gem "redis-rails"
+gem "redis-rack-cache"
+
+# Phone Tools
+gem "nexmo"
+gem "phonelib"
+gem "iso_country_codes"
+
+# gem "rack-mini-profiler"
 
 # Pagination
 gem "kaminari"
@@ -51,7 +58,7 @@ gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 
 # Presentation
-gem "webpacker", "~> 3.0"
+gem 'dc_ui', github: 'leonid-io/dc-ui', branch: 'master'
 gem "slim-rails"
 gem "semantic-ui-sass" # Still needed because we're using the breadcrumb helper
 gem "cells"
@@ -60,9 +67,11 @@ gem "cells-slim"
 gem "chartkick"
 gem "simple_form"
 gem "readingtime"
+gem "webpacker", "~> 3.0"
 
 # File Upload
 gem "uploadcare-rails"
+gem 'fog-aws'
 
 # Errors
 gem "rollbar"

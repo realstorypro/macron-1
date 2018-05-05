@@ -29,3 +29,9 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
+# Env Files
+.env
+
+# Redis Files
+dump.rdb

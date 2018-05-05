@@ -1,0 +1,9 @@
+= dynamic id: 'breadcrumb' do
+  - if model.present?
+    = widget 'breadcrumb'
+      = icon 'angle double right normal'
+      - model[0..-2].each do |crumb|
+        = link_to crumb[:name], crumb[:url], crumb[:options]
+        = icon 'angle right normal'
+      span.active.section
+        = model.last[:name]

@@ -1,0 +1,2 @@
+class BreadcrumbsCell < Cell
+end
