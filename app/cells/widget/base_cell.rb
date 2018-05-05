@@ -3,6 +3,7 @@
 module Widget
   class BaseCell < Cell::ViewModel
     include ApplicationHelper
+    include DcUi::Helpers
 
     def show
       render(options[:layout])

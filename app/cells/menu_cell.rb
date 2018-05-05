@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
+include Rails.application.routes.mounted_helpers
+
 class MenuCell < Cell::ViewModel
   include ApplicationHelper
+  include DcUi::Helpers
+  delegate :url_helpers, to: "Rails.main_app.routes"
 
   def show
     render
@@ -53,7 +57,7 @@ class MenuCell < Cell::ViewModel
 
     # returns a formatted link path
     def menu_path(path)
-      send(path + "_path")
+      url_helpers.send(path + "_path")
     end
 
     # checks if the path is active
