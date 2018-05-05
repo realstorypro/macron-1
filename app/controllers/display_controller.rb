@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true
-
 class DisplayController < MetaController
   before_action :entry_class
   before_action :fetch_categories, only: [:index]

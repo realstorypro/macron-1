@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true
-
 class Article < Entry
   content_attr :long_title, :string
   content_attr :long_summary, :text

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true
-
 class PageController < ApplicationController
   layout "layouts/client"
   before_action :set_meta_data, except: %i[sitemap home]

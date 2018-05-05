@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true
-
 class ExceptionsController < ApplicationController
   def page_not_found
     respond_to do |format|

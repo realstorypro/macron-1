@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true
-
 class MetaController < ApplicationController
   include SettingsHelper
   include PathHelper
