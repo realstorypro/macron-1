@@ -1,21 +1,25 @@
-  module Widget
-    class BaseCell < Cell
-      include ApplicationHelper
+# frozen_string_literal: true
 
-      def show
-        render(options[:layout])
-      end
+# frozen_string_literal: true
 
-      def component
-        options[:component]
-      end
+module Widget
+  class BaseCell < Cell
+    include ApplicationHelper
 
-      def component_name
-        s("components.#{options[:component]}.name")
-      end
+    def show
+      render(options[:layout])
+    end
 
-      def component_path
-        s("components.#{options[:component]}.path")
-      end
+    def component
+      options[:component]
+    end
+
+    def component_name
+      s("components.#{options[:component]}.name")
+    end
+
+    def component_path
+      s("components.#{options[:component]}.path")
     end
   end
+end

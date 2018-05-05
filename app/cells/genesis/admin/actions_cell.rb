@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Admin
   class ActionsCell < Cell
     include ApplicationHelper
@@ -10,8 +12,8 @@ module Admin
 
     def show
       case options[:show]
-      when :buttons then render 'buttons'
-      when :dropdown then render 'dropdown'
+      when :buttons then render "buttons"
+      when :dropdown then render "dropdown"
       end
     end
 
@@ -38,10 +40,10 @@ module Admin
 
     private
 
-    def build_button_class(base_class)
-      base_class ||= ''
-      base_class << (' ' + icon_position.to_s + ' labeled icon') if labeled?
-      base_class
-    end
+      def build_button_class(base_class)
+        base_class ||= ""
+        base_class << (" " + icon_position.to_s + " labeled icon") if labeled?
+        base_class
+      end
   end
 end

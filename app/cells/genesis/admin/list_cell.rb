@@ -1,31 +1,35 @@
-  module Admin
-    class ListCell < BaseCell
-      def show
-        render
+# frozen_string_literal: true
+
+# frozen_string_literal: true
+
+module Admin
+  class ListCell < BaseCell
+    def show
+      render
+    end
+
+    # renders table header
+    def header
+      render
+    end
+
+    # renders table rows
+    def rows
+      content = ""
+
+      options[:records].each do |record|
+        content.concat(row(record))
       end
 
-      # renders table header
-      def header
-        render
-      end
+      content.html_safe
+    end
 
-      # renders table rows
-      def rows
-        content = ''
+    # renders table row
+    def row(row)
+      render(locals: { row: row })
+    end
 
-        options[:records].each do |record|
-          content.concat(row(record))
-        end
-
-        content.html_safe
-      end
-
-      # renders table row
-      def row(row)
-        render(locals: { row: row })
-      end
-
-      private
+    private
 
       # makes fields easily accessable by the view
       def fields
@@ -42,5 +46,5 @@
         model_name = options[:model].class.to_s.underscore.singularize
         model_name
       end
-    end
   end
+end

@@ -58,7 +58,7 @@ gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 
 # Presentation
-gem 'dc_ui', github: 'leonid-io/dc-ui', branch: 'master'
+gem "dc_ui", github: "leonid-io/dc-ui", branch: "master"
 gem "slim-rails"
 gem "semantic-ui-sass" # Still needed because we're using the breadcrumb helper
 gem "cells"
@@ -71,7 +71,7 @@ gem "webpacker", "~> 3.0"
 
 # File Upload
 gem "uploadcare-rails"
-gem 'fog-aws'
+gem "fog-aws"
 
 # Errors
 gem "rollbar"
