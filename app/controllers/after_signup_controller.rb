@@ -4,11 +4,11 @@
 # rubocop:disable PerceivedComplexity
 # rubocop:disable EmptyWhen
 # rubocop:disable AbcSize
-require_dependency "genesis/application_controller"
+require_dependency "application_controller"
 
 class AfterSignupController < ApplicationController
   include Wicked::Wizard
-  layout "genesis/layouts/auth"
+  layout "layouts/auth"
 
   before_action :init_nexmo
 

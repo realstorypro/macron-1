@@ -10,18 +10,18 @@ html
     = stylesheet_pack_tag 'admin_deferred_css', media: 'none', onload: "if(media!='all')media='all'"
     = javascript_pack_tag 'admin_js'
     = uploadcare_settings
-    = render 'genesis/layouts/partials/admin/inline_js'
+    = render 'layouts/partials/admin/inline_js'
     script src="https://wchat.freshchat.com/js/widget.js"
 
 
   body.pushable
-    = render 'genesis/layouts/partials/drawers'
-    = render 'genesis/layouts/partials/notifications'
+    = render 'layouts/partials/drawers'
+    = render 'layouts/partials/notifications'
 
     .pusher
       = fragment 'full height'
         = fragment 'side nav'
-          = render 'genesis/layouts/partials/admin/sidebar'
+          = render 'layouts/partials/admin/sidebar'
         = fragment 'main'
           .scrollable
             = container
@@ -31,15 +31,15 @@ html
                     = segment class: 'basic no padding', id: 'header', dynamic: :on
                       = fragment 'action bar just bordered'
                         = left
-                          == Genesis::BreadcrumbsCell.(@breadcrumbs) if @breadcrumbs.present?
+                          == BreadcrumbsCell.(@breadcrumbs) if @breadcrumbs.present?
                         = right
-                          ==  Genesis::Admin::ActionsCell.(nil,
+                          ==  Admin::ActionsCell.(nil,
                                   actions: @actions,
                                   show: :buttons,
                                   icons: false) if @actions.present?
                     == yield
 
-    = render 'genesis/layouts/partials/loading_js'
+    = render 'layouts/partials/loading_js'
 
 
     - if controller.controller_name == 'support'

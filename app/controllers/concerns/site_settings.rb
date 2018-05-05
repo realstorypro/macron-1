@@ -15,7 +15,7 @@ module SiteSettings
       site_settings = $redis.get("site_settings")
 
       if site_settings.nil?
-        site_settings = Genesis::Setting.instance.to_json
+        site_settings = Setting.instance.to_json
         $redis.set("site_settings", site_settings)
       end
 

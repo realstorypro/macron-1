@@ -9,12 +9,12 @@ class DisplayController < MetaController
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
   after_action :record_view, only: [:show]
   helper_method :index_path, :show_path
-  layout "genesis/layouts/client"
+  layout "layouts/client"
 
   def index
     @entries = if params[:category]
       entry_class.joins(:category)
-                 .where(genesis_categories: { slug: params[:category] })
+                 .where(categories: { slug: params[:category] })
                  .order("published_date desc")
                  .page params[:page]
     else
@@ -51,7 +51,7 @@ class DisplayController < MetaController
       end
 
       def fetch_categories
-        @categories = Genesis::Category.joins(params[:component].downcase.pluralize.to_sym).distinct(:id).order(:name)
+        @categories = Category.joins(params[:component].downcase.pluralize.to_sym).distinct(:id).order(:name)
       end
 
       def set_index_seo_meta

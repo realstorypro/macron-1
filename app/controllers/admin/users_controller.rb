@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require_dependency "genesis/application_controller"
+require_dependency "application_controller"
 
 module Admin
   class UsersController < CrudController
     def index
-      @entries = entry_class.all.order("genesis_users.created_at desc")
-      render "genesis/admin/crud/index"
+      @entries = entry_class.all.order("users.created_at desc")
+      render "admin/crud/index"
     end
 
     def show
@@ -18,7 +18,7 @@ module Admin
       end
 
       semantic_breadcrumb @entry.email, "#"
-      render "genesis/admin/crud/show"
+      render "admin/crud/show"
     end
 
     # handles banning users

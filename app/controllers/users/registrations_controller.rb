@@ -3,7 +3,7 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  layout "genesis/layouts/auth"
+  layout "layouts/auth"
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :load_country_codes, only: [:edit, :update]

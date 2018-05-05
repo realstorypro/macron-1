@@ -1,10 +1,7 @@
-
-# frozen_string_literal: true
-
 # frozen_string_literal: true
 
 module Widget
-  class SidenavCell < Genesis::MenuCell
+  class SidenavCell < MenuCell
     include Devise::Controllers::Helpers
 
     def show

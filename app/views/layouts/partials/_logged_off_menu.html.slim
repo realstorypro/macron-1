@@ -20,7 +20,7 @@
     = divider
     = header text: "Don't have an account?", class: 'inside'
     = field 'fluid'
-      = button text: 'Create one', url: genesis.sign_up_path, class: 'large primary basic button fluid inverted'
+      = button text: 'Create one', url: sign_up_path, class: 'large primary basic button fluid inverted'
 
     // [hack] Hiding the simple_form generated form. The values are needed by the the vue widget.
     = simple_form_for(:user, url: session_path(:user), html: {class: 'hidden devise form'}) do |f|

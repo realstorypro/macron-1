@@ -2,7 +2,7 @@
 
 # rubocop:disable GlobalVars
 
-$redis = Redis::Namespace.new("genesis", redis: Redis.new)
+$redis = Redis::Namespace.new("aquarius", redis: Redis.new)
 
 # clearing things out old site settings
 $redis.del "site_settings"

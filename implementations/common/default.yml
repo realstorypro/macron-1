@@ -242,84 +242,84 @@ components:
   site_settings:
     name: 'Settings'
     description: 'Provides settings capabilities'
-    klass: 'Genesis::Setting'
+    klass: 'Setting'
     path: 'settings'
     enabled: true
 
   members:
     name: 'Members'
     description: 'Allows for members being viewed'
-    klass: 'Genesis::User'
+    klass: 'User'
     path: 'members'
     enabled: true
 
   profile:
     name: 'Profile'
     description: 'Allows for user profile management'
-    klass: 'Genesis::Profile'
+    klass: 'Profile'
     path: 'profile'
     enabled: true
 
   users:
     name: 'Users'
     description: 'Allows for user management'
-    klass: 'Genesis::User'
+    klass: 'User'
     path: 'users'
     enabled: true
 
   articles:
     name: 'Articles'
     description: 'Provides article writing capabilities'
-    klass: 'Genesis::Article'
+    klass: 'Article'
     path: 'articles'
     enabled: true
 
   discussions:
     name: 'Discussions'
     description: 'Provides discussion capabilities'
-    klass: 'Genesis::Discussion'
+    klass: 'Discussion'
     path: 'discussions'
     enabled: true
 
   videos:
     name: 'Videos'
     description: 'Provides project capabilities'
-    klass: 'Genesis::Video'
+    klass: 'Video'
     path: 'videos'
     enabled: true
 
   profile:
     name: 'Profile'
     description: 'Provides profile capabilities'
-    klass: 'Genesis::Profile'
+    klass: 'Profile'
     path: 'profile'
     enabled: true
 
   comments:
     name: 'Comments'
     description: 'Provides commenting capabilities'
-    klass: 'Genesis::Comment'
+    klass: 'Comment'
     path: 'comments'
     enabled: true
 
   advertisements:
     name: 'Advertisements'
     description: 'Provides ad capabilities'
-    klass: 'Genesis::Advertisement'
+    klass: 'Advertisement'
     path: 'advertisements'
     enabled: true
 
   tags:
     name: 'Tags'
     description: 'Provides tagging capabilities'
-    klass: 'Genesis::Tag'
+    klass: 'Tag'
     path: 'tags'
     enabled: true
 
   categories:
     name: 'Categories'
     description: 'Provides categorization capabilities'
-    klass: 'Genesis::Category'
+    klass: 'Category'
     path: 'categories'
     enabled: true
 

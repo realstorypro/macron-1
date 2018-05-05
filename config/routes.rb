@@ -16,9 +16,9 @@ Rails.application.routes.draw do
       class_name: "User",
       module: :users,
       controllers: {
-          sessions: "genesis/users/sessions",
-          registrations: "genesis/users/registrations",
-          passwords: "genesis/users/passwords"
+          sessions: "users/sessions",
+          registrations: "users/registrations",
+          passwords: "users/passwords"
       }
   )
 

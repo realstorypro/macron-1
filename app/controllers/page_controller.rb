@@ -3,13 +3,13 @@
 # frozen_string_literal: true
 
 class PageController < ApplicationController
-  layout "genesis/layouts/client"
+  layout "layouts/client"
   before_action :set_meta_data, except: %i[sitemap home]
 
   def home
-    @featured = Genesis::Article.joins(category: :color)
+    @featured = Article.joins(category: :color)
                                 .includes(category: :color).order("published_date desc").limit(2)
-    @discussions = Genesis::Discussion.joins(category: :color)
+    @discussions = Discussion.joins(category: :color)
                                       .includes(category: :color).order("published_date desc").limit(6)
   end
 

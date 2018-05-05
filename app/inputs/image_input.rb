@@ -2,7 +2,7 @@
 
 # custom 'rich' input type for simple_form
 class ImageInput < SimpleForm::Inputs::Base
-  include Genesis::SettingsHelper
+  include SettingsHelper
   def input(_wrapper_options)
     image_size = size(attribute_name)
     @builder.uploadcare_field(attribute_name, data: { 'images-only': true, crop: image_size }).to_s.html_safe

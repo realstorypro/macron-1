@@ -62,8 +62,8 @@ class Setting < ApplicationRecord
 
   def self.instance
     Setting.first_or_create! do |settings|
-      settings.name = "Genesis Default Title"
-      settings.description = "Genesis Default Description"
+      settings.name = "Aquarius Default Title"
+      settings.description = "Aquarius Default Description"
 
       settings.url = "https://www.rungravity.com"
       settings.facebook = "https://www.facebook.com/rungravity"

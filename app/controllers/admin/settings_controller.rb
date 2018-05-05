@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
-require_dependency "genesis/application_controller"
+require_dependency "application_controller"
 
 module Admin
   class SettingsController < MetaController
     include SettingsHelper
     include PathHelper
-    include Genesis::AdminAccess
-    layout "genesis/layouts/admin"
+    include AdminAccess
+    layout "layouts/admin"
 
     before_action :set_breadcrumb
 
     def index
-      @entry = Genesis::Setting.instance
+      @entry = Setting.instance
 
       add_to_actions(
         text: "Edit Settings",
@@ -25,12 +25,12 @@ module Admin
     end
 
     def edit
-      @entry = Genesis::Setting.instance
+      @entry = Setting.instance
       render :edit, layout: false
     end
 
     def update
-      @entry = Genesis::Setting.instance
+      @entry = Setting.instance
       if @entry.update(entry_params)
         flash[:success] = "settings were successfully updated."
         response_status :success

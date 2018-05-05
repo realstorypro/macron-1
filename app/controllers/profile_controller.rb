@@ -6,10 +6,10 @@ class ProfileController < MembersController
   before_action :preload_entry
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
 
-  layout "genesis/layouts/client"
+  layout "layouts/client"
   def show
     @editable = true
-    render "genesis/members/show"
+    render "members/show"
   end
 
   private
@@ -20,15 +20,15 @@ class ProfileController < MembersController
     end
 
     def preload_entry
-      @comments = Genesis::Comment.where(user_id: @member.id).order("created_at desc")
+      @comments = Comment.where(user_id: @member.id).order("created_at desc")
 
-      article_comments = Genesis::Comment.where(user_id: @member.id, commentable_type: "Genesis::Article")
+      article_comments = Comment.where(user_id: @member.id, commentable_type: "Article")
       article_comments = article_comments.select(:commentable_id).distinct.pluck(:commentable_id)
-      @commented_articles = Genesis::Article.joins(:category).find(article_comments)
+      @commented_articles = Article.joins(:category).find(article_comments)
 
-      discussion_comments = Genesis::Comment.where(user_id: @member.id, commentable_type: "Genesis::Discussion")
+      discussion_comments = Comment.where(user_id: @member.id, commentable_type: "Discussion")
       discussion_comments = discussion_comments.select(:commentable_id).distinct.pluck(:commentable_id)
-      @commented_discussions = Genesis::Discussion.joins(:category).find(discussion_comments)
+      @commented_discussions = Discussion.joins(:category).find(discussion_comments)
     end
 
     def record_view

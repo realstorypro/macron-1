@@ -1,15 +1,15 @@
 doctype html
 html
   head
-    = render 'genesis/layouts/partials/head'
+    = render 'layouts/partials/head'
   body class="#{controller_name} #{action_name.downcase}"
-    = render 'genesis/layouts/partials/drawers'
-    = render 'genesis/layouts/partials/notifications'
+    = render 'layouts/partials/drawers'
+    = render 'layouts/partials/notifications'
 
-    ==  Genesis::Widget::SidenavCell.(nil, layout: 'main', menu: s('menu.main'), request: request, show_icons: false)
+    ==  Widget::SidenavCell.(nil, layout: 'main', menu: s('menu.main'), request: request, show_icons: false)
     .pusher
-      = render 'genesis/layouts/partials/navigation'
+      = render 'layouts/partials/navigation'
       == yield
 
-      = render 'genesis/layouts/partials/footer'
-    = render 'genesis/layouts/partials/loading_js'
+      = render 'layouts/partials/footer'
+    = render 'layouts/partials/loading_js'

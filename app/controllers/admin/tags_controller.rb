@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency "genesis/application_controller"
+require_dependency "application_controller"
 
-module Genesis
-  module Admin
-    class TagsController < CrudController
-    end
+module Admin
+  class TagsController < CrudController
   end
 end

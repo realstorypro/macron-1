@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true
-
-class VideosController < Genesis::DisplayController
+class VideosController < DisplayController
   def show
     return true if @entry.tags.empty?
     @related_discussions = Tag.find_by_id(@entry.tags.map(&:id))

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency "genesis/application_controller"
+require_dependency "application_controller"
 
 module Admin
   class DiscussionsController < CrudController

@@ -4,8 +4,8 @@
 
 module Admin
   class CrudController < MetaController
-    include Genesis::AdminAccess
-    layout "genesis/layouts/admin"
+    include AdminAccess
+    layout "layouts/admin"
     before_action :set_breadcrumb
 
     def index

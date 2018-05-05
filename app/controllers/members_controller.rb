@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 # handles the display of the article model
-class MembersController < Genesis::DisplayController
-  layout "genesis/layouts/client"
+class MembersController < DisplayController
+  layout "layouts/client"
   before_action :preload_entry, only: [:show]
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
 
   def index
-    @entries = Genesis::User.all.includes(:profile).order(:username).page params[:page]
+    @entries = User.all.includes(:profile).order(:username).page params[:page]
   end
 
   def show
@@ -17,16 +17,16 @@ class MembersController < Genesis::DisplayController
   private
 
     def preload_entry
-      @member = Genesis::User.joins(:profile).friendly.find(params[:id])
-      @comments = Genesis::Comment.where(user_id: @member.id).order("created_at desc")
+      @member = User.joins(:profile).friendly.find(params[:id])
+      @comments = Comment.where(user_id: @member.id).order("created_at desc")
 
-      article_comments = Genesis::Comment.where(user_id: @member.id, commentable_type: "Genesis::Article")
+      article_comments = Comment.where(user_id: @member.id, commentable_type: "Article")
       article_comments = article_comments.select(:commentable_id).distinct.pluck(:commentable_id)
-      @commented_articles = Genesis::Article.joins(:category).find(article_comments)
+      @commented_articles = Article.joins(:category).find(article_comments)
 
-      discussion_comments = Genesis::Comment.where(user_id: @member.id, commentable_type: "Genesis::Discussion")
+      discussion_comments = Comment.where(user_id: @member.id, commentable_type: "Discussion")
       discussion_comments = discussion_comments.select(:commentable_id).distinct.pluck(:commentable_id)
-      @commented_discussions = Genesis::Discussion.joins(:category).find(discussion_comments)
+      @commented_discussions = Discussion.joins(:category).find(discussion_comments)
     end
 
     def set_show_seo_meta

@@ -1,6 +1,6 @@
 = component 'article details'
   = fragment 'header fullscreen'
-    == Genesis::Vue::CoverCell.(nil, image: @entry.fullscreen_image)
+    == Vue::CoverCell.(nil, image: @entry.fullscreen_image)
     = container
       = grid
         = row
@@ -39,13 +39,13 @@
     = grid
       = row
         = column computer: 11, tablet: 16, mobile: 16
-          == Genesis::Widget::CommentCell.(@entry, layout: :version_1, user: current_user, support_email: ss(:email), component: params[:component])
+          == Widget::CommentCell.(@entry, layout: :version_1, user: current_user, support_email: ss(:email), component: params[:component])
         = column computer: 5, tablet: 16, mobile: 16
           = fragment 'sidebar'
             = container
               = grid
                 = row
                   = column computer: 16, tablet: 8, mobile: 16
-                    == Genesis::Widget::DiscussionCell.(@related_discussions, layout: :related, header: :off, category: :on) unless @related_discussions.nil?
+                    == Widget::DiscussionCell.(@related_discussions, layout: :related, header: :off, category: :on) unless @related_discussions.nil?
                   = column computer: 16, tablet: 8, mobile: 16
-                    == Genesis::Widget::AdvertisingCell.(@ads, layout: :sidebar) unless @ads.nil?
+                    == Widget::AdvertisingCell.(@ads, layout: :sidebar) unless @ads.nil?
