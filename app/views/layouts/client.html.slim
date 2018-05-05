@@ -6,10 +6,10 @@ html
     = render 'layouts/partials/drawers'
     = render 'layouts/partials/notifications'
 
-    ==  Widget::SidenavCell.(nil, layout: 'main', menu: s('menu.main'), request: request, show_icons: false)
+    /==  Widget::SidenavCell.(nil, layout: 'main', menu: s('menu.main'), request: request, show_icons: false)
     .pusher
       = render 'layouts/partials/navigation'
       == yield
 
-      = render 'layouts/partials/footer'
+      /= render 'layouts/partials/footer'
     = render 'layouts/partials/loading_js'

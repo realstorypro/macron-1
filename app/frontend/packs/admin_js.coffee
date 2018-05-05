@@ -1,7 +1,7 @@
 import {} from 'jquery-ujs'
 import uploadcare from 'uploadcare-widget'
 import Turbolinks from 'turbolinks'
-import semantic_js from '../semantic_ui/dist/semantic.min'
+import semantic_js from '../semantic/dist/semantic.min'
 
 import Chartkick from "chartkick"
 import Chart from "chart.js"
