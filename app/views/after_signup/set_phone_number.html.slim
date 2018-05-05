@@ -1,0 +1,26 @@
+= component 'authentication verify phone'
+  = fragment 'header fullscreen'
+    == Genesis::Vue::CoverCell.(nil, image: ss(:auth_background))
+    = container
+      = grid
+        = row
+          = column computer: 16, tablet: 16, mobile: 16
+            = segment 'auth box'
+              = segment 'basic'
+                = h5 text: 'Account Verification'
+                = simple_form_for @user, url: wizard_path, method: :put  do |f|
+                  = f.error_notification
+                  .field
+                    = dropdown 'selection', name: 'country'
+                      = f.input :country, as: :hidden, wrapper: false
+                      = icon 'dropdown'
+                      = text class: 'default', text: 'Country Select', tag: 'div'
+                      = menu
+                        - @country_codes.each do |code|
+                          = item data: { value: code[1].downcase }
+                            i class="#{code[1].downcase} flag"
+                            = code[0]
+                  = f.input :phone_number, required: true, placeholder: 'Phone Number', label: false, as: :tel, input_html: {icon: 'phone'}
+                  = button_tag type: 'submit', class: "ui right labeled icon button primary fluid large"
+                    | Next
+                    = icon 'right chevron'

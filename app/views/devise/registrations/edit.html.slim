@@ -1,0 +1,34 @@
+= component 'authentication edit account'
+  = fragment 'header fullscreen'
+    == Genesis::Vue::CoverCell.(nil, image: ss(:auth_background))
+    = segment 'auth box'
+      = segment 'basic'
+        = header tag: :h5, class: 'dividing', text: 'Account Settings'
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+          = f.error_notification
+          = f.input :username, required: true, placeholder: 'Username', label: false, as: :left_icon, input_html: {icon: 'user'}
+          = dropdown 'selection field fluid', name: 'country'
+            = f.input :country, as: :hidden, wrapper: false
+            = icon 'dropdown'
+            = text class: 'default', text: 'Country Select', tag: 'div'
+            = menu
+              - @country_codes.each do |code|
+                = item data: { value: code[1].downcase }
+                  i class="#{code[1].downcase} flag"
+                  = code[0]
+          = f.input :phone_number, required: true, placeholder: 'Phone Number', label: false, as: :left_icon, input_html: {icon: 'phone'}
+          = f.input :email, required: true, placeholder: 'Email', label: false, as: :left_icon, input_html: {icon: 'mail'}
+          - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+            p
+              | Currently waiting confirmation for: #{resource.unconfirmed_email}
+
+          = h5 text: 'New Password'
+          = f.input :password, autocomplete: 'off', placeholder: 'Password', label: false, required: false, as: :left_icon_password, input_html: {icon: 'lock'}
+          = f.input :password_confirmation, required: false, placeholder: 'Password Confirmation', label: false, as: :left_icon_password, input_html: {icon: 'lock'}
+
+          = h5 text: 'Verification'
+          = text text: 'We need your current password to confirm your changes.'
+          = f.input :current_password, placeholder: 'Current Password', label: false, required: true
+          = button_tag type: :submit, class: 'ui right labeled icon button large positive fluid'
+            | Save Changes
+            = icon 'check'

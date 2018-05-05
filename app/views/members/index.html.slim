@@ -1,0 +1,15 @@
+= component class: 'members'
+  = segment class: 'basic'
+    = container
+      = grid
+        = row
+          = column size: 16
+            = cards class: 'link five stackable'
+              - @entries.each do |member|
+                = link_to member_path(member), class: 'member card'
+                  = image 'fluid'
+                    = image_tag avatar_thumbnail(member)
+                  = content
+                    = header ui: :off, text: "@#{truncate(member.username, length: 10)}"
+                    = meta text: "Joined #{time_ago_in_words(member.created_at)} ago"
+  = render 'genesis/partials/paginator'

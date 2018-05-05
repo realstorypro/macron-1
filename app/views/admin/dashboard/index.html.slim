@@ -1,0 +1,73 @@
+= container
+  = grid
+    = row
+      = column computer: 8, tablet: 8, mobile: 16
+        = h5 text: 'Engagement'
+        = divider
+        = segment 'padded'
+
+          = statistics 'two small green'
+            = statistic
+              .value= "#{@new_users}"
+              .label New Users
+            = statistic
+              .value= "#{@new_comments}"
+              .label New Comments
+
+          br
+          br
+
+          = statistics 'two small green'
+            = statistic
+              .value = "#{@visitors_this_month}"
+              .label.orange New Visitors
+            = statistic
+              .value = 0
+              .label New Subscribers
+
+      = column computer: 8, tablet: 8, mobile: 16, class: ''
+        = h5 text: 'Conversion'
+        = divider
+        = segment 'padded'
+
+          = statistics 'two small red'
+            = statistic
+              .value= "#{number_to_percentage( @new_users / @visitors_this_month.to_f , precision: 1)}"
+              .label to user
+
+            = statistic
+              .value= "#{number_to_percentage(@new_comments / @visitors_this_month.to_f  , precision: 1)}"
+              .label to comment
+          br
+          br
+
+          = statistics 'two small red'
+            = statistic
+              .value= "#{number_to_percentage(0, precision: 1)}"
+              .label to subscriber
+            = statistic
+              .value= "#{number_to_percentage(@new_clicks / @visitors_this_month.to_f, precision: 1)}"
+              .label to ad click
+
+    = divider
+    = row
+      = column computer: 16, tablet: 8, mobile: 16
+        = h5 text: 'New Visitors'
+        = divider
+        = area_chart @visitors_this_month_grouped, colors: ['#F2711C'], points: false, height: '300px'
+        = divider
+
+    = row
+
+      = column computer: 8, tablet: 8, mobile: 16, class: 'middle aligned'
+        = h5 text: 'Content Views'
+        = divider
+        = column_chart({ 'Articles': @article_views,
+                'Discussions ': @discussion_views,
+                'Videos ': @video_views},
+                height: '350px', colors: ['#F2711C'])
+
+      = column computer: 8, tablet: 8, mobile: 16
+        = h5 text: 'Comment Flow'
+        = divider
+        = area_chart @new_comments_grouped, label: 'Comments', height: '350px', colors: ['#F2711C'], points: false

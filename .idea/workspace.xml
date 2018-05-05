@@ -10,8 +10,80 @@
       <change afterPath="$PROJECT_DIR$/app/policies/user_policy.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/services/zapier/base.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/services/zapier/newsletter_subscription.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/crud/edit.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/crud/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/crud/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/crud/show.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/dashboard/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/settings/edit.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/settings/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/support/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/after_signup/set_phone_number.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/after_signup/validate_phone_number.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/articles/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/articles/show.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/create.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/index.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.htm.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/discussions/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/discussions/show.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exceptions/forbidden.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exceptions/page_not_found.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exceptions/server_error.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/kaminari/_first_page.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/kaminari/_gap.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/kaminari/_last_page.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/kaminari/_next_page.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/kaminari/_page.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/kaminari/_paginator.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/kaminari/_prev_page.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/admin.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/auth.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/blazer/application.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/client.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/error.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/_drawers.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/_footer.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/_inline_js.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/_loading_js.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/_logged_off_menu.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/_notifications.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/admin/_inline_js.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/admin/_menu.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/admin/_navigation.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/partials/admin/_sidebar.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/members/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/members/show.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/meta/_form.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/meta/access_denied.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/meta/edit.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/meta/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/page/home.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/page/privacy-policy.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/page/terms-of-service.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/partials/_paginator.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/templates/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/videos/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/videos/show.html.slim" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/extensions/permissions.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/extensions/symbol_extension.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/diagnostics/index.html.slim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -81,26 +153,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="comment_policy.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/policies/comment_policy.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="permissions.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/extensions/permissions.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -241,7 +294,7 @@
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="policies" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
@@ -292,11 +345,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/controllers/concerns" />
       <recent name="$PROJECT_DIR$/app/controllers" />
-      <recent name="$PROJECT_DIR$/app/channels" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -379,7 +432,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23636000" />
+    <option name="totallyTimeSpent" value="23982000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,7 +445,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -448,26 +500,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/initializers/ahoy.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/analytics_ruby.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/factory_bot_rails-4.8.2/tmp/aruba/testapp/config/secrets.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/vue-avatar/config/dev.env.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/routing/meta_routing_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -727,15 +759,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/policies/comment_policy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/extensions/permissions.rb">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/zapier/newsletter_subscription.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/zapier/base.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/mailer/password_change.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/crud/new.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>

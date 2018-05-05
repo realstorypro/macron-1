@@ -1,0 +1,6 @@
+= menu ui:true, class: 'inverted vertical text sidemenu'
+  = item 'logo cell'
+    = link_to '/', data: {turbolinks: false}
+      = image_tag 'logo_inverted.png', class: 'ui image logo'
+  = divider
+  = render 'genesis/layouts/partials/admin/menu'

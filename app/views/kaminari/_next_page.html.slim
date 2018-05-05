@@ -1,0 +1,6 @@
+- unless current_page.last?
+  = link_to url, title: t('views.pagination.next').html_safe, class: 'item hide mobile', remote: remote do
+    = icon 'angle right'
+- else
+  = item class: 'hide mobile'
+    = icon 'angle right disabled'
