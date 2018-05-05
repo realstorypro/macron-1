@@ -1,0 +1,7 @@
+# frozen_string_literal: true
+
+# frozen_string_literal: true
+
+class Users::ConfirmationsController < Devise::ConfirmationsController
+  layout "genesis/layouts/auth"
+end
