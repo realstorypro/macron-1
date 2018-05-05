@@ -2,48 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/advertisements_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/articles_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/categories_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/crud_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/dashboard_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/discussions_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/settings_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/support_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/tags_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/videos_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/after_signup_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/concerns/admin_access.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/discussions_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/display_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/exceptions_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/members_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/meta_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/newsletter_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/page_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/profile_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/users/confirmations_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/users/passwords_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/users/unlocks_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/videos_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/inputs/datepicker_input.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/inputs/dropdown_input.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/inputs/image_input.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/inputs/left_icon_input.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/inputs/left_icon_password_input.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/inputs/rich_input.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aquarius.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aquarius.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/diagnostics_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/policies/application_policy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/policies/comment_policy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/policies/headless_policy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/policies/meta_policy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/policies/profile_policy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/policies/user_policy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/zapier/base.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/zapier/newsletter_subscription.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/extensions/permissions.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/extensions/symbol_extension.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -114,23 +82,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="comment_policy.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/policies/comment_policy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+            <state relative-caret-position="30">
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articles_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/admin/articles_controller.rb">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="site_settings.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="permissions.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/extensions/permissions.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -161,9 +128,9 @@
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/spec</dir>
-      <dir>$PROJECT_DIR$/app</dir>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/app/cells</dir>
+      <dir>$PROJECT_DIR$/app</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -172,11 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/tagging.rb" />
-        <option value="$PROJECT_DIR$/app/models/tag.rb" />
-        <option value="$PROJECT_DIR$/app/models/entry.rb" />
-        <option value="$PROJECT_DIR$/app/models/setting.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/concerns/categorizable.rb" />
         <option value="$PROJECT_DIR$/app/models/concerns/colorizable.rb" />
         <option value="$PROJECT_DIR$/app/models/concerns/nameable.rb" />
@@ -223,6 +185,11 @@
         <option value="$PROJECT_DIR$/app/controllers/members_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/profile_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" />
+        <option value="$PROJECT_DIR$/app/policies/profile_policy.rb" />
+        <option value="$PROJECT_DIR$/app/policies/comment_policy.rb" />
+        <option value="$PROJECT_DIR$/app/policies/headless_policy.rb" />
+        <option value="$PROJECT_DIR$/app/policies/meta_policy.rb" />
+        <option value="$PROJECT_DIR$/lib/extensions/permissions.rb" />
       </list>
     </option>
   </component>
@@ -274,19 +241,18 @@
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="policies" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="extensions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,11 +292,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/controllers/concerns" />
       <recent name="$PROJECT_DIR$/app/controllers" />
-      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/channels" />
-      <recent name="$PROJECT_DIR$/app/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -413,7 +379,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22843000" />
+    <option name="totallyTimeSpent" value="23636000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -482,53 +448,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/settings_helper.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/path_helper.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/member_helper.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/image_helper.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/redis.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/kaminari_config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="257" column="44" lean-forward="true" selection-start-line="257" selection-start-column="44" selection-end-line="257" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/ui.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/ahoy.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -735,13 +654,6 @@
         <state relative-caret-position="-95" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/profile_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -756,10 +668,76 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/articles_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/settings_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/policies/application_policy.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/policies/headless_policy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/policies/user_policy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/policies/profile_policy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/policies/meta_policy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/extensions/symbol_extension.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/policies/comment_policy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/extensions/permissions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
