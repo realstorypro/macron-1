@@ -1,0 +1,40 @@
+menu:
+  legal:
+    - section:
+      - name: Privacy Policy
+        path: privacy_policy
+        enabled: true
+    - section:
+      - name: Terms of Service
+        path: terms_of_service
+        enabled: true
+
+  header:
+    - section:
+      - name: Home
+        path: root
+        enabled: true
+  footer:
+    - section:
+      - name: Home
+        path: root
+        enabled: true
+
+components:
+  dummy:
+    enabled: false
+
+layout:
+  auth_widget:
+    enabled: true
+    sign_in:
+      text: 'Sign In'
+    sign_up:
+      enabled: true
+      text: 'Join Us'
+  authentication:
+    sign_up:
+      header: 'Join Radiant9 Today!'
+      sub_header: 'Human Embodiment Project'
+  article:
+    home: 'simple'

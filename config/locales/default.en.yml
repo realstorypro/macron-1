@@ -1,0 +1,25 @@
+en:
+  app:
+    powered_by_text: 'Powered by vityOS'
+    powered_by_url: 'http://www.vityos.com'
+  seo:
+    pages:
+      terms-of-service:
+        title: 'Terms of Service'
+        description: 'TOS'
+      privacy-policy:
+        title: 'Privacy Policy'
+        description: 'POS'
+    components:
+      articles:
+        title: 'Articles'
+        description: 'Articles Description'
+      discussions:
+        title: 'Discussions'
+        description: 'Discussions Description'
+      videos:
+        title: 'Videos'
+        description: 'Videos Description'
+      members:
+        title: 'Members'
+        description: 'Members Description'
