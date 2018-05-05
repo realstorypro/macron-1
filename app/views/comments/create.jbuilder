@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.id @comment.id
 json.body @comment.body
 json.created_at @comment.created_at

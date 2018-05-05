@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # rubocop:disable GlobalVars
 module Zapier
   class Base
@@ -31,20 +33,20 @@ module Zapier
 
     private
 
-    def load_site_settings
-      site_settings = $redis.get('site_settings')
+      def load_site_settings
+        site_settings = $redis.get("site_settings")
 
-      if site_settings.nil?
-        site_settings = Genesis::Setting.instance.to_json
-        $redis.set('site_settings', site_settings)
+        if site_settings.nil?
+          site_settings = Genesis::Setting.instance.to_json
+          $redis.set("site_settings", site_settings)
+        end
+
+        @site_settings = JSON.parse(site_settings)
       end
 
-      @site_settings = JSON.parse(site_settings)
-    end
-
-    def ss(name)
-      @site_settings['payload'][name.to_s]
-    end
+      def ss(name)
+        @site_settings["payload"][name.to_s]
+      end
   end
 end
 # rubocop:enable GlobalVars

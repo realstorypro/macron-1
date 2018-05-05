@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HeadlessPolicy
   include SettingsHelper
   include Permissions

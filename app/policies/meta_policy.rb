@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MetaPolicy < ApplicationPolicy
   include SettingsHelper
   include Permissions

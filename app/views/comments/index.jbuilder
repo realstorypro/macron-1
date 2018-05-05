@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.comments @comments do |comment|
   json.id comment.id
   json.body comment.body

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Zapier
   class NewsletterSubscription < Zapier::Base
     def call_operation

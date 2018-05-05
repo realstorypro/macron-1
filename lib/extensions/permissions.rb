@@ -27,7 +27,7 @@ module Permissions
   def fetch_user_roles
     return @user.roles.pluck(:name) unless @user.nil?
 
-    default_role = settings('defaults.permissions.visitor.role', fatal_exception: true)
+    default_role = settings("defaults.permissions.visitor.role", fatal_exception: true)
     Array.wrap(default_role)
   end
 

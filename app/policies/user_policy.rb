@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserPolicy < MetaPolicy
   def ban?
     return true if action_authorized? :ban, @component
