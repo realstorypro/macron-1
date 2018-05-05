@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   devise_for(
     :users,
-      class_name: "Genesis::User",
+      class_name: "User",
       module: :users,
       controllers: {
           sessions: "genesis/users/sessions",
