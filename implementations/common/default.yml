@@ -329,6 +329,13 @@ components:
     path: 'admin/reports'
     enabled: true
 
+  dummy:
+    name: 'Dummy Component'
+    description: 'Always Disabled. Used by tests'
+    path: 'admin/dummy'
+    enabled: false
+
+
 views:
   profile:
     new:

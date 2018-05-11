@@ -38,7 +38,7 @@ module Permissions
   end
 
   # checks if the role has an ability
-  def role_can?(role, ability, component, restrict_to_owner)
+  def role_can?(role, ability, component, restrict_to_owner=false)
     # short circuit authorization is the role can do it all
     return true if settings("auth.permissions.#{role}.#{component}").methods.include?(:all)
     if settings("auth.permissions.#{role}.#{component}").methods.include?(ability)
