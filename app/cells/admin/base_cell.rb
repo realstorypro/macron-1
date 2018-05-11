@@ -5,6 +5,7 @@ module Admin
   class BaseCell < Cell::ViewModel
     include ApplicationHelper
     include ActionView::Helpers::DateHelper
+    include DcUi::Helpers
 
     ########################################################
     #  Record Render Main Switch

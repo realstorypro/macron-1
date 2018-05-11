@@ -35,7 +35,7 @@ describe MenuCell, type: 'feature' do
 
   it 'it renders dividers' do
     cell_content = @cell.call(nil,
-                              menu: settings('menu.legal'),
+                              menu: settings('menu.admin'),
                               policy: @policy,
                               show_divider: true,
                               request: @request).call

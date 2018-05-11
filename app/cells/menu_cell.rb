@@ -3,6 +3,7 @@ include Rails.application.routes.mounted_helpers
 class MenuCell < Cell::ViewModel
   include ApplicationHelper
   include DcUi::Helpers
+
   delegate :url_helpers, to: "Rails.main_app.routes"
 
   def show

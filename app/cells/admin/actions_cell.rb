@@ -1,8 +1,7 @@
-# frozen_string_literal: true
-
 module Admin
   class ActionsCell < Cell::ViewModel
     include ApplicationHelper
+    include DcUi::Helpers
 
     # Options
     # 'show:' as ['buttons', 'dropdown'] the rendering style
