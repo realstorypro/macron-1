@@ -13,8 +13,6 @@ Rails.application.routes.draw do
 
   devise_for(
     :users,
-      class_name: "User",
-      module: :users,
       controllers: {
           sessions: "users/sessions",
           registrations: "users/registrations",

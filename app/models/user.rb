@@ -36,10 +36,13 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: { case_sensitive: false }
   validate :validate_username
   validates_presence_of :username, :slug, :email
-  validates_presence_of :country, :phone_number, on: :update
-  validates :phone_number, phone: { possible: true, allow_blank: true,
-                                    types: :mobile,
-                                    country_specifier: ->(phone) { phone.country.try(:upcase) } }
+
+  # Temproarley Disabling Until 2FA is Enabled
+
+  # validates_presence_of :country, :phone_number, on: :update
+  # validates :phone_number, phone: { possible: true, allow_blank: true,
+  #                                   types: :mobile,
+  #                                   country_specifier: ->(phone) { phone.country.try(:upcase) } }
 
   paginates_per 10
 
