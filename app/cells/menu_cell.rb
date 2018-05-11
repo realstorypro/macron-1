@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 include Rails.application.routes.mounted_helpers
 
 class MenuCell < Cell::ViewModel
