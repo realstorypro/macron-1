@@ -1,13 +1,17 @@
 FactoryBot.define do
-  factory :discussion do
-    name { Faker::Name.unique.name }
+  factory :video do
+    name { Faker::Name.name }
     description { Faker::Name.name }
     body { Faker::Demographic.race }
     long_title { Faker::Name.name }
-    long_summary { Faker::Demographic.race }
-    landscape_image { Faker::Avatar.image }
-    image_alt { Faker::Name.name }
     published_date { Faker::Date.forward(7) }
+    landscape_image { Faker::Avatar.image }
+    card_image { Faker::Avatar.image }
+    image_alt { Faker::Name.name }
+    video 'https://www.vimeo.com/263142576'
     association :category, factory: :category
+    after(:create) do |article|
+      create(:comment, commentable: article)
+    end
   end
 end

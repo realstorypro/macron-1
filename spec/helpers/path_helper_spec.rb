@@ -2,9 +2,6 @@
 
 require "rails_helper"
 
-# needed in order to pull in the engine routes
-include Engine.routes.url_helpers
-
 # rubocop:disable BlockLength
 describe PathHelper, "path helper" do
   before(:each) do

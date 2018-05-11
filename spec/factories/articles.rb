@@ -1,18 +1,18 @@
-# frozen_string_literal: true
-
 FactoryBot.define do
-  factory :article, class: Article do
+  factory :article do
     name { Faker::Name.name }
+    description { Faker::Name.name }
     body { Faker::Demographic.race }
-    title { Faker::Name.name }
-    internal_title { Faker::Name.name }
-    summary { Faker::Demographic.race }
-    internal_summary { Faker::Demographic.race }
-    author { Faker::Name.name }
+    long_title { Faker::Name.name }
+    long_summary { Faker::Demographic.race }
     published_date { Faker::Date.forward(7) }
-    header_image { Faker::Avatar.image }
-    list_image { Faker::Avatar.image }
-    featured_image { Faker::Avatar.image }
+    fullscreen_image { Faker::Avatar.image }
+    landscape_image { Faker::Avatar.image }
+    card_image { Faker::Avatar.image }
+    image_alt { Faker::Name.name }
     association :category, factory: :category
+    after(:create) do |article|
+      create(:comment, commentable: article)
+    end
   end
 end
