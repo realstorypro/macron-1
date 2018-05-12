@@ -137,7 +137,7 @@ tests:
     - component: articles
       implementation: false
       admin : true
-      frontend: true
+      frontend: false
       actions:
         - index
         - show
@@ -149,7 +149,7 @@ tests:
     - component: discussions
       implementation: false
       admin : true
-      frontend: true
+      frontend: false
       actions:
         - index
         - show
@@ -161,7 +161,7 @@ tests:
     - component: videos
       implementation: false
       admin : true
-      frontend: true
+      frontend: false
       actions:
         - index
         - show
