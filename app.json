@@ -38,7 +38,9 @@
   },
   "env": {
     "UPLOADCARE_PRIVATE_KEY": "f0e90a64ff52151572bb",
-    "UPLOADCARE_PUBLIC_KEY": "0a21efa3fc2174ed24f0"
+    "UPLOADCARE_PUBLIC_KEY": "0a21efa3fc2174ed24f0",
+    "SEGMENT_JS_WRITE_KEY": "5M3f2gqW6yK3MdRopnlP5L6Kaksisrf8",
+    "SEGMENT_WRITE_KEY": "VSpwniL70DaLTmBIZV9ZfiFHGAlTlv3X"
   },
   "environments": {
     "test": {
