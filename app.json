@@ -41,7 +41,10 @@
     "UPLOADCARE_PUBLIC_KEY": "0a21efa3fc2174ed24f0",
     "SEGMENT_JS_WRITE_KEY": "replace_me",
     "SEGMENT_WRITE_KEY": "replace_me",
-    "SECRET_KEY_BASE": "replace_me"
+    "SECRET_KEY_BASE": {
+      "description": "Rails secret key base",
+      "generator": "secret"
+    }
   },
   "environments": {
     "test": {
