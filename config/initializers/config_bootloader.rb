@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Loaded after config.rb
 
 Settings.add_source!(Rails.root.join("implementations").join("common/default.yml").to_s)
