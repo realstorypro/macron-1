@@ -122,7 +122,6 @@ tests:
       admin : false
       frontend: true
       actions:
-        - index
         - show
 
     - component: users
