@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/admin/actions_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/admin/actions_cell.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/breadcrumbs_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/breadcrumbs_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/menu_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/menu_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/vue/video_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/vue/video_cell.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cells/admin/list_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/admin/list_cell.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cells/widget/sidenav_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/sidenav_cell.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/.last_run.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.last_run.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/advertisements.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/advertisements.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -84,35 +82,8 @@
       <file leaf-file-name="menu_cell.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/cells/menu_cell.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="104" column="1" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu_cell_spec.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/cells/menu_cell_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="breadcrumbs_cell.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/cells/breadcrumbs_cell.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_helper.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="90">
+              <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -126,11 +97,62 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="base_cell_spec.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/cells/base_cell_spec.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="base_cell.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="meta_routing_spec.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/routing/meta_routing_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="advertisements.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/factories/advertisements.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articles.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/factories/articles.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_cell.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/cells/admin/list_cell.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="sidenav_cell.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/cells/widget/sidenav_cell.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="default.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+            <state relative-caret-position="552">
+              <caret line="511" column="26" selection-start-line="511" selection-start-column="15" selection-end-line="511" selection-end-column="26" />
               <folding>
                 <element signature="e#2176#4100#0" />
               </folding>
@@ -142,13 +164,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>semantic</find>
-      <find>menu_path</find>
-      <find>click: {</find>
-      <find>v-on: {</find>
-      <find>title</find>
-      <find>pundit</find>
-      <find>component</find>
       <find>host</find>
       <find>deault</find>
       <find>watcher</find>
@@ -172,6 +187,13 @@
       <find>legal</find>
       <find>divider</find>
       <find>divi</find>
+      <find>linked item</find>
+      <find>linked_item</find>
+      <find>url_helpers</find>
+      <find>send</find>
+      <find>send(</find>
+      <find>delegate :url</find>
+      <find>byebug</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -191,13 +213,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/article.rb" />
-        <option value="$PROJECT_DIR$/app/models/discussion.rb" />
         <option value="$PROJECT_DIR$/spec/cells/cells/base_cell_spec.rb" />
         <option value="$PROJECT_DIR$/spec/cells/cells/action_cell_spec.rb" />
         <option value="$PROJECT_DIR$/spec/cells/cells/menu_cell_spec.rb" />
         <option value="$PROJECT_DIR$/spec/cells/action_cell_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" />
         <option value="$PROJECT_DIR$/app/frontend/packs/client_css.js" />
         <option value="$PROJECT_DIR$/app/frontend/packs/admin_css.js" />
         <option value="$PROJECT_DIR$/config/boot.rb" />
@@ -211,7 +230,6 @@
         <option value="$PROJECT_DIR$/app/cells/vue/cover_cell.rb" />
         <option value="$PROJECT_DIR$/spec/factories/articles.rb" />
         <option value="$PROJECT_DIR$/spec/factories/comment.rb" />
-        <option value="$PROJECT_DIR$/spec/factories/advertisements.rb" />
         <option value="$PROJECT_DIR$/spec/factories/categories.rb" />
         <option value="$PROJECT_DIR$/spec/factories/colors.rb" />
         <option value="$PROJECT_DIR$/spec/factories/discussions.rb" />
@@ -236,12 +254,16 @@
         <option value="$PROJECT_DIR$/config/locales/default.en.yml" />
         <option value="$PROJECT_DIR$/spec/features/pages_spec.rb" />
         <option value="$PROJECT_DIR$/app/cells/admin/actions_cell.rb" />
-        <option value="$PROJECT_DIR$/app/cells/admin/base_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/breadcrumbs_cell.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/cells/menu_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/vue/video_cell.rb" />
         <option value="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" />
+        <option value="$PROJECT_DIR$/app/cells/widget/sidenav_cell.rb" />
+        <option value="$PROJECT_DIR$/app/cells/admin/list_cell.rb" />
+        <option value="$PROJECT_DIR$/app/cells/admin/base_cell.rb" />
+        <option value="$PROJECT_DIR$/spec/factories/advertisements.rb" />
       </list>
     </option>
   </component>
@@ -469,12 +491,12 @@
       <workItem from="1525792927878" duration="193000" />
       <workItem from="1525936162791" duration="439000" />
       <workItem from="1525964641667" duration="144000" />
-      <workItem from="1526065751431" duration="7107000" />
+      <workItem from="1526065751431" duration="8664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44242000" />
+    <option name="totallyTimeSpent" value="45799000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -495,7 +517,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32948717" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948717" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871793" visible="true" weight="0.2746781" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49871793" weight="0.2746781" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
@@ -544,41 +566,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/factories/videos.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/tags.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/settings.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/profiles.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/factories/entries.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -784,16 +771,6 @@
     <entry file="file://$PROJECT_DIR$/app/cells/admin/details_cell.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/admin/list_cell.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/widget/base_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -822,20 +799,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/menu_cell.rb">
+    <entry file="file://$PROJECT_DIR$/spec/cells/menu_cell_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="104" column="1" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
+        <state relative-caret-position="210">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        <state relative-caret-position="552">
+          <caret line="511" column="26" selection-start-line="511" selection-start-column="15" selection-end-line="511" selection-end-column="26" />
           <folding>
             <element signature="e#2176#4100#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/breadcrumbs_cell.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/menu_cell.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -846,24 +844,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/cells/widget/sidenav_cell.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/admin/list_cell.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/cells/base_cell_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="262">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/breadcrumbs_cell.rb">
+    <entry file="file://$PROJECT_DIR$/spec/routing/meta_routing_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="330">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/cells/menu_cell_spec.rb">
+    <entry file="file://$PROJECT_DIR$/spec/factories/articles.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories/advertisements.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
     </entry>

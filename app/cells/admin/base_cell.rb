@@ -1,11 +1,13 @@
-# frozen_string_literal: true
-
 # rubocop:disable CyclomaticComplexity
+
+include Rails.application.routes.mounted_helpers
+
 module Admin
   class BaseCell < Cell::ViewModel
     include ApplicationHelper
     include ActionView::Helpers::DateHelper
     include DcUi::Helpers
+    delegate :url_helpers, to: "Rails.main_app.routes"
 
     ########################################################
     #  Record Render Main Switch
@@ -53,7 +55,7 @@ module Admin
 
       items.each_with_index do |item, _index|
         if linked
-          content.concat(link_to(item.name, send(link_path, item), class: "ui label blue"))
+          content.concat(link_to(item.name, url_helpers.send(link_path, item), class: "ui label blue"))
         else
           content.concat(content_tag(:div, item.name, class: "ui label mini").html_safe)
         end
@@ -68,7 +70,7 @@ module Admin
 
       unless item.nil?
         link_path = "admin_#{item.model_name.name.downcase}_path"
-        content.concat(link_to(item.name, send(link_path, item)))
+        content.concat(link_to(item.name, url_helpers.send(link_path, item)))
       end
 
       content.html_safe

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Admin
   class ListCell < BaseCell
     def show
@@ -37,7 +35,7 @@ module Admin
       # renders the show link by using the model name
       def show_link(options = {})
         model = model_name(options)
-        link_to(options[:name], send("admin_#{model}_path", options[:model].id))
+        link_to(options[:name], url_helpers.send("admin_#{model}_path", options[:model].id))
       end
 
       def model_name(options = {})

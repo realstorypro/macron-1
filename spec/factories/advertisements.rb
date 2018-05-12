@@ -5,6 +5,7 @@ FactoryBot.define do
     title { Faker::Name.title }
     text { Faker::Name.name }
     image { Faker::Avatar.image }
+    association :category, factory: :category
     published_date { Faker::Date.forward(7) }
   end
 end
