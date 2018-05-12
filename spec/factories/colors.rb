@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :color do
-    name 'blue'
+    name "blue"
   end
 end

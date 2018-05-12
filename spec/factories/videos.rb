@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :video do
     name { Faker::Name.name }
@@ -8,7 +10,7 @@ FactoryBot.define do
     landscape_image { Faker::Avatar.image }
     card_image { Faker::Avatar.image }
     image_alt { Faker::Name.name }
-    video 'https://www.vimeo.com/263142576'
+    video "https://www.vimeo.com/263142576"
     association :category, factory: :category
     after(:create) do |article|
       create(:comment, commentable: article)

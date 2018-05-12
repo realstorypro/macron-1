@@ -49,38 +49,38 @@ SimpleForm.setup do |config|
 
   # Custom Semantic Wrapper
   # Values are similar to the default wrapper above, with different classes
-  config.wrappers :semantic, tag: 'div', class: 'field', error_class: 'error', hint_class: 'with_hint' do |b|
+  config.wrappers :semantic, tag: "div", class: "field", error_class: "error", hint_class: "with_hint" do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
     b.optional :pattern
     b.optional :min_max
     b.use :label_input
-    b.use :hint,  wrap_with: { tag: 'div', class: 'hint' }
-    b.use :error, wrap_with: { tag: 'div', class: 'ui red pointing above label error' }
+    b.use :hint,  wrap_with: { tag: "div", class: "hint" }
+    b.use :error, wrap_with: { tag: "div", class: "ui red pointing above label error" }
   end
 
-  config.wrappers :ui_checkbox, tag: 'div', class: 'field', error_class: 'error', hint_class: 'with_hint' do |b|
+  config.wrappers :ui_checkbox, tag: "div", class: "field", error_class: "error", hint_class: "with_hint" do |b|
     b.use :html5
-    b.wrapper tag: 'div', class: 'ui checkbox' do |input|
+    b.wrapper tag: "div", class: "ui checkbox" do |input|
       input.use :label_input
-      input.use :hint, wrap_with: { tag: 'div', class: 'hint' }
+      input.use :hint, wrap_with: { tag: "div", class: "hint" }
     end
   end
 
-  config.wrappers :ui_slider_checkbox, tag: 'div', class: 'field', error_class: 'error', hint_class: 'with_hint' do |b|
+  config.wrappers :ui_slider_checkbox, tag: "div", class: "field", error_class: "error", hint_class: "with_hint" do |b|
     b.use :html5
-    b.wrapper tag: 'div', class: 'ui slider checkbox' do |input|
+    b.wrapper tag: "div", class: "ui slider checkbox" do |input|
       input.use :label_input
-      input.use :hint, wrap_with: { tag: 'div', class: 'hint' }
+      input.use :hint, wrap_with: { tag: "div", class: "hint" }
     end
   end
 
-  config.wrappers :ui_toggle_checkbox, tag: 'div', class: 'field', error_class: 'error', hint_class: 'with_hint' do |b|
+  config.wrappers :ui_toggle_checkbox, tag: "div", class: "field", error_class: "error", hint_class: "with_hint" do |b|
     b.use :html5
-    b.wrapper tag: 'div', class: 'ui toggle checkbox' do |input|
+    b.wrapper tag: "div", class: "ui toggle checkbox" do |input|
       input.use :label_input
-      input.use :hint, wrap_with: { tag: 'div', class: 'hint' }
+      input.use :hint, wrap_with: { tag: "div", class: "hint" }
     end
   end
 
@@ -95,7 +95,7 @@ SimpleForm.setup do |config|
   config.boolean_style = :inline
 
   # Default class for buttons
-  config.button_class = 'ui submit button'
+  config.button_class = "ui submit button"
 
   # Method used to tidy up errors. Specify any Rails Array method.
   # :first lists the first message for each field.
@@ -106,7 +106,7 @@ SimpleForm.setup do |config|
   config.error_notification_tag = :div
 
   # CSS class to add for error notification helper.
-  config.error_notification_class = 'alert alert-error'
+  config.error_notification_class = "alert alert-error"
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil
@@ -129,7 +129,7 @@ SimpleForm.setup do |config|
   config.item_wrapper_tag = :div
 
   # You can define a class to use in all item wrappers. Defaulting to none.
-  config.item_wrapper_class = 'ui checkbox'
+  config.item_wrapper_class = "ui checkbox"
 
   # How the label text should be generated altogether with the required text.
   # config.label_text = lambda { |label, required| "#{required} #{label}" }
@@ -140,7 +140,7 @@ SimpleForm.setup do |config|
   # config.label_class = 'control-label'
 
   # You can define the class to use on all forms. Default is simple_form.
-  config.default_form_class = 'ui form'
+  config.default_form_class = "ui form"
 
   # You can define which elements should obtain additional classes
   # config.generate_additional_classes_for = [:wrapper, :label, :input]
@@ -156,4 +156,3 @@ SimpleForm.setup do |config|
   config.browser_validations = false
 end
 # rubocop: enable BlockLength
-

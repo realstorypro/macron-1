@@ -40,10 +40,10 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   # Setting Local Mail
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: "localhost:3000" }
 
   # HACK: For some reason Rails 5.2 looses default_url. This seems to fix it ...
-  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+  Rails.application.routes.default_url_options[:host] = "localhost:3000"
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
@@ -74,6 +74,6 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.app_domain = 'locahost:3000'
+  config.app_domain = "locahost:3000"
   config.web_socket_server_url = "ws://#{config.app_domain}/cable"
 end
