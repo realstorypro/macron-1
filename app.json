@@ -38,7 +38,7 @@
   },
   "env": {
     "UPLOADCARE_PRIVATE_KEY": "f0e90a64ff52151572bb",
-    "UPLOADCARE_PUBLIC_KEY": "0a21efa3fc2174ed24f0",
+    "UPLOADCARE_PUBLIC_KEY": "0a21efa3fc2174ed24f0"
   },
   "environments": {
     "test": {
