@@ -1,28 +1,32 @@
 ## AQUARIUS1.TECH
 
-This is a WIP instruction manual for the platform.
+![macron1](https://user-images.githubusercontent.com/433219/40011503-dbe773e4-575c-11e8-9c2c-dbb35c84dc1c.jpeg) 
 
 ## Running It
 ```bash
-  mailcatcher
   foreman s
 ```
 
 ## Mail in Development
-We're utilizing mailcatcher to catch mail in development.
+We're utilizing the mailcatcher to catch the mail send in development environment.
 
-If you don't have installed do the following:
+If you don't have the gem already installed you do it by running the following
 ```
   gem install mailcatcher
 ```
-
-To use start it via bash 
+  
+You can then start the mail catcher via
 ```
   mailcatcher
 ```
 
-Visit it in the web browser @ **http://127.0.0.1:1080/**
+You can read the sent mail by pointing the  web browser to  **http://127.0.0.1:1080/**
 
 #### Helpful Documents
+Documentation that may be useful to developers.
+
 ##### Testing
 - https://wyeworks.com/blog/2018/1/16/Testing-Vuejs-in-Rails-with-Webpacker-and-Jest
+
+##### Security
+- https://bauland42.com/ruby-on-rails-content-security-policy-csp/
