@@ -56,7 +56,7 @@
       "scripts": {
         "test-setup": "./bin/test_prepare",
         "test": "./bin/test_run",
-        "postdeploy": "./bin/post_deploy"
+        "release": "./bin/release"
       }
     }
   }
