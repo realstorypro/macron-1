@@ -103,8 +103,8 @@
       <file leaf-file-name="navigation_buttons.coffee" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/navigation_buttons.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="405">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -416,7 +416,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67838000" />
+    <option name="totallyTimeSpent" value="68052000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -841,8 +841,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/navigation_buttons.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="405">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
         </state>
       </provider>
     </entry>

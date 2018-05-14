@@ -25,7 +25,7 @@ class NavigationButtons
   setup: (widget) ->
     utils.log 'setup', 'setup()', 'navigation_buttons'
 
-    console.log "VUEEE", vue
+    console.log "VUEEE", Vue
 
     @app = new Vue
       el: "##{widget.id}"
