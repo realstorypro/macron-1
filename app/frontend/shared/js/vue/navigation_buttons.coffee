@@ -25,11 +25,13 @@ class NavigationButtons
   setup: (widget) ->
     utils.log 'setup', 'setup()', 'navigation_buttons'
 
+    console.log "VUEEE", vue
+
     @app = new Vue
       el: "##{widget.id}"
       mixins: [turbolinks_adapter]
       mounted: ->
-        $(@.$options.el).find('.dropdown').dropdown()
+        # $(@.$options.el).find('.dropdown').dropdown()
       methods:
         toggle_sidenav: () ->
          # $('#main-menu').sidebar('toggle')
