@@ -22,7 +22,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1em 0em;
+  margin: 1.5em 0em;
   width: 100%;
   min-height: 0px;
   background: transparent;
@@ -139,15 +139,15 @@
 }
 .ui.items > .item > .content > .header {
   display: inline-block;
-  margin: -0.21425em 0em 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: -0.225em 0em 0em;
+  font-family: 'Releway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
 }
 
 /* Default Header Size */
 .ui.items > .item > .content > .header:not(.ui) {
-  font-size: 1.28571429em;
+  font-size: 1.3125em;
 }
 
 /*--------------
@@ -185,7 +185,7 @@
   margin-top: 0.6em;
   max-width: auto;
   font-size: 1em;
-  line-height: 1.4285em;
+  line-height: 1.45em;
   color: rgba(0, 0, 0, 0.87);
 }
 

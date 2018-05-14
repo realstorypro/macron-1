@@ -61,12 +61,12 @@ module.exports = function(callback) {
     .pipe(replace(comments.license.in, comments.license.out))
     .pipe(gulp.dest(output.uncompressed))
     .pipe(gulpif(config.hasPermission, chmod(config.permission)))
-    .pipe(print(log.created))
+    //.pipe(print(log.created))
     .pipe(uglify(settings.uglify))
     .pipe(rename(settings.rename.minJS))
     .pipe(gulp.dest(output.compressed))
     .pipe(gulpif(config.hasPermission, chmod(config.permission)))
-    .pipe(print(log.created))
+    //.pipe(print(log.created))
     .on('end', function() {
       gulp.start('package compressed js');
       gulp.start('package uncompressed js');

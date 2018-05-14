@@ -2,7 +2,136 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/theme.config" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/semantic/src/theme.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/amazon/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/amazon/elements/button.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/amazon/globals/site.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/assets/fonts/icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/assets/fonts/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/assets/fonts/icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/assets/fonts/icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/collections/table.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/collections/table.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/elements/button.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/elements/icon.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/elements/icon.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/elements/step.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/elements/step.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/globals/reset.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/globals/reset.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/modules/progress.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/modules/progress.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/views/card.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/basic/views/card.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/bookish/elements/header.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/bookish/elements/header.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/bootstrap3/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/bootstrap3/elements/button.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/collections/form.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/collections/form.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/collections/menu.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/collections/menu.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/elements/button.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/elements/header.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/elements/header.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/modules/accordion.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/modules/accordion.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/views/comment.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/chubby/views/comment.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/collections/table.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/collections/table.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/elements/button.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/elements/header.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/elements/header.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/modules/progress.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/modules/progress.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/views/card.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/classic/views/card.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/colored/modules/checkbox.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/colored/modules/checkbox.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/duo/elements/loader.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/duo/elements/loader.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/fixed-width/collections/grid.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/fixed-width/collections/grid.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/fixed-width/modules/modal.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/fixed-width/modules/modal.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/flat/collections/form.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/flat/collections/form.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/flat/globals/site.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/flat/globals/site.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/assets/fonts/octicons-local.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/assets/fonts/octicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/assets/fonts/octicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/assets/fonts/octicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/collections/breadcrumb.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/collections/form.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/collections/form.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/collections/grid.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/collections/menu.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/collections/menu.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/collections/message.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/collections/message.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/collections/table.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/button.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/header.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/icon.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/icon.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/image.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/input.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/input.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/label.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/label.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/segment.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/segment.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/step.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/elements/step.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/globals/site.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/modules/dropdown.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/modules/dropdown.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/github/modules/popup.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/gmail/collections/message.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/gmail/collections/message.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/instagram/views/card.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/instagram/views/card.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/assets/fonts/icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/assets/fonts/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/assets/fonts/icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/assets/fonts/icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/assets/fonts/icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/collections/menu.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/collections/menu.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/elements/button.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/elements/header.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/elements/header.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/elements/icon.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/elements/icon.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/globals/site.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/globals/site.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/modules/dropdown.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/modules/dropdown.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/modules/modal.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/material/modules/modal.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/pulsar/elements/loader.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/pulsar/elements/loader.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/raised/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/raised/elements/button.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/resetcss/globals/reset.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/resetcss/globals/reset.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/round/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/round/elements/button.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/rtl/globals/site.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/rtl/globals/site.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/striped/modules/progress.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/striped/modules/progress.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/timeline/views/feed.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/timeline/views/feed.variables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/twitter/elements/button.overrides" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/semantic/src/themes/twitter/elements/button.variables" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -91,7 +220,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -99,6 +228,15 @@
                 <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.config" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/frontend/semantic/src/theme.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -188,7 +326,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spec/helpers/path_helper_spec.rb" />
         <option value="$PROJECT_DIR$/app/policies/headless_policy.rb" />
         <option value="$PROJECT_DIR$/spec/policies/headless_spec.rb" />
         <option value="$PROJECT_DIR$/app/extensions/permissions.rb" />
@@ -239,6 +376,7 @@
         <option value="$PROJECT_DIR$/config/initializers/content_security_policy.rb" />
         <option value="$PROJECT_DIR$/config/webpacker.yml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/frontend/semantic/src/theme.config" />
       </list>
     </option>
   </component>
@@ -507,7 +645,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57675000" />
+    <option name="totallyTimeSpent" value="57904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -577,13 +715,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/settings_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/default.en.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -933,6 +1064,13 @@
             <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/semantic/src/theme.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>

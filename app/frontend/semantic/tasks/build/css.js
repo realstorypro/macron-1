@@ -89,7 +89,7 @@ module.exports = function(callback) {
     .pipe(replace(assets.source, assets.uncompressed))
     .pipe(gulpif(config.hasPermission, chmod(config.permission)))
     .pipe(gulp.dest(output.uncompressed))
-    .pipe(print(log.created))
+    //.pipe(print(log.created))
     .on('end', function() {
       runSequence('package uncompressed css', maybeCallback);
     })
@@ -104,7 +104,7 @@ module.exports = function(callback) {
     .pipe(rename(settings.rename.minCSS))
     .pipe(gulpif(config.hasPermission, chmod(config.permission)))
     .pipe(gulp.dest(output.compressed))
-    .pipe(print(log.created))
+    //.pipe(print(log.created))
     .on('end', function() {
       runSequence('package compressed css', maybeCallback);
     })

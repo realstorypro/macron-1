@@ -19,7 +19,7 @@ body {
   height: 100%;
 }
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 body {
   margin: 0px;
@@ -27,9 +27,9 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background: #FFFFFF;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.4285em;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.45em;
   color: rgba(0, 0, 0, 0.87);
   font-smoothing: antialiased;
 }
@@ -44,7 +44,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Releway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.28571429em;
   margin: calc(2rem -  0.14285714em ) 0em 1rem;
   font-weight: bold;
@@ -52,19 +52,19 @@ h5 {
 }
 h1 {
   min-height: 1rem;
-  font-size: 2rem;
+  font-size: 2.9rem;
 }
 h2 {
-  font-size: 1.71428571rem;
+  font-size: 2.5rem;
 }
 h3 {
-  font-size: 1.28571429rem;
+  font-size: 2.369rem;
 }
 h4 {
-  font-size: 1.07142857rem;
+  font-size: 1.777rem;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 1.333rem;
 }
 h1:first-child,
 h2:first-child,
@@ -88,7 +88,7 @@ h5:last-child {
 
 p {
   margin: 0em 0em 1em;
-  line-height: 1.4285em;
+  line-height: 1.45em;
 }
 p:first-child {
   margin-top: 0em;
@@ -190,12 +190,6 @@ body .ui.inverted::-webkit-scrollbar-thumb:window-inactive {
 body .ui.inverted::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.35);
 }
-
-
-/*******************************
-        Global Overrides
-*******************************/
-
 
 
 /*******************************
