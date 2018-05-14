@@ -1,0 +1,5 @@
+#!/bin/bash
+heroku pg:backups:capture
+rake db:migrate
+rake colors:setup
+rake roles:setup

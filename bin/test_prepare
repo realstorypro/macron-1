@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "== Installing Gems =="
+gem install rubocop
+
+echo "== Precompling Assets =="
+rails assets:precompile

@@ -1,0 +1,56 @@
+/*******************************
+         Site Settings
+*******************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@headerFont        : 'Releway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+/* This is the single variable that controls them all */
+@emSize   : 16px;
+
+/* The size of page text  */
+@fontSize : 16px;
+
+
+/*-------------------
+    Border Radius
+--------------------*/
+
+@relativeBorderRadius: 0;
+@absoluteBorderRadius: 0;
+@defaultBorderRadius: 0;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor: @orange;
+
+/*--------------
+  Page Heading
+---------------*/
+
+@headerFontWeight : bold;
+@headerLineHeight : unit((18 / 14), em);
+
+@h1 : unit((2.9), rem);
+@h2 : unit((2.5), rem);
+@h3 : unit((2.369), rem);
+@h4 : unit((1.777), rem);
+@h5 : unit((1.333), rem);
+
+
+/*-------------------
+        Page
+--------------------*/
+
+@lineHeight          : 1.45em;

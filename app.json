@@ -48,22 +48,16 @@
   },
   "environments": {
     "test": {
-      //"addons": ["heroku-postgresql:in-dyno", "heroku-redis:in-dyno"],
       "env": {
         "SEGMENT_JS_WRITE_KEY": "5M3f2gqW6yK3MdRopnlP5L6Kaksisrf8",
         "SEGMENT_WRITE_KEY": "VSpwniL70DaLTmBIZV9ZfiFHGAlTlv3X",
         "SECRET_KEY_BASE": "2035e6b6440a2bfcac09229995c28b53223498b6a4ca6dc5138bc2f6cb3f315ec0bf02129f07d9626cf2262fdf06d46713b65fd6736df2f7777d1ab9650a94a3"
       },
       "scripts": {
-        "test-setup": "gem install rubocop",
-        "test": "rubocop ."
+        "test-setup": "./bin/test_prepare",
+        "test": "./bin/test_run",
+        "release": "./bin/release"
       }
     }
   }
-
-  // ,
-  //  "scripts": {
-  //    "db-create": "bin/rails db:create",
-  //    "test-setup": "bin/rails assets:precompile"
-  //  }
 }

@@ -1,0 +1,5 @@
+@dropdownHoveredItemBackground: #4078C0;
+@dropdownHoveredItemColor: @white;
+@secondaryActiveItemBackground: transparent;
+
+@paginationMinWidth: 2.2em;
