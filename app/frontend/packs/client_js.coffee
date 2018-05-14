@@ -28,7 +28,7 @@ utils.draw 'blank_header'
 utils.log 'setting', "Debug: #{settings.get('debug')}"
 utils.log 'setting', "Design: #{settings.get('design')}"
 
-# app.initialize()
+app.initialize()
 
 # toggle uploadcare based on settings
 if settings.get('design')
@@ -45,7 +45,7 @@ $ ->
 
 document.addEventListener 'turbolinks:load', ->
   utils.log 'status', 'app.reload()'
-  # app.reload()
+  app.reload()
 
   ahoy.trackView()
   analytics.page()

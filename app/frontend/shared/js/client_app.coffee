@@ -45,7 +45,7 @@ conversion_tracker = new ConversionTracker
 # Vue Addons
 comments = new Comments
 category_filter = new CategoryFilter
-navigation_buttons = new NavigationButtons
+# navigation_buttons = new NavigationButtons
 sidenav = new Sidenav
 newsletter = new Newsletter
 video = new Video
