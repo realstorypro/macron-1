@@ -48,7 +48,6 @@
   },
   "environments": {
     "test": {
-      //"addons": ["heroku-postgresql:in-dyno", "heroku-redis:in-dyno"],
       "env": {
         "SEGMENT_JS_WRITE_KEY": "5M3f2gqW6yK3MdRopnlP5L6Kaksisrf8",
         "SEGMENT_WRITE_KEY": "VSpwniL70DaLTmBIZV9ZfiFHGAlTlv3X",
@@ -56,6 +55,7 @@
       },
       "scripts": {
         "test-setup": "gem install rubocop",
+        "test-precompile": "bin/rails assets:precompile",
         "test": "rubocop ."
       }
     }
