@@ -5,6 +5,7 @@ require_dependency "application_controller"
 
 module Admin
   class DashboardController < ApplicationController
+    include AdminAccess
     semantic_breadcrumb "Dashboard", :admin_dashboard_index_path
     layout "layouts/admin"
 
@@ -18,8 +19,7 @@ module Admin
                                      .where(started_at: @date_end..@date_start)
                                      .group_by_day("started_at").count
 
-      @new_users = User
-                   .where(created_at: @date_end..@date_start).count
+      @new_users = User.where(created_at: @date_end..@date_start).count
 
       @new_comments = Comment.where(created_at: @date_end..@date_start).count
 
