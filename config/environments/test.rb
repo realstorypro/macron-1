@@ -21,7 +21,7 @@ Rails.application.configure do
   }
 
   # Redis
-  config.cache_store = :redis_store if ENV['REDIS_URL']
+  config.cache_store = :redis_store if ENV["REDIS_URL"]
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true

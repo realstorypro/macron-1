@@ -8,7 +8,7 @@ Devise.setup do |config|
   config.mailer_sender = ENV["FROM_EMAIL"]
 
   # Setting up Secret Key
-  config.secret_key = ENV['SECRET_KEY_BASE']
+  config.secret_key = ENV["SECRET_KEY_BASE"]
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
