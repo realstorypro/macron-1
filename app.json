@@ -55,14 +55,9 @@
       },
       "scripts": {
         "test-setup": "./bin/test_prepare",
-        "test": "rubocop .; bundle exec rspec"
+        "test": "./bin/test_run",
+        "postdeploy": "./bin/post_deploy"
       }
     }
   }
-
-  // ,
-  //  "scripts": {
-  //    "db-create": "bin/rails db:create",
-  //    "test-setup": "bin/rails assets:precompile"
-  //  }
 }
