@@ -1,8 +1,7 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
+#!/bin/bash
 
-puts "\n== Installing Gems =="
-system "gem install rubocop"
+echo "== Installing Gems =="
+gem install rubocop
 
-puts "\n== Precompling Assets =="
-system "rails assets:precompile"
+echo "== Precompling Assets =="
+rails assets:precompile
