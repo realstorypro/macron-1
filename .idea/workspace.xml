@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/js/vue/navigation_buttons.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/js/vue/navigation_buttons.coffee" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -83,18 +83,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client_app.coffee" pinned="false" current-in-tab="true">
+      <file leaf-file-name="client_app.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="682">
-              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+              <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navigation_buttons.coffee" pinned="false" current-in-tab="false">
+      <file leaf-file-name="navigation_buttons.coffee" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/navigation_buttons.coffee">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="client_js.coffee" pinned="false" current-in-tab="false">
@@ -165,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/cells/menu_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/vue/video_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/sidenav_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/admin/list_cell.rb" />
@@ -216,6 +219,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" />
         <option value="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/js/vue/navigation_buttons.coffee" />
       </list>
     </option>
   </component>
@@ -404,7 +408,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66406000" />
+    <option name="totallyTimeSpent" value="66922000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -820,13 +824,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/navigation_buttons.coffee">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/navigation_buttons.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
         </state>
       </provider>
     </entry>
