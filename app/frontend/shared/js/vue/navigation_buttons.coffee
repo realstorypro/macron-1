@@ -29,9 +29,9 @@ class NavigationButtons
       el: "##{widget.id}"
       mixins: [turbolinks_adapter]
       mounted: ->
-        # $(@.$options.el).find('.dropdown').dropdown()
+        $(@.$options.el).find('.dropdown').dropdown()
       methods:
         toggle_sidenav: () ->
-          $('#main-menu').sidebar('toggle')
+         # $('#main-menu').sidebar('toggle')
 
 export { NavigationButtons as default }
