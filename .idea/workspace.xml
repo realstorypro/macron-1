@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/partials/_inline_js.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/partials/_inline_js.html.slim" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -74,11 +74,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_head.html.slim" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_head.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client_app.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="client_js.coffee" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/frontend/packs/client_js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -142,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/cells/breadcrumbs_cell.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/cells/menu_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/vue/video_cell.rb" />
@@ -193,6 +206,7 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_inline_js.html.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" />
+        <option value="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" />
       </list>
     </option>
   </component>
@@ -381,7 +395,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65019000" />
+    <option name="totallyTimeSpent" value="65828000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -473,20 +487,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/members_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/members/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/routing/meta_routing_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -808,6 +808,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/packs/client_js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
         </state>
       </provider>
     </entry>
