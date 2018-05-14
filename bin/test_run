@@ -1,8 +1,8 @@
-#!/usr/bin/env ruby
+#!/bin/bash
 # frozen_string_literal: true
 
-puts "\n== Running Rubocop =="
-system "rubocop"
+echo "== Running Rubocop =="
+rubocop
 
-puts "\n== Running Rspec =="
-system "bundle exec rspec"
+echo "== Running Rspec =="
+bundle exec rspec
