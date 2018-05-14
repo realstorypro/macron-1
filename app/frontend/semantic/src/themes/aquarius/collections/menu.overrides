@@ -1,0 +1,3 @@
+.ui.pagination.menu {
+    box-shadow: none;
+}
