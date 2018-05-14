@@ -18,7 +18,7 @@ var
   less         = require('gulp-less'),
   minifyCSS    = require('gulp-clean-css'),
   plumber      = require('gulp-plumber'),
-  print        = require('gulp-print'),
+  print        = require('gulp-print').default,
   rename       = require('gulp-rename'),
   replace      = require('gulp-replace'),
   runSequence  = require('run-sequence'),
@@ -89,7 +89,7 @@ module.exports = function(callback) {
     .pipe(replace(assets.source, assets.uncompressed))
     .pipe(gulpif(config.hasPermission, chmod(config.permission)))
     .pipe(gulp.dest(output.uncompressed))
-    //.pipe(print(log.created))
+    .pipe(print(log.created))
     .on('end', function() {
       runSequence('package uncompressed css', maybeCallback);
     })
@@ -104,7 +104,7 @@ module.exports = function(callback) {
     .pipe(rename(settings.rename.minCSS))
     .pipe(gulpif(config.hasPermission, chmod(config.permission)))
     .pipe(gulp.dest(output.compressed))
-    //.pipe(print(log.created))
+    .pipe(print(log.created))
     .on('end', function() {
       runSequence('package compressed css', maybeCallback);
     })
