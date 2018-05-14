@@ -55,8 +55,7 @@
       },
       "scripts": {
         "test-setup": "gem install rubocop",
-        "test-precompile": "bin/rails assets:precompile",
-        "test": "rubocop ."
+        "test": "rubocop .; bundle exec rspec"
       }
     }
   }
