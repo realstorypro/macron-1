@@ -1,0 +1,6 @@
+= widget name: 'video', id: 'video', vue: :on, data: {url: options[:video]}
+  .embed.container
+    iframe src=options[:url] frameborder="0"
+    .cover
+      .ui.active.dimmer
+        .ui.text.large.loader

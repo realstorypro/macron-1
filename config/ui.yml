@@ -1,0 +1,244 @@
+defaults:
+  # grid items
+  container:
+    tag: div
+    css_class: 'container'
+
+  grid:
+    tag: div
+    css_class: 'grid'
+
+  row:
+    tag: div
+    css_class: 'row'
+    ui: :off
+
+  column:
+    tag: div
+    css_class: 'wide column'
+    ui: :off
+
+  # base items
+  header:
+    tag: div
+    css_class: 'header'
+
+  h1:
+    tag: h1
+    css_class: 'header'
+
+  h2:
+    tag: h2
+    css_class: 'header'
+
+  h3:
+    tag: h3
+    css_class: 'header'
+
+  h4:
+    tag: h4
+    css_class: 'header'
+
+  h5:
+    tag: h5
+    css_class: 'header'
+
+
+  text:
+    tag: p
+    css_class: 'text'
+    ui: :off
+
+  icon:
+    tag: i
+    css_class: 'icon'
+    ui: :off
+
+  table:
+    tag: table
+    css_class: table
+
+  divider:
+    tag: div
+    css_class: 'divider'
+
+  button:
+    tag: button
+    css_class: 'button'
+
+  buttons:
+    tag: div
+    css_class: 'buttons'
+
+  dropdown:
+    tag: div
+    css_class: 'dropdown'
+
+  menu:
+    tag: div
+    css_class: 'menu'
+    ui: :off
+
+  list:
+    tag: div
+    css_class: 'list'
+
+  message:
+    tag: div
+    css_class: 'message'
+
+  checkbox:
+    tag: div
+    css_class: 'checkbox'
+
+  image:
+    tag: div
+    css_class: 'image'
+
+  meta:
+    tag: div
+    css_class: 'meta'
+    ui: :off
+
+  content:
+    tag: div
+    css_class: 'content'
+    ui: :off
+
+  description:
+    tag: div
+    css_class: 'description'
+    ui: :off
+
+  extra:
+    tag: div
+    css_class: 'extra'
+    ui: :off
+
+  segments:
+    tag: div
+    css_class: 'segments'
+
+  segment:
+    tag: div
+    css_class: 'segment'
+
+  items:
+    tag: div
+    css_class: 'items'
+
+  item:
+    tag: div
+    css_class: 'item'
+    ui: :off
+
+  cards:
+    tag: div
+    css_class: 'cards'
+
+  card:
+    tag: div
+    css_class: 'card'
+
+  feed:
+    tag: div
+    css_class: 'feed'
+
+  event:
+    tag: div
+    css_class: 'event'
+    ui: :off
+
+  date:
+    tag: div
+    css_class: 'date'
+    ui: :off
+
+  statistics:
+    tag: div
+    css_class: 'statistics'
+
+  statistic:
+    tag: div
+    css_class: 'statistic'
+    ui: :off
+
+
+  # css framework builder classes
+
+  page:
+    tag: div
+    css_class: page
+    ui: :off
+
+  fragment:
+    tag: div
+    css_class: fragment
+    ui: :off
+
+  component:
+    tag: div
+    css_class: 'component'
+    ui: :off
+
+  widget:
+    tag: div
+    css_class: 'widget'
+    ui: :off
+
+
+  # non semantic ui components
+  overlay:
+    tag: div
+    css_class: 'overlay'
+    ui: :off
+
+  title:
+    tag: div
+    css_class: 'title'
+    ui: :off
+
+  summary:
+    tag: div
+    css_class: 'summary'
+    ui: :off
+
+  color:
+    tag: span
+    css_class: 'color'
+    ui: :off
+
+  separator:
+    tag: div
+    css_class: 'separator'
+    ui: :off
+
+  ribbon:
+    tag: div
+    css_class: 'ribbon label'
+
+  tagging:
+    tag: div
+    css_class: 'label'
+
+  field:
+    tag: div
+    css_class: 'input'
+
+  dynamic:
+    tag: div
+    css_class: 'dynamic'
+    ui: :off
+
+  # helper items
+  floated:
+    tag: div
+    css_class: 'floated'
+
+  left:
+    tag: div
+    css_class: 'left'
+
+  right:
+    tag: div
+    css_class: 'right'

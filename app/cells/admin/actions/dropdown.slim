@@ -1,0 +1,15 @@
+= h4
+  = icon 'tasks'
+  = content
+    = dropdown 'inline'
+      .text ACTIONS
+      = icon ' dropdown'
+      = menu
+        - actions.each do |action|
+          - if action[:permission]
+            - if icons?
+              = item url: action[:url], data: action[:data]
+                = icon action[:icon]
+                = action[:text]
+            - else
+              = item url: action[:url], data: action[:data], text: action[:text]

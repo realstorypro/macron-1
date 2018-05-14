@@ -1,0 +1,1336 @@
+# Implementation Defaults
+
+defaults:
+
+  permissions:
+
+    # default role assigned to the visitor
+    visitor:
+      role: guest
+
+    # new_user:   # default role assigned to new user
+    new_user:
+      role: member
+
+  # the root route of the application
+  root_route: 'page#home'
+
+menu:
+  main:
+    - section:
+      - name: Home
+        path: root
+        icon: compass
+        enabled: true
+  footer:
+  legal:
+    - section:
+      - name: Privacy Policy
+        path: privacy_policy
+        enabled: true
+
+      - name: Terms of Service
+        path: terms_of_service
+        enabled: true
+
+  admin:
+    - section:
+      - name: Dashboard
+        component: dashboard
+        path: admin_dashboard_index
+        icon: right angle
+        enabled: true
+
+      - name: Users
+        component: users
+        path: admin_users
+        icon: right angle
+        enabled: true
+
+      - name: Articles
+        component: articles
+        path: admin_articles
+        icon: right angle
+        enabled: true
+
+      - name: Videos
+        component: videos
+        path: admin_videos
+        icon: right angle
+        enabled: true
+
+      - name: Discussions
+        component: discussions
+        path: admin_discussions
+        icon: right angle
+        enabled: true
+
+      - name: Advertisements
+        component: advertisements
+        path: admin_advertisements
+        icon: right angle
+        enabled: true
+
+    - section:
+      - name: Categories
+        component: categories
+        path: admin_categories
+        icon: right angle
+        enabled: true
+
+      - name: Tags
+        component: tags
+        path: admin_tags
+        icon: right angle
+        enabled: true
+
+    - section:
+      - name: Reports
+        component: reports
+        path: '/admin/reports'
+        icon: right angle
+        turbolinks: false
+        enabled: true
+
+    - section:
+      - name: Settings
+        component: site_settings
+        path: admin_settings
+        icon: right angle
+        enabled: true
+
+      - name: Support
+        component: support
+        path: admin_support_index
+        icon: right angle
+        enabled: true
+
+pages:
+  terms-of-service:
+  privacy-policy:
+
+tests:
+    - component: dashboard
+      implementation: true
+      admin : true
+      frontend: false
+      actions:
+        - index
+
+    - component:  members
+      implementation: true
+      admin : false
+      frontend: true
+      actions:
+        - show
+
+    - component: users
+      implementation: true
+      admin : true
+      frontend: false
+      actions:
+        - index
+        - show
+        - destroy
+
+    - component: articles
+      implementation: false
+      admin : true
+      frontend: false
+      actions:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - destroy
+
+    - component: discussions
+      implementation: false
+      admin : true
+      frontend: false
+      actions:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - destroy
+
+    - component: videos
+      implementation: false
+      admin : true
+      frontend: false
+      actions:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - destroy
+
+    - component: advertisements
+      implementation: true
+      admin : true
+      frontend: false
+      actions:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - destroy
+
+    - component: tags
+      implementation: true
+      admin : true
+      frontend: false
+      actions:
+        - index
+        - show
+        - new
+        - edit
+        - create
+        - update
+        - destroy
+
+    - component: categories
+      implementation: true
+      admin : true
+      frontend: false
+      actions:
+        - index
+        - show
+        - new
+        - edit
+        - create
+        - update
+        - destroy
+
+    - component: site_settings
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
+    - component: support
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
+components:
+  admin:
+    name: 'Admin'
+    description: 'Headless admin module'
+    path: 'admin'
+    enabled: true
+
+  dashboard:
+    name: 'Dashboard'
+    description: 'Provides dashboard capabilities'
+    path: 'dashboard'
+    enabled: true
+
+  support:
+    name: 'Support'
+    description: 'Provides info about Support'
+    path: 'support'
+    enabled: true
+
+  site_settings:
+    name: 'Settings'
+    description: 'Provides settings capabilities'
+    klass: 'Setting'
+    path: 'settings'
+    enabled: true
+
+  members:
+    name: 'Members'
+    description: 'Allows for members being viewed'
+    klass: 'User'
+    path: 'members'
+    enabled: true
+
+  profile:
+    name: 'Profile'
+    description: 'Allows for user profile management'
+    klass: 'Profile'
+    path: 'profile'
+    enabled: true
+
+  users:
+    name: 'Users'
+    description: 'Allows for user management'
+    klass: 'User'
+    path: 'users'
+    enabled: true
+
+  articles:
+    name: 'Articles'
+    description: 'Provides article writing capabilities'
+    klass: 'Article'
+    path: 'articles'
+    enabled: true
+
+  discussions:
+    name: 'Discussions'
+    description: 'Provides discussion capabilities'
+    klass: 'Discussion'
+    path: 'discussions'
+    enabled: true
+
+  videos:
+    name: 'Videos'
+    description: 'Provides project capabilities'
+    klass: 'Video'
+    path: 'videos'
+    enabled: true
+
+  profile:
+    name: 'Profile'
+    description: 'Provides profile capabilities'
+    klass: 'Profile'
+    path: 'profile'
+    enabled: true
+
+  comments:
+    name: 'Comments'
+    description: 'Provides commenting capabilities'
+    klass: 'Comment'
+    path: 'comments'
+    enabled: true
+
+  advertisements:
+    name: 'Advertisements'
+    description: 'Provides ad capabilities'
+    klass: 'Advertisement'
+    path: 'advertisements'
+    enabled: true
+
+  tags:
+    name: 'Tags'
+    description: 'Provides tagging capabilities'
+    klass: 'Tag'
+    path: 'tags'
+    enabled: true
+
+  categories:
+    name: 'Categories'
+    description: 'Provides categorization capabilities'
+    klass: 'Category'
+    path: 'categories'
+    enabled: true
+
+  reports:
+    name: 'Reports'
+    description: 'Provides reporting capabilities'
+    path: 'admin/reports'
+    enabled: true
+
+  dummy:
+    name: 'Dummy Component'
+    description: 'Always Disabled. Used by tests'
+    path: 'admin/dummy'
+    enabled: false
+
+
+views:
+  profile:
+    new:
+      avatar:
+        label: 'Avatar'
+        type: 'image'
+        size: ['600','600']
+      title:
+        label: 'Title'
+        type: 'string'
+        maxlength: '50'
+        hint: 'Limited to 50 Characters'
+      location:
+        label: 'Location'
+        type: 'string'
+        maxlength: '50'
+        hint: 'Limited to 50 Characters'
+      age:
+        label: 'Age'
+        type: 'integer'
+        maxlength: '200'
+        hint: 'Limited to 200 Characters'
+      signature:
+        label: 'Signature'
+        type: 'string'
+        maxlength: '200'
+        hint: 'Limited to 200 Characters'
+
+  users:
+    new:
+      email:
+        label: 'Email'
+        type: 'string'
+      roles:
+        label: 'Role'
+        type: 'association_dropdown'
+    list:
+      email:
+        label: 'Email'
+        type: 'string'
+      created_at:
+        label: 'Joined'
+        type: 'date'
+      roles:
+        label: 'Role'
+        type: 'unlinked_list'
+    show:
+      meta_header:
+        type: 'header'
+        text: 'Meta'
+      email:
+        label: 'Email'
+        type: 'string'
+      created_at:
+        label: 'Joined'
+        type: 'date'
+      roles:
+        label: 'Role'
+        type: 'unlinked_list'
+      profile_header:
+        type: 'header'
+        text: 'Profile'
+      username:
+        label: 'User Name'
+        type: 'string'
+      avatar_with_default:
+        label: 'Avatar'
+        type: 'image_small'
+        association: 'profile'
+      title:
+        label: 'Title'
+        type: 'string'
+        association: 'profile'
+      location:
+        label: 'Location'
+        type: 'string'
+        association: 'profile'
+      age:
+        label: 'Age'
+        type: 'string'
+        association: 'profile'
+      signature:
+        label: 'Signature'
+        type: 'string'
+        association: 'profile'
+
+  articles:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+        maxlength: '70'
+        hint: 'Limited to 70 characters'
+      description:
+        label: 'Short Summary'
+        type: 'text'
+        maxlength: '160'
+        hint: 'Limited to 160 characters'
+      category:
+        label: 'Category'
+        type: 'dropdown'
+      tags:
+        label: 'Tags'
+        type: 'association'
+      published_date:
+        label: 'Published Date'
+        type: 'datepicker'
+
+      images_header:
+        type: 'header'
+        text: 'Images'
+      fullscreen_image:
+        label: 'Fullscreen Image'
+        type: 'image'
+        size: ['2560','1456']
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image'
+        size: ['2048','1024']
+      card_image:
+        label: 'Card Image'
+        type: 'image'
+        size: ['1100','900']
+      image_alt:
+        label: 'Image Description'
+        maxlength: '40'
+        hint: 'Limited to 40 characters'
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+      long_summary:
+        label: 'Long Summary'
+        type: 'rich'
+      body:
+        label: 'Article Body'
+        type: 'rich'
+
+    list:
+      name:
+        label: 'Short Title'
+        type: 'string'
+      category:
+        label: 'Category'
+        type: 'string'
+        scope: 'name'
+      tags:
+        label: 'Tags'
+        type: 'unlinked_list'
+      published_date:
+        label: 'Published'
+        type: 'string'
+
+    show:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+      description:
+        label: 'Short Summary'
+        type: 'string'
+      category:
+        label: 'Category'
+        type: 'linked_item'
+      tags:
+        label: 'Tags'
+        type: 'linked_list'
+      published_date:
+        label: 'Published Date'
+        type: 'date'
+
+      images_header:
+        type: 'header'
+        text: 'Images'
+      fullscreen_image:
+        label: 'Fullscreen Image'
+        type: 'image_medium'
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image_medium'
+      card_image:
+        label: 'Card Image'
+        type: 'image_medium'
+      image_alt:
+        label: 'Image Description'
+        type: 'string'
+
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+      long_summary:
+        label: 'Long Summary'
+        type: 'string'
+      body:
+        label: 'Article Body'
+        type: 'string'
+
+  discussions:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+        maxlength: '70'
+        hint: 'Limited to 70 characters'
+      description:
+        label: 'Short Summary'
+        type: 'text'
+        maxlength: '160'
+        hint: 'Limited to 160 characters'
+      category:
+        label: 'Category'
+        type: 'dropdown'
+      tags:
+        label: 'Tags'
+        type: 'association'
+      published_date:
+        label: 'Published Date'
+        type: 'datepicker'
+
+      images_header:
+        type: 'header'
+        text: 'Images'
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image'
+        size: ['2048','1024']
+      image_alt:
+        label: 'Image Description'
+        maxlength: '40'
+        hint: 'Limited to 40 characters'
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+      long_summary:
+        label: 'Long Summary'
+        type: 'rich'
+      body:
+        label: 'Discussion Body'
+        type: 'rich'
+
+    list:
+      name:
+        label: 'Short Title'
+        type: 'string'
+      category:
+        label: 'Category'
+        type: 'string'
+        scope: 'name'
+      tags:
+        label: 'Tags'
+        type: 'unlinked_list'
+      published_date:
+        label: 'Published'
+        type: 'string'
+
+    show:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+      description:
+        label: 'Short Summary'
+        type: 'string'
+      category:
+        label: 'Category'
+        type: 'linked_item'
+      tags:
+        label: 'Tags'
+        type: 'linked_list'
+      published_date:
+        label: 'Published Date'
+        type: 'date'
+
+      images_header:
+        type: 'header'
+        text: 'Images'
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image_medium'
+      image_alt:
+        label: 'Image Description'
+        type: 'string'
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+      long_summary:
+        label: 'Long Summary'
+        type: 'string'
+      body:
+        label: 'Discussion Body'
+        type: 'string'
+
+  videos:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+        maxlength: '70'
+        hint: 'Limited to 70 characters'
+      description:
+        label: 'Short Summary'
+        type: 'text'
+        maxlength: '160'
+        hint: 'Limited to 160 characters'
+      category:
+        label: 'Category'
+        type: 'dropdown'
+      tags:
+        label: 'Tags'
+        type: 'association'
+      published_date:
+        label: 'Published Date'
+        type: 'datepicker'
+
+      media_header:
+        type: 'header'
+        text: 'Media'
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image'
+        size: ['2048','1024']
+      card_image:
+        label: 'Card Image'
+        type: 'image'
+        size: ['1100','900']
+      image_alt:
+        label: 'Image Description'
+        maxlength: '40'
+        hint: 'Limited to 40 characters'
+      video:
+        label: 'Video'
+        type: 'string'
+        hint: 'Vimeo URL'
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+      body:
+        label: 'Video Body'
+        type: 'rich'
+
+    list:
+      name:
+        label: 'Short Title'
+        type: 'string'
+      category:
+        label: 'Category'
+        type: 'string'
+        scope: 'name'
+      tags:
+        label: 'Tags'
+        type: 'unlinked_list'
+      published_date:
+        label: 'Published'
+        type: 'string'
+
+    show:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+      description:
+        label: 'Short Summary'
+        type: 'string'
+      category:
+        label: 'Category'
+        type: 'linked_item'
+      tags:
+        label: 'Tags'
+        type: 'linked_list'
+      published_date:
+        label: 'Published Date'
+        type: 'date'
+
+      media_header:
+        type: 'header'
+        text: 'Media'
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image_medium'
+      card_image:
+        label: 'Card Image'
+        type: 'image_medium'
+      image_alt:
+        label: 'Image Description'
+        type: 'string'
+      video:
+        label: 'Video'
+        type: 'string'
+
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+      body:
+        label: 'Video Body'
+        type: 'string'
+
+  advertisements:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Name'
+        type: 'string'
+      tags:
+        label: 'Tags'
+        type: 'association'
+      published_date:
+        label: 'Published Date'
+        type: 'datepicker'
+      ad_header:
+        type: 'header'
+        text: 'Ad'
+      url:
+        label: 'URL'
+        type: 'string'
+      title:
+        label: 'Title'
+        type: 'string'
+      text:
+        label: 'Text'
+        type: 'text'
+      image:
+        label: 'Image'
+        type: 'image'
+        size: ['627','560']
+    list:
+      name:
+        label: 'Name'
+        type: 'string'
+      image:
+        label: 'Image'
+        type: 'image_tiny'
+      tags:
+        label: 'Tags'
+        type: 'unlinked_list'
+    show:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Name'
+        type: 'string'
+      tags:
+        label: 'Tags'
+        type: 'linked_list'
+      published_date:
+        label: 'Published Date'
+        type: 'string'
+      ad_header:
+        type: 'header'
+        text: 'Ad'
+      url:
+        label: 'URL'
+        type: 'string'
+      title:
+        label: 'Title'
+        type: 'string'
+      text:
+        label: 'Text'
+        type: 'string'
+      image:
+        label: 'Image'
+        type: 'image_medium'
+
+  tags:
+    new:
+      name:
+        label: 'Name'
+        type: 'string'
+        maxlength: '25'
+        hint: 'Limited to 25 Characters'
+    list:
+      name:
+        label: 'Name'
+        type: 'string'
+    show:
+      name:
+        label: 'Name'
+        type: 'string'
+
+  categories:
+    new:
+      name:
+        label: 'Name'
+        type: 'string'
+        maxlength: '25'
+        hint: 'Limited to 25 Characters'
+      color:
+        label: 'Color'
+        type: 'dropdown'
+    list:
+      name:
+        label: 'Name'
+        type: 'string'
+      color:
+        label: 'Color'
+        type: 'color'
+    show:
+      name:
+        label: 'Name'
+        type: 'string'
+      slug:
+        label: 'Slug'
+        type: 'string'
+      color:
+        label: 'Color'
+        type: 'color'
+
+  site_settings:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Name'
+        type: 'string'
+        hint: 'Site name. Used in page title generation. Critical for SEO.'
+      description:
+        label: 'Description'
+        type: 'string'
+      url:
+        label: 'URL'
+        type: 'string'
+        hint: 'Must start with https://'
+
+      logo_header:
+        type: 'header'
+        text: 'Logos'
+      logo:
+        label: 'Logo'
+        type: 'image'
+      inverted_logo:
+        label: 'Inverted Logo'
+        type: 'image'
+      desktop_logo_size:
+        label: 'Desktop Logo Width'
+        type: 'string'
+        hint: '(in pixels)'
+        maxlength: '3'
+      mobile_logo_size:
+        label: 'Mobile Logo Width'
+        type: 'string'
+        hint: '(in pixels)'
+        maxlength: '3'
+
+      favicon_header:
+        type: 'header'
+        text: 'Fav Icons'
+      favicon_16:
+        label: '16x16'
+        type: 'image'
+        size: ['16','16']
+      favicon_32:
+        label: '32x32'
+        type: 'image'
+        size: ['32','32']
+      favicon_96:
+        label: '96x96'
+        type: 'image'
+        size: ['96','96']
+      favicon_120:
+        label: '120x120'
+        type: 'image'
+        size: ['120','120']
+      favicon_152:
+        label: '152x152'
+        type: 'image'
+        size: ['152','152']
+      favicon_167:
+        label: '167x167'
+        type: 'image'
+        size: ['167','167']
+      favicon_180:
+        label: '180x180'
+        type: 'image'
+        size: ['180','180']
+
+      contact_header:
+        type: 'header'
+        text: 'Contact Info'
+      phone:
+        label: 'Phone'
+        type: 'string'
+        maxlength: '20'
+        hint: 'Limited to 20 Characters'
+      email:
+        label: 'Email'
+        type: 'string'
+      address1:
+        label: 'Address 1'
+        type: 'string'
+      address2:
+        label: 'Address 2'
+        type: 'string'
+      address3:
+        label: 'Address 3'
+        type: 'string'
+
+      social_header:
+        type: 'header'
+        text: 'Social Media'
+      twitter:
+        label: 'Twitter Account'
+        type: 'string'
+        hint: 'include the @'
+      facebook:
+        label: 'Facebook Page'
+        type: 'string'
+        hint: 'Full URL for the Facebook Page. Must start with https://'
+
+      auth_header:
+        type: 'header'
+        text: 'Authentication'
+      sign_up_title:
+        label: 'Sign Up Title'
+        type: 'string'
+        hint: 'Title of the Sign Up Box'
+      sign_up_subtitle:
+        label: 'Sign Sub Title'
+        type: 'string'
+        hint: 'Sub Title of the Sign Up Box'
+      sign_in_title:
+        label: 'Sign In Title'
+        type: 'string'
+        hint: 'Title of the Sign In Box'
+      auth_background:
+        label: 'Authentication Background'
+        type: 'image'
+        size: ['2560','1600']
+
+      footer_header:
+        type: 'header'
+        text: 'Footer'
+      about:
+        label: 'About Us'
+        type: 'rich'
+        hint: 'Write two short paragraphs describing the web site.'
+      copyrights:
+        label: 'Copyrights'
+        type: 'string'
+
+      integration_header:
+        type: 'header'
+        text: 'Integrations'
+      newsletter_webhook:
+        label: 'Newsletter Webhook'
+        type: 'string'
+
+    show:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Name'
+        type: 'string'
+      description:
+        label: 'Description'
+        type: 'string'
+      url:
+        label: 'URL'
+        type: 'string'
+
+      logo_header:
+        type: 'header'
+        text: 'Logos'
+      logo:
+        label: 'Logo'
+        type: 'image_medium'
+      inverted_logo:
+        label: 'Inverted Logo'
+        type: 'image_medium'
+      desktop_logo_size:
+        label: 'Desktop Logo Width'
+        type: 'string'
+      mobile_logo_size:
+        label: 'Mobile Logo Width'
+        type: 'string'
+
+      favicon_header:
+        type: 'header'
+        text: 'Fav Icons'
+      favicon_16:
+        label: '16x16'
+        type: 'image_small'
+      favicon_32:
+        label: '32x32'
+        type: 'image_small'
+      favicon_96:
+        label: '96x96'
+        type: 'image_small'
+      favicon_120:
+        label: '120x120'
+        type: 'image_small'
+      favicon_152:
+        label: '152x152'
+        type: 'image_small'
+      favicon_167:
+        label: '167x167'
+        type: 'image_small'
+      favicon_180:
+        label: '180x180'
+        type: 'image_small'
+
+      contact_header:
+        type: 'header'
+        text: 'Contact Info'
+      phone:
+        label: 'Phone'
+        type: 'string'
+      email:
+        label: 'Email'
+        type: 'string'
+      address1:
+        label: 'Address 1'
+        type: 'string'
+      address2:
+        label: 'Address 2'
+        type: 'string'
+      address3:
+        label: 'Address 3'
+        type: 'string'
+
+      social_header:
+        type: 'header'
+        text: 'Social Media'
+      twitter:
+        label: 'Twitter Account'
+        type: 'string'
+      facebook:
+        label: 'Facebook Page'
+        type: 'string'
+
+      auth_header:
+        type: 'header'
+        text: 'Authentication'
+      sign_up_title:
+        label: 'Sign Up Title'
+        type: 'string'
+      sign_up_subtitle:
+        label: 'Sign Sub Title'
+        type: 'string'
+      sign_in_title:
+        label: 'Sign In Title'
+        type: 'string'
+      auth_background:
+        label: 'Authentication Background'
+        type: 'image_medium'
+
+      footer_header:
+        type: 'header'
+        text: 'Footer'
+      about:
+        label: 'About Us'
+        type: 'string'
+      copyrights:
+        label: 'Copyrights'
+        type: 'string'
+
+      integration_header:
+        type: 'header'
+        text: 'Integrations'
+      newsletter_webhook:
+        label: 'Newsletter Webhook'
+        type: 'string'
+        hint: 'Zapier Webohook URL. Must start with https://'
+
+# Colors available to the categories
+
+colors:
+  - 'red'
+  - 'orange'
+  - 'yellow'
+  - 'olive'
+  - 'green'
+  - 'teal'
+  - 'blue'
+  - 'violet'
+  - 'purple'
+  - 'pink'
+  - 'brown'
+  - 'grey'
+  - 'black'
+
+auth:
+
+  # roles available within the application
+  # 'defaults' scope defines the
+  # default visitor role and member roles
+
+  roles:
+    - guest
+    - banned
+    - member
+    - editor
+    - admin
+
+  # Role Defenition
+  # 'all' is a hardcoded variable
+  # which bypasses all authorization
+
+  abilities:
+    - 'all'
+    - 'create'
+    - 'read'
+    - 'update'
+    - 'delete'
+    - 'moderate'
+
+  # Actions to Abilities
+  # action:
+  #   'ability'
+
+  actions:
+    index:
+      'read'
+    show:
+      'read'
+    edit:
+      'update'
+    update:
+      'update'
+    destroy:
+      'delete'
+    new:
+      'create'
+    create:
+      'create'
+    ban:
+      'moderate'
+    unban:
+      'moderate'
+
+
+  # Permissions Map
+  # user:           # role
+  #   component:    # name of the component
+  #     ability:    # name of the ability
+  #       options:  # ability options
+
+  permissions:
+    guest:
+      articles:
+        read:
+      discussions:
+        read:
+      videos:
+        read:
+      comments:
+        read:
+      profile:
+        read:
+      members:
+        read:
+      advertisements:
+        read:
+
+    banned:
+      articles:
+        read:
+      discussions:
+        read:
+      videos:
+        read:
+      comments:
+        read:
+      profile:
+        read:
+      members:
+        read:
+      advertisements:
+        read:
+
+    member:
+      articles:
+        read:
+      discussions:
+        read:
+      videos:
+        read:
+      comments:
+        create:
+        read:
+        delete:
+      profile:
+        create:
+        read:
+        update:
+      members:
+        read:
+      advertisements:
+        read:
+
+    editor:
+      admin:
+        all:
+      dashboard:
+        read:
+      users:
+        read:
+        moderate:
+      members:
+        read:
+      profile:
+        create:
+        read:
+        update:
+      articles:
+        all:
+      comments:
+        create:
+        read:
+        delete:
+      discussions:
+        all:
+      videos:
+        all:
+      categories:
+        read:
+      tags:
+        read:
+      support:
+        all:
+
+    admin:
+      admin:
+        all:
+      dashboard:
+        all:
+      users:
+        all:
+      members:
+        all:
+      profile:
+        all:
+      articles:
+        all:
+      comments:
+        all:
+      discussions:
+        all:
+      videos:
+        all:
+      advertisements:
+        all:
+      categories:
+        all:
+      tags:
+        all:
+      reports:
+        all:
+      site_settings:
+        all:
+      support:
+        all:

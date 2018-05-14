@@ -1,0 +1,11 @@
+// Todo: refactor 'p' to 'text'
+= widget name: 'notifications', dynamic: :on, id: 'notice'
+  = grid
+    = column size: 16, class: 'aligned right'
+      -flash.each do |key, value|
+        = message class: 'icon floating info off screen'
+          = icon class: 'close', data: {widget: 'notification', action: 'close'}
+          = icon 'info'
+          = content
+            = header text: 'Notice', ui: :off
+            p = value

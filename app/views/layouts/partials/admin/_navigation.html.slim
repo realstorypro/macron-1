@@ -1,0 +1,24 @@
+= fragment class: 'navigation', id: 'navigation'
+  = menu class: 'secondary', ui: :on
+    = menu class: 'secondary', ui: :on
+      .mobile-menu
+        = button url: '#', name: 'menu', data: {widget: 'drawer', action: 'toggle_menu', selector: '.section.menu'}
+          b
+            = icon 'sidebar'
+      = item 'logo'
+        = header 'small inverted'
+          = icon 'settings'
+          | Administration
+
+    = menu class: 'secondary floated right inverted', id: 'logged_off_menu', dynamic: :on, ui: :on
+      = dropdown class: 'user top right pointing item ', data: {content: 'View profile and more'}
+        = image_tag(avatar_thumbnail, class: 'ui rounded user image')
+        = icon 'dropdown'
+        = menu ui: :on
+          = header class: 'user', ui: :off
+            = "@#{current_user.username}"
+            = header class: 'sub', ui: :off, text: current_user.role
+          = divider ui: false
+          = item text: 'Profile', url: profile_path
+          = item text: 'Account', url: edit_user_registration_path
+          = item text: 'Sign Out', url: destroy_user_session_path, data: { method: :delete}

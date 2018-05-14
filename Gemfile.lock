@@ -1,3 +1,21 @@
+GIT
+  remote: https://github.com/leonid-io/dc-ui.git
+  revision: 47856f039acd49389b38606fb2d24aacc44c22e4
+  branch: master
+  specs:
+    dc_ui (2.5.5)
+      hashie
+      rails (~> 5.2.0)
+
+GIT
+  remote: https://github.com/uploadcare/uploadcare-rails.git
+  revision: 1ccebd84cddc71d994018abaa5367f44e47a4311
+  tag: v1.2.0-alpha
+  specs:
+    uploadcare-rails (1.2.0.pre.alpha)
+      rails (>= 4, < 6)
+      uploadcare-ruby (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,16 +62,40 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    ahoy_matey (2.0.2)
+      addressable
+      browser (~> 2.0)
+      geocoder (>= 1.4.5)
+      railties (>= 4.2)
+      referer-parser (>= 0.3)
+      request_store
+      safely_block (>= 0.2.1)
+      user_agent_parser
+    analytics-ruby (2.2.5)
+      commander (~> 4.4)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
     ast (2.4.0)
+    bcrypt (3.1.11)
+    better_errors (2.4.0)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
     bindex (0.5.0)
+    binding_of_caller (0.8.0)
+      debug_inspector (>= 0.0.1)
+    blazer (1.8.2)
+      activerecord (>= 4)
+      chartkick
+      railties (>= 4)
+      safely_block (>= 0.1.1)
     bootsnap (1.3.0)
       msgpack (~> 1.0)
+    browser (2.5.3)
     builder (3.2.3)
     byebug (10.0.2)
-    capybara (3.0.2)
+    capybara (3.0.3)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -65,11 +107,24 @@ GEM
       declarative-option (< 0.2.0)
       tilt (>= 1.4, < 3)
       uber (< 0.2.0)
+    cells-rails (0.0.9)
+      actionpack (>= 3.0)
+      cells (>= 4.1.6, < 5.0.0)
+    cells-slim (0.0.6)
+      cells (>= 4.0.1, < 6.0.0)
+      slim (~> 3.0)
+    chartkick (2.3.4)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (1.2.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    chronic (0.10.2)
+    codecov (0.1.10)
+      json
+      simplecov
+      url
+    coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -77,13 +132,58 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commander (4.4.4)
+      highline (~> 1.7.2)
     concurrent-ruby (1.0.5)
+    config (1.7.0)
+      activesupport (>= 3.0)
+      deep_merge (~> 1.2.1)
+      dry-validation (>= 0.10.4)
     crass (1.0.4)
+    debug_inspector (0.0.3)
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
+    deep_merge (1.2.1)
+    devise (4.4.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.3)
+    docile (1.3.0)
+    dry-configurable (0.7.0)
+      concurrent-ruby (~> 1.0)
+    dry-container (0.6.0)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+    dry-core (0.4.5)
+      concurrent-ruby (~> 1.0)
+    dry-equalizer (0.2.1)
+    dry-logic (0.4.2)
+      dry-container (~> 0.2, >= 0.2.6)
+      dry-core (~> 0.2)
+      dry-equalizer (~> 0.2)
+    dry-types (0.12.2)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1)
+      dry-container (~> 0.3)
+      dry-core (~> 0.2, >= 0.2.1)
+      dry-equalizer (~> 0.2)
+      dry-logic (~> 0.4, >= 0.4.2)
+      inflecto (~> 0.0.0, >= 0.0.2)
+    dry-validation (0.11.1)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+      dry-core (~> 0.2, >= 0.2.1)
+      dry-equalizer (~> 0.2)
+      dry-logic (~> 0.4, >= 0.4.0)
+      dry-types (~> 0.12.0)
+    errbase (0.1.0)
     erubi (1.7.1)
+    erubis (2.7.0)
+    excon (0.62.0)
     execjs (2.7.0)
     factory_bot (4.8.2)
       activesupport (>= 3.0.0)
@@ -92,15 +192,79 @@ GEM
       railties (>= 3.0.0)
     faker (1.8.7)
       i18n (>= 0.7)
+    faraday (0.15.0)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.12.2)
+      faraday (>= 0.7.4, < 1.0)
     ffi (1.9.23)
+    fog-aws (3.0.0)
+      fog-core (~> 2.1)
+      fog-json (~> 1.1)
+      fog-xml (~> 0.1)
+      ipaddress (~> 0.8)
+    fog-core (2.1.0)
+      builder
+      excon (~> 0.58)
+      formatador (~> 0.2)
+      mime-types
+    fog-json (1.1.0)
+      fog-core (~> 2.0)
+      multi_json (~> 1.10)
+    fog-xml (0.1.3)
+      fog-core
+      nokogiri (>= 1.5.11, < 2.0.0)
+    formatador (0.2.5)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
+    geocoder (1.4.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    groupdate (4.0.1)
+      activesupport (>= 4.2)
+    guard (2.14.2)
+      formatador (>= 0.2.4)
+      listen (>= 2.7, < 4.0)
+      lumberjack (>= 1.0.12, < 2.0)
+      nenv (~> 0.1)
+      notiffany (~> 0.0)
+      pry (>= 0.9.12)
+      shellany (~> 0.0)
+      thor (>= 0.18.1)
+    guard-compat (1.2.1)
+    guard-rspec (4.7.3)
+      guard (~> 2.1)
+      guard-compat (~> 1.1)
+      rspec (>= 2.99.0, < 4.0)
+    guard-rubocop (1.3.0)
+      guard (~> 2.0)
+      rubocop (~> 0.20)
+    hashie (3.5.7)
+    highline (1.7.10)
+    httparty (0.16.2)
+      multi_xml (>= 0.5.2)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    inflecto (0.0.2)
     io-like (0.3.0)
+    ipaddress (0.8.3)
+    iso_country_codes (0.7.8)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    json (2.1.0)
+    jwt (2.1.0)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -108,28 +272,51 @@ GEM
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
+    lumberjack (1.0.13)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     marcel (0.3.2)
       mimemagic (~> 0.3.2)
+    meta-tags (2.9.0)
+      actionpack (>= 3.2.0, < 5.3)
     method_source (0.9.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     msgpack (1.2.4)
     multi_json (1.13.1)
-    nio4r (2.3.0)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
+    nenv (0.3.0)
+    nexmo (5.0.2)
+      jwt
+    nio4r (2.3.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    notiffany (0.1.1)
+      nenv (~> 0.1)
+      shellany (~> 0.0)
+    orm_adapter (0.5.0)
     parallel (1.12.1)
     parser (2.5.1.0)
       ast (~> 2.4.0)
     pg (1.0.0)
+    phonelib (0.6.21)
     powerpack (0.1.1)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     public_suffix (3.0.2)
     puma (3.11.4)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.5)
+    rack-cache (1.7.1)
+      rack (>= 0.4)
     rack-proxy (0.6.4)
       rack
     rack-test (1.0.0)
@@ -147,6 +334,10 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.2.0)
       sprockets-rails (>= 2.0.0)
+    rails-controller-testing (1.0.2)
+      actionpack (~> 5.x, >= 5.0.1)
+      actionview (~> 5.x, >= 5.0.1)
+      activesupport (~> 5.x)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -163,6 +354,43 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rb-readline (0.5.5)
+    readingtime (0.4.0)
+    redis (4.0.1)
+    redis-actionpack (5.0.2)
+      actionpack (>= 4.0, < 6)
+      redis-rack (>= 1, < 3)
+      redis-store (>= 1.1.0, < 2)
+    redis-activesupport (5.0.4)
+      activesupport (>= 3, < 6)
+      redis-store (>= 1.3, < 2)
+    redis-namespace (1.6.0)
+      redis (>= 3.0.4)
+    redis-rack (2.0.4)
+      rack (>= 1.5, < 3)
+      redis-store (>= 1.2, < 2)
+    redis-rack-cache (2.0.2)
+      rack-cache (>= 1.6, < 2)
+      redis-store (>= 1.2, < 2)
+    redis-rails (5.0.2)
+      redis-actionpack (>= 5.0, < 6)
+      redis-activesupport (>= 5.0, < 6)
+      redis-store (>= 1.2, < 2)
+    redis-store (1.5.0)
+      redis (>= 2.2, < 5)
+    referer-parser (0.3.0)
+    request_store (1.4.1)
+      rack (>= 1.4)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
+    rolify (5.2.0)
+    rollbar (2.15.6)
+      multi_json
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
     rspec-cells (0.3.4)
       cells (>= 4.0.0, < 6.0.0)
       rspec-rails (~> 3.2)
@@ -190,26 +418,33 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rails (1.3.0)
+    rubocop-rails (1.4.0)
       railties (>= 3.0)
-      rubocop (~> 0.49)
+      rubocop (~> 0.53)
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
+    safely_block (0.2.1)
+      errbase
     sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sass-rails (5.0.7)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
     selenium-webdriver (3.11.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    semantic-ui-sass (2.3.1.2)
+      sass (>= 3.2)
+    shellany (0.0.1)
+    simple_form (4.0.0)
+      actionpack (> 4)
+      activemodel (> 4)
+    simplecov (0.16.1)
+      docile (~> 1.1)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
     slim (3.0.9)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 1.3.3, < 2.1)
@@ -229,7 +464,10 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    store_base_sti_class (1.2.0)
+      activerecord (>= 4.0)
     temple (0.8.0)
+    terminal-notifier-guard (1.6.4)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -242,18 +480,32 @@ GEM
     uglifier (4.1.10)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.3.2)
+    uploadcare-ruby (1.1.0)
+      faraday (~> 0.8)
+      faraday_middleware (~> 0.9)
+      mime-types
+      multipart-post
+    url (0.3.2)
+    user_agent_parser (2.4.1)
+    validate_url (1.0.2)
+      activemodel (>= 3.0.0)
+      addressable
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webpacker (3.5.2)
+    webpacker (3.5.3)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
       railties (>= 4.2)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    wicked (1.3.2)
+      railties (>= 3.0.7)
     xpath (3.0.0)
       nokogiri (~> 1.8)
 
@@ -261,31 +513,75 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ahoy_matey
+  analytics-ruby
+  better_errors
+  binding_of_caller
+  blazer
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15, < 4.0)
+  cells
+  cells-rails
+  cells-slim
+  chartkick
   chromedriver-helper
+  chronic
+  codecov
   coffee-rails (~> 4.2)
+  config
+  dc_ui!
+  devise
+  erubis
   factory_bot_rails
   faker
+  fog-aws
+  friendly_id (~> 5.1.0)
+  groupdate
+  guard
+  guard-rspec
+  guard-rubocop
+  httparty
+  iso_country_codes
   jbuilder (~> 2.5)
+  kaminari
   listen (>= 3.0.5, < 3.2)
+  meta-tags
+  nexmo
   pg (>= 0.18, < 2.0)
+  phonelib
   puma (~> 3.11)
+  pundit
   rails (~> 5.2.0)
+  rails-controller-testing
+  rb-readline
+  readingtime
+  redis
+  redis-namespace
+  redis-rack-cache
+  redis-rails
+  rolify
+  rollbar
   rspec-cells
   rspec-rails
   rubocop
   rubocop-rails
-  sass-rails (~> 5.0)
   selenium-webdriver
+  semantic-ui-sass
+  simple_form
+  simplecov
   slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
+  store_base_sti_class
+  terminal-notifier-guard (~> 1.6.1)
   turbolinks (~> 5)
   uglifier (>= 1.3.0)
+  uploadcare-rails!
+  validate_url
   web-console (>= 3.3.0)
-  webpacker
+  webpacker (~> 3.0)
+  wicked
 
 RUBY VERSION
    ruby 2.3.1p112

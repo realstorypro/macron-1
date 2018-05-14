@@ -1,0 +1,18 @@
+.widget.paginator
+  .separator
+    padding: $w-paginator-separator-pading
+
+    .divider
+      border-top: $w-paginator-item-divider-border
+
+  @include media("<tablet")
+    .ui.pagination.menu
+      dislpay: flex
+      justify-content: center
+      width: 100%
+
+      .item
+        padding: $w-paginator-item-pading
+
+      .icon
+        margin-right: 0

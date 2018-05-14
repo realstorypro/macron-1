@@ -1,0 +1,24 @@
+.widget.notifications
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  z-index: 5
+
+  i.icon
+    cursor: pointer
+
+  .ui.message
+    width: 350px
+    margin-left: auto
+    margin-right: 1em
+    margin-bottom: 1em
+    transition: 0.2s all
+
+    &.off.screen
+      margin-bottom: -10em
+
+
+    @include media("≥phone", "<tablet")
+      width: 95%
+      margin: 0 auto 1em

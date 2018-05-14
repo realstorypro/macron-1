@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    title Admin
+    meta content = 'text/html' charset = 'UTF-8' http-equiv = 'Content-Type'
+    meta content = 'width=device-width initial-scale=1.0' name = 'viewport'
+
+    = csrf_meta_tags
+    = stylesheet_pack_tag 'admin_css'
+    = stylesheet_pack_tag 'admin_deferred_css', media: 'none', onload: "if(media!='all')media='all'"
+    = javascript_pack_tag 'admin_js'
+    = uploadcare_settings
+    = render 'layouts/partials/admin/inline_js'
+    script src="https://wchat.freshchat.com/js/widget.js"
+
+
+  body.pushable
+    = render 'layouts/partials/drawers'
+    = render 'layouts/partials/notifications'
+
+    .pusher
+      = fragment 'full height'
+        = fragment 'side nav'
+          = render 'layouts/partials/admin/sidebar'
+        = fragment 'main'
+          .scrollable
+            = container
+              = grid
+                = row
+                  = column size: 16
+                    = segment class: 'basic no padding', id: 'header', dynamic: :on
+                      = fragment 'action bar just bordered'
+                        = left
+                          == BreadcrumbsCell.(@breadcrumbs) if @breadcrumbs.present?
+                        = right
+                          ==  Admin::ActionsCell.(nil,
+                                  actions: @actions,
+                                  show: :buttons,
+                                  icons: false) if @actions.present?
+                    == yield
+
+    = render 'layouts/partials/loading_js'
+
+
+    - if controller.controller_name == 'support'
+      javascript:
+        // freshchat
+        window.fcWidget.user.setEmail(window.user.email);
+        window.fcWidget.user.setProperties({
+            username: '#{current_user.username}',
+            site_name: '#{ss(:site_name)}'
+        });
+
+        window.fcWidget.init({
+            token: "9a63ae10-a0ef-471d-ab3a-844092c65b2d",
+            host: "https://wchat.freshchat.com"
+        });

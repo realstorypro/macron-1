@@ -1,6 +1,5 @@
-# frozen_string_literal: true
-
 # rubocop:disable BlockLength
+# rubocop:disable MixinUsage
 require "rails_helper"
 include SettingsHelper
 
@@ -36,7 +35,7 @@ describe MenuCell, type: "feature" do
 
   it "it renders dividers" do
     cell_content = @cell.call(nil,
-                              menu: settings("menu.legal"),
+                              menu: settings("menu.admin"),
                               policy: @policy,
                               show_divider: true,
                               request: @request).call
@@ -62,3 +61,4 @@ describe MenuCell, type: "feature" do
   end
 end
 # rubocop:enable BlockLength
+# rubocop:enable MixinUsage

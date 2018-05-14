@@ -1,0 +1,27 @@
+= simple_form_for document, url: send(path, document) do |f|
+  = segment 'basic no padding'
+    = container
+      = grid 'centered'
+        = column computer: 12, tablet: 16, mobile: 16, class: 'head wrapper'
+          = fragment 'action bar just bordered'
+            = left
+              =h4 text: "#{action_name} #{component_name.singularize.capitalize}"
+            = right
+              = button text: 'Close', url: '#', class: 'basic', data: { action: 'close', widget: 'drawer' }
+              = button text: 'Save', url: '#', class: 'primary', data: { action: 'save', widget: 'crud' }
+
+  = container
+    = grid 'centered'
+      = column computer: 12, tablet: 16, mobile: 16
+        = f.error_notification
+        - component_new_fields.each do |field|
+          - if field_type(field) == 'association'
+            = f.association field_name(field), input_html: {class: 'ui fluid search multiple dropdown'}, label: field_label(field)
+          - elsif field_type(field) == 'association_dropdown'
+            = f.association field_name(field), as: 'select', input_html: {class: 'ui fluid dropdown'}, label: field_label(field)
+          - elsif field_type(field) == 'header'
+            = h5 text: field_text(field), class: 'dividing grey'
+          - elsif field_type(field) == 'divider'
+            = divider
+          - else
+            = f.input field_name(field), as: field_type(field), label: field_label(field), hint: field_hint(field), maxlength: field_maxlength(field), component: params[:component]

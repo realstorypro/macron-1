@@ -1,0 +1,68 @@
+= widget name: 'comments', id: 'comments', class: 'hidden', vue: :on, data: {user: current_user&.id, component: component, record: model.slug}
+  .posts v-if="comments && comments.length"
+    .post v-for="(comment, index) in comments"
+      .meta
+        .created
+          | {{ comment.created_at | calendar_date }}
+        .count
+          dropdown v-if="comment.editable"
+            = icon 'ellipsis horizontal inverted'
+            = menu
+              = item class: 'danger', v: {'if': 'comment.editable'}
+                a.delete @click.prevent.self='destroy_comment(comment)' href=''
+                  = icon 'trash'
+                  | Delete Post
+
+      .profile
+        a.author v-bind:href="profile_link(comment.user)"
+          | {{ comment.user.username }}
+        .title
+          | {{ comment.user.title }}
+        .mobile.left.wrapper
+          a.avatar v-bind:href="profile_link(comment.user)"
+            avatar v-bind:username='comment.user.username' v-bind:src='comment.user.avatar' :rounded='true'
+        .mobile.right.wrapper
+          .aligner
+            a.author v-bind:href="profile_link(comment.user)"
+              | {{ comment.user.username }}
+            .title
+              | {{ comment.user.title }}
+        .joined
+          | Joined: {{ comment.user.created_at | short_date }}
+        .location v-if='comment.user.location'
+          | Location: {{ comment.user.location }}
+        .age v-if='comment.user.age' Age: {{ comment.user.age }}
+        .posts Posts: {{ comment.user.posts }}
+
+      .content
+        .text v-html='comment.body'
+        .ui.divider
+        p
+          | {{ comment.user.signature }}
+
+  form.ui.form.reply @submit.prevent="add_comment($event)" v-if="current_user"
+    - if current_user && current_user.has_role?(:banned)
+      = segment 'new comment'
+        = h5 class: 'centered', text: 'Unable to post replies'
+        = text class: 'centered'
+          = "Bad news, your account has been banned and your ability to post replies has been disabled. On the upside, you can still view the site and read all of its content. If you believe this was done in error or would like to appeal our decision please send us an email at #{mail_to(support_email, support_email)}."
+    - else
+      = segment 'new comment'
+        = h5 text: 'Something to add?'
+        textarea.comment.box
+        = buttons 'fluid'
+          = button class: 'primary submit', v:{'bind:class': '{disabled: comment_empty}'}
+            = icon 'pencil alternate'
+            | Post
+          = button class: 'reset secondary', v:{'bind:class': '{disabled: comment_empty}', 'on:click.prevent': 'reset_comment_box'}
+            = icon 'eraser'
+            | Erase
+
+  = segment class: 'center aligned unregistered', v: {if: "!current_user"}
+    = h5 class: 'centered dividing', text: 'Something to add? Join the discussion!'
+    = buttons
+      = button class: 'button secondary large', url: sign_in_path
+        | Sign In
+      .or
+      = button class: 'button primary large', url: sign_up_path
+        | Sign Up

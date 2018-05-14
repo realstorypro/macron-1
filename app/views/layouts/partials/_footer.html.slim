@@ -1,0 +1,38 @@
+= segment 'footer fragment vertical'
+  = container 'center aligned'
+    = grid 'stackable left aligned'
+      = column size: 6
+        = h5 text: 'About Us'
+        = ss(:about).html_safe
+      = column size: 5 do
+        = h5 text: 'Contact Us'
+        = list 'very relaxed divided link'
+          = item
+            = icon 'phone'
+            = content text: ss(:phone)
+          = item
+            = icon 'mail'
+            = content
+              = link_to ss(:email), "mailto:#{ss(:email)}", class: 'email link'
+          = item
+            = icon 'map'
+            = content
+              = ss(:address1)
+              br
+              = ss(:address2)
+              br
+              = ss(:address3)
+      = column size: 5
+        == Widget::NewsletterCell.(nil, layout: :footer)
+
+      = column size: 16, class: 'center aligned'
+        = divider
+        = list 'copyright horizontal mini divided link'
+          = item
+            = "&copy; #{ss(:copyrights)}".html_safe
+          ==  MenuCell.(nil,
+                  menu: s('menu.legal'),
+                  policy: Pundit.policy(current_user, :headless),
+                  request: request)
+          = item
+            = link_to t('app.powered_by_text'), t('app.powered_by_url')

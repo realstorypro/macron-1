@@ -1,0 +1,29 @@
+// Todo: Refactor the name auth_widget to something other then layout.auth_widget as it
+//  is not descriptive enough.
+= item
+  = segment
+    = header text: 'Already have an account?', class: 'inside'
+    = field 'username left icon fluid'
+      input type='text' name='user[login]' placeholder='Email or username' v-model='username'
+      = icon class: 'user'
+    = field 'password left icon fluid'
+      input type='password' name='user[password]' placeholder='Password' v-model='password'
+      = icon class: 'lock'
+    = field 'actions fluid'
+      = checkbox 'remember me'
+        input type='checkbox' name='user[remember_me]' v-model='remember_me'
+        label Remember Me
+      = separator text: '·', class: 'forgot remember'
+      = link_to 'Forgot Password?', new_user_password_path, class: 'forgot password'
+    = field 'fluid'
+      .ui.large.primary.button.fluid v-on:click = 'submit_form' Log In
+    = divider
+    = header text: "Don't have an account?", class: 'inside'
+    = field 'fluid'
+      = button text: 'Create one', url: sign_up_path, class: 'large primary basic button fluid inverted'
+
+    // [hack] Hiding the simple_form generated form. The values are needed by the the vue widget.
+    = simple_form_for(:user, url: session_path(:user), html: {class: 'hidden devise form'}) do |f|
+      = f.input :login, placeholder: 'Username or Email', label: false
+      = f.input :password, required: true, label: false
+      = f.input :remember_me, as: :boolean, label: false

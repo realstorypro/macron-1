@@ -1,0 +1,17 @@
+= component 'authentication signin'
+  = fragment 'header fullscreen'
+    == Vue::CoverCell.(nil, image: ss(:auth_background))
+    = segment 'auth box raised'
+      = segment 'basic'
+        = header tag: :h5, text: ss(:sign_in_title), class: 'dividing'
+        = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = f.input :login, placeholder: 'Username or Email', label: false, required: true, autofocus: true, as: :left_icon, input_html: {icon: 'user'}
+          = f.input :password, required: true, placeholder: 'Password', label: false, as: :left_icon_password, input_html: {icon: 'lock'}
+          = field class: 'actions'
+            = f.input :remember_me, as: :boolean, wrapper: :ui_checkbox, label: 'Remember Me' if devise_mapping.rememberable?
+            = separator class: 'forgot remember', text: '·'
+            = link_to 'Forgot Password?', new_user_password_path, class: 'forgot password'
+          = button_tag type: :submit, class: 'ui right labeled icon button large primary fluid'
+            | Sign In
+            = icon 'double angle right'
+        = render 'devise/shared/links'

@@ -1,0 +1,11 @@
+= component 'discussions listing'
+  = segment 'basic'
+    = container
+      = grid
+        = row
+          = column computer: 16, tablet: 16, mobile: 16
+            == Widget::FilterCell.(nil, layout: :version_1, component: params[:component], categories: @categories, active_category: params[:category])
+        = row
+          = column computer: 16, tablet: 16, mobile: 16
+            == Widget::DiscussionCell.(@entries, layout: :full, header: :on, category: :on, views: :off, replies: :on)
+  = render 'partials/paginator'

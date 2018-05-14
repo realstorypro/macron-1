@@ -1,0 +1,63 @@
+.rich.text.widget
+  figure
+    margin: 2.5em 0
+    max-width: 100%
+
+    img
+      max-width: 100%
+
+  p
+    font-size: 1.15em
+    line-height: 1.8em
+
+  strong
+    background: $black
+    color: $white
+    padding: 5px
+
+  h2
+    font-size: 1.9em
+    margin-bottom: 1.0em
+
+  ul, ol
+    padding-left: 1.2em
+
+  li
+    padding-left: 0.1em
+    font-size: 1.15em
+    line-height: 1.8em
+
+  hr
+    margin: 1.5em 0
+    border-top: 1px solid #ccc
+    border-bottom: 1px solid #ccc
+
+  &.narrow
+    h2
+      max-width: 85%
+      @include media("<desktop")
+        max-width: 100%
+
+    p
+      max-width: 75%
+      @include media("<desktop")
+        max-width: 100%
+
+    li
+      max-width: 75%
+      @include media("<desktop")
+        max-width: 100%
+
+    hr
+      max-width: 75%
+      @include media("<desktop")
+        max-width: 100%
+
+    figure
+      max-width: 100%
+      margin: 0
+
+      img
+        max-width: 80%
+        @include media("<desktop")
+          max-width: 100%

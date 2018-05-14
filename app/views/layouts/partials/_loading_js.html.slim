@@ -1,0 +1,14 @@
+javascript:
+  var button, buttons, i, len, loaded;
+  if(loaded == null) {
+    // initial app load
+    buttons = document.getElementsByClassName('button');
+
+    for (i = 0, len = buttons.length; i < len; i++) {
+    button = buttons[i];
+    button.classList.add('loading');
+    button.classList.add('disabled');
+    }
+
+    loaded = true
+  }

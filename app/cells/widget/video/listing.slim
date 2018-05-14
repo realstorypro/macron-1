@@ -1,0 +1,15 @@
+= widget name: 'item listing'
+  = items 'unstackable'
+    - @model.each do |video|
+      = item
+        - if @options[:image].on?
+          = link_to preload_image(video.card_image), video_details_path(video.category.slug, video.slug), class: 'image'
+        = content
+          = header
+            = link_to video.name, video_details_path(video.category.slug, video.slug)
+          - if @options[:date].on? && video.published_date
+            = meta
+              = list 'horizontal bulleted'
+                = item text: "#{video.published_date.strftime('%b %d, %Y')}"
+          - if @options[:description].on?
+            = description text: video.description

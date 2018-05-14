@@ -1,0 +1,18 @@
+= component 'authentication signup'
+  = fragment 'header fullscreen'
+    == Vue::CoverCell.(nil, image: ss(:auth_background))
+    = segment 'auth box raised'
+      = segment 'basic'
+        = header tag: :h5, class: 'dividing'
+          = ss(:sign_up_title)
+          = header ui: :off, class: 'sub', text: ss(:sign_up_subtitle)
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = f.input :username, required: true, autofocus: true, placeholder: 'Username', label: false, as: :left_icon, input_html: {icon: 'user'}
+          = f.input :email, required: true, placeholder: 'Email', label: false, as: :left_icon, input_html: {icon: 'mail'}
+          = f.input :password, required: true, placeholder: 'Password', label: false, as: :left_icon_password, input_html: {icon: 'lock'}
+          = f.input :password_confirmation, required: true, placeholder: 'Password Confirmation', label: false, as: :left_icon_password, input_html: {icon: 'lock'}
+          = f.input :newsletter, as: :boolean, wrapper: :ui_checkbox, label: 'Get our updates! Subscribe to our newsletter.', input_html: {checked: true}
+          = button_tag type: :submit, class: 'ui right labeled icon button large primary fluid'
+            | Sign Up
+            = icon 'right chevron'
+        = render 'devise/shared/links'

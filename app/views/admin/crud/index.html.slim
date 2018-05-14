@@ -1,0 +1,3 @@
+- if policy(@entries).show?
+  = segment class: 'details basic', id: 'details'
+    == Admin::ListCell.(nil, records: @entries, fields: component_list_fields, controller_namespace: self.controller.class.parent.to_s)

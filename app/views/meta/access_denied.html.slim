@@ -1,0 +1,9 @@
+= segment 'basic'
+  = container
+    = grid 'centered'
+      = column computer: 12, tablet: 16, mobile: 16
+        = fragment 'action bar just bordered'
+          = left
+            =h3 text: 'Access Denied'
+          = right
+            = button text: 'Close', url: '#', class: 'blue basic', data: { action: 'close', widget: 'drawer' }

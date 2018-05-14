@@ -1,0 +1,11 @@
+= component 'authentication reset password'
+  = fragment 'header fullscreen'
+    == Vue::CoverCell.(nil, image: ss(:auth_background))
+    = segment 'stacked auth box'
+      = segment 'basic'
+        = header tag: :h5, class: 'dividing', text: 'Password Reset'
+        = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+          = f.error_notification
+          = f.input :email, placeholder: 'Email', label: false, required: true, autofocus: true, as: :left_icon, input_html: {icon: 'user'}
+          = f.button :submit, 'Continue', class: 'fluid large primary'
+        = render 'devise/shared/links'

@@ -1,0 +1,32 @@
+= widget "navigation"
+  = container id: 'navigation'
+    = widget ui: :on, class: "secondary menu", name: 'navigation_buttons', id: 'navigation_buttons', vue: :on
+      = menu ui: :on, class: 'secondary'
+        = item tag: :button, class: 'icon hamburger', url: '', v: {'on:click.prevent': "toggle_sidenav()"}
+          = icon 'large sidebar'
+        = item(name: 'Logo', class: 'logo link', url: root_path) do
+          = image_tag ss(:logo), class: 'desktop logo image normal', style: "width: #{ss(:desktop_logo_size)}px;"
+          = image_tag ss(:inverted_logo), class: 'desktop logo image inverted', style: "width: #{ss(:desktop_logo_size)}px;"
+          = image_tag ss(:logo), class: 'mobile logo image', style: "width: #{ss(:mobile_logo_size)}px;"
+      = menu class: 'floated right'
+        - if user_signed_in?
+          = dropdown 'item widgeted compact profile top right pointing'
+            = image_tag avatar_thumbnail(current_user), class: 'ui mini image avatar'
+            = icon 'dropdown'
+            = menu
+              = header
+                | Signed in as
+                span.username= " #{current_user.username}"
+              = divider
+              = link_to profile_path, class: 'item'
+                | Your Profile
+              = divider
+              = link_to edit_user_registration_path, class: 'item'
+                | Account Settings
+              = link_to destroy_user_session_path, method: 'delete', class: 'item'
+                | Log Out
+        - else
+          = item
+            = link_to sign_in_path
+              = button 'sign in inverted secondary large'
+                | Sign In

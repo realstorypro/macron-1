@@ -1,0 +1,25 @@
+= display_meta_tags reverse: true, site: ss(:name), description: ss(:description),
+    og: {site_name: ss(:name)},
+    twitter: {site: ss(:twitter)},
+    icon: [ { href: ss(:favicon_16), sizes: '16x16' },
+    { href: ss(:favicon_32), sizes: '32x32' },
+    { href: ss(:favicon_96), sizes: '96x96' },
+    { href: ss(:favicon_120), rel: 'apple-touch-icon' },
+    { href: ss(:favicon_152), sizes: '152x152', rel: 'apple-touch-icon' },
+    { href: ss(:favicon_167), sizes: '167x167', rel: 'apple-touch-icon' },
+    { href: ss(:favicon_180), sizes: '180x180', rel: 'apple-touch-icon' } ]
+
+meta content = 'text/html; charset=UTF-8' http-equiv = 'Content-Type'
+meta content = 'width=device-width initial-scale=1' name = 'viewport'
+
+= rel_next_prev_link_tags @entries if @entries
+
+= csrf_meta_tags
+= stylesheet_pack_tag 'client_css'
+= stylesheet_pack_tag 'client_deferred_css', media: 'none', onload: "if(media!='all')media='all'"
+= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Releway|Roboto', media: 'none', onload: "if(media!='all')media='all'"
+= uploadcare_settings
+= javascript_pack_tag 'client_js', async: ''
+
+
+= render 'layouts/partials/inline_js'

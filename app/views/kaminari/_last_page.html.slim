@@ -1,0 +1,6 @@
+- unless current_page.last?
+  = link_to url, title: t('views.pagination.last').html_safe, class: 'item', remote: remote do
+    = icon 'angle double right'
+- else
+  = item
+    = icon 'angle double right disabled'

@@ -1,0 +1,30 @@
+.widget.featured.image
+  position: relative
+  border-bottom: 1px solid $medium-shading
+
+  .image
+    background-size: cover
+    min-height: 407px
+    opacity: 0.25
+
+    @include media("≥phone", "<tablet")
+      min-height: 240px
+
+  .overlay
+    background: rgba(0,0,0,0.01)
+    min-height: 407px
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+
+    @include media("≥phone", "<tablet")
+      min-height: 270px
+
+
+  margin-bottom: 2em
+

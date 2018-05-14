@@ -5,53 +5,120 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.3.1"
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Core
 gem "rails", "~> 5.2.0"
-# Use postgresql as the database for Active Record
-gem "pg", ">= 0.18", "< 2.0"
-# Use Puma as the app server
-gem "puma", "~> 3.11"
-# Use SCSS for stylesheets
-gem "sass-rails", "~> 5.0"
-# Use Uglifier as compressor for JavaScript assets
-gem "uglifier", ">= 1.3.0"
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem "webpacker"
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
-
-# Use CoffeeScript for .coffee assets and views
-gem "coffee-rails", "~> 4.2"
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem "turbolinks", "~> 5"
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "jbuilder", "~> 2.5"
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-
-gem "slim-rails"
-
 gem "bootsnap", ">= 1.1.0", require: false
+gem "puma", "~> 3.11"
+gem "httparty"
+gem "validate_url"
+gem "chronic"
+gem "config"
+gem "erubis"
+gem "friendly_id", "~> 5.1.0"
+gem "wicked"
+
+# Analytics
+gem "ahoy_matey"
+gem "analytics-ruby"
+gem "blazer"
+gem "groupdate"
+
+# Databases
+gem "pg", ">= 0.18", "< 2.0"
+gem "redis"
+gem "redis-namespace"
+gem "redis-rails"
+gem "redis-rack-cache"
+
+# Phone Tools
+gem "nexmo"
+gem "phonelib"
+gem "iso_country_codes"
+
+# gem "rack-mini-profiler"
+
+# Pagination
+gem "kaminari"
+
+# Active Record
+gem "store_base_sti_class"
+
+# Authentication
+gem "devise"
+gem "rolify"
+gem "pundit"
+
+# SEO
+gem "meta-tags"
+
+# Javascript
+gem "uglifier", ">= 1.3.0"
+gem "jbuilder", "~> 2.5"
+gem "coffee-rails", "~> 4.2"
+gem "turbolinks", "~> 5"
+
+# Presentation
+gem "dc_ui", github: "leonid-io/dc-ui", branch: "master"
+gem "slim-rails"
+gem "semantic-ui-sass" # Still needed because we're using the breadcrumb helper
+gem "cells"
+gem "cells-rails"
+gem "cells-slim"
+gem "chartkick"
+gem "simple_form"
+gem "readingtime"
+gem "webpacker", "~> 3.0"
+
+# File Upload
+# gem "uploadcare-rails"
+gem "uploadcare-rails", git: "https://github.com/uploadcare/uploadcare-rails.git", tag: "v1.2.0-alpha"
+gem "fog-aws"
+
+# Errors
+gem "rollbar"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
-  gem "web-console", ">= 3.3.0"
+  gem "rb-readline"
+
+  gem "better_errors"
+  gem "binding_of_caller"
+
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+
+  # guard files
+  gem "guard"
+  gem "guard-rspec", require: false
+  gem "guard-rubocop"
+  gem "terminal-notifier-guard", "~> 1.6.1"
+
+  gem "web-console", ">= 3.3.0"
 end
 
 group :test do
-  gem "capybara", ">= 2.15", "< 4.0"
-  gem "selenium-webdriver"
-  gem "chromedriver-helper"
+
+  # code quality
+  gem "simplecov", require: false
+  gem "codecov", require: false
+
+  # rubocop
   gem "rubocop"
   gem "rubocop-rails"
+
+  # browser testing
+  gem "selenium-webdriver"
+  gem "chromedriver-helper"
+  gem "capybara", ">= 2.15", "< 4.0"
+
+  # testing
   gem "rspec-rails"
   gem "rspec-cells"
+  gem "rails-controller-testing"
   gem "factory_bot_rails"
   gem "faker"
 end

@@ -1,0 +1,11 @@
+.fragment.ui.right.sidebar.huge
+  @include media("≥desktop")
+    width: 100%
+  @include media("≥tablet", "<desktop")
+    width: 100%
+  @include media("≥phone", "<tablet")
+    width: 100%
+
+  // Pusher & Overlay
+  &.right
+    background: $f-drawer-background-color !important

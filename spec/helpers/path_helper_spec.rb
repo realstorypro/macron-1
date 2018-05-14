@@ -2,9 +2,6 @@
 
 require "rails_helper"
 
-# needed in order to pull in the engine routes
-include Engine.routes.url_helpers
-
 # rubocop:disable BlockLength
 describe PathHelper, "path helper" do
   before(:each) do
@@ -70,19 +67,19 @@ describe PathHelper, "meta plular path helper" do
   end
 
   it "calls the new path" do
-    expect(helper.meta_new_path).to eq "/articles/new"
+    expect(helper.meta_new_path(:admin)).to eq "/admin/articles/new"
   end
 
   it "calls the show path" do
-    expect(helper.meta_show_path(@entry)).to eq "/articles/#{@entry.slug}"
+    expect(helper.meta_show_path(@entry, :admin)).to eq "/admin/articles/#{@entry.slug}"
   end
 
   it "calls the edit path" do
-    expect(helper.meta_edit_path(@entry)).to eq "/articles/#{@entry.slug}/edit"
+    expect(helper.meta_edit_path(@entry, :admin)).to eq "/admin/articles/#{@entry.slug}/edit"
   end
 
   it "calls the delete path" do
-    expect(helper.meta_delete_path(@entry)).to eq "/articles/#{@entry.slug}"
+    expect(helper.meta_delete_path(@entry, :admin)).to eq "/admin/articles/#{@entry.slug}"
   end
 end
 # rubocop:enable BlockLength
