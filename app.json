@@ -55,8 +55,7 @@
       },
       "scripts": {
         "test-setup": "./bin/test_prepare",
-        "test": "./bin/test_run",
-        "release": "./bin/release"
+        "test": "./bin/test_run"
       }
     }
   }

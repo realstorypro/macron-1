@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/release" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/post_deploy" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -84,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="580">
-              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+              <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -103,6 +102,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -170,7 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/config/locales/default.en.yml" />
         <option value="$PROJECT_DIR$/spec/features/pages_spec.rb" />
@@ -220,6 +227,7 @@
         <option value="$PROJECT_DIR$/bin/test_run" />
         <option value="$PROJECT_DIR$/bin/test_prepare" />
         <option value="$PROJECT_DIR$/bin/post_deploy" />
+        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/app.json" />
       </list>
     </option>
@@ -494,7 +502,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61519000" />
+    <option name="totallyTimeSpent" value="62284000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,7 +523,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32948717" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948717" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871793" visible="true" weight="0.2746781" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49871793" weight="0.2746781" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
@@ -586,13 +594,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/breadcrumbs_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -903,9 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/setup">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/test_prepare">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -915,6 +913,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/bundle">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/release">
       <provider selected="true" editor-type-id="text-editor">
@@ -930,10 +935,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/setup">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
         </state>
       </provider>
     </entry>
