@@ -25,9 +25,8 @@ class NavigationButtons
   setup: (widget) ->
     utils.log 'setup', 'setup()', 'navigation_buttons'
 
-    console.log "VUEEE", Vue
 
-    @app = new Vue
+    console.log @app = new Vue
       el: "##{widget.id}"
       mixins: [turbolinks_adapter]
       mounted: ->
