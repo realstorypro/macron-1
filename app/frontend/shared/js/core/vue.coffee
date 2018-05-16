@@ -18,7 +18,7 @@ class Vue
       instance
 
   setup : () ->
-    utils.log 'setup', 'setup()', 'vue'
+    utils.log 'setup', 'setup()', 'vue widget starter'
 
     $ =>
       $('[data-vue]').each (index, object) =>
@@ -27,7 +27,6 @@ class Vue
           id: $(object).attr('id')
           name: $(object).data('name')
 
-        console.log
         vent.channel().trigger "vue:#{widget.name}", widget, 'setup'
 
 export { Vue as default }

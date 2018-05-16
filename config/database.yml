@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: aquarius_production
-  username: aquarius
-  password: <%= ENV['AQUARIUS_DATABASE_PASSWORD'] %>
+  #username: aquarius
+  #password: <%= ENV['AQUARIUS_DATABASE_PASSWORD'] %>
