@@ -2,3 +2,4 @@
 rake db:migrate
 rake colors:setup
 rake roles:setup
+rake db:seed
