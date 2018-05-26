@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Rails.application.routes.default_url_options[:host] = ENV['URL']
+Rails.application.routes.default_url_options[:host] = ENV["URL"]
 
 Rails.application.configure do
   # Verifies that versions and hashed value of the package contents in the project's package.json
