@@ -27,8 +27,8 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
 
   config.public_file_server.headers = {
-      'Cache-Control' => 'public, s-maxage=31536000, maxage=15552000',
-      'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
+      "Cache-Control" => "public, s-maxage=31536000, maxage=15552000",
+      "Expires" => "#{1.year.from_now.to_formatted_s(:rfc822)}"
   }
 
   # Compress JavaScripts and CSS.
@@ -41,7 +41,7 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = ENV['CLOUDFRONT_URL']
+  config.action_controller.asset_host = ENV["CLOUDFRONT_URL"]
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
@@ -86,15 +86,15 @@ Rails.application.configure do
   # Setting Default Mailer Url
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-      address: 'smtp.sendgrid.net',
-      port: '587',
+      address: "smtp.sendgrid.net",
+      port: "587",
       authentication: :plain,
-      user_name: ENV['SENDGRID_USERNAME'],
-      password: ENV['SENDGRID_PASSWORD'],
-      domain: 'heroku.com'
+      user_name: ENV["SENDGRID_USERNAME"],
+      password: ENV["SENDGRID_PASSWORD"],
+      domain: "heroku.com"
   }
 
-  config.action_mailer.default_url_options = { host: ENV['URL'] }
+  config.action_mailer.default_url_options = { host: ENV["URL"] }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
