@@ -77,8 +77,8 @@ gem "fog-aws"
 # Errors
 gem "rollbar"
 
-gem 'heroku-deflater', group: :production
-gem 'rack-cors', :require => 'rack/cors'
+gem "heroku-deflater", group: :production
+gem "rack-cors", require: "rack/cors"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
