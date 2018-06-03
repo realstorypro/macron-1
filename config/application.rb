@@ -13,6 +13,8 @@ module Aquarius
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
+    config.exceptions_app = routes
+
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
     config.middleware.insert_before 0, Rack::Cors do
