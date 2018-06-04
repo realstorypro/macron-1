@@ -74,6 +74,6 @@ Rails.application.routes.draw do
   end
 
   authenticate :user, ->(user) { user.can_manage?(:reports) } do
-    mount Blazer::Engine, at: "aa1dmin/reports"
+    mount Blazer::Engine, at: "admin/reports"
   end
 end
