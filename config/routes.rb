@@ -72,4 +72,8 @@ Rails.application.routes.draw do
     resources :settings, component: "site_settings", only: %i[index edit update]
     resources :support, component: "support", only: %i[index]
   end
+
+  authenticate :user, ->(user) { user.can_manage?(:reports) } do
+    mount Blazer::Engine, at: "admin/reports"
+  end
 end
