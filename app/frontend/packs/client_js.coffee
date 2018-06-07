@@ -3,6 +3,7 @@ import uploadcare from 'uploadcare-widget'
 import Turbolinks from 'turbolinks'
 import semantic_js from '../semantic/dist/semantic.min'
 import ahoy from 'ahoy.js'
+import default_passive_events from 'default-passive-events'
 
 Turbolinks.start()
 ahoy.trackView()
