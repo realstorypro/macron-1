@@ -16,7 +16,7 @@ settings = new Settings
 utils = new Utils
 
 settings.set version: 'Version 2 ' # set the application version
-settings.set debug: true # show the debug messages
+settings.set debug: false# show the debug messages
 settings.set design: false # design mode disables the uploadcare widget
 
 utils.draw 'blank_header'
@@ -38,7 +38,7 @@ else
 
 # take the app out of the loading state
 $ ->
-  buttons = document.getElementsByClassName('button')
+  buttons = document.getElementsByClassName('button enhanced')
   for button in buttons
     button.classList.remove('loading')
     button.classList.remove('disabled')

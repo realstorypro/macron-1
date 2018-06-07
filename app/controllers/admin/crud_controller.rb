@@ -10,7 +10,7 @@ module Admin
       super
       add_to_actions(
         text: "Add new #{component_name.downcase.singularize}",
-        class: "primary",
+        class: "primary enhanced",
         icon: "file",
         url: send(new_path("admin")),
         permission: policy(@entries).new?,
@@ -21,7 +21,7 @@ module Admin
     def show
       add_to_actions(
         text: "Delete #{component_name.downcase.singularize}",
-        class: "negative basic",
+        class: "negative basic enhanced",
         icon: "remove",
         url: send(delete_path("admin"), @entry),
         permission: policy(@entry).destroy?,
@@ -33,7 +33,7 @@ module Admin
 
       add_to_actions(
         text: "Edit #{component_name.downcase.singularize}",
-        class: "primary",
+        class: "primary enhanced",
         icon: "edit",
         url: send(edit_path("admin"), @entry),
         permission: policy(@entry).edit?,

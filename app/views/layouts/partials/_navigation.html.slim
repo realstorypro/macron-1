@@ -2,7 +2,7 @@
   = container id: 'navigation'
     = widget ui: :on, class: "secondary menu", name: 'navigation_buttons', id: 'navigation_buttons', vue: :on
       = menu ui: :on, class: 'secondary'
-        = item tag: :button, class: 'icon hamburger', url: '', v: {'on:click.prevent': "toggle_sidenav()"}
+        = item tag: :button, class: 'enhanced button icon hamburger', url: '', v: {'on:click.prevent': "toggle_sidenav()"}
           = icon 'large sidebar'
         = item(name: 'Logo', class: 'logo link', url: root_path) do
           = image_tag ss(:logo), class: 'desktop logo image normal', style: "width: #{ss(:desktop_logo_size)}px;"
