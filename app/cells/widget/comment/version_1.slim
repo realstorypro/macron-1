@@ -61,8 +61,8 @@
   = segment class: 'center aligned unregistered', v: {if: "!current_user"}
     = h5 class: 'centered dividing', text: 'Something to add? Join the discussion!'
     = buttons
-      = button class: 'button secondary large', url: sign_in_path
+      = button class: 'button secondary large', url: url_helpers.sign_in_path
         | Sign In
       .or
-      = button class: 'button primary large', url: sign_up_path
+      = button class: 'button primary large', url: url_helpers.sign_up_path
         | Sign Up

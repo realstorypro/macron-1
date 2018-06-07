@@ -5,6 +5,8 @@ module Widget
     include ApplicationHelper
     include DcUi::Helpers
 
+    delegate :url_helpers, to: "Rails.main_app.routes"
+
     def show
       render(options[:layout])
     end
