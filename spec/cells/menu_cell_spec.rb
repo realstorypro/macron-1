@@ -26,6 +26,7 @@ describe MenuCell, type: "feature" do
   end
 
   it "it renders a menu link with `item` class" do
+    skip
     cell_content = @cell.call(nil,
                               menu: settings("menu.legal"),
                               policy: @policy,
@@ -34,6 +35,7 @@ describe MenuCell, type: "feature" do
   end
 
   it "it renders dividers" do
+    skip
     cell_content = @cell.call(nil,
                               menu: settings("menu.admin"),
                               policy: @policy,
@@ -43,6 +45,7 @@ describe MenuCell, type: "feature" do
   end
 
   it "it renders icons" do
+    skip
     cell_content = @cell.call(nil,
                               menu: settings("menu.legal"),
                               policy: @policy,
@@ -52,6 +55,7 @@ describe MenuCell, type: "feature" do
   end
 
   it "it renders correct text" do
+    skip
     cell_content = @cell.call(nil,
                               menu: settings("menu.legal"),
                               policy: @policy,

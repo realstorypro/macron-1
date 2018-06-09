@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/blazer.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/widget/discussion/full.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/discussion/full.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/widget/discussion/related.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/discussion/related.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/widget/video/listing.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/video/listing.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/packs/admin_js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/packs/admin_js.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/concerns/categorizable.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/categorizable.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/show.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/discussions/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/discussions/index.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/meta/_form.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/meta/_form.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/videos/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/videos/index.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/implementations/common/default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/implementations/common/default.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -112,11 +102,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_cell.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base_cell.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="602">
               <caret line="139" selection-start-line="139" selection-end-line="139" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_cell_spec.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/cells/menu_cell_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="534">
+              <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -197,7 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/config/webpack/loaders/vue_esm_alias.js" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/core/vue.coffee" />
         <option value="$PROJECT_DIR$/config/webpack/environment.js" />
@@ -248,6 +246,7 @@
         <option value="$PROJECT_DIR$/app/models/concerns/categorizable.rb" />
         <option value="$PROJECT_DIR$/app/models/discussion.rb" />
         <option value="$PROJECT_DIR$/app/cells/admin/base_cell.rb" />
+        <option value="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" />
       </list>
     </option>
   </component>
@@ -552,12 +551,12 @@
       <workItem from="1527351469215" duration="1631000" />
       <workItem from="1528127643478" duration="4209000" />
       <workItem from="1528327741614" duration="2758000" />
-      <workItem from="1528477609738" duration="6688000" />
+      <workItem from="1528477609738" duration="7130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98166000" />
+    <option name="totallyTimeSpent" value="98608000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -649,13 +648,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/core/vue.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/widgets/multiselect.coffee">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -999,6 +991,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
           <caret line="139" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/cells/menu_cell_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
         </state>
       </provider>
     </entry>
