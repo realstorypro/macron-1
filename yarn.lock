@@ -5079,7 +5079,7 @@ jquery-ujs@^1.2.2:
   dependencies:
     jquery ">=1.8.0"
 
-jquery@>=1.10.2, jquery@>=1.8.0, jquery@^3.2.1:
+jquery@>=1.10.2, jquery@>=1.7, jquery@>=1.8.0, jquery@^3.2.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
@@ -6996,6 +6996,12 @@ performance-now@^0.2.0:
 performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
+
+pickadate-webpack@^3.5.6:
+  version "3.5.6"
+  resolved "https://registry.yarnpkg.com/pickadate-webpack/-/pickadate-webpack-3.5.6.tgz#7bbd6a43838861074b68f06716182ad1416fa337"
+  dependencies:
+    jquery ">=1.7"
 
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"

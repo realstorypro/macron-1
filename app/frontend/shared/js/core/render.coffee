@@ -2,6 +2,7 @@ import Utils from './utils'
 import Vent from './vent'
 import Dispatcher from './dispatcher'
 import Dropdown from '../widgets/dropdown'
+import Datepicker from '../widgets/datepicker'
 import Richtext from '../widgets/richtext'
 import Multiselect from '../widgets/multiselect'
 import _ from 'underscore'
@@ -10,6 +11,7 @@ utils =  new Utils
 vent =  new Vent
 dispatcher = new Dispatcher
 dropdown = new Dropdown
+datepicker = new Datepicker
 multiselect = new Multiselect
 richtext = new Richtext
 
@@ -52,6 +54,7 @@ class Render
       $("#{options.element}").html(html)
 
       dropdown.reinit()
+      datepicker.reinit()
       multiselect.reinit()
       richtext.reinit()
       dispatcher.reinit()
@@ -77,6 +80,7 @@ class Render
         $("##{id}").html(html)
 
       dropdown.reinit()
+      datepicker.reinit()
       multiselect.reinit()
       richtext.reinit()
       dispatcher.reinit()

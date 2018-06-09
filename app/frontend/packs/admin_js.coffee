@@ -2,6 +2,7 @@ import {} from 'jquery-ujs'
 import uploadcare from 'uploadcare-widget'
 import Turbolinks from 'turbolinks'
 import semantic_js from '../semantic/dist/semantic.min'
+import default_passive_events from 'default-passive-events'
 
 import Chartkick from "chartkick"
 import Chart from "chart.js"
@@ -20,7 +21,7 @@ settings = new Settings
 utils = new Utils
 
 settings.set version: 'Version 2 ' # set the application version
-settings.set debug: true # show the debug messages
+settings.set debug: false # show the debug messages
 settings.set design: false # design mode disables the uploadcare widget
 
 utils.draw 'blank_header'
