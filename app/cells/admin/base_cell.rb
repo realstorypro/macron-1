@@ -137,6 +137,7 @@ module Admin
     def name(field)
       field_name(field)
     end
+
   end
 end
 # rubocop:enable CyclomaticComplexity
