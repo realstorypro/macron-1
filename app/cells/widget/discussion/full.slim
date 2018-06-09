@@ -1,25 +1,25 @@
-= widget name: "table listing #{'headless' if options[:header].off?}"
+= widget name: "table listing #{'headless' unless options[:header]}"
   = table 'very basic unstackable'
-    - if options[:header].on?
+    - if options[:header]
       thead
         tr
           th Topic
-          - if options[:category].on?
+          - if options[:category]
             th Category
-          - if options[:replies].on?
+          - if options[:replies]
             th.right.aligned Replies
-          - if options[:views].on?
+          - if options[:views]
             th.right.aligned Views
     tbody
       - @model.each do |discussion|
         tr
           td
-            = link_to discussion.name, discussion_details_path(discussion.category.slug, discussion.slug)
-          - if options[:category].on?
+            = link_to discussion.name, url_helpers.discussion_details_path(discussion.category.slug, discussion.slug)
+          - if options[:category]
             td.collapsing.top.aligned
               = color class: discussion.category.color.name
               = discussion.category.name
-          - if options[:replies].on?
+          - if options[:replies]
             td.right.aligned= discussion.comments.count
-          - if options[:views].on?
+          - if options[:views]
             td.right.aligned= rand(400...5000)

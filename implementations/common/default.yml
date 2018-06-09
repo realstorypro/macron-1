@@ -792,6 +792,10 @@ views:
       ad_header:
         type: 'header'
         text: 'Ad'
+      image:
+        label: 'Image'
+        type: 'image'
+        size: ['627','560']
       url:
         label: 'URL'
         type: 'string'
@@ -801,10 +805,6 @@ views:
       text:
         label: 'Text'
         type: 'text'
-      image:
-        label: 'Image'
-        type: 'image'
-        size: ['627','560']
     list:
       name:
         label: 'Name'
@@ -831,6 +831,9 @@ views:
       ad_header:
         type: 'header'
         text: 'Ad'
+      image:
+        label: 'Image'
+        type: 'image_medium'
       url:
         label: 'URL'
         type: 'string'
@@ -840,9 +843,6 @@ views:
       text:
         label: 'Text'
         type: 'string'
-      image:
-        label: 'Image'
-        type: 'image_medium'
 
   tags:
     new:

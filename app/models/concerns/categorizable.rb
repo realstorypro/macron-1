@@ -4,6 +4,6 @@ module Categorizable
   extend ActiveSupport::Concern
 
   included do
-    belongs_to :category
+    belongs_to :category, optional: true
   end
 end

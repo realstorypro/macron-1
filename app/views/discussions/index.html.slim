@@ -7,5 +7,5 @@
             == Widget::FilterCell.(nil, layout: :version_1, component: params[:component], categories: @categories, active_category: params[:category])
         = row
           = column computer: 16, tablet: 16, mobile: 16
-            == Widget::DiscussionCell.(@entries, layout: :full, header: :on, category: :on, views: :off, replies: :on)
+            == Widget::DiscussionCell.(@entries, layout: :full, header: true, category: true, views: false, replies: true)
   = render 'partials/paginator'
