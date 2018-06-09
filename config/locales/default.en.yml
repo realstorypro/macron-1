@@ -1,7 +1,7 @@
 en:
   app:
-    powered_by_text: 'Powered by vityOS'
-    powered_by_url: 'http://www.vityos.com'
+    powered_by_text: 'Powered by IdeaLogic'
+    powered_by_url: 'http://www.idealogic.io'
   seo:
     pages:
       terms-of-service:

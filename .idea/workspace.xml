@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models/advertisement.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/advertisement.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/default.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/default.en.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -87,8 +88,8 @@
           <file leaf-file-name="video.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/models/video.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" selection-start-line="17" selection-end-line="17" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -97,11 +98,29 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="advertisement.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="advertisement.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/advertisement.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+                <state relative-caret-position="195">
+                  <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="default.en.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/locales/default.en.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="edit.html.slim" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.slim">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -112,7 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>compile</find>
       <find>from 'vue/dist/vue</find>
       <find>vue</find>
       <find>redis_</find>
@@ -142,6 +160,7 @@
       <find>on</find>
       <find>default-passive-events</find>
       <find>category</find>
+      <find>url</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -166,8 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/webpack/environment.js" />
-        <option value="$PROJECT_DIR$/config/webpacker.yml" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/vue/navigation_buttons.coffee" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
@@ -217,6 +234,8 @@
         <option value="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" />
         <option value="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/advertisement.rb" />
+        <option value="$PROJECT_DIR$/config/locales/default.en.yml" />
+        <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.slim" />
       </list>
     </option>
   </component>
@@ -533,7 +552,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99154000" />
+    <option name="totallyTimeSpent" value="99598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,14 +644,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/plugins/picker/picker.js" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/crud_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/articles_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -955,17 +966,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/setting.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/video.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="330">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/advertisement.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/default.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
         </state>
       </provider>
     </entry>
