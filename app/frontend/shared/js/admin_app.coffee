@@ -10,6 +10,7 @@ import Drawer from './widgets/drawer'
 import Crud from './widgets/crud'
 import Checkbox from './widgets/checkbox'
 import Dropdown from './widgets/dropdown'
+import Datepicker from './widgets/datepicker'
 import Multiselect from './widgets/multiselect'
 import Richtext from './widgets/richtext'
 import Navigation from './widgets/navigation'
@@ -37,6 +38,7 @@ drawer = new Drawer
 crud = new Crud
 checkbox = new Checkbox
 dropdown = new Dropdown
+datepicker = new Datepicker
 multiselect = new Multiselect
 richtext = new Richtext
 navigation = new Navigation
@@ -67,6 +69,7 @@ class App
     notifications.setup()
     checkbox.setup()
     dropdown.setup()
+    datepicker.setup()
     multiselect.setup()
     richtext.setup()
     image_preloader.setup()
@@ -78,6 +81,7 @@ class App
     notifications.teardown()
     checkbox.teardown()
     dropdown.teardown()
+    datepicker.teardown()
     multiselect.teardown()
     richtext.teardown()
     image_preloader.teardown()

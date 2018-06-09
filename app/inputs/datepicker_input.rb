@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 # custom 'datepicker' input type for simple_form
