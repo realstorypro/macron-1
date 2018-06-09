@@ -8,4 +8,6 @@ class Advertisement < Entry
 
   validates_presence_of :url, :title,
                         :text, :image
+
+  validates :url, url: true
 end
