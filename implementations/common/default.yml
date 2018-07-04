@@ -582,6 +582,9 @@ views:
       long_summary:
         label: 'Long Summary'
         type: 'rich'
+      link:
+        label: 'Link'
+        type: 'string'
       body:
         label: 'Discussion Body'
         type: 'rich'
@@ -629,6 +632,9 @@ views:
         type: 'string'
       long_summary:
         label: 'Long Summary'
+        type: 'string'
+      link:
+        label: 'Link'
         type: 'string'
       body:
         label: 'Discussion Body'
