@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/aquarius.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aquarius.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/.last_run.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.last_run.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/features/pages_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/features/pages_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/logo_inverted.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/logo_inverted.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -78,27 +75,9 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="notifications.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/widgets/notifications.coffee">
+      <file leaf-file-name="app.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="_notifications.html.slim" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_notifications.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pages_spec.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/features/pages_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -258,6 +237,19 @@
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
@@ -483,12 +475,12 @@
       <workItem from="1528569626939" duration="86000" />
       <workItem from="1529333081550" duration="100000" />
       <workItem from="1529509163262" duration="2545000" />
-      <workItem from="1530324860911" duration="13274000" />
+      <workItem from="1530324860911" duration="13802000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116228000" />
+    <option name="totallyTimeSpent" value="116756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,11 +685,6 @@
         <state relative-caret-position="-636" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -718,15 +705,6 @@
           <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/logo_inverted.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/packs/client_css.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -828,8 +806,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/widgets/notifications.coffee">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/assets/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/logo_inverted.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/features/pages_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_notifications.html.slim">
       <provider selected="true" editor-type-id="text-editor">
@@ -838,12 +829,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/features/pages_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/widgets/notifications.coffee">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
