@@ -16,7 +16,7 @@ include ApplicationHelper
     end
 
     it "has a correct title" do
-      expect(page.title).to include I18n.translate!("seo.pages.#{node_name(p).to_s}.title")
+      expect(page.title).to include I18n.translate!("seo.pages.#{node_name(p)}.title")
     end
   end
 end
