@@ -571,18 +571,6 @@ views:
         label: 'Published Date'
         type: 'datepicker'
 
-      images_header:
-        type: 'header'
-        text: 'Images'
-      landscape_image:
-        label: 'Landscape Image'
-        type: 'image'
-        size: ['2048','1024']
-      image_alt:
-        label: 'Image Description'
-        maxlength: '40'
-        hint: 'Limited to 40 characters'
-
       details_header:
         type: 'header'
         text: 'Details'
@@ -632,16 +620,6 @@ views:
       published_date:
         label: 'Published Date'
         type: 'date'
-
-      images_header:
-        type: 'header'
-        text: 'Images'
-      landscape_image:
-        label: 'Landscape Image'
-        type: 'image_medium'
-      image_alt:
-        label: 'Image Description'
-        type: 'string'
 
       details_header:
         type: 'header'

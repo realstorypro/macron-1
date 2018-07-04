@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/assets/images/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/logo_inverted.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/logo_inverted.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/discussion.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/discussion.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementations/common/default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/implementations/common/default.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -74,17 +73,46 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="default.yml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="524">
+                  <caret line="623" selection-start-line="623" selection-end-line="623" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="default.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="573" selection-start-line="573" selection-end-line="573" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="discussion.rb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/models/discussion.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>heroku</find>
       <find>Change Your password</find>
       <find>import</find>
       <find>Lato</find>
@@ -114,6 +142,7 @@
       <find>primary</find>
       <find>jquery</find>
       <find>update</find>
+      <find>or</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -175,12 +204,10 @@
         <option value="$PROJECT_DIR$/app/cells/widget/discussion/related.slim" />
         <option value="$PROJECT_DIR$/app/frontend/packs/admin_js.coffee" />
         <option value="$PROJECT_DIR$/config/blazer.yml" />
-        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
         <option value="$PROJECT_DIR$/app/models/article.rb" />
         <option value="$PROJECT_DIR$/app/controllers/meta_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/entry.rb" />
         <option value="$PROJECT_DIR$/app/models/concerns/categorizable.rb" />
-        <option value="$PROJECT_DIR$/app/models/discussion.rb" />
         <option value="$PROJECT_DIR$/app/cells/admin/base_cell.rb" />
         <option value="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" />
         <option value="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" />
@@ -190,6 +217,8 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/js/vue/comments.coffee" />
         <option value="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" />
         <option value="$PROJECT_DIR$/spec/features/pages_spec.rb" />
+        <option value="$PROJECT_DIR$/app/models/discussion.rb" />
+        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
       </list>
     </option>
   </component>
@@ -475,12 +504,12 @@
       <workItem from="1528569626939" duration="86000" />
       <workItem from="1529333081550" duration="100000" />
       <workItem from="1529509163262" duration="2545000" />
-      <workItem from="1530324860911" duration="13802000" />
+      <workItem from="1530324860911" duration="14185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116756000" />
+    <option name="totallyTimeSpent" value="117139000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -501,7 +530,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32948717" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948717" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49615383" visible="true" weight="0.34549356" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49615383" weight="0.34549356" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
@@ -833,7 +862,25 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/discussion.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="623" selection-start-line="623" selection-end-line="623" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

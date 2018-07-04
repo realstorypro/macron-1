@@ -8,7 +8,6 @@ class Discussion < Entry
   content_attr :body, :text
 
   validates_presence_of :long_title, :long_summary,
-                        :landscape_image, :image_alt,
                         :body, :category, :description
   paginates_per 25
 end
