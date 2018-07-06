@@ -1,0 +1,35 @@
+.details.fragment
+  figure
+    margin-left: 0
+    margin-top: 2.5em
+    margin-bottom: 2.5em
+
+  blockquote
+    margin-top: 2.5em
+    margin-bottom: 2.5em
+    padding-left: 0.5em
+    margin-left: 0.3em
+    border-left: 6px solid #ccc
+    font-size: 1.1em
+    line-height: 1.8em
+    quotes: "\201C""\201D""\2018""\2019"
+
+    &:before
+      color: #ccc
+      content: open-quote
+      font-size: 4em
+      line-height: 0.1em
+      margin-right: 0.25em
+      vertical-align: -0.45em
+      @include media("<desktop")
+        display: none
+
+    &:after
+      color: #ccc
+      content: close-quote
+      font-size: 4em
+      line-height: .1em
+      margin-left: .25em
+      vertical-align: -.5em
+      @include media("<desktop")
+        display: none
