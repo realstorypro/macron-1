@@ -1,3 +1,4 @@
-= table 'very basic celled'
-  - options[:fields].each do |field|
-    = row(field)
+= fragment 'details'
+  = table 'very basic celled'
+    - options[:fields].each do |field|
+      = row(field)

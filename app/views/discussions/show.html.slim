@@ -29,6 +29,15 @@
     = grid
       = row
         = column computer: 12, tablet: 16, mobile: 16
+          = widget name: 'social sharing', vue: :on, id: 'social_sharing'
+            vue-goodshare-facebook has_counter="has_counter" has_icon="has_icon"
+            vue-goodshare-reddit has_counter="has_counter" has_icon="has_icon"
+            vue-goodshare-pinterest has_counter="has_counter" has_icon="has_icon"
+            vue-goodshare-linkedin has_counter="has_counter" has_icon="has_icon"
+            vue-goodshare-twitter has_counter="has_counter" has_icon="has_icon"
+            br
+            br
+            br
           = widget 'normal rich text'
             = @entry.body.html_safe
 
@@ -47,4 +56,3 @@
                     == Widget::DiscussionCell.(@related_discussions, layout: :related, header: :off, category: :on) unless @related_discussions.nil?
                   = column computer: 16, tablet: 8, mobile: 16
                     == Widget::AdvertisingCell.(@ads, layout: :sidebar) unless @ads.nil?
-

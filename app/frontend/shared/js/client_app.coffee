@@ -22,6 +22,8 @@ import Sidenav from './vue/sidenav'
 import Newsletter from './vue/newsletter'
 import Video from './vue/video'
 import Cover from './vue/cover'
+import SocialSharing from './vue/social_sharing'
+
 
 # Core Components
 dispatcher = new Dispatcher
@@ -50,6 +52,7 @@ sidenav = new Sidenav
 newsletter = new Newsletter
 video = new Video
 cover = new Cover
+social_sharing = new SocialSharing
 
 class Client_app
 

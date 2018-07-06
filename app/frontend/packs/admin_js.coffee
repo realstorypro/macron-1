@@ -11,6 +11,7 @@ Turbolinks.start()
 
 window.Chartkick = Chartkick
 Chartkick.addAdapter(Chart)
+window.uploadcare = uploadcare
 
 import Settings from '../shared/js/core/settings'
 import App from '../shared/js/admin_app'

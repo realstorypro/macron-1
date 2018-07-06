@@ -6,9 +6,9 @@ class Discussion < Entry
   content_attr :landscape_image, :string
   content_attr :image_alt, :string
   content_attr :body, :text
+  content_attr :link, :text
 
   validates_presence_of :long_title, :long_summary,
-                        :landscape_image, :image_alt,
                         :body, :category, :description
   paginates_per 25
 end
