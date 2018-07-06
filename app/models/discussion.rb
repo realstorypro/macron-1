@@ -9,7 +9,6 @@ class Discussion < Entry
   content_attr :link, :text
 
   validates_presence_of :long_title, :long_summary,
-                        :body, :link, :category, :description
-  validates :link, url: true
+                        :body, :category, :description
   paginates_per 25
 end
