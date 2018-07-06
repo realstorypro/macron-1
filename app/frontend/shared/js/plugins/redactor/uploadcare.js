@@ -6,7 +6,6 @@
  */
 
 (function ($,$R) {
-  'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
   $R = $R && $R.hasOwnProperty('default') ? $R['default'] : $R;

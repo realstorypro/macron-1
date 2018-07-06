@@ -7,10 +7,14 @@ import default_passive_events from 'default-passive-events'
 import Chartkick from "chartkick"
 import Chart from "chart.js"
 
+console.log 'hiiii'
+console.log 'uploadcare', uploadcare
+
 Turbolinks.start()
 
 window.Chartkick = Chartkick
 Chartkick.addAdapter(Chart)
+window.uploadcare = uploadcare
 
 import Settings from '../shared/js/core/settings'
 import App from '../shared/js/admin_app'

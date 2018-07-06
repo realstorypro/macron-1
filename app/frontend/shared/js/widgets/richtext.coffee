@@ -4,8 +4,7 @@ import fullscreen from '../plugins/redactor/fullscreen'
 import widget from '../plugins/redactor/widget'
 import video from '../plugins/redactor/video'
 import uploadcare from '../plugins/redactor/uploadcare'
-
-console.log uploadcare
+import $ from 'jquery'
 
 utils =  new Utils
 
@@ -32,7 +31,7 @@ class Richtext
       source: true
       buttons: ['html','format', 'bold', 'italic', 'link', 'ol','ul','line']
       formatting: ['p', 'blockquote', 'h2']
-      plugins: ['fullscreen', 'video', 'widget']
+      plugins: ['fullscreen', 'uploadcare', 'video', 'widget']
       minHeight: '300px'
       uploadcare:
         buttonIconEnabled: true,
