@@ -13,6 +13,6 @@ environment.plugins.append(
     })
 )
 
-environment.loaders.append('vue', vue)
 environment.loaders.append('coffee', coffee)
+environment.loaders.append('vue', vue)
 module.exports = environment
