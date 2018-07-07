@@ -11,6 +11,8 @@ Turbolinks.start()
 
 window.Chartkick = Chartkick
 Chartkick.addAdapter(Chart)
+
+# needed in order for uploadcare redactor plugin to work
 window.uploadcare = uploadcare
 
 import Settings from '../shared/js/core/settings'
