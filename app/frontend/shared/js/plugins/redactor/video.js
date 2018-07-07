@@ -117,7 +117,7 @@
 		},
 		_matchData: function(data)
 		{
-			var iframeStart = '<iframe style="width: 500px; height: 281px;" src="';
+			var iframeStart = '<iframe style="width: 100%; height: 350px;" src="';
 			var iframeEnd = '" frameborder="0" allowfullscreen></iframe>';
 
             if (this._isVideoIframe(data))

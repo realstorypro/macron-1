@@ -28,6 +28,7 @@ class Richtext
     $R.options =
       toolbarFixed: true
       autoparseVideo: false
+      pastePlainText: true
       source: true
       buttons: ['html','format', 'bold', 'italic', 'link', 'ol','ul','line']
       formatting: ['p', 'blockquote', 'h2']
