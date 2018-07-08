@@ -883,9 +883,9 @@ views:
         type: 'string'
         hint: 'Must start with https://'
 
-      logo_header:
+      appearance_header:
         type: 'header'
-        text: 'Logos'
+        text: 'Appearance'
       logo:
         label: 'Logo'
         type: 'image'
@@ -1007,9 +1007,9 @@ views:
         type: 'string'
 
     show:
-      meta_header:
+      hub_header:
         type: 'header'
-        text: 'Meta Data'
+        text: 'Hub Settings'
       name:
         label: 'Name'
         type: 'string'
@@ -1020,46 +1020,21 @@ views:
         label: 'URL'
         type: 'string'
 
-      logo_header:
+      branding_header:
         type: 'header'
-        text: 'Logos'
+        text: 'Branding'
+      favicon_180:
+        label: 'Icon'
+        type: 'image_tiny'
       logo:
-        label: 'Logo'
+        label: 'Light Logo'
         type: 'image_medium'
       inverted_logo:
-        label: 'Inverted Logo'
+        label: 'Dark Logo'
         type: 'image_medium'
-      desktop_logo_size:
-        label: 'Desktop Logo Width'
-        type: 'string'
-      mobile_logo_size:
-        label: 'Mobile Logo Width'
-        type: 'string'
-
-      favicon_header:
-        type: 'header'
-        text: 'Fav Icons'
-      favicon_16:
-        label: '16x16'
-        type: 'image_small'
-      favicon_32:
-        label: '32x32'
-        type: 'image_small'
-      favicon_96:
-        label: '96x96'
-        type: 'image_small'
-      favicon_120:
-        label: '120x120'
-        type: 'image_small'
-      favicon_152:
-        label: '152x152'
-        type: 'image_small'
-      favicon_167:
-        label: '167x167'
-        type: 'image_small'
-      favicon_180:
-        label: '180x180'
-        type: 'image_small'
+      auth_background:
+        label: 'Login Background'
+        type: 'image_medium'
 
       contact_header:
         type: 'header'
@@ -1082,7 +1057,7 @@ views:
 
       social_header:
         type: 'header'
-        text: 'Social Media'
+        text: 'Social Media Accounts'
       twitter:
         label: 'Twitter Account'
         type: 'string'
@@ -1090,35 +1065,19 @@ views:
         label: 'Facebook Page'
         type: 'string'
 
-      auth_header:
-        type: 'header'
-        text: 'Authentication'
-      sign_up_title:
-        label: 'Sign Up Title'
-        type: 'string'
-      sign_up_subtitle:
-        label: 'Sign Sub Title'
-        type: 'string'
-      sign_in_title:
-        label: 'Sign In Title'
-        type: 'string'
-      auth_background:
-        label: 'Authentication Background'
-        type: 'image_medium'
-
       footer_header:
         type: 'header'
         text: 'Footer'
       about:
-        label: 'About Us'
+        label: 'About Statement'
         type: 'string'
       copyrights:
-        label: 'Copyrights'
+        label: 'Copyright Statement'
         type: 'string'
 
       integration_header:
         type: 'header'
-        text: 'Integrations'
+        text: 'Available Integrations'
       newsletter_webhook:
         label: 'Newsletter Webhook'
         type: 'string'
