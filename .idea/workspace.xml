@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/cells/vue/social_sharing/show.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/cells/vue/social_sharing_cell.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/social_sharing.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/packs/admin_js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/packs/admin_js.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/js/plugins/redactor/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/js/plugins/redactor/video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/js/vue/social_sharing.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/js/vue/social_sharing.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/js/widgets/richtext.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/js/widgets/richtext.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/show.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/discussions/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/discussions/show.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/videos/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/videos/show.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementations/common/default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/implementations/common/default.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -84,87 +73,17 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="init.sass" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/init.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="variables.sass" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="685">
-                  <caret line="263" column="34" selection-start-line="263" selection-start-column="34" selection-end-line="263" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="social_sharing.sass" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/social_sharing.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="content.sass" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/content.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" selection-start-line="1" selection-end-line="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="navigation.sass" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.5">
-          <split-first>
-            <leaf>
-              <file leaf-file-name="variables.sass" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="295">
-                      <caret line="151" column="31" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file leaf-file-name="variables.sass" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="256">
-                      <caret line="263" column="38" selection-start-line="263" selection-start-column="38" selection-end-line="263" selection-end-column="38" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="default.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="590">
+              <caret line="1037" selection-start-line="1037" selection-end-line="1037" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -270,7 +189,6 @@
         <option value="$PROJECT_DIR$/config/webpack/environment.js" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/plugins/redactor/uploadcare.js" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/admin/fragments/details.sass" />
-        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
         <option value="$PROJECT_DIR$/spec/factories/discussions.rb" />
         <option value="$PROJECT_DIR$/app/models/discussion.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/widgets/richtext.coffee" />
@@ -285,6 +203,7 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/social_sharing.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" />
+        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
       </list>
     </option>
   </component>
@@ -535,7 +454,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138396000" />
+    <option name="totallyTimeSpent" value="141245000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,7 +467,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -632,7 +550,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/test.vue" />
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/embed.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -821,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="632" selection-start-line="632" selection-end-line="632" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/discussion.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -907,6 +817,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/content.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/social_sharing.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/init.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -921,24 +845,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/social_sharing.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/content.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="263" column="38" selection-start-line="263" selection-start-column="38" selection-end-line="263" selection-end-column="38" />
+        <state relative-caret-position="373">
+          <caret line="143" column="62" selection-start-line="143" selection-start-column="62" selection-end-line="143" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/components/settings.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="1037" selection-start-line="1037" selection-end-line="1037" />
         </state>
       </provider>
     </entry>
