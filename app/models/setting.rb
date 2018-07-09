@@ -6,10 +6,8 @@ class Setting < ApplicationRecord
   include Payloadable
   after_save :clear_cache
 
-  before_create do
-    errors.add(:base, "already one setting object existing") && (return false) if Setting.exists?
-  end
 
+  # moving to general
   content_attr :name, :string
   content_attr :description, :string
   content_attr :url, :string
@@ -46,15 +44,15 @@ class Setting < ApplicationRecord
 
   content_attr :newsletter_webhook, :string
 
-  validates_presence_of :name, :description, :url,
-                        :about, :address1,
-                        :address2, :copyrights,
-                        :logo, :inverted_logo,
-                        :newsletter_webhook
+  #validates_presence_of :name, :description, :url,
+  #                      :about, :address1,
+  #                      :address2, :copyrights,
+  #                      :logo, :inverted_logo,
+  #                      :newsletter_webhook
 
-  validates :url, url: { schemes: ["https"] }
-  validates :facebook, url: { schemes: ["https"] }
-  validates :newsletter_webhook, url: { schemes: ["https"] }
+  #validates :url, url: { schemes: ["https"] }
+  #validates :facebook, url: { schemes: ["https"] }
+  #validates :newsletter_webhook, url: { schemes: ["https"] }
 
   def self.policy_class
     MetaPolicy
@@ -62,10 +60,12 @@ class Setting < ApplicationRecord
 
   def self.instance
     Setting.first_or_create! do |settings|
+      # moving to general
       settings.name = "Aquarius Default Title"
       settings.description = "Aquarius Default Description"
-
       settings.url = "https://www.rungravity.com"
+
+
       settings.facebook = "https://www.facebook.com/rungravity"
 
       settings.about = "about section"

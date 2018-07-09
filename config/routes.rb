@@ -69,8 +69,13 @@ Rails.application.routes.draw do
     resources :advertisements, component: "advertisements"
     resources :tags, component: "tags"
     resources :categories, component: "categories"
-    resources :settings, component: "site_settings", only: %i[index edit update]
+    #resources :settings, component: "site_settings", only: %i[index edit update]
     resources :support, component: "support", only: %i[index]
+
+    scope :settings, module: 'site_settings', component: "site_settings", as: 'settings'  do
+      root to: 'settings#all'
+      resource :general, controller: 'general', component: "general_settings"
+    end
   end
 
   authenticate :user, ->(user) { user.can_manage?(:reports) } do

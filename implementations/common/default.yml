@@ -95,7 +95,7 @@ menu:
     - section:
       - name: Settings
         component: site_settings
-        path: admin_settings
+        path: admin_settings_root
         icon: right angle
         enabled: true
 
@@ -213,6 +213,12 @@ tests:
       frontned: false
       actions:
 
+    - component: general_settings
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
     - component: support
       implementation: false
       admin: false
@@ -236,6 +242,13 @@ components:
     name: 'Support'
     description: 'Provides info about Support'
     path: 'support'
+    enabled: true
+
+  general_settings:
+    name: 'General Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::General'
+    path: 'admin_settings_general'
     enabled: true
 
   site_settings:
@@ -866,11 +879,8 @@ views:
         label: 'Color'
         type: 'color'
 
-  site_settings:
+  general_settings:
     new:
-      meta_header:
-        type: 'header'
-        text: 'Meta Data'
       name:
         label: 'Name'
         type: 'string'
@@ -882,7 +892,19 @@ views:
         label: 'URL'
         type: 'string'
         hint: 'Must start with https://'
+    show:
+      name:
+        label: 'Hub Name'
+        type: 'string'
+      description:
+        label: 'Hub Description'
+        type: 'string'
+      url:
+        label: 'Hub URL'
+        type: 'string'
 
+  site_settings:
+    new:
       logo_header:
         type: 'header'
         text: 'Logos'
@@ -1007,19 +1029,6 @@ views:
         type: 'string'
 
     show:
-      meta_header:
-        type: 'header'
-        text: 'Meta Data'
-      name:
-        label: 'Name'
-        type: 'string'
-      description:
-        label: 'Description'
-        type: 'string'
-      url:
-        label: 'URL'
-        type: 'string'
-
       logo_header:
         type: 'header'
         text: 'Logos'
@@ -1309,6 +1318,8 @@ auth:
       reports:
         all:
       site_settings:
+        all:
+      general_settings:
         all:
       support:
         all:
