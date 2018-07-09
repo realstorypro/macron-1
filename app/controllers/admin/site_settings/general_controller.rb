@@ -5,7 +5,6 @@ module Admin::SiteSettings
     include AdminAccess
     layout "layouts/admin"
 
-    skip_before_action :load_entry
     before_action :set_breadcrumb
 
     def show
@@ -21,32 +20,20 @@ module Admin::SiteSettings
       )
     end
 
-    def edit
+    private
+
+    def load_entry
       @entry = SiteSettings::General.instance
-      render :edit, layout: false
     end
 
-    def update
-      @entry = SiteSettings::General.instance
-      if @entry.update(entry_params)
-        flash[:success] = "settings were successfully updated."
-        response_status :success
-      else
-        response_status :error
-        render :edit, layout: false
-      end
+    def entry_params
+      allowed_attrs = set_allowed_attrs
+      params.require(:site_settings_general).permit(*allowed_attrs)
     end
 
     def set_breadcrumb
       semantic_breadcrumb 'Settings', admin_settings_root_path
       semantic_breadcrumb 'General', admin_settings_general_path
-    end
-
-    private
-
-    def entry_params
-      allowed_attrs = set_allowed_attrs
-      params.require(:site_settings_general).permit(*allowed_attrs)
     end
   end
 end
