@@ -74,7 +74,7 @@ Rails.application.routes.draw do
 
     scope :settings, module: 'site_settings', component: "site_settings", as: 'settings'  do
       root to: 'settings#all'
-      resource :general, controller: 'general', component: "general_settings"
+      resource :general, controller: 'general', component: "site_settings_general"
     end
   end
 

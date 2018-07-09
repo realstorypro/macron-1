@@ -41,5 +41,12 @@ module Admin::SiteSettings
       semantic_breadcrumb 'Settings', admin_settings_root_path
       semantic_breadcrumb 'General', admin_settings_general_path
     end
+
+    private
+
+    def entry_params
+      allowed_attrs = set_allowed_attrs
+      params.require(:site_settings_general).permit(*allowed_attrs)
+    end
   end
 end
