@@ -21,7 +21,6 @@ class Setting < ApplicationRecord
   content_attr :sign_up_title, :string
   content_attr :sign_up_subtitle, :string
   content_attr :sign_in_title, :string
-  content_attr :auth_background, :string
 
   content_attr :newsletter_webhook, :string
 

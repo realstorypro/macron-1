@@ -16,6 +16,7 @@ module SiteSettings
     content_attr :favicon_152, :string
     content_attr :favicon_167, :string
     content_attr :favicon_180, :string
+    content_attr :auth_background, :string
 
     validates_presence_of :logo, :inverted_logo
 

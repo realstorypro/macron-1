@@ -1009,6 +1009,14 @@ views:
         type: 'image_small'
       favicon_180:
         label: '180x180'
+
+      background_header:
+        type: 'header'
+        text: 'Auth Background'
+
+      auth_background:
+        label: 'Authentication Background'
+        type: 'image_medium'
         type: 'image_small'
 
   site_settings:
@@ -1126,9 +1134,6 @@ views:
       sign_in_title:
         label: 'Sign In Title'
         type: 'string'
-      auth_background:
-        label: 'Authentication Background'
-        type: 'image_medium'
 
       footer_header:
         type: 'header'
