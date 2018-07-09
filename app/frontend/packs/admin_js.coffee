@@ -2,7 +2,6 @@ import {} from 'jquery-ujs'
 import uploadcare from 'uploadcare-widget'
 import Turbolinks from 'turbolinks'
 import semantic_js from '../semantic/dist/semantic.min'
-import default_passive_events from 'default-passive-events'
 
 import Chartkick from "chartkick"
 import Chart from "chart.js"
