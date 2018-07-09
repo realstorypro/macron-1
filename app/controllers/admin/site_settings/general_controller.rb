@@ -8,8 +8,6 @@ module Admin::SiteSettings
     before_action :set_breadcrumb
 
     def show
-      @entry = SiteSettings::General.instance
-
       add_to_actions(
           text: "Edit",
           class: "primary",

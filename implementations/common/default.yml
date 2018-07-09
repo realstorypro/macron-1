@@ -219,6 +219,12 @@ tests:
       frontned: false
       actions:
 
+    - component: site_settings_branding
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
     - component: support
       implementation: false
       admin: false
@@ -249,6 +255,13 @@ components:
     description: 'Provides general settings capabilities'
     klass: 'SiteSettings::General'
     path: 'admin_settings_general'
+    enabled: true
+
+  site_settings_branding:
+    name: 'Branding Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Branding'
+    path: 'admin_settings_branding'
     enabled: true
 
   site_settings:
@@ -903,7 +916,7 @@ views:
         label: 'Hub URL'
         type: 'string'
 
-  site_settings:
+  site_settings_branding:
     new:
       logo_header:
         type: 'header'
@@ -956,7 +969,50 @@ views:
         label: '180x180'
         type: 'image'
         size: ['180','180']
+    show:
+      logo_header:
+        type: 'header'
+        text: 'Logos'
+      logo:
+        label: 'Logo'
+        type: 'image_medium'
+      inverted_logo:
+        label: 'Inverted Logo'
+        type: 'image_medium'
+      desktop_logo_size:
+        label: 'Desktop Logo Width'
+        type: 'string'
+      mobile_logo_size:
+        label: 'Mobile Logo Width'
+        type: 'string'
 
+      favicon_header:
+        type: 'header'
+        text: 'Fav Icons'
+      favicon_16:
+        label: '16x16'
+        type: 'image_small'
+      favicon_32:
+        label: '32x32'
+        type: 'image_small'
+      favicon_96:
+        label: '96x96'
+        type: 'image_small'
+      favicon_120:
+        label: '120x120'
+        type: 'image_small'
+      favicon_152:
+        label: '152x152'
+        type: 'image_small'
+      favicon_167:
+        label: '167x167'
+        type: 'image_small'
+      favicon_180:
+        label: '180x180'
+        type: 'image_small'
+
+  site_settings:
+    new:
       contact_header:
         type: 'header'
         text: 'Contact Info'
@@ -1029,47 +1085,6 @@ views:
         type: 'string'
 
     show:
-      logo_header:
-        type: 'header'
-        text: 'Logos'
-      logo:
-        label: 'Logo'
-        type: 'image_medium'
-      inverted_logo:
-        label: 'Inverted Logo'
-        type: 'image_medium'
-      desktop_logo_size:
-        label: 'Desktop Logo Width'
-        type: 'string'
-      mobile_logo_size:
-        label: 'Mobile Logo Width'
-        type: 'string'
-
-      favicon_header:
-        type: 'header'
-        text: 'Fav Icons'
-      favicon_16:
-        label: '16x16'
-        type: 'image_small'
-      favicon_32:
-        label: '32x32'
-        type: 'image_small'
-      favicon_96:
-        label: '96x96'
-        type: 'image_small'
-      favicon_120:
-        label: '120x120'
-        type: 'image_small'
-      favicon_152:
-        label: '152x152'
-        type: 'image_small'
-      favicon_167:
-        label: '167x167'
-        type: 'image_small'
-      favicon_180:
-        label: '180x180'
-        type: 'image_small'
-
       contact_header:
         type: 'header'
         text: 'Contact Info'
@@ -1320,6 +1335,8 @@ auth:
       site_settings:
         all:
       site_settings_general:
+        all:
+      site_settings_branding:
         all:
       support:
         all:

@@ -6,12 +6,6 @@ class Setting < ApplicationRecord
   include Payloadable
   after_save :clear_cache
 
-
-  # moving to general
-  content_attr :name, :string
-  content_attr :description, :string
-  content_attr :url, :string
-
   content_attr :phone, :string
   content_attr :email, :string
   content_attr :address1, :string
@@ -23,19 +17,6 @@ class Setting < ApplicationRecord
 
   content_attr :twitter, :string
   content_attr :facebook, :string
-
-  content_attr :logo, :string
-  content_attr :inverted_logo, :string
-  content_attr :desktop_logo_size, :integer
-  content_attr :mobile_logo_size, :integer
-
-  content_attr :favicon_16, :string
-  content_attr :favicon_32, :string
-  content_attr :favicon_96, :string
-  content_attr :favicon_120, :string
-  content_attr :favicon_152, :string
-  content_attr :favicon_167, :string
-  content_attr :favicon_180, :string
 
   content_attr :sign_up_title, :string
   content_attr :sign_up_subtitle, :string
@@ -60,12 +41,6 @@ class Setting < ApplicationRecord
 
   def self.instance
     Setting.first_or_create! do |settings|
-      # moving to general
-      settings.name = "Aquarius Default Title"
-      settings.description = "Aquarius Default Description"
-      settings.url = "https://www.rungravity.com"
-
-
       settings.facebook = "https://www.facebook.com/rungravity"
 
       settings.about = "about section"
@@ -74,8 +49,6 @@ class Setting < ApplicationRecord
       settings.address1 = "first line"
       settings.address2 = "second line"
 
-      settings.logo = "logo.png"
-      settings.inverted_logo = "logo_inverted.png"
 
       settings.newsletter_webhook = "https://hooks.zapier.com/hooks/catch/3200901/fsym7e/"
     end
