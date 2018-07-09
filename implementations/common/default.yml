@@ -225,6 +225,12 @@ tests:
       frontned: false
       actions:
 
+    - component: site_settings_theme
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
     - component: support
       implementation: false
       admin: false
@@ -262,6 +268,13 @@ components:
     description: 'Provides general settings capabilities'
     klass: 'SiteSettings::Branding'
     path: 'admin_settings_branding'
+    enabled: true
+
+  site_settings_theme:
+    name: 'Theme Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Theme'
+    path: 'admin_settings_theme'
     enabled: true
 
   site_settings:
@@ -1010,14 +1023,64 @@ views:
       favicon_180:
         label: '180x180'
 
-      background_header:
+  site_settings_theme:
+    new:
+      auth_header:
         type: 'header'
-        text: 'Auth Background'
+        text: 'Authentication'
+      sign_up_title:
+        label: 'Sign Up Title'
+        type: 'string'
+        hint: 'Title of the Sign Up Box'
+      sign_up_subtitle:
+        label: 'Sign Sub Title'
+        type: 'string'
+        hint: 'Sub Title of the Sign Up Box'
+      sign_in_title:
+        label: 'Sign In Title'
+        type: 'string'
+        hint: 'Title of the Sign In Box'
+      auth_background:
+        label: 'Authentication Background'
+        type: 'image'
+        size: ['2560','1600']
 
+      footer_header:
+        type: 'header'
+        text: 'Footer'
+      about:
+        label: 'About Us'
+        type: 'rich'
+        hint: 'Write two short paragraphs describing the web site.'
+      copyrights:
+        label: 'Copyrights'
+        type: 'string'
+    show:
+      auth_header:
+        type: 'header'
+        text: 'Authentication'
+      sign_up_title:
+        label: 'Sign Up Title'
+        type: 'string'
+      sign_up_subtitle:
+        label: 'Sign Sub Title'
+        type: 'string'
+      sign_in_title:
+        label: 'Sign In Title'
+        type: 'string'
       auth_background:
         label: 'Authentication Background'
         type: 'image_medium'
-        type: 'image_small'
+
+      footer_header:
+        type: 'header'
+        text: 'Footer'
+      about:
+        label: 'About Us'
+        type: 'string'
+      copyrights:
+        label: 'Copyrights'
+        type: 'string'
 
   site_settings:
     new:
@@ -1054,36 +1117,7 @@ views:
         type: 'string'
         hint: 'Full URL for the Facebook Page. Must start with https://'
 
-      auth_header:
-        type: 'header'
-        text: 'Authentication'
-      sign_up_title:
-        label: 'Sign Up Title'
-        type: 'string'
-        hint: 'Title of the Sign Up Box'
-      sign_up_subtitle:
-        label: 'Sign Sub Title'
-        type: 'string'
-        hint: 'Sub Title of the Sign Up Box'
-      sign_in_title:
-        label: 'Sign In Title'
-        type: 'string'
-        hint: 'Title of the Sign In Box'
-      auth_background:
-        label: 'Authentication Background'
-        type: 'image'
-        size: ['2560','1600']
 
-      footer_header:
-        type: 'header'
-        text: 'Footer'
-      about:
-        label: 'About Us'
-        type: 'rich'
-        hint: 'Write two short paragraphs describing the web site.'
-      copyrights:
-        label: 'Copyrights'
-        type: 'string'
 
       integration_header:
         type: 'header'
@@ -1122,28 +1156,6 @@ views:
         label: 'Facebook Page'
         type: 'string'
 
-      auth_header:
-        type: 'header'
-        text: 'Authentication'
-      sign_up_title:
-        label: 'Sign Up Title'
-        type: 'string'
-      sign_up_subtitle:
-        label: 'Sign Sub Title'
-        type: 'string'
-      sign_in_title:
-        label: 'Sign In Title'
-        type: 'string'
-
-      footer_header:
-        type: 'header'
-        text: 'Footer'
-      about:
-        label: 'About Us'
-        type: 'string'
-      copyrights:
-        label: 'Copyrights'
-        type: 'string'
 
       integration_header:
         type: 'header'
@@ -1342,6 +1354,8 @@ auth:
       site_settings_general:
         all:
       site_settings_branding:
+        all:
+      site_settings_theme:
         all:
       support:
         all:

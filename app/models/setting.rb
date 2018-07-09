@@ -12,15 +12,10 @@ class Setting < ApplicationRecord
   content_attr :address2, :string
   content_attr :address3, :string
 
-  content_attr :about, :text
-  content_attr :copyrights, :string
 
   content_attr :twitter, :string
   content_attr :facebook, :string
 
-  content_attr :sign_up_title, :string
-  content_attr :sign_up_subtitle, :string
-  content_attr :sign_in_title, :string
 
   content_attr :newsletter_webhook, :string
 
@@ -42,8 +37,6 @@ class Setting < ApplicationRecord
     Setting.first_or_create! do |settings|
       settings.facebook = "https://www.facebook.com/rungravity"
 
-      settings.about = "about section"
-      settings.copyrights = "2017 - 2018 IdeaLogic"
 
       settings.address1 = "first line"
       settings.address2 = "second line"

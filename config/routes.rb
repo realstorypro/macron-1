@@ -76,6 +76,7 @@ Rails.application.routes.draw do
       root to: 'settings#all'
       resource :general, controller: 'general', component: "site_settings_general"
       resource :branding, controller: 'branding', component: "site_settings_branding"
+      resource :theme, controller: 'theme', component: "site_settings_theme"
     end
   end
 
