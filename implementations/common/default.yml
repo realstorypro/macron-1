@@ -957,9 +957,6 @@ views:
 
   site_settings_branding:
     new:
-      logo_header:
-        type: 'header'
-        text: 'Logos'
       icon:
         label: 'Icon'
         type: 'image'
@@ -970,21 +967,12 @@ views:
       inverted_logo:
         label: 'Inverted Logo'
         type: 'image'
-      desktop_logo_size:
-        label: 'Desktop Logo Width'
-        type: 'string'
-        hint: '(in pixels)'
-        maxlength: '3'
-      mobile_logo_size:
-        label: 'Mobile Logo Width'
-        type: 'string'
-        hint: '(in pixels)'
-        maxlength: '3'
+      auth_background:
+        label: 'Authentication Background'
+        type: 'image'
+        size: ['2560','1600']
 
     show:
-      logo_header:
-        type: 'header'
-        text: 'Logos'
       icon:
         label: 'Icon'
         type: 'image_tiny'
@@ -994,12 +982,9 @@ views:
       inverted_logo:
         label: 'Inverted Logo'
         type: 'image_small'
-      desktop_logo_size:
-        label: 'Desktop Logo Width'
-        type: 'string'
-      mobile_logo_size:
-        label: 'Mobile Logo Width'
-        type: 'string'
+      auth_background:
+        label: 'Authentication Background'
+        type: 'image_medium'
 
   site_settings_theme:
     new:
@@ -1018,10 +1003,20 @@ views:
         label: 'Sign In Title'
         type: 'string'
         hint: 'Title of the Sign In Box'
-      auth_background:
-        label: 'Authentication Background'
-        type: 'image'
-        size: ['2560','1600']
+
+      menu_header:
+        type: 'header'
+        text: 'Menu'
+      desktop_logo_size:
+        label: 'Desktop Logo Width'
+        type: 'string'
+        hint: '(in pixels)'
+        maxlength: '3'
+      mobile_logo_size:
+        label: 'Mobile Logo Width'
+        type: 'string'
+        hint: '(in pixels)'
+        maxlength: '3'
 
       footer_header:
         type: 'header'
@@ -1046,9 +1041,16 @@ views:
       sign_in_title:
         label: 'Sign In Title'
         type: 'string'
-      auth_background:
-        label: 'Authentication Background'
-        type: 'image_medium'
+
+      menu_header:
+        type: 'header'
+        text: 'Menu'
+      desktop_logo_size:
+        label: 'Desktop Logo Width'
+        type: 'string'
+      mobile_logo_size:
+        label: 'Mobile Logo Width'
+        type: 'string'
 
       footer_header:
         type: 'header'

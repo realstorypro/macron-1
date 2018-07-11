@@ -13,7 +13,9 @@ module SiteSettings
     content_attr :sign_up_subtitle, :string
     content_attr :sign_in_title, :string
 
-    content_attr :auth_background, :string
+    content_attr :desktop_logo_size, :integer
+    content_attr :mobile_logo_size, :integer
+
 
     def self.instance
       Theme.first_or_create! do |settings|

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/site_settings/branding.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/branding.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/implementations/common/default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/implementations/common/default.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -84,49 +83,71 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="default.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="995" column="25" selection-start-line="995" selection-start-column="25" selection-end-line="995" selection-end-column="25" />
-              <folding>
-                <element signature="e#282#2133#0" />
-                <element signature="e#595#2133#0" />
-                <element signature="e#2135#2179#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="branding.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/site_settings/branding.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_head.html.slim" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="default.yml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="496">
+                  <caret line="985" column="25" selection-start-line="985" selection-start-column="25" selection-end-line="985" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#282#2133#0" />
+                    <element signature="e#595#2133#0" />
+                    <element signature="e#2135#2179#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="branding.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/site_settings/branding.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="page_controller.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="theme.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="default.yml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="582">
+                  <caret line="1047" column="6" selection-start-line="1047" selection-start-column="6" selection-end-line="1047" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#282#2133#0" />
+                    <element signature="e#595#2133#0" />
+                    <element signature="e#2135#2179#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -137,7 +158,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>passive</find>
       <find>articles:</find>
       <find>Config</find>
       <find>config</find>
@@ -167,6 +187,7 @@
       <find>Integration</find>
       <find>all</find>
       <find>icon</find>
+      <find>_branding</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -243,13 +264,13 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/general_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/settings_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/integration.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/contact.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/general.rb" />
-        <option value="$PROJECT_DIR$/app/models/site_settings/branding.rb" />
-        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" />
+        <option value="$PROJECT_DIR$/app/models/site_settings/branding.rb" />
+        <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
+        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
       </list>
     </option>
   </component>
@@ -552,7 +573,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155376000" />
+    <option name="totallyTimeSpent" value="156012000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,7 +594,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32948717" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948717" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49615383" visible="true" weight="0.34549356" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49615383" weight="0.34549356" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
@@ -928,13 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/site_settings/integration.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -959,6 +973,13 @@
     <entry file="file://$PROJECT_DIR$/app/views/page/home.html.slim">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -966,29 +987,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/site_settings/branding.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="995" column="25" selection-start-line="995" selection-start-column="25" selection-end-line="995" selection-end-column="25" />
+        <state relative-caret-position="496">
+          <caret line="985" column="25" selection-start-line="985" selection-start-column="25" selection-end-line="985" selection-end-column="25" />
           <folding>
             <element signature="e#282#2133#0" />
             <element signature="e#595#2133#0" />
             <element signature="e#2135#2179#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
         </state>
       </provider>
     </entry>
