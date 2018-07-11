@@ -231,6 +231,18 @@ tests:
       frontned: false
       actions:
 
+    - component: site_settings_contact
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
+    - component: site_settings_integration
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
     - component: support
       implementation: false
       admin: false
@@ -275,6 +287,20 @@ components:
     description: 'Provides general settings capabilities'
     klass: 'SiteSettings::Theme'
     path: 'admin_settings_theme'
+    enabled: true
+
+  site_settings_contact:
+    name: 'Contact Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Contact'
+    path: 'admin_settings_contact'
+    enabled: true
+
+  site_settings_integration:
+    name: 'Integrations Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Integrations'
+    path: 'admin_settings_integration'
     enabled: true
 
   site_settings:
@@ -1082,7 +1108,7 @@ views:
         label: 'Copyrights'
         type: 'string'
 
-  site_settings:
+  site_settings_contact:
     new:
       contact_header:
         type: 'header'
@@ -1116,16 +1142,6 @@ views:
         label: 'Facebook Page'
         type: 'string'
         hint: 'Full URL for the Facebook Page. Must start with https://'
-
-
-
-      integration_header:
-        type: 'header'
-        text: 'Integrations'
-      newsletter_webhook:
-        label: 'Newsletter Webhook'
-        type: 'string'
-
     show:
       contact_header:
         type: 'header'
@@ -1156,7 +1172,15 @@ views:
         label: 'Facebook Page'
         type: 'string'
 
-
+  site_settings_integration:
+    new:
+      integration_header:
+        type: 'header'
+        text: 'Integrations'
+      newsletter_webhook:
+        label: 'Newsletter Webhook'
+        type: 'string'
+    show:
       integration_header:
         type: 'header'
         text: 'Integrations'
@@ -1356,6 +1380,10 @@ auth:
       site_settings_branding:
         all:
       site_settings_theme:
+        all:
+      site_settings_contact:
+        all:
+      site_settings_integration:
         all:
       support:
         all:

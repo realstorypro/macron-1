@@ -77,6 +77,8 @@ Rails.application.routes.draw do
       resource :general, controller: 'general', component: "site_settings_general"
       resource :branding, controller: 'branding', component: "site_settings_branding"
       resource :theme, controller: 'theme', component: "site_settings_theme"
+      resource :contact, controller: 'contact', component: "site_settings_contact"
+      resource :integration, controller: 'integration', component: "site_settings_integration"
     end
   end
 
