@@ -6,18 +6,11 @@ module SiteSettings
       errors.add(:base, "already one setting object existing") && (return false) if Branding.exists?
     end
 
+    content_attr :icon, :string
     content_attr :logo, :string
     content_attr :inverted_logo, :string
     content_attr :desktop_logo_size, :integer
     content_attr :mobile_logo_size, :integer
-
-    content_attr :favicon_16, :string
-    content_attr :favicon_32, :string
-    content_attr :favicon_96, :string
-    content_attr :favicon_120, :string
-    content_attr :favicon_152, :string
-    content_attr :favicon_167, :string
-    content_attr :favicon_180, :string
 
     validates_presence_of :logo, :inverted_logo
 

@@ -960,6 +960,10 @@ views:
       logo_header:
         type: 'header'
         text: 'Logos'
+      icon:
+        label: 'Icon'
+        type: 'image'
+        size: ['180','180']
       logo:
         label: 'Logo'
         type: 'image'
@@ -977,77 +981,25 @@ views:
         hint: '(in pixels)'
         maxlength: '3'
 
-      favicon_header:
-        type: 'header'
-        text: 'Fav Icons'
-      favicon_16:
-        label: '16x16'
-        type: 'image'
-        size: ['16','16']
-      favicon_32:
-        label: '32x32'
-        type: 'image'
-        size: ['32','32']
-      favicon_96:
-        label: '96x96'
-        type: 'image'
-        size: ['96','96']
-      favicon_120:
-        label: '120x120'
-        type: 'image'
-        size: ['120','120']
-      favicon_152:
-        label: '152x152'
-        type: 'image'
-        size: ['152','152']
-      favicon_167:
-        label: '167x167'
-        type: 'image'
-        size: ['167','167']
-      favicon_180:
-        label: '180x180'
-        type: 'image'
-        size: ['180','180']
     show:
       logo_header:
         type: 'header'
         text: 'Logos'
+      icon:
+        label: 'Icon'
+        type: 'image_tiny'
       logo:
         label: 'Logo'
-        type: 'image_medium'
+        type: 'image_small'
       inverted_logo:
         label: 'Inverted Logo'
-        type: 'image_medium'
+        type: 'image_small'
       desktop_logo_size:
         label: 'Desktop Logo Width'
         type: 'string'
       mobile_logo_size:
         label: 'Mobile Logo Width'
         type: 'string'
-
-      favicon_header:
-        type: 'header'
-        text: 'Fav Icons'
-      favicon_16:
-        label: '16x16'
-        type: 'image_small'
-      favicon_32:
-        label: '32x32'
-        type: 'image_small'
-      favicon_96:
-        label: '96x96'
-        type: 'image_small'
-      favicon_120:
-        label: '120x120'
-        type: 'image_small'
-      favicon_152:
-        label: '152x152'
-        type: 'image_small'
-      favicon_167:
-        label: '167x167'
-        type: 'image_small'
-      favicon_180:
-        label: '180x180'
 
   site_settings_theme:
     new:
