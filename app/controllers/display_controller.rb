@@ -34,7 +34,7 @@ class DisplayController < MetaController
 
         return unless user_signed_in?
 
-        Analytics.track(
+        @analytics.track(
           user_id: current_user.id,
           event: "Viewed Content",
           properties: {

@@ -26,14 +26,19 @@ class ApplicationController < ActionController::Base
   end
 
   Warden::Manager.after_authentication do |user, auth, opts|
-    Analytics.identify(
-      user_id: user.id,
-      traits: {
-          username: user.username,
-          email: user.email,
-          avatar: user.profile.avatar,
-          created_at: user.created_at
-      })
+    site_settings = JSON.parse($redis.get("site_settings"))
+
+    unless site_settings["payload"]["segment_server_key"].nil?
+      analytics = Segment::Analytics.new(write_key: site_settings["payload"]["segment_server_key"])
+      analytics.identify(
+        user_id: user.id,
+        traits: {
+            username: user.username,
+            email: user.email,
+            avatar: user.profile.avatar,
+            created_at: user.created_at
+        })
+    end
   end
 
     private

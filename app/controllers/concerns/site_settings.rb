@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # rubocop:disable GlobalVars
+# rubocop:disable Metrics/LineLength
 
 module SiteSettings
   extend ActiveSupport::Concern
@@ -35,7 +36,10 @@ module SiteSettings
       end
 
       @site_settings = JSON.parse(site_settings)
+
+      @analytics = Segment::Analytics.new(write_key: @site_settings["payload"]["segment_server_key"]) unless ss("segment_server_key").nil?
     end
 end
 
 # rubocop:enable GlobalVars
+# rubocop:enable Metrics/LineLength
