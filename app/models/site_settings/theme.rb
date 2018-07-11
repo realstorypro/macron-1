@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SiteSettings
   class Theme < Setting
     before_create do
@@ -19,6 +21,5 @@ module SiteSettings
         settings.copyrights = "2017 - 2018 IdeaLogic"
       end
     end
-
   end
 end

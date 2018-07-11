@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SiteSettings
   class Branding < Setting
     before_create do
@@ -25,6 +27,5 @@ module SiteSettings
         settings.inverted_logo = "logo_inverted.png"
       end
     end
-
   end
 end

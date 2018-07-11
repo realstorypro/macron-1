@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SiteSettings
   class General < Setting
     before_create do
@@ -18,6 +20,5 @@ module SiteSettings
         settings.url = "https://hub.idealogic.io"
       end
     end
-
   end
 end

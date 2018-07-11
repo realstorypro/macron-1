@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_dependency "application_controller"
 
 module Admin::SiteSettings
@@ -6,12 +8,9 @@ module Admin::SiteSettings
     layout "layouts/admin"
     before_action :set_breadcrumb
 
-    def all
-
-    end
-
-    def set_breadcrumb
-      semantic_breadcrumb 'Settings', admin_settings_root_path
-    end
+    private
+      def set_breadcrumb
+        semantic_breadcrumb "Settings", admin_settings_root_path
+      end
   end
 end

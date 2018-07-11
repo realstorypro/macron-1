@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SiteSettings
   class Integration < Setting
     before_create do
@@ -13,6 +15,5 @@ module SiteSettings
         settings.newsletter_webhook = "https://hooks.zapier.com/hooks/catch/3200901/fsym7e/"
       end
     end
-
   end
 end

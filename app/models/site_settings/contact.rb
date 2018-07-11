@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SiteSettings
   class Contact < Setting
     before_create do
@@ -27,6 +29,5 @@ module SiteSettings
         settings.facebook = "https://www.facebook.com/rungravity"
       end
     end
-
   end
 end
