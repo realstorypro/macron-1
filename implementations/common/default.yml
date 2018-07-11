@@ -95,7 +95,7 @@ menu:
     - section:
       - name: Settings
         component: site_settings
-        path: admin_settings
+        path: admin_settings_root
         icon: right angle
         enabled: true
 
@@ -213,6 +213,36 @@ tests:
       frontned: false
       actions:
 
+    - component: site_settings_general
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
+    - component: site_settings_branding
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
+    - component: site_settings_theme
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
+    - component: site_settings_contact
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
+    - component: site_settings_integration
+      implementation: false
+      admin: false
+      frontned: false
+      actions:
+
     - component: support
       implementation: false
       admin: false
@@ -236,6 +266,41 @@ components:
     name: 'Support'
     description: 'Provides info about Support'
     path: 'support'
+    enabled: true
+
+  site_settings_general:
+    name: 'General Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::General'
+    path: 'admin_settings_general'
+    enabled: true
+
+  site_settings_branding:
+    name: 'Branding Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Branding'
+    path: 'admin_settings_branding'
+    enabled: true
+
+  site_settings_theme:
+    name: 'Theme Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Theme'
+    path: 'admin_settings_theme'
+    enabled: true
+
+  site_settings_contact:
+    name: 'Contact Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Contact'
+    path: 'admin_settings_contact'
+    enabled: true
+
+  site_settings_integration:
+    name: 'Integrations Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Integrations'
+    path: 'admin_settings_integration'
     enabled: true
 
   site_settings:
@@ -866,11 +931,8 @@ views:
         label: 'Color'
         type: 'color'
 
-  site_settings:
+  site_settings_general:
     new:
-      meta_header:
-        type: 'header'
-        text: 'Meta Data'
       name:
         label: 'Name'
         type: 'string'
@@ -882,7 +944,19 @@ views:
         label: 'URL'
         type: 'string'
         hint: 'Must start with https://'
+    show:
+      name:
+        label: 'Hub Name'
+        type: 'string'
+      description:
+        label: 'Hub Description'
+        type: 'string'
+      url:
+        label: 'Hub URL'
+        type: 'string'
 
+  site_settings_branding:
+    new:
       logo_header:
         type: 'header'
         text: 'Logos'
@@ -934,92 +1008,7 @@ views:
         label: '180x180'
         type: 'image'
         size: ['180','180']
-
-      contact_header:
-        type: 'header'
-        text: 'Contact Info'
-      phone:
-        label: 'Phone'
-        type: 'string'
-        maxlength: '20'
-        hint: 'Limited to 20 Characters'
-      email:
-        label: 'Email'
-        type: 'string'
-      address1:
-        label: 'Address 1'
-        type: 'string'
-      address2:
-        label: 'Address 2'
-        type: 'string'
-      address3:
-        label: 'Address 3'
-        type: 'string'
-
-      social_header:
-        type: 'header'
-        text: 'Social Media'
-      twitter:
-        label: 'Twitter Account'
-        type: 'string'
-        hint: 'include the @'
-      facebook:
-        label: 'Facebook Page'
-        type: 'string'
-        hint: 'Full URL for the Facebook Page. Must start with https://'
-
-      auth_header:
-        type: 'header'
-        text: 'Authentication'
-      sign_up_title:
-        label: 'Sign Up Title'
-        type: 'string'
-        hint: 'Title of the Sign Up Box'
-      sign_up_subtitle:
-        label: 'Sign Sub Title'
-        type: 'string'
-        hint: 'Sub Title of the Sign Up Box'
-      sign_in_title:
-        label: 'Sign In Title'
-        type: 'string'
-        hint: 'Title of the Sign In Box'
-      auth_background:
-        label: 'Authentication Background'
-        type: 'image'
-        size: ['2560','1600']
-
-      footer_header:
-        type: 'header'
-        text: 'Footer'
-      about:
-        label: 'About Us'
-        type: 'rich'
-        hint: 'Write two short paragraphs describing the web site.'
-      copyrights:
-        label: 'Copyrights'
-        type: 'string'
-
-      integration_header:
-        type: 'header'
-        text: 'Integrations'
-      newsletter_webhook:
-        label: 'Newsletter Webhook'
-        type: 'string'
-
     show:
-      meta_header:
-        type: 'header'
-        text: 'Meta Data'
-      name:
-        label: 'Name'
-        type: 'string'
-      description:
-        label: 'Description'
-        type: 'string'
-      url:
-        label: 'URL'
-        type: 'string'
-
       logo_header:
         type: 'header'
         text: 'Logos'
@@ -1059,8 +1048,101 @@ views:
         type: 'image_small'
       favicon_180:
         label: '180x180'
-        type: 'image_small'
 
+  site_settings_theme:
+    new:
+      auth_header:
+        type: 'header'
+        text: 'Authentication'
+      sign_up_title:
+        label: 'Sign Up Title'
+        type: 'string'
+        hint: 'Title of the Sign Up Box'
+      sign_up_subtitle:
+        label: 'Sign Sub Title'
+        type: 'string'
+        hint: 'Sub Title of the Sign Up Box'
+      sign_in_title:
+        label: 'Sign In Title'
+        type: 'string'
+        hint: 'Title of the Sign In Box'
+      auth_background:
+        label: 'Authentication Background'
+        type: 'image'
+        size: ['2560','1600']
+
+      footer_header:
+        type: 'header'
+        text: 'Footer'
+      about:
+        label: 'About Us'
+        type: 'rich'
+        hint: 'Write two short paragraphs describing the web site.'
+      copyrights:
+        label: 'Copyrights'
+        type: 'string'
+    show:
+      auth_header:
+        type: 'header'
+        text: 'Authentication'
+      sign_up_title:
+        label: 'Sign Up Title'
+        type: 'string'
+      sign_up_subtitle:
+        label: 'Sign Sub Title'
+        type: 'string'
+      sign_in_title:
+        label: 'Sign In Title'
+        type: 'string'
+      auth_background:
+        label: 'Authentication Background'
+        type: 'image_medium'
+
+      footer_header:
+        type: 'header'
+        text: 'Footer'
+      about:
+        label: 'About Us'
+        type: 'string'
+      copyrights:
+        label: 'Copyrights'
+        type: 'string'
+
+  site_settings_contact:
+    new:
+      contact_header:
+        type: 'header'
+        text: 'Contact Info'
+      phone:
+        label: 'Phone'
+        type: 'string'
+        maxlength: '20'
+        hint: 'Limited to 20 Characters'
+      email:
+        label: 'Email'
+        type: 'string'
+      address1:
+        label: 'Address 1'
+        type: 'string'
+      address2:
+        label: 'Address 2'
+        type: 'string'
+      address3:
+        label: 'Address 3'
+        type: 'string'
+
+      social_header:
+        type: 'header'
+        text: 'Social Media'
+      twitter:
+        label: 'Twitter Account'
+        type: 'string'
+        hint: 'include the @'
+      facebook:
+        label: 'Facebook Page'
+        type: 'string'
+        hint: 'Full URL for the Facebook Page. Must start with https://'
+    show:
       contact_header:
         type: 'header'
         text: 'Contact Info'
@@ -1090,32 +1172,15 @@ views:
         label: 'Facebook Page'
         type: 'string'
 
-      auth_header:
+  site_settings_integration:
+    new:
+      integration_header:
         type: 'header'
-        text: 'Authentication'
-      sign_up_title:
-        label: 'Sign Up Title'
+        text: 'Integrations'
+      newsletter_webhook:
+        label: 'Newsletter Webhook'
         type: 'string'
-      sign_up_subtitle:
-        label: 'Sign Sub Title'
-        type: 'string'
-      sign_in_title:
-        label: 'Sign In Title'
-        type: 'string'
-      auth_background:
-        label: 'Authentication Background'
-        type: 'image_medium'
-
-      footer_header:
-        type: 'header'
-        text: 'Footer'
-      about:
-        label: 'About Us'
-        type: 'string'
-      copyrights:
-        label: 'Copyrights'
-        type: 'string'
-
+    show:
       integration_header:
         type: 'header'
         text: 'Integrations'
@@ -1309,6 +1374,16 @@ auth:
       reports:
         all:
       site_settings:
+        all:
+      site_settings_general:
+        all:
+      site_settings_branding:
+        all:
+      site_settings_theme:
+        all:
+      site_settings_contact:
+        all:
+      site_settings_integration:
         all:
       support:
         all:
