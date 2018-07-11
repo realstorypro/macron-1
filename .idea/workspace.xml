@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/initializers/02_config_bootloader.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/integration.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/integration.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/partials/_inline_js.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/partials/_inline_js.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/analytics_ruby.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/analytics_ruby.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/config.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/00_config.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/config_bootloader.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/redis.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/01_redis.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/implementations/common/default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/implementations/common/default.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -106,38 +101,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="analytics_ruby.rb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/config/initializers/analytics_ruby.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="02_config_bootloader.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/initializers/02_config_bootloader.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="00_config.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/initializers/00_config.rb">
+          <file leaf-file-name="client_js.coffee" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/frontend/packs/client_js.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="integration.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/site_settings/integration.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+                <state relative-caret-position="655">
+                  <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -159,7 +136,7 @@
             <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
-                  <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+                  <caret line="18" selection-start-line="18" selection-end-line="18" />
                 </state>
               </provider>
             </entry>
@@ -168,7 +145,7 @@
             <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="375">
-                  <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+                  <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -176,8 +153,8 @@
           <file leaf-file-name="_inline_js.html.slim" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_inline_js.html.slim">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+                <state relative-caret-position="30">
+                  <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -195,7 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>config</find>
       <find>SettingsController</find>
       <find>general_sett</find>
       <find>load_entr</find>
@@ -225,6 +201,7 @@
       <find>_branding</find>
       <find>_integration</find>
       <find>load_site_settings</find>
+      <find>analytics.page()</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -273,7 +250,6 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/social_sharing.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" />
-        <option value="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" />
         <option value="$PROJECT_DIR$/app/frontend/packs/admin_js.coffee" />
         <option value="$PROJECT_DIR$/config/uploadcare.yml" />
         <option value="$PROJECT_DIR$/app/models/settings/branding.rb" />
@@ -308,6 +284,7 @@
         <option value="$PROJECT_DIR$/config/initializers/02_config_bootloader.rb" />
         <option value="$PROJECT_DIR$/config/initializers/analytics_ruby.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_inline_js.html.slim" />
+        <option value="$PROJECT_DIR$/app/frontend/packs/client_js.coffee" />
       </list>
     </option>
   </component>
@@ -552,7 +529,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157447000" />
+    <option name="totallyTimeSpent" value="158189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -662,13 +639,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/frontend/packs/admin_js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/uploadcare.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -926,10 +896,31 @@
     <entry file="file://$PROJECT_DIR$/config/initializers/rollbar.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/integration.rb">
+    <entry file="file://$PROJECT_DIR$/implementations/gravity.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/analytics_ruby.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -952,45 +943,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implementations/gravity.yml">
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/integration.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="150">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/02_config_bootloader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/analytics_ruby.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="255">
+          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_inline_js.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/packs/client_js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
         </state>
       </provider>
     </entry>
