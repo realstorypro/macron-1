@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# named with 0 to ensure it loads first
+
 Config.setup do |config|
   # Name of the constant exposing loaded settings
   config.const_name = "Settings"

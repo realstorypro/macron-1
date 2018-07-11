@@ -1,5 +1,5 @@
 javascript:
-  window.segment_js_write_key = '#{ENV['SEGMENT_JS_WRITE_KEY']}'
+  window.segment_js_write_key = "#{ss(:segment_js_key)}"
 - if user_signed_in?
   javascript:
       window.user = {}

@@ -7,6 +7,8 @@ module SiteSettings
     end
 
     content_attr :newsletter_webhook, :string
+    content_attr :segment_js_key, :string
+    content_attr :segment_server_key, :string
 
     validates :newsletter_webhook, url: { schemes: ["https"] }
 
