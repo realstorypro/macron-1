@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/contact_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/integration_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/site_settings/contact.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/site_settings/integration.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/site_settings/contact/show.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/setting.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/setting.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/site_settings/settings/all.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/site_settings/settings/all.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/implementations/common/default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/implementations/common/default.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/zapier/base.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/zapier/base.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -91,89 +83,26 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44134477">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="default.yml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="235">
-                  <caret line="1356" column="11" selection-start-line="1356" selection-start-column="11" selection-end-line="1356" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#282#2133#0" />
-                    <element signature="e#595#2133#0" />
-                    <element signature="e#2135#2179#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="show.html.slim" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/admin/site_settings/theme/show.html.slim">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="integration.rb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/models/site_settings/integration.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" selection-start-line="2" selection-end-line="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="default.yml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="235">
-                  <caret line="1163" selection-start-line="1163" selection-end-line="1163" />
-                  <folding>
-                    <element signature="e#282#2133#0" />
-                    <element signature="e#595#2133#0" />
-                    <element signature="e#2135#2179#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/routes.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="219">
-                  <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="setting.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/setting.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="integration_controller.rb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/integration_controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="site_settings.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/services/zapier/base.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -184,8 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>we sharing</find>
-      <find>linking</find>
       <find>margin</find>
       <find>f-content-p</find>
       <find>passive</find>
@@ -213,7 +140,9 @@
       <find>site_settings_contact</find>
       <find>inte</find>
       <find>Integrations</find>
+      <find>@site_settings</find>
       <find>integrations</find>
+      <find>Integration</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -246,8 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" />
-        <option value="$PROJECT_DIR$/node_modules/vue-goodshare/src/providers/Facebook.vue" />
         <option value="$PROJECT_DIR$/config/initializers/content_security_policy.rb" />
         <option value="$PROJECT_DIR$/app/frontend/packs/admin_deferred_css.js" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/common/plugins.sass" />
@@ -297,6 +224,8 @@
         <option value="$PROJECT_DIR$/app/models/site_settings/integration.rb" />
         <option value="$PROJECT_DIR$/app/models/setting.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/integration_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" />
+        <option value="$PROJECT_DIR$/app/services/zapier/base.rb" />
       </list>
     </option>
   </component>
@@ -444,6 +373,15 @@
               <item name="site_settings" type="462c0819:PsiDirectoryNode" />
               <item name="contact" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="site_settings" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -468,9 +406,9 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/admin/site_settings" />
       <recent name="$PROJECT_DIR$/app/models/site_settings" />
       <recent name="$PROJECT_DIR$/app/controllers/admin/site_settings" />
-      <recent name="$PROJECT_DIR$/app/views/admin/site_settings" />
       <recent name="$PROJECT_DIR$/app/cells/vue" />
       <recent name="$PROJECT_DIR$/app/frontend/shared/js/plugins/redactor" />
     </key>
@@ -572,12 +510,12 @@
       <workItem from="1530324860911" duration="15204000" />
       <workItem from="1530818969639" duration="18546000" />
       <workItem from="1531089746787" duration="1162000" />
-      <workItem from="1531260175764" duration="1489000" />
+      <workItem from="1531260175764" duration="3335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152189000" />
+    <option name="totallyTimeSpent" value="154035000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -598,7 +536,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32948717" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948717" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49615383" weight="0.34549356" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49615383" visible="true" weight="0.34549356" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
@@ -674,30 +612,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/cells/vue/social_sharing/show.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/vue/social_sharing_cell.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/plugins/redactor/video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="129" column="72" lean-forward="true" selection-start-line="129" selection-start-column="72" selection-end-line="129" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/widgets/richtext.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -963,6 +877,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/settings_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/integration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/site_settings/theme/show.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/site_settings/integration/show.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/integration_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -982,20 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/site_settings/theme/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/integration.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/setting.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1003,10 +938,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/integration_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/zapier/base.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
         </state>
       </provider>
     </entry>
