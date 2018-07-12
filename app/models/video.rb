@@ -27,19 +27,19 @@ class Video < Entry
 
   def embed_video
     # vimeo post processing
-    if video.include?('vimeo')
+    if video.include?("vimeo")
       self.embedded_video = video.gsub("vimeo.com/", "player.vimeo.com/video/")
     end
 
     # youtube post processing
-    if video.include?('youtube')
+    if video.include?("youtube")
       # makes regular video embeddable
       self.embedded_video = video.gsub("www.youtube.com/watch?v=", "www.youtube.com/embed/")
 
       # removes the ampersand from a string
-      ampersand_location = self.embedded_video.index('&')
+      ampersand_location = self.embedded_video.index("&")
       if ampersand_location
-        self.embedded_video = self.embedded_video[0..(ampersand_location-1)]
+        self.embedded_video = self.embedded_video[0..(ampersand_location - 1)]
       end
     end
   end
