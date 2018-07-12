@@ -58,7 +58,7 @@ class MembersController < DisplayController
       }
     end
 
-    # Not Used
+    # TODO: Not Used. Use Skip Action Instead
     def set_article_meta; end
 
     def record_view
@@ -68,7 +68,8 @@ class MembersController < DisplayController
                  slug: @entry.slug
 
       return unless user_signed_in?
-      Analytics.track(
+
+      @analytics.track(
         user_id: current_user.id,
         event: "Viewed Profile",
         properties: {

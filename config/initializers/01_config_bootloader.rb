@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# Loaded after config.rb
-
+# Load Implementation Config
 Settings.add_source!(Rails.root.join("implementations").join("common/default.yml").to_s)
 Settings.add_source!(Rails.root.join("implementations").join("gravity.yml").to_s)
 Settings.reload!

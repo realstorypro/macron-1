@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # rubocop:disable GlobalVars
+# rubocop:disable Metrics/LineLength
 
 module SiteSettings
   extend ActiveSupport::Concern
@@ -33,9 +34,12 @@ module SiteSettings
 
         $redis.set("site_settings", site_settings)
       end
-
       @site_settings = JSON.parse(site_settings)
+
+      # TODO this isn't ideal as we're reiniting analytics with every call. It would be nice to find a way to memoize it
+      @analytics = Segment::Analytics.new(write_key: ss("segment_server_key"))
     end
 end
 
 # rubocop:enable GlobalVars
+# rubocop:enable Metrics/LineLength

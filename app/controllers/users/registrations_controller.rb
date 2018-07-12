@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
                    username: created_user.username,
                    email: created_user.email
 
-        Analytics.track(
+        @analytics.track(
           user_id: created_user.id,
           event: "User Registered",
           properties: {

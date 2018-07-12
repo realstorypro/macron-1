@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
                type: params[:component].singularize,
                id: @comment.id, slug: params[:record_id]
 
-    Analytics.track(
+    @analytics.track(
       user_id: current_user.id,
       event: "Left Comment",
       properties: {
