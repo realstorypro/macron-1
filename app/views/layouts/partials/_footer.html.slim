@@ -1,11 +1,11 @@
 = segment 'footer fragment vertical'
   = container 'center aligned'
     = grid 'stackable left aligned'
-      = column size: 5
+      = column size: 6
         = h5 text: 'About Us'
         = ss(:about).html_safe
       = column size:1, only: :computer
-      = column size: 5 do
+      = column size: 4 do
         = h5 text: 'Contact Us'
         = list 'relaxed divided link'
           = item
