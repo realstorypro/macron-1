@@ -81,7 +81,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40987125">
+    <splitter split-orientation="horizontal" split-proportion="0.124552615">
       <split-first>
         <leaf>
           <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="true">
@@ -126,7 +126,11 @@
           </file>
           <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/admin/support/index.html.slim">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="5" selection-start-column="5" selection-end-column="5" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file leaf-file-name="base.rb" pinned="false" current-in-tab="false">
@@ -477,7 +481,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163644000" />
+    <option name="totallyTimeSpent" value="164010000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,7 +905,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/support/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
