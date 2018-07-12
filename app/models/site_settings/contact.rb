@@ -8,6 +8,7 @@ module SiteSettings
 
     content_attr :phone, :string
     content_attr :email, :string
+    content_attr :website, :string
     content_attr :address1, :string
     content_attr :address2, :string
     content_attr :address3, :string
@@ -20,13 +21,19 @@ module SiteSettings
     validates_presence_of :address1, :address2
 
     validates :facebook, url: { schemes: ["https"] }
+    validates :website, url: { schemes: %w(http https)}
 
     def self.instance
       Contact.first_or_create! do |settings|
-        settings.address1 = "first line"
-        settings.address2 = "second line"
+        settings.phone = "800.608.5963"
+        settings.email = "support@idealogic.io"
+        settings.address1 = "	2 E. Congress St"
+        settings.address2 = "Suite 900"
+        settings.address3 = "Tucson, Arizona 85701"
+        settings.website = "https://www.idealogic.io"
 
-        settings.facebook = "https://www.facebook.com/rungravity"
+        settings.twitter = "@the_idealogic"
+        settings.facebook = "https://www.facebook.com/theidealogic"
       end
     end
   end
