@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_170019) do
+ActiveRecord::Schema.define(version: 2018_07_12_171220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -145,22 +145,6 @@ ActiveRecord::Schema.define(version: 2018_07_09_170019) do
     t.index ["slug"], name: "index_entries_on_slug"
     t.index ["type"], name: "index_entries_on_type"
     t.index ["user_id"], name: "index_entries_on_user_id"
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.string "name"
-    t.string "slug"
-    t.json "payload"
-    t.integer "category_id"
-    t.integer "user_id"
-    t.date "start_date"
-    t.date "end_date"
-    t.date "published_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_events_on_category_id"
-    t.index ["slug"], name: "index_events_on_slug"
-    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|

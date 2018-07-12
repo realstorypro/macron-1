@@ -37,7 +37,7 @@ module SiteSettings
 
       @site_settings = JSON.parse(site_settings)
 
-      @analytics = Segment::Analytics.new(write_key: @site_settings["payload"]["segment_server_key"]) unless ss("segment_server_key").nil?
+      @analytics = Segment::Analytics.new(write_key: ss("segment_server_key"))
     end
 end
 
