@@ -1075,6 +1075,9 @@ views:
       email:
         label: 'Email'
         type: 'string'
+      website:
+        label: 'Website'
+        type: 'string'
       address1:
         label: 'Address 1'
         type: 'string'
@@ -1105,6 +1108,9 @@ views:
         type: 'string'
       email:
         label: 'Email'
+        type: 'string'
+      website:
+        label: 'Website'
         type: 'string'
       address1:
         label: 'Address 1'

@@ -13,6 +13,7 @@ module Admin
       @date_start = DateTime.now
       @date_end = Date.today.at_beginning_of_month
 
+
       @visitors_this_month = Ahoy::Visit.where(started_at: @date_end..@date_start).count
 
       @visitors_this_month_grouped = Ahoy::Visit
@@ -40,6 +41,12 @@ module Admin
       @video_views = Ahoy::Event
                      .where(name: "Viewed Content", time: @date_end..@date_start)
                      .where_props(type: "video").count
+
+      # Conversion Calculations
+      @visitors_to_users = @new_users / @visitors_this_month.to_f
+      @visitors_to_comment = @new_comments / @visitors_this_month.to_f
+      @visitors_to_subscriber = 0 / @visitors_this_month.to_f
+      @visitors_to_click = @new_clicks / @visitors_this_month.to_f
     end
   end
 end
