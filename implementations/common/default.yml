@@ -742,7 +742,7 @@ views:
       video:
         label: 'Video'
         type: 'string'
-        hint: 'Vimeo URL'
+        hint: 'Vimeo or Youtube URL'
 
       details_header:
         type: 'header'
