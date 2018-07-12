@@ -42,8 +42,8 @@
           br
 
           = statistics 'two small red'
-            = statistic
-              .value= "#{number_to_percentage(0, precision: 1)}"
+            = statistic statistic_class(@visitors_to_subscriber)
+              .value= "#{number_to_percentage(@visitors_to_subscriber, precision: 1)}"
               .label to subscriber
             = statistic statistic_class(@visitors_to_click)
               .value= number_to_percentage(@visitors_to_click, precision: 1)
