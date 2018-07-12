@@ -5,16 +5,28 @@
         - @featured.each do |featured|
           - cache featured
             = column computer: 8, tablet: 8, mobile: 16
-              = item 'link'
-                = preload_image featured.card_image
-                = link_to article_details_path(featured.category.slug, featured.slug)
-                  = overlay
-                    = content
-                      = h4
-                        = header "sub dividing #{featured.category.color.name}"
-                          = featured.category.name
-                        = featured.name
-                      = summary text: featured.description
+              - if featured.type == 'Article'
+                = item 'link'
+                  = preload_image featured.card_image
+                  = link_to article_details_path(featured.category.slug, featured.slug)
+                    = overlay
+                      = content
+                        = h4
+                          = header "sub dividing #{featured.category.color.name}"
+                            = featured.category.name
+                          = featured.name
+                        = summary text: featured.description
+              - if featured.type == 'Video'
+                = item 'link'
+                  = preload_image featured.card_image
+                  = link_to video_details_path(featured.category.slug, featured.slug)
+                    = overlay
+                      = content
+                        = h4
+                          = header "sub dividing #{featured.category.color.name}"
+                            = featured.category.name
+                          = featured.name
+                        = summary text: featured.description
 
   = container
     = grid

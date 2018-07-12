@@ -5,7 +5,8 @@ class PageController < ApplicationController
   before_action :set_meta_data, except: %i[sitemap home]
 
   def home
-    @featured = Article.joins(category: :color)
+    @featured = Entry.joins(category: :color)
+                                .where(type: %w(Article Video))
                                 .includes(category: :color).order("published_date desc").limit(2)
     @discussions = Discussion.joins(category: :color)
                                       .includes(category: :color).order("published_date desc").limit(6)
