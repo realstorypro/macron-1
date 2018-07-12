@@ -15,6 +15,9 @@ module SiteSettings
     def self.instance
       Integration.first_or_create! do |settings|
         settings.newsletter_webhook = "https://hooks.zapier.com/hooks/catch/3200901/fsym7e/"
+        # initializing as blank keys 
+        settings.segment_js_key = ""
+        settings.segment_server_key = ""
       end
     end
   end

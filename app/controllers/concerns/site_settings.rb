@@ -36,7 +36,7 @@ module SiteSettings
       end
       @site_settings = JSON.parse(site_settings)
 
-      #TODO this isn't ideal as we're reiniting analytics with every call. It would be nice to find a way to memoize it
+      # TODO this isn't ideal as we're reiniting analytics with every call. It would be nice to find a way to memoize it
       @analytics = Segment::Analytics.new(write_key: ss("segment_server_key"))
     end
 end
