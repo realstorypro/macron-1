@@ -2,7 +2,7 @@ doctype html
 html
   head
     = render 'layouts/partials/head'
-  body class="#{controller_name} #{action_name.downcase}"
+  body class="#{controller_name} #{action_name.downcase.gsub('-',' ')}"
     = render 'layouts/partials/drawers'
     = render 'layouts/partials/notifications'
 
