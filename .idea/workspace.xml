@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/01_redis.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/redis.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/02_config_bootloader.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/support/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/support/index.html.slim" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -119,13 +115,18 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="general.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="general.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/site_settings/general.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
                   <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/views/admin/support/index.html.slim">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file leaf-file-name="base.rb" pinned="false" current-in-tab="false">
@@ -212,7 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/cells/vue/social_sharing_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/vue/social_sharing/show.slim" />
         <option value="$PROJECT_DIR$/app/views/articles/show.html.slim" />
         <option value="$PROJECT_DIR$/app/views/discussions/show.html.slim" />
@@ -263,6 +263,7 @@
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/general.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/support/index.html.slim" />
       </list>
     </option>
   </component>
@@ -476,7 +477,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163489000" />
+    <option name="totallyTimeSpent" value="163644000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,13 +587,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/admin/site_settings/branding/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/site_settings/contact/show.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -905,6 +899,9 @@
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/support/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
