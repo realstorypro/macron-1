@@ -1,6 +1,38 @@
+// white menu
 .page.home .navigation.widget
   background: white
 
+// black menu
+.page.privacy.policy .navigation.widget,
+.page.terms.of.service .navigation.widget,
+.articles.index .navigation.widget,
+.videos.index .navigation.widget,
+.discussions.index .navigation.widget
+  background: $black
+
+  .mobile.logo.image,
+  .logo.image.normal
+    display: none
+
+  .logo.image.inverted
+    display: block
+
+  i
+    color: $white
+
+  &.mini
+    background: $black
+
+    .logo.image.normal
+      display: none
+
+    .logo.image.inverted
+      display: block
+
+    i
+      color: $white
+
+// transparent menu
 @include media(">=desktop")
   .articles.show .navigation.widget,
   .videos.show .navigation.widget,
@@ -31,6 +63,7 @@
 
       i
         color: $black
+
 
 .navigation.widget
   position: fixed

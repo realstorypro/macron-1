@@ -108,27 +108,8 @@
         padding-left: 10px;
         margin-left: 1px;
     	color: rgba(0, 0, 0, .5);
-        quotes: "\201C""\201D""\2018""\2019";
         margin-top: 2.5em;
         margin-bottom: 2.5em;
-
-        &:before {
-          color: #ccc;
-          content: open-quote;
-          font-size: 4em;
-          line-height: 0.1em;
-          margin-right: 0.25em;
-          vertical-align: -0.45em;
-        }
-
-        &:after {
-          color: #ccc;
-          content: close-quote;
-          font-size: 4em;
-          line-height: .1em;
-          margin-left: .25em;
-          vertical-align: -.5em;
-        }
 
 	}
     table {
