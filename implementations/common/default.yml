@@ -1007,11 +1007,18 @@ views:
         options:
           - 3
           - 6
+      homepage_menu_color:
+        label: 'Menu Color'
+        type: 'color'
+      homepage_content_top_padding:
+        label: 'Content Top Padding'
+        type: 'integer'
+        hint: '(In EM)'
 
       header_header:
         type: 'header'
         text: 'Header'
-      header_color:
+      menu_color:
         label: 'Color'
         type: 'color'
       menu_position:
@@ -1070,11 +1077,17 @@ views:
       homepage_discussion_items:
         label: 'Discussion Items'
         type: 'string'
+      homepage_menu_color:
+        label: 'Menu Color'
+        type: 'plain_color'
+      homepage_content_top_padding:
+        label: 'Content Top Padding'
+        type: 'string'
 
       header_header:
         type: 'header'
         text: 'Header'
-      header_color:
+      menu_color:
         label: 'Color'
         type: 'plain_color'
       menu_position:
@@ -1233,6 +1246,7 @@ colors:
   - 'brown'
   - 'grey'
   - 'black'
+  - 'white'
 
 auth:
 

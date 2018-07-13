@@ -2,32 +2,26 @@ $w-navigation-colors: (red: $red, orange: $orange, yellow: $yellow, olive: $oliv
 $w-navigation-colored-regular-colors: orange violet grey white yellow
 $w-navigation-colored-inverted-colors: red blue olive green teal purple pink brown black
 
-// white menu
-.page.home .navigation.widget
-  background: white
+// Homepage Colors
+@each $color in $w-navigation-colored-regular-colors
+  .page.home .navigation.widget.#{$color}
+    background: map-get($w-navigation-colors, $color)
 
-// black menu
-.page.privacy.policy .navigation.widget,
-.page.terms.of.service .navigation.widget,
-.articles.index .navigation.widget,
-.videos.index .navigation.widget,
-.discussions.index .navigation.widget,
-.profile.show .navigation.widget
-  background: $black
+@each $color in $w-navigation-colored-inverted-colors
+  .page.home .navigation.widget.#{$color}
+    background: map-get($w-navigation-colors, $color)
 
-  .mobile.logo.image,
-  .logo.image.normal
-    display: none
+// Inverted Colors
+@each $color in $w-navigation-colored-inverted-colors
+  .page.privacy.policy .navigation.widget.#{$color},
+  .page.terms.of.service .navigation.widget.#{$color},
+  .articles.index .navigation.widget.#{$color},
+  .videos.index .navigation.widget.#{$color},
+  .discussions.index .navigation.widget.#{$color},
+  .profile.show .navigation.widget.#{$color}
+    background: map-get($w-navigation-colors, $color)
 
-  .logo.image.inverted
-    display: block
-
-  i
-    color: $white
-
-  &.mini
-    background: $black
-
+    .mobile.logo.image,
     .logo.image.normal
       display: none
 
@@ -36,6 +30,18 @@ $w-navigation-colored-inverted-colors: red blue olive green teal purple pink bro
 
     i
       color: $white
+
+    &.mini
+      background: map-get($w-navigation-colors, $color)
+
+      .logo.image.normal
+        display: none
+
+      .logo.image.inverted
+        display: block
+
+      i
+        color: $white
 
 // transparent menu
 @include media(">=desktop")

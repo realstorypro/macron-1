@@ -9,8 +9,10 @@ module SiteSettings
 
     content_attr :homepage_featured_items, :integer
     content_attr :homepage_discussion_items, :integer
+    content_attr :homepage_menu_color, :string
+    content_attr :homepage_content_top_padding, :integer
 
-    content_attr :header_color, :string
+    content_attr :menu_color, :string
     content_attr :menu_position, :string
     content_attr :desktop_logo_size, :integer
     content_attr :mobile_logo_size, :integer
@@ -25,13 +27,13 @@ module SiteSettings
 
 
 
-
+    # TODO: populate defaults
     def self.instance
       Theme.first_or_create! do |settings|
         settings.homepage_featured_items = 2
         settings.homepage_discussion_items = 6
         settings.menu_position = 'left'
-        settings.header_color = 'black'
+        settings.menu_color = 'black'
         settings.footer_color = 'black'
         settings.about = "about section"
         settings.copyrights = "2017 - 2018 IdeaLogic"
