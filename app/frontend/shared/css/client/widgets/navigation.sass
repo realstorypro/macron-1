@@ -92,20 +92,37 @@ $w-navigation-colored-inverted-colors: red blue olive green teal purple pink bro
   .logo.image.inverted
     display: none
 
-  // Link Adjustments
-  .item.icon.hamburger
+  // Left Hamburger
+  .left.item.icon.hamburger
     margin-left: -3px
 
+  // Right Hamburger
+  .right.item.icon.hamburger
+    margin-right: -10px
+
+  // Logo with Hamburger on Left
   .logo.link
     transition: $w-navigation-logo-up-transition
     padding-left: 0
     margin-left: 0
 
+  // Logo with Hamburger on Right
+  .logo.link.flush
+    padding-left: 10px
+    margin-left: 0
+
   .menu a.link.item:hover
     background: none
 
-  .sign.in.button
-    margin-right: -12px
+  // Container Holding CTA Button (Sign In)
+  // "Flush" is Triggered when Menu is Right
+  .cta.flush
+    @include media("<desktop")
+      margin-right: 0
+
+  // CTA Button
+  .sign.in.button.flush
+    margin-right: -17px
 
 
   .profile.dropdown
@@ -155,6 +172,7 @@ $w-navigation-colored-inverted-colors: red blue olive green teal purple pink bro
   box-shadow: $w-navigation-mini-box-shadow
   background: $w-navigation-mini-background
   transition: $w-navigation-down-transition
+
 
   .logo.link
     transition: $w-navigation-logo-down-transition

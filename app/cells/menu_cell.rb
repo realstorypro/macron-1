@@ -96,6 +96,7 @@ class MenuCell < Cell::ViewModel
       %w[/]
     end
 
+
     # toggles showing icons
     def show_icons?
       return false unless options[:show_icons]

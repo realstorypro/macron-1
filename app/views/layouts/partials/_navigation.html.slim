@@ -2,9 +2,10 @@
   = container id: 'navigation'
     = widget ui: :on, class: "secondary menu", name: 'navigation_buttons', id: 'navigation_buttons', vue: :on
       = menu ui: :on, class: 'secondary'
-        = item tag: :button, class: 'enhanced button icon hamburger', url: '', v: {'on:click.prevent': "toggle_sidenav()"}
-          = icon 'large sidebar'
-        = item(name: 'Logo', class: 'logo link', url: root_path) do
+        - if ss(:menu_position) == 'left'
+          = item tag: :button, class: "enhanced button icon hamburger left", url: '', v: {'on:click.prevent': "toggle_sidenav()"}
+            = icon 'large sidebar'
+        = item(name: 'Logo', class: "logo link #{'flush ' if ss(:menu_position) == 'right'}", url: root_path) do
           = image_tag ss(:logo), class: 'desktop logo image normal', style: "width: #{ss(:desktop_logo_size)}px;"
           = image_tag ss(:inverted_logo), class: 'desktop logo image inverted', style: "width: #{ss(:desktop_logo_size)}px;"
           = image_tag ss(:logo), class: 'mobile logo image', style: "width: #{ss(:mobile_logo_size)}px;"
@@ -26,7 +27,10 @@
               = link_to destroy_user_session_path, method: 'delete', class: 'item'
                 | Log Out
         - else
-          = item
+          = item "cta #{'flush ' if ss(:menu_position) == 'right'}"
             = link_to sign_in_path
-              = button 'sign in inverted secondary large'
+              = button "sign in inverted secondary large #{'flush ' if ss(:menu_position) == 'left'}"
                 | Sign In
+        - if ss(:menu_position) == 'right'
+          = item tag: :button, class: 'enhanced button icon hamburger right', url: '', v: {'on:click.prevent': "toggle_sidenav()"}
+            = icon 'large sidebar'

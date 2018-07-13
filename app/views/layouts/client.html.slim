@@ -6,7 +6,7 @@ html
     = render 'layouts/partials/drawers'
     = render 'layouts/partials/notifications'
 
-    ==  Widget::SidenavCell.(nil, layout: 'main', menu: s('menu.main'), request: request, show_icons: false)
+    ==  Widget::SidenavCell.(nil, layout: 'main', menu: s('menu.main'), request: request, show_icons: false, position: ss(:menu_position))
     .pusher
       = render 'layouts/partials/navigation'
       == yield

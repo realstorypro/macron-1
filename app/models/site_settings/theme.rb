@@ -27,7 +27,7 @@ module SiteSettings
 
 
 
-    # TODO: populate defaults
+    # TODO: populate defaults & requirements
     def self.instance
       Theme.first_or_create! do |settings|
         settings.homepage_featured_items = 2
