@@ -1049,15 +1049,15 @@ views:
         type: 'header'
         text: 'Authentication'
       sign_up_title:
-        label: 'Sign Up Title'
+        label: '"Sign up" Title'
         type: 'string'
         hint: 'Title of the Sign Up Box'
       sign_up_subtitle:
-        label: 'Sign Sub Title'
+        label: '"Sign Up" sub title'
         type: 'string'
         hint: 'Sub Title of the Sign Up Box'
       sign_in_title:
-        label: 'Sign In Title'
+        label: '"Sign In" title'
         type: 'string'
         hint: 'Title of the Sign In Box'
     show:

@@ -1,3 +1,27 @@
+$f-footer-colors: (red: $red, orange: $orange, yellow: $yellow, olive: $olive, green: $green, teal: $teal, blue: $blue, violet: $violet, purple: $purple, pink: $pink, brown: $brown, grey: $grey, black: $black, white: $white )
+$f-footer-colored-regular-colors: orange violet grey white yellow
+$f-footer-colored-inverted-colors: red blue olive green teal purple pink brown black
+
+// Regular Colors
+@each $color in $f-footer-colored-regular-colors
+  .pusher > .footer.fragment.#{$color}
+    background: map-get($f-footer-colors, $color)
+    border-top: 0 !important
+
+    h5, p, .item, .item a, a.item
+      color: $black
+      opacity: 1
+
+// Inverted Colors
+@each $color in $f-footer-colored-inverted-colors
+  .pusher > .footer.fragment.#{$color}
+    background: map-get($f-footer-colors, $color)
+    border-top: 0 !important
+
+    h5, p, .item, .item a, a.item
+      color: $white
+      opacity: 1
+
 .pusher > .footer.fragment
 
   border-top: 1px solid $f-footer-border
