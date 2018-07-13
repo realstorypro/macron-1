@@ -38,6 +38,8 @@ module Admin
         render_list(value, false)
       when "linked_item"
         render_linked_item(value)
+      when "plain_color"
+        render_color(value)
       when "color"
         render_color(value.name)
       end
