@@ -1,50 +1,56 @@
-$w-navigation-colors: (red: $red, orange: $orange, yellow: $yellow, olive: $olive, green: $green, teal: $teal, blue: $blue, violet: $violet, purple: $purple, pink: $pink, brown: $brown, grey: $grey, black: $black, white: $white )
-$w-navigation-colored-regular-colors: orange violet grey white yellow
-$w-navigation-colored-inverted-colors: red blue olive green teal purple pink brown black
+// colored menu
+@each $color in $g-colors-list
+  @each $class in $w-navigation-class-list
+    #{$class}.#{$color}
+      @if index($w-navigation-transparent-class-list,$class)
+        background: rgba(0,0,0,0)
+      @else
+        background: map-get($g-colors-map, $color)
 
-// Homepage Colors
-@each $color in $w-navigation-colored-regular-colors
-  .page.home .navigation.widget.#{$color}
-    background: map-get($w-navigation-colors, $color)
+      &.widget.mini
+        background: map-get($g-colors-map, $color)
 
-@each $color in $w-navigation-colored-inverted-colors
-  .page.home .navigation.widget.#{$color}
-    background: map-get($w-navigation-colors, $color)
+      @if index($g-colors-inverted, $color)
+        .desktop.logo.image.normal,
+        .mobile.logo.image.normal
+          display: none
 
-// Inverted Colors
-@each $color in $w-navigation-colored-inverted-colors
-  .page.privacy.policy .navigation.widget.#{$color},
-  .page.terms.of.service .navigation.widget.#{$color},
-  .articles.index .navigation.widget.#{$color},
-  .videos.index .navigation.widget.#{$color},
-  .discussions.index .navigation.widget.#{$color},
-  .profile.show .navigation.widget.#{$color}
-    background: map-get($w-navigation-colors, $color)
+        .desktop.logo.image.inverted
+          display: block
 
-    .mobile.logo.image,
-    .logo.image.normal
-      display: none
+          @include media("<desktop")
+            display: none
 
-    .logo.image.inverted
-      display: block
+        .mobile.logo.image.inverted
+          display: none
 
-    i
-      color: $white
+          @include media("<desktop")
+            display: block
+      @else
+        .desktop.logo.image.inverted,
+        .mobile.logo.image.inverted
+          display: none
 
-    &.mini
-      background: map-get($w-navigation-colors, $color)
+        .desktop.logo.image.normal
+          display: block
 
-      .logo.image.normal
-        display: none
+          @include media("<desktop")
+            display: none
 
-      .logo.image.inverted
-        display: block
+        .mobile.logo.image.normal
+          display: none
 
-      i
-        color: $white
+          @include media("<desktop")
+            display: block
+
+      i.icon
+        @if index($g-colors-inverted, $color)
+          color: $white
+        @else
+          color: $black
 
 // transparent menu
-@include media(">=desktop")
+//@include media(">=desktop")
   .articles.show .navigation.widget,
   .videos.show .navigation.widget,
   .verifications .navigation.widget,
@@ -63,17 +69,8 @@ $w-navigation-colored-inverted-colors: red blue olive green teal purple pink bro
     i
       color: $white
 
-    &.mini
+    &.widget.mini
       background: $white
-
-      .logo.image.normal
-        display: block
-
-      .logo.image.inverted
-        display: none
-
-      i
-        color: $black
 
 
 .navigation.widget
@@ -88,9 +85,7 @@ $w-navigation-colored-inverted-colors: red blue olive green teal purple pink bro
   transition: $w-navigation-up-transition
 
 
-  // Hiding Inverted Logo
-  .logo.image.inverted
-    display: none
+  // --- Begin Left & Right Menu Haburger Toggle --
 
   // Left Hamburger
   .left.item.icon.hamburger
@@ -115,7 +110,7 @@ $w-navigation-colored-inverted-colors: red blue olive green teal purple pink bro
     background: none
 
   // Container Holding CTA Button (Sign In)
-  // "Flush" is Triggered when Menu is Right
+  // "Flush" is Triggered when Hamburger is on the Right
   .cta.flush
     @include media("<desktop")
       margin-right: 0
@@ -124,6 +119,7 @@ $w-navigation-colored-inverted-colors: red blue olive green teal purple pink bro
   .sign.in.button.flush
     margin-right: -17px
 
+  // --- End Left & Right Menu Haburger Toggle --
 
   .profile.dropdown
     margin-right: -12px
@@ -159,18 +155,14 @@ $w-navigation-colored-inverted-colors: red blue olive green teal purple pink bro
 
 
   .mobile.logo.image
-    display: none
     width: $w-navigation-mobile-logo-width
     height: $w-navigation-mobile-logo-height
     padding: $w-navigation-mobile-logo-padding
     transition: $w-navigation-down-transition
-    @include media("<desktop")
-      display: block
-      
+
 .navigation.widget.mini
   border-bottom: $w-navigation-mini-border
   box-shadow: $w-navigation-mini-box-shadow
-  background: $w-navigation-mini-background
   transition: $w-navigation-down-transition
 
 

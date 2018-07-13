@@ -8,7 +8,8 @@
         = item(name: 'Logo', class: "logo link #{'flush ' if ss(:menu_position) == 'right'}", url: root_path) do
           = image_tag ss(:logo), class: 'desktop logo image normal', style: "width: #{ss(:desktop_logo_size)}px;"
           = image_tag ss(:inverted_logo), class: 'desktop logo image inverted', style: "width: #{ss(:desktop_logo_size)}px;"
-          = image_tag ss(:logo), class: 'mobile logo image', style: "width: #{ss(:mobile_logo_size)}px;"
+          = image_tag ss(:logo), class: 'mobile logo image normal', style: "width: #{ss(:mobile_logo_size)}px;"
+          = image_tag ss(:inverted_logo), class: 'mobile logo image inverted', style: "width: #{ss(:mobile_logo_size)}px;"
       = menu class: 'floated right'
         - if user_signed_in?
           = dropdown 'item widgeted compact profile top right pointing'
