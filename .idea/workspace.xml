@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -84,19 +82,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="navigation.sass" pinned="false" current-in-tab="true">
+      <file leaf-file-name="navigation.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="765">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="variables.sass" pinned="false" current-in-tab="false">
+      <file leaf-file-name="variables.sass" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
+            <state relative-caret-position="552">
               <caret line="186" selection-start-line="186" selection-end-line="186" />
             </state>
           </provider>
@@ -482,7 +480,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186434000" />
+    <option name="totallyTimeSpent" value="186890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -900,17 +898,17 @@
     <entry file="file://$PROJECT_DIR$/app/frontend/config/css/variables.sass">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        <state relative-caret-position="765">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="552">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
         </state>
       </provider>
     </entry>
