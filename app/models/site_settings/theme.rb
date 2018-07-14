@@ -32,9 +32,9 @@ module SiteSettings
       Theme.first_or_create! do |settings|
         settings.homepage_featured_items = 2
         settings.homepage_discussion_items = 6
-        settings.menu_position = 'left'
-        settings.menu_color = 'black'
-        settings.footer_color = 'black'
+        settings.menu_position = "left"
+        settings.menu_color = "black"
+        settings.footer_color = "black"
         settings.about = "about section"
         settings.copyrights = "2017 - 2018 IdeaLogic"
       end
