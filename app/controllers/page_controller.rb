@@ -9,7 +9,7 @@ class PageController < ApplicationController
                                 .where(type: %w(Article Video))
                                 .includes(category: :color).order("published_date desc").limit(2)
     @discussions = Discussion.joins(category: :color)
-                                      .includes(category: :color).order("published_date desc").limit(6)
+                                      .includes(category: :color).order("published_date desc").limit(ss(:homepage_discussion_items))
   end
 
   def sitemap
