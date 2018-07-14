@@ -7,7 +7,7 @@ class PageController < ApplicationController
   def home
     @featured = Entry.joins(category: :color)
                                 .where(type: %w(Article Video))
-                                .includes(category: :color).order("published_date desc").limit(2)
+                                .includes(category: :color).order("published_date desc").limit(ss(:homepage_featured_items))
     @discussions = Discussion.joins(category: :color)
                                       .includes(category: :color).order("published_date desc").limit(ss(:homepage_discussion_items))
   end

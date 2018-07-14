@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app/controllers/page_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/page_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementations/common/default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/implementations/common/default.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -82,20 +83,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="theme.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
+      <file leaf-file-name="default.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            <state relative-caret-position="352">
+              <caret line="999" column="12" selection-start-line="999" selection-start-column="12" selection-end-line="999" selection-end-column="12" />
+              <folding>
+                <element signature="e#282#2133#0" />
+                <element signature="e#595#2133#0" />
+                <element signature="e#2135#2179#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="theme.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="129" selection-start-line="11" selection-start-column="129" selection-end-line="11" selection-end-column="129" />
+            <state relative-caret-position="270">
+              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+              <folding>
+                <element signature="e#546#653#0" />
+                <element signature="e#657#1038#0" />
+                <element signature="e#843#867#0" />
+                <element signature="e#905#1032#0" />
+                <element signature="e#948#1024#0" />
+                <element signature="e#1059#1204#0" />
+                <element signature="e#1111#1180#0" />
+                <element signature="e#1212#1367#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>blockquote</find>
       <find>quotes: &quot;\201C&quot;&quot;\201D&quot;&quot;\2018&quot;&quot;\2019&quot;</find>
       <find>website</find>
       <find>Menu</find>
@@ -141,6 +165,7 @@
       <find>$f-footer-item-color</find>
       <find>$f-footer-copyright-item-color</find>
       <find>$f-footer-border</find>
+      <find>homepage_featured_items</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -212,7 +237,6 @@
         <option value="$PROJECT_DIR$/app/views/meta/_form.html.slim" />
         <option value="$PROJECT_DIR$/app/views/page/home.html.slim" />
         <option value="$PROJECT_DIR$/core/colors.yml" />
-        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
         <option value="$PROJECT_DIR$/app/views/layouts/client.html.slim" />
         <option value="$PROJECT_DIR$/app/cells/menu_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/sidenav_cell.rb" />
@@ -224,6 +248,7 @@
         <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/page_controller.rb" />
+        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
       </list>
     </option>
   </component>
@@ -471,7 +496,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190621000" />
+    <option name="totallyTimeSpent" value="190712000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -832,18 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="1248" column="9" selection-start-line="1248" selection-start-column="9" selection-end-line="1248" selection-end-column="9" />
-          <folding>
-            <element signature="e#282#2133#0" />
-            <element signature="e#595#2133#0" />
-            <element signature="e#2135#2179#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/config/css/variables.sass">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -891,15 +904,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state relative-caret-position="135">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="129" selection-start-line="11" selection-start-column="129" selection-end-line="11" selection-end-column="129" />
+        <state relative-caret-position="270">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding>
+            <element signature="e#546#653#0" />
+            <element signature="e#657#1038#0" />
+            <element signature="e#843#867#0" />
+            <element signature="e#905#1032#0" />
+            <element signature="e#948#1024#0" />
+            <element signature="e#1059#1204#0" />
+            <element signature="e#1111#1180#0" />
+            <element signature="e#1212#1367#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="999" column="12" selection-start-line="999" selection-start-column="12" selection-end-line="999" selection-end-column="12" />
+          <folding>
+            <element signature="e#282#2133#0" />
+            <element signature="e#595#2133#0" />
+            <element signature="e#2135#2179#0" />
+          </folding>
         </state>
       </provider>
     </entry>

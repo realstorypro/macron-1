@@ -998,9 +998,6 @@ views:
           - 1
           - 2
           - 3
-          - 4
-          - 5
-          - 6
       homepage_discussion_items:
         label: 'Discussion Items'
         type: 'fixed_dropdown'
