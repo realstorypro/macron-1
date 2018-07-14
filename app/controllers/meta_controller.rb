@@ -17,11 +17,13 @@ class MetaController < ApplicationController
 
   def new
     @entry = entry_class.new
+    @colors = Color.all
     authorize @entry
     render :new, layout: false
   end
 
   def edit
+    @colors = Color.all
     render :edit, layout: false
   end
 

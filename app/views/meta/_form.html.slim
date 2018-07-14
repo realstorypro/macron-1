@@ -23,6 +23,10 @@
             = h5 text: field_text(field), class: 'dividing grey'
           - elsif field_type(field) == 'datepicker' && !f.object[field_name(field)].nil?
             = f.input field_name(field), as: field_type(field), :input_html => { :value => localize(f.object[field_name(field)], :format => "%B %d, %Y") }, label: field_label(field), hint: field_hint(field), maxlength: field_maxlength(field), component: params[:component]
+          - elsif field_type(field) == 'color'
+            = f.input field_name(field), collection: @colors.collect {|color| color.name}, input_html: {class: 'ui fluid dropdown'}, label: field_label(field)
+          - elsif field_type(field) == 'fixed_dropdown'
+            = f.input field_name(field), collection: field_options(field), input_html: {class: 'ui fluid dropdown'}, label: field_label(field)
           - elsif field_type(field) == 'divider'
             = divider
           - else

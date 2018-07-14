@@ -1,8 +1,47 @@
-.pusher > .footer.fragment
+@each $color in $g-colors-list
+  .pusher > .footer.fragment.#{$color}
+    background: map-get($g-colors-map, $color)
+    border-top: 0 !important
 
-  border-top: 1px solid $f-footer-border
+    h5, p, .item,
+    .ui.list .item a
+      @if index($g-colors-regular, $color)
+        color: $black
+      @else
+        color: $white
+
+    .ui.list .item a
+      @if index($g-colors-regular, $color)
+        &:hover
+          color: $white
+      @else
+        &:hover
+          color: $black
+
+    .ui.list.copyright
+      .item, .item a, a.item
+        @if index($g-colors-regular, $color)
+          color: $black
+        @else
+          color: $white
+
+      .item
+        @if index($g-colors-regular, $color)
+          border-left: 1px solid $black
+        @else
+          border-left: 1px solid $white
+        &:first-child
+          border-left: none
+
+        &:hover
+          @if index($g-colors-regular, $color)
+            color: $black !important
+          @else
+            color: $white !important
+
+.pusher > .footer.fragment
+  border-top: 0
   border-bottom: none
-  background: $f-footer-background-color
   border-radius: 0px
   padding: $f-footer-padding
 
@@ -10,35 +49,18 @@
     padding: $f-footer-mobile-padding
 
   h5
-    color: $f-footer-header-color
     opacity: $f-footer-header-opacity
 
-  p
-    color: $f-footer-text-color
-    opacity: $f-footer-text-opacity
-
-  .item
-    color: $f-footer-item-color
+  p, .item
     opacity: $f-footer-item-opacity
 
   .ui.list
     .item a, a.item
-      color: $f-footer-link-color !important
       transition: $f-footer-link-transition
-
-      &:hover
-        color: $f-footer-link-hover-color !important
 
   .ui.list.copyright
     text-transform: uppercase
 
-    .item, .item a, a.item
-      color: $f-footer-copyright-item-color !important
-
     .item
-      border-left: 1px solid $f-footer-copyright-separator-color
       &:first-child
         border-left: none
-
-      &:hover
-        color: $f-footer-copyright-item-color !important

@@ -988,25 +988,45 @@ views:
 
   site_settings_theme:
     new:
-      auth_header:
+      homepage_header:
         type: 'header'
-        text: 'Authentication'
-      sign_up_title:
-        label: 'Sign Up Title'
-        type: 'string'
-        hint: 'Title of the Sign Up Box'
-      sign_up_subtitle:
-        label: 'Sign Sub Title'
-        type: 'string'
-        hint: 'Sub Title of the Sign Up Box'
-      sign_in_title:
-        label: 'Sign In Title'
-        type: 'string'
-        hint: 'Title of the Sign In Box'
+        text: 'Homepage'
+      homepage_featured_items:
+        label: 'Featured Items'
+        type: 'fixed_dropdown'
+        options:
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+      homepage_discussion_items:
+        label: 'Discussion Items'
+        type: 'fixed_dropdown'
+        options:
+          - 3
+          - 6
+      homepage_menu_color:
+        label: 'Menu Color'
+        type: 'color'
+      homepage_content_top_padding:
+        label: 'Content Top Padding'
+        type: 'integer'
+        hint: '(In EM)'
 
-      menu_header:
+      header_header:
         type: 'header'
-        text: 'Menu'
+        text: 'Header'
+      menu_color:
+        label: 'Color'
+        type: 'color'
+      menu_position:
+        label: 'Menu Position'
+        type: 'fixed_dropdown'
+        options:
+          - 'left'
+          - 'right'
       desktop_logo_size:
         label: 'Desktop Logo Width'
         type: 'string'
@@ -1021,6 +1041,9 @@ views:
       footer_header:
         type: 'header'
         text: 'Footer'
+      footer_color:
+        label: 'Color'
+        type: 'color'
       about:
         label: 'About Us'
         type: 'rich'
@@ -1028,7 +1051,68 @@ views:
       copyrights:
         label: 'Copyrights'
         type: 'string'
+
+      auth_header:
+        type: 'header'
+        text: 'Authentication'
+      sign_up_title:
+        label: '"Sign up" Title'
+        type: 'string'
+        hint: 'Title of the Sign Up Box'
+      sign_up_subtitle:
+        label: '"Sign Up" sub title'
+        type: 'string'
+        hint: 'Sub Title of the Sign Up Box'
+      sign_in_title:
+        label: '"Sign In" title'
+        type: 'string'
+        hint: 'Title of the Sign In Box'
     show:
+      homepage_header:
+        type: 'header'
+        text: 'Homepage'
+      homepage_featured_items:
+        label: 'Featured Items'
+        type: 'string'
+      homepage_discussion_items:
+        label: 'Discussion Items'
+        type: 'string'
+      homepage_menu_color:
+        label: 'Menu Color'
+        type: 'plain_color'
+      homepage_content_top_padding:
+        label: 'Content Top Padding'
+        type: 'string'
+
+      header_header:
+        type: 'header'
+        text: 'Header'
+      menu_color:
+        label: 'Color'
+        type: 'plain_color'
+      menu_position:
+        label: 'Menu Position'
+        type: 'string'
+      desktop_logo_size:
+        label: 'Desktop Logo Width'
+        type: 'string'
+      mobile_logo_size:
+        label: 'Mobile Logo Width'
+        type: 'string'
+
+      footer_header:
+        type: 'header'
+        text: 'Footer'
+      footer_color:
+        label: 'Color'
+        type: 'plain_color'
+      about:
+        label: 'About Us'
+        type: 'string'
+      copyrights:
+        label: 'Copyrights'
+        type: 'string'
+
       auth_header:
         type: 'header'
         text: 'Authentication'
@@ -1041,27 +1125,6 @@ views:
       sign_in_title:
         label: 'Sign In Title'
         type: 'string'
-
-      menu_header:
-        type: 'header'
-        text: 'Menu'
-      desktop_logo_size:
-        label: 'Desktop Logo Width'
-        type: 'string'
-      mobile_logo_size:
-        label: 'Mobile Logo Width'
-        type: 'string'
-
-      footer_header:
-        type: 'header'
-        text: 'Footer'
-      about:
-        label: 'About Us'
-        type: 'string'
-      copyrights:
-        label: 'Copyrights'
-        type: 'string'
-
   site_settings_contact:
     new:
       contact_header:
@@ -1183,6 +1246,7 @@ colors:
   - 'brown'
   - 'grey'
   - 'black'
+  - 'white'
 
 auth:
 

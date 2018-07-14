@@ -29,6 +29,10 @@ module CrudHelper
     field[1].type
   end
 
+  def field_options(field)
+    field[1].options
+  end
+
   def field_label(field)
     field[1].label
   end

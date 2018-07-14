@@ -30,5 +30,10 @@ module Widget
       link_text = menu_text(name, menu_icon)
       link_to link_text, link_path, class: link_class, 'v-on:click': "visit('#{link_path}')"
     end
+
+    # shortcut for accessing position
+    def position
+      options[:position]
+    end
   end
 end

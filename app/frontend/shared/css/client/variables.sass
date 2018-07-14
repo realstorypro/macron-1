@@ -10,7 +10,7 @@ $header-font-family: 'Releway', 'Helvetica Neue', Arial, Helvetica, sans-serif
 
 // Base
 $red            : #B03060
-$orange         : #FE9A76
+$orange         : #FF8243
 $yellow         : #FFD700
 $olive          : #32CD32
 $green          : #21BA45
@@ -27,6 +27,12 @@ $white          : #FFFFFF
 // Shades
 $light-shading: rgba(0,0,0,0.01)
 $medium-shading: rgba(34, 36, 38, 0.15)
+
+// Color Lists
+$g-colors-list: orange violet grey white yellow red blue olive green teal purple pink brown black
+$g-colors-map: (red: $red, orange: $orange, yellow: $yellow, olive: $olive, green: $green, teal: $teal, blue: $blue, violet: $violet, purple: $purple, pink: $pink, brown: $brown, grey: $grey, black: $black, white: $white )
+$g-colors-regular: orange violet grey white yellow
+$g-colors-inverted: red blue olive green teal purple pink brown black
 
 // ********************** //
 //      --* Layout *--    //
@@ -86,25 +92,11 @@ $f-action-bar-mobile-border-top: 1px solid rgba(34, 36, 38, .15)
 $f-action-bar-mobile-border-bottom: 1px solid rgba(34, 36, 38, .15)
 
 // Footer
-$f-footer-background-color: $black
 $f-footer-padding: 4em 0 3em
 $f-footer-mobile-padding: 4em 0 3em
-$f-footer-border: $medium-shading
-
-$f-footer-header-color: $white
-$f-footer-header-opacity: 0.8
-
-$f-footer-text-color: $white
-$f-footer-text-opacity: 0.4
-
-$f-footer-item-color: $white
-$f-footer-item-opacity: 0.4
-$f-footer-link-color: $white
-$f-footer-link-hover-color: darken($white,30)
+$f-footer-header-opacity: 0.95
+$f-footer-item-opacity: 0.9
 $f-footer-link-transition: 0.4s all
-
-$f-footer-copyright-item-color: darken($white,10)
-$f-footer-copyright-separator-color: $white
 
 // Header
 $f-header-padding-top: 5.5em
@@ -177,6 +169,9 @@ $w-navigation-logo-padding: 0 0
 $w-navigation-mobile-logo-width: 110px
 $w-navigation-mobile-logo-height: auto
 $w-navigation-mobile-logo-padding: 0
+
+$w-navigation-class-list: '.page.home .navigation.widget' '.page.privacy.policy .navigation.widget' '.page.terms.of.service .navigation.widget' '.articles.index .navigation.widget' '.videos.index .navigation.widget' '.discussions.index .navigation.widget' '.profile.show .navigation.widget' '.articles.show .navigation.widget' '.videos.show .navigation.widget' '.verifications .navigation.widget' '.registrations .navigation.widget' '.sessions .navigation.widget' '.passwords .navigation.widget' '.after_signup .navigation.widget'
+$w-navigation-transparent-class-list: '.articles.show .navigation.widget' '.videos.show .navigation.widget' '.verifications .navigation.widget' '.registrations .navigation.widget' '.sessions .navigation.widget' '.passwords .navigation.widget' '.after_signup .navigation.widget'
 
 // Sidebar
 $w-sidebar-width: 350px

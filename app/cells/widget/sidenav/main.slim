@@ -1,4 +1,4 @@
-= widget name: 'sidenav', class: 'sidebar left', ui: :on, vue: :on, id: 'main-menu'
+= widget name: 'sidenav', class: "sidebar #{position}", ui: :on, vue: :on, id: 'main-menu'
   = segment 'basic clearing closing wrapper'
     = h5 text: 'Menu', class: 'floated left inverted'
     = button class: 'icon basic right floated', v: {'on:click': 'close()'}

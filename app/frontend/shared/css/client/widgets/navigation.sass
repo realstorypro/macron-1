@@ -1,69 +1,53 @@
-// white menu
-.page.home .navigation.widget
-  background: white
+// colored menu
+@each $color in $g-colors-list
+  @each $class in $w-navigation-class-list
+    #{$class}.#{$color}
+      @if index($w-navigation-transparent-class-list,$class)
+        background: rgba(0,0,0,0)
+      @else
+        background: map-get($g-colors-map, $color)
 
-// black menu
-.page.privacy.policy .navigation.widget,
-.page.terms.of.service .navigation.widget,
-.articles.index .navigation.widget,
-.videos.index .navigation.widget,
-.discussions.index .navigation.widget
-  background: $black
+      &.widget.mini
+        background: map-get($g-colors-map, $color)
 
-  .mobile.logo.image,
-  .logo.image.normal
-    display: none
+      @if index($g-colors-inverted, $color)
+        .desktop.logo.image.normal,
+        .mobile.logo.image.normal
+          display: none
 
-  .logo.image.inverted
-    display: block
+        .desktop.logo.image.inverted
+          display: block
 
-  i
-    color: $white
+          @include media("<desktop")
+            display: none
 
-  &.mini
-    background: $black
+        .mobile.logo.image.inverted
+          display: none
 
-    .logo.image.normal
-      display: none
+          @include media("<desktop")
+            display: block
+      @else
+        .desktop.logo.image.inverted,
+        .mobile.logo.image.inverted
+          display: none
 
-    .logo.image.inverted
-      display: block
+        .desktop.logo.image.normal
+          display: block
 
-    i
-      color: $white
+          @include media("<desktop")
+            display: none
 
-// transparent menu
-@include media(">=desktop")
-  .articles.show .navigation.widget,
-  .videos.show .navigation.widget,
-  .verifications .navigation.widget,
-  .registrations .navigation.widget,
-  .sessions .navigation.widget,
-  .passwords .navigation.widget,
-  .after_signup .navigation.widget
-    background: rgba(0,0,0,0)
+        .mobile.logo.image.normal
+          display: none
 
-    .logo.image.normal
-      display: none
+          @include media("<desktop")
+            display: block
 
-    .logo.image.inverted
-      display: block
-
-    i
-      color: $white
-
-    &.mini
-      background: $white
-
-      .logo.image.normal
-        display: block
-
-      .logo.image.inverted
-        display: none
-
-      i
-        color: $black
-
+      i.icon
+        @if index($g-colors-inverted, $color)
+          color: $white
+        @else
+          color: $black
 
 .navigation.widget
   position: fixed
@@ -77,25 +61,41 @@
   transition: $w-navigation-up-transition
 
 
-  // Hiding Inverted Logo
-  .logo.image.inverted
-    display: none
+  // --- Begin Left & Right Menu Haburger Toggle --
 
-  // Link Adjustments
-  .item.icon.hamburger
+  // Left Hamburger
+  .left.item.icon.hamburger
     margin-left: -3px
 
+  // Right Hamburger
+  .right.item.icon.hamburger
+    margin-right: -10px
+
+  // Logo with Hamburger on Left
   .logo.link
     transition: $w-navigation-logo-up-transition
     padding-left: 0
     margin-left: 0
 
+  // Logo with Hamburger on Right
+  .logo.link.flush
+    padding-left: 10px
+    margin-left: 0
+
   .menu a.link.item:hover
     background: none
 
-  .sign.in.button
-    margin-right: -12px
+  // Container Holding CTA Button (Sign In)
+  // "Flush" is Triggered when Hamburger is on the Right
+  .cta.flush
+    @include media("<desktop")
+      margin-right: 0
 
+  // CTA Button
+  .sign.in.button.flush
+    margin-right: -17px
+
+  // --- End Left & Right Menu Haburger Toggle --
 
   .profile.dropdown
     margin-right: -12px
@@ -131,19 +131,16 @@
 
 
   .mobile.logo.image
-    display: none
     width: $w-navigation-mobile-logo-width
     height: $w-navigation-mobile-logo-height
     padding: $w-navigation-mobile-logo-padding
     transition: $w-navigation-down-transition
-    @include media("<desktop")
-      display: block
-      
+
 .navigation.widget.mini
   border-bottom: $w-navigation-mini-border
   box-shadow: $w-navigation-mini-box-shadow
-  background: $w-navigation-mini-background
   transition: $w-navigation-down-transition
+
 
   .logo.link
     transition: $w-navigation-logo-down-transition
