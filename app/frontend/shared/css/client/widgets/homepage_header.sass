@@ -1,3 +1,6 @@
+$w-homepage-header-tiny-image-height: 185px
+$w-homepage-header-tall-image-height: 619px
+
 $w-homepage_header-margin: 0 0 2em
 $w-homepage_header-content-padding: 2em
 
@@ -16,6 +19,11 @@ $w-homepage_header-content-padding: 2em
       @include media("<tablet")
         height: $w-homepage-header-mobile-image-height
 
+    &.tiny
+      .image
+        @include media('>=desktop')
+          height: $w-homepage-header-tiny-image-height
+
     &.small
       .image
         @include media('>=desktop')
@@ -25,6 +33,11 @@ $w-homepage_header-content-padding: 2em
       .image
         @include media('>=desktop')
           height: $w-homepage-header-small-image-height - 20
+
+    &.tall
+      .image
+        @include media('>=desktop')
+          height: $w-homepage-header-tall-image-height
 
   .overlay
     width: 100%
@@ -44,6 +57,10 @@ $w-homepage_header-content-padding: 2em
       align-items: center
       background: $w-homepage-header-mobile-overlay
 
+    &.tiny
+      @include media('>=desktop')
+        height: $w-homepage-header-tiny-image-height !important
+
     &.small
       @include media('>=desktop')
         height: $w-homepage-header-small-image-height !important
@@ -51,6 +68,10 @@ $w-homepage_header-content-padding: 2em
     &.short
       @include media('>=desktop')
         height: $w-homepage-header-small-image-height  - 20 !important
+
+    &.tall
+      @include media('>=desktop')
+        height: $w-homepage-header-tall-image-height !important
 
   .meta
     position: absolute
@@ -88,6 +109,15 @@ $w-homepage_header-content-padding: 2em
       @include media("<tablet")
         font-size: $w-homepage-header-mobile-summary-font-size
 
+    &.tiny
+      .header
+        font-size: 1em
+        line-height: 1.5em
+      .sub.header
+        font-size: 1.0em
+      .summary
+        font-size: 1em
+
     &.small
       .header
         font-size: 1.05em
@@ -106,10 +136,10 @@ $w-homepage_header-content-padding: 2em
       .summary
         font-size: 1em
 
-    &.narrow
+    &.tall
       .header
+        font-size: 2.0em
       .sub.header
-        font-size: 1.0em
-      .summary
         font-size: 1em
+      .summary
 
