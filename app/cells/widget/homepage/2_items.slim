@@ -1,2 +1,7 @@
-h1 2 Items
-
+= widget 'homepage header'
+  = container
+    = grid
+      = column computer: 8, tablet: 8, mobile: 16
+        = widget_item @model[0]
+      = column computer: 8, tablet: 8, mobile: 16
+        = widget_item @model[1]
