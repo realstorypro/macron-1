@@ -1,0 +1,14 @@
+= item "link #{@size}"
+  = preload_image @item.card_image
+  = link_to show_link(@item)
+    = overlay @size
+      = meta
+        = show_icon(@item)
+        = icon 'comment outline'
+        = @item.comments.count
+      = content @size
+        = h4
+          = header "sub dividing #{@item.category.color.name}"
+            = @item.category.name
+          = @item.name
+        = summary text: @model[0].description unless @size == 'small'

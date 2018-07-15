@@ -1,5 +1,6 @@
 = component class: "homepage", style: "padding-top: #{ss(:homepage_content_top_padding)}em;"
-  = widget 'homepage header'
+  ==  Widget::HomepageCell.(@featured, item_count: ss(:homepage_featured_items))
+  /= widget 'homepage header'
     = container
       = grid
         - cache @featured

@@ -1,19 +1,25 @@
-$w-homepage_header-margin: 2em 0 2em
+$w-homepage_header-margin: 0 0 2em
 $w-homepage_header-content-padding: 2em
+
 .homepage.header.widget
   margin: $w-homepage_header-margin
 
   .item
     position: relative
 
-  .image
-    background-size: cover
-    background-color: black
-    height: $w-homepage-header-image-height
-    @include media("<desktop")
-      height: $w-homepage-header-tablet-image-height
-    @include media("<tablet")
-      height: $w-homepage-header-mobile-image-height
+    .image
+      background-size: cover
+      background-color: black
+      height: $w-homepage-header-image-height
+      @include media("<desktop")
+        height: $w-homepage-header-tablet-image-height
+      @include media("<tablet")
+        height: $w-homepage-header-mobile-image-height
+
+    &.small
+      .image
+        @include media('>=desktop')
+          height: $w-homepage-header-small-image-height
 
   .overlay
     width: 100%
@@ -25,12 +31,30 @@ $w-homepage_header-content-padding: 2em
     display: flex
     align-items: flex-end
     z-index: 100  // pushing overlay over the dimmer
+    overflow: hidden
     @include media("<desktop")
       height: $w-homepage-header-tablet-image-height
     @include media("<tablet")
       height: $w-homepage-header-mobile-image-height
       align-items: center
       background: $w-homepage-header-mobile-overlay
+
+    &.small
+      @include media('>=desktop')
+        height: $w-homepage-header-small-image-height !important
+
+  .meta
+    position: absolute
+    top: 15px
+    right: 15px
+    color: $white
+    font-weight: bold
+
+    .icon
+      color: $white
+
+    .icon.comment.outline
+      margin-left: 5px
 
   .content
     padding: $w-homepage_header-content-padding
@@ -51,4 +75,13 @@ $w-homepage_header-content-padding: 2em
         font-size: $w-homepage-header-tablet-summary-font-size
       @include media("<tablet")
         font-size: $w-homepage-header-mobile-summary-font-size
+
+    &.small
+      .header
+        font-size: 1.05em
+        line-height: 1.5em
+      .sub.header
+        font-size: 1.0em
+      .summary
+        font-size: 1em
 
