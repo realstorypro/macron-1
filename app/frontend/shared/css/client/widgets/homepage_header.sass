@@ -7,8 +7,13 @@ $w-homepage_header-content-padding: 2em
 .homepage.header.widget
   margin: $w-homepage_header-margin
 
+  .column.margined
+    @include media("<tablet")
+      margin-bottom: 2em
+
   .item
     position: relative
+
 
     .image
       background-size: cover
@@ -98,6 +103,10 @@ $w-homepage_header-content-padding: 2em
       @include media("<tablet")
         font-size: $w-homepage-header-mobile-header-font-size
 
+      &.marginless
+        @include media('>=desktop')
+          margin-bottom: 0
+
       .sub.header
         font-weight: 500
 
@@ -109,37 +118,42 @@ $w-homepage_header-content-padding: 2em
       @include media("<tablet")
         font-size: $w-homepage-header-mobile-summary-font-size
 
-    &.tiny
-      .header
-        font-size: 1em
-        line-height: 1.5em
-      .sub.header
-        font-size: 1.0em
-      .summary
-        font-size: 1em
+      &.shortened
+        @include media('>=desktop')
+          display: none
 
-    &.small
-      .header
-        font-size: 1.05em
-        line-height: 1.5em
-      .sub.header
-        font-size: 1.0em
-      .summary
-        font-size: 1em
+    @include media('>=desktop')
+      &.tiny
+        .header
+          font-size: 1em
+          line-height: 1.5em
+        .sub.header
+          font-size: 1.0em
+        .summary
+          font-size: 1em
 
-    &.short
-      .header
-        font-size: 1.2em
-        line-height: 1.5em
-      .sub.header
-        font-size: 1.0em
-      .summary
-        font-size: 1em
+      &.small
+        .header
+          font-size: 1.05em
+          line-height: 1.5em
+        .sub.header
+          font-size: 1.0em
+        .summary
+          font-size: 1em
 
-    &.tall
-      .header
-        font-size: 2.0em
-      .sub.header
-        font-size: 1em
-      .summary
+      &.short
+        .header
+          font-size: 1.2em
+          line-height: 1.5em
+        .sub.header
+          font-size: 1.0em
+        .summary
+          font-size: 1em
+
+      &.tall
+        .header
+          font-size: 2.0em
+        .sub.header
+          font-size: 1em
+        .summary
 

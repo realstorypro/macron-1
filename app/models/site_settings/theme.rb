@@ -30,7 +30,7 @@ module SiteSettings
     # TODO: populate defaults & requirements
     def self.instance
       Theme.first_or_create! do |settings|
-        settings.homepage_featured_items = 2
+        settings.homepage_featured_items = 'auto'
         settings.homepage_discussion_items = 6
         settings.menu_position = "left"
         settings.menu_color = "black"

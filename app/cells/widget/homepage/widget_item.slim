@@ -8,8 +8,8 @@
         = icon 'comment outline'
         = @item.comments.count
       = content @size
-        = h4
+        = h4 class: "#{'marginless' unless @description}"
           = header "sub #{@item.category.color.name}"
             = @item.category.name
           = @item.name
-        = summary text: @model[0].description if @description
+        = summary text: @model[0].description, class: "#{'shortened' unless @description}"

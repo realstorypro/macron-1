@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Widget
   class HomepageCell < Cell::ViewModel
     include ApplicationHelper
@@ -7,7 +9,7 @@ module Widget
 
     def show
       size = item_count
-      if item_count == 'auto'
+      if item_count == "auto" || item_count.nil?
         size = @model.count
       else
         size = @model.count if @model.count < item_count.to_i
@@ -15,7 +17,7 @@ module Widget
       render "#{size}_items"
     end
 
-    def widget_item(model, size='', description=true, image='card')
+    def widget_item(model, size = "", description = true, image = "card")
       @item = model
       @size = size
       @description = description
@@ -25,17 +27,17 @@ module Widget
     end
 
     def show_icon(item)
-      if item.type == 'Article'
+      if item.type == "Article"
         raw("#{icon('newspaper outline')}")
-      elsif item.type == 'Video'
+      elsif item.type == "Video"
         raw("#{icon('video')}")
       end
     end
 
     def show_link(item)
-      if item.type == 'Article'
+      if item.type == "Article"
         url_helpers.article_details_path(item.category.slug, item.slug)
-      elsif item.type == 'Video'
+      elsif item.type == "Video"
         url_helpers.video_details_path(item.category.slug, item.slug)
       end
     end

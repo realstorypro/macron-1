@@ -10,18 +10,21 @@ class PageController < ApplicationController
     # we only want to enforce homepage_featured items if something was selected
     # otherwise the limit is set manually
 
-    if featured_limit == 'auto'
+    if featured_limit == "auto"
       @featured = Entry.joins(category: :color)
                       .where(type: %w(Article Video))
-                      .includes(category: :color).order("published_date desc").limit(5)
+                      .includes(category: :color).order("published_date desc")
+                      .limit(5)
     else
       @featured = Entry.joins(category: :color)
                       .where(type: %w(Article Video))
-                      .includes(category: :color).order("published_date desc").limit(ss(:homepage_featured_items))
+                      .includes(category: :color).order("published_date desc")
+                      .limit(ss(:homepage_featured_items))
     end
 
     @discussions = Discussion.joins(category: :color)
-                                      .includes(category: :color).order("published_date desc").limit(ss(:homepage_discussion_items))
+                                      .includes(category: :color).order("published_date desc")
+                       .limit(ss(:homepage_discussion_items))
   end
 
   def sitemap
