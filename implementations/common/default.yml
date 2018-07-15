@@ -995,9 +995,12 @@ views:
         label: 'Featured Items'
         type: 'fixed_dropdown'
         options:
+          - auto
           - 1
           - 2
           - 3
+          - 4
+          - 5
       homepage_discussion_items:
         label: 'Discussion Items'
         type: 'fixed_dropdown'

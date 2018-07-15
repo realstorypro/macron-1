@@ -1,5 +1,6 @@
 = item "link #{@size}"
-  = preload_image @item.card_image
+  = preload_image @item.card_image if @image == 'card'
+  = preload_image @item.landscape_image if @image == 'landscape'
   = link_to show_link(@item)
     = overlay @size
       = meta
@@ -8,7 +9,7 @@
         = @item.comments.count
       = content @size
         = h4
-          = header "sub dividing #{@item.category.color.name}"
+          = header "sub #{@item.category.color.name}"
             = @item.category.name
           = @item.name
-        = summary text: @model[0].description unless @size == 'small'
+        = summary text: @model[0].description if @description

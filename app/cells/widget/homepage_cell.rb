@@ -7,13 +7,20 @@ module Widget
 
     def show
       size = item_count
-      size = @model.count if @model.count < item_count.to_i
+      if item_count == 'auto'
+        size = @model.count
+      else
+        size = @model.count if @model.count < item_count.to_i
+      end
       render "#{size}_items"
     end
 
-    def widget_item(model, size='')
+    def widget_item(model, size='', description=true, image='card')
       @item = model
       @size = size
+      @description = description
+      @image = image
+
       render :widget_item
     end
 
