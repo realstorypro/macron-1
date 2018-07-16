@@ -3,10 +3,7 @@
 require_dependency "application_controller"
 
 module Admin::SiteSettings
-  class GeneralController < MetaController
-    include AdminAccess
-    layout "layouts/admin"
-
+  class GeneralController < SharedSettingsController
     before_action :set_breadcrumb
 
     def show
