@@ -11,4 +11,3 @@ FactoryBot.define do
     copyrights { Faker::WorldOfWarcraft.quote }
   end
 end
-

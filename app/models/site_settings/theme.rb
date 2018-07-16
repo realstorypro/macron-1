@@ -31,12 +31,12 @@ module SiteSettings
     # TODO: populate defaults & requirements
     def self.instance
       Theme.first_or_create! do |settings|
-        settings.content_icons = 'show'
-        settings.comment_count = 'hide'
+        settings.content_icons = "show"
+        settings.comment_count = "hide"
 
-        settings.homepage_featured_items = 'auto'
+        settings.homepage_featured_items = "auto"
         settings.homepage_discussion_items = 6
-        settings.homepage_menu_color = 'black'
+        settings.homepage_menu_color = "black"
         settings.homepage_content_top_padding = 1
 
         settings.menu_color = "black"
