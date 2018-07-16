@@ -9,9 +9,9 @@ module Admin
     def index
       super
       add_to_actions(
-        text: "Add new #{component_name.downcase.singularize}",
+        text: "Add New",
         class: "primary enhanced",
-        icon: "file",
+        icon: "plus circle",
         url: send(new_path("admin")),
         permission: policy(@entries).new?,
         data: { widget: "crud", action: "new" }
@@ -20,9 +20,9 @@ module Admin
 
     def show
       add_to_actions(
-        text: "Delete #{component_name.downcase.singularize}",
+        text: "Delete",
         class: "negative basic enhanced",
-        icon: "remove",
+        icon: "eraser",
         url: send(delete_path("admin"), @entry),
         permission: policy(@entry).destroy?,
         data: {
@@ -32,14 +32,14 @@ module Admin
       )
 
       add_to_actions(
-        text: "Edit #{component_name.downcase.singularize}",
+        text: "Edit",
         class: "primary enhanced",
         icon: "edit",
         url: send(edit_path("admin"), @entry),
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
       )
-      semantic_breadcrumb @entry.name.truncate(60), "#"
+      semantic_breadcrumb @entry.name.truncate(30), "#"
     end
 
     def set_breadcrumb
