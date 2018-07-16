@@ -1,0 +1,17 @@
+= item "link #{@size}"
+  = preload_image @item.card_image if @image == 'card'
+  = preload_image @item.landscape_image if @image == 'landscape'
+  = link_to show_link(@item)
+    = overlay @size
+      = meta
+        - if content_icons == 'show'
+          = show_icon(@item)
+        - if comment_count == 'show'
+          = icon 'comment outline'
+          = @item.comments.count
+      = content @size
+        = h4 class: "#{'marginless' unless @description}"
+          = header "sub #{@item.category.color.name}"
+            = @item.category.name
+          = @item.name
+        = summary text: @model[0].description, class: "#{'shortened' unless @description}"

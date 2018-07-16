@@ -5,11 +5,26 @@ class PageController < ApplicationController
   before_action :set_meta_data, except: %i[sitemap home]
 
   def home
-    @featured = Entry.joins(category: :color)
-                                .where(type: %w(Article Video))
-                                .includes(category: :color).order("published_date desc").limit(2)
+    featured_limit = ss(:homepage_featured_items)
+
+    # we only want to enforce homepage_featured items if something was selected
+    # otherwise the limit is set manually
+
+    if featured_limit == "auto"
+      @featured = Entry.joins(category: :color)
+                      .where(type: %w(Article Video))
+                      .includes(category: :color).order("published_date desc")
+                      .limit(5)
+    else
+      @featured = Entry.joins(category: :color)
+                      .where(type: %w(Article Video))
+                      .includes(category: :color).order("published_date desc")
+                      .limit(ss(:homepage_featured_items))
+    end
+
     @discussions = Discussion.joins(category: :color)
-                                      .includes(category: :color).order("published_date desc").limit(6)
+                                      .includes(category: :color).order("published_date desc")
+                       .limit(ss(:homepage_discussion_items))
   end
 
   def sitemap
