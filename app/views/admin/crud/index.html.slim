@@ -1,3 +1,7 @@
 - if policy(@entries).show?
+  = segment 'basic'
+    = fragment 'help'
+      .index.lead
+        = component_description
   = segment class: 'details basic', id: 'details'
     == Admin::ListCell.(nil, records: @entries, fields: component_list_fields, controller_namespace: self.controller.class.parent.to_s)

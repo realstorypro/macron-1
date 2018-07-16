@@ -59,10 +59,12 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: "dashboard#index"
     resources :dashboard, only: :index
+
     resources :users, component: "users" do
       get "ban", on: :member
       get "unban", on: :member
     end
+
     resources :articles, component: "articles"
     resources :discussions, component: "discussions"
     resources :videos, component: "videos"

@@ -11,6 +11,15 @@ module Admin::SiteSettings
 
     def show
       add_to_actions(
+        text: "Show Help",
+        class: "",
+        icon: "question circle",
+        url: edit_admin_settings_branding_path,
+        permission: policy(@entry).edit?,
+        data: { widget: "crud", action: "edit" }
+      )
+
+      add_to_actions(
         text: "Edit",
         class: "primary",
         icon: "edit",
@@ -18,6 +27,8 @@ module Admin::SiteSettings
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
       )
+
+      render 'admin/crud/show_with_description'
     end
 
     private

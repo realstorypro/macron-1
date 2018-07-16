@@ -17,6 +17,19 @@ module CrudHelper
     settings "views.#{component}.show", fatal_exception: true
   end
 
+  def component_description(component = params[:component])
+    settings "components.#{component}.description", fatal_exception: false
+  end
+
+  def component_help_link(component = params[:component])
+    link = settings "components.#{component}.help_link", fatal_exception: false
+    if link
+      link_to "Learn More &raquo;".html_safe, link, target: "_blank"
+    else
+      nil
+    end
+  end
+
   def action_name(action = params[:action])
     action.capitalize
   end

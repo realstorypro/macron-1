@@ -276,8 +276,15 @@ components:
     enabled: true
 
   site_settings_branding:
-    name: 'Branding Settings'
-    description: 'Provides general settings capabilities'
+    name: 'Branding'
+    description: >
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                  <ul class='ui list'>
+                    <li> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </li>
+                    <li> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </li>
+                  </ul>
+                  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    help_link: 'https://support.idealogic.io/branding'
     klass: 'SiteSettings::Branding'
     path: 'admin_settings_branding'
     enabled: true
@@ -957,6 +964,9 @@ views:
 
   site_settings_branding:
     new:
+      branding_header:
+        type: 'header'
+        text: 'Logos'
       icon:
         label: 'Icon'
         type: 'image'
@@ -967,12 +977,18 @@ views:
       inverted_logo:
         label: 'Inverted Logo'
         type: 'image'
+      background_header:
+        type: 'header'
+        text: 'Backgrounds'
       auth_background:
-        label: 'Authentication Background'
+        label: 'Authentication'
         type: 'image'
         size: ['2560','1600']
 
     show:
+      branding_header:
+        type: 'header'
+        text: 'Logos'
       icon:
         label: 'Icon'
         type: 'image_tiny'
@@ -982,8 +998,11 @@ views:
       inverted_logo:
         label: 'Inverted Logo'
         type: 'image_small'
+      background_header:
+        type: 'header'
+        text: 'Backgrounds'
       auth_background:
-        label: 'Authentication Background'
+        label: 'Authentication'
         type: 'image_medium'
 
   site_settings_theme:
@@ -1085,6 +1104,16 @@ views:
         type: 'string'
         hint: 'Title of the Sign In Box'
     show:
+
+      global_header:
+        type: 'header'
+        text: 'Global Settings'
+      content_icons:
+        label: 'Content Icons'
+        type: 'string'
+      comment_count:
+        label: 'Comment Count'
+        type: 'string'
       homepage_header:
         type: 'header'
         text: 'Homepage'
