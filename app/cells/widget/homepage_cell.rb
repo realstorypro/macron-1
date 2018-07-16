@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+include Rails.application.routes.mounted_helpers
+
 module Widget
   class HomepageCell < Cell::ViewModel
     include ApplicationHelper
@@ -45,6 +47,16 @@ module Widget
     # shortcut for accessing position
     def item_count
       options[:item_count]
+    end
+
+    # shortcut for content icons
+    def content_icons
+      options[:content_icons]
+    end
+
+    # shortcut for comment count
+    def comment_count
+      options[:comment_count]
     end
   end
 end

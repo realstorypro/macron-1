@@ -1,5 +1,5 @@
 = component class: "homepage", style: "padding-top: #{ss(:homepage_content_top_padding)}em;"
-  ==  Widget::HomepageCell.(@featured, item_count: ss(:homepage_featured_items))
+  ==  Widget::HomepageCell.(@featured, item_count: ss(:homepage_featured_items), comment_count: ss(:comment_count), content_icons: ss(:content_icons))
   = container
     = grid
       = column computer: 16, class: 'computer only tablet only'

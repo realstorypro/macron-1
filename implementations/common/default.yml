@@ -988,6 +988,22 @@ views:
 
   site_settings_theme:
     new:
+      global_header:
+        type: 'header'
+        text: 'Global Settings'
+      content_icons:
+        label: 'Content Icons'
+        type: 'fixed_dropdown'
+        options:
+          - show
+          - hide
+      comment_count:
+        label: 'Comment Count'
+        type: 'fixed_dropdown'
+        options:
+          - show
+          - hide
+
       homepage_header:
         type: 'header'
         text: 'Homepage'
@@ -1001,6 +1017,7 @@ views:
           - 3
           - 4
           - 5
+
       homepage_discussion_items:
         label: 'Discussion Items'
         type: 'fixed_dropdown'

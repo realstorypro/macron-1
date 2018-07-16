@@ -4,9 +4,11 @@
   = link_to show_link(@item)
     = overlay @size
       = meta
-        = show_icon(@item)
-        = icon 'comment outline'
-        = @item.comments.count
+        - if content_icons == 'show'
+          = show_icon(@item)
+        - if comment_count == 'show'
+          = icon 'comment outline'
+          = @item.comments.count
       = content @size
         = h4 class: "#{'marginless' unless @description}"
           = header "sub #{@item.category.color.name}"
