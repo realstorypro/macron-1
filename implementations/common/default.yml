@@ -942,6 +942,9 @@ views:
 
   site_settings_general:
     new:
+      general_header:
+        type: 'header'
+        text: 'General Settings'
       name:
         label: 'Name'
         type: 'string'
@@ -954,6 +957,9 @@ views:
         type: 'string'
         hint: 'Must start with https://'
     show:
+      general_header:
+        type: 'header'
+        text: 'General Settings'
       name:
         label: 'Hub Name'
         type: 'string'
@@ -1010,15 +1016,18 @@ views:
   site_settings_theme:
     new:
       global_header:
+        advanced: true
         type: 'header'
         text: 'Global Settings'
       content_icons:
+        advanced: true
         label: 'Content Icons'
         type: 'fixed_dropdown'
         options:
           - show
           - hide
       comment_count:
+        advanced: true
         label: 'Comment Count'
         type: 'fixed_dropdown'
         options:
@@ -1029,8 +1038,8 @@ views:
         type: 'header'
         text: 'Homepage'
       homepage_featured_items:
-        label: 'Featured Items'
         advanced: true
+        label: 'Featured Items'
         type: 'fixed_dropdown'
         options:
           - auto
@@ -1041,6 +1050,7 @@ views:
           - 5
 
       homepage_discussion_items:
+        advanced: true
         label: 'Discussion Items'
         type: 'fixed_dropdown'
         options:
@@ -1050,6 +1060,7 @@ views:
         label: 'Menu Color'
         type: 'color'
       homepage_content_top_padding:
+        advanced: true
         label: 'Content Top Padding'
         type: 'integer'
         hint: '(In EM)'
@@ -1061,17 +1072,20 @@ views:
         label: 'Color'
         type: 'color'
       menu_position:
+        advanced: true
         label: 'Menu Position'
         type: 'fixed_dropdown'
         options:
           - 'left'
           - 'right'
       desktop_logo_size:
+        advanced: true
         label: 'Desktop Logo Width'
         type: 'string'
         hint: '(in pixels)'
         maxlength: '3'
       mobile_logo_size:
+        advanced: true
         label: 'Mobile Logo Width'
         type: 'string'
         hint: '(in pixels)'
@@ -1092,61 +1106,73 @@ views:
         type: 'string'
 
       auth_header:
+        advanced: true
         type: 'header'
         text: 'Authentication'
       sign_up_title:
+        advanced: true
         label: '"Sign up" Title'
         type: 'string'
         hint: 'Title of the Sign Up Box'
       sign_up_subtitle:
+        advanced: true
         label: '"Sign Up" sub title'
         type: 'string'
         hint: 'Sub Title of the Sign Up Box'
       sign_in_title:
+        advanced: true
         label: '"Sign In" title'
         type: 'string'
         hint: 'Title of the Sign In Box'
-    show:
 
+    show:
       global_header:
+        advanced: true
         type: 'header'
         text: 'Global Settings'
       content_icons:
+        advanced: true
         label: 'Content Icons'
         type: 'string'
       comment_count:
+        advanced: true
         label: 'Comment Count'
         type: 'string'
       homepage_header:
         type: 'header'
         text: 'Homepage'
+      homepage_menu_color:
+        label: 'Menu Color'
+        type: 'plain_color'
       homepage_featured_items:
         advanced: true
         label: 'Featured Items'
         type: 'string'
       homepage_discussion_items:
+        advanced: true
         label: 'Discussion Items'
         type: 'string'
-      homepage_menu_color:
-        label: 'Menu Color'
-        type: 'plain_color'
       homepage_content_top_padding:
+        advanced: true
         label: 'Content Top Padding'
         type: 'string'
 
-      header_header:
+      navigation_header:
         type: 'header'
-        text: 'Header'
+        text: 'Navigation'
       menu_color:
-        label: 'Color'
+        label: 'Menu Color'
         type: 'plain_color'
       menu_position:
+        advanced: true
         label: 'Menu Position'
         type: 'string'
       desktop_logo_size:
+        advanced: true
         label: 'Desktop Logo Width'
         type: 'string'
       mobile_logo_size:
+        advanced: true
         label: 'Mobile Logo Width'
         type: 'string'
 
@@ -1164,15 +1190,19 @@ views:
         type: 'string'
 
       auth_header:
+        advanced: true
         type: 'header'
         text: 'Authentication'
       sign_up_title:
+        advanced: true
         label: 'Sign Up Title'
         type: 'string'
       sign_up_subtitle:
+        advanced: true
         label: 'Sign Sub Title'
         type: 'string'
       sign_in_title:
+        advanced: true
         label: 'Sign In Title'
         type: 'string'
   site_settings_contact:
