@@ -63,6 +63,10 @@ Rails.application.routes.draw do
     resources :users, component: "users" do
       get "ban", on: :member
       get "unban", on: :member
+      get "enable_help", on: :member
+      get "disable_help", on: :member
+      get "enable_advanced", on: :member
+      get "disable_advanced", on: :member
     end
 
     resources :articles, component: "articles"

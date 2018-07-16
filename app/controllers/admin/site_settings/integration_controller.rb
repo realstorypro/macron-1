@@ -18,6 +18,8 @@ module Admin::SiteSettings
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
       )
+
+      render 'admin/crud/show_with_description'
     end
 
     private

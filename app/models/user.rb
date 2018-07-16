@@ -102,6 +102,26 @@ class User < ApplicationRecord
     assign_default_role!
   end
 
+  def enable_help!
+    self.help = true
+    save
+  end
+
+  def disable_help!
+    self.help = false
+    save
+  end
+
+  def enable_advanced!
+    self.advanced = true
+    save
+  end
+
+  def disable_advanced!
+    self.advanced = false
+    save
+  end
+
   # TODO: change :all to :manage
   # checks if the user has an admin priveledge on a certain module
   # used for the front end, not used for validation

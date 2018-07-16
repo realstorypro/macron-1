@@ -1,0 +1,10 @@
+- if current_user.help
+  = fragment 'help'
+    = message
+      = header ui: :off, class: 'icon'
+        = icon 'lightbulb outline'
+        = "#{component_name} Help"
+      = component_description.html_safe
+      - if component_help_link
+        .learn.more
+          = component_help_link

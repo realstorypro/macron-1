@@ -312,7 +312,9 @@ components:
 
   site_settings:
     name: 'Settings'
-    description: 'Provides settings capabilities'
+    description: >
+                  Provides settings capabilities like a boss.
+                  Click advanced mode to ball.
     klass: 'Setting'
     path: 'settings'
     enabled: true
