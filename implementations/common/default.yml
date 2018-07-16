@@ -1030,6 +1030,7 @@ views:
         text: 'Homepage'
       homepage_featured_items:
         label: 'Featured Items'
+        advanced: true
         type: 'fixed_dropdown'
         options:
           - auto
@@ -1120,6 +1121,7 @@ views:
         type: 'header'
         text: 'Homepage'
       homepage_featured_items:
+        advanced: true
         label: 'Featured Items'
         type: 'string'
       homepage_discussion_items:
