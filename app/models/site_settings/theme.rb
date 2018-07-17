@@ -9,6 +9,7 @@ module SiteSettings
 
     content_attr :content_icons, :string
     content_attr :comment_count, :string
+    content_attr :overlay_background, :string
 
     content_attr :homepage_featured_items, :integer
     content_attr :homepage_discussion_items, :integer
@@ -33,6 +34,7 @@ module SiteSettings
       Theme.first_or_create! do |settings|
         settings.content_icons = "show"
         settings.comment_count = "hide"
+        settings.overlay_background = "auto"
 
         settings.homepage_featured_items = "auto"
         settings.homepage_discussion_items = 6
