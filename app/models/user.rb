@@ -37,6 +37,9 @@ class User < ApplicationRecord
   validate :validate_username
   validates_presence_of :username, :slug, :email
 
+  # Adding Alias
+  alias_attribute :name, :username
+
   # Temproarley Disabling Until 2FA is Enabled
 
   # validates_presence_of :country, :phone_number, on: :update

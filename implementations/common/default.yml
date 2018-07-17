@@ -411,8 +411,8 @@ components:
 
 views:
   # a basic view shared by all components
-  basic:
-    list:
+  defaults:
+    basiclist:
       name:
         label: 'Short Title'
         type: 'string'
@@ -456,6 +456,16 @@ views:
         label: 'Role'
         type: 'association_dropdown'
     list:
+      email:
+        label: 'Email'
+        type: 'string'
+      created_at:
+        label: 'Joined'
+        type: 'date'
+      roles:
+        label: 'Role'
+        type: 'unlinked_list'
+    basiclist:
       email:
         label: 'Email'
         type: 'string'

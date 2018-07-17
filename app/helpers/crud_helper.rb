@@ -13,6 +13,12 @@ module CrudHelper
     settings "views.#{component}.list", fatal_exception: true
   end
 
+  def component_basic_list_fields(component = params[:component])
+    basic_list = settings ("views.#{component}.basiclist")
+    basic_list = settings ("views.defaults.basiclist") unless basic_list
+    basic_list
+  end
+
   def component_show_fields(component = params[:component])
     settings "views.#{component}.show", fatal_exception: true
   end

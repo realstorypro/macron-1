@@ -3,7 +3,7 @@
     = grid "#{'divided' if current_user.help}"
       = column size: (current_user.help ? 10 : 16)
         - if current_user.help?
-          == Admin::ListCell.(nil, records: @entries, fields: component_list_fields(:basic), controller_namespace: self.controller.class.parent.to_s)
+          == Admin::ListCell.(nil, records: @entries, fields: component_basic_list_fields, controller_namespace: self.controller.class.parent.to_s)
         - else
           == Admin::ListCell.(nil, records: @entries, fields: component_list_fields, controller_namespace: self.controller.class.parent.to_s)
       - if current_user.help
