@@ -8,8 +8,8 @@
     background-size: cover
     background: no-repeat center center
 
-    // TODO: Turn this into a configurable variable
-    background-attachment: fixed
+    &.fixed
+      background-attachment: fixed
 
     @include media("<tablet")
       background-attachment: fixed

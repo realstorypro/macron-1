@@ -1,6 +1,6 @@
 = component 'video details'
   = fragment 'header fullscreen'
-    == Vue::CoverCell.(nil, image: @entry.landscape_image)
+    == Vue::CoverCell.(nil, overlay_background: ss(:overlay_background), image: @entry.landscape_image)
     = container
       = grid
         = row

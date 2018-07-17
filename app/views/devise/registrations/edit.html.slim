@@ -1,6 +1,6 @@
 = component 'authentication edit account'
   = fragment 'header fullscreen'
-    == Vue::CoverCell.(nil, image: ss(:auth_background))
+    == Vue::CoverCell.(nil, overlay_background: ss(:overlay_background), image: ss(:auth_background))
     = segment 'auth box'
       = segment 'basic'
         = header tag: :h5, class: 'dividing', text: 'Account Settings'
