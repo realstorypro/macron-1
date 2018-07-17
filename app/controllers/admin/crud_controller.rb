@@ -19,7 +19,7 @@ module Admin
         )
       end
       add_to_actions(
-        text: "Add New",
+        text: "New",
         class: "primary enhanced",
         icon: "plus circle",
         url: send(new_path("admin")),
