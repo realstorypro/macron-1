@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/crud_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/crud_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/shared_settings_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/shared_settings_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aquarius.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aquarius.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.rubocop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/js/widgets/clicker.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/js/widgets/clicker.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/color.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/color.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.last_run.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.last_run.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/advertisements.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/advertisements.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/routing/meta_routing_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/routing/meta_routing_spec.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -120,11 +129,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shared_settings_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shared_settings_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/shared_settings_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="385">
               <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="color.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/color.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="meta_routing_spec.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/routing/meta_routing_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -140,9 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>description</find>
-      <find>descri</find>
-      <find>hidden</find>
       <find>Short hub</find>
       <find>colors</find>
       <find>Branding</find>
@@ -170,6 +212,9 @@
       <find>Show Help</find>
       <find>Add New</find>
       <find>Show Advanced</find>
+      <find>config</find>
+      <find>rubocop-railsjk</find>
+      <find>Faker::Name.title</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -181,8 +226,9 @@
       <replace>short</replace>
       <replace>show</replace>
       <replace>.short.landscape</replace>
-      <replace>clicker</replace>
       <replace>Help</replace>
+      <replace>clicker</replace>
+      <replace>Faker::Job.title</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/spec</dir>
@@ -208,8 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/cells/widget/homepage/small_item.slim" />
-        <option value="$PROJECT_DIR$/app/cells/widget/homepage/2_items.slim" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/1_items.slim" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/3_items.slim" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/4_items.slim" />
@@ -226,7 +270,6 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/css/admin/init.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/admin/fragments/details.sass" />
         <option value="$PROJECT_DIR$/app/views/layouts/admin.html.slim" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/policies/user_policy.rb" />
         <option value="$PROJECT_DIR$/app/cells/admin/base_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/admin/details_cell.rb" />
@@ -248,17 +291,20 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/js/widgets/help.coffee" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/admin_app.coffee" />
         <option value="$PROJECT_DIR$/app/views/admin/crud/index.html.slim" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/js/widgets/clicker.coffee" />
         <option value="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/meta/_form.html.slim" />
         <option value="$PROJECT_DIR$/implementations/common/default.yml" />
         <option value="$PROJECT_DIR$/app/controllers/meta_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/color.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/site_settings/settings/all.html.slim" />
         <option value="$PROJECT_DIR$/app/views/partials/_side_help.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/admin/crud_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/shared_settings_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/models/color.rb" />
+        <option value="$PROJECT_DIR$/spec/routing/meta_routing_spec.rb" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/js/widgets/clicker.coffee" />
       </list>
     </option>
   </component>
@@ -507,7 +553,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229494000" />
+    <option name="totallyTimeSpent" value="230118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -595,27 +641,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/policies/user_policy.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/settings/edit.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -856,13 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/color.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/meta/_form.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -898,13 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/widgets/clicker.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/site_settings/settings/all.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -937,6 +948,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/color.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/widgets/clicker.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/routing/meta_routing_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>

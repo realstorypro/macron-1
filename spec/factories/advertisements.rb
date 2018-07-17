@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :advertisement do
     name { Faker::Name.name }
     url { Faker::Internet.url }
-    title { Faker::Name.title }
+    title { Faker::Job.title }
     text { Faker::Name.name }
     image { Faker::Avatar.image }
     association :category, factory: :category

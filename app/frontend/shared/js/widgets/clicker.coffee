@@ -30,6 +30,7 @@ class Clicker
         vent.channel().trigger "render",
           action: "refresh"
           html: data
+        Turbolinks.clearCache()
 
       error: (jqXHR, textStatus, errorThrown) ->
         console.log "call error", jqXHR, textStatus

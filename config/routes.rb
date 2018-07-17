@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-
   # Pulling in Root from Configuration
   root to: Settings.defaults.root_route.to_s
 
