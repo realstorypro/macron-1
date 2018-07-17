@@ -410,6 +410,16 @@ components:
 
 
 views:
+  # a basic view shared by all components
+  basic:
+    list:
+      name:
+        label: 'Short Title'
+        type: 'string'
+      published_date:
+        label: 'Published'
+        type: 'string'
+
   profile:
     new:
       avatar:

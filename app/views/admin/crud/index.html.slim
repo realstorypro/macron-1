@@ -1,7 +1,11 @@
 - if policy(@entries).show?
-  = segment 'basic'
-    = fragment 'help'
-      .index.lead
-        = component_description
-  = segment class: 'details basic', id: 'details'
-    == Admin::ListCell.(nil, records: @entries, fields: component_list_fields, controller_namespace: self.controller.class.parent.to_s)
+  = segment class: 'details basic no padding', id: 'details'
+    = grid "#{'divided' if current_user.help}"
+      = column size: (current_user.help ? 10 : 16)
+        - if current_user.help?
+          == Admin::ListCell.(nil, records: @entries, fields: component_list_fields(:basic), controller_namespace: self.controller.class.parent.to_s)
+        - else
+          == Admin::ListCell.(nil, records: @entries, fields: component_list_fields, controller_namespace: self.controller.class.parent.to_s)
+      - if current_user.help
+        = column size: 6
+          = render 'partials/side_help'

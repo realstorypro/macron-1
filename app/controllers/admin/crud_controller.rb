@@ -8,6 +8,15 @@ module Admin
 
     def index
       super
+      unless current_user.help
+        add_to_actions(
+            text: "Show Help",
+            class: "",
+            icon: "question circle",
+            url: enable_help_admin_user_path(current_user.id),
+            permission: policy(current_user).enable_help?
+        )
+      end
       add_to_actions(
         text: "Add New",
         class: "primary enhanced",
