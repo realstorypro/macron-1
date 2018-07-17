@@ -26,6 +26,8 @@ class ApplicationController < ActionController::Base
   end
 
   Warden::Manager.after_authentication do |user, auth, opts|
+    byebug if $redis.get("site_settings").nil?
+
     site_settings = JSON.parse($redis.get("site_settings"))
 
     unless site_settings["payload"]["segment_server_key"].nil?
