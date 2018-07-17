@@ -314,7 +314,7 @@ components:
     name: 'Settings'
     description: >
                   Provides settings capabilities like a boss.
-                  Click advanced mode to ball.
+                  <strong>Click advanced mode to ball.</strong>
     klass: 'Setting'
     path: 'settings'
     enabled: true
