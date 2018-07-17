@@ -10,7 +10,7 @@ module Admin
       super
       unless current_user.help
         add_to_actions(
-          text: "Show Help",
+          text: "Help",
           class: "",
           icon: "question circle",
           url: enable_help_admin_user_path(current_user.id),
@@ -31,7 +31,7 @@ module Admin
     def show
       unless current_user.help
         add_to_actions(
-          text: "Show Help",
+          text: "Help",
           class: "",
           icon: "question circle",
           url: enable_help_admin_user_path(current_user.id),

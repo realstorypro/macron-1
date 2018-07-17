@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/meta_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/meta_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/color.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/color.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/crud_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/crud_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/shared_settings_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/shared_settings_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -103,11 +103,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_side_help.html.slim" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_side_help.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/_side_help.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings_controller.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -123,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$w-homepage_header-content-padding</find>
       <find>280</find>
       <find>$w-homepage-header-mobile-image-height</find>
       <find>description</find>
@@ -153,6 +161,7 @@
       <find>scope</find>
       <find>scope:</find>
       <find>dropdown</find>
+      <find>Show Help</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -165,6 +174,7 @@
       <replace>show</replace>
       <replace>.short.landscape</replace>
       <replace>clicker</replace>
+      <replace>Help</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/spec</dir>
@@ -229,7 +239,6 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/integration_controller.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/widgets/help.coffee" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/admin_app.coffee" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/shared_settings_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/crud/index.html.slim" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/widgets/clicker.coffee" />
@@ -241,6 +250,7 @@
         <option value="$PROJECT_DIR$/app/models/color.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/site_settings/settings/all.html.slim" />
         <option value="$PROJECT_DIR$/app/views/partials/_side_help.html.slim" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb" />
       </list>
     </option>
   </component>
@@ -489,7 +499,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229130000" />
+    <option name="totallyTimeSpent" value="229235000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -894,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/widgets/clicker.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -919,6 +922,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
