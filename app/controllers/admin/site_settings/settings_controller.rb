@@ -9,21 +9,14 @@ module Admin::SiteSettings
     before_action :set_breadcrumb
 
     def all
-      if current_user.help
-        add_to_actions(
-          text: "Hide Help",
-          class: "",
-          icon: "question circle",
-          url: disable_help_admin_user_path(current_user.id),
-          permission: policy(current_user).disable_help?
-        )
-      else
+      unless current_user.help
         add_to_actions(
           text: "Show Help",
           class: "",
           icon: "question circle",
           url: enable_help_admin_user_path(current_user.id),
-          permission: policy(current_user).enable_help?
+          permission: policy(current_user).enable_help?,
+          data: { widget: "help", action: "show" }
         )
       end
       if current_user.advanced

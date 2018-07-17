@@ -5,7 +5,7 @@
         = h5
           | Help
       .right
-        = link_to disable_help_admin_user_path(current_user.id)
+        = link_to disable_help_admin_user_path(current_user.id), class: 'circular basic tiny icon button ui', data: { widget: "help", action: "hide"}
           = icon 'close'
     = component_description.html_safe
     - if component_help_link
