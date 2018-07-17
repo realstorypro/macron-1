@@ -38,57 +38,57 @@ menu:
       - name: Dashboard
         component: dashboard
         path: admin_dashboard_index
-        icon: right angle
+        icon: dashboard
         enabled: true
 
       - name: Users
         component: users
         path: admin_users
-        icon: right angle
+        icon: users
         enabled: true
 
       - name: Articles
         component: articles
         path: admin_articles
-        icon: right angle
+        icon: book
         enabled: true
 
       - name: Videos
         component: videos
         path: admin_videos
-        icon: right angle
+        icon: video
         enabled: true
 
       - name: Discussions
         component: discussions
         path: admin_discussions
-        icon: right angle
+        icon: comments outline
         enabled: true
 
       - name: Advertisements
         component: advertisements
         path: admin_advertisements
-        icon: right angle
+        icon: audio description
         enabled: true
 
     - section:
       - name: Categories
         component: categories
         path: admin_categories
-        icon: right angle
+        icon: folder
         enabled: true
 
       - name: Tags
         component: tags
         path: admin_tags
-        icon: right angle
+        icon: tags
         enabled: true
 
     - section:
       - name: Reports
         component: reports
         path: '/admin/reports'
-        icon: right angle
+        icon: chart bar
         turbolinks: false
         enabled: true
 
@@ -96,13 +96,13 @@ menu:
       - name: Settings
         component: site_settings
         path: admin_settings_root
-        icon: right angle
+        icon: setting
         enabled: true
 
       - name: Support
         component: support
         path: admin_support_index
-        icon: right angle
+        icon: question circle
         enabled: true
 
 pages:
@@ -276,8 +276,15 @@ components:
     enabled: true
 
   site_settings_branding:
-    name: 'Branding Settings'
-    description: 'Provides general settings capabilities'
+    name: 'Branding'
+    description: >
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                  <ul class='ui list'>
+                    <li> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </li>
+                    <li> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </li>
+                  </ul>
+                  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    help_link: 'https://support.idealogic.io/branding'
     klass: 'SiteSettings::Branding'
     path: 'admin_settings_branding'
     enabled: true
@@ -305,7 +312,9 @@ components:
 
   site_settings:
     name: 'Settings'
-    description: 'Provides settings capabilities'
+    description: >
+                  Provides settings capabilities like a boss.
+                  <strong>Click advanced mode to ball.</strong>
     klass: 'Setting'
     path: 'settings'
     enabled: true
@@ -401,6 +410,16 @@ components:
 
 
 views:
+  # a basic view shared by all components
+  defaults:
+    basiclist:
+      name:
+        label: 'Short Title'
+        type: 'string'
+      published_date:
+        label: 'Published'
+        type: 'string'
+
   profile:
     new:
       avatar:
@@ -437,6 +456,16 @@ views:
         label: 'Role'
         type: 'association_dropdown'
     list:
+      email:
+        label: 'Email'
+        type: 'string'
+      created_at:
+        label: 'Joined'
+        type: 'date'
+      roles:
+        label: 'Role'
+        type: 'unlinked_list'
+    basiclist:
       email:
         label: 'Email'
         type: 'string'
@@ -898,6 +927,10 @@ views:
       name:
         label: 'Name'
         type: 'string'
+    basiclist:
+      name:
+        label: 'Name'
+        type: 'string'
     show:
       name:
         label: 'Name'
@@ -920,6 +953,13 @@ views:
       color:
         label: 'Color'
         type: 'color'
+    basiclist:
+      name:
+        label: 'Name'
+        type: 'string'
+      color:
+        label: 'Color'
+        type: 'color'
     show:
       name:
         label: 'Name'
@@ -933,6 +973,9 @@ views:
 
   site_settings_general:
     new:
+      general_header:
+        type: 'header'
+        text: 'General Settings'
       name:
         label: 'Name'
         type: 'string'
@@ -945,6 +988,9 @@ views:
         type: 'string'
         hint: 'Must start with https://'
     show:
+      general_header:
+        type: 'header'
+        text: 'General Settings'
       name:
         label: 'Hub Name'
         type: 'string'
@@ -957,6 +1003,9 @@ views:
 
   site_settings_branding:
     new:
+      branding_header:
+        type: 'header'
+        text: 'Logos'
       icon:
         label: 'Icon'
         type: 'image'
@@ -967,12 +1016,18 @@ views:
       inverted_logo:
         label: 'Inverted Logo'
         type: 'image'
+      background_header:
+        type: 'header'
+        text: 'Backgrounds'
       auth_background:
-        label: 'Authentication Background'
+        label: 'Authentication'
         type: 'image'
         size: ['2560','1600']
 
     show:
+      branding_header:
+        type: 'header'
+        text: 'Logos'
       icon:
         label: 'Icon'
         type: 'image_tiny'
@@ -982,22 +1037,28 @@ views:
       inverted_logo:
         label: 'Inverted Logo'
         type: 'image_small'
+      background_header:
+        type: 'header'
+        text: 'Backgrounds'
       auth_background:
-        label: 'Authentication Background'
+        label: 'Authentication'
         type: 'image_medium'
 
   site_settings_theme:
     new:
       global_header:
+        advanced: true
         type: 'header'
         text: 'Global Settings'
       content_icons:
+        advanced: true
         label: 'Content Icons'
         type: 'fixed_dropdown'
         options:
           - show
           - hide
       comment_count:
+        advanced: true
         label: 'Comment Count'
         type: 'fixed_dropdown'
         options:
@@ -1008,6 +1069,7 @@ views:
         type: 'header'
         text: 'Homepage'
       homepage_featured_items:
+        advanced: true
         label: 'Featured Items'
         type: 'fixed_dropdown'
         options:
@@ -1019,6 +1081,7 @@ views:
           - 5
 
       homepage_discussion_items:
+        advanced: true
         label: 'Discussion Items'
         type: 'fixed_dropdown'
         options:
@@ -1028,6 +1091,7 @@ views:
         label: 'Menu Color'
         type: 'color'
       homepage_content_top_padding:
+        advanced: true
         label: 'Content Top Padding'
         type: 'integer'
         hint: '(In EM)'
@@ -1039,17 +1103,20 @@ views:
         label: 'Color'
         type: 'color'
       menu_position:
+        advanced: true
         label: 'Menu Position'
         type: 'fixed_dropdown'
         options:
           - 'left'
           - 'right'
       desktop_logo_size:
+        advanced: true
         label: 'Desktop Logo Width'
         type: 'string'
         hint: '(in pixels)'
         maxlength: '3'
       mobile_logo_size:
+        advanced: true
         label: 'Mobile Logo Width'
         type: 'string'
         hint: '(in pixels)'
@@ -1070,50 +1137,73 @@ views:
         type: 'string'
 
       auth_header:
+        advanced: true
         type: 'header'
         text: 'Authentication'
       sign_up_title:
+        advanced: true
         label: '"Sign up" Title'
         type: 'string'
         hint: 'Title of the Sign Up Box'
       sign_up_subtitle:
+        advanced: true
         label: '"Sign Up" sub title'
         type: 'string'
         hint: 'Sub Title of the Sign Up Box'
       sign_in_title:
+        advanced: true
         label: '"Sign In" title'
         type: 'string'
         hint: 'Title of the Sign In Box'
+
     show:
+      global_header:
+        advanced: true
+        type: 'header'
+        text: 'Global Settings'
+      content_icons:
+        advanced: true
+        label: 'Content Icons'
+        type: 'string'
+      comment_count:
+        advanced: true
+        label: 'Comment Count'
+        type: 'string'
       homepage_header:
         type: 'header'
         text: 'Homepage'
-      homepage_featured_items:
-        label: 'Featured Items'
-        type: 'string'
-      homepage_discussion_items:
-        label: 'Discussion Items'
-        type: 'string'
       homepage_menu_color:
         label: 'Menu Color'
         type: 'plain_color'
+      homepage_featured_items:
+        advanced: true
+        label: 'Featured Items'
+        type: 'string'
+      homepage_discussion_items:
+        advanced: true
+        label: 'Discussion Items'
+        type: 'string'
       homepage_content_top_padding:
+        advanced: true
         label: 'Content Top Padding'
         type: 'string'
 
-      header_header:
+      navigation_header:
         type: 'header'
-        text: 'Header'
+        text: 'Navigation'
       menu_color:
-        label: 'Color'
+        label: 'Menu Color'
         type: 'plain_color'
       menu_position:
+        advanced: true
         label: 'Menu Position'
         type: 'string'
       desktop_logo_size:
+        advanced: true
         label: 'Desktop Logo Width'
         type: 'string'
       mobile_logo_size:
+        advanced: true
         label: 'Mobile Logo Width'
         type: 'string'
 
@@ -1131,15 +1221,19 @@ views:
         type: 'string'
 
       auth_header:
+        advanced: true
         type: 'header'
         text: 'Authentication'
       sign_up_title:
+        advanced: true
         label: 'Sign Up Title'
         type: 'string'
       sign_up_subtitle:
+        advanced: true
         label: 'Sign Sub Title'
         type: 'string'
       sign_in_title:
+        advanced: true
         label: 'Sign In Title'
         type: 'string'
   site_settings_contact:

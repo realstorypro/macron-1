@@ -104,14 +104,13 @@ group :development do
 end
 
 group :test do
-
   # code quality
   gem "simplecov", require: false
   gem "codecov", require: false
 
   # rubocop
   gem "rubocop"
-  gem "rubocop-rails"
+  gem "rubocop-rails_config"
 
   # browser testing
   gem "selenium-webdriver"

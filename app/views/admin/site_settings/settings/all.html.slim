@@ -1,36 +1,43 @@
-= list 'relaxed divided'
-  = link_to admin_settings_general_path, class: 'item'
-    = icon 'large middle aligned setting'
-    = content
-      = header ui: :off
-        | GENERAL
-      = description
-        | Name &amp; Description
-  = link_to admin_settings_branding_path, class: 'item'
-    = icon 'large middle aligned eye'
-    = content
-      = header ui: :off
-        | BRANDING
-      = description
-        | Logos and icons
-  = link_to admin_settings_theme_path, class: 'item'
-    = icon 'large middle aligned paint brush'
-    = content
-      = header ui: :off
-        | THEME
-      = description
-        | Blah Blah
-  = link_to admin_settings_contact_path, class: 'item'
-    = icon 'large middle aligned address card'
-    = content
-      = header ui: :off
-        | CONTACT
-      = description
-        | Mailing, web &amp; social media
-  = link_to admin_settings_integration_path, class: 'item'
-    = icon 'large middle aligned plug'
-    = content
-      = header ui: :off
-        | INTEGRATIONS
-      = description
-        | Segment &amp; Webhooks
+= segment class: 'no padding basic', dynamic: :on, id: 'all_settings'
+  = grid "#{'divided' if current_user.help}"
+    = column size: (current_user.help ? 10 : 16)
+      = list 'relaxed divided'
+        = link_to admin_settings_general_path, class: 'item'
+          = icon 'large middle aligned setting'
+          = content
+            = header ui: :off
+              | GENERAL
+            = description
+              | Name &amp; Description
+        = link_to admin_settings_branding_path, class: 'item'
+          = icon 'large middle aligned eye'
+          = content
+            = header ui: :off
+              | BRANDING
+            = description
+              | Logos and icons
+        = link_to admin_settings_theme_path, class: 'item'
+          = icon 'large middle aligned paint brush'
+          = content
+            = header ui: :off
+              | THEME
+            = description
+              | Blah Blah
+        = link_to admin_settings_contact_path, class: 'item'
+          = icon 'large middle aligned address card'
+          = content
+            = header ui: :off
+              | CONTACT
+            = description
+              | Mailing, web &amp; social media
+        - if current_user.advanced
+          = link_to admin_settings_integration_path, class: 'item'
+            = icon 'large middle aligned plug'
+            = content
+              = header ui: :off
+                | INTEGRATIONS
+              = description
+                | Segment &amp; Webhooks
+    - if current_user.help
+      = column size: 6
+        = render 'partials/side_help'

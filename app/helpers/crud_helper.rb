@@ -13,8 +13,27 @@ module CrudHelper
     settings "views.#{component}.list", fatal_exception: true
   end
 
+  def component_basic_list_fields(component = params[:component])
+    basic_list = settings ("views.#{component}.basiclist")
+    basic_list = settings ("views.defaults.basiclist") unless basic_list
+    basic_list
+  end
+
   def component_show_fields(component = params[:component])
     settings "views.#{component}.show", fatal_exception: true
+  end
+
+  def component_description(component = params[:component])
+    settings "components.#{component}.description", fatal_exception: false
+  end
+
+  def component_help_link(component = params[:component])
+    link = settings "components.#{component}.help_link", fatal_exception: false
+    if link
+      link_to "Learn More &raquo;".html_safe, link, target: "_blank"
+    else
+      nil
+    end
   end
 
   def action_name(action = params[:action])
@@ -27,6 +46,10 @@ module CrudHelper
 
   def field_type(field)
     field[1].type
+  end
+
+  def field_advanced(field)
+    field[1].advanced
   end
 
   def field_options(field)

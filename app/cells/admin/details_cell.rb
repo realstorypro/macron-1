@@ -13,5 +13,9 @@ module Admin
     def row(field)
       render(locals: { field: field })
     end
+
+    def current_user
+      options[:user]
+    end
   end
 end

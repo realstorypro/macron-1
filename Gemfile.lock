@@ -82,7 +82,7 @@ GEM
       chartkick
       railties (>= 4)
       safely_block (>= 0.1.1)
-    bootsnap (1.3.0)
+    bootsnap (1.3.1)
       msgpack (~> 1.0)
     browser (2.5.3)
     builder (3.2.3)
@@ -183,7 +183,7 @@ GEM
     factory_bot_rails (4.10.0)
       factory_bot (~> 4.10.0)
       railties (>= 3.0.0)
-    faker (1.8.7)
+    faker (1.9.1)
       i18n (>= 0.7)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
@@ -297,16 +297,16 @@ GEM
       shellany (~> 0.0)
     orm_adapter (0.5.0)
     parallel (1.12.1)
-    parser (2.5.1.0)
+    parser (2.5.1.2)
       ast (~> 2.4.0)
     pg (1.0.0)
-    phonelib (0.6.22)
+    phonelib (0.6.23)
     powerpack (0.1.2)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (3.0.2)
-    puma (3.11.4)
+    puma (3.12.0)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (2.0.5)
@@ -357,7 +357,7 @@ GEM
       actionpack (>= 4.0, < 6)
       redis-rack (>= 1, < 3)
       redis-store (>= 1.1.0, < 2)
-    redis-activesupport (5.0.5)
+    redis-activesupport (5.0.7)
       activesupport (>= 3, < 6)
       redis-store (>= 1.3, < 2)
     redis-namespace (1.6.0)
@@ -381,7 +381,7 @@ GEM
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
     rolify (5.2.0)
-    rollbar (2.16.2)
+    rollbar (2.16.3)
       multi_json
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
@@ -407,15 +407,15 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
-    rubocop (0.58.0)
+    rubocop (0.58.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
-      parser (>= 2.5)
+      parser (>= 2.5, != 2.5.1.1)
       powerpack (~> 0.1)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rails (1.4.1)
+    rubocop-rails_config (0.1.3)
       railties (>= 3.0)
       rubocop (~> 0.53)
     ruby-progressbar (1.9.0)
@@ -474,7 +474,7 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uber (0.1.0)
-    uglifier (4.1.14)
+    uglifier (4.1.15)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.4.0)
     uploadcare-rails (1.2.0)
@@ -567,7 +567,7 @@ DEPENDENCIES
   rspec-cells
   rspec-rails
   rubocop
-  rubocop-rails
+  rubocop-rails_config
   selenium-webdriver
   semantic-ui-sass
   simple_form

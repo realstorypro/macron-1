@@ -3,10 +3,7 @@
 require_dependency "application_controller"
 
 module Admin::SiteSettings
-  class IntegrationController < MetaController
-    include AdminAccess
-    layout "layouts/admin"
-
+  class IntegrationController < SharedSettingsController
     before_action :set_breadcrumb
 
     def show
@@ -18,6 +15,8 @@ module Admin::SiteSettings
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
       )
+
+      render "admin/crud/show"
     end
 
     private

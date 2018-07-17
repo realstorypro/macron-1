@@ -1,9 +1,9 @@
 tr
   - fields.each_with_index do |field, index|
     - if index.eql? 0
-      td.nowrap.collapsing
+      td.collapsing
         = show_link model: row, name: record_value(field, row)
     - elsif field_label(field) == 'Published'
-      td.nowrap.collapsing = record_value(field, row)
+      td.collapsing = record_value(field, row)
     - else
       td= record_value(field, row)

@@ -37,6 +37,9 @@ class User < ApplicationRecord
   validate :validate_username
   validates_presence_of :username, :slug, :email
 
+  # Adding Alias
+  alias_attribute :name, :username
+
   # Temproarley Disabling Until 2FA is Enabled
 
   # validates_presence_of :country, :phone_number, on: :update
@@ -100,6 +103,26 @@ class User < ApplicationRecord
     # now we're running role_cleanup manually
     clear_existing_roles!
     assign_default_role!
+  end
+
+  def enable_help!
+    self.help = true
+    save
+  end
+
+  def disable_help!
+    self.help = false
+    save
+  end
+
+  def enable_advanced!
+    self.advanced = true
+    save
+  end
+
+  def disable_advanced!
+    self.advanced = false
+    save
   end
 
   # TODO: change :all to :manage

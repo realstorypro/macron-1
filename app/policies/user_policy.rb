@@ -10,4 +10,20 @@ class UserPolicy < MetaPolicy
     return true if action_authorized? :unban, @component
     false
   end
+
+  def enable_help?
+    true
+  end
+
+  def disable_help?
+    true
+  end
+
+  def enable_advanced?
+    true
+  end
+
+  def disable_advanced?
+    true
+  end
 end

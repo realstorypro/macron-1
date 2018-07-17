@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-
   # Pulling in Root from Configuration
   root to: Settings.defaults.root_route.to_s
 
@@ -59,10 +58,16 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: "dashboard#index"
     resources :dashboard, only: :index
+
     resources :users, component: "users" do
       get "ban", on: :member
       get "unban", on: :member
+      get "enable_help", on: :member
+      get "disable_help", on: :member
+      get "enable_advanced", on: :member
+      get "disable_advanced", on: :member
     end
+
     resources :articles, component: "articles"
     resources :discussions, component: "discussions"
     resources :videos, component: "videos"

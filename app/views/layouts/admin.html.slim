@@ -36,7 +36,7 @@ html
                           ==  Admin::ActionsCell.(nil,
                                   actions: @actions,
                                   show: :buttons,
-                                  icons: false) if @actions.present?
+                                  icons: true) if @actions.present?
                     == yield
 
     = render 'layouts/partials/loading_js'

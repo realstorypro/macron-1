@@ -50,7 +50,6 @@ end
 
 @testing.each do |test|
   describe "Testing Component: #{(test[:component]).capitalize}", :implementation do
-
     before(:all) do
       @admin = build_admin
     end
