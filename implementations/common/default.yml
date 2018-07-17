@@ -1064,6 +1064,13 @@ views:
         options:
           - show
           - hide
+      overlay_background:
+        advanced: true
+        label: 'Overlay Background'
+        type: 'fixed_dropdown'
+        options:
+          - auto
+          - fixed
 
       homepage_header:
         type: 'header'
@@ -1168,6 +1175,10 @@ views:
       comment_count:
         advanced: true
         label: 'Comment Count'
+        type: 'string'
+      overlay_background:
+        advanced: true
+        label: 'Overlay Background'
         type: 'string'
       homepage_header:
         type: 'header'

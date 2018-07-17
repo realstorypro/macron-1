@@ -8,6 +8,13 @@
     background-size: cover
     background: no-repeat center center
 
+    &.fixed
+      background-attachment: fixed
+
+    @include media("<tablet")
+      background-attachment: fixed
+
+
   .overlay
     background: $w-cover-overlay-background
     position: absolute
