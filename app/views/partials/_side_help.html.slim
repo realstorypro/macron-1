@@ -1,0 +1,13 @@
+= fragment 'help'
+  = segment 'secondary'
+    .heading.wrapper
+      .left
+        = h5
+          | Help
+      .right
+        = link_to disable_help_admin_user_path(current_user.id)
+          = icon 'close'
+    = component_description.html_safe
+    - if component_help_link
+      .learn.more
+        = component_help_link

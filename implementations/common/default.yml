@@ -38,57 +38,57 @@ menu:
       - name: Dashboard
         component: dashboard
         path: admin_dashboard_index
-        icon: right angle
+        icon: dashboard
         enabled: true
 
       - name: Users
         component: users
         path: admin_users
-        icon: right angle
+        icon: users
         enabled: true
 
       - name: Articles
         component: articles
         path: admin_articles
-        icon: right angle
+        icon: book
         enabled: true
 
       - name: Videos
         component: videos
         path: admin_videos
-        icon: right angle
+        icon: video
         enabled: true
 
       - name: Discussions
         component: discussions
         path: admin_discussions
-        icon: right angle
+        icon: comments outline
         enabled: true
 
       - name: Advertisements
         component: advertisements
         path: admin_advertisements
-        icon: right angle
+        icon: audio description
         enabled: true
 
     - section:
       - name: Categories
         component: categories
         path: admin_categories
-        icon: right angle
+        icon: folder
         enabled: true
 
       - name: Tags
         component: tags
         path: admin_tags
-        icon: right angle
+        icon: tags
         enabled: true
 
     - section:
       - name: Reports
         component: reports
         path: '/admin/reports'
-        icon: right angle
+        icon: chart bar
         turbolinks: false
         enabled: true
 
@@ -96,13 +96,13 @@ menu:
       - name: Settings
         component: site_settings
         path: admin_settings_root
-        icon: right angle
+        icon: setting
         enabled: true
 
       - name: Support
         component: support
         path: admin_support_index
-        icon: right angle
+        icon: question circle
         enabled: true
 
 pages:

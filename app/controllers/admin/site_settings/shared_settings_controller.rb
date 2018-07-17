@@ -12,15 +12,7 @@ module Admin::SiteSettings
     private
 
     def append_actions
-      if current_user.help
-        add_to_actions(
-          text: "Hide Help",
-          class: "",
-          icon: "question circle",
-          url: disable_help_admin_user_path(current_user.id),
-          permission: policy(current_user).disable_help?
-        )
-      else
+      unless current_user.help
         add_to_actions(
           text: "Show Help",
           class: "",
