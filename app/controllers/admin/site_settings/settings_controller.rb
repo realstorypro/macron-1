@@ -16,7 +16,7 @@ module Admin::SiteSettings
           icon: "question circle",
           url: enable_help_admin_user_path(current_user.id),
           permission: policy(current_user).enable_help?,
-          data: { widget: "help", action: "show" }
+          data: { widget: "clicker", action: "click" }
         )
       end
       if current_user.advanced
@@ -25,7 +25,8 @@ module Admin::SiteSettings
           class: "secondary",
           icon: "cogs",
           url: disable_advanced_admin_user_path(current_user.id),
-          permission: policy(current_user).enable_advanced?
+          permission: policy(current_user).enable_advanced?,
+          data: { widget: "clicker", action: "click" }
         )
       else
         add_to_actions(
@@ -33,7 +34,8 @@ module Admin::SiteSettings
           class: "secondary",
           icon: "cogs",
           url: enable_advanced_admin_user_path(current_user.id),
-          permission: policy(current_user).enable_advanced?
+          permission: policy(current_user).enable_advanced?,
+          data: { widget: "clicker", action: "click" }
         )
       end
     end

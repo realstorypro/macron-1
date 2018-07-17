@@ -4,24 +4,23 @@ import Vent from '../core/vent'
 utils = new Utils
 vent = new Vent
 
-class Help
+class Clicker
   instance = null
 
   constructor: ->
     if !instance
       instance = this
 
-      vent.channel().on "widget:help", (options, href, context) =>
+      vent.channel().on "widget:clicker", (options, href, context) =>
 
         switch options['action']
-          when 'show' then @toggle(options, href, context)
-          when 'hide' then @toggle(options, href, context)
+          when 'click' then @click(options, href, context)
 
     else
       instance
 
 
-  toggle: (options, href, context) ->
+  click: (options, href, context) ->
     $(context).addClass('loading')
 
     $.ajax
@@ -43,5 +42,5 @@ class Help
     utils.log 'teardown', 'teardown()', 'help'
 
 
-export { Help as default }
+export { Clicker as default }
 
