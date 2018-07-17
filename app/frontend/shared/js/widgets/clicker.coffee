@@ -27,7 +27,6 @@ class Clicker
       url: href
       type: "GET"
       success: (data, textStatus, jqXHR) =>
-        console.log 'data', data
         vent.channel().trigger "render",
           action: "refresh"
           html: data

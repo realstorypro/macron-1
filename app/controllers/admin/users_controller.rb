@@ -11,7 +11,8 @@ module Admin
           class: "",
           icon: "question circle",
           url: enable_help_admin_user_path(current_user.id),
-          permission: policy(current_user).enable_help?
+          permission: policy(current_user).enable_help?,
+          data: { widget: "clicker", action: "click" }
         )
       end
       @entries = entry_class.all.order("users.created_at desc")
@@ -106,12 +107,10 @@ module Admin
         add_to_actions(
           text: "Ban #{component_name.singularize}",
           class: "black",
-          icon: "block",
+          icon: "ban",
           url: ban_admin_user_path(@entry),
           permission: policy(@entry).ban?,
-          data: {
-            confirm: "Are you sure you want to ban this #{component_name.downcase.singularize}?"
-          }
+          data: { widget: "clicker", action: "click" }
         )
       end
 
@@ -119,12 +118,10 @@ module Admin
         add_to_actions(
           text: "Unban #{component_name.singularize}",
           class: "green",
-          icon: "block",
+          icon: "ban",
           url: unban_admin_user_path(@entry),
           permission: policy(@entry).unban?,
-          data: {
-            confirm: "Are you sure you want to unban this #{component_name.downcase.singularize}?"
-          }
+          data: { widget: "clicker", action: "click" }
         )
       end
   end

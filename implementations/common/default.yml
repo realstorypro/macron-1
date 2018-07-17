@@ -927,6 +927,10 @@ views:
       name:
         label: 'Name'
         type: 'string'
+    basiclist:
+      name:
+        label: 'Name'
+        type: 'string'
     show:
       name:
         label: 'Name'
@@ -943,6 +947,13 @@ views:
         label: 'Color'
         type: 'dropdown'
     list:
+      name:
+        label: 'Name'
+        type: 'string'
+      color:
+        label: 'Color'
+        type: 'color'
+    basiclist:
       name:
         label: 'Name'
         type: 'string'

@@ -14,7 +14,8 @@ module Admin
           class: "",
           icon: "question circle",
           url: enable_help_admin_user_path(current_user.id),
-          permission: policy(current_user).enable_help?
+          permission: policy(current_user).enable_help?,
+          data: { widget: "clicker", action: "click" }
         )
       end
       add_to_actions(
@@ -34,7 +35,8 @@ module Admin
           class: "",
           icon: "question circle",
           url: enable_help_admin_user_path(current_user.id),
-          permission: policy(current_user).enable_help?
+          permission: policy(current_user).enable_help?,
+          data: { widget: "clicker", action: "click" }
         )
       end
       add_to_actions(
