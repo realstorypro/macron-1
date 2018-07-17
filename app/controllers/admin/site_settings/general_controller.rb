@@ -16,7 +16,7 @@ module Admin::SiteSettings
         data: { widget: "crud", action: "edit" }
       )
 
-      render 'admin/crud/show'
+      render "admin/crud/show"
     end
 
     private

@@ -28,19 +28,19 @@ module Admin::SiteSettings
       end
       if current_user.advanced
         add_to_actions(
-            text: "Show Basic",
-            class: "secondary",
-            icon: "cogs",
-            url: disable_advanced_admin_user_path(current_user.id),
-            permission: policy(current_user).enable_advanced?
+          text: "Show Basic",
+          class: "secondary",
+          icon: "cogs",
+          url: disable_advanced_admin_user_path(current_user.id),
+          permission: policy(current_user).enable_advanced?
         )
       else
         add_to_actions(
-            text: "Show Advanced",
-            class: "secondary",
-            icon: "cogs",
-            url: enable_advanced_admin_user_path(current_user.id),
-            permission: policy(current_user).enable_advanced?
+          text: "Show Advanced",
+          class: "secondary",
+          icon: "cogs",
+          url: enable_advanced_admin_user_path(current_user.id),
+          permission: policy(current_user).enable_advanced?
         )
       end
     end
