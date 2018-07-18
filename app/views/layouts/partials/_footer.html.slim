@@ -1,10 +1,11 @@
 = segment "footer fragment vertical #{ss('footer_color')}"
   = container 'center aligned'
-    = grid 'stackable left aligned'
+    = grid "stackable left aligned #{reversed_class(ss('footer_item_order'))}"
       = column size: 6
         = h5 text: 'About Us'
         = ss(:about).html_safe
-      = column size:1, only: :computer
+      - unless ss('footer_item_order') == 'reversed'
+        = column size:1, only: :computer
       = column size: 4 do
         = h5 text: 'Contact Us'
         = list 'relaxed divided link'
@@ -27,11 +28,14 @@
               = ss(:address2)
               br
               = ss(:address3)
+      - if ss('footer_item_order') == 'reversed'
+        = column size:1, only: :computer
       = column size: 5
         == Widget::NewsletterCell.(nil, current_user: current_user, button_color: ss(:footer_button_color) ,layout: :footer)
 
       = column size: 16, class: 'center aligned'
         = divider
+        = image_tag ss(:icon), class: "ui image mini centered" if ss(:footer_icon) == 'show'
         = list 'copyright horizontal mini divided link'
           = item
             = "&copy; #{ss(:copyrights)}".html_safe
