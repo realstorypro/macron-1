@@ -1075,6 +1075,13 @@ views:
       homepage_header:
         type: 'header'
         text: 'Homepage'
+      homepage_item_order:
+        advanced: true
+        label: 'Featured Items Order'
+        type: 'fixed_dropdown'
+        options:
+          - auto
+          - reversed
       homepage_featured_items:
         advanced: true
         label: 'Featured Items'
@@ -1086,6 +1093,18 @@ views:
           - 3
           - 4
           - 5
+
+      homepage_overlay_background:
+        advanced: true
+        label: 'Overlay Background'
+        type: 'fixed_dropdown'
+        options:
+          - auto
+          - gradient
+
+      homepage_overlay_color:
+        label: 'Overlay Color'
+        type: 'color'
 
       homepage_discussion_items:
         advanced: true
@@ -1186,10 +1205,21 @@ views:
       homepage_menu_color:
         label: 'Menu Color'
         type: 'plain_color'
+      homepage_item_order:
+        advanced: true
+        label: 'Featured Items Order'
+        type: 'string'
       homepage_featured_items:
         advanced: true
         label: 'Featured Items'
         type: 'string'
+      homepage_overlay_background:
+        advanced: true
+        label: 'Overlay Background'
+        type: 'string'
+      homepage_overlay_color:
+        label: 'Overlay Color'
+        type: 'plain_color'
       homepage_discussion_items:
         advanced: true
         label: 'Discussion Items'

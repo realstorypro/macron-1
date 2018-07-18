@@ -1,3 +1,43 @@
+@mixin inverted_logo()
+  .desktop.logo.image.normal,
+  .mobile.logo.image.normal
+    display: none
+
+  .desktop.logo.image.inverted
+    display: block
+
+    @include media("<desktop")
+      display: none
+
+  .mobile.logo.image.inverted
+    display: none
+
+    @include media("<desktop")
+      display: block
+
+  i.icon
+    color: $white
+
+@mixin regular_logo()
+  .desktop.logo.image.inverted,
+  .mobile.logo.image.inverted
+    display: none
+
+  .desktop.logo.image.normal
+    display: block
+
+    @include media("<desktop")
+      display: none
+
+  .mobile.logo.image.normal
+    display: none
+
+    @include media("<desktop")
+      display: block
+
+  i.icon
+    color: $black
+
 // colored menu
 @each $color in $g-colors-list
   @each $class in $w-navigation-class-list
@@ -11,43 +51,18 @@
         background: map-get($g-colors-map, $color)
 
       @if index($g-colors-inverted, $color)
-        .desktop.logo.image.normal,
-        .mobile.logo.image.normal
-          display: none
-
-        .desktop.logo.image.inverted
-          display: block
-
-          @include media("<desktop")
-            display: none
-
-        .mobile.logo.image.inverted
-          display: none
-
-          @include media("<desktop")
-            display: block
+        @include inverted_logo()
       @else
-        .desktop.logo.image.inverted,
-        .mobile.logo.image.inverted
-          display: none
+        @include regular_logo()
 
-        .desktop.logo.image.normal
-          display: block
+// Discussions Overrides
+.discussions.show .navigation.widget
+  &.regular:not(.mini)
+    @include regular_logo()
 
-          @include media("<desktop")
-            display: none
+  &.inverted:not(.mini)
+    @include inverted_logo()
 
-        .mobile.logo.image.normal
-          display: none
-
-          @include media("<desktop")
-            display: block
-
-      i.icon
-        @if index($g-colors-inverted, $color)
-          color: $white
-        @else
-          color: $black
 
 .navigation.widget
   position: fixed

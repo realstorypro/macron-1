@@ -42,10 +42,14 @@ module Admin
                      .where(name: "Viewed Content", time: @date_end..@date_start)
                      .where_props(type: "video").count
 
+      @subscriptions_created = Ahoy::Event
+                         .where(name: "Subscription Created", time: @date_end..@date_start).count
+
+
       # Conversion Calculations
       @visitors_to_users = @new_users / @visitors_this_month.to_f
       @visitors_to_comment = @new_comments / @visitors_this_month.to_f
-      @visitors_to_subscriber = 0 / @visitors_this_month.to_f
+      @visitors_to_subscriber = @subscriptions_created / @visitors_this_month.to_f
       @visitors_to_click = @new_clicks / @visitors_this_month.to_f
     end
   end

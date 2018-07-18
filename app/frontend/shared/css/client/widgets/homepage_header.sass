@@ -62,6 +62,11 @@ $w-homepage_header-content-padding: 2em
       align-items: center
       background: $w-homepage-header-mobile-overlay
 
+    // todo: hook this up
+    &.gradient
+      background: linear-gradient(to bottom, #00000000, #000000b8 ,#000000eb)
+
+
     &.tiny
       @include media('>=desktop')
         height: $w-homepage-header-tiny-image-height !important

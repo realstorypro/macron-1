@@ -37,15 +37,16 @@ class Newsletter
       mixins: [turbolinks_adapter]
 
       props:
-        url: ''
-      data: ->
         email: ''
+      data: ->
         response: {}
         errorMessage: null
         successMessage: null
         sending : false
         hardcodedSuccessMessage: "You've been added to our mailing list. Thank you for subscribing!"
         hardcodedErrorMessage: 'Unable to add subscription. Please try again later.'
+      mounted: ->
+        @email = $("##{widget.id}").data('email')
 
       created: ->
         $("##{widget.id}").removeClass('hidden')
@@ -56,7 +57,6 @@ class Newsletter
           @sending = true
 
           axios.post("/newsletter/subscribe", params).then((response) =>
-            console.log response
             @successMessage = true
 
           ).catch((reponse) =>

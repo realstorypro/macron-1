@@ -49,6 +49,10 @@ module Widget
       options[:item_count]
     end
 
+    def item_order
+      "computer #{options[:item_order]}"
+    end
+
     # shortcut for content icons
     def content_icons
       options[:content_icons]

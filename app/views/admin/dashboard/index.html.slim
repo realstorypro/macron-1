@@ -22,7 +22,7 @@
               .value = "#{@visitors_this_month}"
               .label.orange New Visitors
             = statistic
-              .value = 0
+              .value = @subscriptions_created
               .label New Subscribers
 
       = column computer: 8, tablet: 8, mobile: 16, class: ''
@@ -54,7 +54,7 @@
       = column computer: 16, tablet: 8, mobile: 16
         = h5 text: 'New Visitors'
         = divider
-        = area_chart @visitors_this_month_grouped, colors: ['#F2711C'], points: false, height: '300px'
+        = area_chart @visitors_this_month_grouped, colors: ['#21BA45'], points: false, height: '300px'
         = divider
 
     = row
@@ -65,9 +65,9 @@
         = column_chart({ 'Articles': @article_views,
                 'Discussions ': @discussion_views,
                 'Videos ': @video_views},
-                height: '350px', colors: ['#F2711C'])
+                height: '350px', colors: ['#B03060'])
 
       = column computer: 8, tablet: 8, mobile: 16
         = h5 text: 'Comment Flow'
         = divider
-        = area_chart @new_comments_grouped, label: 'Comments', height: '350px', colors: ['#F2711C'], points: false
+        = area_chart @new_comments_grouped, label: 'Comments', height: '350px', colors: ['#B03060'], points: false

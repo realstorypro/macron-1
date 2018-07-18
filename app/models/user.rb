@@ -125,9 +125,6 @@ class User < ApplicationRecord
     save
   end
 
-  # TODO: change :all to :manage
-  # checks if the user has an admin priveledge on a certain module
-  # used for the front end, not used for validation
   def can_manage?(component)
     roles.each do |role|
       return true if settings("auth.permissions.#{role.name}.#{component}").methods.include?(:all)
