@@ -1,85 +1,72 @@
-@mixin inverted_logo()
+@mixin inverted_logo($important: false)
   .desktop.logo.image.normal,
   .mobile.logo.image.normal
-    display: none
+    @if $important
+      display: none !important
+    @else
+      display: none
 
   .desktop.logo.image.inverted
-    display: block
-
-    @include media("<desktop")
-      display: none
-
-@mixin inverted_logo_mobile()
-  .mobile.logo.image.inverted
-    display: none
-
-    @include media("<desktop")
+    @if $important
+      display: block !important
+    @else
       display: block
 
-@mixin regular_logo()
+    @include media("<desktop")
+      @if $important
+        display: none !important
+      @else
+        display: none
+
+  .mobile.logo.image.inverted
+    @if $important
+      display: none !important
+    @else
+      display: none
+
+    @include media("<desktop")
+      @if $important
+        display: block !important
+      @else
+        display: block
+
+  i.icon
+    color: $white
+
+@mixin regular_logo($important: false)
   .desktop.logo.image.inverted,
   .mobile.logo.image.inverted
-    display: none
+    @if $important
+      display: none !important
+    @else
+      display: none
 
   .desktop.logo.image.normal
-    display: block
-
-    @include media("<desktop")
-      display: none
-
-@mixin regular_logo_mobile()
-  .mobile.logo.image.normal
-    display: none
-
-    @include media("<desktop")
+    @if $important
+      display: block !important
+    @else
       display: block
 
-// Discussions Overrides
-.discussions.show .navigation.widget
-   &.regular:not(.mini)
-    .desktop.logo.image.inverted
-      display: none !important
-
-    .desktop.logo.image.normal
-      display: block !important
-
-      @include media("<desktop")
+    @include media("<desktop")
+      @if $important
         display: none !important
+      @else
+        display: none
 
-    .mobile.logo.image.inverted
+  .mobile.logo.image.normal
+    @if $important
       display: none !important
-
-    .mobile.logo.image.normal
+    @else
       display: none
 
-      @include media("<desktop")
+    @include media("<desktop")
+      @if $important
+        display: block !important
+      @else
         display: block
 
-    i.icon
-      color: $black
-
-   &.inverted:not(.mini)
-    .desktop.logo.image.normal
-      display: none !important
-
-    .desktop.logo.image.inverted
-      display: block !important
-
-      @include media("<desktop")
-        display: none !important
-
-    .mobile.logo.image.normal
-      display: none !important
-
-    .mobile.logo.image.inverted
-      display: none
-
-      @include media("<desktop")
-        display: block
-
-    i.icon
-      color: $white
-
+  i.icon
+    color: $black
 
 // colored menu
 @each $color in $g-colors-list
@@ -95,17 +82,17 @@
 
       @if index($g-colors-inverted, $color)
         @include inverted_logo()
-        @include inverted_logo_mobile()
       @else
         @include regular_logo()
-        @include regular_logo_mobile()
+        
+// Discussions Overrides
+.discussions.show .navigation.widget
+  &.regular:not(.mini)
+    @include regular_logo()
 
+  &.inverted:not(.mini)
+    @include inverted_logo()
 
-      i.icon
-        @if index($g-colors-inverted, $color)
-          color: $white
-        @else
-          color: $black
 
 .navigation.widget
   position: fixed
