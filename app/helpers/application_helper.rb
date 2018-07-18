@@ -22,9 +22,9 @@ module ApplicationHelper
   def determine_contrast(color)
     inverted_colors = %w(red blue olive green teal purple pink brown black)
     if inverted_colors.include?(color)
-      'inverted'
+      "inverted"
     else
-      'regular'
+      "regular"
     end
   end
 end
