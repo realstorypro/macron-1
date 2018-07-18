@@ -70,45 +70,39 @@
 
 
 // Regular Colors
-@each $color in $f-header-colored-regular-colors
+@each $color in $g-colors-list
   .header.fragment.#{$color}
-    background: map-get($f-header-colors, $color)
+    background: map-get($g-colors-map, $color)
     padding-top: $f-header-colored-top-padding
     @include media("<desktop")
       padding-top: $f-header-padding-top
 
     .header.breadcrumb
       a, .divider
-        color: $f-header-colored-breadcrumb-color
-        text-shadow: $f-header-colored-box-shadow
+        @if index($g-colors-regular, $color)
+          color: $f-header-colored-breadcrumb-color
+          text-shadow: $f-header-colored-box-shadow
+        @else
+          text-shadow: $f-header-colored-inverted-box-shadow
+          color: $f-header-colored-inverted-breadcrumb-color
 
     h1.header, p
-      color: $f-header-colored-text-color
-      text-shadow: $f-header-colored-box-shadow
-
-    .meta
-      text-shadow: $f-header-colored-box-shadow
-      .header
+      @if index($g-colors-regular, $color)
         color: $f-header-colored-text-color
-      color: $f-header-colored-text-color
-
-// Inverted Colors
-@each $color in $f-header-colored-inverted-colors
-  .header.fragment.#{$color}
-    background: map-get($f-header-colors, $color)
-    padding-top: $f-header-colored-top-padding
-
-    .header.breadcrumb
-      a, .divider
+        text-shadow: $f-header-colored-box-shadow
+      @else
+        color: $f-header-colored-inverted-text-color
         text-shadow: $f-header-colored-inverted-box-shadow
-        color: $f-header-colored-inverted-breadcrumb-color
 
-    h1.header, p
-      color: $f-header-colored-inverted-text-color
-      text-shadow: $f-header-colored-inverted-box-shadow
 
     .meta
-      text-shadow: $f-header-colored-inverted-box-shadow
-      .header
+      @if index($g-colors-regular, $color)
+        text-shadow: $f-header-colored-box-shadow
+        .header
+          color: $f-header-colored-text-color
+        color: $f-header-colored-text-color
+      @else
+        text-shadow: $f-header-colored-inverted-box-shadow
+        .header
+          color: $f-header-colored-inverted-text-color
         color: $f-header-colored-inverted-text-color
-      color: $f-header-colored-inverted-text-color
