@@ -1,3 +1,86 @@
+@mixin inverted_logo()
+  .desktop.logo.image.normal,
+  .mobile.logo.image.normal
+    display: none
+
+  .desktop.logo.image.inverted
+    display: block
+
+    @include media("<desktop")
+      display: none
+
+@mixin inverted_logo_mobile()
+  .mobile.logo.image.inverted
+    display: none
+
+    @include media("<desktop")
+      display: block
+
+@mixin regular_logo()
+  .desktop.logo.image.inverted,
+  .mobile.logo.image.inverted
+    display: none
+
+  .desktop.logo.image.normal
+    display: block
+
+    @include media("<desktop")
+      display: none
+
+@mixin regular_logo_mobile()
+  .mobile.logo.image.normal
+    display: none
+
+    @include media("<desktop")
+      display: block
+
+// Discussions Overrides
+.discussions.show .navigation.widget
+   &.regular:not(.mini)
+    .desktop.logo.image.inverted
+      display: none !important
+
+    .desktop.logo.image.normal
+      display: block !important
+
+      @include media("<desktop")
+        display: none !important
+
+    .mobile.logo.image.inverted
+      display: none !important
+
+    .mobile.logo.image.normal
+      display: none
+
+      @include media("<desktop")
+        display: block
+
+    i.icon
+      color: $black
+
+   &.inverted:not(.mini)
+    .desktop.logo.image.normal
+      display: none !important
+
+    .desktop.logo.image.inverted
+      display: block !important
+
+      @include media("<desktop")
+        display: none !important
+
+    .mobile.logo.image.normal
+      display: none !important
+
+    .mobile.logo.image.inverted
+      display: none
+
+      @include media("<desktop")
+        display: block
+
+    i.icon
+      color: $white
+
+
 // colored menu
 @each $color in $g-colors-list
   @each $class in $w-navigation-class-list
@@ -11,37 +94,12 @@
         background: map-get($g-colors-map, $color)
 
       @if index($g-colors-inverted, $color)
-        .desktop.logo.image.normal,
-        .mobile.logo.image.normal
-          display: none
-
-        .desktop.logo.image.inverted
-          display: block
-
-          @include media("<desktop")
-            display: none
-
-        .mobile.logo.image.inverted
-          display: none
-
-          @include media("<desktop")
-            display: block
+        @include inverted_logo()
+        @include inverted_logo_mobile()
       @else
-        .desktop.logo.image.inverted,
-        .mobile.logo.image.inverted
-          display: none
+        @include regular_logo()
+        @include regular_logo_mobile()
 
-        .desktop.logo.image.normal
-          display: block
-
-          @include media("<desktop")
-            display: none
-
-        .mobile.logo.image.normal
-          display: none
-
-          @include media("<desktop")
-            display: block
 
       i.icon
         @if index($g-colors-inverted, $color)

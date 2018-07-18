@@ -5,7 +5,7 @@
         - if ss(:menu_position) == 'left'
           = item tag: :button, class: "enhanced button icon hamburger left", url: '', v: {'on:click.prevent': "toggle_sidenav()"}
             = icon 'large sidebar'
-        = item(name: 'Logo', class: "logo link #{'flush ' if ss(:menu_position) == 'right'}", url: root_path) do
+        = item(name: 'Logo', class: "lgo link #{'flush ' if ss(:menu_position) == 'right'}", url: root_path) do
           = image_tag ss(:logo), class: 'desktop logo image normal', style: "width: #{ss(:desktop_logo_size)}px;"
           = image_tag ss(:inverted_logo), class: 'desktop logo image inverted', style: "width: #{ss(:desktop_logo_size)}px;"
           = image_tag ss(:logo), class: 'mobile logo image normal', style: "width: #{ss(:mobile_logo_size)}px;"

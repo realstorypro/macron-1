@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -94,38 +96,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="default.yml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+          <file leaf-file-name="_navigation.html.slim" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="277">
-                  <caret line="1220" selection-start-line="1220" selection-end-line="1220" />
+                <state>
+                  <caret column="30" selection-start-column="30" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="theme.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
+          <file leaf-file-name="application_helper.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="header.sass" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="variables.sass" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="223">
-                  <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
+                <state relative-caret-position="390">
+                  <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -134,47 +118,29 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="theme.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
+          <file leaf-file-name="_navigation.html.slim" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="20" selection-start-line="20" selection-end-line="20" />
+                <state relative-caret-position="120">
+                  <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="newsletter_cell.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/cells/widget/newsletter_cell.rb">
+          <file leaf-file-name="variables.sass" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+                <state relative-caret-position="243">
+                  <caret line="168" column="38" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="show.html.slim" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/discussions/show.html.slim">
+          <file leaf-file-name="navigation.sass" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="footer.sass" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="homepage_header.sass" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+                <state relative-caret-position="636">
+                  <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -192,8 +158,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$redis.del</find>
-      <find>= Widget::Cover</find>
       <find>background-attachment: fixed</find>
       <find>== Vue::CoverCell</find>
       <find>_theme</find>
@@ -222,6 +186,8 @@
       <find>f-header-padding-top</find>
       <find>$f-header-mobile-padding-top</find>
       <find>$f-header-padding-top</find>
+      <find>full</find>
+      <find>transparent</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -266,9 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/cells/admin/list/row.slim" />
-        <option value="$PROJECT_DIR$/app/helpers/crud_helper.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/branding_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/contact_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/general_controller.rb" />
@@ -307,7 +270,6 @@
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/3_items.slim" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/4_items.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/dashboard/index.html.slim" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
         <option value="$PROJECT_DIR$/implementations/common/default.yml" />
         <option value="$PROJECT_DIR$/app/controllers/newsletter_controller.rb" />
@@ -317,6 +279,10 @@
         <option value="$PROJECT_DIR$/app/views/discussions/show.html.slim" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" />
+        <option value="$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" />
       </list>
     </option>
   </component>
@@ -639,7 +605,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240204000" />
+    <option name="totallyTimeSpent" value="244279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -727,20 +693,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/admin/crud/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/site_settings/settings/all.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -967,13 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -1009,14 +954,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/extensions/header.sass">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+        <state relative-caret-position="180">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/extensions/header.sass">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/discussions/show.html.slim">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/widget/newsletter_cell.rb">
@@ -1026,17 +981,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/discussions/show.html.slim">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        <state relative-caret-position="420">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -1054,17 +1002,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass">
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
+        <state relative-caret-position="390">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
+        <state relative-caret-position="243">
+          <caret line="168" column="38" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
         </state>
       </provider>
     </entry>
