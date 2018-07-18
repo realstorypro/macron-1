@@ -1,69 +1,39 @@
-@mixin inverted_logo($important: false)
+@mixin inverted_logo()
   .desktop.logo.image.normal,
   .mobile.logo.image.normal
-    @if $important
-      display: none !important
-    @else
-      display: none
+    display: none
 
   .desktop.logo.image.inverted
-    @if $important
-      display: block !important
-    @else
-      display: block
+    display: block
 
     @include media("<desktop")
-      @if $important
-        display: none !important
-      @else
-        display: none
-
-  .mobile.logo.image.inverted
-    @if $important
-      display: none !important
-    @else
       display: none
 
+  .mobile.logo.image.inverted
+    display: none
+
     @include media("<desktop")
-      @if $important
-        display: block !important
-      @else
-        display: block
+      display: block
 
   i.icon
     color: $white
 
-@mixin regular_logo($important: false)
+@mixin regular_logo()
   .desktop.logo.image.inverted,
   .mobile.logo.image.inverted
-    @if $important
-      display: none !important
-    @else
-      display: none
+    display: none
 
   .desktop.logo.image.normal
-    @if $important
-      display: block !important
-    @else
-      display: block
+    display: block
 
     @include media("<desktop")
-      @if $important
-        display: none !important
-      @else
-        display: none
-
-  .mobile.logo.image.normal
-    @if $important
-      display: none !important
-    @else
       display: none
 
+  .mobile.logo.image.normal
+    display: none
+
     @include media("<desktop")
-      @if $important
-        display: block !important
-      @else
-        display: block
+      display: block
 
   i.icon
     color: $black
@@ -84,7 +54,7 @@
         @include inverted_logo()
       @else
         @include regular_logo()
-        
+
 // Discussions Overrides
 .discussions.show .navigation.widget
   &.regular:not(.mini)
