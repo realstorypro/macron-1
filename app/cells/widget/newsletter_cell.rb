@@ -8,5 +8,9 @@ module Widget
         return options[:current_user].email if options[:current_user]
         ""
       end
+
+      def button_color
+        options[:button_color]
+      end
   end
 end

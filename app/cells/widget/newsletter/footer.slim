@@ -9,6 +9,6 @@
   form.ui.form @submit.prevent="subscribe($event)" v-if="!successMessage"
     = field 'field fluid'
       input type='email' placeholder='Email Address' name="email" v-model='email' required='true'
-    button.ui.primary.icon.button.right.labeled.fluid type='submit' v-bind:class='{ loading: sending }'
+    button.ui.icon.button.right.labeled.fluid class=button_color type='submit' v-bind:class='{ loading: sending }'
       = icon 'right chevron'
       | Subscribe
