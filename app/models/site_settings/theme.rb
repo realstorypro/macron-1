@@ -25,6 +25,10 @@ module SiteSettings
     content_attr :mobile_logo_size, :integer
 
     content_attr :footer_color, :string
+    content_attr :footer_icon, :string
+    content_attr :footer_button_color, :string
+    content_attr :footer_item_order, :string
+
     content_attr :about, :text
     content_attr :copyrights, :string
 
@@ -52,6 +56,10 @@ module SiteSettings
         settings.mobile_logo_size = 120
 
         settings.footer_color = "black"
+        settings.footer_icon = "hide"
+        settings.footer_button_color = "white"
+        settings.footer_item_order = "auto"
+
         settings.about = "about section"
         settings.copyrights = "2017 - 2018 IdeaLogic"
 
