@@ -11,7 +11,10 @@ module SiteSettings
     content_attr :comment_count, :string
     content_attr :overlay_background, :string
 
+    content_attr :homepage_item_order, :string
     content_attr :homepage_featured_items, :integer
+    content_attr :homepage_overlay_background, :string
+    content_attr :homepage_overlay_color, :string
     content_attr :homepage_discussion_items, :integer
     content_attr :homepage_menu_color, :string
     content_attr :homepage_content_top_padding, :integer
@@ -29,14 +32,16 @@ module SiteSettings
     content_attr :sign_up_subtitle, :string
     content_attr :sign_in_title, :string
 
-    # TODO: populate defaults & requirements
     def self.instance
       Theme.first_or_create! do |settings|
         settings.content_icons = "show"
         settings.comment_count = "hide"
         settings.overlay_background = "auto"
 
+        settings.homepage_item_order = "auto"
         settings.homepage_featured_items = "auto"
+        settings.homepage_overlay_background = "auto"
+        settings.homepage_overlay_color = "auto"
         settings.homepage_discussion_items = 6
         settings.homepage_menu_color = "black"
         settings.homepage_content_top_padding = 1
