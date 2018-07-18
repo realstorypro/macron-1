@@ -1,4 +1,4 @@
-= widget name: 'newsletter', class: 'hidden', id: 'newsletter', vue: :on
+= widget name: 'newsletter', class: 'hidden', id: 'newsletter', data: {email: email}, vue: :on
   = h5 text: 'Get Our Updates'
   p v-if="!errorMessage && !successMessage" transition="fade"
     | Receive a weekly newsletter with our new articles & discussions.
