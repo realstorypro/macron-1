@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/.last_run.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.last_run.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -114,20 +112,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="header.sass" pinned="false" current-in-tab="true">
+          <file leaf-file-name="header.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="625">
-                  <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="8" />
+                <state relative-caret-position="294">
+                  <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="variables.sass" pinned="false" current-in-tab="false">
+          <file leaf-file-name="variables.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="370">
-                  <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+                <state relative-caret-position="223">
+                  <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -194,10 +192,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Faker::Name.title</find>
-      <find>Setting</find>
-      <find>factory :</find>
-      <find>$redis</find>
       <find>$redis.del</find>
       <find>= Widget::Cover</find>
       <find>background-attachment: fixed</find>
@@ -224,6 +218,10 @@
       <find>buye</find>
       <find>byeg</find>
       <find>fragment 'header</find>
+      <find>- [ ] Show discussions looks good (menu &amp; featured section colors) - [ ] Make Dashboard Sick</find>
+      <find>f-header-padding-top</find>
+      <find>$f-header-mobile-padding-top</find>
+      <find>$f-header-padding-top</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -312,13 +310,13 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
         <option value="$PROJECT_DIR$/implementations/common/default.yml" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" />
         <option value="$PROJECT_DIR$/app/controllers/newsletter_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/newsletter_cell.rb" />
         <option value="$PROJECT_DIR$/app/views/discussions/show.html.slim" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" />
       </list>
     </option>
   </component>
@@ -641,7 +639,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239627000" />
+    <option name="totallyTimeSpent" value="240204000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -997,13 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="1220" selection-start-line="1220" selection-end-line="1220" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -1028,13 +1019,6 @@
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/extensions/header.sass">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/widget/newsletter_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1056,17 +1040,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
+    <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        <state relative-caret-position="277">
+          <caret line="1220" selection-start-line="1220" selection-end-line="1220" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="8" />
+        <state relative-caret-position="294">
+          <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
         </state>
       </provider>
     </entry>
