@@ -26,9 +26,12 @@ class ApplicationController < ActionController::Base
   end
 
   Warden::Manager.after_authentication do |user, auth, opts|
-    site_settings = JSON.parse($redis.get("site_settings"))
+    site_settings = nil
 
-    unless site_settings["payload"]["segment_server_key"].nil?
+    redis_site_settings = $redis.get("site_settings")
+    site_settings = JSON.parse(redis_site_settings) unless redis_site_settings.nil?
+
+    unless site_settings.nil? || site_settings["payload"]["segment_server_key"].nil?
       analytics = Segment::Analytics.new(write_key: site_settings["payload"]["segment_server_key"])
       analytics.identify(
         user_id: user.id,

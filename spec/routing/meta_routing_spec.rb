@@ -78,5 +78,5 @@ end
         expect(page.status_code).to be 200
       end
     end
-  end
+end
 end
