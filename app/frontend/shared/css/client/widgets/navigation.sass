@@ -1,3 +1,5 @@
+// TODO: turn white border color into a nav variable and share it wit header.sass
+
 @mixin inverted_logo()
   .desktop.logo.image.normal,
   .mobile.logo.image.normal
@@ -47,8 +49,16 @@
       @else
         background: map-get($g-colors-map, $color)
 
+      @if $color == white
+        &.bordered
+          border-bottom: 2px solid rgba(0,0,0,0.5)
+
       &.widget.mini
         background: map-get($g-colors-map, $color)
+
+        @if $color == white
+          &.bordered
+            border-bottom: 2px solid rgba(0,0,0,0)
 
       @if index($g-colors-inverted, $color)
         @include inverted_logo()

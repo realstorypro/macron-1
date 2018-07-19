@@ -1,3 +1,5 @@
+// TODO: Refactor variables and cleanup variables.sass
+
 $w-homepage-header-tiny-image-height: 185px
 $w-homepage-header-tall-image-height: 619px
 
@@ -108,6 +110,18 @@ $w-homepage_header-content-padding: 2em
       .sub.header
         font-weight: 500
 
+        &.boxed
+          width: 50%
+          padding: 0.2em 0 0.2em 0.5em
+          margin-bottom: 0.5em
+
+          &.whited
+            background: $white
+
+          &.blacked
+            background: $black
+
+
     .summary
       font-size: $w-homepage-header-summary-font-size
       //color: $w-homepage-header-summary-color
@@ -127,6 +141,8 @@ $w-homepage_header-content-padding: 2em
           line-height: 1.5em
         .sub.header
           font-size: 1.0em
+          &.boxed
+            width: 65%
         .summary
           font-size: 1em
 
@@ -136,6 +152,8 @@ $w-homepage_header-content-padding: 2em
           line-height: 1.5em
         .sub.header
           font-size: 1.0em
+          &.boxed
+            width: 65%
         .summary
           font-size: 1em
 
@@ -145,6 +163,8 @@ $w-homepage_header-content-padding: 2em
           line-height: 1.5em
         .sub.header
           font-size: 1.0em
+          &.boxed
+            width: 45%
         .summary
           font-size: 1em
 

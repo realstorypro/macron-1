@@ -11,12 +11,13 @@ module SiteSettings
     content_attr :comment_count, :string
     content_attr :overlay_background, :string
 
+    content_attr :homepage_menu_color, :string
+    content_attr :homepage_overlay_color, :string
+    content_attr :homepage_overlay_background, :string
+    content_attr :homepage_category_style, :string
     content_attr :homepage_item_order, :string
     content_attr :homepage_featured_items, :integer
-    content_attr :homepage_overlay_background, :string
-    content_attr :homepage_overlay_color, :string
     content_attr :homepage_discussion_items, :integer
-    content_attr :homepage_menu_color, :string
     content_attr :homepage_content_top_padding, :integer
 
     content_attr :menu_color, :string
@@ -42,12 +43,13 @@ module SiteSettings
         settings.comment_count = "hide"
         settings.overlay_background = "auto"
 
-        settings.homepage_item_order = "auto"
-        settings.homepage_featured_items = "auto"
-        settings.homepage_overlay_background = "auto"
-        settings.homepage_overlay_color = "auto"
-        settings.homepage_discussion_items = 6
         settings.homepage_menu_color = "black"
+        settings.homepage_overlay_color = "black"
+        settings.homepage_overlay_background = "normal"
+        settings.homepage_category_style = "normal"
+        settings.homepage_item_order = "auto"
+        settings.homepage_featured_items = "5"
+        settings.homepage_discussion_items = 6
         settings.homepage_content_top_padding = 1
 
         settings.menu_color = "black"
