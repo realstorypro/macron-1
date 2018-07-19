@@ -52,9 +52,17 @@ module Widget
       if category_style == 'divided'
         "sub dividing #{@item.category.color.name} #{determine_contrast(overlay_color)}"
       elsif category_style == 'white boxed'
-        "sub boxed whited #{@item.category.color.name}"
+        if @item.category.color.name == 'white'
+          "sub boxed whited black"
+        else
+          "sub boxed whited #{@item.category.color.name}"
+        end
       elsif category_style == 'black boxed'
-        "sub boxed blacked #{@item.category.color.name} inverted"
+        if @item.category.color.name == 'black'
+          "sub boxed blacked white"
+        else
+          "sub boxed blacked #{@item.category.color.name} inverted"
+        end
       else
         "sub #{@item.category.color.name} #{determine_contrast(overlay_color)}"
       end
