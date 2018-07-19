@@ -60,7 +60,9 @@
           &.bordered
             border-bottom: 2px solid rgba(0,0,0,0)
 
-      @if index($g-colors-inverted, $color)
+      @if index($w-navigation-transparent-class-list,$class)
+        @include inverted_logo()
+      @else if index($g-colors-inverted, $color)
         @include inverted_logo()
       @else
         @include regular_logo()
