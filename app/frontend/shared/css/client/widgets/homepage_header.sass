@@ -63,20 +63,29 @@ $w-homepage_header-content-padding: 2em
       background: $w-homepage-header-mobile-overlay
 
     &.gradient
-      background: linear-gradient(to bottom, #00000000, #000000b8 ,#000000eb)
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.85) 70%)
 
 
     &.tiny
       @include media('>=desktop')
         height: $w-homepage-header-tiny-image-height !important
 
+      &.gradient
+        background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75))
+
     &.small
       @include media('>=desktop')
         height: $w-homepage-header-small-image-height !important
 
+      &.gradient
+        background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75))
+
     &.short
       @include media('>=desktop')
         height: $w-homepage-header-small-image-height  - 20 !important
+
+      &.gradient
+        background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75) 40%)
 
     &.tall
       @include media('>=desktop')
