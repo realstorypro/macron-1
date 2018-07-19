@@ -6,6 +6,7 @@ module SiteSettings
       errors.add(:base, "already one setting object existing") && (return false) if Theme.exists?
     end
 
+    
 
     content_attr :content_icons, :string
     content_attr :comment_count, :string
