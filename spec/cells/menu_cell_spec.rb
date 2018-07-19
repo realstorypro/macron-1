@@ -4,6 +4,7 @@ require "rails_helper"
 include SettingsHelper
 
 describe MenuCell, type: "feature" do
+  skip
   before :all do
   end
 
