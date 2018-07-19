@@ -10,7 +10,7 @@ module Widget
       end
 
       def button_color
-        return 'inverted' if options[:button_color] == 'white'
+        return "inverted" if options[:button_color] == "white"
         options[:button_color]
       end
   end

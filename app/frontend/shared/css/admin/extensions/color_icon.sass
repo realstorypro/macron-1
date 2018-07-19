@@ -9,10 +9,12 @@
   border-radius: 3px
   display: inline-block
 
-  &.blank
-    background-color: $white
-    border: 1px solid $grey
 
   @each $color in $g-colors-list
     &.#{$color}
       background: map-get($g-colors-map, $color)
+
+  // overwriting white
+  &.blank, &.white
+    background-color: $white
+    border: 1px solid $grey

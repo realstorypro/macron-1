@@ -29,7 +29,6 @@ module ApplicationHelper
   end
 
   def reversed_class(order)
-    'computer reversed' if order == 'reversed'
+    "computer reversed" if order == "reversed"
   end
-
 end
