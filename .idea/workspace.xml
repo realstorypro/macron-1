@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/coverage/.last_run.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.last_run.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -97,8 +97,8 @@
           <file leaf-file-name="theme.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="41" column="29" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="30" />
+                <state relative-caret-position="435">
+                  <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
@@ -324,7 +324,6 @@
         <option value="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/5_items.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim" />
-        <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
         <option value="$PROJECT_DIR$/app/views/page/home.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/page_controller.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/widget_item.slim" />
@@ -337,6 +336,7 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/extensions/header.sass" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" />
+        <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
       </list>
     </option>
   </component>
@@ -681,7 +681,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271892000" />
+    <option name="totallyTimeSpent" value="272096000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1097,8 +1097,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="30" />
+        <state relative-caret-position="435">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
         </state>
       </provider>
     </entry>
