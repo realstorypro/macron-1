@@ -18,7 +18,7 @@ module Widget
       end
 
       # size should never be zero or nil
-      size = 1 if size == 0  || size.nil?
+      size = 1 if size == 0 || size.nil?
 
       render "#{size}_items"
     end

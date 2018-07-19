@@ -26,6 +26,9 @@ class ApplicationController < ActionController::Base
   end
 
   Warden::Manager.after_authentication do |user, auth, opts|
+    # todo: this ~may~ be a hack ... reevaluate
+    # the meta_routing_spec is failing when redis isnt loading
+    # we're making sure that the site settings pulled up by redis do in fact exist
     site_settings = nil
 
     redis_site_settings = $redis.get("site_settings")
