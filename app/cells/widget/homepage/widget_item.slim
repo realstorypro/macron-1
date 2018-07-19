@@ -11,7 +11,7 @@
           = @item.comments.count
       = content @size
         = h4 class: "#{'marginless' unless @description}"
-          = header "sub #{@item.category.color.name}"
+          = header "sub dividing #{@item.category.color.name} #{determine_contrast(overlay_color)}"
             = @item.category.name
           = @item.name
         = summary text: @model[0].description, class: "#{'shortened' unless @description}"
