@@ -1,11 +1,9 @@
-= text
-  | Welcome to our support page. We pride ourselves in customer service and getting you the help you need to answer any questions you may have.
-= h5 text: 'HelpDesk'
-= text text: "For immediate support, please check out our knowledge hub at #{link_to 'support.idealogic.io', 'https://support.idealogic.io'}. We have spent a great deal of time making sure your questions are answered with tutorials, how-to-guides, and FAQ.".html_safe
-= h5 text: 'Chat'
-= text
-  | You can also message us by clicking the support icon in the bottom right of this screen to speak to a live representative via chat.
-= h5 text: 'Email'
-= text text: "Lastly, you can shoot us an email at #{mail_to 'support@ideaogic.io'} and someone will get back to you within 24 hours.".html_safe
-= h5 text: 'Phone'
-= text text: "Lastly, you can shoot us an email at #{mail_to 'support@ideaogic.io'} and someone will get back to you within 24 hours.".html_safe
+= grid
+  = column computer: 12
+    = text text: "Have a question? Our team will help you find the answers, whether through a reference document or e-mail. Check out our resources or click the in-app Help button in the bottom right corner to get support."
+    = h5 text: 'How to get help'
+    = text text: "Get answers to your questions via our knowledge hub at #{link_to 'support.idealogic.io', 'https://support.idealogic.io'}. It is loaded with tutorials, how-to-guides, and frequently asked questions to get you the answers you are looking for.".html_safe
+    = h5 text: 'Chat'
+    = text text: 'Send us a message by clicking the support icon on the bottom right of this screen and we will try to respond to you within 1-2 hours.'
+    = h5 text: 'Email'
+    = text text: "Lastly, you can shoot us an email at #{mail_to 'support@ideaogic.io'} and someone will get back to you within 24 hours.".html_safe

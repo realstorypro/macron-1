@@ -16,6 +16,10 @@ module Widget
       else
         size = @model.count if @model.count < item_count.to_i
       end
+
+      # size should never be zero or nil
+      size = 1 if size == 0 || size.nil?
+
       render "#{size}_items"
     end
 

@@ -1154,6 +1154,26 @@ views:
       footer_color:
         label: 'Color'
         type: 'color'
+
+      footer_icon:
+        advanced: true
+        label: 'Icon'
+        type: 'fixed_dropdown'
+        options:
+          - show
+          - hide
+      footer_button_color:
+        advanced: true
+        label: 'Button Color'
+        type: 'color'
+      footer_item_order:
+        advanced: true
+        label: 'Column Order'
+        type: 'fixed_dropdown'
+        options:
+          - auto
+          - reversed
+
       about:
         label: 'About Us'
         type: 'rich'
@@ -1254,6 +1274,18 @@ views:
       footer_color:
         label: 'Color'
         type: 'plain_color'
+      footer_icon:
+        advanced: true
+        label: 'Icon'
+        type: 'string'
+      footer_button_color:
+        advanced: true
+        label: 'Button Color'
+        type: 'plain_color'
+      footer_item_order:
+        advanced: true
+        label: 'Column Order'
+        type: 'string'
       about:
         label: 'About Us'
         type: 'string'
