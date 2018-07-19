@@ -2,7 +2,7 @@
   = preload_image @item.card_image if @image == 'card'
   = preload_image @item.landscape_image if @image == 'landscape'
   = link_to show_link(@item)
-    = overlay @size
+    = overlay "#{@size} #{overlay_color} #{overlay_background}"
       = meta
         - if content_icons == 'show'
           = show_icon(@item)
