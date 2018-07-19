@@ -53,6 +53,14 @@ module Widget
       options[:item_count]
     end
 
+    def overlay_color
+      options[:overlay_color]
+    end
+
+    def overlay_background
+      options[:overlay_background]
+    end
+
     def item_order
       "computer #{options[:item_order]}"
     end
