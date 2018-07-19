@@ -5,6 +5,10 @@
     padding-top: $f-header-mobile-padding-top
     padding-bottom: $f-header-mobile-padding-bottom
 
+  &.white
+    border-bottom: 2px solid rgba(0,0,0,0.5)
+    padding-top: $f-header-padding-top + 1em
+
   &.fullscreen
     min-height: 100vh
 
@@ -72,7 +76,7 @@
 @each $color in $g-colors-list
   .header.fragment.#{$color}
     background: map-get($g-colors-map, $color)
-    padding-top: $f-header-colored-top-padding
+
     @include media("<desktop")
       padding-top: $f-header-mobile-padding-top
 

@@ -23,7 +23,7 @@ class MetaController < ApplicationController
   end
 
   def edit
-    @colors = Color.unscoped.all
+    @colors = Color.all
     render :edit, layout: false
   end
 

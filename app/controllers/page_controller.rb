@@ -7,6 +7,15 @@ class PageController < ApplicationController
   def home
     featured_limit = ss(:homepage_featured_items)
 
+    @featured_options = { item_count: ss(:homepage_featured_items),
+                          item_order: ss(:homepage_item_order),
+                          comment_count: ss(:comment_count),
+                          content_icons: ss(:content_icons),
+                          overlay_background: ss(:homepage_overlay_background),
+                          overlay_color: ss(:homepage_overlay_color),
+                          category_style: ss(:homepage_category_style)
+    }
+
     # we only want to enforce homepage_featured items if something was selected
     # otherwise the limit is set manually
 

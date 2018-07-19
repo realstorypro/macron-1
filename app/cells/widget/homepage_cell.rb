@@ -48,9 +48,41 @@ module Widget
       end
     end
 
+    def subheader_class
+      if category_style == 'divided'
+        "sub dividing #{@item.category.color.name} #{determine_contrast(overlay_color)}"
+      elsif category_style == 'white boxed'
+        if @item.category.color.name == 'white'
+          "sub boxed whited black"
+        else
+          "sub boxed whited #{@item.category.color.name}"
+        end
+      elsif category_style == 'black boxed'
+        if @item.category.color.name == 'black'
+          "sub boxed blacked white"
+        else
+          "sub boxed blacked #{@item.category.color.name} inverted"
+        end
+      else
+        "sub #{@item.category.color.name} #{determine_contrast(overlay_color)}"
+      end
+    end
+
     # shortcut for accessing position
     def item_count
       options[:item_count]
+    end
+
+    def overlay_color
+      options[:overlay_color]
+    end
+
+    def overlay_background
+      options[:overlay_background]
+    end
+
+    def category_style
+      options[:category_style]
     end
 
     def item_order

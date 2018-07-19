@@ -1,3 +1,5 @@
+// TODO: Refactor variables and cleanup variables.sass
+
 $w-homepage-header-tiny-image-height: 185px
 $w-homepage-header-tall-image-height: 619px
 
@@ -24,25 +26,21 @@ $w-homepage_header-content-padding: 2em
       @include media("<tablet")
         height: $w-homepage-header-mobile-image-height
 
-    &.tiny
-      .image
-        @include media('>=desktop')
-          height: $w-homepage-header-tiny-image-height
+    &.tiny .image
+      @include media('>=desktop')
+        height: $w-homepage-header-tiny-image-height
 
-    &.small
-      .image
-        @include media('>=desktop')
-          height: $w-homepage-header-small-image-height
+    &.small .image
+      @include media('>=desktop')
+        height: $w-homepage-header-small-image-height
 
-    &.short
-      .image
-        @include media('>=desktop')
-          height: $w-homepage-header-small-image-height - 20
+    &.short .image
+      @include media('>=desktop')
+        height: $w-homepage-header-small-image-height - 20
 
-    &.tall
-      .image
-        @include media('>=desktop')
-          height: $w-homepage-header-tall-image-height
+    &.tall .image
+      @include media('>=desktop')
+        height: $w-homepage-header-tall-image-height
 
   .overlay
     width: 100%
@@ -62,10 +60,6 @@ $w-homepage_header-content-padding: 2em
       align-items: center
       background: $w-homepage-header-mobile-overlay
 
-    // todo: hook this up
-    &.gradient
-      background: linear-gradient(to bottom, #00000000, #000000b8 ,#000000eb)
-
 
     &.tiny
       @include media('>=desktop')
@@ -82,6 +76,7 @@ $w-homepage_header-content-padding: 2em
     &.tall
       @include media('>=desktop')
         height: $w-homepage-header-tall-image-height !important
+
 
   .meta
     position: absolute
@@ -102,7 +97,7 @@ $w-homepage_header-content-padding: 2em
     .header
       text-transform: uppercase
       font-size: $w-homepage-header-header-font-size
-      color: $w-homepage-header-header-color
+      //color: $w-homepage-header-header-color
       @include media("<desktop")
         font-size: $w-homepage-header-tablet-header-font-size
       @include media("<tablet")
@@ -115,9 +110,21 @@ $w-homepage_header-content-padding: 2em
       .sub.header
         font-weight: 500
 
+        &.boxed
+          width: 50%
+          padding: 0.2em 0 0.2em 0.5em
+          margin-bottom: 0.5em
+
+          &.whited
+            background: $white
+
+          &.blacked
+            background: $black
+
+
     .summary
       font-size: $w-homepage-header-summary-font-size
-      color: $w-homepage-header-summary-color
+      //color: $w-homepage-header-summary-color
       @include media("<desktop")
         font-size: $w-homepage-header-tablet-summary-font-size
       @include media("<tablet")
@@ -134,6 +141,8 @@ $w-homepage_header-content-padding: 2em
           line-height: 1.5em
         .sub.header
           font-size: 1.0em
+          &.boxed
+            width: 65%
         .summary
           font-size: 1em
 
@@ -143,6 +152,8 @@ $w-homepage_header-content-padding: 2em
           line-height: 1.5em
         .sub.header
           font-size: 1.0em
+          &.boxed
+            width: 65%
         .summary
           font-size: 1em
 
@@ -152,6 +163,8 @@ $w-homepage_header-content-padding: 2em
           line-height: 1.5em
         .sub.header
           font-size: 1.0em
+          &.boxed
+            width: 45%
         .summary
           font-size: 1em
 
@@ -162,3 +175,37 @@ $w-homepage_header-content-padding: 2em
           font-size: 1em
         .summary
 
+  .overlay
+    // Solid Color Generation
+    @each $color in $g-colors-list
+      &.#{$color}
+        background: rgba(map-get($g-colors-map, $color), .85)
+
+        .header
+          @if index($g-colors-regular, $color)
+            color: $black
+          @else
+            color: $white
+
+        .summary
+          @if index($g-colors-regular, $color)
+            color: $black
+          @else
+            color: $white
+
+    // Gradient Color Generation
+    @each $color in $g-colors-list
+      &.gradient.#{$color}
+        background: linear-gradient(to bottom, rgba(map-get($g-colors-map, $color), 0.15), rgba(map-get($g-colors-map, $color), 0.85) 70%)
+
+        &.tiny.#{$color}
+          background: linear-gradient(to bottom left, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75))
+
+        &.small.#{$color}
+          background: linear-gradient(to bottom left, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75))
+
+        &.short.#{$color}
+          background: linear-gradient(to bottom left, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75) 40%)
+
+        &.tall.#{$color}
+          background: linear-gradient(to bottom, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75) 40%)
