@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/config/css/overrides.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/config/css/variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/plugins/redactor/redactor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/plugins/redactor/redactor.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -116,8 +111,8 @@
           <file leaf-file-name="colors.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+                <state relative-caret-position="370">
+                  <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -129,17 +124,26 @@
           <file leaf-file-name="variables.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-473">
-                  <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
+                <state relative-caret-position="397">
+                  <caret line="208" column="57" selection-start-line="208" selection-start-column="57" selection-end-line="208" selection-end-column="57" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="navigation.sass" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
+          <file leaf-file-name="footer.sass" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="825">
-                  <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+                <state relative-caret-position="360">
+                  <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="homepage_header.sass" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
                 </state>
               </provider>
             </entry>
@@ -157,8 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>padding-bottom</find>
-      <find>padding-top</find>
       <find>full</find>
       <find>content_icons</find>
       <find>category:</find>
@@ -187,6 +189,8 @@
       <find>403</find>
       <find>$header-font-family</find>
       <find>g-colors-map</find>
+      <find>map-get</find>
+      <find>w-get</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -243,7 +247,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" />
         <option value="$PROJECT_DIR$/app/models/site_settings/branding.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/extensions/header.sass" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" />
         <option value="$PROJECT_DIR$/core/permissions.yml" />
         <option value="$PROJECT_DIR$/core/colors.yml" />
         <option value="$PROJECT_DIR$/core/defaults.yml" />
@@ -283,6 +286,7 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" />
       </list>
     </option>
@@ -572,7 +576,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283552000" />
+    <option name="totallyTimeSpent" value="283925000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -660,20 +664,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/general.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_footer.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -942,20 +932,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="208" column="57" selection-start-line="208" selection-start-column="57" selection-end-line="208" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+        <state relative-caret-position="370">
+          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
