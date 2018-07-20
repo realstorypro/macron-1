@@ -1,5 +1,3 @@
-// TODO: turn white border color into a nav variable and share it wit header.sass
-
 @mixin inverted_logo()
   .desktop.logo.image.normal,
   .mobile.logo.image.normal
@@ -50,7 +48,7 @@
         background: map-get($w-navigation-colors-map, $color)
 
       &.bordered
-        border-bottom: 2px solid rgba(0,0,0,0.5)
+        border-bottom: $s-white-border-color
 
       &.widget.mini
         background: map-get($w-navigation-colors-map, $color)

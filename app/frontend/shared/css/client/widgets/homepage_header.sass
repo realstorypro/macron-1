@@ -1,11 +1,3 @@
-// TODO: Refactor variables and cleanup variables.sass
-
-$w-homepage-header-tiny-image-height: 185px
-$w-homepage-header-tall-image-height: 619px
-
-$w-homepage_header-margin: 0 0 2em
-$w-homepage_header-content-padding: 2em
-
 .homepage.header.widget
   margin: $w-homepage_header-margin
 
@@ -15,7 +7,6 @@ $w-homepage_header-content-padding: 2em
 
   .item
     position: relative
-
 
     .image
       background-size: cover
@@ -97,7 +88,6 @@ $w-homepage_header-content-padding: 2em
     .header
       text-transform: uppercase
       font-size: $w-homepage-header-header-font-size
-      //color: $w-homepage-header-header-color
       @include media("<desktop")
         font-size: $w-homepage-header-tablet-header-font-size
       @include media("<tablet")
@@ -124,7 +114,6 @@ $w-homepage_header-content-padding: 2em
 
     .summary
       font-size: $w-homepage-header-summary-font-size
-      //color: $w-homepage-header-summary-color
       @include media("<desktop")
         font-size: $w-homepage-header-tablet-summary-font-size
       @include media("<tablet")
@@ -173,7 +162,6 @@ $w-homepage_header-content-padding: 2em
           font-size: 2.0em
         .sub.header
           font-size: 1em
-        .summary
 
   .overlay
     // Solid Color Generation
