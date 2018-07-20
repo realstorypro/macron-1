@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/auth.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/colors.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/components.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/defaults.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/menu.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pages.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/tests.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/views.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.last_run.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.last_run.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementations/common/default.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementations/dummy.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementations/gravity.yml" beforeDir="false" afterPath="$PROJECT_DIR$/implementations/gravity.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -91,44 +104,70 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="navigation.sass" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="variables.sass" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="178" column="31" selection-start-line="178" selection-start-column="31" selection-end-line="178" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_helper.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_navigation.html.slim" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" selection-start-column="23" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="01_config_bootloader.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/initializers/01_config_bootloader.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="12" selection-start-line="12" selection-end-line="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="gravity.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/implementations/gravity.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="components.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/components.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="719">
+                  <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.yml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/core/views.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15120">
+                  <caret line="1008" column="8" selection-start-line="1008" selection-start-column="8" selection-end-line="1008" selection-end-column="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="menu.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/menu.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="690">
+                  <caret line="46" column="26" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="01_config_bootloader.rb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config/initializers/01_config_bootloader.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -139,11 +178,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>text</find>
-      <find>default</find>
-      <find>pendi</find>
-      <find>redis</find>
-      <find>$redis.get</find>
       <find>pending</find>
       <find>flush</find>
       <find>tall</find>
@@ -169,6 +203,11 @@
       <find>Hub Description</find>
       <find>.discussions.show</find>
       <find>bordered</find>
+      <find>default</find>
+      <find>Settings.</find>
+      <find>dummy</find>
+      <find>article</find>
+      <find>article:</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -215,16 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/cover.sass" />
-        <option value="$PROJECT_DIR$/app/cells/vue/cover_cell.rb" />
-        <option value="$PROJECT_DIR$/app/cells/vue/cover/show.slim" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/js/vue/newsletter.coffee" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/dashboard_controller.rb" />
-        <option value="$PROJECT_DIR$/app/cells/widget/homepage/1_items.slim" />
-        <option value="$PROJECT_DIR$/app/cells/widget/homepage/2_items.slim" />
-        <option value="$PROJECT_DIR$/app/cells/widget/homepage/3_items.slim" />
-        <option value="$PROJECT_DIR$/app/cells/widget/homepage/4_items.slim" />
-        <option value="$PROJECT_DIR$/app/views/admin/dashboard/index.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/newsletter_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
@@ -259,13 +288,23 @@
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_footer.html.slim" />
         <option value="$PROJECT_DIR$/app/models/site_settings/contact.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" />
-        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
         <option value="$PROJECT_DIR$/app/models/site_settings/branding.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/extensions/header.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" />
+        <option value="$PROJECT_DIR$/core/permissions.yml" />
+        <option value="$PROJECT_DIR$/core/colors.yml" />
+        <option value="$PROJECT_DIR$/core/defaults.yml" />
+        <option value="$PROJECT_DIR$/core/pages.yml" />
+        <option value="$PROJECT_DIR$/core/tests.yml" />
+        <option value="$PROJECT_DIR$/core/components.yml" />
+        <option value="$PROJECT_DIR$/implementations/common/default.yml" />
+        <option value="$PROJECT_DIR$/core/views.yml" />
+        <option value="$PROJECT_DIR$/core/menu.yml" />
+        <option value="$PROJECT_DIR$/implementations/gravity.yml" />
+        <option value="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" />
       </list>
     </option>
   </component>
@@ -338,157 +377,12 @@
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="extensions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="overrides" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="extensions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="inputs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="ahoy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="migrate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -623,7 +517,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275464000" />
+    <option name="totallyTimeSpent" value="276603000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -644,7 +538,7 @@
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32948717" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32948717" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49615383" weight="0.34477827" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49615383" visible="true" weight="0.23819743" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
@@ -711,71 +605,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/dashboard_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/discussions/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/inputs/datepicker_input.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/inputs/rich_input.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/support/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/inputs/dropdown_input.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/meta/_form.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="91" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/widget/newsletter/footer.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/category_filter.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/extensions/color.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/admin/variables.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -851,8 +680,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/cells/menu_cell_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="300">
+          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -1005,17 +834,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
-          <caret line="1000" column="16" selection-start-line="1000" selection-start-column="16" selection-end-line="1000" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1033,10 +855,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/defaults.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementations/dummy.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/auth.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/pages.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/tests.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/colors.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementations/common/default.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/menu.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="26" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementations/gravity.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/01_config_bootloader.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/components.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15120">
+          <caret line="1008" column="8" selection-start-line="1008" selection-start-column="8" selection-end-line="1008" selection-end-column="8" />
         </state>
       </provider>
     </entry>

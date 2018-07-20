@@ -3,23 +3,3 @@ components:
    enabled: true
   discussion:
     enabled: true
-
-menu:
-  main:
-    - section:
-      - name: Home
-        path: root
-        enabled: true
-
-      - name: Articles
-        path: articles
-        enabled: true
-
-      - name: Videos
-        path: videos
-        enabled: true
-
-      - name: Discussions
-        path: discussions
-        enabled: true
-
