@@ -28,10 +28,18 @@ module Admin
         value
       when "rich"
         value
+      when "text"
+        value
       when "date"
         "#{time_ago_in_words(value)} ago"
       when "image"
         render_image(value, "small")
+      when "dropdown"
+        render_linked_item (value)
+      when "association"
+        render_list(value, true)
+      when "datepicker"
+        "#{time_ago_in_words(value)} ago"
       when "image_medium"
         render_image(value, "medium")
       when "image_small"

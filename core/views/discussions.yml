@@ -38,36 +38,3 @@ views:
       body:
         label: 'Discussion Body'
         type: 'rich'
-
-    show:
-      meta_header:
-        type: 'header'
-        text: 'Meta Data'
-      name:
-        label: 'Short Title'
-        type: 'string'
-      description:
-        label: 'Short Summary'
-        type: 'string'
-      category:
-        label: 'Category'
-        type: 'linked_item'
-      tags:
-        label: 'Tags'
-        type: 'linked_list'
-      published_date:
-        label: 'Published Date'
-        type: 'date'
-
-      details_header:
-        type: 'header'
-        text: 'Details'
-      long_title:
-        label: 'Long Title'
-        type: 'string'
-      long_summary:
-        label: 'Long Summary'
-        type: 'string'
-      body:
-        label: 'Discussion Body'
-        type: 'string'

@@ -37,6 +37,7 @@ views:
         size: ['1100','900']
       image_alt:
         label: 'Image Description'
+        type: 'string'
         maxlength: '40'
         hint: 'Limited to 40 characters'
       video:
@@ -55,51 +56,4 @@ views:
       body:
         label: 'Video Body'
         type: 'rich'
-
-    show:
-      meta_header:
-        type: 'header'
-        text: 'Meta Data'
-      name:
-        label: 'Short Title'
-        type: 'string'
-      description:
-        label: 'Short Summary'
-        type: 'string'
-      category:
-        label: 'Category'
-        type: 'linked_item'
-      tags:
-        label: 'Tags'
-        type: 'linked_list'
-      published_date:
-        label: 'Published Date'
-        type: 'date'
-
-      media_header:
-        type: 'header'
-        text: 'Media'
-      landscape_image:
-        label: 'Landscape Image'
-        type: 'image_medium'
-      card_image:
-        label: 'Card Image'
-        type: 'image_medium'
-      image_alt:
-        label: 'Image Description'
-        type: 'string'
-      video:
-        label: 'Video'
-        type: 'string'
-
-
-      details_header:
-        type: 'header'
-        text: 'Details'
-      long_title:
-        label: 'Long Title'
-        type: 'string'
-      body:
-        label: 'Video Body'
-        type: 'string'
 

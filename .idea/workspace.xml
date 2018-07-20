@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/settings/branding.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/settings/branding.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/settings/theme.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/settings/theme.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views/advertisements.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/advertisements.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views/articles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/articles.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views/discussions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/discussions.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views/videos.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/videos.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -93,56 +98,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="contact.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/views/settings/contact.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="general.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/views/settings/general.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="integration.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/views/settings/integration.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/views/settings/theme.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
-              <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="branding.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/views/settings/branding.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base_cell.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+            <state relative-caret-position="368">
+              <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="videos.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/views/videos.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articles.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/views/articles.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_cell_spec.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/cells/base_cell_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="defaults.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/views/defaults.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -158,10 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subhea</find>
-      <find>@colors</find>
-      <find>unscoped</find>
-      <find>border-bott</find>
       <find>2px</find>
       <find>2px solid</find>
       <find>menu_color_class</find>
@@ -188,6 +180,10 @@
       <find>videos:</find>
       <find>padding</find>
       <find>about</find>
+      <find>description</find>
+      <find>Image Description</find>
+      <find>list</find>
+      <find>scope:</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -234,7 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/spec/cells/menu_cell_spec.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/5_items.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim" />
@@ -266,7 +261,6 @@
         <option value="$PROJECT_DIR$/implementations/gravity.yml" />
         <option value="$PROJECT_DIR$/core/mappings.yml" />
         <option value="$PROJECT_DIR$/core/views/profile.yml" />
-        <option value="$PROJECT_DIR$/core/views/advertisements.yml" />
         <option value="$PROJECT_DIR$/core/views/tags.yml" />
         <option value="$PROJECT_DIR$/core/views/categories.yml" />
         <option value="$PROJECT_DIR$/config/initializers/branding.yml" />
@@ -274,17 +268,19 @@
         <option value="$PROJECT_DIR$/core/views/users.yml" />
         <option value="$PROJECT_DIR$/core/views/video.yml" />
         <option value="$PROJECT_DIR$/core/views/defaults.yml" />
-        <option value="$PROJECT_DIR$/core/views/articles.yml" />
         <option value="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" />
-        <option value="$PROJECT_DIR$/core/views/videos.yml" />
-        <option value="$PROJECT_DIR$/core/views/discussions.yml" />
         <option value="$PROJECT_DIR$/app/helpers/crud_helper.rb" />
         <option value="$PROJECT_DIR$/core/views/settings/contact.yml" />
         <option value="$PROJECT_DIR$/core/views/settings/general.yml" />
         <option value="$PROJECT_DIR$/core/views/settings/integration.yml" />
         <option value="$PROJECT_DIR$/core/views/settings/theme.yml" />
         <option value="$PROJECT_DIR$/core/views/settings/branding.yml" />
+        <option value="$PROJECT_DIR$/core/views/advertisements.yml" />
         <option value="$PROJECT_DIR$/app/cells/admin/base_cell.rb" />
+        <option value="$PROJECT_DIR$/core/views/discussions.yml" />
+        <option value="$PROJECT_DIR$/core/views/videos.yml" />
+        <option value="$PROJECT_DIR$/core/views/articles.yml" />
+        <option value="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" />
       </list>
     </option>
   </component>
@@ -536,7 +532,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280677000" />
+    <option name="totallyTimeSpent" value="281550000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -624,13 +620,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="166" column="19" selection-start-line="166" selection-start-column="19" selection-end-line="166" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage/widget_item.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -805,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/advertisements.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/views/categories.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -864,38 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/discussions.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/videos.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/defaults.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/defaults.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/articles.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -927,24 +881,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/settings/contact.yml">
+    <entry file="file://$PROJECT_DIR$/core/views/advertisements.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+        <state relative-caret-position="600">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/settings/general.yml">
+    <entry file="file://$PROJECT_DIR$/core/views/settings/branding.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/settings/integration.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        <state relative-caret-position="285">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -955,17 +902,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
+    <entry file="file://$PROJECT_DIR$/core/views/settings/integration.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="270">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/settings/branding.yml">
+    <entry file="file://$PROJECT_DIR$/core/views/settings/general.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        <state relative-caret-position="240">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views/settings/contact.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views/discussions.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views/videos.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views/articles.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views/defaults.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/cells/base_cell_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
         </state>
       </provider>
     </entry>
