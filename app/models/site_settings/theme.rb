@@ -6,7 +6,29 @@ module SiteSettings
       errors.add(:base, "already one setting object existing") && (return false) if Theme.exists?
     end
 
-    
+    validates_presence_of :content_icons,
+                          :comment_count, :overlay_background,
+                          :homepage_menu_color, :homepage_overlay_color,
+                          :homepage_overlay_background,
+                          :homepage_category_style,
+                          :homepage_item_order,
+                          :homepage_featured_items,
+                          :homepage_discussion_items,
+                          :homepage_content_top_padding,
+                          :menu_color,
+                          :menu_position,
+                          :desktop_logo_size,
+                          :mobile_logo_size,
+                          :footer_color,
+                          :footer_icon,
+                          :footer_button_color,
+                          :footer_item_order,
+                          :about,
+                          :copyrights,
+                          :sign_up_title,
+                          :sign_up_subtitle,
+                          :sign_in_title
+
 
     content_attr :content_icons, :string
     content_attr :comment_count, :string
@@ -59,11 +81,15 @@ module SiteSettings
         settings.mobile_logo_size = 120
 
         settings.footer_color = "black"
-        settings.footer_icon = "hide"
+        settings.footer_icon = "show"
         settings.footer_button_color = "white"
         settings.footer_item_order = "auto"
 
-        settings.about = "about section"
+        settings.about = "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut\
+                          labore et dolore magna aliquyam erat, sed diam voluptua.</p>\
+                          <p>Lorem ipsum dolor sit amet, \
+                          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\
+                          sed diam voluptua.</p>"
         settings.copyrights = "2017 - 2018 IdeaLogic"
 
         settings.sign_up_title = "Sign Up"

@@ -9,25 +9,31 @@
       = column size: 4 do
         = h5 text: 'Contact Us'
         = list 'relaxed divided link'
-          = item
-            = icon 'phone'
-            = content text: ss(:phone)
-          = item
-            = icon 'globe'
-            = content
-              = link_to ss(:website).gsub('https://','').gsub('http://',''), ss(:website), class: 'email link'
-          = item
-            = icon 'mail'
-            = content
-              = link_to ss(:email), "mailto:#{ss(:email)}", class: 'email link'
-          = item
-            = icon 'map'
-            = content
-              = ss(:address1)
-              br
-              = ss(:address2)
-              br
-              = ss(:address3)
+          - if ss(:phone) && !ss(:phone).blank?
+            = item
+              = icon 'phone'
+              = content text: ss(:phone)
+          - if ss(:website) && !ss(:website).blank?
+            = item
+              = icon 'globe'
+              = content
+                = link_to ss(:website).gsub('https://','').gsub('http://',''), ss(:website), class: 'email link'
+          - if ss(:email) && !ss(:email).blank?
+            = item
+              = icon 'mail'
+              = content
+                = link_to ss(:email), "mailto:#{ss(:email)}", class: 'email link'
+          - if ss(:address1) && !ss(:address1).blank?
+            = item
+              = icon 'map'
+              = content
+                = ss(:address1)
+                - if ss(:address2) && !ss(:address2).blank?
+                  br
+                  = ss(:address2)
+                - if ss(:address3) && !ss(:address3).blank?
+                  br
+                  = ss(:address3)
       - if ss('footer_item_order') == 'reversed'
         = column size:1, only: :computer
       = column size: 5

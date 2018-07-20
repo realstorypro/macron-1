@@ -18,10 +18,9 @@ module SiteSettings
     content_attr :facebook, :string
 
 
-    validates_presence_of :address1, :address2
-
-    validates :facebook, url: { schemes: ["https"] }
-    validates :website, url: { schemes: %w(http https) }
+    validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i },allow_blank: true
+    validates :facebook, url: { schemes: ["https"] }, allow_blank: true
+    validates :website, url: { schemes: %w(http https) }, allow_blank: true
 
     def self.instance
       Contact.first_or_create! do |settings|

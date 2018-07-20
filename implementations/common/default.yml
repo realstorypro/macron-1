@@ -992,13 +992,13 @@ views:
         type: 'header'
         text: 'General Settings'
       name:
-        label: 'Hub Name'
+        label: 'Name'
         type: 'string'
       description:
-        label: 'Hub Description'
+        label: 'Description'
         type: 'string'
       url:
-        label: 'Hub URL'
+        label: 'URL'
         type: 'string'
 
   site_settings_branding:
