@@ -44,7 +44,7 @@
     color: $black
 
 // colored menu
-@each $color in $g-colors-list
+// @each $color in $g-colors-list
   @each $class in $w-navigation-class-list
     #{$class}.#{$color}
       @if index($w-navigation-transparent-class-list,$class)
@@ -71,7 +71,7 @@
         @include regular_logo()
 
 // Discussions Overrides
-.discussions.show .navigation.widget
+//.discussions.show .navigation.widget
   &.regular:not(.mini)
     @include regular_logo()
 

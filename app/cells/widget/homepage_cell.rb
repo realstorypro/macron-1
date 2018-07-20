@@ -50,7 +50,7 @@ module Widget
 
     def subheader_class
       if category_style == "divided"
-        "sub dividing #{@item.category.color.name} #{determine_contrast(overlay_color)}"
+        "sub dividing #{@item.category.color.name} #{inverted?(overlay_color)}"
       elsif category_style == "white boxed"
         if @item.category.color.name == "white"
           "sub boxed whited black"
@@ -64,7 +64,7 @@ module Widget
           "sub boxed blacked #{@item.category.color.name} inverted"
         end
       else
-        "sub #{@item.category.color.name} #{determine_contrast(overlay_color)}"
+        "sub #{@item.category.color.name} #{inverted?(overlay_color)}"
       end
     end
 
