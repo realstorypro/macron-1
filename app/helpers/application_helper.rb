@@ -12,12 +12,11 @@ module ApplicationHelper
     if controller_name == "page" && action_name.downcase == "home"
       ss("homepage_menu_color")
 
-    elsif controller_name == "page" && action_name.downcase != "home"
-      # we want the bordered class applied on pages that are not home
-
+    elsif (controller_name == "page" && action_name.downcase != "home") || (controller_name == "exceptions")
       menu_color = ss("menu_color")
-      border = "bordered"
-      "#{menu_color} #{border}"
+
+      # we want to apply the border to menu if the menu is white
+      "#{menu_color} #{'bordered' if menu_color == 'white'}"
 
     elsif controller_name == "discussions" && action_name.downcase == "show"
       # if we're on discussion with a white categories we want to apply bordered class
