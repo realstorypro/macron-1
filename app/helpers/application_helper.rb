@@ -7,8 +7,6 @@ module ApplicationHelper
   include CrudHelper
   include ImageHelper
   include MenuHelper
+  include FooterHelper
 
-  def reversed_class(order)
-    "computer reversed" if order == "reversed"
-  end
 end

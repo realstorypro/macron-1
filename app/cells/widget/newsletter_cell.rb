@@ -2,6 +2,8 @@
 
 module Widget
   class NewsletterCell < BaseCell
+
+
     private
 
       def email

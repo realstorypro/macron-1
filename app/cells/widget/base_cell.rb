@@ -22,5 +22,10 @@ module Widget
     def component_path
       s("components.#{options[:component]}.path")
     end
+
+    # we're overwriting rails helper here to pull from the passed in site settings
+    def site_setting(name)
+      options[:site_settings]["payload"][name.to_s]
+    end
   end
 end

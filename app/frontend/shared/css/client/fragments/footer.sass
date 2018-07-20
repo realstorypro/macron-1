@@ -1,62 +1,66 @@
-@each $color in $g-colors-list
-  .pusher > .footer.fragment.#{$color}
-    background: map-get($f-footer-colors-map, $color)
-    border-top: 0 !important
+// Footer
+$f-ftr-padding: 4em 0 3em
+$f-ftr-mobile-padding: 4em 0 3em
+$f-ftr-header-opacity: 0.95
+$f-ftr-item-opacity: 0.9
+$f-ftr-link-transition: 0.4s all
 
-    h5, p, .item,
-    .ui.list .item a
-      @if index($g-colors-regular, $color)
+@mixin footer_style($style)
+  .item,
+  .ui.list .item a
+    @if style == regular
+      color: $black
+    @else
+      color: $white
+
+  .ui.list .item a
+    @if style == regular
+      &:hover
+        color: rgba($black, 0.7)
+    @else
+      &:hover
+        color: rgba($white, 0.7)
+
+  .ui.list.copyright
+    .item, .item a, a.item
+      @if style == regular
         color: $black
       @else
         color: $white
 
-    .ui.list .item a
-      @if index($g-colors-regular, $color)
-        &:hover
-          color: rgba($black, 0.7)
+    .item
+      @if style == regular
+        border-left: 1px solid $black
       @else
-        &:hover
-          color: rgba($white, 0.7)
+        border-left: 1px solid $white
+      &:first-child
+        border-left: none
 
-    .ui.list.copyright
-      .item, .item a, a.item
-        @if index($g-colors-regular, $color)
-          color: $black
+      &:hover
+        @if style == regular
+          color: $black !important
         @else
-          color: $white
+          color: $white !important
 
-      .item
-        @if index($g-colors-regular, $color)
-          border-left: 1px solid $black
-        @else
-          border-left: 1px solid $white
-        &:first-child
-          border-left: none
-
-        &:hover
-          @if index($g-colors-regular, $color)
-            color: $black !important
-          @else
-            color: $white !important
 
 .pusher > .footer.fragment
   border-top: 0
   border-bottom: none
   border-radius: 0px
-  padding: $f-footer-padding
+  padding: $f-ftr-padding
 
   @include media("<tablet")
-    padding: $f-footer-mobile-padding
+    padding: $f-ftr-mobile-padding
 
   h5
-    opacity: $f-footer-header-opacity
+    opacity: $f-ftr-header-opacity
 
   p, .item
-    opacity: $f-footer-item-opacity
+    opacity: $f-ftr-item-opacity
 
   .ui.list
     .item a, a.item
-      transition: $f-footer-link-transition
+      transition: $f-ftr-link-transition
 
   .ui.list.copyright
     text-transform: uppercase
@@ -64,3 +68,14 @@
     .item
       &:first-child
         border-left: none
+
+@each $color in $g-colors-list
+  .pusher > .footer.fragment.#{$color}
+    background: map-get($f-ftr-colors-map, $color)
+    border-top: 0 !important
+
+.pusher > .footer.fragment.regular
+  @include footer_style(regular)
+
+.pusher > .footer.fragment.inverted
+  @include footer_style(inverted)
