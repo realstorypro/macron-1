@@ -15,6 +15,7 @@ module SiteSettings
 
     def self.instance
       Branding.first_or_create! do |settings|
+        settings.icon = "icon.png"
         settings.logo = "logo.png"
         settings.inverted_logo = "logo_inverted.png"
       end

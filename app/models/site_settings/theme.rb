@@ -81,11 +81,15 @@ module SiteSettings
         settings.mobile_logo_size = 120
 
         settings.footer_color = "black"
-        settings.footer_icon = "hide"
+        settings.footer_icon = "show"
         settings.footer_button_color = "white"
         settings.footer_item_order = "auto"
 
-        settings.about = "about section"
+        settings.about = "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut\
+                          labore et dolore magna aliquyam erat, sed diam voluptua.</p>\
+                          <p>Lorem ipsum dolor sit amet, \
+                          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\
+                          sed diam voluptua.</p>"
         settings.copyrights = "2017 - 2018 IdeaLogic"
 
         settings.sign_up_title = "Sign Up"
