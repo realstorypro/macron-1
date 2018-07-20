@@ -36,35 +36,3 @@ views:
         label: 'Facebook Page'
         type: 'string'
         hint: 'Full URL for the Facebook Page. Must start with https://'
-    show:
-      contact_header:
-        type: 'header'
-        text: 'Contact Info'
-      phone:
-        label: 'Phone'
-        type: 'string'
-      email:
-        label: 'Email'
-        type: 'string'
-      website:
-        label: 'Website'
-        type: 'string'
-      address1:
-        label: 'Address 1'
-        type: 'string'
-      address2:
-        label: 'Address 2'
-        type: 'string'
-      address3:
-        label: 'Address 3'
-        type: 'string'
-
-      social_header:
-        type: 'header'
-        text: 'Social Media'
-      twitter:
-        label: 'Twitter Account'
-        type: 'string'
-      facebook:
-        label: 'Facebook Page'
-        type: 'string'

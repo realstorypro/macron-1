@@ -7,3 +7,17 @@ views:
       published_date:
         label: 'Published'
         type: 'string'
+    list:
+      name:
+        label: 'Short Title'
+        type: 'string'
+      category:
+        label: 'Category'
+        type: 'string'
+        scope: 'name'
+      tags:
+        label: 'Tags'
+        type: 'unlinked_list'
+      published_date:
+        label: 'Published'
+        type: 'string'
