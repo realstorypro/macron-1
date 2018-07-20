@@ -91,7 +91,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.6151645">
       <split-first>
         <leaf>
           <file leaf-file-name="init.sass" pinned="false" current-in-tab="false">
@@ -113,8 +113,8 @@
           <file leaf-file-name="colors.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="520">
-                  <caret line="70" column="22" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="23" />
+                <state relative-caret-position="286">
+                  <caret line="146" column="32" lean-forward="true" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -144,8 +144,8 @@
           <file leaf-file-name="homepage_header.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="181" column="62" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="62" />
+                <state relative-caret-position="580">
+                  <caret line="207" column="10" selection-start-line="207" selection-start-column="10" selection-end-line="207" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -163,14 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>content_icons</find>
-      <find>category:</find>
-      <find>icon</find>
-      <find>Hub Description</find>
-      <find>.discussions.show</find>
-      <find>bordered</find>
-      <find>default</find>
-      <find>Settings.</find>
       <find>dummy</find>
       <find>article</find>
       <find>article:</find>
@@ -193,6 +185,14 @@
       <find>map-get</find>
       <find>w-get</find>
       <find>homepage_hea</find>
+      <find>yellow: linear-gradient(to bottom, rgba(map-get($g-colors-map, $yellow), 0.15), rgba(map-get($g-colors-map, $yellow), 0.85) 70%),</find>
+      <find>yellow</find>
+      <find>0.85</find>
+      <find>70%)</find>
+      <find>tiny</find>
+      <find>to bottom</find>
+      <find>to bottom left</find>
+      <find>0.75))</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -214,6 +214,13 @@
       <replace>overlay_background</replace>
       <replace>skip</replace>
       <replace>(map-get($g-colors-map, $color)</replace>
+      <replace>olive</replace>
+      <replace>0.75</replace>
+      <replace>)</replace>
+      <replace>to bottom left</replace>
+      <replace>$w-homepage-header-overlay-gradient-direction</replace>
+      <replace>$small-overlay-direction</replace>
+      <replace>0.75) 40%)</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/spec</dir>
@@ -288,8 +295,8 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" />
       </list>
     </option>
   </component>
@@ -578,7 +585,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284071000" />
+    <option name="totallyTimeSpent" value="285802000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -950,20 +957,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="181" column="62" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="62" />
+        <state relative-caret-position="397">
+          <caret line="208" column="57" selection-start-line="208" selection-start-column="57" selection-end-line="208" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="70" column="22" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="23" />
+        <state relative-caret-position="286">
+          <caret line="146" column="32" lean-forward="true" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="207" column="10" selection-start-line="207" selection-start-column="10" selection-end-line="207" selection-end-column="10" />
         </state>
       </provider>
     </entry>

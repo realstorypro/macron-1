@@ -196,16 +196,16 @@ $w-homepage_header-content-padding: 2em
     // Gradient Color Generation
     @each $color in $g-colors-list
       &.gradient.#{$color}
-        background: linear-gradient(to bottom, rgba(map-get($g-colors-map, $color), 0.15), rgba(map-get($g-colors-map, $color), 0.85) 70%)
+        background: map-get($w-homepage-header-overlay-gradient-map, $color)
 
         &.tiny.#{$color}
-          background: linear-gradient(to bottom left, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75))
+          background: map-get($w-homepage-header-overlay-gradient-map-tiny, $color)
 
         &.small.#{$color}
-          background: linear-gradient(to bottom left, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75))
+          background: map-get($w-homepage-header-overlay-gradient-map-small, $color)
 
         &.short.#{$color}
-          background: linear-gradient(to bottom left, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75) 40%)
+          background: map-get($w-homepage-header-overlay-gradient-map-short, $color)
 
         &.tall.#{$color}
-          background: linear-gradient(to bottom, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75) 40%)
+          background: map-get($w-homepage-header-overlay-gradient-map-tall, $color)
