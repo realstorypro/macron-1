@@ -1,0 +1,27 @@
+views:
+  profile:
+    new:
+      avatar:
+        label: 'Avatar'
+        type: 'image'
+        size: ['600','600']
+      title:
+        label: 'Title'
+        type: 'string'
+        maxlength: '50'
+        hint: 'Limited to 50 Characters'
+      location:
+        label: 'Location'
+        type: 'string'
+        maxlength: '50'
+        hint: 'Limited to 50 Characters'
+      age:
+        label: 'Age'
+        type: 'integer'
+        maxlength: '200'
+        hint: 'Limited to 200 Characters'
+      signature:
+        label: 'Signature'
+        type: 'string'
+        maxlength: '200'
+        hint: 'Limited to 200 Characters'

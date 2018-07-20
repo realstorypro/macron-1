@@ -1,0 +1,69 @@
+views:
+  users:
+    new:
+      email:
+        label: 'Email'
+        type: 'string'
+      roles:
+        label: 'Role'
+        type: 'association_dropdown'
+    list:
+      email:
+        label: 'Email'
+        type: 'string'
+      created_at:
+        label: 'Joined'
+        type: 'date'
+      roles:
+        label: 'Role'
+        type: 'unlinked_list'
+    basiclist:
+      email:
+        label: 'Email'
+        type: 'string'
+      created_at:
+        label: 'Joined'
+        type: 'date'
+      roles:
+        label: 'Role'
+        type: 'unlinked_list'
+    show:
+      meta_header:
+        type: 'header'
+        text: 'Meta'
+      email:
+        label: 'Email'
+        type: 'string'
+      created_at:
+        label: 'Joined'
+        type: 'date'
+      roles:
+        label: 'Role'
+        type: 'unlinked_list'
+      profile_header:
+        type: 'header'
+        text: 'Profile'
+      username:
+        label: 'User Name'
+        type: 'string'
+      avatar_with_default:
+        label: 'Avatar'
+        type: 'image_small'
+        association: 'profile'
+      title:
+        label: 'Title'
+        type: 'string'
+        association: 'profile'
+      location:
+        label: 'Location'
+        type: 'string'
+        association: 'profile'
+      age:
+        label: 'Age'
+        type: 'string'
+        association: 'profile'
+      signature:
+        label: 'Signature'
+        type: 'string'
+        association: 'profile'
+

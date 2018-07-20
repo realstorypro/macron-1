@@ -1,0 +1,119 @@
+videos:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+        maxlength: '70'
+        hint: 'Limited to 70 characters'
+      description:
+        label: 'Short Summary'
+        type: 'text'
+        maxlength: '160'
+        hint: 'Limited to 160 characters'
+      category:
+        label: 'Category'
+        type: 'dropdown'
+      tags:
+        label: 'Tags'
+        type: 'association'
+      published_date:
+        label: 'Published Date'
+        type: 'datepicker'
+
+      media_header:
+        type: 'header'
+        text: 'Media'
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image'
+        size: ['2048','1024']
+      card_image:
+        label: 'Card Image'
+        type: 'image'
+        size: ['1100','900']
+      image_alt:
+        label: 'Image Description'
+        maxlength: '40'
+        hint: 'Limited to 40 characters'
+      video:
+        label: 'Video'
+        type: 'string'
+        hint: 'Vimeo or Youtube URL'
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+      body:
+        label: 'Video Body'
+        type: 'rich'
+
+    list:
+      name:
+        label: 'Short Title'
+        type: 'string'
+      category:
+        label: 'Category'
+        type: 'string'
+        scope: 'name'
+      tags:
+        label: 'Tags'
+        type: 'unlinked_list'
+      published_date:
+        label: 'Published'
+        type: 'string'
+
+    show:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+      description:
+        label: 'Short Summary'
+        type: 'string'
+      category:
+        label: 'Category'
+        type: 'linked_item'
+      tags:
+        label: 'Tags'
+        type: 'linked_list'
+      published_date:
+        label: 'Published Date'
+        type: 'date'
+
+      media_header:
+        type: 'header'
+        text: 'Media'
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image_medium'
+      card_image:
+        label: 'Card Image'
+        type: 'image_medium'
+      image_alt:
+        label: 'Image Description'
+        type: 'string'
+      video:
+        label: 'Video'
+        type: 'string'
+
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+      body:
+        label: 'Video Body'
+        type: 'string'
+

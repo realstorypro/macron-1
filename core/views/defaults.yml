@@ -1,0 +1,9 @@
+views:
+  defaults:
+    basiclist:
+      name:
+        label: 'Short Title'
+        type: 'string'
+      published_date:
+        label: 'Published'
+        type: 'string'
