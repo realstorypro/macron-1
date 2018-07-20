@@ -21,23 +21,3 @@ views:
         label: 'Authentication'
         type: 'image'
         size: ['2560','1600']
-
-    show:
-      branding_header:
-        type: 'header'
-        text: 'Logos'
-      icon:
-        label: 'Icon'
-        type: 'image_tiny'
-      logo:
-        label: 'Logo'
-        type: 'image_small'
-      inverted_logo:
-        label: 'Inverted Logo'
-        type: 'image_small'
-      background_header:
-        type: 'header'
-        text: 'Backgrounds'
-      auth_background:
-        label: 'Authentication'
-        type: 'image_medium'

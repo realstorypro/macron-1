@@ -22,8 +22,16 @@ module Admin
       case type
       when "string"
         value
+      when "fixed_dropdown"
+        value
+      when "integer"
+        value
+      when "rich"
+        value
       when "date"
         "#{time_ago_in_words(value)} ago"
+      when "image"
+        render_image(value, "small")
       when "image_medium"
         render_image(value, "medium")
       when "image_small"
@@ -41,7 +49,11 @@ module Admin
       when "plain_color"
         render_color(value)
       when "color"
-        render_color(value.name)
+        if value.respond_to?(:name)
+          render_color(value.name)
+        else
+          render_color(value)
+        end
       end
     end
 
