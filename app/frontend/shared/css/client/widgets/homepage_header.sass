@@ -179,7 +179,7 @@ $w-homepage_header-content-padding: 2em
     // Solid Color Generation
     @each $color in $g-colors-list
       &.#{$color}
-        background: rgba(map-get($g-colors-map, $color), .85)
+        background: rgba(map-get($w-homepage-header-colors-map, $color), .85)
 
         .header
           @if index($g-colors-regular, $color)

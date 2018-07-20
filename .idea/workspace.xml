@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -97,22 +97,24 @@
           <file leaf-file-name="init.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/init.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" selection-start-line="1" selection-end-line="1" />
+                <state relative-caret-position="360">
+                  <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="variables.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-63" />
+              </provider>
             </entry>
           </file>
           <file leaf-file-name="colors.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="370">
-                  <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+                <state relative-caret-position="520">
+                  <caret line="70" column="22" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -142,8 +144,8 @@
           <file leaf-file-name="homepage_header.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+                <state relative-caret-position="190">
+                  <caret line="181" column="62" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="62" />
                 </state>
               </provider>
             </entry>
@@ -161,7 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>full</find>
       <find>content_icons</find>
       <find>category:</find>
       <find>icon</find>
@@ -191,6 +192,7 @@
       <find>g-colors-map</find>
       <find>map-get</find>
       <find>w-get</find>
+      <find>homepage_hea</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -239,7 +241,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/controllers/page_controller.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/widget_item.slim" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" />
         <option value="$PROJECT_DIR$/app/models/color.rb" />
         <option value="$PROJECT_DIR$/app/controllers/meta_controller.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass" />
@@ -287,6 +288,7 @@
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" />
       </list>
     </option>
@@ -576,7 +578,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283925000" />
+    <option name="totallyTimeSpent" value="284071000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -925,24 +927,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/init.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="208" column="57" selection-start-line="208" selection-start-column="57" selection-end-line="208" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -953,17 +941,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/init.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+        <state relative-caret-position="360">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="190">
+          <caret line="181" column="62" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="23" />
         </state>
       </provider>
     </entry>
