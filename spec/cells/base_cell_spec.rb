@@ -26,17 +26,17 @@ describe Admin::BaseCell, type: "feature" do
     end
 
     it "returns scope if one exists" do
-      fields = settings("views.articles.list").reject { |item| item[1].scope.nil? }
+      fields = settings("views.defaults.list").reject { |item| item[1].scope.nil? }
       expect(@cell.call.scope(fields.first)).to_not be(nil)
     end
 
     it "returns nil if scope doesnt exists" do
-      fields = settings("views.articles.list").reject { |item| !item[1].scope.nil? }
+      fields = settings("views.users.list").reject { |item| !item[1].scope.nil? }
       expect(@cell.call.scope(fields.first)).to be(nil)
     end
 
     it "returns a field name" do
-      fields = settings("views.articles.list")
+      fields = settings("views.users.list")
       expect(@cell.call.name(fields.first)).not_to be(nil)
     end
   end

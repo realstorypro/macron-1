@@ -10,7 +10,9 @@ module CrudHelper
   end
 
   def component_list_fields(component = params[:component])
-    settings "views.#{component}.list", fatal_exception: true
+    list_fields = settings("views.#{component}.list")
+    list_fields = settings ("views.defaults.list") unless list_fields
+    list_fields
   end
 
   def component_basic_list_fields(component = params[:component])
@@ -20,7 +22,9 @@ module CrudHelper
   end
 
   def component_show_fields(component = params[:component])
-    settings "views.#{component}.show", fatal_exception: true
+    show_list = settings("views.#{component}.show")
+    show_list = settings("views.#{component}.new") unless show_list
+    show_list
   end
 
   def component_description(component = params[:component])

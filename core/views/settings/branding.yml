@@ -1,0 +1,23 @@
+views:
+  site_settings_branding:
+    new:
+      branding_header:
+        type: 'header'
+        text: 'Logos'
+      icon:
+        label: 'Icon'
+        type: 'image'
+        size: ['180','180']
+      logo:
+        label: 'Logo'
+        type: 'image'
+      inverted_logo:
+        label: 'Inverted Logo'
+        type: 'image'
+      background_header:
+        type: 'header'
+        text: 'Backgrounds'
+      auth_background:
+        label: 'Authentication'
+        type: 'image'
+        size: ['2560','1600']

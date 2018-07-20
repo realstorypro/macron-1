@@ -1,0 +1,35 @@
+views:
+  categories:
+    new:
+      name:
+        label: 'Name'
+        type: 'string'
+        maxlength: '25'
+        hint: 'Limited to 25 Characters'
+      color:
+        label: 'Color'
+        type: 'dropdown'
+    list:
+      name:
+        label: 'Name'
+        type: 'string'
+      color:
+        label: 'Color'
+        type: 'color'
+    basiclist:
+      name:
+        label: 'Name'
+        type: 'string'
+      color:
+        label: 'Color'
+        type: 'color'
+    show:
+      name:
+        label: 'Name'
+        type: 'string'
+      slug:
+        label: 'Slug'
+        type: 'string'
+      color:
+        label: 'Color'
+        type: 'color'

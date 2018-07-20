@@ -1,0 +1,40 @@
+views:
+  discussions:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+        maxlength: '70'
+        hint: 'Limited to 70 characters'
+      description:
+        label: 'Short Summary'
+        type: 'text'
+        maxlength: '160'
+        hint: 'Limited to 160 characters'
+      category:
+        label: 'Category'
+        type: 'dropdown'
+      tags:
+        label: 'Tags'
+        type: 'association'
+      published_date:
+        label: 'Published Date'
+        type: 'datepicker'
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+      long_summary:
+        label: 'Long Summary'
+        type: 'rich'
+      body:
+        label: 'Discussion Body'
+        type: 'rich'

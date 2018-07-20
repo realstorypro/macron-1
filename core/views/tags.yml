@@ -1,0 +1,21 @@
+views:
+  tags:
+    new:
+      name:
+        label: 'Name'
+        type: 'string'
+        maxlength: '25'
+        hint: 'Limited to 25 Characters'
+    list:
+      name:
+        label: 'Name'
+        type: 'string'
+    basiclist:
+      name:
+        label: 'Name'
+        type: 'string'
+    show:
+      name:
+        label: 'Name'
+        type: 'string'
+

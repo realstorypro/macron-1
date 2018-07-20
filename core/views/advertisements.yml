@@ -1,0 +1,41 @@
+views:
+  advertisements:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Name'
+        type: 'string'
+      tags:
+        label: 'Tags'
+        type: 'association'
+      published_date:
+        label: 'Published Date'
+        type: 'datepicker'
+      ad_header:
+        type: 'header'
+        text: 'Ad'
+      image:
+        label: 'Image'
+        type: 'image'
+        size: ['627','560']
+      url:
+        label: 'URL'
+        type: 'string'
+      title:
+        label: 'Title'
+        type: 'string'
+      text:
+        label: 'Text'
+        type: 'text'
+    list:
+      name:
+        label: 'Name'
+        type: 'string'
+      image:
+        label: 'Image'
+        type: 'image_tiny'
+      tags:
+        label: 'Tags'
+        type: 'unlinked_list'

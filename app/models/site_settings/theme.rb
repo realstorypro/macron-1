@@ -85,10 +85,12 @@ module SiteSettings
         settings.footer_button_color = "white"
         settings.footer_item_order = "auto"
 
-        settings.about = "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut\
+        settings.about = "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, \
+                          sed diam nonumy eirmod tempor invidunt ut\
                           labore et dolore magna aliquyam erat, sed diam voluptua.</p>\
                           <p>Lorem ipsum dolor sit amet, \
-                          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\
+                          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut \
+                          labore et dolore magna aliquyam erat,\
                           sed diam voluptua.</p>"
         settings.copyrights = "2017 - 2018 IdeaLogic"
 

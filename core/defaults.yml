@@ -1,0 +1,14 @@
+defaults:
+
+  permissions:
+
+    # default role assigned to the visitor
+    visitor:
+      role: guest
+
+    # new_user:   # default role assigned to new user
+    new_user:
+      role: member
+
+  # the root route of the application
+  root_route: 'page#home'

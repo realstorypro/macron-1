@@ -1,0 +1,19 @@
+views:
+  site_settings_integration:
+    new:
+      segment_header:
+        type: 'header'
+        text: 'Segment'
+      segment_js_key:
+        label: 'Javascript Key'
+        type: 'string'
+      segment_server_key:
+        label: 'Server Key'
+        type: 'string'
+      webhook_header:
+        type: 'header'
+        text: 'Webhooks'
+      newsletter_webhook:
+        label: 'Newsletter Subscription'
+        type: 'string'
+        hint: 'Zapier Webohook URL. Must start with https://'
