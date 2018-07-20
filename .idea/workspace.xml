@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/extensions/header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/extensions/header.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/branding.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/branding.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -101,7 +97,7 @@
             <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="267">
-                  <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+                  <caret line="61" selection-start-line="61" selection-end-line="61" />
                 </state>
               </provider>
             </entry>
@@ -118,8 +114,8 @@
           <file leaf-file-name="footer.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+                <state relative-caret-position="225">
+                  <caret line="15" selection-start-line="15" selection-end-line="15" />
                 </state>
               </provider>
             </entry>
@@ -688,7 +684,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274348000" />
+    <option name="totallyTimeSpent" value="274664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -700,7 +696,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32948717" />
@@ -1066,7 +1062,7 @@
     <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
@@ -1100,8 +1096,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
