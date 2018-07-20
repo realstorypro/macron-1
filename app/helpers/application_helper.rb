@@ -20,11 +20,10 @@ module ApplicationHelper
       "#{menu_color} #{border}"
 
     elsif controller_name == "discussions" && action_name.downcase == "show"
-      # if we're on discussion with a white categories and white menu
-      # we want to apply bordered class
+      # if we're on discussion with a white categories we want to apply bordered class
 
       category_color = @entry.category.color.name
-      contrast = determine_contrast(category_color )
+      contrast = determine_contrast(category_color)
       menu_color = ss("menu_color")
       "#{contrast} #{menu_color} #{'bordered' if category_color == 'white'}"
 

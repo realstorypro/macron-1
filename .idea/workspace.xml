@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/advertisements.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/advertisements.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/articles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/articles.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/discussions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/discussions.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/videos.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/videos.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/site_settings/contact.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/contact.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -98,6 +94,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="theme.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_helper.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/site_settings/contact.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="86" selection-start-line="20" selection-start-column="86" selection-end-line="20" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage_cell.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="base_cell.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,7 +157,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_cell_spec.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base_cell_spec.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/cells/base_cell_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="332">
@@ -240,15 +272,11 @@
         <option value="$PROJECT_DIR$/app/models/color.rb" />
         <option value="$PROJECT_DIR$/app/controllers/meta_controller.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass" />
-        <option value="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_footer.html.slim" />
-        <option value="$PROJECT_DIR$/app/models/site_settings/contact.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" />
         <option value="$PROJECT_DIR$/app/models/site_settings/branding.rb" />
-        <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/extensions/header.sass" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass" />
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" />
         <option value="$PROJECT_DIR$/core/permissions.yml" />
         <option value="$PROJECT_DIR$/core/colors.yml" />
@@ -281,6 +309,10 @@
         <option value="$PROJECT_DIR$/core/views/videos.yml" />
         <option value="$PROJECT_DIR$/core/views/articles.yml" />
         <option value="$PROJECT_DIR$/spec/cells/base_cell_spec.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
+        <option value="$PROJECT_DIR$/app/models/site_settings/contact.rb" />
+        <option value="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" />
       </list>
     </option>
   </component>
@@ -532,7 +564,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281550000" />
+    <option name="totallyTimeSpent" value="281886000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,20 +652,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage/widget_item.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/contact.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/images/icon.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -686,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -704,13 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="178" column="31" selection-start-line="178" selection-start-column="31" selection-end-line="178" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -962,6 +966,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/contact.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="86" selection-start-line="20" selection-start-column="86" selection-end-line="20" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
         </state>
       </provider>
     </entry>
