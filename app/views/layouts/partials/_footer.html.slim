@@ -48,6 +48,7 @@
           ==  MenuCell.(nil,
                   menu: s('menu.legal'),
                   policy: Pundit.policy(current_user, :headless),
-                  request: request)
+                  request: request,
+                  site_settings: @site_settings)
           = item
             = link_to t('app.powered_by_text'), t('app.powered_by_url')
