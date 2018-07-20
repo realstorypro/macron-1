@@ -23,10 +23,11 @@ module MenuHelper
     elsif controller_name == "discussions" && action_name.downcase == "show"
       # if we're on discussion with a white categories we want to apply bordered class
       menu_color = ss("menu_color")
-      if @entry.category.color.name == 'white'
+      category_color = @entry.category.color.name
+      if category_color == 'white'
         render_menu_class(menu_color, bordered: true, transparent: true)
       else
-        render_menu_class(menu_color, transparent: true)
+        render_menu_class(category_color, transparent: true)
       end
     elsif transparent_controllers.include?(controller_name) && action_name.downcase == "show"
       menu_color = ss("menu_color")

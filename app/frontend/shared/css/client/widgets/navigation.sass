@@ -1,82 +1,64 @@
-@mixin inverted_logo()
+// Navigation
+$w-nav-z-index: 101
+$w-nav-up-transition: all 1.1s
+$w-nav-down-transition: all 0.8s
+$w-nav-logo-up-transition: all 0.4s
+$w-nav-logo-down-transition: all 0.3s
+$w-nav-box-shadow: 0
+$w-nav-background: rgba(255, 255, 255, .95)
+$w-nav-border: 0
+
+$w-nav-mini-box-shadow: 1px 1px 16px rgba(0,0,0,0.5)
+$w-nav-mini-background: #fff
+$w-nav-mini-border: 0
+
+$w-nav-logo-width: 130px
+$w-nav-logo-height: auto
+$w-nav-logo-padding: 0 0
+
+$w-nav-mobile-logo-width: 110px
+$w-nav-mobile-logo-height: auto
+$w-nav-mobile-logo-padding: 0
+
+@mixin regular_logo($action)
   .desktop.logo.image.normal
+    @if $action == show
+      display: block
+    @else
+      display: none
+
+  .mobile.logo.image.normal
     display: none
 
+    @include media("<desktop")
+      @if $action == show
+        display: block
+      @else
+        display: none
+
+@mixin inverted_logo($action)
   .desktop.logo.image.inverted
-    display: block
-
-    @include media("<desktop")
+    @if $action == show
+      display: block
+    @else
       display: none
-
-
-  i.icon
-    color: $white
-
-@mixin inverted_logo_mobile()
-  .mobile.logo.image.normal
-    display: none
 
   .mobile.logo.image.inverted
     display: none
 
     @include media("<desktop")
-      display: block
+      @if $action == show
+        display: block
+      @else
+        display: none
 
-
-@mixin regular_logo()
-  .desktop.logo.image.inverted,
-  .mobile.logo.image.inverted
-    display: none
-
-  .desktop.logo.image.normal
-    display: block
-
-    @include media("<desktop")
-      display: none
-
-  .mobile.logo.image.normal
-    display: none
-
-    @include media("<desktop")
-      display: block
-
+@mixin regular_font()
   i.icon
     color: $black
 
-// colored menu
-// @each $color in $g-colors-list
-  @each $class in $w-navigation-class-list
-    #{$class}.#{$color}
-      @if index($w-navigation-transparent-class-list,$class)
-        background: rgba(0,0,0,0)
-      @else
-        background: map-get($w-navigation-colors-map, $color)
-
-      &.bordered
-        border-bottom: $s-white-border-color
-
-      &.widget.mini
-        background: map-get($w-navigation-colors-map, $color)
-
-        @if $color == white
-          &.bordered
-            border-bottom: 2px solid rgba(0,0,0,0)
-
-      @if index($w-navigation-transparent-class-list,$class)
-        @include inverted_logo()
-      @else if index($g-colors-inverted, $color)
-        @include inverted_logo()
-        @include inverted_logo_mobile()
-      @else
-        @include regular_logo()
-
-// Discussions Overrides
-//.discussions.show .navigation.widget
-  &.regular:not(.mini)
-    @include regular_logo()
-
-  &.inverted:not(.mini)
-    @include inverted_logo()
+@mixin inverted_font()
+  i.icon
+    color: $white
 
 
 .navigation.widget
@@ -84,11 +66,11 @@
   top: 0
   left: 0
   width: 100%
-  z-index: $w-navigation-z-index
-  border-bottom: $w-navigation-border
-  box-shadow: $w-navigation-box-shadow
-  background: $w-navigation-background
-  transition: $w-navigation-up-transition
+  z-index: $w-nav-z-index
+  border-bottom: $w-nav-border
+  box-shadow: $w-nav-box-shadow
+  background: $w-nav-background
+  transition: $w-nav-up-transition
 
 
   // --- Begin Left & Right Menu Haburger Toggle --
@@ -103,7 +85,7 @@
 
   // Logo with Hamburger on Left
   .logo.link
-    transition: $w-navigation-logo-up-transition
+    transition: $w-nav-logo-up-transition
     padding-left: 0
     margin-left: 0
 
@@ -151,28 +133,53 @@
         width: 100%
 
 
+// Logos
+.navigation.widget
   .desktop.logo.image
-    width: $w-navigation-logo-width
-    height: $w-navigation-logo-height
-    padding: $w-navigation-logo-padding
-    transition: $w-navigation-down-transition
-    @include media("<desktop")
-      display: none
+    width: $w-nav-logo-width
+    height: $w-nav-logo-height
+    padding: $w-nav-logo-padding
+    transition: $w-nav-down-transition
 
 
   .mobile.logo.image
-    width: $w-navigation-mobile-logo-width
-    height: $w-navigation-mobile-logo-height
-    padding: $w-navigation-mobile-logo-padding
-    transition: $w-navigation-down-transition
+    width: $w-nav-mobile-logo-width
+    height: $w-nav-mobile-logo-height
+    padding: $w-nav-mobile-logo-padding
+    transition: $w-nav-down-transition
 
 .navigation.widget.mini
-  border-bottom: $w-navigation-mini-border
-  box-shadow: $w-navigation-mini-box-shadow
-  transition: $w-navigation-down-transition
+  border-bottom: $w-nav-mini-border
+  box-shadow: $w-nav-mini-box-shadow
+  transition: $w-nav-down-transition
 
 
   .logo.link
-    transition: $w-navigation-logo-down-transition
+    transition: $w-nav-logo-down-transition
     padding-top: 0
     padding-bottom: 0
+
+// Style Variations
+.navigation.widget
+  &.regular
+    @include regular_logo(show)
+    @include inverted_logo(hide)
+    @include regular_font
+
+  &.inverted
+    @include regular_logo(hide)
+    @include inverted_logo(show)
+    @include inverted_font
+
+  &.bordered
+    border-bottom: $s-white-border-color
+
+  @each $color in $g-colors-list
+    &.#{$color}
+      background: map-get($w-nav-colors-map, $color)
+
+  &.transparent:not(.mini)
+    background: transparent !important
+
+
+
