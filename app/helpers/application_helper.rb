@@ -26,7 +26,7 @@ module ApplicationHelper
       category_color = @entry.category.color.name
       contrast = determine_contrast(category_color )
       menu_color = ss("menu_color")
-      "#{contrast} #{menu_color} #{'bordered' if category_color == "white"}"
+      "#{contrast} #{menu_color} #{'bordered' if category_color == 'white'}"
 
     else
       # otherwise apply menu color
