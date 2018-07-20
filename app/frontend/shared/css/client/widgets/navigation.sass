@@ -1,6 +1,5 @@
 @mixin inverted_logo()
-  .desktop.logo.image.normal,
-  .mobile.logo.image.normal
+  .desktop.logo.image.normal
     display: none
 
   .desktop.logo.image.inverted
@@ -9,14 +8,20 @@
     @include media("<desktop")
       display: none
 
+
+  i.icon
+    color: $white
+
+@mixin inverted_logo_mobile()
+  .mobile.logo.image.normal
+    display: none
+
   .mobile.logo.image.inverted
     display: none
 
     @include media("<desktop")
       display: block
 
-  i.icon
-    color: $white
 
 @mixin regular_logo()
   .desktop.logo.image.inverted,
@@ -61,6 +66,7 @@
         @include inverted_logo()
       @else if index($g-colors-inverted, $color)
         @include inverted_logo()
+        @include inverted_logo_mobile()
       @else
         @include regular_logo()
 
