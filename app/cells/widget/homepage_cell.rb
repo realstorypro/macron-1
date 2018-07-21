@@ -17,17 +17,17 @@ module Widget
         size = @model.count if @model.count < item_count.to_i
       end
 
-      # size should never be zero or nil
-      size = 1 if size == 0 || size.nil?
-
       render "#{size}_items"
     end
 
-    def widget_item(model, size = "", description = true, image = "card")
+    def widget_item(model, options={})
+      defaults = {image: 'card', description: true, size: ''}
+      options = defaults.merge(options)
+
       @item = model
-      @size = size
-      @description = description
-      @image = image
+      @size = options[:size]
+      @description = options[:description]
+      @image = options[:image]
 
       render :widget_item
     end

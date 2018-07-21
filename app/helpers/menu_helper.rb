@@ -25,13 +25,13 @@ module MenuHelper
       menu_color = ss("menu_color")
       category_color = @entry.category.color.name
       if category_color == 'white'
-        render_menu_class(menu_color, bordered: true, transparent: true)
+        render_menu_class(category_color, bordered: true, transparent: true)
       else
         render_menu_class(category_color, transparent: true)
       end
     elsif transparent_controllers.include?(controller_name) && action_name.downcase == "show"
       menu_color = ss("menu_color")
-      render_menu_class(menu_color, transparent: true)
+      render_menu_class(menu_color, imaged: true)
     else
       # otherwise apply menu color
       menu_color = ss("menu_color")
@@ -42,11 +42,12 @@ module MenuHelper
   private
 
   def render_menu_class(menu_color, options={})
-    defaults = { bordered: false, transparent: false }
+    defaults = { bordered: false, transparent: false, imaged: false }
     options = defaults.merge(options)
 
     rendering =  ActiveSupport::SafeBuffer.new
 
+    rendering << " imaged" if options[:imaged]
     rendering << " transparent" if options[:transparent]
     rendering << " bordered" if options[:bordered]
     rendering << " #{inverted?(menu_color)}"

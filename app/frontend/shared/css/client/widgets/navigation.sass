@@ -20,37 +20,41 @@ $w-nav-mobile-logo-width: 110px
 $w-nav-mobile-logo-height: auto
 $w-nav-mobile-logo-padding: 0
 
-@mixin regular_logo($action)
-  .desktop.logo.image.normal
-    @if $action == show
-      display: block
-    @else
-      display: none
-
-  .mobile.logo.image.normal
-    display: none
-
-    @include media("<desktop")
+@mixin regular_logo($action, $desktop: true, $mobile: true)
+  @if $desktop == true
+    .desktop.logo.image.normal
       @if $action == show
         display: block
       @else
         display: none
 
-@mixin inverted_logo($action)
-  .desktop.logo.image.inverted
-    @if $action == show
-      display: block
-    @else
+  @if $mobile == true
+    .mobile.logo.image.normal
       display: none
 
-  .mobile.logo.image.inverted
-    display: none
+      @include media("<desktop")
+        @if $action == show
+          display: block
+        @else
+          display: none
 
-    @include media("<desktop")
+@mixin inverted_logo($action, $desktop: true, $mobile: true)
+  @if $desktop == true
+    .desktop.logo.image.inverted
       @if $action == show
         display: block
       @else
         display: none
+
+  @if $mobile == true
+    .mobile.logo.image.inverted
+      display: none
+
+      @include media("<desktop")
+        @if $action == show
+          display: block
+        @else
+          display: none
 
 @mixin regular_font()
   i.icon
@@ -178,8 +182,12 @@ $w-nav-mobile-logo-padding: 0
     &.#{$color}
       background: map-get($w-nav-colors-map, $color)
 
-  &.transparent:not(.mini)
+  &.transparent:not(.mini), &.imaged:not(.mini)
     background: transparent !important
+
+  &.imaged:not(.mini)
+    @include regular_logo(hide, true, false)
+    @include inverted_logo(show, true, false)
 
 
 
