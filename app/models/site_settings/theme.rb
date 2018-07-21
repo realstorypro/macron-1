@@ -18,6 +18,9 @@ module SiteSettings
                           :homepage_featured_variant,
                           :homepage_discussion_items,
                           :homepage_content_top_padding,
+
+                          :discussion_menu_style,
+
                           :menu_color,
                           :menu_position,
                           :desktop_logo_size,
@@ -51,6 +54,8 @@ module SiteSettings
     content_attr :homepage_featured_variant, :string
     content_attr :homepage_discussion_items, :integer
     content_attr :homepage_content_top_padding, :integer
+
+    content_attr :discussion_menu_style, :string
 
     content_attr :menu_color, :string
     content_attr :menu_position, :string
@@ -89,6 +94,8 @@ module SiteSettings
         settings.homepage_featured_variant = "a"
         settings.homepage_discussion_items = 6
         settings.homepage_content_top_padding = 1
+
+        settings.discussion_menu_style = 'transparent'
 
         settings.menu_color = "black"
         settings.menu_position = "left"
