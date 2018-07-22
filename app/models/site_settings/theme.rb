@@ -95,7 +95,7 @@ module SiteSettings
         settings.homepage_discussion_items = 6
         settings.homepage_content_top_padding = 1
 
-        settings.discussion_menu_style = 'transparent'
+        settings.discussion_menu_style = "transparent"
 
         settings.menu_color = "black"
         settings.menu_position = "left"

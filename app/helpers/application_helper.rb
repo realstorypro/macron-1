@@ -8,5 +8,4 @@ module ApplicationHelper
   include ImageHelper
   include MenuHelper
   include FooterHelper
-
 end

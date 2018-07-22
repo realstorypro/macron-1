@@ -20,29 +20,23 @@ module FooterHelper
     (ss("footer_item_order") == "reversed") ? true : false
   end
 
-  def footer_cta_class
-
-  end
-
   private
+    def render_footer_class(footer_color, options = {})
+      defaults = {}
+      options = defaults.merge(options)
 
-  def render_footer_class(footer_color, options={})
-    defaults = { }
-    options = defaults.merge(options)
+      rendering =  ActiveSupport::SafeBuffer.new
+      rendering << " #{inverted?(footer_color)}"
+      rendering << " #{footer_color}"
+      rendering
+    end
 
-    rendering =  ActiveSupport::SafeBuffer.new
-    rendering << " #{inverted?(footer_color)}"
-    rendering << " #{footer_color}"
-    rendering
-  end
+    def render_footer_item_class(footer_color, options = {})
+      defaults = {}
+      options = defaults.merge(options)
 
-  def render_footer_item_class(footer_color, options={})
-    defaults = { }
-    options = defaults.merge(options)
-
-    rendering =  ActiveSupport::SafeBuffer.new
-    rendering << " #{inverted?(footer_color)}"
-    rendering
-  end
-
+      rendering =  ActiveSupport::SafeBuffer.new
+      rendering << " #{inverted?(footer_color)}"
+      rendering
+    end
 end

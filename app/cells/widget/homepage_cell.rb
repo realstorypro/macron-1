@@ -20,8 +20,8 @@ module Widget
       render "#{size}_items"
     end
 
-    def widget_item(model, options={})
-      defaults = {image: 'card', description: true, size: ''}
+    def widget_item(model, options = {})
+      defaults = { image: "card", description: true, size: "" }
       options = defaults.merge(options)
 
       @item = model
