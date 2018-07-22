@@ -20,42 +20,28 @@ $w-nav-mobile-logo-width: 110px
 $w-nav-mobile-logo-height: auto
 $w-nav-mobile-logo-padding: 0
 
-@mixin regular_logo($action, $desktop: true, $mobile: true)
-  @if $desktop == true
-    .desktop.logo.image.normal
-      @if $action == show
-        display: block
-      @else
-        display: none
 
-  @if $mobile == true
-    .mobile.logo.image.normal
+@mixin regular_logo($action)
+  .logo.image.normal
+    @if $action == show
+      display: block
+    @else
       display: none
 
-      @include media("<desktop")
-        @if $action == show
-          display: block
-        @else
-          display: none
-
-@mixin inverted_logo($action, $desktop: true, $mobile: true)
-  @if $desktop == true
-    .desktop.logo.image.inverted
-      @if $action == show
-        display: block
-      @else
-        display: none
-
-  @if $mobile == true
-    .mobile.logo.image.inverted
+@mixin inverted_logo($action)
+  .logo.image.inverted
+    @if $action == show
+      display: block
+    @else
       display: none
 
-      @include media("<desktop")
-        @if $action == show
-          display: block
-        @else
-          display: none
+@mixin regular_font()
+  i.icon
+    color: $black
 
+@mixin inverted_font()
+  i.icon
+    color: $white
 
 .navigation.widget
   position: fixed
@@ -155,68 +141,17 @@ $w-nav-mobile-logo-padding: 0
     padding-top: 0
     padding-bottom: 0
 
-// Style Variations
 .navigation.widget
-  //&.regular
-    @include regular_logo(show)
-    @include inverted_logo(hide)
-    @include regular_font
+  // the default background is transparent unless the color is specified
+  background: transparent
 
-  //&.inverted
-    @include regular_logo(hide)
-    @include inverted_logo(show)
-    @include inverted_font
-
-  //&.bordered
+  &.bordered
     border-bottom: $s-white-border-color
 
-  //@each $color in $g-colors-list
-    &.#{$color}
-      background: map-get($w-nav-colors-map, $color)
-
-  //&.transparent:not(.mini), &.imaged:not(.mini)
-    background: transparent !important
-
-  //&.imaged:not(.mini)
-    @include regular_logo(hide, true, false)
-    @include inverted_logo(show, true, false)
+  &.bordered.mini
+    border-bottom: 0px solid rgba($black, 0)
 
   // refactoring
-  @mixin regular_font()
-    i.icon
-      color: $black
-
-  @mixin inverted_font()
-    i.icon
-      color: $white
-
-  @mixin desktop_logo_regular($action)
-    .desktop.logo.image.normal
-      @if $action == show
-        display: block
-      @else
-        display: none
-
-  @mixin mobile_logo_regular($action)
-      @include media("<desktop")
-        @if $action == show
-          display: block
-        @else
-          display: none
-
-  @mixin desktop_logo_inverted($action)
-    .desktop.logo.image.inverted
-      @if $action == show
-        display: block
-      @else
-        display: none
-
-  @mixin mobile_logo_inverted($action)
-      @include media("<desktop")
-        @if $action == show
-          display: block
-        @else
-          display: none
 
   // hide mobile logos for screens desktop screens
   .mobile.logo.image
@@ -228,37 +163,33 @@ $w-nav-mobile-logo-padding: 0
     @include media("<desktop")
       display: none !important
 
-
+  // expanded classes
   &[class*="regular expanded"]
-    @include desktop_logo_regular(show)
-    @include desktop_logo_inverted(hide)
+    @include regular_logo(show)
+    @include inverted_logo(hide)
     @include regular_font
 
   &[class*="inverted expanded"]
-    @include desktop_logo_regular(hide)
-    @include desktop_logo_inverted(show)
+    @include regular_logo(hide)
+    @include inverted_logo(show)
     @include inverted_font
 
   @each $color in $g-colors-list
     &[class*="expanded #{$color}"]
       background: map-get($w-nav-colors-map, $color)
 
-
-  @mixin collapsed_navigation
+  // collapsed classes
+  &.mini
     &[class*="regular collapsed"]
-    @include desktop_logo_regular(show)
-    @include desktop_logo_inverted(hide)
-    @include regular_font
+      @include regular_logo(show)
+      @include inverted_logo(hide)
+      @include regular_font
 
     &[class*="inverted collapsed"]
-      @include desktop_logo_regular(hide)
-      @include desktop_logo_inverted(show)
+      @include regular_logo(hide)
+      @include inverted_logo(show)
       @include inverted_font
 
     @each $color in $g-colors-list
       &[class*="collapsed #{$color}"]
         background: map-get($w-nav-colors-map, $color)
-
-
-  &.mini
-    @include collapsed_navigation
