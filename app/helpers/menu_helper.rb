@@ -4,18 +4,16 @@ module MenuHelper
   include ColorHelper
   def menu_color_class
     transparent_controllers = %w(articles videos)
+    menu_color = ss("menu_color")
 
     # in case of homepage apply the homepage colors
     if controller_name == "page" && action_name.downcase == "home"
       homepage_menu_color = ss("homepage_menu_color")
-      menu_color = ss("menu_color")
 
       render_menu_class(expanded_color: homepage_menu_color, collapsed_color: menu_color)
 
     # all other pages & exception pages
     elsif (controller_name == "page" && action_name.downcase != "home") || (controller_name == "exceptions")
-      menu_color = ss("menu_color")
-
       if menu_color == "white"
         render_menu_class(expanded_color: menu_color, collapsed_color: menu_color, bordered: true)
       else
@@ -23,27 +21,44 @@ module MenuHelper
       end
 
     elsif controller_name == "discussions" && action_name.downcase == "show"
-      # if we're on discussion with a white categories we want to apply bordered class
-      menu_color = ss("menu_color")
       menu_style = ss(:discussion_menu_style)
       category_color = @entry.category.color.name
 
-      return render_menu_class(menu_color) if menu_style == "solid"
+      # we want to eliminate transparency if the background is set as solid
+      # we only want to show the border if both category and menu colors are white
+      if menu_style == "solid"
+        if category_color == "white" && menu_color == "white"
+          render_menu_class(expanded_color: menu_color, collapsed_color: menu_color, bordered: true, transparent: false)
+        else
+          render_menu_class(expanded_color: menu_color, collapsed_color: menu_color, transparent: false)
+        end
+      elsif menu_style == "matching solid"
+        if category_color == "white" && menu_color == "white"
+          render_menu_class(expanded_color: menu_color, collapsed_color: category_color, bordered: true, transparent: false)
+        else
+          render_menu_class(expanded_color: menu_color, collapsed_color: category_color, transparent: false)
+        end
 
-      if category_color == "white"
-        render_menu_class(expanded_color: category_color, collapsed_color: menu_color, bordered: true, transparent: true)
-      else
-        render_menu_class(expanded_color: category_color, collapsed_color: menu_color, transparent: true)
+      elsif menu_style == "transparent"
+        if category_color == "white"
+          render_menu_class(expanded_color: category_color, collapsed_color: menu_color, bordered: true, transparent: true)
+        else
+          render_menu_class(expanded_color: category_color, collapsed_color: menu_color, transparent: true)
+        end
+      elsif menu_style == "matching transparent"
+        if category_color == "white"
+          render_menu_class(expanded_color: category_color, collapsed_color: category_color, bordered: true, transparent: true)
+        else
+          render_menu_class(expanded_color: category_color, collapsed_color: category_color, transparent: true)
+        end
       end
 
     elsif transparent_controllers.include?(controller_name) && action_name.downcase == "show"
-      menu_color = ss("menu_color")
-
-      # we're passing expanded color to black to force the inverted logo
+      # fullscreen image option
+      # we want to have an inverted logo that's why we're passing the *expanded_color: black*
       render_menu_class(transparent: true, expanded_color: "black", collapsed_color: menu_color)
     else
       # apply menu color if nothign is there
-      menu_color = ss("menu_color")
       render_menu_class(menu_color)
     end
   end
@@ -81,10 +96,6 @@ module MenuHelper
     output << " #{options[:style]} "
     output << options[:color] unless options[:transparent]
     output
-  end
-
-  def collapsed_class
-
   end
 
 end

@@ -160,7 +160,8 @@ views:
         options:
           - solid
           - transparent
-          - matching
+          - matching solid
+          - matching transparent
 
       ####################
       ####################
