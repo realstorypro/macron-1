@@ -122,6 +122,10 @@ $w-nav-mobile-logo-padding: 0
     height: $w-nav-logo-height
     padding: $w-nav-logo-padding
     transition: $w-nav-down-transition
+    // hide desktop logos for mobile screens
+
+    @include media("<desktop")
+      display: none !important
 
 
   .mobile.logo.image
@@ -129,6 +133,10 @@ $w-nav-mobile-logo-padding: 0
     height: $w-nav-mobile-logo-height
     padding: $w-nav-mobile-logo-padding
     transition: $w-nav-down-transition
+
+    // hide mobile logos for screens desktop screens
+    @include media("≥desktop")
+      display: none !important
 
 .navigation.widget.mini
   border-bottom: $w-nav-mini-border
@@ -150,18 +158,6 @@ $w-nav-mobile-logo-padding: 0
 
   &.bordered.mini
     border-bottom: 0px solid rgba($black, 0)
-
-  // refactoring
-
-  // hide mobile logos for screens desktop screens
-  .mobile.logo.image
-    @include media("≥desktop")
-      display: none !important
-
-  // hide desktop logos for mobile screens
-  .desktop.logo.image
-    @include media("<desktop")
-      display: none !important
 
   // expanded classes
   &[class*="regular expanded"]
