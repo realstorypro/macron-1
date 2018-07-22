@@ -56,14 +56,6 @@ $w-nav-mobile-logo-padding: 0
         @else
           display: none
 
-@mixin regular_font()
-  i.icon
-    color: $black
-
-@mixin inverted_font()
-  i.icon
-    color: $white
-
 
 .navigation.widget
   position: fixed
@@ -165,29 +157,108 @@ $w-nav-mobile-logo-padding: 0
 
 // Style Variations
 .navigation.widget
-  &.regular
+  //&.regular
     @include regular_logo(show)
     @include inverted_logo(hide)
     @include regular_font
 
-  &.inverted
+  //&.inverted
     @include regular_logo(hide)
     @include inverted_logo(show)
     @include inverted_font
 
-  &.bordered
+  //&.bordered
     border-bottom: $s-white-border-color
 
-  @each $color in $g-colors-list
+  //@each $color in $g-colors-list
     &.#{$color}
       background: map-get($w-nav-colors-map, $color)
 
-  &.transparent:not(.mini), &.imaged:not(.mini)
+  //&.transparent:not(.mini), &.imaged:not(.mini)
     background: transparent !important
 
-  &.imaged:not(.mini)
+  //&.imaged:not(.mini)
     @include regular_logo(hide, true, false)
     @include inverted_logo(show, true, false)
 
+  // refactoring
+  @mixin regular_font()
+    i.icon
+      color: $black
+
+  @mixin inverted_font()
+    i.icon
+      color: $white
+
+  @mixin desktop_logo_regular($action)
+    .desktop.logo.image.normal
+      @if $action == show
+        display: block
+      @else
+        display: none
+
+  @mixin mobile_logo_regular($action)
+      @include media("<desktop")
+        @if $action == show
+          display: block
+        @else
+          display: none
+
+  @mixin desktop_logo_inverted($action)
+    .desktop.logo.image.inverted
+      @if $action == show
+        display: block
+      @else
+        display: none
+
+  @mixin mobile_logo_inverted($action)
+      @include media("<desktop")
+        @if $action == show
+          display: block
+        @else
+          display: none
+
+  // hide mobile logos for screens desktop screens
+  .mobile.logo.image
+    @include media("≥desktop")
+      display: none !important
+
+  // hide desktop logos for mobile screens
+  .desktop.logo.image
+    @include media("<desktop")
+      display: none !important
 
 
+  &[class*="regular expanded"]
+    @include desktop_logo_regular(show)
+    @include desktop_logo_inverted(hide)
+    @include regular_font
+
+  &[class*="inverted expanded"]
+    @include desktop_logo_regular(hide)
+    @include desktop_logo_inverted(show)
+    @include inverted_font
+
+  @each $color in $g-colors-list
+    &[class*="expanded #{$color}"]
+      background: map-get($w-nav-colors-map, $color)
+
+
+  @mixin collapsed_navigation
+    &[class*="regular collapsed"]
+    @include desktop_logo_regular(show)
+    @include desktop_logo_inverted(hide)
+    @include regular_font
+
+    &[class*="inverted collapsed"]
+      @include desktop_logo_regular(hide)
+      @include desktop_logo_inverted(show)
+      @include inverted_font
+
+    @each $color in $g-colors-list
+      &[class*="collapsed #{$color}"]
+        background: map-get($w-nav-colors-map, $color)
+
+
+  &.mini
+    @include collapsed_navigation

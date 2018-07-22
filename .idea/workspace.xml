@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/menu_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/menu_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/settings/theme.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/settings/theme.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -95,14 +91,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.61587983">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="navigation.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="625">
-                  <caret line="192" selection-start-line="192" selection-end-line="192" />
+                <state relative-caret-position="365">
+                  <caret line="223" column="29" selection-start-line="223" selection-start-column="29" selection-end-line="223" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -116,15 +112,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_navigation.html.slim" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="30" selection-start-column="30" selection-end-column="30" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -132,8 +119,17 @@
           <file leaf-file-name="menu_helper.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/helpers/menu_helper.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
-                  <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+                <state relative-caret-position="358">
+                  <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="grid.less" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/frontend/semantic/src/definitions/collections/grid.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-5891">
+                  <caret line="1427" column="5" selection-start-line="1427" selection-start-column="5" selection-end-line="1427" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -151,10 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>70%)</find>
-      <find>tiny</find>
-      <find>to bottom</find>
-      <find>to bottom left</find>
       <find>0.75))</find>
       <find>w-homepage-header-summary-color</find>
       <find>summary-color</find>
@@ -181,6 +173,10 @@
       <find>widget_item</find>
       <find>homepage_featured_items</find>
       <find>A</find>
+      <find>reversed</find>
+      <find>tablet</find>
+      <find>desktop</find>
+      <find>regular_font</find>
     </findStrings>
     <replaceStrings>
       <replace>gem</replace>
@@ -286,8 +282,8 @@
         <option value="$PROJECT_DIR$/app/views/page/home.html.slim" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme.rb" />
         <option value="$PROJECT_DIR$/core/views/settings/theme.yml" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" />
         <option value="$PROJECT_DIR$/app/helpers/menu_helper.rb" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass" />
       </list>
     </option>
   </component>
@@ -508,12 +504,12 @@
       <workItem from="1530818969639" duration="18546000" />
       <workItem from="1531089746787" duration="1162000" />
       <workItem from="1531260175764" duration="3915000" />
-      <workItem from="1532127211086" duration="10138000" />
+      <workItem from="1532127211086" duration="14654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305944000" />
+    <option name="totallyTimeSpent" value="310460000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,13 +584,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/views/settings/general.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/views/settings/contact.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -904,6 +893,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/semantic/src/definitions/collections/grid.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5891">
+          <caret line="1427" column="5" selection-start-line="1427" selection-start-column="5" selection-end-line="1427" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/menu_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -913,15 +916,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/navigation.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="192" selection-start-line="192" selection-end-line="192" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/menu_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        <state relative-caret-position="365">
+          <caret line="223" column="29" selection-start-line="223" selection-start-column="29" selection-end-line="223" selection-end-column="29" />
         </state>
       </provider>
     </entry>

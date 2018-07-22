@@ -47,16 +47,18 @@ module MenuHelper
   private
 
   def render_menu_class(menu_color, options={})
-    defaults = { bordered: false, transparent: false, imaged: false }
+    defaults = { expanded_color: 'white', collapsed_color: 'green', bordered: false, transparent: false, imaged: false }
     options = defaults.merge(options)
 
     rendering =  ActiveSupport::SafeBuffer.new
 
-    rendering << " imaged" if options[:imaged]
-    rendering << " transparent" if options[:transparent]
-    rendering << " bordered" if options[:bordered]
-    rendering << " #{inverted?(menu_color)}"
-    rendering << " #{menu_color}"
+    rendering << "#{inverted?(options[:expanded_color])} expanded #{options[:expanded_color]}"
+    rendering << " #{inverted?(options[:collapsed_color])} collapsed #{options[:collapsed_color]}"
+    # rendering << " imaged" if options[:imaged]
+    # rendering << " transparent" if options[:transparent]
+    # rendering << " bordered" if options[:bordered]
+    # rendering << " #{inverted?(menu_color)}"
+    # rendering << " #{menu_color}"
     rendering
   end
 end
