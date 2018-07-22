@@ -7,7 +7,9 @@ class MembersController < DisplayController
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
 
   def index
-    @entries = User.all.includes(:profile).order(:username).page params[:page]
+    # we're not offering an index view
+    # we want people to go to members if they try to hit it
+    redirect_to root_path
   end
 
   def show

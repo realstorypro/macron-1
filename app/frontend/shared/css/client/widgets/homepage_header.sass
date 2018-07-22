@@ -1,11 +1,3 @@
-// TODO: Refactor variables and cleanup variables.sass
-
-$w-homepage-header-tiny-image-height: 185px
-$w-homepage-header-tall-image-height: 619px
-
-$w-homepage_header-margin: 0 0 2em
-$w-homepage_header-content-padding: 2em
-
 .homepage.header.widget
   margin: $w-homepage_header-margin
 
@@ -15,7 +7,6 @@ $w-homepage_header-content-padding: 2em
 
   .item
     position: relative
-
 
     .image
       background-size: cover
@@ -97,7 +88,6 @@ $w-homepage_header-content-padding: 2em
     .header
       text-transform: uppercase
       font-size: $w-homepage-header-header-font-size
-      //color: $w-homepage-header-header-color
       @include media("<desktop")
         font-size: $w-homepage-header-tablet-header-font-size
       @include media("<tablet")
@@ -124,7 +114,6 @@ $w-homepage_header-content-padding: 2em
 
     .summary
       font-size: $w-homepage-header-summary-font-size
-      //color: $w-homepage-header-summary-color
       @include media("<desktop")
         font-size: $w-homepage-header-tablet-summary-font-size
       @include media("<tablet")
@@ -173,13 +162,12 @@ $w-homepage_header-content-padding: 2em
           font-size: 2.0em
         .sub.header
           font-size: 1em
-        .summary
 
   .overlay
     // Solid Color Generation
     @each $color in $g-colors-list
       &.#{$color}
-        background: rgba(map-get($g-colors-map, $color), .85)
+        background: rgba(map-get($w-homepage-header-colors-map, $color), .85)
 
         .header
           @if index($g-colors-regular, $color)
@@ -196,16 +184,16 @@ $w-homepage_header-content-padding: 2em
     // Gradient Color Generation
     @each $color in $g-colors-list
       &.gradient.#{$color}
-        background: linear-gradient(to bottom, rgba(map-get($g-colors-map, $color), 0.15), rgba(map-get($g-colors-map, $color), 0.85) 70%)
+        background: map-get($w-homepage-header-overlay-gradient-map, $color)
 
         &.tiny.#{$color}
-          background: linear-gradient(to bottom left, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75))
+          background: map-get($w-homepage-header-overlay-gradient-map-tiny, $color)
 
         &.small.#{$color}
-          background: linear-gradient(to bottom left, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75))
+          background: map-get($w-homepage-header-overlay-gradient-map-small, $color)
 
         &.short.#{$color}
-          background: linear-gradient(to bottom left, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75) 40%)
+          background: map-get($w-homepage-header-overlay-gradient-map-short, $color)
 
         &.tall.#{$color}
-          background: linear-gradient(to bottom, rgba(map-get($g-colors-map, $color), 0.65), rgba(map-get($g-colors-map, $color), 0.75) 40%)
+          background: map-get($w-homepage-header-overlay-gradient-map-tall, $color)

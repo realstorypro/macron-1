@@ -1,3 +1,5 @@
+@import 'variables/colors'
+
 // ********************** //
 //      --* Fonts *--    //
 // ********************** //
@@ -5,34 +7,11 @@
 $header-font-family: 'Releway', 'Helvetica Neue', Arial, Helvetica, sans-serif
 
 // ********************** //
-//      --* Colors *--    //
+//      --* Shared *--    //
 // ********************** //
 
-// Base
-$red            : #B03060
-$orange         : #FF8243
-$yellow         : #FFD700
-$olive          : #32CD32
-$green          : #21BA45
-$teal           : #008080
-$blue           : #2185D0
-$violet         : #EE82EE
-$purple         : #B413EC
-$pink           : #FF1493
-$brown          : #A52A2A
-$grey           : #A0A0A0
-$black          : #000000
-$white          : #FFFFFF
-
-// Shades
-$light-shading: rgba(0,0,0,0.01)
-$medium-shading: rgba(34, 36, 38, 0.15)
-
-// Color Lists
-$g-colors-list: orange violet grey white yellow red blue olive green teal purple pink brown black
-$g-colors-map: (red: $red, orange: $orange, yellow: $yellow, olive: $olive, green: $green, teal: $teal, blue: $blue, violet: $violet, purple: $purple, pink: $pink, brown: $brown, grey: $grey, black: $black, white: $white )
-$g-colors-regular: orange violet grey white yellow
-$g-colors-inverted: red blue olive green teal purple pink brown black
+// Used by menu & header on the white background to create separation
+$s-white-border-color: 2px solid rgba($black, 0.5)
 
 // ********************** //
 //      --* Layout *--    //
@@ -91,12 +70,6 @@ $f-action-bar-mobile-padding-top: 1.5em
 $f-action-bar-mobile-border-top: 1px solid rgba(34, 36, 38, .15)
 $f-action-bar-mobile-border-bottom: 1px solid rgba(34, 36, 38, .15)
 
-// Footer
-$f-footer-padding: 4em 0 3em
-$f-footer-mobile-padding: 4em 0 3em
-$f-footer-header-opacity: 0.95
-$f-footer-item-opacity: 0.9
-$f-footer-link-transition: 0.4s all
 
 // Header
 $f-header-padding-top: 5.5em
@@ -144,30 +117,6 @@ $f-content-mobile-padding-bottom: 4em
 //    --* Widgets *--     //
 // ********************** //
 
-// Navigation
-$w-navigation-z-index: 101
-$w-navigation-up-transition: all 1.1s
-$w-navigation-down-transition: all 0.8s
-$w-navigation-logo-up-transition: all 0.4s
-$w-navigation-logo-down-transition: all 0.3s
-$w-navigation-box-shadow: 0
-$w-navigation-background: rgba(255, 255, 255, .95)
-$w-navigation-border: 0
-
-$w-navigation-mini-box-shadow: 1px 1px 16px rgba(0,0,0,0.5)
-$w-navigation-mini-background: #fff
-$w-navigation-mini-border: 0
-
-$w-navigation-logo-width: 130px
-$w-navigation-logo-height: auto
-$w-navigation-logo-padding: 0 0
-
-$w-navigation-mobile-logo-width: 110px
-$w-navigation-mobile-logo-height: auto
-$w-navigation-mobile-logo-padding: 0
-
-$w-navigation-class-list: '.page.home .navigation.widget' '.page.privacy.policy .navigation.widget' '.page.terms.of.service .navigation.widget' '.articles.index .navigation.widget' '.videos.index .navigation.widget' '.discussions.index .navigation.widget' '.profile.show .navigation.widget' '.articles.show .navigation.widget' '.videos.show .navigation.widget' '.discussions.show .navigation.widget' '.verifications .navigation.widget' '.registrations .navigation.widget' '.sessions .navigation.widget' '.passwords .navigation.widget' '.after_signup .navigation.widget' '.exceptions .navigation.widget'
-$w-navigation-transparent-class-list: '.articles.show .navigation.widget' '.videos.show .navigation.widget' '.discussions.show .navigation.widget' '.verifications .navigation.widget' '.registrations .navigation.widget' '.sessions .navigation.widget' '.passwords .navigation.widget' '.after_signup .navigation.widget'
 
 // Sidebar
 $w-sidebar-width: 350px
@@ -195,23 +144,24 @@ $w-item-listing-mobile-image-height: 90px
 $w-table-listing-link-color: $black
 
 // Homepage Header
+$w-homepage_header-margin: 0 0 2em
+$w-homepage_header-content-padding: 2em
+
 $w-homepage-header-image-height: 450px
+$w-homepage-header-tiny-image-height: 185px
+$w-homepage-header-small-image-height: 209px
+$w-homepage-header-tall-image-height: 619px
+
 $w-homepage-header-tablet-image-height: 300px
 $w-homepage-header-mobile-image-height: 310px
-
-$w-homepage-header-small-image-height: 209px
-
-
 
 $w-homepage-header-overlay: rgba(0,0,0,0.8)
 $w-homepage-header-mobile-overlay: rgba(0,0,0,0.9)
 
-$w-homepage-header-header-color: $white
 $w-homepage-header-header-font-size: 1.77rem
 $w-homepage-header-tablet-header-font-size: 1.15em
 $w-homepage-header-mobile-header-font-size: 1.05em
 
-$w-homepage-header-summary-color: $white
 $w-homepage-header-summary-font-size: 1.2em
 $w-homepage-header-tablet-summary-font-size: 1.05em
 $w-homepage-header-mobile-summary-font-size: 1.05em

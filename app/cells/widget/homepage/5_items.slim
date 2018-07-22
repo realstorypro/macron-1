@@ -8,12 +8,12 @@
           = grid
             = row
               = column computer: 16, tablet: 8, mobile: 16
-                = widget_item @model[1], 'small', false
+                = widget_item @model[1], size: 'small', description: false
             = row
               = column computer: 16, tablet: 8, mobile: 16
-                = widget_item @model[2], 'small', false
+                = widget_item @model[2], size: 'small', description: false
       = row
         = column computer: 8, tablet: 8, mobile: 16, class: 'margined'
-          = widget_item @model[3], 'short', false, 'landscape'
+          = widget_item @model[3], size: 'short', description: false, image: 'landscape'
         = column computer: 8, tablet: 8, mobile: 16
-          = widget_item @model[4], 'short', false, 'landscape'
+          = widget_item @model[4], size: 'short', description: false, image: 'landscape'
