@@ -36,7 +36,7 @@ class Richtext
       minHeight: '300px'
       uploadcare:
         buttonIconEnabled: true,
-        publicKey: 'f84e9ab7fe974381ac89'
+        publicKey: '0a21efa3fc2174ed24f0'
 
     $R 'textarea.rich'
 
