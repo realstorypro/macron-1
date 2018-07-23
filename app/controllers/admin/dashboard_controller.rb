@@ -10,8 +10,8 @@ module Admin
     layout "layouts/admin"
 
     def index
-      @start_date = Date.strptime(params["start"], '%m/%d/%Y') if params["start"]
-      @end_date = Date.strptime(params["end"], '%m/%d/%Y') if params["end"]
+      @start_date = Date.strptime(params["start"], "%m/%d/%Y") if params["start"]
+      @end_date = Date.strptime(params["end"], "%m/%d/%Y") if params["end"]
 
       @end_date = Date.today.at_end_of_month if @end_date.nil?
       @start_date = Date.today.at_beginning_of_month if @start_date.nil?
@@ -29,6 +29,15 @@ module Admin
                                      .where(started_at: @start_date..@end_date)
                                      .group_by_day("started_at").count
 
+      visitor_last_month_trend = Ahoy::Visit
+                                     .where(started_at: @start_date..@end_date)
+                                     .group_by_day("started_at").count
+
+      @total_visitors_last_month = []
+      visitor_last_month_trend.each do |visitor|
+        @total_visitors_last_month  << [ visitor[0], (@previous_visitors_this_month/ @date_range).round(0) ]
+      end
+
       @new_users = User.where(created_at: @start_date..@end_date).count
       @previous_new_users = User.where(created_at: @previous_start_date..@previous_end_date).count
 
@@ -40,14 +49,16 @@ module Admin
                               .group_by_day("created_at").count
 
       @new_clicks = Ahoy::Event.where(name: "Clicked Link", time: @start_date..@end_date).count
-      @previous_new_clicks = Ahoy::Event.where(name: "Clicked Link", time: @previous_start_date..@previous_end_date).count
+      @previous_new_clicks = Ahoy::Event.where(name: "Clicked Link",
+                                               time: @previous_start_date..@previous_end_date).count
 
 
       @subscriptions_created = Ahoy::Event
                          .where(name: "Subscription Created", time: @start_date..@end_date).count
 
       @previous_subscriptions_created = Ahoy::Event
-                                   .where(name: "Subscription Created", time: @previous_start_date..@previous_end_date).count
+                                   .where(name: "Subscription Created",
+                                          time: @previous_start_date..@previous_end_date).count
 
 
       # Conversion Calculations

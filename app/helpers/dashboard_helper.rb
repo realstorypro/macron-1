@@ -19,9 +19,9 @@ module DashboardHelper
 
   def stat_icon(current, previous)
     if current >= previous
-      icon('green up double angle mini')
+      icon("green up double angle mini")
     else
-      icon('red down double angle mini')
+      icon("red down double angle mini")
     end
   end
 
