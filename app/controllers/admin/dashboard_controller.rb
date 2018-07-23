@@ -37,7 +37,7 @@ module Admin
 
       @total_visitors_last_month = []
       visitor_last_month_trend.each do |visitor|
-        @total_visitors_last_month  << [ visitor[0], (@previous_visitors_this_month/ @date_range).round(0) ]
+        @total_visitors_last_month << [ visitor[0], (@previous_visitors_this_month / @date_range).round(0) ]
       end
 
       # Graph End
