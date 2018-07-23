@@ -23,28 +23,27 @@ class Daterange
   setup: () ->
     utils.log 'setup', 'setup()', 'daterange'
 
-    start = moment().subtract(29, 'days')
-    end = moment()
+    #start = moment().subtract(29, 'days')
+    #end = moment()
+    
+    input_value = $('input.daterange').val().split(' ')
+
+    start_date = input_value[0]
+    end_date = input_value[2]
 
     cb = (start, end) ->
       $('input.daterange span').html start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY')
+      Turbolinks.visit "/admin/?start=#{start.format('l')}&end=#{end.format('l')}"
+
 
     $('input.daterange').daterangepicker {
       buttonClasses: "ui button",
       applyButtonClasses: "ui button primary",
       cancelClass: "ui button"
-      startDate: start
-      endDate: end
+      startDate: start_date
+      endDate: end_date
       opens: "left"
       ranges:
-        'Today': [
-          moment()
-          moment()
-        ]
-        'Yesterday': [
-          moment().subtract(1, 'days')
-          moment().subtract(1, 'days')
-        ]
         'Last 7 Days': [
           moment().subtract(6, 'days')
           moment()
@@ -62,7 +61,6 @@ class Daterange
           moment().subtract(1, 'month').endOf('month')
         ]
     }, cb
-    cb start, end
 
 
 
