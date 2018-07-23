@@ -25,7 +25,7 @@ class Daterange
 
     #start = moment().subtract(29, 'days')
     #end = moment()
-    
+
     input_value = $('input.daterange').val().split(' ')
 
     start_date = input_value[0]

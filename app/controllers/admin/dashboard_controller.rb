@@ -16,16 +16,24 @@ module Admin
       @end_date = Date.strptime(params["end"], '%m/%d/%Y') if params["end"]
       @end_date = Date.today.at_beginning_of_month if @end_date.nil?
 
+      @date_range = (@end_date - @start_date).to_i
+
+      @previous_start_date = @start_date - @date_range
+      @previous_end_date = @end_date - @date_range
+
 
       @visitors_this_month = Ahoy::Visit.where(started_at: @start_date..@end_date).count
+      @previous_visitors_this_month = Ahoy::Visit.where(started_at: @previous_start_date..@previous_end_date).count
 
       @visitors_this_month_grouped = Ahoy::Visit
                                      .where(started_at: @start_date..@end_date)
                                      .group_by_day("started_at").count
 
       @new_users = User.where(created_at: @start_date..@end_date).count
+      @previous_new_users = User.where(created_at: @previous_start_date..@previous_end_date).count
 
       @new_comments = Comment.where(created_at: @start_date..@end_date).count
+      @previous_new_comments = Comment.where(created_at: @previous_start_date..@previous_end_date).count
 
       @new_comments_grouped = Comment
                               .where(created_at: @start_date..@end_date)
@@ -47,6 +55,9 @@ module Admin
 
       @subscriptions_created = Ahoy::Event
                          .where(name: "Subscription Created", time: @start_date..@end_date).count
+
+      @previous_subscriptions_created = Ahoy::Event
+                                   .where(name: "Subscription Created", time: @previous_start_date..@previous_end_date).count
 
 
       # Conversion Calculations
