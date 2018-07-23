@@ -23,9 +23,6 @@ class Daterange
   setup: () ->
     utils.log 'setup', 'setup()', 'daterange'
 
-    #start = moment().subtract(29, 'days')
-    #end = moment()
-
     input_value = $('input.daterange').val().split(' ')
 
     start_date = input_value[0]

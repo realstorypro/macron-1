@@ -1,91 +1,84 @@
 = component 'dashboard'
   = container
     = grid
-      = row
-        = column computer: 8, tablet: 8, mobile: 16
-          = h5 text: 'Key Metrics'
-          // = "date range #{@date_range}"
-          // br
-          // = "start date #{@start_date}"
-          // br
-          // = "previous start date #{@previous_start_date}"
-          // br
-          // = "end date #{@end_date}"
-          // br
-          // = "previous end date #{@previous_end_date}"
-          = divider
-          = segment 'padded'
 
-            = statistics 'two small'
-              = statistic stat_color(@new_users, @previous_new_users)
-                .value
-                  = "#{@new_users}"
-                  = stat_icon(@new_users, @previous_new_users)
-                .label New Users
-              = statistic stat_color(@new_comments, @previous_new_comments)
-                .value
-                  = "#{@new_comments}"
-                  = stat_icon(@new_comments, @previous_new_comments)
-                .label New Comments
-
-            br
-            br
-
-            = statistics 'two small'
-              = statistic stat_color(@visitors_this_month, @previous_visitors_this_month)
-                .value
-                  = "#{@visitors_this_month}"
-                  = stat_icon(@visitors_this_month, @previous_visitors_this_month)
-                .label New Visitors
-              = statistic stat_color(@subscriptions_created, @previous_subscriptions_created)
-                .value
-                  = @subscriptions_created
-                  = stat_icon(@subscriptions_created, @previous_subscriptions_created)
-                .label New Subscribers
-
-        = column computer: 8, tablet: 8, mobile: 16, class: ''
-          = h5 text: 'Conversion Rates'
-          = divider
-          = segment 'padded'
-
-            = statistics 'two small'
-              = statistic statistic_class(@visitors_to_users)
-                .value= number_to_percentage( @visitors_to_users , precision: 1)
-                .label to user
-
-              = statistic statistic_class(@visitors_to_comment)
-                .value= number_to_percentage(@visitors_to_comment  , precision: 1)
-                .label to comment
-            br
-            br
-
-            = statistics 'two small red'
-              = statistic statistic_class(@visitors_to_subscriber)
-                .value= "#{number_to_percentage(@visitors_to_subscriber, precision: 1)}"
-                .label to subscriber
-              = statistic statistic_class(@visitors_to_click)
-                .value= number_to_percentage(@visitors_to_click, precision: 1)
-                .label to ad click
-
-      = divider
       = row
         = column computer: 16, tablet: 8, mobile: 16
-          = h5 text: 'New Visitors'
+          = h5 text: 'Visitor Flow'
           = divider
-          = area_chart @visitors_this_month_grouped, colors: ['#21BA45'], points: false, height: '300px'
+          = area_chart @visitors_this_month_grouped, colors: ['#21BA45'], points: true, height: '280px'
           = divider
+
 
       = row
-
-        = column computer: 8, tablet: 8, mobile: 16, class: 'middle aligned'
-          = h5 text: 'Content Views'
+        = column computer: 16, tablet: 16, mobile: 16
+          = h5 text: 'Key Metrics'
           = divider
-          = column_chart({ 'Articles': @article_views,
-                  'Discussions ': @discussion_views,
-                  'Videos ': @video_views},
-                  height: '350px', colors: ['#B03060'])
+          = statistics 'tiny'
+            = statistic stat_color(@new_users, @previous_new_users)
+              .value
+                = stat_icon(@new_users, @previous_new_users)
+                = @new_users
+                .stater class=stat_color(@new_users, @previous_new_users)
+                  = stat_counter(@new_users, @previous_new_users)
+              .label New Users
 
-        = column computer: 8, tablet: 8, mobile: 16
-          = h5 text: 'Comment Flow'
+            = statistic stat_color(@new_comments, @previous_new_comments)
+              .value
+                = stat_icon(@new_comments, @previous_new_comments)
+                = @new_comments
+                .stater class=stat_color(@new_comments, @previous_new_comments)
+                  = stat_counter(@new_comments, @previous_new_comments)
+              .label New Comments
+
+            = statistic stat_color(@subscriptions_created, @previous_subscriptions_created)
+              .value
+                = stat_icon(@subscriptions_created, @previous_subscriptions_created)
+                = @subscriptions_created
+                .stater class=stat_color(@subscriptions_created, @previous_subscriptions_created)
+                  = stat_counter(@subscriptions_created, @previous_subscriptions_created)
+              .label New Subscribers
+
+            = statistic stat_color(@visitors_this_month, @previous_visitors_this_month)
+              .value
+                = stat_icon(@visitors_this_month, @previous_visitors_this_month)
+                = @visitors_this_month
+                .stater class=stat_color(@visitors_this_month, @previous_visitors_this_month)
+                  = stat_counter(@visitors_this_month, @previous_visitors_this_month)
+              .label New Visitors
+
+        = column computer: 16, tablet: 16, mobile: 16
+          = h5 text: 'Visitor Conversion'
           = divider
-          = area_chart @new_comments_grouped, label: 'Comments', height: '350px', colors: ['#B03060'], points: false
+          = statistics 'tiny'
+            = statistic stat_color(@visitors_to_users, @previous_visitors_to_users )
+              .value
+                = stat_icon(@visitors_to_users, @previous_visitors_to_users)
+                = number_to_percentage( @visitors_to_users , precision: 2)
+                .stater class=stat_color(@visitors_to_users, @previous_visitors_to_users)
+                  = stat_counter(@visitors_to_users, @previous_visitors_to_users, true)
+              .label to user
+
+            = statistic stat_color(@visitors_to_comment, @previous_visitors_to_comment)
+              .value
+                = stat_icon(@visitors_to_comment, @previous_visitors_to_comment)
+                = number_to_percentage(@visitors_to_comment  , precision: 2)
+                .stater class=stat_color(@visitors_to_comment, @previous_visitors_to_comment)
+                  = stat_counter(@visitors_to_comment, @previous_visitors_to_comment, true)
+              .label to comment
+
+            = statistic stat_color(@visitors_to_subscriber, @previous_visitors_to_subscriber )
+              .value
+                = stat_icon(@visitors_to_subscriber, @previous_visitors_to_subscriber)
+                = "#{number_to_percentage(@visitors_to_subscriber, precision: 2)}"
+                .stater class=stat_color(@visitors_to_subscriber, @previous_visitors_to_subscriber)
+                  = stat_counter(@visitors_to_subscriber, @previous_visitors_to_subscriber, true)
+              .label to subscriber
+
+            = statistic stat_color(@visitors_to_click, @previous_visitors_to_click)
+              .value
+                = stat_icon(@visitors_to_click, @previous_visitors_to_click)
+                = number_to_percentage(@visitors_to_click, precision: 2)
+                .stater class=stat_color(@visitors_to_click, @previous_visitors_to_click)
+                  = stat_counter(@visitors_to_click, @previous_visitors_to_click, true)
+              .label to ad click
