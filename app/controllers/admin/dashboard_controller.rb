@@ -25,6 +25,8 @@ module Admin
       @visitors_this_month = Ahoy::Visit.where(started_at: @start_date..@end_date).count
       @previous_visitors_this_month = Ahoy::Visit.where(started_at: @previous_start_date..@previous_end_date).count
 
+      # Graph Start
+
       @visitors_this_month_grouped = Ahoy::Visit
                                      .where(started_at: @start_date..@end_date)
                                      .group_by_day("started_at").count
@@ -37,6 +39,8 @@ module Admin
       visitor_last_month_trend.each do |visitor|
         @total_visitors_last_month  << [ visitor[0], (@previous_visitors_this_month/ @date_range).round(0) ]
       end
+
+      # Graph End
 
       @new_users = User.where(created_at: @start_date..@end_date).count
       @previous_new_users = User.where(created_at: @previous_start_date..@previous_end_date).count
