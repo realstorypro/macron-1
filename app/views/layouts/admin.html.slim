@@ -37,6 +37,7 @@ html
                                   actions: @actions,
                                   show: :buttons,
                                   icons: true) if @actions.present?
+                          == Admin::DateRangeCell.(nil, start_date: @start_date, end_date: @end_date, site_settings: @site_settings) if controller_name == 'dashboard'
                     == yield
 
     = render 'layouts/partials/loading_js'

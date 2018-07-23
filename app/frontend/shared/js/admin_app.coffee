@@ -11,6 +11,7 @@ import Crud from './widgets/crud'
 import Checkbox from './widgets/checkbox'
 import Dropdown from './widgets/dropdown'
 import Datepicker from './widgets/datepicker'
+import Daterange from './widgets/daterange'
 import Clicker from './widgets/clicker'
 import Multiselect from './widgets/multiselect'
 import Richtext from './widgets/richtext'
@@ -40,6 +41,7 @@ crud = new Crud
 checkbox = new Checkbox
 dropdown = new Dropdown
 datepicker = new Datepicker
+daterange = new Daterange
 clicker = new Clicker
 multiselect = new Multiselect
 richtext = new Richtext
@@ -72,6 +74,7 @@ class App
     checkbox.setup()
     dropdown.setup()
     datepicker.setup()
+    daterange.setup()
     clicker.setup()
     multiselect.setup()
     richtext.setup()
@@ -85,6 +88,7 @@ class App
     checkbox.teardown()
     dropdown.teardown()
     datepicker.teardown()
+    daterange.teardown()
     clicker.teardown()
     multiselect.teardown()
     richtext.teardown()
