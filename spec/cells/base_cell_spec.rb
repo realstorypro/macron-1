@@ -43,6 +43,7 @@ describe Admin::BaseCell, type: "feature" do
 
   describe "rendering methods" do
     before :each do
+      FactoryBot.create(:article)
       @article = Article.last
     end
 

@@ -11,8 +11,8 @@ class Entry < ApplicationRecord
   validates :slug, uniqueness: { scope: :type, allow_blank: true }
   scope :published, (-> { all.where.not(published_date: nil) })
 
-  after_update :ping_sitemap
-  after_create :ping_sitemap
+  after_update :ping_sitemap unless Rails.env.test?
+  after_create :ping_sitemap unless Rails.env.test?
 
   has_many :comments, as: :commentable
 
