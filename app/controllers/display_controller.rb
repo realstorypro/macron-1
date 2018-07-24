@@ -32,7 +32,7 @@ class DisplayController < MetaController
 
 
     def find_related_content
-      # code here
+      @related_content = Entry.joins(:tags).where(tags: {id: @entry.tags.map(&:id) }).limit(5)
     end
 
     def record_view
