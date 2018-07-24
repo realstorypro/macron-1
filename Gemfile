@@ -6,7 +6,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.3.1"
 
 # Core
-gem "fog-aws"
 gem "rails", "~> 5.2.0"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "puma", "~> 3.11"
@@ -18,6 +17,7 @@ gem "config"
 gem "erubis"
 gem "friendly_id", "~> 5.1.0"
 gem "wicked"
+gem "sidekiq"
 
 # Analytics
 gem "ahoy_matey"
@@ -72,7 +72,6 @@ gem "readingtime"
 gem "webpacker", "~> 3.0"
 
 # File Upload
-# gem "uploadcare-rails"
 gem "uploadcare-rails", "~> 1.1"
 gem "fog-aws"
 
