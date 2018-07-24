@@ -1,6 +1,6 @@
 defaults: &defaults
-  public_key: <%= ENV["UPLOADCARE_PUBLIC_KEY"] %>
-  private_key: <%= ENV["UPLOADCARE_PRIVATE_KEY"] %>
+  public_key: 1746328d83a7cbb5d3a3
+  private_key: 1f12e58399ceba2c1388
 
 development:
   <<: *defaults
@@ -10,5 +10,6 @@ test:
   autostore: false
 
 production:
-  <<: *defaults
+  public_key: <%= ENV["UPLOADCARE_PUBLIC_KEY"] %>
+  private_key: <%= ENV["UPLOADCARE_PRIVATE_KEY"] %>
 
