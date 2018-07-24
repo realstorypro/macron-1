@@ -6,7 +6,7 @@
         = column computer: 16, tablet: 8, mobile: 16
           = h5 text: 'Visitor Flow'
           = divider
-          = area_chart [{name: 'Visitors Month', data: @visitors_this_month_grouped}, {name: 'Previous Period Average', data: @total_visitors_last_month}], colors: ['#21BA45', '#FF8243'], points: true, legend: false, height: '280px'
+          = area_chart [{name: 'Visitors', data: @visitors_this_month_grouped}, {name: 'Previous Period Average', data: @total_visitors_last_month}], colors: ['#21BA45', '#FF8243'], points: true, legend: false, height: '280px'
           = divider
 
       = row
