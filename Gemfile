@@ -47,6 +47,7 @@ gem "store_base_sti_class"
 
 # Authentication
 gem "devise"
+gem "devise-async"
 gem "rolify"
 gem "pundit"
 
