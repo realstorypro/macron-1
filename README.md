@@ -1,6 +1,7 @@
 ## AQUARIUS
-
 ![macron1](https://user-images.githubusercontent.com/433219/40011503-dbe773e4-575c-11e8-9c2c-dbb35c84dc1c.jpeg) 
+> It may be no crime to be possessed of great power. But great power carries with it great responsibility as to the use that is made of it.
+
 
 ## Running It
 ```bash
