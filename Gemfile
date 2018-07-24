@@ -9,7 +9,7 @@ ruby "2.3.1"
 gem "rails", "~> 5.2.0"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "puma", "~> 3.11"
-gem 'sitemap_generator'
+gem "sitemap_generator"
 gem "httparty"
 gem "validate_url"
 gem "chronic"
@@ -40,7 +40,7 @@ gem "iso_country_codes"
 # gem "rack-mini-profiler"
 
 # Pagination
-gem "kaminari"
+gem "kaminari", "~> 1.1.1"
 
 # Active Record
 gem "store_base_sti_class"

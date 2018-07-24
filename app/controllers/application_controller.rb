@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   include SettingsHelper
 
   before_action :store_user_location!, if: :storable_location?
+  layout :layout_by_resource
 
   # TODO: enable 2fa under aquarius refactor
   # before_action :after_sign_in, unless: :devise_controller? || current_user.nil?
@@ -61,6 +62,14 @@ class ApplicationController < ActionController::Base
             !devise_controller? &&
             !(request.controller_class == AfterSignupController) &&
             !request.xhr?
+      end
+
+      def layout_by_resource
+        if devise_controller?
+          "auth"
+        else
+          "client"
+        end
       end
 
       def store_user_location!
