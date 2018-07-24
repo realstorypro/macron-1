@@ -1,10 +1,16 @@
-## AQUARIUS1.TECH
+## AQUARIUS
 
 ![macron1](https://user-images.githubusercontent.com/433219/40011503-dbe773e4-575c-11e8-9c2c-dbb35c84dc1c.jpeg) 
 
 ## Running It
 ```bash
-  foreman s
+foreman s
+```
+
+## Background Jobs in Development
+Make sure to ride sidekiq locally
+```bash
+foreman run sidekiq -C config/sidekiq.yml --verbose
 ```
 
 ## Mail in Development
