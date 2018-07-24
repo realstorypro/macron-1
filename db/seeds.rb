@@ -9,5 +9,6 @@ if User.find_by_email("support@idealogic.io").nil?
   user.password = password
   user.password_confirmation = password
   user.add_role "admin"
+  user.confirm
   user.save!
 end

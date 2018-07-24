@@ -68,7 +68,7 @@ class ApplicationController < ActionController::Base
         if devise_controller?
           "auth"
         else
-          "application"
+          "client"
         end
       end
 
