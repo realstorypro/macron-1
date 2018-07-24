@@ -9,7 +9,7 @@ ruby "2.3.1"
 gem "rails", "~> 5.2.0"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "puma", "~> 3.11"
-gem 'sitemap_generator'
+gem "sitemap_generator"
 gem "httparty"
 gem "validate_url"
 gem "chronic"
