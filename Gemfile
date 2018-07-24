@@ -40,7 +40,7 @@ gem "iso_country_codes"
 # gem "rack-mini-profiler"
 
 # Pagination
-gem "kaminari"
+gem "kaminari", "~> 1.1.1"
 
 # Active Record
 gem "store_base_sti_class"
