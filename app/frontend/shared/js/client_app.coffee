@@ -21,6 +21,7 @@ import NavigationButtons from './vue/navigation_buttons'
 import Sidenav from './vue/sidenav'
 import Newsletter from './vue/newsletter'
 import Video from './vue/video'
+import Audio from './vue/audio'
 import Cover from './vue/cover'
 import SocialSharing from './vue/social_sharing'
 
@@ -51,6 +52,7 @@ navigation_buttons = new NavigationButtons
 sidenav = new Sidenav
 newsletter = new Newsletter
 video = new Video
+audio = new Audio
 cover = new Cover
 social_sharing = new SocialSharing
 

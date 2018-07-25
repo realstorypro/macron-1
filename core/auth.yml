@@ -131,6 +131,8 @@ auth:
         all:
       videos:
         all:
+      podcasts:
+        all:
       categories:
         read:
       tags:
@@ -156,6 +158,8 @@ auth:
       discussions:
         all:
       videos:
+        all:
+      podcasts:
         all:
       advertisements:
         all:

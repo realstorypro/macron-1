@@ -14,6 +14,10 @@ menu:
         path: videos
         enabled: true
 
+      - name: Podcasts
+        path: podcasts
+        enabled: true
+
       - name: Discussions
         path: discussions
         enabled: true
@@ -55,13 +59,19 @@ menu:
         icon: video
         enabled: true
 
+      - name: Podcasts
+        component: podcasts
+        path: admin_podcasts
+        icon: podcast
+        enabled: true
+
       - name: Discussions
         component: discussions
         path: admin_discussions
         icon: comments outline
         enabled: true
 
-      - name: Advertisements
+      - name: Native Ads
         component: advertisements
         path: admin_advertisements
         icon: audio description

@@ -13,6 +13,7 @@ class Category < ApplicationRecord
   has_many :discussions
   has_many :articles
   has_many :videos
+  has_many :podcasts
 
   def self.policy_class
     MetaPolicy

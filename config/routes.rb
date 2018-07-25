@@ -50,6 +50,10 @@ Rails.application.routes.draw do
   get "videos/:category", to: "videos#index", as: "video_category", component: "videos"
   get "videos/:category/:id", to: "videos#show", as: "video_details", component: "videos"
 
+  resources :podcasts, component: "podcasts", only: %i[index]
+  get "podcasts/:category", to: "podcasts#index", as: "podcast_category", component: "podcasts"
+  get "podcasts/:category/:id", to: "podcasts#show", as: "podcast_details", component: "podcasts"
+
   post "newsletter/subscribe/", to: "newsletter#subscribe"
 
   # Comments API
@@ -71,6 +75,7 @@ Rails.application.routes.draw do
     resources :articles, component: "articles"
     resources :discussions, component: "discussions"
     resources :videos, component: "videos"
+    resources :podcasts, component: "podcasts"
     resources :advertisements, component: "advertisements"
     resources :tags, component: "tags"
     resources :categories, component: "categories"

@@ -58,6 +58,18 @@ tests:
         - update
         - destroy
 
+    - component: podcasts
+      implementation: false
+      admin : true
+      frontend: false
+      actions:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - destroy
+
     - component: advertisements
       implementation: true
       admin : true
