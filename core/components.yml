@@ -105,9 +105,16 @@ components:
 
   videos:
     name: 'Videos'
-    description: 'Provides project capabilities'
+    description: 'Provides video capabilities'
     klass: 'Video'
     path: 'videos'
+    enabled: true
+
+  podcasts:
+    name: 'Podcasts'
+    description: 'Provides podcasting capabilities'
+    klass: 'Podcast'
+    path: 'podcasts'
     enabled: true
 
   profile:

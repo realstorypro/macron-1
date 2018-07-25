@@ -1,0 +1,27 @@
+= component 'podcast details'
+  = fragment "header #{@entry.category.color.name}"
+    = container
+      = grid
+        = column computer: 16, tablet: 16, mobile: 16
+          = h3 'breadcrumb'
+            .ui.breadcrumb.large
+              .section = link_to 'Podcasts', podcasts_path
+              = divider text: '/'
+              .section = link_to params[:category].capitalize, podcast_category_path(params[:category])
+          = h1
+            = @entry.long_title
+          = list 'relaxed horizontal meta'
+            = item
+              = icon 'clock'
+              = content
+                = header ui: :off, text: 'Reading Time'
+                = @entry.body.reading_time
+            = item
+              = icon 'comments'
+              = content
+                = header ui: :off, text: 'Replies'
+                = @entry.comments.count
+          .embed
+            = @entry.embedded_audio.html_safe
+
+  = render 'partials/show_content'

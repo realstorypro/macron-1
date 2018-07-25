@@ -1,0 +1,59 @@
+views:
+  podcasts:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+        maxlength: '70'
+        hint: 'Limited to 70 characters'
+      description:
+        label: 'Short Summary'
+        type: 'text'
+        maxlength: '160'
+        hint: 'Limited to 160 characters'
+      category:
+        label: 'Category'
+        type: 'dropdown'
+      tags:
+        label: 'Tags'
+        type: 'association'
+      published_date:
+        label: 'Published Date'
+        type: 'datepicker'
+
+      media_header:
+        type: 'header'
+        text: 'Media'
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image'
+        size: ['2048','1024']
+      card_image:
+        label: 'Card Image'
+        type: 'image'
+        size: ['1100','900']
+      image_alt:
+        label: 'Image Description'
+        type: 'string'
+        maxlength: '40'
+        hint: 'Limited to 40 characters'
+      audio:
+        label: 'Audio'
+        type: 'string'
+        hint: 'Souncloud URL'
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+      body:
+        label: 'Podcast Body'
+        type: 'rich'
+

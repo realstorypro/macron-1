@@ -14,6 +14,10 @@ menu:
         path: videos
         enabled: true
 
+      - name: Podcasts
+        path: podcasts
+        enabled: true
+
       - name: Discussions
         path: discussions
         enabled: true
@@ -53,6 +57,12 @@ menu:
         component: videos
         path: admin_videos
         icon: video
+        enabled: true
+
+      - name: Podcasts
+        component: podcasts
+        path: admin_podcasts
+        icon: podcast
         enabled: true
 
       - name: Discussions

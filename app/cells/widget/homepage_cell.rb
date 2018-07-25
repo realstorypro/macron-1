@@ -37,6 +37,8 @@ module Widget
         raw("#{icon('newspaper outline')}")
       elsif item.type == "Video"
         raw("#{icon('video')}")
+      elsif item.type == "Podcast"
+        raw("#{icon('podcast')}")
       end
     end
 
@@ -45,6 +47,8 @@ module Widget
         url_helpers.article_details_path(item.category.slug, item.slug)
       elsif item.type == "Video"
         url_helpers.video_details_path(item.category.slug, item.slug)
+      elsif item.type == "Podcast"
+        url_helpers.podcast_details_path(item.category.slug, item.slug)
       end
     end
 
