@@ -47,6 +47,6 @@
               = grid
                 = row
                   = column computer: 16, tablet: 8, mobile: 16
-                    == Widget::DiscussionCell.(@related_discussions, layout: :related, header: false, category: true) unless @related_discussions.nil?
+                    == Widget::RelatedCell.(@related_content, layout: :sidebar, header: false, category: true, icon: true) unless @related_content.nil?
                   = column computer: 16, tablet: 8, mobile: 16
                     == Widget::AdvertisingCell.(@ads, layout: :sidebar) unless @ads.nil? || @ads.count == 0

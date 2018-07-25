@@ -32,7 +32,10 @@ class DisplayController < MetaController
 
 
     def find_related_content
-      @related_content = Entry.joins(:tags).where(tags: {id: @entry.tags.map(&:id) }).limit(5)
+      taggings = Tagging.where( tag_id: @entry.tags.map(&:id), taggable_type: %w(Article Video Discussion) ).where.not(taggable_id: @entry.id)
+      content_ids = taggings.map(&:taggable_id)
+      @related_content = Entry.where(id: content_ids)
+      @related_content = @related_content.limit(8)
     end
 
     def record_view
