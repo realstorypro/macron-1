@@ -7,11 +7,11 @@ module Widget
       options = defaults.merge(options)
 
       if item.type == "Article"
-        icon("#{options[:style]} newspaper outline #{options[:contrast]} #{options[:size]} #{item.category.color.name}")
+        icon("#{options[:style]} newspaper outline #{options[:contrast]} #{options[:size]}")
       elsif item.type == "Video"
-        icon("#{options[:style]} video #{options[:contrast]} #{options[:size]} #{item.category.color.name}")
+        icon("#{options[:style]} video #{options[:contrast]} #{options[:size]}")
       elsif item.type == "Discussion"
-        icon("#{options[:style]} comments #{options[:contrast]} #{options[:size]} #{item.category.color.name}")
+        icon("#{options[:style]} comments #{options[:contrast]} #{options[:size]}")
       end
     end
 
