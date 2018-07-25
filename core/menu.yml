@@ -71,7 +71,7 @@ menu:
         icon: comments outline
         enabled: true
 
-      - name: Advertisements
+      - name: Native Ads
         component: advertisements
         path: admin_advertisements
         icon: audio description

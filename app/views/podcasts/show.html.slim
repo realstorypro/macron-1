@@ -21,7 +21,7 @@
               = content
                 = header ui: :off, text: 'Replies'
                 = @entry.comments.count
-          .embed
-            = @entry.embedded_audio.html_safe
+          = column computer: 12, tablet: 16, mobile: 16
+            == Vue::AudioCell.(nil, url: @entry.embedded_audio)
 
   = render 'partials/show_content'

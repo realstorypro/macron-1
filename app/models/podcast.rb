@@ -15,7 +15,7 @@ class Podcast < Entry
                         :long_title,
                         :body, :category, :description
 
-  validates :audio , url: true
+  validates :audio, url: true
   validate :approved_audio_provider
   paginates_per 5
 
@@ -42,20 +42,20 @@ class Podcast < Entry
   private
     def play_button_color(color)
       color_map = {
-          red: 'B03060',
-          orange: 'FF8243',
-          yellow: 'FFD700',
-          olive: '32CD32',
-          green: '21BA45',
-          teal: '008080',
-          blue: '2185D0',
-          violet: 'EE82EE',
-          purple: 'B413EC',
-          pink: 'FF1493',
-          brown: 'A52A2A',
-          grey: 'A0A0A0',
-          black: '666666',
-          white: '000000'
+          red: "B03060",
+          orange: "FF8243",
+          yellow: "FFD700",
+          olive: "32CD32",
+          green: "21BA45",
+          teal: "008080",
+          blue: "2185D0",
+          violet: "EE82EE",
+          purple: "B413EC",
+          pink: "FF1493",
+          brown: "A52A2A",
+          grey: "A0A0A0",
+          black: "666666",
+          white: "000000"
       }
       color_map[color.to_sym]
     end
