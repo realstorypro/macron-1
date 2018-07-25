@@ -52,6 +52,8 @@ module MenuHelper
           menu_class(expanded_color: category_color, collapsed_color: category_color, transparent: true)
         end
       end
+    elsif %w[members profile].include?(controller_name)
+      menu_class(transparent: false , expanded_color: "black", collapsed_color: menu_color)
     elsif %w[sessions registrations passwords confirmations].include?(controller_name)
       # auth fullscreen image option
       # we want to have an inverted logo that's why we're passing the *expanded_color: black*
