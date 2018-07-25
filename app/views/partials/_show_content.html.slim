@@ -1,0 +1,24 @@
+= fragment 'content'
+  = container
+    = grid
+      = row
+        = column computer: 12, tablet: 16, mobile: 16
+          == Vue::SocialSharingCell.(nil)
+          = widget 'normal rich text'
+            = @entry.body.html_safe
+
+= fragment 'secondary'
+  = container
+    = grid
+      = row
+        = column computer: 11, tablet: 16, mobile: 16
+          == Widget::CommentCell.(@entry, layout: :version_1, user: current_user, support_email: ss(:email), component: params[:component])
+        = column computer: 5, tablet: 16, mobile: 16
+          = fragment 'sidebar'
+            = container
+              = grid
+                = row
+                  = column computer: 16, tablet: 8, mobile: 16
+                    == Widget::RelatedCell.(@related_content, layout: :regular, header: false, category: true, icon: true) unless @related_content.blank?
+                  = column computer: 16, tablet: 8, mobile: 16
+                    == Widget::AdvertisingCell.(@ad, layout: :sidebar) unless @ad.blank?
