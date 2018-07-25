@@ -1,0 +1,22 @@
+- unless @model[0].nil?
+  = widget 'related'
+    = segment 'padded'
+      = h5 text: 'Realted Content', class: 'dividing'
+      = widget name: "table listing #{'headless' unless options[:header]}"
+        = table 'very basic'
+          - if options[:header]
+            thead
+              tr
+                th Title
+                - if options[:category]
+                  th Category
+          tbody
+            - @model.each do |entry|
+              tr
+                td
+                  = link_to show_link(entry)
+                    = entry.name
+                - if options[:category]
+                  td.collapsing.top.aligned
+                    = link_to show_link(entry)
+                      = show_icon(entry)
