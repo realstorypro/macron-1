@@ -34,7 +34,8 @@ class DisplayController < MetaController
 
 
     def find_related_content
-      taggings = Tagging.where( tag_id: @entry.tags.map(&:id), taggable_type: %w(Article Video Discussion) ).where.not(taggable_id: @entry.id)
+      taggings = Tagging.where(tag_id: @entry.tags.map(&:id), taggable_type: %w(Article Video Discussion))
+                        .where.not(taggable_id: @entry.id)
       content_ids = taggings.map(&:taggable_id)
       @related_content = Entry.where(id: content_ids)
       @related_content = @related_content.order("random()").limit(6)
@@ -43,7 +44,6 @@ class DisplayController < MetaController
       if @related_content.blank?
         @related_content = Entry.where(category: @entry.category).order("random()").limit(6)
       end
-
     end
 
     def record_view

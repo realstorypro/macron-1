@@ -2,8 +2,8 @@
 
 module Widget
   class RelatedCell < BaseCell
-    def show_icon(item, options={})
-      defaults = { size: '', style: 'bordered', contrast: 'inverted'}
+    def show_icon(item, options = {})
+      defaults = { size: "", style: "bordered", contrast: "inverted" }
       options = defaults.merge(options)
 
       if item.type == "Article"
