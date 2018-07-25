@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/cells/widget/podcast/listing.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/cells/widget/podcast_cell.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/podcasts_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/podcasts_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/components/podcasts.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/podcast.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/podcasts/index.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/podcasts/show.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/views/podcasts.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aquarius.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aquarius.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/page_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/page_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/category.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/auth.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/auth.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/components.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/components.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/menu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/menu.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/tests.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/factories/podcasts.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -148,7 +128,7 @@
             <entry file="file://$PROJECT_DIR$/app/views/podcasts/show.html.slim">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="375">
-                  <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+                  <caret line="25" selection-start-line="25" selection-end-line="25" />
                 </state>
               </provider>
             </entry>
@@ -157,7 +137,7 @@
             <entry file="file://$PROJECT_DIR$/app/helpers/menu_helper.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="45">
-                  <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+                  <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -184,16 +164,25 @@
             <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="330">
-                  <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+                  <caret line="22" selection-start-line="22" selection-end-line="22" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="homepage_cell.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="homepage_cell.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="631">
                   <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="podcasts.rb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/spec/factories/podcasts.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
                 </state>
               </provider>
             </entry>
@@ -313,7 +302,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/initializers/sidekiq.rb" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/config/initializers/devise_async.rb" />
         <option value="$PROJECT_DIR$/app.json" />
@@ -364,6 +352,7 @@
         <option value="$PROJECT_DIR$/app/models/podcast.rb" />
         <option value="$PROJECT_DIR$/app/controllers/page_controller.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" />
+        <option value="$PROJECT_DIR$/spec/factories/podcasts.rb" />
       </list>
     </option>
   </component>
@@ -510,6 +499,17 @@
             </path>
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="spec" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="spec" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -538,11 +538,11 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/factories" />
       <recent name="$PROJECT_DIR$/app/cells/widget" />
       <recent name="$PROJECT_DIR$/app/views/podcasts" />
       <recent name="$PROJECT_DIR$/app/views" />
       <recent name="$PROJECT_DIR$/app/controllers" />
-      <recent name="$PROJECT_DIR$/app/controllers/admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -667,7 +667,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49615383" weight="0.34978542" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49615383" visible="true" weight="0.34978542" />
       <window_info anchor="bottom" id="TODO" order="14" weight="0.32948717" />
       <window_info anchor="bottom" id="Event Log" order="19" side_tool="true" weight="0.32948717" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
@@ -728,13 +728,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/videos_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/widget/related_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -994,14 +987,14 @@
     <entry file="file://$PROJECT_DIR$/app/views/podcasts/show.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/menu_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1050,7 +1043,7 @@
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -1058,6 +1051,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="631">
           <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories/podcasts.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
