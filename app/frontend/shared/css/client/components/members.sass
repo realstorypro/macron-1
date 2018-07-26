@@ -5,3 +5,23 @@
     padding-top: $header-external-mobile-padding
     padding-bottom: $footer-mobile-padding
 
+  .profile.card
+    padding: 0
+    box-shadow: 0px 1px 3px 0px #D4D4D5, 0px 0px 0px 1px #D4D4D5 !important
+
+    @each $color in $g-colors-list
+      &.#{$color}
+        border: 0 !important
+        background: map-get($c-profile-colors-map, $color)
+
+        .header, .content, .meta, .description
+          @if index($g-colors-regular, $color)
+            color: $black
+          @else
+            color: $white
+
+        .extra
+          @if index($g-colors-regular, $color)
+            border-top: 1px solid rgba($black,0.7) !important
+          @else
+            border-top: 1px solid rgba($white,0.7) !important

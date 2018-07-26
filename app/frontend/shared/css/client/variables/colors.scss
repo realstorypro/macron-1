@@ -159,6 +159,23 @@ $w-homepage-header-overlay-gradient-map-tall: (
         black: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, black), 0.65), rgba(map-get($g-colors-map, black), 0.75) 40%),
         white: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, white), 0.65), rgba(map-get($g-colors-map, white), 0.75) 40%));
 
+// Profile Card Color Map
+$c-profile-colors-map: (
+        red: $red,
+        orange: $orange,
+        yellow: $yellow,
+        olive: $olive,
+        green: $green,
+        teal: $teal,
+        blue: $blue,
+        violet: $violet,
+        purple: $purple,
+        pink: $pink,
+        brown: $brown,
+        grey: $grey,
+        black: $black,
+        white: $white );
+
 // Footer Colors Map
 $f-ftr-colors-map: (
         red: $red,

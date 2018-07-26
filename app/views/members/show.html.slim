@@ -5,24 +5,25 @@
         = grid
           = row
             = column computer: 4, tablet: 7, mobile: 16
-              = card class: 'fluid', id: 'profile_display', dynamic: :on
-                = image 'fluid'
-                  = image_tag avatar_thumbnail(@member)
-                = content
-                  = header ui: :off
-                    = "@#{@member.username}"
-                  = meta text: @member.profile.title
-                  - unless @member.profile.age.blank?
-                    = description text: "#{@member.profile.age} Years Old"
-                = content 'extra'
-                  - unless @member.profile.location.blank?
-                    = icon 'globe'
-                    = @member.profile.location
-                  = floated
-                    = icon 'calendar'
-                    = "Joined #{time_ago_in_words(@member.created_at)} ago"
-              - if @editable
-                = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary'
+              .dynamic id="card_holder"
+                = card class: "profile fluid #{@entry.card_color}"
+                  = image 'fluid'
+                    = image_tag avatar_thumbnail(@member)
+                  = content
+                    = header ui: :off
+                      = "@#{@member.username}"
+                    = meta text: @member.profile.title
+                    - unless @member.profile.age.blank?
+                      = description text: "#{@member.profile.age} Years Old"
+                  = content 'extra'
+                    - unless @member.profile.location.blank?
+                      = icon 'globe'
+                      = @member.profile.location
+                    = floated
+                      = icon 'calendar'
+                      = "Joined #{time_ago_in_words(@member.created_at)} ago"
+                - if @editable
+                  = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary'
 
             = column computer: 11, tablet: 9, mobile: 16
               = fragment 'sidebar'

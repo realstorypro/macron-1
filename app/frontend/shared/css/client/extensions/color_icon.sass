@@ -1,13 +1,14 @@
-span.color
+.menu
+  .color.icon
+    margin-left: -4px !important
+
+.color.icon
   width: 13px
   height: 13px
   margin-right: 6px
   border-radius: 3px
   display: inline-block
 
-  &.blank
-    background-color: $white
-    border: 1px solid $grey
 
   @each $color in $g-colors-list
     &.#{$color}
