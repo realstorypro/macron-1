@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/cells/vue/feed/show.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/cells/vue/feed_cell.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/frontend/shared/js/vue/feed.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/admin/base_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/menu_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/menu_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/widget/base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/base_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/members_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/members_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/profile_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/profile_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/members/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/members/show.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -88,11 +76,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="feed_cell.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="feed_cell.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/cells/vue/feed_cell.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test.rb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config/environments/test.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="496">
+                  <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -155,11 +152,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="show.slim" pinned="false" current-in-tab="true">
+          <file leaf-file-name="show.slim" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/cells/vue/feed/show.slim">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+                <state relative-caret-position="120">
+                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="development.rb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="468">
+                  <caret line="41" selection-start-line="41" selection-end-line="41" />
                 </state>
               </provider>
             </entry>
@@ -186,8 +192,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>url_helpers</find>
-      <find>comment</find>
       <find>next</find>
       <find>link</find>
       <find>videos</find>
@@ -216,6 +220,8 @@
       <find>pricate</find>
       <find>Rails</find>
       <find>include Rails.application.routes.mounted_helpers</find>
+      <find>config.action_mailer.default_url_options</find>
+      <find>default_url</find>
     </findStrings>
     <replaceStrings>
       <replace>show</replace>
@@ -275,7 +281,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/display_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/articles/index.html.slim" />
         <option value="$PROJECT_DIR$/config/initializers/kaminari_config.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" />
@@ -326,6 +331,7 @@
         <option value="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/vue/feed_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/vue/feed/show.slim" />
+        <option value="$PROJECT_DIR$/config/environments/test.rb" />
       </list>
     </option>
   </component>
@@ -762,13 +768,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/header.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/color_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -867,13 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1094,15 +1086,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/vue/feed_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="315">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/vue/feed/show.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
         </state>
       </provider>
     </entry>
