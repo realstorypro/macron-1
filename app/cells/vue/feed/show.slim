@@ -2,16 +2,12 @@
   = feed
     - comments.each do |comment|
       = event
-        .label
-          = icon 'squared comments'
         = content
           = summary
-            = "Commented on "
-          = text class: 'extra'
-            = comment.body
-    /- @model.each do |entry|
-      = item
-        = show_icon(entry)
-        = content
-          = "Left a comment on #{link_to entry.name, show_link(entry) } on #{find_date(entry)}"
+            = show_icon(comment)
+            = "Left a comment on #{render_link(comment)}."
+            .date =render_date(comment)
+          .extra
+            blockquote
+              = comment.body
 

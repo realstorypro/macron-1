@@ -38,11 +38,11 @@
                 - if @editable
                   = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary'
 
-            = column computer: 8, tablet: 9, mobile: 16
-              = h5 text: 'Latest Activity', class: 'dividing'
+            = column computer: 12, tablet: 16, mobile: 16
+              = h4 text: 'Latest Activity', class: 'dividing'
               == Vue::FeedCell.(@commented_content, comments: @comments)
 
-            = column computer: 4, tablet: 9, mobile: 16
+            /= column computer: 4, tablet: 9, mobile: 16
               = fragment 'sidebar'
                 = h5 text: 'Recent Tweets', class: 'dividing'
                 a class="twitter-timeline" data-width="600" data-dnt="true" data-theme="light" data-tweet-limit="2" data-chrome="nofooter noheader noborders transparent" href="https://twitter.com/#{@member.profile.twitter}">

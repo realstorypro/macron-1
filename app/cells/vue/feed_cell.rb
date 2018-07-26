@@ -4,20 +4,27 @@
 module Vue
   class FeedCell < Cell::ViewModel
     include ApplicationHelper
+    include ActionView::Helpers::DateHelper
     include DcUi::Helpers
 
     delegate :url_helpers, to: "::Rails.application.routes"
-
-    def find_date(item)
-      comment = comments.find { |comment| comment.commentable_id = item.id}
-      comment.created_at
-    end
 
     def comments
       options[:comments]
     end
 
-    def show_icon(item)
+    def render_link(comment)
+      item = find_entry(comment)
+      link_to(item.name, link_path(item))
+    end
+
+    def render_date(comment)
+      "#{time_ago_in_words(comment.created_at)} ago"
+    end
+
+    def show_icon(comment)
+      item = find_entry(comment)
+
       if item.type == "Article"
         raw("#{icon('newspaper outline')}")
       elsif item.type == "Video"
@@ -29,7 +36,8 @@ module Vue
       end
     end
 
-    def show_link(item)
+
+    def link_path(item)
       if item.type == "Article"
         url_helpers.article_details_path(item.category.slug, item.slug)
       elsif item.type == "Video"
@@ -39,6 +47,10 @@ module Vue
       elsif item.type == "Podcast"
         url_helpers.podcast_details_path(item.category.slug, item.slug)
       end
+    end
+
+    def find_entry(comment)
+      @model.each {|entry| return entry if entry.id == comment.commentable_id}
     end
   end
 end

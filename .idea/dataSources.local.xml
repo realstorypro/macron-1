@@ -2,21 +2,21 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails aquarius: test" uuid="8c83d9d4-d7e5-4cd3-bfe8-60670095e3b2">
-      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1" family="POSTGRES" exact-version="9.5.4">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <introspection-schemas>aquarius_test:public</introspection-schemas>
     </data-source>
     <data-source name="Rails aquarius: development" uuid="4bcf2543-b5ef-4f48-b954-800e7cc88481">
-      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1" family="POSTGRES" exact-version="9.5.4">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <introspection-schemas>aquarius_development:public</introspection-schemas>
     </data-source>
     <data-source name="Rails aquarius: production" uuid="d1e21f54-e51a-4553-9db0-112b1f59cb1b">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="POSTGRES" exact-version="0.0" />
       <user-name>aquarius</user-name>
     </data-source>
   </component>

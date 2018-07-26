@@ -1,5 +1,5 @@
  /*
- * # Semantic UI - 2.3.1
+ * # Semantic UI - 2.3.3
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
@@ -9,7 +9,7 @@
  *
  */
 /*!
- * # Semantic UI 2.3.1 - Site
+ * # Semantic UI 2.3.3 - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -497,7 +497,7 @@ $.extend($.expr[ ":" ], {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.3.1 - Form Validation
+ * # Semantic UI 2.3.3 - Form Validation
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -2204,7 +2204,7 @@ $.fn.form.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.3.1 - Checkbox
+ * # Semantic UI 2.3.3 - Checkbox
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -3036,7 +3036,7 @@ $.fn.checkbox.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.3.1 - Dimmer
+ * # Semantic UI 2.3.3 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -3151,6 +3151,10 @@ $.fn.dimmer = function(parameters) {
 
         bind: {
           events: function() {
+            if(module.is.page()) {
+              // touch events default to passive, due to changes in chrome to optimize mobile perf
+              $dimmable.get(0).addEventListener('touchmove', module.event.preventScroll, { passive: false });
+            }
             if(settings.on == 'hover') {
               $dimmable
                 .on('mouseenter' + eventNamespace, module.show)
@@ -3178,6 +3182,9 @@ $.fn.dimmer = function(parameters) {
 
         unbind: {
           events: function() {
+            if(module.is.page()) {
+              $dimmable.get(0).removeEventListener('touchmove', module.event.preventScroll, { passive: false });
+            }
             $module
               .removeData(moduleNamespace)
             ;
@@ -3194,6 +3201,9 @@ $.fn.dimmer = function(parameters) {
               module.hide();
               event.stopImmediatePropagation();
             }
+          },
+          preventScroll: function(event) {
+            event.preventDefault();
           }
         },
 
@@ -3747,7 +3757,7 @@ $.fn.dimmer.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.3.1 - Dropdown
+ * # Semantic UI 2.3.3 - Dropdown
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -4502,10 +4512,19 @@ $.fn.dropdown = function(parameters) {
                 callback();
               },
               onSuccess : function(response) {
-                module.remove.message();
-                module.setup.menu({
-                  values: response[fields.remoteValues]
-                });
+                var
+                  values          = response[fields.remoteValues],
+                  hasRemoteValues = ($.isArray(values) && values.length > 0)
+                ;
+                if(hasRemoteValues) {
+                  module.remove.message();
+                  module.setup.menu({
+                    values: response[fields.remoteValues]
+                  });
+                }
+                else {
+                  module.add.message(message.noResults);
+                }
                 callback();
               }
             }
@@ -7671,7 +7690,7 @@ $.fn.dropdown.settings.templates = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.3.1 - Sidebar
+ * # Semantic UI 2.3.3 - Sidebar
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -8705,7 +8724,7 @@ $.fn.sidebar.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.3.1 - Transition
+ * # Semantic UI 2.3.3 - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -9801,7 +9820,7 @@ $.fn.transition.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.3.1 - Visibility
+ * # Semantic UI 2.3.3 - Visibility
  * http://github.com/semantic-org/semantic-ui/
  *
  *
