@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
-include Rails.application.routes.mounted_helpers
-
 module Widget
   class HomepageCell < Cell::ViewModel
     include ApplicationHelper
     include DcUi::Helpers
 
-    delegate :url_helpers, to: "Rails.main_app.routes"
+    delegate :url_helpers, to: "::Rails.application.routes"
 
     def show
       size = item_count

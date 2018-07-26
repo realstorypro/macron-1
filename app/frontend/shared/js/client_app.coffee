@@ -23,6 +23,7 @@ import Newsletter from './vue/newsletter'
 import Video from './vue/video'
 import Audio from './vue/audio'
 import Cover from './vue/cover'
+import Feed from './vue/feed'
 import SocialSharing from './vue/social_sharing'
 
 
@@ -54,6 +55,7 @@ newsletter = new Newsletter
 video = new Video
 audio = new Audio
 cover = new Cover
+feed = new Feed
 social_sharing = new SocialSharing
 
 class Client_app

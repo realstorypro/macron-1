@@ -24,7 +24,8 @@ class MembersController < DisplayController
       @comments = Comment.where(user_id: @member.id,
                                 commentable_type: %w(Article Discussion Video Podcast))
                       .order("created_at desc")
-                      .limit(50)
+      @content_ids = @comments.map(&:commentable_id)
+      @commented_content = Entry.where(id: @content_ids).limit(25)
 
       # article_comments = Comment.where(user_id: @member.id, commentable_type: "Article")
       # article_comments = article_comments.select(:commentable_id).distinct.pluck(:commentable_id)
