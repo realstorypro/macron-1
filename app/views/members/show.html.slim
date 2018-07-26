@@ -12,16 +12,29 @@
                   = content
                     = header ui: :off
                       = "@#{@member.username}"
-                    = meta text: @member.profile.title
-                    - unless @member.profile.age.blank?
+                      = header class: 'sub', text: member_title(@member.comments.count)
+                    /- unless @member.profile.age.blank?
                       = description text: "#{@member.profile.age} Years Old"
+                    -if @member.profile.url
+                      = link_to @member.profile.url
+                        = icon 'globe'
+                    -if @member.profile.twitter
+                      = link_to "https://www.twitter.com/@#{@member.profile.twitter}"
+                        = icon 'twitter'
+                    -if @member.profile.instagram
+                      = link_to "https://www.instagram.com/#{@member.profile.instagram}"
+                        = icon 'instagram'
                   = content 'extra'
                     - unless @member.profile.location.blank?
-                      = icon 'globe'
+                      = icon 'map'
                       = @member.profile.location
                     = floated
                       = icon 'calendar'
                       = "Joined #{time_ago_in_words(@member.created_at)} ago"
+                  -if @member.profile.signature
+                    = content 'extra'
+                      = @member.profile.signature
+
                 - if @editable
                   = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary'
 
@@ -29,9 +42,4 @@
               = fragment 'sidebar'
                 = h4 text: 'Recent Posts'
                 = items 'divided'
-                  - @comments.each do |comment|
-                    = item
-                      = content
-                        = "Posted in #{comment_link comment, @commented_articles, @commented_discussions} #{time_ago_in_words(comment.created_at)} ago.".html_safe
-
-
+                  = @comments.to_json

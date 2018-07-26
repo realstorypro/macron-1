@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 module MemberHelper
+  def member_title(count)
+    if count == 0
+      "Newbie"
+    elsif count > 0 && count < 5
+      "Beginner"
+    elsif count > 5 && count < 10
+      "Experienced"
+    end
+  end
+
   def comment_link(comment, commented_articles, commented_discussions)
     if comment.commentable_type.include? "Article"
       commented_articles.each do |article|

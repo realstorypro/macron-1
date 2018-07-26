@@ -21,15 +21,18 @@ class MembersController < DisplayController
 
     def preload_entry
       @member = User.joins(:profile).friendly.find(params[:id])
-      @comments = Comment.where(user_id: @member.id).order("created_at desc")
+      @comments = Comment.where(user_id: @member.id,
+                                commentable_type: %w(Article Discussion Video Podcast))
+                      .order("created_at desc")
+                      .limit(50)
 
-      article_comments = Comment.where(user_id: @member.id, commentable_type: "Article")
-      article_comments = article_comments.select(:commentable_id).distinct.pluck(:commentable_id)
-      @commented_articles = Article.joins(:category).find(article_comments)
+      # article_comments = Comment.where(user_id: @member.id, commentable_type: "Article")
+      # article_comments = article_comments.select(:commentable_id).distinct.pluck(:commentable_id)
+      # @commented_articles = Article.joins(:category).find(article_comments)
 
-      discussion_comments = Comment.where(user_id: @member.id, commentable_type: "Discussion")
-      discussion_comments = discussion_comments.select(:commentable_id).distinct.pluck(:commentable_id)
-      @commented_discussions = Discussion.joins(:category).find(discussion_comments)
+      # discussion_comments = Comment.where(user_id: @member.id, commentable_type: "Discussion")
+      # discussion_comments = discussion_comments.select(:commentable_id).distinct.pluck(:commentable_id)
+      # @commented_discussions = Discussion.joins(:category).find(discussion_comments)
     end
 
     def set_show_seo_meta
