@@ -8,6 +8,11 @@ module Vue
 
     delegate :url_helpers, to: "::Rails.application.routes"
 
+    def find_date(item)
+      comment = comments.find { |comment| comment.commentable_id = item.id}
+      comment.created_at
+    end
+
     def comments
       options[:comments]
     end
