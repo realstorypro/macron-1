@@ -13,7 +13,7 @@
                     = header ui: :off
                       = "@#{@member.username}"
                       = header class: 'sub', text: member_title(@member.comments.count)
-                    /- unless @member.profile.age.blank?
+                    - unless @member.profile.age.blank?
                       = description text: "#{@member.profile.age} Years Old"
                     -if @member.profile.url
                       = link_to @member.profile.url
@@ -41,9 +41,3 @@
             = column computer: 12, tablet: 16, mobile: 16
               = h4 text: 'Latest Activity', class: 'dividing'
               == Vue::FeedCell.(@commented_content, comments: @comments)
-
-            /= column computer: 4, tablet: 9, mobile: 16
-              = fragment 'sidebar'
-                = h5 text: 'Recent Tweets', class: 'dividing'
-                a class="twitter-timeline" data-width="600" data-dnt="true" data-theme="light" data-tweet-limit="2" data-chrome="nofooter noheader noborders transparent" href="https://twitter.com/#{@member.profile.twitter}">
-                script src="https://platform.twitter.com/widgets.js" charset="utf-8"
