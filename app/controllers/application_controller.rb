@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  include SettingsHelper
+  include SiteSettingsHelper
+
   include Pundit
   include SiteSettings
-  include SettingsHelper
+
 
   before_action :store_user_location!, if: :storable_location?
   layout :layout_by_resource

@@ -32,16 +32,4 @@ module SettingsHelper
   def node_value(node)
     node[1]
   end
-
-  # TODO: refactor into a thing of its own
-
-  # returns the site setting from redis store
-  def site_setting(name)
-    @site_settings["payload"][name.to_s]
-  end
-
-  # shortcut for site settings
-  def ss(name)
-    site_setting name
-  end
 end

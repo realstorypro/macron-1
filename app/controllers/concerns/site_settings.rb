@@ -15,7 +15,7 @@ module SiteSettings
     def load_site_settings
       site_settings = $redis.get("site_settings")
 
-      if site_settings.nil?
+      if true || site_settings.nil?
         site_settings = Hash.new
 
         general_settings = SiteSettings::General.instance.payload
@@ -24,20 +24,21 @@ module SiteSettings
         theme_settings = SiteSettings::Theme.instance.payload
         integration_settings = SiteSettings::Integration.instance.payload
 
-        site_settings.merge!(general_settings)
-        site_settings.merge!(branding_settings)
-        site_settings.merge!(contact_settings)
-        site_settings.merge!(theme_settings)
-        site_settings.merge!(integration_settings)
+        site_settings[:general] = general_settings
+        site_settings[:branding] = branding_settings
+        site_settings[:contact] = contact_settings
+        site_settings[:theme] = theme_settings
+        site_settings[:integration] = integration_settings
 
-        site_settings = { payload: site_settings }.to_json
+        site_settings = site_settings.to_json
 
         $redis.set("site_settings", site_settings)
       end
       @site_settings = JSON.parse(site_settings)
 
-      # TODO this isn't ideal as we're reiniting analytics with every call. It would be nice to find a way to memoize it
-      @analytics = Segment::Analytics.new(write_key: ss("segment_server_key"))
+      # This isn't ideal as we're re-initing analytics with every call.
+      # It would be nice to find a way to memoize it.
+      @analytics = Segment::Analytics.new(write_key: ss("integration.segment_server_key"))
     end
 end
 

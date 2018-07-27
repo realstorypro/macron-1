@@ -33,6 +33,8 @@ module Zapier
 
     private
 
+      # TODO: we don't want to load this guy twice
+
       def load_site_settings
         site_settings = $redis.get("site_settings")
 
@@ -50,6 +52,7 @@ module Zapier
           site_settings.merge!(contact_settings)
           site_settings.merge!(theme_settings)
           site_settings.merge!(integration_settings)
+
 
           site_settings = { payload: site_settings }.to_json
 

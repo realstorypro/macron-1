@@ -5,35 +5,35 @@ class PageController < ApplicationController
   before_action :set_meta_data, except: %i[sitemap home]
 
   def home
-    featured_limit = ss(:homepage_featured_items)
+    # featured_limit = ss(:homepage_featured_items)
 
-    @featured_options = { item_count: ss(:homepage_featured_items),
-                          item_order: ss(:homepage_item_order),
-                          comment_count: ss(:comment_count),
-                          content_icons: ss(:content_icons),
-                          overlay_background: ss(:homepage_overlay_background),
-                          overlay_color: ss(:homepage_overlay_color),
-                          category_style: ss(:homepage_category_style)
-    }
+    # @featured_options = { item_count: ss(:homepage_featured_items),
+    #                       item_order: ss(:homepage_item_order),
+    #                       comment_count: ss(:comment_count),
+    #                       content_icons: ss(:content_icons),
+    #                       overlay_background: ss(:homepage_overlay_background),
+    #                       overlay_color: ss(:homepage_overlay_color),
+    #                       category_style: ss(:homepage_category_style)
+    #}
 
     # we only want to enforce homepage_featured items if something was selected
     # otherwise the limit is set manually
 
-    if featured_limit == "auto"
-      @featured = Entry.joins(category: :color)
-                      .where(type: %w(Article Video Podcast))
-                      .includes(category: :color).order("published_date desc")
-                      .limit(5)
-    else
-      @featured = Entry.joins(category: :color)
-                      .where(type: %w(Article Video Podcast))
-                      .includes(category: :color).order("published_date desc")
-                      .limit(ss(:homepage_featured_items))
-    end
+    # if featured_limit == "auto"
+    #   @featured = Entry.joins(category: :color)
+    #                   .where(type: %w(Article Video Podcast))
+    #                   .includes(category: :color).order("published_date desc")
+    #                   .limit(5)
+    # else
+    #   @featured = Entry.joins(category: :color)
+    #                   .where(type: %w(Article Video Podcast))
+    #                   .includes(category: :color).order("published_date desc")
+    #                   .limit(ss(:homepage_featured_items))
+    # end
 
-    @discussions = Discussion.joins(category: :color)
-                                      .includes(category: :color).order("published_date desc")
-                       .limit(ss(:homepage_discussion_items))
+    # @discussions = Discussion.joins(category: :color)
+    #                                  .includes(category: :color).order("published_date desc")
+    #                   .limit(ss(:homepage_discussion_items))
   end
 
   def sitemap
