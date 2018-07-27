@@ -2,42 +2,43 @@
   = component 'members'
     = segment 'basic'
       = container
-        = grid
-          = row
-            = column computer: 4, tablet: 7, mobile: 16
-              .dynamic id="card_holder"
-                = card class: "profile fluid #{@entry.card_color}"
-                  = image 'fluid'
+        = grid 'mobile reversed'
+          = column computer: 12, tablet: 16, mobile: 16
+            .activities
+                = h4 text: 'Latest Activity', class: 'dividing'
+                == Vue::FeedCell.(@commented_content, comments: @comments)
+          = column computer: 4, tablet: 7, mobile: 16
+            .dynamic id="card_holder"
+              = card class: "profile fluid #{@entry.card_color}"
+                = image 'fluid'
+                  .detail.holder
                     = image_tag avatar_thumbnail(@member)
-                  = content
-                    = header ui: :off
-                      = "@#{@member.username}"
-                      = header class: 'sub', text: member_title(@member.comments.count)
-                    - unless @member.profile.age.blank?
-                      = description text: "#{@member.profile.age} Years Old"
-                    -if @member.profile.url
-                      = link_to @member.profile.url
-                        = icon 'globe'
-                    -if @member.profile.twitter
-                      = link_to "https://www.twitter.com/@#{@member.profile.twitter}"
-                        = icon 'twitter'
-                    -if @member.profile.instagram
-                      = link_to "https://www.instagram.com/#{@member.profile.instagram}"
-                        = icon 'instagram'
-                  = content 'extra'
-                    - unless @member.profile.location.blank?
-                      = icon 'map'
-                      = @member.profile.location
-                    = floated
-                      = icon 'calendar'
-                      = "Joined #{time_ago_in_words(@member.created_at)} ago"
-                  -if @member.profile.signature
-                    = content 'extra'
-                      = @member.profile.signature
+                    .overlay
+                    .details
+                      = h5 'inverted'
+                        = "#{@member.username}"
+                        = header class: 'sub', text: member_title(@member.comments.count)
+                    .social
+                      -if @member.profile.url
+                        = link_to @member.profile.url
+                          = icon 'globe'
+                      -if @member.profile.twitter
+                        = link_to "https://www.twitter.com/@#{@member.profile.twitter}"
+                          = icon 'twitter'
+                      -if @member.profile.instagram
+                        = link_to "https://www.instagram.com/#{@member.profile.instagram}"
+                          = icon 'instagram'
 
-                - if @editable
-                  = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary'
+              = list 'relaxed divided extras'
+                = item
+                  = "#{icon('map marker alternate')} #{@member.profile.location}".html_safe
+                = item
+                  = "#{icon('child')} #{@member.profile.age} years old".html_safe
+                = item
+                  = "#{icon('calendar alternate')} Joined #{time_ago_in_words(@member.created_at)} ago".html_safe
+                = item 'quote'
+                  ="#{icon('left quote')} #{@member.profile.signature}".html_safe
 
-            = column computer: 12, tablet: 16, mobile: 16
-              = h4 text: 'Latest Activity', class: 'dividing'
-              == Vue::FeedCell.(@commented_content, comments: @comments)
+              - if @editable
+                = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary'
+

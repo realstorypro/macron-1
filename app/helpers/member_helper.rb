@@ -6,7 +6,7 @@ module MemberHelper
       "Newbie"
     elsif count > 0 && count < 5
       "Beginner"
-    elsif count > 5 && count < 10
+    elsif count > 5
       "Experienced"
     end
   end
