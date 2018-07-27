@@ -37,7 +37,7 @@ gem "nexmo"
 gem "phonelib"
 gem "iso_country_codes"
 
-# gem "rack-mini-profiler"
+gem "rack-mini-profiler"
 
 # Pagination
 gem "kaminari", github: "kaminari/kaminari", branch: "master"

@@ -7,6 +7,10 @@ module Widget
 
     delegate :url_helpers, to: "::Rails.application.routes"
 
+    cache :show do
+      @model.cache_key
+    end
+
     def show
       size = item_count
       if item_count == "auto" || item_count.nil?
