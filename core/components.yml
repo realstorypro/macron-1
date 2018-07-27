@@ -45,6 +45,20 @@ components:
     path: 'admin_settings_theme'
     enabled: true
 
+  site_settings_theme_general:
+    name: 'General Theme Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Theme::General'
+    path: 'admin_settings_theme_general'
+    enabled: true
+
+  site_settings_theme_homepage:
+    name: 'Homepage Theme Settings'
+    description: 'Provides general settings capabilities'
+    klass: 'SiteSettings::Theme::Homepage'
+    path: 'admin_settings_theme_homepage'
+    enabled: true
+
   site_settings_contact:
     name: 'Contact Settings'
     description: 'Provides general settings capabilities'

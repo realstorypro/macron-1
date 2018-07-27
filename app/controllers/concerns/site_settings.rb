@@ -21,13 +21,13 @@ module SiteSettings
         general_settings = SiteSettings::General.instance.payload
         branding_settings = SiteSettings::Branding.instance.payload
         contact_settings = SiteSettings::Contact.instance.payload
-        theme_settings = SiteSettings::Theme.instance.payload
+        #theme_settings = SiteSettings::Theme.instance.payload
         integration_settings = SiteSettings::Integration.instance.payload
 
         site_settings[:general] = general_settings
         site_settings[:branding] = branding_settings
         site_settings[:contact] = contact_settings
-        site_settings[:theme] = theme_settings
+        #site_settings[:theme] = theme_settings
         site_settings[:integration] = integration_settings
 
         site_settings = site_settings.to_json

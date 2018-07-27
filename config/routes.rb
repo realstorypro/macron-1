@@ -85,9 +85,15 @@ Rails.application.routes.draw do
       root to: "settings#all"
       resource :general, controller: "general", component: "site_settings_general"
       resource :branding, controller: "branding", component: "site_settings_branding"
-      resource :theme, controller: "theme", component: "site_settings_theme"
+      # resource :theme, controller: "theme", component: "site_settings_theme"
       resource :contact, controller: "contact", component: "site_settings_contact"
       resource :integration, controller: "integration", component: "site_settings_integration"
+
+      scope :theme, controller: "theme", module: "theme", component: "site_settings_theme", as: "theme" do
+        root to: "theme#all"
+        resource :general, controller: "theme_general", component: "site_settings_theme_general"
+        resource :homepage, controller: "theme_homepage", component: "site_settings_theme_homepage"
+      end
     end
   end
 

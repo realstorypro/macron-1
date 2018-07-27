@@ -6,18 +6,8 @@ module SiteSettings
       errors.add(:base, "already one setting object existing") && (return false) if Theme.exists?
     end
 
-    validates_presence_of :header_font,
-                          :body_font,
-                          :content_icons,
-                          :comment_count, :overlay_background,
-                          :homepage_menu_color, :homepage_overlay_color,
-                          :homepage_overlay_background,
-                          :homepage_category_style,
-                          :homepage_item_order,
-                          :homepage_featured_items,
-                          :homepage_featured_variant,
-                          :homepage_discussion_items,
-                          :homepage_content_top_padding,
+    validates_presence_of :content_icons,
+                          :comment_count,
 
                           :discussion_menu_style,
 
@@ -38,22 +28,12 @@ module SiteSettings
                           :sign_in_title
 
 
-    content_attr :header_font, :string
-    content_attr :body_font, :string
+    # **** Migrated ****
 
+    # ** Migrating **
     content_attr :content_icons, :string
     content_attr :comment_count, :string
-    content_attr :overlay_background, :string
 
-    content_attr :homepage_menu_color, :string
-    content_attr :homepage_overlay_color, :string
-    content_attr :homepage_overlay_background, :string
-    content_attr :homepage_category_style, :string
-    content_attr :homepage_item_order, :string
-    content_attr :homepage_featured_items, :integer
-    content_attr :homepage_featured_variant, :string
-    content_attr :homepage_discussion_items, :integer
-    content_attr :homepage_content_top_padding, :integer
 
     content_attr :discussion_menu_style, :string
 
@@ -78,22 +58,8 @@ module SiteSettings
 
     def self.instance
       Theme.first_or_create! do |settings|
-        settings.header_font = "Relevay"
-        settings.body_font = "Roboto"
-
         settings.content_icons = "show"
         settings.comment_count = "hide"
-        settings.overlay_background = "auto"
-
-        settings.homepage_menu_color = "black"
-        settings.homepage_overlay_color = "black"
-        settings.homepage_overlay_background = "normal"
-        settings.homepage_category_style = "normal"
-        settings.homepage_item_order = "auto"
-        settings.homepage_featured_items = "5"
-        settings.homepage_featured_variant = "a"
-        settings.homepage_discussion_items = 6
-        settings.homepage_content_top_padding = 1
 
         settings.discussion_menu_style = "transparent"
 

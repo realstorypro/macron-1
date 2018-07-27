@@ -18,7 +18,7 @@ module SiteSettingsHelper
   end
 
   # shortcut for site settings
-  def ss(name)
-    site_setting name
+  def ss(path)
+    site_setting(path, fatal_exception: true)
   end
 end

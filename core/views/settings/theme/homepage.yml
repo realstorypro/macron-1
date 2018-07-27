@@ -1,0 +1,69 @@
+views:
+  site_settings_theme_homepage:
+    new:
+      menu_color:
+        label: 'Menu Color'
+        type: 'color'
+
+      overlay_color:
+        label: 'Overlay Color'
+        type: 'color'
+
+      overlay_background:
+        advanced: true
+        label: 'Overlay Background'
+        type: 'fixed_dropdown'
+        options:
+        - normal
+        - gradient
+
+      category_style:
+        advanced: true
+        label: 'Category Style'
+        type: 'fixed_dropdown'
+        options:
+        - normal
+        - divided
+        - white boxed
+        - black boxed
+
+      item_order:
+        advanced: true
+        label: 'Featured Items Order'
+        type: 'fixed_dropdown'
+        options:
+        - auto
+        - reversed
+
+      featured_variant:
+        advanced: true
+        label: 'Featured Widget Variant'
+        type: 'fixed_dropdown'
+        options:
+        - a
+        - b
+
+      featured_items:
+        advanced: true
+        label: 'Featured Items'
+        type: 'fixed_dropdown'
+        options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+
+      discussion_items:
+        advanced: true
+        label: 'Discussion Items'
+        type: 'fixed_dropdown'
+        options:
+        - 3
+        - 6
+
+      content_top_padding:
+        advanced: true
+        label: 'Content Top Padding'
+        type: 'integer'
+        hint: '(In EM)'

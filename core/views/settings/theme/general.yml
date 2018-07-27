@@ -1,0 +1,42 @@
+views:
+  site_settings_theme_general:
+    new:
+
+      ####################
+      ####################
+
+      ## Global ##
+
+      ####################
+      ####################
+
+      global_header:
+        advanced: true
+        type: 'header'
+        text: 'Global Settings'
+
+      header_font:
+        advanced: true
+        label: 'Header Font'
+        type: 'fixed_dropdown'
+        options:
+        - Lato
+        - Relevay
+        - Roboto
+
+      body_font:
+        advanced: true
+        label: 'Body Font'
+        type: 'fixed_dropdown'
+        options:
+        - Lato
+        - Relevay
+        - Roboto
+
+      overlay_background:
+        advanced: true
+        label: 'Overlay Background Style'
+        type: 'fixed_dropdown'
+        options:
+        - auto
+        - fixed

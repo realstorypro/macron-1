@@ -22,8 +22,11 @@ Settings.add_source!(Rails.root.join("core").join("views/categories.yml").to_s)
 
 Settings.add_source!(Rails.root.join("core").join("views/settings/general.yml").to_s)
 Settings.add_source!(Rails.root.join("core").join("views/settings/branding.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/settings/theme.yml").to_s)
+#Settings.add_source!(Rails.root.join("core").join("views/settings/theme.yml").to_s)
 Settings.add_source!(Rails.root.join("core").join("views/settings/contact.yml").to_s)
 Settings.add_source!(Rails.root.join("core").join("views/settings/integration.yml").to_s)
+
+Settings.add_source!(Rails.root.join("core").join("views/settings/theme/general.yml").to_s)
+Settings.add_source!(Rails.root.join("core").join("views/settings/theme/homepage.yml").to_s)
 
 Settings.reload!

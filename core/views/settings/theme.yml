@@ -10,28 +10,29 @@ views:
       ####################
       ####################
 
-      global_header:
-        advanced: true
-        type: 'header'
-        text: 'Global Settings'
 
-      header_font:
-        advanced: true
-        label: 'Header Font'
-        type: 'fixed_dropdown'
-        options:
-          - Lato
-          - Relevay
-          - Roboto
+      # global_header:
+      #   advanced: true
+      #   type: 'header'
+      #   text: 'Global Settings'
 
-      body_font:
-        advanced: true
-        label: 'Body Font'
-        type: 'fixed_dropdown'
-        options:
-          - Lato
-          - Relevay
-          - Roboto
+      # header_font:
+      #   advanced: true
+      #   label: 'Header Font'
+      #   type: 'fixed_dropdown'
+      #   options:
+      #     - Lato
+      #     - Relevay
+      #     - Roboto
+
+      # body_font:
+      #   advanced: true
+      #   label: 'Body Font'
+      #   type: 'fixed_dropdown'
+      #   options:
+      #     - Lato
+      #     - Relevay
+      #     - Roboto
 
       overlay_background:
         advanced: true
@@ -41,102 +42,6 @@ views:
           - auto
           - fixed
 
-
-      ####################
-      ####################
-
-      ## Homepage ##
-
-      ####################
-      ####################
-
-
-      homepage_header:
-        type: 'header'
-        text: 'Homepage'
-
-      homepage_menu_color:
-        label: 'Menu Color'
-        type: 'color'
-
-      homepage_overlay_color:
-        label: 'Overlay Color'
-        type: 'color'
-
-      homepage_overlay_background:
-        advanced: true
-        label: 'Overlay Background'
-        type: 'fixed_dropdown'
-        options:
-          - normal
-          - gradient
-
-      content_icons:
-        advanced: true
-        label: 'Content Icons'
-        type: 'fixed_dropdown'
-        options:
-          - show
-          - hide
-
-      comment_count:
-        advanced: true
-        label: 'Comment Count'
-        type: 'fixed_dropdown'
-        options:
-          - show
-          - hide
-
-      homepage_category_style:
-        advanced: true
-        label: 'Category Style'
-        type: 'fixed_dropdown'
-        options:
-          - normal
-          - divided
-          - white boxed
-          - black boxed
-
-      homepage_item_order:
-        advanced: true
-        label: 'Featured Items Order'
-        type: 'fixed_dropdown'
-        options:
-          - auto
-          - reversed
-
-      homepage_featured_variant:
-        advanced: true
-        label: 'Featured Widget Variant'
-        type: 'fixed_dropdown'
-        options:
-          - a
-          - b
-
-      homepage_featured_items:
-        advanced: true
-        label: 'Featured Items'
-        type: 'fixed_dropdown'
-        options:
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
-
-      homepage_discussion_items:
-        advanced: true
-        label: 'Discussion Items'
-        type: 'fixed_dropdown'
-        options:
-          - 3
-          - 6
-
-      homepage_content_top_padding:
-        advanced: true
-        label: 'Content Top Padding'
-        type: 'integer'
-        hint: '(In EM)'
 
 
       ####################

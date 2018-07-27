@@ -40,6 +40,7 @@ module Admin::SiteSettings
       end
     end
 
+
     private
       def set_breadcrumb
         semantic_breadcrumb "Settings", admin_settings_root_path

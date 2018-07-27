@@ -177,6 +177,10 @@ auth:
         all:
       site_settings_theme:
         all:
+      site_settings_theme_general:
+        all:
+      site_settings_theme_homepage:
+        all:
       site_settings_contact:
         all:
       site_settings_integration:

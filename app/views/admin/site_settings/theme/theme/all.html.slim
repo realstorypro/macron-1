@@ -1,0 +1,21 @@
+= segment class: 'no padding basic', dynamic: :on, id: 'all_settings'
+  = grid "#{'divided' if current_user.help}"
+    = column size: (current_user.help ? 10 : 16)
+      = list 'relaxed divided'
+        = link_to admin_settings_theme_general_path, class: 'item'
+          = icon 'large middle aligned setting'
+          = content
+            = header ui: :off
+              | GENERAL
+            = description
+              | General Settings ...
+        = link_to admin_settings_theme_homepage_path, class: 'item'
+          = icon 'large middle aligned setting'
+          = content
+            = header ui: :off
+              | HOMEPAGE
+            = description
+              | Homepage settings ...
+    - if current_user.help
+      = column size: 6
+        = render 'partials/side_help'

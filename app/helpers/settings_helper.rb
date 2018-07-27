@@ -22,7 +22,6 @@ module SettingsHelper
   end
 
   # TODO: see if its possible to refactor out node_name and node_value
-
   # returns the name of the node
   def node_name(node)
     node[0].to_s
