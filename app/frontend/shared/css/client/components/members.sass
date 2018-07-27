@@ -14,10 +14,15 @@
       flex-direction: column-reverse
 
   // Activities
-  .activities
+  .activities.scroller
     padding-right: 1em
     overflow-y: scroll
     height: 700px
+
+    @include media("<tablet")
+      overflow-y: inherit
+      padding-right: 0
+      height: auto
 
 
   // Profile Card

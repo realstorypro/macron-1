@@ -4,7 +4,7 @@
       = container
         = grid 'flipped'
           = column computer: 12, tablet: 16, mobile: 16
-            .activities
+            .activities.scroller
                 = h4 text: 'Latest Activity', class: 'dividing'
                 == Vue::FeedCell.(@commented_content, comments: @comments)
           = column computer: 4, tablet: 7, mobile: 16
