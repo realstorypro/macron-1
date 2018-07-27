@@ -13,7 +13,6 @@ class Profile < ApplicationRecord
   content_attr :instagram, :string
   content_attr :url, :string
 
-  content_attr :menu_color, :string
   content_attr :card_color, :string
 
   validates_presence_of :user

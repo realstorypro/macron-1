@@ -13,7 +13,7 @@
     @include media("<tablet")
       flex-direction: column-reverse
 
-  // Activities
+  // Activities Scroller
   .activities.scroller
     padding-right: 1em
     overflow-y: scroll
@@ -24,6 +24,27 @@
       padding-right: 0
       height: auto
 
+  // Profile Column
+  .profile.column
+    @include media("<tablet")
+      padding: 0
+
+  .profile.container
+    @include media("<tablet")
+      padding: 0 1rem
+
+    .ui.list.extras
+      margin-top: 2.0em !important
+      margin-bottom: 2.0em !important
+
+      .item.quote
+        line-height: 1.5em
+
+      blockquote
+        padding: 0 0 0 0.7em
+        margin: 1.5em 0 0 0
+        border-left: 0.5em solid #eee
+        line-height: 1.45em
 
   // Profile Card
   .profile.card
@@ -33,6 +54,14 @@
     .detail.holder
       position: relative
 
+      @each $color in $g-colors-list
+        &.#{$color}
+          .header, .content, .meta, .description, a
+            @if index($g-colors-regular, $color)
+              color: $black
+            @else
+              color: $white
+
       .overlay
         background: rgba(0,0,0,0.5)
         position: absolute
@@ -40,6 +69,10 @@
         left: 0
         height: 100%
         width: 100%
+
+        @each $color in $g-colors-list
+          &.#{$color}
+            background: map-get($c-profile-colors-map, $color)
 
       .details
         padding: 0.7em
@@ -59,36 +92,14 @@
         right: 0
         width: 100%
         text-align: left
+        @include media("<tablet")
+          bottom: 0
+          right: 0
+          top: auto
+          text-align: right
 
-    @each $color in $g-colors-list
-      &.#{$color}
-        border: 0 !important
-        background: map-get($c-profile-colors-map, $color)
-
-        .header, .content, .meta, .description, a
-          @if index($g-colors-regular, $color)
-            color: $black
-          @else
-            color: $white
-
-        .signature
-          padding-left: 0.5em
-
-          @if index($g-colors-regular, $color)
-            border-top: 1px solid rgba($black,0.7) !important
-          @else
-            border-left: 0.3em #eee solid
-
-  .ui.list.extras
-    margin-top: 2.0em !important
-    margin-bottom: 2.0em !important
-
-    .item.quote
-      line-height: 1.5em
-
-    blockquote
-      padding: 0 0 0 0.7em
-      margin: 1.5em 0 0 0
-      border-left: 0.5em solid #eee
-      line-height: 1.45em
+  // Editable Button
+  .editable.button
+    @include media("<tablet")
+      margin-bottom: 2em
 

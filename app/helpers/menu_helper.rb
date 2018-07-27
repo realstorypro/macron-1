@@ -53,8 +53,7 @@ module MenuHelper
         end
       end
     elsif %w[members profile].include?(controller_name)
-      color = @entry.menu_color
-      color = "black" if color.nil?
+      color = "black"
       menu_class(transparent: false , expanded_color: color, collapsed_color: menu_color)
     elsif %w[sessions registrations passwords confirmations].include?(controller_name)
       # auth fullscreen image option

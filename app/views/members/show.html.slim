@@ -5,15 +5,23 @@
         = grid 'flipped'
           = column computer: 12, tablet: 16, mobile: 16
             .activities.scroller
-                = h4 text: 'Latest Activity', class: 'dividing'
-                == Vue::FeedCell.(@commented_content, comments: @comments)
-          = column computer: 4, tablet: 7, mobile: 16
+              = h4 class: 'dividing'
+                = content
+                  | Latest Activity
+              == Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
+              - if @comments.blank?
+                = message 'icon secondary'
+                  = icon 'user'
+                  = content
+                    = header ui: :off, text: "#{@member.username.capitalize} has no recent activity."
+                    = text text: 'Please check back later.'
+          = column computer: 4, tablet: 7, mobile: 16, class: 'profile'
             .dynamic id="card_holder"
-              = card class: "profile fluid #{@entry.card_color}"
+              = card class: "profile fluid"
                 = image 'fluid'
-                  .detail.holder
+                  .detail.holder class=@member.profile.card_color
                     = image_tag avatar_thumbnail(@member)
-                    .overlay
+                    = overlay @member.profile.card_color
                     .details
                       = h5 'inverted'
                         = "#{@member.username}"
@@ -29,16 +37,20 @@
                         = link_to "https://www.instagram.com/#{@member.profile.instagram}"
                           = icon 'instagram'
 
-              = list 'relaxed divided extras'
-                = item
-                  = "#{icon('map marker alternate')} #{@member.profile.location}".html_safe
-                = item
-                  = "#{icon('child')} #{@member.profile.age} years old".html_safe
-                = item
-                  = "#{icon('calendar alternate')} Joined #{time_ago_in_words(@member.created_at)} ago".html_safe
-                = item 'quote'
-                  ="#{icon('left quote')} #{@member.profile.signature}".html_safe
+              .profile.container
+                = list 'relaxed divided extras'
+                  -if @member.profile.location
+                    = item
+                      = "#{icon('map marker alternate')} #{@member.profile.location}".html_safe
+                  -if @member.profile.age
+                    = item
+                      = "#{icon('child')} #{@member.profile.age} years old".html_safe
+                  = item
+                    = "#{icon('calendar alternate')} Joined #{time_ago_in_words(@member.created_at)} ago".html_safe
+                  -if @member.profile.signature
+                    = item 'quote'
+                      ="#{icon('left quote')} #{@member.profile.signature}".html_safe
 
-              - if @editable
-                = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary'
+                - if @editable
+                  = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary editable'
 

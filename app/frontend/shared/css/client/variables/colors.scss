@@ -160,21 +160,22 @@ $w-homepage-header-overlay-gradient-map-tall: (
         white: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, white), 0.65), rgba(map-get($g-colors-map, white), 0.75) 40%));
 
 // Profile Card Color Map
+$c-profile-colors-alpha: 0.5;
 $c-profile-colors-map: (
-        red: $red,
-        orange: $orange,
-        yellow: $yellow,
-        olive: $olive,
-        green: $green,
-        teal: $teal,
-        blue: $blue,
-        violet: $violet,
-        purple: $purple,
-        pink: $pink,
-        brown: $brown,
-        grey: $grey,
-        black: $black,
-        white: $white );
+        red: rgba($red, $c-profile-colors-alpha),
+        orange: rgba($orange, $c-profile-colors-alpha),
+        yellow: rgba($yellow, $c-profile-colors-alpha),
+        olive: rgba($olive, $c-profile-colors-alpha),
+        green: rgba($green, $c-profile-colors-alpha),
+        teal: rgba($teal, $c-profile-colors-alpha),
+        blue: rgba($blue, $c-profile-colors-alpha),
+        violet: rgba($violet, $c-profile-colors-alpha),
+        purple: rgba($purple, $c-profile-colors-alpha),
+        pink: rgba($pink, $c-profile-colors-alpha),
+        brown: rgba($brown, $c-profile-colors-alpha),
+        grey: rgba($grey, $c-profile-colors-alpha),
+        black: rgba($black, $c-profile-colors-alpha),
+        white: rgba($white, $c-profile-colors-alpha));
 
 // Footer Colors Map
 $f-ftr-colors-map: (

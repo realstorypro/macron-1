@@ -8,6 +8,9 @@ views:
         label: 'Avatar'
         type: 'image'
         size: ['600','600']
+      card_color:
+        label: 'Card Color'
+        type: 'color'
       title:
         label: 'Title'
         type: 'string'
@@ -46,15 +49,3 @@ views:
         type: 'string'
         maxlength: '200'
         hint: 'Dont include the @'
-
-      branding_header:
-        type: 'header'
-        text: 'Branding'
-
-      menu_color:
-        label: 'Menu Color'
-        type: 'color'
-
-      card_color:
-        label: 'Card Color'
-        type: 'color'
