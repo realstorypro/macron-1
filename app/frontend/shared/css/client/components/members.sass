@@ -5,7 +5,22 @@
     padding-top: $header-external-mobile-padding
     padding-bottom: $footer-mobile-padding
 
+  .ui.basic.segment
+    @include media("<tablet")
+      padding: 0
 
+  .ui.grid.flipped
+    @include media("<tablet")
+      flex-direction: column-reverse
+
+  // Activities
+  .activities
+    padding-right: 1em
+    overflow-y: scroll
+    height: 700px
+
+
+  // Profile Card
   .profile.card
     padding: 0
     box-shadow: none !important
@@ -72,8 +87,3 @@
       border-left: 0.5em solid #eee
       line-height: 1.45em
 
-  .activities
-    //padding-left: 2em
-    padding-right: 1em
-    overflow-y: scroll
-    height: 700px

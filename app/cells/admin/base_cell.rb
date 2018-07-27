@@ -1,7 +1,5 @@
 # rubocop:disable CyclomaticComplexity
 
-#include Rails.application.routes.mounted_helpers
-
 module Admin
   class BaseCell < Cell::ViewModel
     include ApplicationHelper
