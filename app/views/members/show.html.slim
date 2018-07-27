@@ -2,35 +2,55 @@
   = component 'members'
     = segment 'basic'
       = container
-        = grid
-          = row
-            = column computer: 5, tablet: 7, mobile: 16
-              = card class: 'fluid', id: 'profile_display', dynamic: :on
-                = image 'fluid'
-                  = image_tag avatar_thumbnail(@member)
+        = grid 'flipped'
+          = column computer: 12, tablet: 16, mobile: 16
+            .activities.scroller
+              = h4 class: 'dividing'
                 = content
-                  = header ui: :off
-                    = "@#{@member.username}"
-                  = meta text: @member.profile.title
-                  - unless @member.profile.age.blank?
-                    = description text: "#{@member.profile.age} Years Old"
-                = content 'extra'
-                  - unless @member.profile.location.blank?
-                    = icon 'globe'
-                    = @member.profile.location
-                  = floated
-                    = icon 'calendar'
-                    = "Joined #{time_ago_in_words(@member.created_at)} ago"
-              - if @editable
-                = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary'
+                  | Latest Activity
+              == Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
+              - if @comments.blank?
+                = message 'icon secondary'
+                  = icon 'user'
+                  = content
+                    = header ui: :off, text: "#{@member.username.capitalize} has no recent activity."
+                    = text text: 'Please check back later.'
+          = column computer: 4, tablet: 7, mobile: 16, class: 'profile'
+            .dynamic id="card_holder"
+              = card class: "profile fluid"
+                = image 'fluid'
+                  .detail.holder class=@member.profile.card_color
+                    = image_tag avatar_thumbnail(@member)
+                    = overlay @member.profile.card_color
+                    .details
+                      = h5 'inverted'
+                        = "#{@member.username}"
+                        = header class: 'sub', text: member_title(@member.comments.count)
+                    .social
+                      -if @member.profile.url
+                        = link_to @member.profile.url
+                          = icon 'globe'
+                      -if @member.profile.twitter
+                        = link_to "https://www.twitter.com/@#{@member.profile.twitter}"
+                          = icon 'twitter'
+                      -if @member.profile.instagram
+                        = link_to "https://www.instagram.com/#{@member.profile.instagram}"
+                          = icon 'instagram'
 
-            = column computer: 11, tablet: 9, mobile: 16
-              = fragment 'sidebar'
-                = h4 text: 'Recent Posts'
-                = items 'divided'
-                  - @comments.each do |comment|
+              .profile.container
+                = list 'relaxed divided extras'
+                  -if @member.profile.location
                     = item
-                      = content
-                        = "Posted in #{comment_link comment, @commented_articles, @commented_discussions} #{time_ago_in_words(comment.created_at)} ago.".html_safe
+                      = "#{icon('map marker alternate')} #{@member.profile.location}".html_safe
+                  -if @member.profile.age
+                    = item
+                      = "#{icon('child')} #{@member.profile.age} years old".html_safe
+                  = item
+                    = "#{icon('calendar alternate')} Joined #{time_ago_in_words(@member.created_at)} ago".html_safe
+                  -if @member.profile.signature
+                    = item 'quote'
+                      ="#{icon('left quote')} #{@member.profile.signature}".html_safe
 
+                - if @editable
+                  = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary editable'
 

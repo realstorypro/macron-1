@@ -9,6 +9,11 @@ class Profile < ApplicationRecord
   content_attr :location, :string
   content_attr :age, :integer
   content_attr :signature, :string
+  content_attr :twitter, :string
+  content_attr :instagram, :string
+  content_attr :url, :string
+
+  content_attr :card_color, :string
 
   validates_presence_of :user
 
@@ -18,6 +23,9 @@ class Profile < ApplicationRecord
     self.age = nil
     self.signature = nil
     self.title = nil
+    self.twitter = nil
+    self.instagram = nil
+    self.url = nil
     save
   end
 

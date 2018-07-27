@@ -1,0 +1,13 @@
+= widget name: 'feed', id: 'feed', vue: :on
+  = feed
+    - comments.each do |comment|
+      = event
+        = content
+          = summary
+            = show_icon(comment)
+            = "Left a comment on #{render_link(comment)}."
+            .date =render_date(comment)
+          .extra
+            blockquote
+              = comment.body
+

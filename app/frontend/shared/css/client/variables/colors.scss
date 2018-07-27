@@ -87,13 +87,13 @@ $w-homepage-header-overlay-gradient-map: (
         green: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, green), 0.15), rgba(map-get($g-colors-map, green), 0.85) 70%),
         teal: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, teal), 0.15), rgba(map-get($g-colors-map, teal), 0.85) 70%),
         blue: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, blue), 0.15), rgba(map-get($g-colors-map, blue), 0.85) 70%),
-        violet: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, violet), 0.15), rgba(map-get($g-colors-map, violet), 0.85) 70%),
+        violet: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, violet), 0.05), rgba(map-get($g-colors-map, violet), 0.70) 70%),
         purple: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, purple), 0.15), rgba(map-get($g-colors-map, purple), 0.85) 70%),
-        pink: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, pink), 0.15), rgba(map-get($g-colors-map, pink), 0.85) 70%),
-        brown: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, brown), 0.15), rgba(map-get($g-colors-map, brown), 0.85) 70%),
-        grey: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, grey), 0.15), rgba(map-get($g-colors-map, grey), 0.85) 70%),
-        black: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, black), 0.15), rgba(map-get($g-colors-map, black), 0.85) 70%),
-        white: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, white), 0.15), rgba(map-get($g-colors-map, white), 0.85) 70%));
+        pink: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, pink), 0.05), rgba(map-get($g-colors-map, pink), 0.70) 70%),
+        brown: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, brown), 0.05), rgba(map-get($g-colors-map, brown), 0.70) 70%),
+        grey: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, grey), 0.05), rgba(map-get($g-colors-map, grey), 0.70) 70%),
+        black: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, black), 0.05), rgba(map-get($g-colors-map, black), 0.70) 70%),
+        white: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, white), 0.05), rgba(map-get($g-colors-map, white), 0.70) 70%));
 
 $w-homepage-header-overlay-gradient-map-tiny: (
         red: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, red), 0.65), rgba(map-get($g-colors-map, red), 0.75)),
@@ -158,6 +158,24 @@ $w-homepage-header-overlay-gradient-map-tall: (
         grey: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, grey), 0.65), rgba(map-get($g-colors-map, grey), 0.75) 40%),
         black: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, black), 0.65), rgba(map-get($g-colors-map, black), 0.75) 40%),
         white: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, white), 0.65), rgba(map-get($g-colors-map, white), 0.75) 40%));
+
+// Profile Card Color Map
+$c-profile-colors-alpha: 0.5;
+$c-profile-colors-map: (
+        red: rgba($red, $c-profile-colors-alpha),
+        orange: rgba($orange, $c-profile-colors-alpha),
+        yellow: rgba($yellow, $c-profile-colors-alpha),
+        olive: rgba($olive, $c-profile-colors-alpha),
+        green: rgba($green, $c-profile-colors-alpha),
+        teal: rgba($teal, $c-profile-colors-alpha),
+        blue: rgba($blue, $c-profile-colors-alpha),
+        violet: rgba($violet, $c-profile-colors-alpha),
+        purple: rgba($purple, $c-profile-colors-alpha),
+        pink: rgba($pink, $c-profile-colors-alpha),
+        brown: rgba($brown, $c-profile-colors-alpha),
+        grey: rgba($grey, $c-profile-colors-alpha),
+        black: rgba($black, $c-profile-colors-alpha),
+        white: rgba($white, $c-profile-colors-alpha));
 
 // Footer Colors Map
 $f-ftr-colors-map: (

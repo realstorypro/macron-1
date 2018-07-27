@@ -8,7 +8,8 @@ html
 
     ==  Widget::SidenavCell.(nil, layout: 'main', menu: s('menu.main'), request: request, show_icons: false, position: ss(:menu_position), site_settings: @site_settings)
     .pusher
-      = render 'layouts/partials/navigation'
+      nav.dynamic  id="dynamic-nav"
+        = render 'layouts/partials/navigation'
       == yield
 
       = render 'layouts/partials/footer'

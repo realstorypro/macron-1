@@ -1,10 +1,16 @@
 views:
   profile:
     new:
+      basics_header:
+        type: 'header'
+        text: 'Basics'
       avatar:
         label: 'Avatar'
         type: 'image'
         size: ['600','600']
+      card_color:
+        label: 'Card Color'
+        type: 'color'
       title:
         label: 'Title'
         type: 'string'
@@ -25,3 +31,21 @@ views:
         type: 'string'
         maxlength: '200'
         hint: 'Limited to 200 Characters'
+      url:
+        label: 'Your Website'
+        type: 'string'
+        maxlength: '200'
+
+      social_header:
+        type: 'header'
+        text: 'Social Media'
+      twitter:
+        label: 'Twitter Username'
+        type: 'string'
+        maxlength: '200'
+        hint: 'Dont include the @'
+      instagram:
+        label: 'Instagram Username'
+        type: 'string'
+        maxlength: '200'
+        hint: 'Dont include the @'

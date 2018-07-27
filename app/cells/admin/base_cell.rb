@@ -1,13 +1,11 @@
 # rubocop:disable CyclomaticComplexity
 
-include Rails.application.routes.mounted_helpers
-
 module Admin
   class BaseCell < Cell::ViewModel
     include ApplicationHelper
     include ActionView::Helpers::DateHelper
     include DcUi::Helpers
-    delegate :url_helpers, to: "Rails.main_app.routes"
+    delegate :url_helpers, to: "::Rails.application.routes"
 
     ########################################################
     #  Record Render Main Switch
