@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_discussion_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/site_settings/theme/discussion.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/views/settings/theme/discussion.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/generators/rails/theme_settings/templates/module.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/_theme.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/_theme.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/site_settings/theme/theme/all.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/site_settings/theme/theme/all.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/auth.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/auth.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/components.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/components.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/settings/theme.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/settings/theme.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generators/rails/theme_settings/theme_settings_generator.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generators/rails/theme_settings/theme_settings_generator.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -101,7 +89,7 @@
           <entry key="Gemfile" value="3" />
           <entry key="USAGE" value="144" />
           <entry key="coffee" value="26" />
-          <entry key="rb" value="4312" />
+          <entry key="rb" value="4435" />
           <entry key="sass" value="2132" />
           <entry key="scss" value="242" />
           <entry key="slim" value="5136" />
@@ -112,7 +100,7 @@
         <counts>
           <entry key="CoffeeScript" value="26" />
           <entry key="PLAIN_TEXT" value="144" />
-          <entry key="Ruby" value="4315" />
+          <entry key="Ruby" value="4438" />
           <entry key="SCSS" value="242" />
           <entry key="Sass" value="2132" />
           <entry key="Slim" value="5136" />
@@ -124,22 +112,22 @@
           <entry key="Gemfile" value="1" />
           <entry key="USAGE" value="2" />
           <entry key="js" value="2" />
-          <entry key="rb" value="74" />
+          <entry key="rb" value="75" />
           <entry key="sass" value="4" />
           <entry key="scss" value="1" />
           <entry key="slim" value="14" />
-          <entry key="yml" value="31" />
+          <entry key="yml" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Ruby" value="75" />
+          <entry key="Ruby" value="76" />
           <entry key="SCSS" value="1" />
           <entry key="Sass" value="4" />
           <entry key="Slim" value="14" />
-          <entry key="YAML" value="31" />
+          <entry key="YAML" value="32" />
         </counts>
       </usages-collector>
     </session>
@@ -164,8 +152,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/generators/rails/theme_settings/templates/module.yml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/generators/rails/theme_settings/templates/view.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
@@ -173,9 +161,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/views/settings/branding.yml">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/generators/rails/theme_settings/theme_settings_generator.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -279,7 +271,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/cells/admin/base_cell.rb" />
         <option value="$PROJECT_DIR$/app/models/profile.rb" />
         <option value="$PROJECT_DIR$/app/helpers/menu_helper.rb" />
         <option value="$PROJECT_DIR$/core/views/profile.yml" />
@@ -330,6 +321,7 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_discussion_controller.rb" />
         <option value="$PROJECT_DIR$/lib/generators/rails/theme_settings/USAGE" />
         <option value="$PROJECT_DIR$/lib/generators/rails/theme_settings/templates/module.yml" />
+        <option value="$PROJECT_DIR$/lib/generators/rails/theme_settings/theme_settings_generator.rb" />
       </list>
     </option>
   </component>
@@ -705,14 +697,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49619773" visible="true" weight="0.34948373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49619773" visible="true" weight="0.6287554" />
       <window_info id="Structure" order="1" sideWeight="0.50384617" side_tool="true" weight="0.33117932" />
       <window_info id="Favorites" order="2" sideWeight="0.5038023" side_tool="true" weight="0.34978542" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3289777" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.56241786" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1038,13 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/generators/rails/theme_settings/theme_settings_generator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/views/settings/theme.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1090,10 +1075,17 @@
     <entry file="file://$PROJECT_DIR$/core/views/settings/branding.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/generators/rails/theme_settings/templates/module.yml">
+    <entry file="file://$PROJECT_DIR$/lib/generators/rails/theme_settings/templates/view.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/rails/theme_settings/theme_settings_generator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
         </state>
       </provider>
     </entry>
