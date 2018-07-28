@@ -23,8 +23,8 @@ class Rails::ThemeSettingsGenerator < Rails::Generators::NamedBase
 
     # load auth yaml file
     auth_file = YAML::load_file("core/auth.yml")
-    admin_permissions = auth_file['auth']['permissions']['admin']
-    byebug
+    auth_file['auth']['permissions']['admin']["site_settings_theme_#{file_name}"] = {"all"=>nil}
+    File.open('core/auth.yml', 'w') {|f| f.write auth_file.to_yaml }
 
   end
 end
