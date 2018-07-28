@@ -111,3 +111,19 @@ menu:
         icon: question circle
         enabled: true
 
+
+  settings:
+    - section:
+      - name: Support
+        component: support
+        path: admin_support_index
+        icon: question circle
+        enabled: true
+
+  theme:
+    - section:
+      - name: Support
+        component: support
+        path: admin_support_index
+        icon: question circle
+        enabled: true

@@ -14,6 +14,19 @@ views:
       inverted_logo:
         label: 'Inverted Logo'
         type: 'image'
+      desktop_logo_size:
+        advanced: true
+        label: 'Desktop Logo Width'
+        type: 'string'
+        hint: '(in pixels)'
+        maxlength: '3'
+      mobile_logo_size:
+        advanced: true
+        label: 'Mobile Logo Width'
+        type: 'string'
+        hint: '(in pixels)'
+        maxlength: '3'
+
       background_header:
         type: 'header'
         text: 'Backgrounds'

@@ -1,23 +1,14 @@
 views:
   site_settings_theme_general:
     new:
-
-      ####################
-      ####################
-
-      ## Global ##
-
-      ####################
-      ####################
-
-      global_header:
+      font_header:
         advanced: true
         type: 'header'
-        text: 'Global Settings'
+        text: 'Fonts '
 
       header_font:
         advanced: true
-        label: 'Header Font'
+        label: 'Header'
         type: 'fixed_dropdown'
         options:
         - Lato
@@ -26,16 +17,84 @@ views:
 
       body_font:
         advanced: true
-        label: 'Body Font'
+        label: 'Body'
         type: 'fixed_dropdown'
         options:
         - Lato
         - Relevay
         - Roboto
 
+
+      header_header:
+        advanced: true
+        type: 'header'
+        text: 'Header'
+
+      menu_color:
+        label: 'Color'
+        type: 'color'
+
+      menu_position:
+        advanced: true
+        label: 'Menu Position'
+        type: 'fixed_dropdown'
+        options:
+        - 'left'
+        - 'right'
+
+      footer_header:
+        type: 'header'
+        text: 'Footer'
+
+      footer_variant:
+        advanced: true
+        label: 'Variant'
+        type: 'fixed_dropdown'
+        options:
+        - full
+        - slim
+
+      footer_color:
+        label: 'Color'
+        type: 'color'
+
+      footer_button_color:
+        advanced: true
+        label: 'Button Color'
+        type: 'color'
+
+      footer_button_style:
+        advanced: true
+        label: 'Button Style'
+        type: 'fixed_dropdown'
+        options:
+        - regular
+        - inverted
+
+      footer_icon:
+        advanced: true
+        label: 'Icon'
+        type: 'fixed_dropdown'
+        options:
+        - show
+        - hide
+
+      footer_item_order:
+        advanced: true
+        label: 'Column Order'
+        type: 'fixed_dropdown'
+        options:
+        - auto
+        - reversed
+
+      overlay_header:
+        advanced: true
+        type: 'header'
+        text: 'Overlays'
+
       overlay_background:
         advanced: true
-        label: 'Overlay Background Style'
+        label: 'Background Style'
         type: 'fixed_dropdown'
         options:
         - auto

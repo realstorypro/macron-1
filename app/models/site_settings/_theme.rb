@@ -11,18 +11,8 @@ module SiteSettings
 
                           :discussion_menu_style,
 
-                          :menu_color,
-                          :menu_position,
                           :desktop_logo_size,
                           :mobile_logo_size,
-                          :footer_variant,
-                          :footer_color,
-                          :footer_icon,
-                          :footer_button_color,
-                          :footer_button_style,
-                          :footer_item_order,
-                          :about,
-                          :copyrights,
                           :sign_up_title,
                           :sign_up_subtitle,
                           :sign_in_title
@@ -37,20 +27,8 @@ module SiteSettings
 
     content_attr :discussion_menu_style, :string
 
-    content_attr :menu_color, :string
-    content_attr :menu_position, :string
-    content_attr :desktop_logo_size, :integer
-    content_attr :mobile_logo_size, :integer
 
-    content_attr :footer_variant, :string
-    content_attr :footer_color, :string
-    content_attr :footer_icon, :string
-    content_attr :footer_button_color, :string
-    content_attr :footer_button_style, :string
-    content_attr :footer_item_order, :string
 
-    content_attr :about, :text
-    content_attr :copyrights, :string
 
     content_attr :sign_up_title, :string
     content_attr :sign_up_subtitle, :string
@@ -63,17 +41,7 @@ module SiteSettings
 
         settings.discussion_menu_style = "transparent"
 
-        settings.menu_color = "black"
-        settings.menu_position = "left"
-        settings.desktop_logo_size = 150
-        settings.mobile_logo_size = 120
 
-        settings.footer_variant = "full"
-        settings.footer_color = "black"
-        settings.footer_icon = "show"
-        settings.footer_button_color = "white"
-        settings.footer_button_style = "regular"
-        settings.footer_item_order = "auto"
 
         settings.about = "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, \
                           sed diam nonumy eirmod tempor invidunt ut\

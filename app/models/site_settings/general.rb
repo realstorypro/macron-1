@@ -6,12 +6,19 @@ module SiteSettings
       errors.add(:base, "already one setting object existing") && (return false) if General.exists?
     end
 
+    validates_presence_of :name,
+                          :description,
+                          :url,
+                          :about,
+                          :copyrights
+    validates :url, url: { schemes: ["https"] }
+
     content_attr :name, :string
     content_attr :description, :string
     content_attr :url, :string
+    content_attr :about, :text
+    content_attr :copyrights, :string
 
-    validates_presence_of :name, :description, :url
-    validates :url, url: { schemes: ["https"] }
 
     def self.instance
       General.first_or_create! do |settings|
