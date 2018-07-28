@@ -1,33 +1,13 @@
 # frozen_string_literal: true
 
-# Load Core Config
-Settings.add_source!(Rails.root.join("core").join("defaults.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("auth.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("menu.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("colors.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("pages.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("tests.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("components.yml").to_s)
+# find all files in core directory
+Dir.chdir('core')
+files = Dir['**/**']
 
-Settings.add_source!(Rails.root.join("core").join("views/defaults.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/profile.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/users.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/articles.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/videos.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/podcasts.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/discussions.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/advertisements.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/tags.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/categories.yml").to_s)
+# select only YML files
+files.select! { |entry| entry.include?('yml') == true}
 
-Settings.add_source!(Rails.root.join("core").join("views/settings/general.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/settings/branding.yml").to_s)
-#Settings.add_source!(Rails.root.join("core").join("views/settings/theme.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/settings/contact.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/settings/integration.yml").to_s)
-
-Settings.add_source!(Rails.root.join("core").join("views/settings/theme/general.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/settings/theme/homepage.yml").to_s)
-Settings.add_source!(Rails.root.join("core").join("views/settings/theme/discussion.yml").to_s)
+# add all file as a source to the settings
+files.each {|entry| Settings.add_source!(Rails.root.join("core").join(entry).to_s)}
 
 Settings.reload!

@@ -1,0 +1,21 @@
+auth:
+  permissions:
+    member:
+      articles:
+        read:
+      discussions:
+        read:
+      videos:
+        read:
+      comments:
+        create:
+        read:
+        delete:
+      profile:
+        create:
+        read:
+        update:
+      members:
+        read:
+      advertisements:
+        read:

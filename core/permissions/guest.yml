@@ -1,0 +1,17 @@
+auth:
+  permissions:
+    guest:
+      articles:
+        read:
+      discussions:
+        read:
+      videos:
+        read:
+      comments:
+        read:
+      profile:
+        read:
+      members:
+        read:
+      advertisements:
+        read:
