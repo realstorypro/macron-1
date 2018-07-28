@@ -5,32 +5,6 @@ views:
       ####################
       ####################
 
-      ## Discussions ##
-
-      ####################
-      ####################
-
-
-      discussions_header:
-        type: 'header'
-        text: 'Discussions'
-
-
-      discussion_menu_style:
-        advanced: true
-        label: 'Menu Style'
-        type: 'fixed_dropdown'
-        options:
-          - solid
-          - transparent
-          - matching solid
-          - matching transparent
-
-
-
-      ####################
-      ####################
-
       ## Authentication ##
 
       ####################

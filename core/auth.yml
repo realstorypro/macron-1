@@ -181,6 +181,8 @@ auth:
         all:
       site_settings_theme_homepage:
         all:
+      site_settings_theme_discussion:
+        all:
       site_settings_contact:
         all:
       site_settings_integration:

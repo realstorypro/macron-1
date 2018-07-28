@@ -3,7 +3,7 @@
 require_dependency "application_controller"
 
 module Admin::SiteSettings::Theme
-  class ThemeController < SharedSettingsController
+  class ThemeController < Admin::SiteSettings::SharedSettingsController
     before_action :set_breadcrumb
 
     def all

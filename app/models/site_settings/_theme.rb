@@ -9,26 +9,15 @@ module SiteSettings
     validates_presence_of :content_icons,
                           :comment_count,
 
-                          :discussion_menu_style,
 
-                          :desktop_logo_size,
-                          :mobile_logo_size,
                           :sign_up_title,
                           :sign_up_subtitle,
                           :sign_in_title
 
 
-    # **** Migrated ****
-
     # ** Migrating **
     content_attr :content_icons, :string
     content_attr :comment_count, :string
-
-
-    content_attr :discussion_menu_style, :string
-
-
-
 
     content_attr :sign_up_title, :string
     content_attr :sign_up_subtitle, :string
@@ -39,7 +28,6 @@ module SiteSettings
         settings.content_icons = "show"
         settings.comment_count = "hide"
 
-        settings.discussion_menu_style = "transparent"
 
 
 

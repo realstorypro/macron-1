@@ -59,6 +59,13 @@ components:
     path: 'admin_settings_theme_homepage'
     enabled: true
 
+  site_settings_theme_discussion:
+    name: 'Discussion Theme Settings'
+    description: 'Provides discussion theme settings capabilities'
+    klass: 'SiteSettings::Theme::Discussion'
+    path: 'admin_settings_theme_discussions'
+    enabled: true
+
   site_settings_contact:
     name: 'Contact Settings'
     description: 'Provides general settings capabilities'
@@ -87,13 +94,6 @@ components:
     description: 'Allows for members being viewed'
     klass: 'User'
     path: 'members'
-    enabled: true
-
-  profile:
-    name: 'Profile'
-    description: 'Allows for user profile management'
-    klass: 'Profile'
-    path: 'profile'
     enabled: true
 
   users:

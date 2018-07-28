@@ -28,5 +28,6 @@ Settings.add_source!(Rails.root.join("core").join("views/settings/integration.ym
 
 Settings.add_source!(Rails.root.join("core").join("views/settings/theme/general.yml").to_s)
 Settings.add_source!(Rails.root.join("core").join("views/settings/theme/homepage.yml").to_s)
+Settings.add_source!(Rails.root.join("core").join("views/settings/theme/discussion.yml").to_s)
 
 Settings.reload!

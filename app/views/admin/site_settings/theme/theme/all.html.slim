@@ -16,6 +16,13 @@
               | HOMEPAGE
             = description
               | Homepage settings ...
+        = link_to admin_settings_theme_discussion_path, class: 'item'
+          = icon 'large middle aligned setting'
+          = content
+            = header ui: :off
+              | DISCUSSIONS
+            = description
+              | Homepage settings ...
     - if current_user.help
       = column size: 6
         = render 'partials/side_help'
