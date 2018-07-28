@@ -1,191 +1,158 @@
+---
 auth:
-
-  # roles available within the application
-  # 'defaults' scope defines the
-  # default visitor role and member roles
-
   roles:
-    - guest
-    - banned
-    - member
-    - editor
-    - admin
-
-  # Role Defenition
-  # 'all' is a hardcoded variable
-  # which bypasses all authorization
-
+  - guest
+  - banned
+  - member
+  - editor
+  - admin
   abilities:
-    - 'all'
-    - 'create'
-    - 'read'
-    - 'update'
-    - 'delete'
-    - 'moderate'
-
-  # Actions to Abilities
-  # action:
-  #   'ability'
-
+  - all
+  - create
+  - read
+  - update
+  - delete
+  - moderate
   actions:
-    index:
-      'read'
-    show:
-      'read'
-    edit:
-      'update'
-    update:
-      'update'
-    destroy:
-      'delete'
-    new:
-      'create'
-    create:
-      'create'
-    ban:
-      'moderate'
-    unban:
-      'moderate'
-
-
-  # Permissions Map
-  # user:           # role
-  #   component:    # name of the component
-  #     ability:    # name of the ability
-  #       options:  # ability options
-
+    index: read
+    show: read
+    edit: update
+    update: update
+    destroy: delete
+    new: create
+    create: create
+    ban: moderate
+    unban: moderate
   permissions:
     guest:
       articles:
-        read:
+        read: 
       discussions:
-        read:
+        read: 
       videos:
-        read:
+        read: 
       comments:
-        read:
+        read: 
       profile:
-        read:
+        read: 
       members:
-        read:
+        read: 
       advertisements:
-        read:
-
+        read: 
     banned:
       articles:
-        read:
+        read: 
       discussions:
-        read:
+        read: 
       videos:
-        read:
+        read: 
       comments:
-        read:
+        read: 
       profile:
-        read:
+        read: 
       members:
-        read:
+        read: 
       advertisements:
-        read:
-
+        read: 
     member:
       articles:
-        read:
+        read: 
       discussions:
-        read:
+        read: 
       videos:
-        read:
+        read: 
       comments:
-        create:
-        read:
-        delete:
+        create: 
+        read: 
+        delete: 
       profile:
-        create:
-        read:
-        update:
+        create: 
+        read: 
+        update: 
       members:
-        read:
+        read: 
       advertisements:
-        read:
-
+        read: 
     editor:
       admin:
-        all:
+        all: 
       dashboard:
-        read:
+        read: 
       users:
-        read:
-        moderate:
+        read: 
+        moderate: 
       members:
-        read:
+        read: 
       profile:
-        create:
-        read:
-        update:
+        create: 
+        read: 
+        update: 
       articles:
-        all:
+        all: 
       comments:
-        create:
-        read:
-        delete:
+        create: 
+        read: 
+        delete: 
       discussions:
-        all:
+        all: 
       videos:
-        all:
+        all: 
       podcasts:
-        all:
+        all: 
       categories:
-        read:
+        read: 
       tags:
-        read:
+        read: 
       support:
-        all:
-
+        all: 
     admin:
       admin:
-        all:
+        all: 
       dashboard:
-        all:
+        all: 
       users:
-        all:
+        all: 
       members:
-        all:
+        all: 
       profile:
-        all:
+        all: 
       articles:
-        all:
+        all: 
       comments:
-        all:
+        all: 
       discussions:
-        all:
+        all: 
       videos:
-        all:
+        all: 
       podcasts:
-        all:
+        all: 
       advertisements:
-        all:
+        all: 
       categories:
-        all:
+        all: 
       tags:
-        all:
+        all: 
       reports:
-        all:
+        all: 
       site_settings:
-        all:
+        all: 
       site_settings_general:
-        all:
+        all: 
       site_settings_branding:
-        all:
+        all: 
       site_settings_theme:
-        all:
+        all: 
       site_settings_theme_general:
-        all:
+        all: 
       site_settings_theme_homepage:
-        all:
+        all: 
       site_settings_theme_discussion:
-        all:
+        all: 
       site_settings_contact:
-        all:
+        all: 
       site_settings_integration:
-        all:
+        all: 
       support:
-        all:
+        all: 
+      site_settings_theme_global:
+        all: 
