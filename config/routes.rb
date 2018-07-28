@@ -90,6 +90,7 @@ Rails.application.routes.draw do
 
       scope :theme, controller: "theme", module: "theme", component: "site_settings_theme", as: "theme" do
         root to: "theme#all"
+        resource :global, controller: "theme_global", component: "site_settings_theme_global"
         resource :general, controller: "theme_general", component: "site_settings_theme_general"
         resource :homepage, controller: "theme_homepage", component: "site_settings_theme_homepage"
         resource :discussion, controller: "theme_discussion", component: "site_settings_theme_discussion"
