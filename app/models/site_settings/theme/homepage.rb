@@ -12,7 +12,9 @@ module SiteSettings::Theme
                           :featured_items,
                           :featured_variant,
                           :discussion_items,
-                          :content_top_padding
+                          :content_top_padding,
+                          :content_icons,
+                          :comment_count
 
     content_attr :menu_color, :string
     content_attr :overlay_color, :string
@@ -23,6 +25,8 @@ module SiteSettings::Theme
     content_attr :featured_variant, :string
     content_attr :discussion_items, :integer
     content_attr :content_top_padding, :integer
+    content_attr :content_icons, :string
+    content_attr :comment_count, :string
 
     def self.instance
       Homepage.first_or_create! do |settings|
@@ -35,6 +39,8 @@ module SiteSettings::Theme
         settings.featured_variant = "a"
         settings.discussion_items = 6
         settings.content_top_padding = 1
+        settings.content_icons = "show"
+        settings.comment_count = "hide"
       end
     end
 

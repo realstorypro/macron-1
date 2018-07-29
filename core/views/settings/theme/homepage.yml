@@ -67,3 +67,19 @@ views:
         label: 'Content Top Padding'
         type: 'integer'
         hint: '(In EM)'
+
+      content_icons:
+        advanced: true
+        label: 'Content Icons'
+        type: 'fixed_dropdown'
+        options:
+        - show
+        - hide
+
+      comment_count:
+        advanced: true
+        label: 'Comment Count'
+        type: 'fixed_dropdown'
+        options:
+        - show
+        - hide

@@ -1,13 +1,9 @@
 views:
   site_settings_theme_footer:
     new:
-      footer_variant:
-        advanced: true
-        label: 'Variant'
-        type: 'fixed_dropdown'
-        options:
-        - full
-        - slim
+      styling_header:
+        type: 'header'
+        text: 'Styling'
 
       footer_color:
         label: 'Color'
@@ -41,3 +37,16 @@ views:
         options:
         - auto
         - reversed
+
+      content_header:
+        type: 'header'
+        text: 'Content'
+
+      about:
+        label: 'About Us'
+        type: 'rich'
+        hint: 'Write two short paragraphs describing the web site.'
+
+      copyrights:
+        label: 'Copyrights'
+        type: 'string'

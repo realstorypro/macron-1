@@ -24,32 +24,11 @@ components:
     path: 'admin_settings_general'
     enabled: true
 
-  site_settings_branding:
-    name: 'Branding'
-    description: >
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                  <ul class='ui list'>
-                    <li> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </li>
-                    <li> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </li>
-                  </ul>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    help_link: 'https://support.idealogic.io/branding'
-    klass: 'SiteSettings::Branding'
-    path: 'admin_settings_branding'
-    enabled: true
-
   site_settings_theme:
     name: 'Theme Settings'
     description: 'Provides general settings capabilities'
     klass: 'SiteSettings::Theme'
     path: 'admin_settings_theme'
-    enabled: true
-
-  site_settings_theme_general:
-    name: 'General Theme Settings'
-    description: 'Provides general settings capabilities'
-    klass: 'SiteSettings::Theme::General'
-    path: 'admin_settings_theme_general'
     enabled: true
 
   site_settings_theme_homepage:

@@ -8,9 +8,8 @@ module SiteSettings
 
     validates_presence_of :name,
                           :description,
-                          :url,
-                          :about,
-                          :copyrights
+                          :url
+
     validates :url, url: { schemes: ["https"] }
 
     content_attr :name, :string

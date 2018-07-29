@@ -16,11 +16,3 @@ views:
         type: 'string'
         hint: 'Must start with https://'
 
-      about:
-        label: 'About Us'
-        type: 'rich'
-        hint: 'Write two short paragraphs describing the web site.'
-
-      copyrights:
-        label: 'Copyrights'
-        type: 'string'
