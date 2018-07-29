@@ -5,9 +5,7 @@ module SiteSettings::Theme
       errors.add(:base, "already one setting object existing") && (return false) if Header.exists?
     end
 
-    validates_presence_of :logo,
-                          :inverted_logo,
-                          :menu_color,
+    validates_presence_of :menu_color,
                           :menu_position
 
     content_attr :desktop_logo_size, :integer

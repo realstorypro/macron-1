@@ -52,7 +52,7 @@ module SiteSettings
 
         $redis.set("site_settings", site_settings)
       end
-      
+
       @site_settings = JSON.parse(site_settings)
 
       # This isn't ideal as we're re-initing analytics with every call.

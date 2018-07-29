@@ -1,7 +1,7 @@
 // TODO: Refactor this into something nicer
 // We only want to show icon if one has been uploaded
 
-- if ss('branding.icon') && ss('branding.icon').blank?
+- if ss('theme.branding.icon') && ss('theme.branding.icon').blank?
   = display_meta_tags reverse: true, site: ss('general.name'), description: ss('general.description'),
           og: {site_name: ss('general.name')},
           twitter: {site: ss('contact.twitter')}
@@ -9,13 +9,13 @@
   = display_meta_tags reverse: true, site: ss('general.name'), description: ss('general.description'),
       og: {site_name: ss('general.name')},
       twitter: {site: ss('contact.twitter')},
-      icon: [ { href: "#{ss('branding.icon')}-/preview/16x16/", sizes: '16x16' },
-      { href: "#{ss('branding.icon')}-/preview/32x32/", sizes: '32x32' },
-      { href: "#{ss('branding.icon')}-/preview/96x96/", sizes: '96x96' },
-      { href: "#{ss('branding.icon')}-/preview/120x120/", rel: 'apple-touch-icon' },
-      { href: "#{ss('branding.icon')}-/preview/152x152/", sizes: '152x152', rel: 'apple-touch-icon' },
-      { href: "#{ss('branding.icon')}-/preview/167x167/", sizes: '167x167', rel: 'apple-touch-icon' },
-      { href: "#{ss('branding.icon')}-/preview/180x180/", sizes: '180x180', rel: 'apple-touch-icon' } ]
+      icon: [ { href: "#{ss('theme.branding.icon')}-/preview/16x16/", sizes: '16x16' },
+      { href: "#{ss('theme.branding.icon')}-/preview/32x32/", sizes: '32x32' },
+      { href: "#{ss('theme.branding.icon')}-/preview/96x96/", sizes: '96x96' },
+      { href: "#{ss('theme.branding.icon')}-/preview/120x120/", rel: 'apple-touch-icon' },
+      { href: "#{ss('theme.branding.icon')}-/preview/152x152/", sizes: '152x152', rel: 'apple-touch-icon' },
+      { href: "#{ss('theme.branding.icon')}-/preview/167x167/", sizes: '167x167', rel: 'apple-touch-icon' },
+      { href: "#{ss('theme.branding.icon')}-/preview/180x180/", sizes: '180x180', rel: 'apple-touch-icon' } ]
 
 meta content = 'text/html; charset=UTF-8' http-equiv = 'Content-Type'
 meta content = 'width=device-width initial-scale=1' name = 'viewport'
