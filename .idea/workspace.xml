@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/_theme.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/_theme.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/general.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/general.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/footer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/footer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/components.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/components.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/settings/general.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/settings/general.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/settings/theme/footer.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/settings/theme/footer.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/settings/theme/homepage.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/settings/theme/homepage.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -98,11 +91,11 @@
           <entry key="coffee" value="26" />
           <entry key="md" value="304" />
           <entry key="rake" value="2998" />
-          <entry key="rb" value="9299" />
+          <entry key="rb" value="9923" />
           <entry key="sass" value="2132" />
           <entry key="scss" value="242" />
           <entry key="slim" value="7638" />
-          <entry key="yml" value="3620" />
+          <entry key="yml" value="3622" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -110,11 +103,11 @@
           <entry key="CoffeeScript" value="26" />
           <entry key="Markdown" value="304" />
           <entry key="PLAIN_TEXT" value="144" />
-          <entry key="Ruby" value="12368" />
+          <entry key="Ruby" value="12992" />
           <entry key="SCSS" value="242" />
           <entry key="Sass" value="2132" />
           <entry key="Slim" value="7638" />
-          <entry key="YAML" value="3620" />
+          <entry key="YAML" value="3622" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -124,7 +117,7 @@
           <entry key="js" value="2" />
           <entry key="md" value="1" />
           <entry key="rake" value="4" />
-          <entry key="rb" value="132" />
+          <entry key="rb" value="134" />
           <entry key="sass" value="4" />
           <entry key="scss" value="1" />
           <entry key="slim" value="19" />
@@ -136,7 +129,7 @@
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Ruby" value="138" />
+          <entry key="Ruby" value="140" />
           <entry key="SCSS" value="1" />
           <entry key="Sass" value="4" />
           <entry key="Slim" value="19" />
@@ -165,47 +158,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/views/settings/theme/footer.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/site_settings/general.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/site_settings/_theme.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/views/settings/theme/homepage.yml">
+        <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+            <state relative-caret-position="575">
+              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -353,7 +310,6 @@
         <option value="$PROJECT_DIR$/app/models/site_settings/theme/branding.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/site_settings/settings/all.html.slim" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" />
         <option value="$PROJECT_DIR$/core/components.yml" />
         <option value="$PROJECT_DIR$/core/views/settings/general.yml" />
         <option value="$PROJECT_DIR$/core/views/settings/theme/footer.yml" />
@@ -362,6 +318,7 @@
         <option value="$PROJECT_DIR$/app/models/site_settings/_theme.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb" />
         <option value="$PROJECT_DIR$/core/views/settings/theme/homepage.yml" />
+        <option value="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" />
       </list>
     </option>
   </component>
@@ -413,36 +370,6 @@
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="site_settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="site_settings" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -508,24 +435,6 @@
               <item name="site_settings" type="462c0819:PsiDirectoryNode" />
               <item name="theme" type="462c0819:PsiDirectoryNode" />
               <item name="theme" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
@@ -688,9 +597,9 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49619773" weight="0.24678111" />
-      <window_info id="Structure" order="1" sideWeight="0.50384617" side_tool="true" weight="0.33117932" />
-      <window_info id="Favorites" order="2" sideWeight="0.5038023" side_tool="true" weight="0.34978542" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49408674" visible="true" weight="0.24678111" />
+      <window_info id="Structure" order="1" sideWeight="0.5045992" side_tool="true" weight="0.24678111" />
+      <window_info id="Favorites" order="2" sideWeight="0.50591326" side_tool="true" weight="0.24678111" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.56241786" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
@@ -744,7 +653,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/help.yml" />
     <entry file="file://$PROJECT_DIR$/lib/tasks/colors.rake">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1015,24 +923,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/views/settings/general.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/general.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1043,10 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/footer.yml">
+    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/homepage.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="501">
+          <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1057,17 +951,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/general.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/homepage.yml">
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+        <state relative-caret-position="510">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/footer.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profile_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
         </state>
       </provider>
     </entry>
