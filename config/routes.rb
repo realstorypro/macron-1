@@ -84,7 +84,6 @@ Rails.application.routes.draw do
     scope :settings, module: "site_settings", component: "site_settings", as: "settings"  do
       root to: "settings#all"
       resource :general, controller: "general", component: "site_settings_general"
-      resource :branding, controller: "branding", component: "site_settings_branding"
       resource :contact, controller: "contact", component: "site_settings_contact"
       resource :integration, controller: "integration", component: "site_settings_integration"
 
@@ -98,7 +97,6 @@ Rails.application.routes.draw do
         resource :footer, controller: "theme_footer", component: "site_settings_theme_footer"
         resource :header, controller: "theme_header", component: "site_settings_theme_header"
         resource :global, controller: "theme_global", component: "site_settings_theme_global"
-        resource :general, controller: "theme_general", component: "site_settings_theme_general"
         resource :homepage, controller: "theme_homepage", component: "site_settings_theme_homepage"
         resource :discussion, controller: "theme_discussion", component: "site_settings_theme_discussion"
       end

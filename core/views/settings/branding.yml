@@ -1,6 +1,0 @@
-views:
-  site_settings_branding:
-    new:
-      branding_header:
-        type: 'header'
-        text: 'Logos'
