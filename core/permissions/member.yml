@@ -1,21 +1,24 @@
+---
 auth:
   permissions:
     member:
       articles:
-        read:
+        read: 
       discussions:
-        read:
+        read: 
       videos:
-        read:
+        read: 
       comments:
-        create:
-        read:
-        delete:
+        create: 
+        read: 
+        delete: 
       profile:
-        create:
-        read:
-        update:
+        create: 
+        read: 
+        update: 
       members:
-        read:
+        read: 
       advertisements:
-        read:
+        read: 
+      podcasts:
+        read: 

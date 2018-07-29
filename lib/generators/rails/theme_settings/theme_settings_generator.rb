@@ -20,11 +20,5 @@ class Rails::ThemeSettingsGenerator < Rails::Generators::NamedBase
     copy_file "controller.rb", "app/controllers/admin/site_settings/theme/theme_#{file_name}_controller.rb"
     gsub_file "app/controllers/admin/site_settings/theme/theme_#{file_name}_controller.rb", '<~~ class_name ~~>', class_name
     gsub_file "app/controllers/admin/site_settings/theme/theme_#{file_name}_controller.rb", '<~~ lowercase_name ~~>', file_name
-
-    # load auth yaml file
-    auth_file = YAML::load_file("core/auth.yml")
-    auth_file['auth']['permissions']['admin']["site_settings_theme_#{file_name}"] = {"all"=>nil}
-    File.open('core/auth.yml', 'w') {|f| f.write auth_file.to_yaml }
-
   end
 end

@@ -22,22 +22,31 @@ namespace :permissions do
     abilities = auth["abilities"]
 
     # get the permissions path
-    permissions_path = Rails.root.join('core').join('permissions').to_s
+    permissions_path = Rails.root.join("core").join("permissions").to_s
 
     # get all of the files inside a directory
     permissions = Dir.entries(permissions_path).select {|f| !File.directory? f}
 
     # get only the names of the files
-    role_names = permissions.map {|f| f.split('.')[0]}
+    role_names = permissions.map {|f| f.split(".")[0]}
 
-    selected_component = prompt.select "Which component?", component_names, per_page: 20, filter: true
     selected_role = prompt.select "Which role?", role_names, per_page: 20, filter: true
+    selected_component = prompt.select "Which component?", component_names, per_page: 20, filter: true
     selected_ability = prompt.multi_select "Which ability?", abilities, per_page: 20, filter: true
 
     # breaks out if no ability ahs been selected
-    break puts 'no ability selected' if selected_ability.blank?
+    break puts "no ability selected" if selected_ability.blank?
 
+    permission_file = YAML.load_file(Rails.root.join("core").join("permissions").join("#{selected_role}.yml"))
+    permission_file["selected_component"]
+    selected_ability.each do |ability|
+      if permission_file["auth"]["permissions"][selected_role][selected_component].nil?
+        permission_file["auth"]["permissions"][selected_role][selected_component] = {}
+      end
+      permission_file["auth"]["permissions"][selected_role][selected_component][ability] = nil
+    end
 
+    File.open(Rails.root.join("core").join("permissions").join("#{selected_role}.yml"), "w") {|f| f.write permission_file.to_yaml }
   end
 
   desc "Disable disables permission for a user"

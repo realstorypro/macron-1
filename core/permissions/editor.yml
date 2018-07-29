@@ -1,34 +1,35 @@
+---
 auth:
   permissions:
     editor:
       admin:
-        all:
+        all: 
       dashboard:
-        read:
+        read: 
       users:
-        read:
-        moderate:
+        read: 
+        moderate: 
       members:
-        read:
+        read: 
       profile:
-        create:
-        read:
-        update:
+        create: 
+        read: 
+        update: 
       articles:
-        all:
+        all: 
       comments:
-        create:
-        read:
-        delete:
+        create: 
+        read: 
+        delete: 
       discussions:
-        all:
+        all: 
       videos:
-        all:
+        all: 
       podcasts:
-        all:
+        all: 
       categories:
-        read:
+        read: 
       tags:
-        read:
+        read: 
       support:
-        all:
+        all: 
