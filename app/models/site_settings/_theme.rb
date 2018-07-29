@@ -7,21 +7,12 @@ module SiteSettings
     end
 
     validates_presence_of :content_icons,
-                          :comment_count,
+                          :comment_count
 
 
-                          :sign_up_title,
-                          :sign_up_subtitle,
-                          :sign_in_title
-
-
-    # ** Migrating **
     content_attr :content_icons, :string
     content_attr :comment_count, :string
 
-    content_attr :sign_up_title, :string
-    content_attr :sign_up_subtitle, :string
-    content_attr :sign_in_title, :string
 
     def self.instance
       Theme.first_or_create! do |settings|
@@ -40,9 +31,6 @@ module SiteSettings
                           sed diam voluptua.</p>"
         settings.copyrights = "2017 - 2018 IdeaLogic"
 
-        settings.sign_up_title = "Sign Up"
-        settings.sign_up_subtitle = "Join The Community"
-        settings.sign_in_title = "Sign In"
       end
     end
   end

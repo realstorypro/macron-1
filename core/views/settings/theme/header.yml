@@ -1,6 +1,9 @@
 views:
   site_settings_theme_header:
     new:
+      nav_header:
+        type: 'header'
+        text: 'Navigation'
       menu_color:
         label: 'Color'
         type: 'color'
@@ -12,3 +15,21 @@ views:
         options:
         - 'left'
         - 'right'
+
+      logo_header:
+        type: 'header'
+        text: 'Logo'
+
+      desktop_logo_size:
+        advanced: true
+        label: 'Desktop Logo Width'
+        type: 'string'
+        hint: '(in pixels)'
+        maxlength: '3'
+
+      mobile_logo_size:
+        advanced: true
+        label: 'Mobile Logo Width'
+        type: 'string'
+        hint: '(in pixels)'
+        maxlength: '3'

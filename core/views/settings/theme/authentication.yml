@@ -1,21 +1,6 @@
 views:
-  site_settings_theme:
+  site_settings_theme_authentication:
     new:
-
-      ####################
-      ####################
-
-      ## Authentication ##
-
-      ####################
-      ####################
-
-
-      auth_header:
-        advanced: true
-        type: 'header'
-        text: 'Authentication'
-
       sign_up_title:
         advanced: true
         label: '"Sign up" Title'
@@ -33,3 +18,8 @@ views:
         label: '"Sign In" title'
         type: 'string'
         hint: 'Title of the Sign In Box'
+
+      auth_background:
+        label: 'Authentication'
+        type: 'image'
+        size: ['2560','1600']

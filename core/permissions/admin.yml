@@ -62,3 +62,7 @@ auth:
         all: 
       site_settings_theme_article:
         all: 
+      site_settings_theme_authentication:
+        all: 
+      site_settings_theme_branding:
+        all: 

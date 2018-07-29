@@ -11,6 +11,13 @@
               | Global
             = description
               | Fonts, overlays, etc
+        = link_to admin_settings_theme_branding_path, class: 'item'
+          = icon 'middle aligned paint brush inverted blue bordered'
+          = content
+            = header ui: :off, class: 'blue'
+              | Branding
+            = description
+              | Logos & icons ...
         = link_to admin_settings_theme_header_path, class: 'item'
           = icon 'middle aligned window maximize inverted blue bordered'
           = content
@@ -25,6 +32,13 @@
               | Footer
             = description
               | Footer variation and styling
+        = link_to admin_settings_theme_authentication_path, class: 'item'
+          = icon 'middle aligned lock inverted blue bordered'
+          = content
+            = header ui: :off
+              | Authentication
+            = description
+              | Authentication settings
 
       = h5 'dividing'
         | Modules

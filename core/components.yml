@@ -108,6 +108,20 @@ components:
     path: 'admin_settings_theme_video'
     enabled: true
 
+  site_settings_theme_authentication:
+    name: 'Authentication Theme Settings'
+    description: 'Provides header theme settings capabilities'
+    klass: 'SiteSettings::Theme::Authentication'
+    path: 'admin_settings_theme_authentication'
+    enabled: true
+
+  site_settings_theme_branding:
+    name: 'Branding Theme Settings'
+    description: 'Provides header theme settings capabilities'
+    klass: 'SiteSettings::Theme::Branding'
+    path: 'admin_settings_theme_branding'
+    enabled: true
+
   site_settings_contact:
     name: 'Contact Settings'
     description: 'Provides general settings capabilities'
