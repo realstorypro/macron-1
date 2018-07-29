@@ -63,7 +63,49 @@ components:
     name: 'Discussion Theme Settings'
     description: 'Provides discussion theme settings capabilities'
     klass: 'SiteSettings::Theme::Discussion'
-    path: 'admin_settings_theme_discussions'
+    path: 'admin_settings_theme_discussion'
+    enabled: true
+
+  site_settings_theme_global:
+    name: 'Global Theme Settings'
+    description: 'Provides discussion theme settings capabilities'
+    klass: 'SiteSettings::Theme::Global'
+    path: 'admin_settings_theme_global'
+    enabled: true
+
+  site_settings_theme_header:
+    name: 'Header Theme Settings'
+    description: 'Provides header theme settings capabilities'
+    klass: 'SiteSettings::Theme::Header'
+    path: 'admin_settings_theme_header'
+    enabled: true
+
+  site_settings_theme_footer:
+    name: 'Footer Theme Settings'
+    description: 'Provides header theme settings capabilities'
+    klass: 'SiteSettings::Theme::Footer'
+    path: 'admin_settings_theme_footer'
+    enabled: true
+
+  site_settings_theme_podcast:
+    name: 'Podcast Theme Settings'
+    description: 'Provides header theme settings capabilities'
+    klass: 'SiteSettings::Theme::Podcast'
+    path: 'admin_settings_theme_podcast'
+    enabled: true
+    
+  site_settings_theme_article:
+    name: 'Article Theme Settings'
+    description: 'Provides header theme settings capabilities'
+    klass: 'SiteSettings::Theme::Article'
+    path: 'admin_settings_theme_article'
+    enabled: true
+    
+  site_settings_theme_video:
+    name: 'Video Theme Settings'
+    description: 'Provides header theme settings capabilities'
+    klass: 'SiteSettings::Theme::Video'
+    path: 'admin_settings_theme_video'
     enabled: true
 
   site_settings_contact:
