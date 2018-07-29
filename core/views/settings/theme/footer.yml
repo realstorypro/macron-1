@@ -1,0 +1,43 @@
+views:
+  site_settings_theme_footer:
+    new:
+      footer_variant:
+        advanced: true
+        label: 'Variant'
+        type: 'fixed_dropdown'
+        options:
+        - full
+        - slim
+
+      footer_color:
+        label: 'Color'
+        type: 'color'
+
+      footer_button_color:
+        advanced: true
+        label: 'Button Color'
+        type: 'color'
+
+      footer_button_style:
+        advanced: true
+        label: 'Button Style'
+        type: 'fixed_dropdown'
+        options:
+        - regular
+        - inverted
+
+      footer_icon:
+        advanced: true
+        label: 'Icon'
+        type: 'fixed_dropdown'
+        options:
+        - show
+        - hide
+
+      footer_item_order:
+        advanced: true
+        label: 'Column Order'
+        type: 'fixed_dropdown'
+        options:
+        - auto
+        - reversed

@@ -1,0 +1,14 @@
+views:
+  site_settings_theme_header:
+    new:
+      menu_color:
+        label: 'Color'
+        type: 'color'
+
+      menu_position:
+        advanced: true
+        label: 'Menu Position'
+        type: 'fixed_dropdown'
+        options:
+        - 'left'
+        - 'right'
