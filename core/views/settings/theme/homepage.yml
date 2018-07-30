@@ -17,6 +17,14 @@ views:
         - normal
         - gradient
 
+      image_style:
+        advanced: true
+        label: 'Image Style'
+        type: 'fixed_dropdown'
+        options:
+        - normal
+        - fixed
+
       category_style:
         advanced: true
         label: 'Category Style'

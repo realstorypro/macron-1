@@ -31,11 +31,11 @@ module Widget
 
     def show_icon(item)
       if item.type == "Article"
-        raw("#{icon('newspaper outline')}")
+        raw("#{icon('newspaper outline large')}")
       elsif item.type == "Video"
-        raw("#{icon('video')}")
+        raw("#{icon('video large')}")
       elsif item.type == "Podcast"
-        raw("#{icon('podcast')}")
+        raw("#{icon('podcast large')}")
       end
     end
 
@@ -53,23 +53,20 @@ module Widget
       if category_style == "divided"
         "sub dividing #{@item.category.color.name} #{inverted?(overlay_color)}"
       elsif category_style == "white boxed"
-        if @item.category.color.name == "white"
-          "sub boxed whited black"
-        else
-          "sub boxed whited #{@item.category.color.name}"
-        end
+        "sub boxed whited black"
       elsif category_style == "black boxed"
-        if @item.category.color.name == "black"
-          "sub boxed blacked white"
-        else
-          "sub boxed blacked #{@item.category.color.name} inverted"
-        end
+        "sub boxed blacked white"
       else
         "sub #{@item.category.color.name} #{inverted?(overlay_color)}"
       end
     end
 
-    # shortcut for accessing position
+    def image_class
+      return 'fixed background' if image_style == 'fixed'
+      nil
+    end
+
+    # theme setting shortcuts
     def item_count
       ss("theme.homepage.featured_items")
     end
@@ -82,6 +79,10 @@ module Widget
       ss("theme.homepage.overlay_background")
     end
 
+    def image_style
+      ss("theme.homepage.image_style")
+    end
+
     def category_style
       ss("theme.homepage.category_style")
     end
@@ -90,12 +91,10 @@ module Widget
       "computer #{ss("theme.homepage.item_order")}"
     end
 
-    # shortcut for content icons
     def content_icons
       ss("theme.homepage.content_icons")
     end
 
-    # shortcut for comment count
     def comment_count
       ss("theme.homepage.comment_count")
     end

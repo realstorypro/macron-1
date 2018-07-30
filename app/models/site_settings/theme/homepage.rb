@@ -18,6 +18,7 @@ module SiteSettings::Theme
     content_attr :menu_color, :string
     content_attr :overlay_color, :string
     content_attr :overlay_background, :string
+    content_attr :image_style, :string
     content_attr :category_style, :string
     content_attr :item_order, :string
     content_attr :featured_items, :integer
@@ -31,6 +32,7 @@ module SiteSettings::Theme
         settings.menu_color = "black"
         settings.overlay_color = "black"
         settings.overlay_background = "normal"
+        settings.image_style = "normal"
         settings.category_style = "normal"
         settings.item_order = "auto"
         settings.featured_items = "5"
