@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/display_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/display_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/nav_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/nav_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/discussion.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/discussion.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/show.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/page/terms-of-service.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/page/terms-of-service.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/_show_content.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_show_content.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/videos/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/videos/show.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/components.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/components.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/settings/theme/discussion.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/settings/theme/discussion.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.last_run.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.last_run.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -101,7 +94,7 @@
           <entry key="coffee" value="26" />
           <entry key="md" value="304" />
           <entry key="rake" value="2998" />
-          <entry key="rb" value="12199" />
+          <entry key="rb" value="12250" />
           <entry key="sass" value="2132" />
           <entry key="scss" value="242" />
           <entry key="slim" value="8601" />
@@ -113,7 +106,7 @@
           <entry key="CoffeeScript" value="26" />
           <entry key="Markdown" value="304" />
           <entry key="PLAIN_TEXT" value="144" />
-          <entry key="Ruby" value="15268" />
+          <entry key="Ruby" value="15319" />
           <entry key="SCSS" value="242" />
           <entry key="Sass" value="2132" />
           <entry key="Slim" value="8601" />
@@ -127,7 +120,7 @@
           <entry key="js" value="2" />
           <entry key="md" value="1" />
           <entry key="rake" value="4" />
-          <entry key="rb" value="176" />
+          <entry key="rb" value="178" />
           <entry key="sass" value="4" />
           <entry key="scss" value="1" />
           <entry key="slim" value="31" />
@@ -139,7 +132,7 @@
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Ruby" value="182" />
+          <entry key="Ruby" value="184" />
           <entry key="SCSS" value="1" />
           <entry key="Sass" value="4" />
           <entry key="Slim" value="31" />
@@ -168,20 +161,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/display_controller.rb">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/partials/_show_content.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="114" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
+            <state relative-caret-position="529">
+              <caret line="41" column="77" selection-start-line="41" selection-start-column="77" selection-end-line="41" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -240,11 +224,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/page/terms-of-service.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/routing/meta_routing_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -355,7 +348,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/views/settings/theme/video.yml" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme/article.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme/video.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme/global.rb" />
@@ -406,6 +398,7 @@
         <option value="$PROJECT_DIR$/app/views/videos/show.html.slim" />
         <option value="$PROJECT_DIR$/core/components.yml" />
         <option value="$PROJECT_DIR$/app/views/page/terms-of-service.html.slim" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -761,13 +754,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/branding.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/header.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -938,13 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/cells/admin_base_cell_spec.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1090,7 +1069,21 @@
     <entry file="file://$PROJECT_DIR$/app/views/page/terms-of-service.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/routing/meta_routing_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="41" column="77" selection-start-line="41" selection-start-column="77" selection-end-line="41" selection-end-column="77" />
         </state>
       </provider>
     </entry>
