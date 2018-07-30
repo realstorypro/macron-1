@@ -21,7 +21,7 @@ module NavHelper
       end
 
     elsif controller_name == "discussions" && action_name.downcase == "show"
-      menu_style = ss(:discussion_menu_style)
+      menu_style = ss('theme.discussion.menu_style')
       category_color = @entry.category.color.name
 
       # we want to eliminate transparency if the background is set as solid

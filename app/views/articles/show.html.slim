@@ -1,6 +1,6 @@
 = component 'article details'
   = fragment 'header fullscreen'
-    == Vue::CoverCell.(nil, overlay_background: ss(:overlay_background), image: @entry.fullscreen_image)
+    == Vue::CoverCell.(nil, overlay_background: ss('theme.global.overlay_background'), image: @entry.fullscreen_image)
     = container
       = grid
         = row
