@@ -1,14 +1,9 @@
 # frozen_string_literal: true
 
 module Widget
-  class HomepageCell < Cell::ViewModel
-    include ApplicationHelper
-    include DcUi::Helpers
-
-    delegate :url_helpers, to: "::Rails.application.routes"
-
+  class HomepageCell < BaseCell
     cache :show do
-      @model.cache_key
+      @model.cache_key + Digest::MD5.hexdigest(options[:site_settings].to_s)
     end
 
     def show
@@ -76,33 +71,33 @@ module Widget
 
     # shortcut for accessing position
     def item_count
-      options[:item_count]
+      ss("theme.homepage.featured_items")
     end
 
     def overlay_color
-      options[:overlay_color]
+      ss("theme.homepage.overlay_color")
     end
 
     def overlay_background
-      options[:overlay_background]
+      ss("theme.homepage.overlay_background")
     end
 
     def category_style
-      options[:category_style]
+      ss("theme.homepage.category_style")
     end
 
     def item_order
-      "computer #{options[:item_order]}"
+      "computer #{ss("theme.homepage.item_order")}"
     end
 
     # shortcut for content icons
     def content_icons
-      options[:content_icons]
+      ss("theme.homepage.content_icons")
     end
 
     # shortcut for comment count
     def comment_count
-      options[:comment_count]
+      ss("theme.homepage.comment_count")
     end
   end
 end

@@ -10,7 +10,6 @@ module SiteSettings::Theme
                           :category_style,
                           :item_order,
                           :featured_items,
-                          :featured_variant,
                           :discussion_items,
                           :content_top_padding,
                           :content_icons,
@@ -22,7 +21,6 @@ module SiteSettings::Theme
     content_attr :category_style, :string
     content_attr :item_order, :string
     content_attr :featured_items, :integer
-    content_attr :featured_variant, :string
     content_attr :discussion_items, :integer
     content_attr :content_top_padding, :integer
     content_attr :content_icons, :string
@@ -36,7 +34,6 @@ module SiteSettings::Theme
         settings.category_style = "normal"
         settings.item_order = "auto"
         settings.featured_items = "5"
-        settings.featured_variant = "a"
         settings.discussion_items = 6
         settings.content_top_padding = 1
         settings.content_icons = "show"

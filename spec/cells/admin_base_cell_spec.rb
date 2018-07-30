@@ -5,9 +5,9 @@ require "rails_helper"
 include SettingsHelper
 include CrudHelper
 
-describe Admin::BaseCell, type: "feature" do
+describe Admin::AdminBaseCell, type: "feature" do
   before :each do
-    @cell = Admin::BaseCell
+    @cell = Admin::AdminBaseCell
   end
 
   after :each do

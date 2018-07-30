@@ -6,7 +6,7 @@ html
     = render 'layouts/partials/drawers'
     = render 'layouts/partials/notifications'
 
-    /==  Widget::SidenavCell.(nil, layout: 'main', menu: s('menu.main'), request: request, show_icons: false, position: ss(:menu_position), site_settings: @site_settings)
+    ==  Widget::SidenavCell.(nil, layout: 'main', menu: s('menu.main'), request: request, show_icons: false, site_settings: @site_settings)
     .pusher
       nav.dynamic  id="dynamic-nav"
         = render 'layouts/partials/navigation'

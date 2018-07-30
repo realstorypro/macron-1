@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Admin
-  class DetailsCell < BaseCell
+  class DetailsCell < AdminBaseCell
     def show
       rows
     end

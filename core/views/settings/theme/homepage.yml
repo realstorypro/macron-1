@@ -35,14 +35,6 @@ views:
         - auto
         - reversed
 
-      featured_variant:
-        advanced: true
-        label: 'Featured Widget Variant'
-        type: 'fixed_dropdown'
-        options:
-        - a
-        - b
-
       featured_items:
         advanced: true
         label: 'Featured Items'

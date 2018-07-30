@@ -1,7 +1,7 @@
 # rubocop:disable CyclomaticComplexity
 
 module Admin
-  class BaseCell < Cell::ViewModel
+  class AdminBaseCell < Cell::ViewModel
     include ApplicationHelper
     include ActionView::Helpers::DateHelper
     include DcUi::Helpers
