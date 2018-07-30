@@ -3,48 +3,48 @@
     = grid "stackable left aligned #{footer_item_order}"
       = column size: 6
         = h5 text: 'About Us', class: footer_item_class
-        = ss(:about).html_safe
+        = ss('theme.footer.about').html_safe
       - unless footer_reversed?
         = column size:1, only: :computer
       = column size: 4 do
         = h5 text: 'Contact Us', class: footer_item_class
         = list "relaxed divided link #{footer_item_class}"
-          - if ss(:phone) && !ss(:phone).blank?
+          - if ss('contact.phone') && !ss('contact.phone').blank?
             = item
               = icon 'phone'
-              = content text: ss(:phone)
-          - if ss(:website) && !ss(:website).blank?
+              = content text: ss('contact.phone')
+          - if ss('contact.website') && !ss('contact.website').blank?
             = item
               = icon 'globe'
               = content
-                = link_to ss(:website).gsub('https://','').gsub('http://',''), ss(:website), class: 'email link'
-          - if ss(:email) && !ss(:email).blank?
+                = link_to ss('contact.website').gsub('https://','').gsub('http://',''), ss('contact.website'), class: 'email link'
+          - if ss('contact.email') && !ss('contact.email').blank?
             = item
               = icon 'mail'
               = content
-                = link_to ss(:email), "mailto:#{ss(:email)}", class: 'email link'
-          - if ss(:address1) && !ss(:address1).blank?
+                = link_to ss('contact.email'), "mailto:#{ss('contact.email')}", class: 'email link'
+          - if ss('contact.address1') && !ss('contact.address1').blank?
             = item
               = icon 'map'
               = content
-                = ss(:address1)
-                - if ss(:address2) && !ss(:address2).blank?
+                = ss('contact.address1')
+                - if ss('contact.address2') && !ss('contact.address2').blank?
                   br
-                  = ss(:address2)
-                - if ss(:address3) && !ss(:address3).blank?
+                  = ss('contact.address2')
+                - if ss('contact.address3') && !ss('contact.address3').blank?
                   br
-                  = ss(:address3)
+                  = ss('contact.address3')
       - if footer_reversed?
         = column size:1, only: :computer
       = column size: 5
-        == Widget::NewsletterCell.(nil, current_user: current_user, button_color: ss(:footer_button_color) ,layout: :footer, site_settings: @site_settings)
+        == Widget::NewsletterCell.(nil, current_user: current_user, button_color: ss('theme.footer.button_color') ,layout: :footer, site_settings: @site_settings)
 
       = column size: 16, class: 'center aligned'
         = divider class: footer_item_class
-        = image_tag ss(:icon), class: "ui image mini centered" if ss(:footer_icon) == 'show'
+        = image_tag ss('theme.branding.icon'), class: "ui image mini centered" if ss('theme.footer.icon') == 'show'
         = list "copyright horizontal mini divided link #{footer_item_class}"
           = item
-            = "&copy; #{ss(:copyrights)}".html_safe
+            = "&copy; #{ss('theme.footer.copyrights')}".html_safe
           ==  MenuCell.(nil,
                   menu: s('menu.legal'),
                   policy: Pundit.policy(current_user, :headless),

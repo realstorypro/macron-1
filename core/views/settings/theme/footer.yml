@@ -5,16 +5,16 @@ views:
         type: 'header'
         text: 'Styling'
 
-      footer_color:
+      color:
         label: 'Color'
         type: 'color'
 
-      footer_button_color:
+      button_color:
         advanced: true
         label: 'Button Color'
         type: 'color'
 
-      footer_button_style:
+      button_style:
         advanced: true
         label: 'Button Style'
         type: 'fixed_dropdown'
@@ -22,7 +22,7 @@ views:
         - regular
         - inverted
 
-      footer_icon:
+      icon:
         advanced: true
         label: 'Icon'
         type: 'fixed_dropdown'
@@ -30,7 +30,7 @@ views:
         - show
         - hide
 
-      footer_item_order:
+      item_order:
         advanced: true
         label: 'Column Order'
         type: 'fixed_dropdown'
