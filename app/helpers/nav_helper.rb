@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-module MenuHelper
+module NavHelper
   include ColorHelper
   def menu_color_class
     transparent_controllers = %w(articles videos)
-    menu_color = ss("menu_color")
+    menu_color = ss("theme.header.menu_color")
 
     # in case of homepage apply the homepage colors
     if controller_name == "page" && action_name.downcase == "home"
-      homepage_menu_color = ss("homepage_menu_color")
+      homepage_menu_color = ss("theme.homepage.menu_color")
 
       menu_class(expanded_color: homepage_menu_color, collapsed_color: menu_color)
 

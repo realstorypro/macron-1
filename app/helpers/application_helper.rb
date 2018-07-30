@@ -7,6 +7,6 @@ module ApplicationHelper
   include UserHelper
   include CrudHelper
   include ImageHelper
-  include MenuHelper
+  include NavHelper
   include FooterHelper
 end
