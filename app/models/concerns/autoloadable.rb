@@ -12,20 +12,15 @@ module Autoloadable
     fields = setting.fetch_setting("views.#{class_name}.new")
 
     # removing non payloadable fields
-    # by type
-    fields = fields.reject{|field| field[1].type == 'header'}
-    fields = fields.reject{|field| field[1].type == 'association'}
-    fields = fields.reject{|field| field[1].type == 'dropdown'}
-    # by name
-    fields = fields.reject{|field| field[0].to_s == 'name'}
-    fields = fields.reject{|field| field[0].to_s == 'slug'}
-    fields = fields.reject{|field| field[0].to_s == 'published_date'}
+    rejected_types = %w(header association dropdown).freeze
+    rejected_names = %w(name slug published_date).freeze
+    fields = fields.reject {|field| rejected_types.include?(field[1].type) }
+    fields = fields.reject {|field| rejected_names.include?(field[0].to_s) }
 
-    # massive switch statement mapping the fields to field types
-    # refer to admin_base_cell.rb for the reverse map
-
+    # adding payload
     fields.each do |field|
       content_attr field[0], data_type.which?(field[1].type)
+      validates_presence_of field[0]
     end
 
   end
