@@ -11,3 +11,6 @@ files.select! { |entry| entry.include?('yml') == true}
 files.each {|entry| Settings.add_source!(Rails.root.join("core").join(entry).to_s)}
 
 Settings.reload!
+
+# Backup a directory
+Dir.chdir('..')
