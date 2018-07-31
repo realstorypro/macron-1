@@ -22,6 +22,5 @@ module Autoloadable
       content_attr field[0], data_type.which?(field[1].type)
       validates_presence_of field[0]
     end
-
   end
 end

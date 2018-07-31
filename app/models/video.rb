@@ -1,22 +1,15 @@
 # frozen_string_literal: true
 
 class Video < Entry
+  include Autoloadable
+
+  content_attr :embedded_video, :string
   before_save :embed_video
 
-  content_attr :long_title, :string
-  content_attr :landscape_image, :string
-  content_attr :card_image, :string
-  content_attr :image_alt, :string
-  content_attr :video, :string
-  content_attr :embedded_video, :string
-  content_attr :body, :text
-
-  validates_presence_of :video, :landscape_image, :card_image, :image_alt,
-                        :long_title,
-                        :body, :category, :description
-
+  validates_presence_of :category
   validates :video, url: true
   validate :approved_video_provider
+
   paginates_per 5
 
   def approved_video_provider

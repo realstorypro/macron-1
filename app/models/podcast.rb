@@ -1,19 +1,12 @@
 # frozen_string_literal: true
 
 class Podcast < Entry
+  include Autoloadable
+
   before_save :embed_audio
-
-  content_attr :long_title, :string
-  content_attr :landscape_image, :string
-  content_attr :card_image, :string
-  content_attr :image_alt, :string
-  content_attr :audio, :string
   content_attr :embedded_audio, :string
-  content_attr :body, :text
 
-  validates_presence_of :audio, :landscape_image, :card_image, :image_alt,
-                        :long_title,
-                        :body, :category, :description
+  validates_presence_of :category
 
   validates :audio, url: true
   validate :approved_audio_provider
@@ -40,6 +33,7 @@ class Podcast < Entry
   end
 
   private
+    # TODO Move to the palete
     def play_button_color(color)
       color_map = {
           red: "B03060",
