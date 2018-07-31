@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/lib/color_interface.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/setting_interface.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/lib/palette.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/base_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/settings_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/settings_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/site_settings_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/site_settings_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/bin/webpack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/webpack-dev-server" beforeDir="false" afterPath="$PROJECT_DIR$/bin/webpack-dev-server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/color_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/footer_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/footer_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/nav_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/nav_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/color_interface.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/palette.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/.last_run.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.last_run.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -105,9 +100,9 @@
           <entry key="json" value="12" />
           <entry key="md" value="304" />
           <entry key="rake" value="3013" />
-          <entry key="rb" value="14690" />
+          <entry key="rb" value="16136" />
           <entry key="sass" value="2330" />
-          <entry key="scss" value="242" />
+          <entry key="scss" value="263" />
           <entry key="slim" value="8700" />
           <entry key="yml" value="3811" />
         </counts>
@@ -118,8 +113,8 @@
           <entry key="JSON" value="12" />
           <entry key="Markdown" value="304" />
           <entry key="PLAIN_TEXT" value="155" />
-          <entry key="Ruby" value="17780" />
-          <entry key="SCSS" value="242" />
+          <entry key="Ruby" value="19226" />
+          <entry key="SCSS" value="263" />
           <entry key="Sass" value="2330" />
           <entry key="Slim" value="8700" />
           <entry key="YAML" value="3811" />
@@ -133,9 +128,9 @@
           <entry key="js" value="2" />
           <entry key="md" value="1" />
           <entry key="rake" value="5" />
-          <entry key="rb" value="200" />
+          <entry key="rb" value="205" />
           <entry key="sass" value="6" />
-          <entry key="scss" value="1" />
+          <entry key="scss" value="2" />
           <entry key="slim" value="32" />
           <entry key="yml" value="112" />
         </counts>
@@ -146,8 +141,8 @@
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Ruby" value="207" />
-          <entry key="SCSS" value="1" />
+          <entry key="Ruby" value="212" />
+          <entry key="SCSS" value="2" />
           <entry key="Sass" value="6" />
           <entry key="Slim" value="32" />
           <entry key="YAML" value="112" />
@@ -178,28 +173,19 @@
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/lib/color_interface.rb">
+            <entry file="file://$PROJECT_DIR$/spec/lib/palette.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+                <state relative-caret-position="75">
+                  <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$USER_HOME$/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/webpacker-3.5.5/lib/tasks/webpacker/check_binstubs.rake">
+            <entry file="file://$PROJECT_DIR$/app/lib/palette.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" selection-start-line="3" selection-end-line="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/initializers/01_config_bootloader.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+                <state relative-caret-position="165">
+                  <caret line="11" selection-start-line="11" selection-end-line="11" />
                 </state>
               </provider>
             </entry>
@@ -208,29 +194,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/lib/color_interface.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/helpers/color_helper.rb">
+            <entry file="file://$PROJECT_DIR$/spec/lib/palette.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" selection-start-line="15" selection-end-line="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/helpers/footer_helper.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+                <state relative-caret-position="390">
+                  <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -248,9 +216,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>featured_items</find>
-      <find>overlay_</find>
-      <find>&lt; BaseCell</find>
       <find>feature</find>
       <find>var</find>
       <find>vardd</find>
@@ -278,6 +243,9 @@
       <find>node_name</find>
       <find>ColorHelper</find>
       <find>Dir</find>
+      <find>inverted</find>
+      <find>extensions</find>
+      <find>before</find>
     </findStrings>
     <replaceStrings>
       <replace>$w-homepage-header-overlay-gradient-direction</replace>
@@ -312,7 +280,6 @@
       <replace>ss(&quot;general.name&quot;)</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$/spec</dir>
       <dir>$PROJECT_DIR$/app/frontend/semantic</dir>
       <dir>$PROJECT_DIR$/app/frontend/semantic/src/themes</dir>
       <dir>$PROJECT_DIR$/app/frontend/semantic/src/</dir>
@@ -330,6 +297,7 @@
       <dir>$PROJECT_DIR$/app/views</dir>
       <dir>$PROJECT_DIR$/app/frontend/shared/js/vue</dir>
       <dir>$PROJECT_DIR$/app/cells/admin</dir>
+      <dir>$PROJECT_DIR$/spec</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -338,8 +306,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/core/views/settings/general.yml" />
         <option value="$PROJECT_DIR$/app/models/site_settings/general.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/_theme.rb" />
         <option value="$PROJECT_DIR$/app/controllers/concerns/site_settings.rb" />
@@ -347,7 +313,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_head.html.slim" />
         <option value="$PROJECT_DIR$/core/views/settings/theme/footer.yml" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme/footer.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/footer_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_footer.html.slim" />
         <option value="$PROJECT_DIR$/app/cells/widget/newsletter_cell.rb" />
         <option value="$PROJECT_DIR$/app/services/zapier/newsletter_subscription.rb" />
@@ -363,7 +328,6 @@
         <option value="$PROJECT_DIR$/app/controllers/page_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/display_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/partials/_show_content.html.slim" />
-        <option value="$PROJECT_DIR$/app/helpers/nav_helper.rb" />
         <option value="$PROJECT_DIR$/core/views/settings/theme/discussion.yml" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme/discussion.rb" />
         <option value="$PROJECT_DIR$/app/views/articles/show.html.slim" />
@@ -386,9 +350,13 @@
         <option value="$PROJECT_DIR$/app/lib/setting_interface.rb" />
         <option value="$PROJECT_DIR$/app/helpers/settings_helper.rb" />
         <option value="$PROJECT_DIR$/app/lib/colors_interface.rb" />
-        <option value="$PROJECT_DIR$/app/lib/color_interface.rb" />
         <option value="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" />
         <option value="$USER_HOME$/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/webpacker-3.5.5/lib/tasks/webpacker/check_binstubs.rake" />
+        <option value="$PROJECT_DIR$/app/lib/color_interface.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/footer_helper.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/nav_helper.rb" />
+        <option value="$PROJECT_DIR$/app/lib/palette.rb" />
+        <option value="$PROJECT_DIR$/spec/lib/palette.rb" />
       </list>
     </option>
   </component>
@@ -441,12 +409,24 @@
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarius" type="462c0819:PsiDirectoryNode" />
               <item name="spec" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="spec" type="462c0819:PsiDirectoryNode" />
+              <item name="extensions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
@@ -470,11 +450,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/lib" />
       <recent name="$PROJECT_DIR$/app/cells" />
       <recent name="$PROJECT_DIR$/core/views/settings/theme" />
       <recent name="$PROJECT_DIR$/app/models/site_settings/theme" />
       <recent name="$PROJECT_DIR$/app/controllers/admin/site_settings/theme" />
-      <recent name="$PROJECT_DIR$/app/views/admin/site_settings/settings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/views/admin/site_settings/theme/theme" />
@@ -664,23 +644,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/global.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/branding.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/views/settings/theme/header.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -775,13 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
           <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/nav_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -966,38 +922,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/footer_helper.rb">
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/webpacker-3.5.5/lib/tasks/webpacker/check_binstubs.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/color_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/color_interface.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/01_config_bootloader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state relative-caret-position="225">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/webpacker-3.5.5/lib/tasks/webpacker/check_binstubs.rake">
+    <entry file="file://$PROJECT_DIR$/app/helpers/color_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="60">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/nav_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="106" column="44" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/footer_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2462">
+          <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/extensions/symbol_extension.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/palette.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/lib/palette.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
         </state>
       </provider>
     </entry>

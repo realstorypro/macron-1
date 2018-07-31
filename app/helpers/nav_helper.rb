@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module NavHelper
-  include ColorHelper
   def menu_color_class
     transparent_controllers = %w(articles videos)
     menu_color = ss("theme.header.menu_color")
@@ -93,6 +92,8 @@ module NavHelper
 
     # note: the order of classes matters see navigation.sass to understand why
     def determine_class(options)
+      palette = Palette.new
+
       defaults = {
           transparent: false,
           inverted: false,
@@ -101,13 +102,13 @@ module NavHelper
       }
       options = defaults.merge(options)
 
-      output =  ActiveSupport::SafeBuffer.new
+      rendering = ActiveSupport::SafeBuffer.new
 
       # we want to force color inversion if it is specified
       # otherwise we'll default to class color
-      output << inverted?(options[:color])
-      output << " #{options[:style]} "
-      output << options[:color] unless options[:transparent]
-      output
+      rendering << "#{palette.contrast(options[:color])}"
+      rendering << " #{options[:style]} "
+      rendering << options[:color] unless options[:transparent]
+      rendering
     end
 end
