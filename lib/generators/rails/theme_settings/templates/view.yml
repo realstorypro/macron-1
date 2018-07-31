@@ -1,0 +1,3 @@
+views:
+  site_settings_theme_<~~ class_name ~~>:
+    new:

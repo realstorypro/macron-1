@@ -1,0 +1,8 @@
+Description:
+    Creates a theme setting
+
+Example:
+    rails generate theme_settings setting
+
+    This will create:
+        will create a model, routes and all corresponding files

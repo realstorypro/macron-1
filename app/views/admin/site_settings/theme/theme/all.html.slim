@@ -1,0 +1,83 @@
+= segment class: 'no padding basic', dynamic: :on, id: 'all_settings'
+  = grid "#{'divided' if current_user.help}"
+    = column size: (current_user.help ? 10 : 16)
+      = h5 'dividing'
+        | Primary
+      = list 'relaxed divided'
+        = link_to admin_settings_theme_global_path, class: 'item'
+          = icon 'middle aligned globe inverted blue bordered'
+          = content
+            = header ui: :off, class: 'blue'
+              | Global
+            = description
+              | Fonts, overlays, etc
+        = link_to admin_settings_theme_branding_path, class: 'item'
+          = icon 'middle aligned paint brush inverted blue bordered'
+          = content
+            = header ui: :off, class: 'blue'
+              | Branding
+            = description
+              | Logos & icons ...
+        = link_to admin_settings_theme_header_path, class: 'item'
+          = icon 'middle aligned window maximize inverted blue bordered'
+          = content
+            = header ui: :off
+              | Header
+            = description
+              | Navigation style
+        = link_to admin_settings_theme_footer_path, class: 'item'
+          = icon 'middle aligned anchor inverted blue bordered'
+          = content
+            = header ui: :off
+              | Footer
+            = description
+              | Footer variation and styling
+        = link_to admin_settings_theme_authentication_path, class: 'item'
+          = icon 'middle aligned lock inverted blue bordered'
+          = content
+            = header ui: :off
+              | Authentication
+            = description
+              | Authentication settings
+
+      = h5 'dividing'
+        | Modules
+      = list 'relaxed divided'
+        = link_to admin_settings_theme_homepage_path, class: 'item'
+          = icon 'middle aligned home inverted blue bordered'
+          = content
+            = header ui: :off
+              | Homepage
+            = description
+              | Homepage look &amp; feel
+        = link_to admin_settings_theme_article_path, class: 'item'
+          = icon 'middle aligned book inverted blue bordered'
+          = content
+            = header ui: :off
+              | Article
+            = description
+              | Lorem Ipsum ...
+        = link_to admin_settings_theme_video_path, class: 'item'
+          = icon 'middle aligned video inverted blue bordered'
+          = content
+            = header ui: :off
+              | Video
+            = description
+              | Lorem Ipsum ...
+        = link_to admin_settings_theme_discussion_path, class: 'item'
+          = icon 'middle aligned comments inverted blue bordered'
+          = content
+            = header ui: :off
+              | Discussion
+            = description
+              | Lorem ipsum ...
+        = link_to admin_settings_theme_podcast_path, class: 'item'
+          = icon 'middle aligned podcast inverted blue bordered'
+          = content
+            = header ui: :off
+              | Podcast
+            = description
+              | Lorem ipsum ...
+    - if current_user.help
+      = column size: 6
+        = render 'partials/side_help'

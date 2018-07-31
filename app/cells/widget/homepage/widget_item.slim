@@ -1,13 +1,13 @@
 = item "link #{@size}"
-  = preload_image @item.card_image if @image == 'card'
-  = preload_image @item.landscape_image if @image == 'landscape'
+  = preload_image @item.card_image, image_class if @image == 'card'
+  = preload_image @item.landscape_image, image_class if @image == 'landscape'
   = link_to show_link(@item)
     = overlay "#{@size} #{overlay_color} #{overlay_background}"
       = meta
         - if content_icons == 'show'
           = show_icon(@item)
         - if comment_count == 'show'
-          = icon 'comment outline'
+          = icon 'comment outline large'
           = @item.comments.count
       = content @size
         = h4 class: "#{'marginless' unless @description}"

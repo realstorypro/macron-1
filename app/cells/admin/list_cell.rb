@@ -1,5 +1,5 @@
 module Admin
-  class ListCell < BaseCell
+  class ListCell < AdminBaseCell
     def show
       render
     end

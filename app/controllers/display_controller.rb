@@ -93,7 +93,7 @@ class DisplayController < MetaController
                     keywords: @entry.tags.map(&:name),
                     article: {
                       section: @entry.category.name,
-                      author: ss(:facebook),
+                      author: ss("contact.facebook"),
                       tag: @entry.tags.map(&:name),
                       published_time: @entry.published_date,
                       modified_time: @entry.updated_at
@@ -130,7 +130,7 @@ class DisplayController < MetaController
     def set_article_meta
       set_meta_tags article: {
         section: @entry.category.name,
-        author: ss(:facebook),
+        author: ss("contact.facebook"),
         tag: @entry.tags.map(&:name),
         published_time: @entry.published_date,
         modified_time: @entry.updated_at

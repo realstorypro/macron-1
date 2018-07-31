@@ -20,7 +20,10 @@ class ProfileController < MembersController
     end
 
     def preload_entry
-      @comments = Comment.where(user_id: @member.id, commentable_type: %w(Article Discussion Video Podcast)).order("created_at desc")
+      @comments = Comment.where(
+        user_id: @member.id,
+        commentable_type: %w(Article Discussion Video Podcast)
+      ).order("created_at desc")
       @content_ids = @comments.map(&:commentable_id)
       @commented_content = Entry.where(id: @content_ids)
     end

@@ -1,0 +1,13 @@
+views:
+  site_settings_theme_branding:
+    new:
+      logo:
+        label: 'Logo'
+        type: 'image'
+      inverted_logo:
+        label: 'Inverted Logo'
+        type: 'image'
+      icon:
+        label: 'Icon'
+        type: 'image'
+        size: ['180','180']

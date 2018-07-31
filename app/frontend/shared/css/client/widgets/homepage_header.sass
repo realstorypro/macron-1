@@ -17,6 +17,10 @@
       @include media("<tablet")
         height: $w-homepage-header-mobile-image-height
 
+      &.fixed.background
+        background-attachment: fixed
+        background-size: contain
+
     &.tiny .image
       @include media('>=desktop')
         height: $w-homepage-header-tiny-image-height
@@ -102,8 +106,8 @@
 
         &.boxed
           width: 50%
-          padding: 0.2em 0 0.2em 0.5em
-          margin-bottom: 0.5em
+          padding: 0.2em 0 0.2em 0.3em
+          margin-bottom: 0.1em
 
           &.whited
             background: $white

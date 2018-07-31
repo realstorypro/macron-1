@@ -6,18 +6,18 @@ AQUARIUS
      
 ![macron1](https://user-images.githubusercontent.com/433219/40011503-dbe773e4-575c-11e8-9c2c-dbb35c84dc1c.jpeg) 
 
-## Running It
+# Running It
 ```bash
 foreman s
 ```
 
-## Background Jobs in Development
+### Background Jobs (Development)
 Make sure to ride sidekiq locally
 ```bash
 foreman run sidekiq -C config/sidekiq.yml --verbose
 ```
 
-## Mail in Development
+### Mail (Development)
 We're utilizing the mailcatcher to catch the mail send in development environment.
 
 If you don't have the gem already installed you do it by running the following
@@ -31,6 +31,19 @@ You can then start the mail catcher via
 ```
 
 You can read the sent mail by pointing the  web browser to  **http://127.0.0.1:1080/**
+
+# Framework
+
+## Authentication
+The authentication is driven by the auth.yml file located under _core/auth.yml_ and is structured as follows
+```yml
+roles:
+abilities:
+actions:
+permissions:
+    - role:
+        - ability
+```
 
 #### Helpful Documents
 Documentation that may be useful to developers.

@@ -24,12 +24,14 @@ class ImagePreloader
       item = $(value)
       image_src = item.data('src')
       image_css_src = "url(#{image_src})"
+      image_klass = item.data('klass')
 
       preloaded_image = new Image()
       preloaded_image.src = image_src
 
       image_loaded = =>
         item.css('background-image', image_css_src)
+        item.addClass(image_klass)
         item.find('.dimmer').dimmer('hide')
 
       preloaded_image.onload = image_loaded

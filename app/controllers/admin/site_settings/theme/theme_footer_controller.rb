@@ -2,8 +2,8 @@
 
 require_dependency "application_controller"
 
-module Admin::SiteSettings
-  class BrandingController < SharedSettingsController
+module Admin::SiteSettings::Theme
+  class ThemeFooterController < ThemeController
     before_action :set_breadcrumb
 
     def show
@@ -11,7 +11,7 @@ module Admin::SiteSettings
         text: "Edit",
         class: "primary",
         icon: "edit",
-        url: edit_admin_settings_branding_path,
+        url: edit_admin_settings_theme_footer_path,
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
       )
@@ -22,17 +22,18 @@ module Admin::SiteSettings
     private
 
       def load_entry
-        @entry = SiteSettings::Branding.instance
+        @entry = SiteSettings::Theme::Footer.instance
       end
 
       def entry_params
         allowed_attrs = set_allowed_attrs
-        params.require(:site_settings_branding).permit(*allowed_attrs)
+        params.require(:site_settings_theme_footer).permit(*allowed_attrs)
       end
 
       def set_breadcrumb
         semantic_breadcrumb "Settings", admin_settings_root_path
-        semantic_breadcrumb "Branding", admin_settings_branding_path
+        semantic_breadcrumb "Theme", admin_settings_theme_root_path
+        semantic_breadcrumb "Footer", ""
       end
   end
 end

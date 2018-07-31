@@ -1,0 +1,52 @@
+views:
+  site_settings_theme_footer:
+    new:
+      styling_header:
+        type: 'header'
+        text: 'Styling'
+
+      color:
+        label: 'Color'
+        type: 'color'
+
+      button_color:
+        advanced: true
+        label: 'Button Color'
+        type: 'color'
+
+      button_style:
+        advanced: true
+        label: 'Button Style'
+        type: 'fixed_dropdown'
+        options:
+        - regular
+        - inverted
+
+      icon:
+        advanced: true
+        label: 'Icon'
+        type: 'fixed_dropdown'
+        options:
+        - show
+        - hide
+
+      item_order:
+        advanced: true
+        label: 'Column Order'
+        type: 'fixed_dropdown'
+        options:
+        - auto
+        - reversed
+
+      content_header:
+        type: 'header'
+        text: 'Content'
+
+      about:
+        label: 'About Us'
+        type: 'rich'
+        hint: 'Write two short paragraphs describing the web site.'
+
+      copyrights:
+        label: 'Copyrights'
+        type: 'string'

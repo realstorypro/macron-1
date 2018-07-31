@@ -1,0 +1,12 @@
+views:
+  site_settings_theme_article:
+    new:
+      menu_style:
+        advanced: true
+        label: 'Menu Style'
+        type: 'fixed_dropdown'
+        options:
+        - solid
+        - transparent
+        - matching solid
+        - matching transparent

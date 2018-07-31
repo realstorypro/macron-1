@@ -5,23 +5,23 @@ auth:
   # default visitor role and member roles
 
   roles:
-    - guest
-    - banned
-    - member
-    - editor
-    - admin
+  - guest
+  - banned
+  - member
+  - editor
+  - admin
 
   # Role Defenition
   # 'all' is a hardcoded variable
   # which bypasses all authorization
 
   abilities:
-    - 'all'
-    - 'create'
-    - 'read'
-    - 'update'
-    - 'delete'
-    - 'moderate'
+  - 'all'
+  - 'create'
+  - 'read'
+  - 'update'
+  - 'delete'
+  - 'moderate'
 
   # Actions to Abilities
   # action:
@@ -47,139 +47,8 @@ auth:
     unban:
       'moderate'
 
-
   # Permissions Map
   # user:           # role
   #   component:    # name of the component
   #     ability:    # name of the ability
   #       options:  # ability options
-
-  permissions:
-    guest:
-      articles:
-        read:
-      discussions:
-        read:
-      videos:
-        read:
-      comments:
-        read:
-      profile:
-        read:
-      members:
-        read:
-      advertisements:
-        read:
-
-    banned:
-      articles:
-        read:
-      discussions:
-        read:
-      videos:
-        read:
-      comments:
-        read:
-      profile:
-        read:
-      members:
-        read:
-      advertisements:
-        read:
-
-    member:
-      articles:
-        read:
-      discussions:
-        read:
-      videos:
-        read:
-      comments:
-        create:
-        read:
-        delete:
-      profile:
-        create:
-        read:
-        update:
-      members:
-        read:
-      advertisements:
-        read:
-
-    editor:
-      admin:
-        all:
-      dashboard:
-        read:
-      users:
-        read:
-        moderate:
-      members:
-        read:
-      profile:
-        create:
-        read:
-        update:
-      articles:
-        all:
-      comments:
-        create:
-        read:
-        delete:
-      discussions:
-        all:
-      videos:
-        all:
-      podcasts:
-        all:
-      categories:
-        read:
-      tags:
-        read:
-      support:
-        all:
-
-    admin:
-      admin:
-        all:
-      dashboard:
-        all:
-      users:
-        all:
-      members:
-        all:
-      profile:
-        all:
-      articles:
-        all:
-      comments:
-        all:
-      discussions:
-        all:
-      videos:
-        all:
-      podcasts:
-        all:
-      advertisements:
-        all:
-      categories:
-        all:
-      tags:
-        all:
-      reports:
-        all:
-      site_settings:
-        all:
-      site_settings_general:
-        all:
-      site_settings_branding:
-        all:
-      site_settings_theme:
-        all:
-      site_settings_contact:
-        all:
-      site_settings_integration:
-        all:
-      support:
-        all:

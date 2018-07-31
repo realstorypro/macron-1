@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  include SettingsHelper
+  include SiteSettingsHelper
+
   include Pundit
   include SiteSettings
-  include SettingsHelper
+
 
   before_action :store_user_location!, if: :storable_location?
   layout :layout_by_resource
@@ -35,8 +38,8 @@ class ApplicationController < ActionController::Base
     redis_site_settings = $redis.get("site_settings")
     site_settings = JSON.parse(redis_site_settings) unless redis_site_settings.nil?
 
-    unless site_settings.nil? || site_settings["payload"]["segment_server_key"].nil?
-      analytics = Segment::Analytics.new(write_key: site_settings["payload"]["segment_server_key"])
+    unless site_settings.nil? || site_settings["integration"]["segment_server_key"].nil?
+      analytics = Segment::Analytics.new(write_key: site_settings["integration"]["segment_server_key"])
       analytics.identify(
         user_id: user.id,
         traits: {

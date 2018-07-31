@@ -37,7 +37,7 @@ gem "nexmo"
 gem "phonelib"
 gem "iso_country_codes"
 
-# gem "rack-mini-profiler"
+gem "rack-mini-profiler"
 
 # Pagination
 gem "kaminari", github: "kaminari/kaminari", branch: "master"
@@ -86,6 +86,8 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
 
+
+
 group :development do
   gem "rb-readline"
 
@@ -103,6 +105,10 @@ group :development do
   gem "terminal-notifier-guard", "~> 1.6.1"
 
   gem "web-console", ">= 3.3.0"
+
+  # CLI
+  gem "thor"
+  gem "tty-prompt"
 end
 
 group :test do

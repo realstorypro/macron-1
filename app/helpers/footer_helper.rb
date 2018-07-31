@@ -1,42 +1,44 @@
 # frozen_string_literal: true
 
 module FooterHelper
-  include ColorHelper
-
   def footer_class
-    render_footer_class(ss(:footer_color))
+    render_footer_class(ss("theme.footer.color"))
   end
 
   def footer_item_class
-    render_footer_item_class(ss(:footer_color))
+    render_footer_item_class(ss("theme.footer.color"))
   end
 
   def footer_item_order
-    return "computer reversed" if ss("footer_item_order") == "reversed"
+    return "computer reversed" if ss("theme.footer.item_order") == "reversed"
     nil
   end
 
   def footer_reversed?
-    (ss("footer_item_order") == "reversed") ? true : false
+    (ss("theme.footer.item_order") == "reversed") ? true : false
   end
 
   private
     def render_footer_class(footer_color, options = {})
+      palette = Palette.new
+
       defaults = {}
       options = defaults.merge(options)
 
       rendering =  ActiveSupport::SafeBuffer.new
-      rendering << " #{inverted?(footer_color)}"
+      rendering << " #{palette.contrast(footer_color)}"
       rendering << " #{footer_color}"
       rendering
     end
 
     def render_footer_item_class(footer_color, options = {})
+      palette = Palette.new
+
       defaults = {}
       options = defaults.merge(options)
 
       rendering =  ActiveSupport::SafeBuffer.new
-      rendering << " #{inverted?(footer_color)}"
+      rendering << " #{palette.contrast(footer_color)}"
       rendering
     end
 end

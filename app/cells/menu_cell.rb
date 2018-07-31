@@ -1,9 +1,4 @@
-class MenuCell < Cell::ViewModel
-  include ApplicationHelper
-  include DcUi::Helpers
-
-  delegate :url_helpers, to: "::Rails.application.routes"
-
+class MenuCell < BaseCell
   def show
     render
   end
@@ -93,12 +88,6 @@ class MenuCell < Cell::ViewModel
     def always_inactive
       %w[/]
     end
-
-    # we're overwriting rails helper here to pull from the passed in site settings
-    def site_setting(name)
-      options[:site_settings]["payload"][name.to_s]
-    end
-
 
     # toggles showing icons
     def show_icons?

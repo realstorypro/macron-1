@@ -9,20 +9,13 @@
               | GENERAL
             = description
               | Name &amp; Description
-        = link_to admin_settings_branding_path, class: 'item'
-          = icon 'large middle aligned eye'
-          = content
-            = header ui: :off
-              | BRANDING
-            = description
-              | Logos and icons
-        = link_to admin_settings_theme_path, class: 'item'
+        = link_to admin_settings_theme_root_path, class: 'item'
           = icon 'large middle aligned paint brush'
           = content
             = header ui: :off
               | THEME
             = description
-              | Blah Blah
+              | Customize the look & feel of your platform.
         = link_to admin_settings_contact_path, class: 'item'
           = icon 'large middle aligned address card'
           = content

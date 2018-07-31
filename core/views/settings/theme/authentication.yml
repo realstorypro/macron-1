@@ -1,0 +1,25 @@
+views:
+  site_settings_theme_authentication:
+    new:
+      sign_up_title:
+        advanced: true
+        label: '"Sign up" Title'
+        type: 'string'
+        hint: 'Title of the Sign Up Box'
+
+      sign_up_subtitle:
+        advanced: true
+        label: '"Sign Up" sub title'
+        type: 'string'
+        hint: 'Sub Title of the Sign Up Box'
+
+      sign_in_title:
+        advanced: true
+        label: '"Sign In" title'
+        type: 'string'
+        hint: 'Title of the Sign In Box'
+
+      auth_background:
+        label: 'Authentication'
+        type: 'image'
+        size: ['2560','1600']

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app/models/site_settings/theme/discussion.rb" mnemonic="7" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/components/members.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/components/members.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/menu_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/menu_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/profile.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/profile.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/members/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/members/show.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/profile.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/profile.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -79,120 +77,169 @@
     <session id="8656323">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="coffee" value="26" />
-          <entry key="rb" value="95" />
-          <entry key="sass" value="2132" />
-          <entry key="scss" value="242" />
-          <entry key="slim" value="3877" />
-          <entry key="yml" value="35" />
+          <entry key="Gemfile" value="77" />
+          <entry key="USAGE" value="144" />
+          <entry key="coffee" value="139" />
+          <entry key="dummy" value="11" />
+          <entry key="json" value="12" />
+          <entry key="md" value="304" />
+          <entry key="rake" value="3038" />
+          <entry key="rb" value="17933" />
+          <entry key="sass" value="2330" />
+          <entry key="scss" value="263" />
+          <entry key="slim" value="8700" />
+          <entry key="webpack" value="4" />
+          <entry key="yml" value="3811" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CoffeeScript" value="26" />
-          <entry key="Ruby" value="95" />
-          <entry key="SCSS" value="242" />
-          <entry key="Sass" value="2132" />
-          <entry key="Slim" value="3877" />
-          <entry key="YAML" value="35" />
+          <entry key="CoffeeScript" value="139" />
+          <entry key="JSON" value="12" />
+          <entry key="Markdown" value="304" />
+          <entry key="PLAIN_TEXT" value="155" />
+          <entry key="Ruby" value="21052" />
+          <entry key="SCSS" value="263" />
+          <entry key="Sass" value="2330" />
+          <entry key="Slim" value="8700" />
+          <entry key="YAML" value="3811" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="rb" value="6" />
-          <entry key="sass" value="4" />
-          <entry key="scss" value="1" />
-          <entry key="slim" value="3" />
-          <entry key="yml" value="1" />
+          <entry key="Gemfile" value="2" />
+          <entry key="USAGE" value="2" />
+          <entry key="coffee" value="1" />
+          <entry key="js" value="2" />
+          <entry key="md" value="1" />
+          <entry key="rake" value="6" />
+          <entry key="rb" value="227" />
+          <entry key="sass" value="6" />
+          <entry key="scss" value="2" />
+          <entry key="slim" value="32" />
+          <entry key="webpack" value="1" />
+          <entry key="webpack-dev-server" value="2" />
+          <entry key="yml" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Ruby" value="6" />
-          <entry key="SCSS" value="1" />
-          <entry key="Sass" value="4" />
-          <entry key="Slim" value="3" />
-          <entry key="YAML" value="1" />
+          <entry key="CoffeeScript" value="1" />
+          <entry key="JavaScript" value="2" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Ruby" value="238" />
+          <entry key="SCSS" value="2" />
+          <entry key="Sass" value="6" />
+          <entry key="Slim" value="32" />
+          <entry key="YAML" value="112" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="site_setting admin controllers">
+      <favorite_root url="file://$PROJECT_DIR$/app/controllers/admin/site_settings" module="aquarius" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme_controller.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/app/controllers/admin/site_settings/contact_controller.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/app/controllers/admin/site_settings/general_controller.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/app/controllers/admin/site_settings/branding_controller.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/app/controllers/admin/site_settings/settings_controller.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/app/controllers/admin/site_settings/integration_controller.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/app/controllers/admin/site_settings/shared_settings_controller.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+    </favorites_list>
+    <favorites_list name="site_setting cells">
+      <favorite_root url="file://$PROJECT_DIR$/app/cells/admin/date_range_cell.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/app/cells/menu_cell.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/app/cells/widget/base_cell.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/cells/vue/feed_cell.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/init.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/components/members.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="810">
-                  <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#1057#1763#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/components/members.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="56" selection-start-line="56" selection-end-line="56" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/views/members/show.html.slim">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="299">
-                  <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="149">
-                  <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_article_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_homepage_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_branding_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_video_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/cells/admin_base_cell_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="127" column="9" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/cells/widget/base_cell.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -203,52 +250,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>exte</find>
-      <find>color</find>
-      <find>dynamic:</find>
-      <find>@if</find>
-      <find>Vue::</find>
-      <find>vue</find>
-      <find>options.el</find>
-      <find>dynamic</find>
-      <find>components:</find>
-      <find>show_link(</find>
-      <find>pricate</find>
-      <find>Rails</find>
-      <find>include Rails.application.routes.mounted_helpers</find>
-      <find>config.action_mailer.default_url_options</find>
-      <find>default_url</find>
-      <find>eve</find>
-      <find>feed</find>
-      <find>print</find>
-      <find>require('gulp-print')</find>
-      <find>byebu</find>
-      <find>bye</find>
-      <find>details</find>
-      <find>site_settings</find>
-      <find>node_name</find>
-      <find>include Rails</find>
+      <find>con</find>
+      <find>facebook</find>
+      <find>s</find>
+      <find>ss(:email)</find>
+      <find>ss(</find>
+      <find>ss(:</find>
+      <find>overlay_background</find>
+      <find>ss(:name)</find>
       <find>Todo</find>
-      <find>menu</find>
-      <find>signaure</find>
-      <find>signature</find>
-      <find>card_</find>
+      <find>subheader</find>
+      <find>category</find>
+      <find>boxed</find>
+      <find>cover</find>
+      <find>icon</find>
+      <find>cli</find>
+      <find>dev</find>
+      <find>SiteSetting</find>
+      <find>Color</find>
+      <find>se</find>
+      <find>settings(</find>
+      <find>node_name</find>
+      <find>ColorHelper</find>
+      <find>Dir</find>
+      <find>extensions</find>
+      <find>before</find>
+      <find>options</find>
+      <find>LineLength</find>
+      <find>inverted?</find>
+      <find>inverted</find>
+      <find>contrast</find>
     </findStrings>
     <replaceStrings>
-      <replace>.short.landscape</replace>
-      <replace>Help</replace>
-      <replace>== Vue::CoverCell.(nil,</replace>
-      <replace>clicker</replace>
-      <replace>== Vue::CoverCell.(nil, overlay_background: ss(:overlay_background),</replace>
-      <replace>Faker::Job.title</replace>
-      <replace />
-      <replace>overlay_background</replace>
-      <replace>skip</replace>
-      <replace>(map-get($g-colors-map, $color)</replace>
-      <replace>olive</replace>
-      <replace>0.75</replace>
-      <replace>)</replace>
-      <replace>to bottom left</replace>
       <replace>$w-homepage-header-overlay-gradient-direction</replace>
       <replace>$small-overlay-direction</replace>
       <replace>0.75) 40%)</replace>
@@ -265,9 +298,22 @@
       <replace>podcast</replace>
       <replace>require('gulp-print').default</replace>
       <replace>',</replace>
+      <replace>site_settings_theme_global</replace>
+      <replace>ss('branding.icon')</replace>
+      <replace>site_settings_theme_discussion</replace>
+      <replace>video</replace>
+      <replace>authentication</replace>
+      <replace>theme.branding.icon</replace>
+      <replace>ss('contact.address3')</replace>
+      <replace>ss('theme.header.menu_position'</replace>
+      <replace>ss('theme.branding.inverted_logo')</replace>
+      <replace>ss('theme.header.desktop_logo_size')</replace>
+      <replace>ss('theme.header.mobile_logo_size')</replace>
+      <replace>ss(&quot;theme.homepage.featured_items&quot;)</replace>
+      <replace>ss(&quot;contact.&quot;)</replace>
+      <replace>ss(&quot;general.name&quot;)</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$/spec</dir>
       <dir>$PROJECT_DIR$/app/frontend/semantic</dir>
       <dir>$PROJECT_DIR$/app/frontend/semantic/src/themes</dir>
       <dir>$PROJECT_DIR$/app/frontend/semantic/src/</dir>
@@ -284,6 +330,8 @@
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/app/views</dir>
       <dir>$PROJECT_DIR$/app/frontend/shared/js/vue</dir>
+      <dir>$PROJECT_DIR$/app/cells/admin</dir>
+      <dir>$PROJECT_DIR$/spec</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -292,57 +340,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/tests.yml" />
-        <option value="$PROJECT_DIR$/core/auth.yml" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/podcasts_controller.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" />
-        <option value="$PROJECT_DIR$/core/views/podcasts.yml" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/controllers/podcasts_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/category.rb" />
-        <option value="$PROJECT_DIR$/app/views/podcasts/index.html.slim" />
-        <option value="$PROJECT_DIR$/app/cells/widget/podcast_cell.rb" />
-        <option value="$PROJECT_DIR$/app/cells/widget/podcast/listing.slim" />
+        <option value="$PROJECT_DIR$/app/cells/admin/details_cell.rb" />
+        <option value="$PROJECT_DIR$/app/views/page/home.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/page_controller.rb" />
-        <option value="$PROJECT_DIR$/spec/factories/podcasts.rb" />
-        <option value="$PROJECT_DIR$/core/menu.yml" />
-        <option value="$PROJECT_DIR$/app/cells/vue/audio/show.slim" />
-        <option value="$PROJECT_DIR$/app/cells/vue/audio_cell.rb" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/audio.sass" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/js/vue/audio.coffee" />
-        <option value="$PROJECT_DIR$/app/views/podcasts/show.html.slim" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/components/podcasts.sass" />
-        <option value="$PROJECT_DIR$/app/models/podcast.rb" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/articles_controller.rb" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/extensions/color.sass" />
-        <option value="$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/layouts/client.html.slim" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee" />
+        <option value="$PROJECT_DIR$/app/controllers/display_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_show_content.html.slim" />
+        <option value="$PROJECT_DIR$/core/views/settings/theme/discussion.yml" />
+        <option value="$PROJECT_DIR$/app/models/site_settings/theme/discussion.rb" />
+        <option value="$PROJECT_DIR$/app/views/articles/show.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/videos/show.html.slim" />
+        <option value="$PROJECT_DIR$/core/components.yml" />
+        <option value="$PROJECT_DIR$/app/views/page/terms-of-service.html.slim" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb" />
+        <option value="$PROJECT_DIR$/core/views/settings/theme/homepage.yml" />
+        <option value="$PROJECT_DIR$/app/helpers/image_helper.rb" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/js/widgets/image_preloader.coffee" />
+        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/widget_item.slim" />
-        <option value="$PROJECT_DIR$/app/cells/widget/base_cell.rb" />
-        <option value="$PROJECT_DIR$/app/cells/menu_cell.rb" />
-        <option value="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" />
-        <option value="$PROJECT_DIR$/config/environments/test.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/members_controller.rb" />
-        <option value="$PROJECT_DIR$/app/frontend/semantic/tasks/build/javascript.js" />
-        <option value="$PROJECT_DIR$/semantic.json" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/helpers/site_settings_helper.rb" />
+        <option value="$PROJECT_DIR$/app/cells/base_cell.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/settings_helper.rb" />
+        <option value="$PROJECT_DIR$/app/lib/colors_interface.rb" />
+        <option value="$USER_HOME$/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/webpacker-3.5.5/lib/tasks/webpacker/check_binstubs.rake" />
+        <option value="$PROJECT_DIR$/app/lib/color_interface.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/footer_helper.rb" />
+        <option value="$PROJECT_DIR$/app/lib/palette.rb" />
+        <option value="$PROJECT_DIR$/spec/lib/palette.rb" />
+        <option value="$PROJECT_DIR$/app/lib/setting_interface.rb" />
+        <option value="$PROJECT_DIR$/lib/generators/rails/theme_settings/theme_settings_generator.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/permissions.rake" />
+        <option value="$PROJECT_DIR$/spec/lib/palette_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/lib/setting_interface_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/cells/admin_base_cell_spec.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/01_config_bootloader.rb" />
+        <option value="$PROJECT_DIR$/bin/webpack" />
+        <option value="$PROJECT_DIR$/test/lib/generators/rails/theme_settings_generator_test.rb" />
+        <option value="$PROJECT_DIR$/app/services/zapier/newsletter_subscription.rb" />
+        <option value="$PROJECT_DIR$/app/services/zapier/base.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/nav_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/profile_controller.rb" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/init.sass" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/feed.sass" />
-        <option value="$PROJECT_DIR$/app/cells/vue/feed_cell.rb" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/js/vue/feed.coffee" />
-        <option value="$PROJECT_DIR$/app/cells/vue/feed/show.slim" />
-        <option value="$PROJECT_DIR$/app/helpers/member_helper.rb" />
-        <option value="$PROJECT_DIR$/spec/rails_helper.rb" />
-        <option value="$PROJECT_DIR$/app/cells/admin/base_cell.rb" />
-        <option value="$PROJECT_DIR$/app/models/profile.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/menu_helper.rb" />
-        <option value="$PROJECT_DIR$/core/views/profile.yml" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss" />
-        <option value="$PROJECT_DIR$/app/frontend/shared/css/client/components/members.sass" />
-        <option value="$PROJECT_DIR$/app/views/members/show.html.slim" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_global_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_podcast_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_article_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_homepage_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_branding_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_video_controller.rb" />
+        <option value="$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb" />
+        <option value="$PROJECT_DIR$/app/cells/widget/base_cell.rb" />
+        <option value="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" />
       </list>
     </option>
   </component>
@@ -377,7 +425,59 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="spec" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="spec" type="462c0819:PsiDirectoryNode" />
+              <item name="extensions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarius" type="462c0819:PsiDirectoryNode" />
+              <item name="spec" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.slim" />
@@ -386,22 +486,22 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/lib" />
+      <recent name="$PROJECT_DIR$/app/cells" />
+      <recent name="$PROJECT_DIR$/core/views/settings/theme" />
+      <recent name="$PROJECT_DIR$/app/models/site_settings/theme" />
+      <recent name="$PROJECT_DIR$/app/controllers/admin/site_settings/theme" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/admin/site_settings/theme/theme" />
+      <recent name="$PROJECT_DIR$/app/views/admin/site_settings" />
+      <recent name="$PROJECT_DIR$/app/views/admin/site_settings/settings/theme" />
       <recent name="$PROJECT_DIR$/app/frontend/shared/css/client/variables" />
       <recent name="$PROJECT_DIR$/core/views/settings" />
-      <recent name="$PROJECT_DIR$/app/frontend/shared/css/admin/overrides" />
-      <recent name="$PROJECT_DIR$/app/frontend/shared/js/plugins/redactor" />
-      <recent name="$PROJECT_DIR$/app" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/frontend/shared/js/vue" />
-      <recent name="$PROJECT_DIR$/app/cells/vue" />
-      <recent name="$PROJECT_DIR$/app/frontend/shared/css/client/extensions" />
-      <recent name="$PROJECT_DIR$/app/frontend/shared/css/client/widgets" />
-      <recent name="$PROJECT_DIR$/app/cells/vue/audio" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -528,11 +628,11 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49615383" weight="0.34978542" />
-      <window_info id="Structure" order="1" sideWeight="0.50384617" side_tool="true" weight="0.33117932" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49408674" weight="0.25035766" />
+      <window_info id="Structure" order="1" sideWeight="0.5045992" side_tool="true" weight="0.24678111" />
+      <window_info id="Favorites" order="2" sideWeight="0.50591326" side_tool="true" weight="0.24678111" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32908162" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.56241786" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -584,350 +684,338 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/podcast.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/videos/show.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/components/podcasts.sass">
+    <entry file="file://$PROJECT_DIR$/core/components.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="456">
+          <caret line="198" column="54" selection-start-line="198" selection-start-column="54" selection-end-line="198" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/components/videos.sass">
+    <entry file="file://$PROJECT_DIR$/app/views/page/terms-of-service.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/audio.coffee">
+    <entry file="file://$PROJECT_DIR$/spec/routing/meta_routing_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="690">
+          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/packs/client_js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/podcasts/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/video.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/articles_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/settings/theme.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_navigation.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="50" selection-start-column="50" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/extensions/color.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/extensions/color_icon.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/admin/extensions/color_icon.sass">
+    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/article.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
+    <entry file="file://$PROJECT_DIR$/app/models/role.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="183" column="25" lean-forward="true" selection-start-line="183" selection-start-column="25" selection-end-line="183" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/fragments/footer.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/client.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/vue/video/show.slim">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/components/homepage.sass">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/client_app.coffee">
+    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/homepage.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        <state relative-caret-position="256">
+          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/home.html.slim">
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        <state relative-caret-position="510">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="104" column="23" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage/widget_item.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/widget/base_cell.rb">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/menu_cell.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/widgets/image_preloader.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="495">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/test.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/image_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+        <state relative-caret-position="60">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/members_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/lib/permissions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+        <state relative-caret-position="210">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
+    <entry file="file://$PROJECT_DIR$/app/lib/symbol_extension.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/semantic/dist/semantic.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/display_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4bcf2543-b5ef-4f48-b954-800e7cc88481/database/aquarius_development/schema/public/table/entries">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="payload" languageId="JSON" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4bcf2543-b5ef-4f48-b954-800e7cc88481/database/aquarius_development/schema/public/table/comments">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/ui.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="146" column="5" selection-start-line="146" selection-start-column="2" selection-end-line="146" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/semantic/tasks/build/javascript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/vue/feed/show.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/vue/feed_cell.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/js/vue/feed.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/member_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/settings_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="330">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/admin/base_cell.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/site_settings_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/rails_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="305">
+          <caret line="78" column="57" selection-start-line="78" selection-start-column="55" selection-end-line="78" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/widgets/feed.sass">
+    <entry file="file://$PROJECT_DIR$/app/cells/base_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/init.sass">
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/webpacker-3.5.5/lib/tasks/webpacker/check_binstubs.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/profile.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/color_helper.rb" />
+    <entry file="file://$PROJECT_DIR$/app/helpers/footer_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        <state relative-caret-position="180">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/menu_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="49" column="69" lean-forward="true" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
+        <state relative-caret-position="2462">
+          <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/extensions/symbol_extension.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/palette.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/01_config_bootloader.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/lib/setting_interface_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/setting_interface.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/lib/palette_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/rails/theme_settings/theme_settings_generator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/permissions.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/webpack">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/webpack-dev-server">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/newsletter_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_podcast_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_global_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/profile_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/profile.yml">
+    <entry file="file://$PROJECT_DIR$/app/helpers/nav_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/zapier/base.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/zapier/newsletter_subscription.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/lib/generators/rails/theme_settings_generator_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_homepage_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_branding_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_video_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/variables/colors.scss">
+    <entry file="file://$PROJECT_DIR$/spec/cells/admin_base_cell_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/components/members.sass">
+    <entry file="file://$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="648">
+          <caret line="127" column="9" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/members/show.html.slim">
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_article_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/widget/base_cell.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
         </state>
       </provider>
     </entry>
