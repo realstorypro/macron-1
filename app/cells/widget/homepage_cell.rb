@@ -51,19 +51,23 @@ module Widget
 
     def subheader_class
       if category_style == "divided"
-        "sub dividing #{@item.category.color.name} #{inverted?(overlay_color)}"
+        "sub dividing #{@item.category.color.name} #{palette.contrast(overlay_color)}"
       elsif category_style == "white boxed"
         "sub boxed whited black"
       elsif category_style == "black boxed"
         "sub boxed blacked white"
       else
-        "sub #{@item.category.color.name} #{inverted?(overlay_color)}"
+        "sub #{@item.category.color.name} #{contrast(overlay_color)}"
       end
     end
 
     def image_class
       return "fixed background" if image_style == "fixed"
       nil
+    end
+
+    def palette
+      Palette.new
     end
 
     # theme setting shortcuts

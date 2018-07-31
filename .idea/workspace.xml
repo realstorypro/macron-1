@@ -6,30 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/vue/feed_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/vue/feed_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/widget/base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/base_cell.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/widget/sidenav_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/widget/sidenav_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_authentication_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_authentication_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_discussion_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_discussion_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_footer_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_footer_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_header_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_header_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/display_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/display_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/palette.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/palette.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/setting_interface.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/setting_interface.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/article.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/article.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/authentication.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/authentication.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/branding.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/branding.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/discussion.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/discussion.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/footer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/footer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/global.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/global.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/header.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/header.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/podcast.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/podcast.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/video.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/video.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -119,7 +96,7 @@
           <entry key="json" value="12" />
           <entry key="md" value="304" />
           <entry key="rake" value="3038" />
-          <entry key="rb" value="17843" />
+          <entry key="rb" value="17918" />
           <entry key="sass" value="2330" />
           <entry key="scss" value="263" />
           <entry key="slim" value="8700" />
@@ -133,7 +110,7 @@
           <entry key="JSON" value="12" />
           <entry key="Markdown" value="304" />
           <entry key="PLAIN_TEXT" value="155" />
-          <entry key="Ruby" value="20962" />
+          <entry key="Ruby" value="21037" />
           <entry key="SCSS" value="263" />
           <entry key="Sass" value="2330" />
           <entry key="Slim" value="8700" />
@@ -148,7 +125,7 @@
           <entry key="js" value="2" />
           <entry key="md" value="1" />
           <entry key="rake" value="6" />
-          <entry key="rb" value="225" />
+          <entry key="rb" value="227" />
           <entry key="sass" value="6" />
           <entry key="scss" value="2" />
           <entry key="slim" value="32" />
@@ -163,7 +140,7 @@
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Ruby" value="236" />
+          <entry key="Ruby" value="238" />
           <entry key="SCSS" value="2" />
           <entry key="Sass" value="6" />
           <entry key="Slim" value="32" />
@@ -237,11 +214,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="648">
+              <caret line="127" column="9" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/cells/widget/base_cell.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -257,7 +252,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>vardd</find>
       <find>vari</find>
       <find>con</find>
       <find>facebook</find>
@@ -282,11 +276,12 @@
       <find>node_name</find>
       <find>ColorHelper</find>
       <find>Dir</find>
-      <find>inverted</find>
       <find>extensions</find>
       <find>before</find>
       <find>options</find>
       <find>LineLength</find>
+      <find>inverted?</find>
+      <find>inverted</find>
     </findStrings>
     <replaceStrings>
       <replace>$w-homepage-header-overlay-gradient-direction</replace>
@@ -359,13 +354,11 @@
         <option value="$PROJECT_DIR$/core/components.yml" />
         <option value="$PROJECT_DIR$/app/views/page/terms-of-service.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/cells/widget/base_cell.rb" />
         <option value="$PROJECT_DIR$/app/models/site_settings/theme/homepage.rb" />
         <option value="$PROJECT_DIR$/core/views/settings/theme/homepage.yml" />
         <option value="$PROJECT_DIR$/app/helpers/image_helper.rb" />
         <option value="$PROJECT_DIR$/app/frontend/shared/js/widgets/image_preloader.coffee" />
         <option value="$PROJECT_DIR$/app/frontend/shared/css/client/widgets/homepage_header.sass" />
-        <option value="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/homepage/widget_item.slim" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Gemfile" />
@@ -398,6 +391,8 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_branding_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_video_controller.rb" />
         <option value="$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb" />
+        <option value="$PROJECT_DIR$/app/cells/widget/base_cell.rb" />
+        <option value="$PROJECT_DIR$/app/cells/widget/homepage_cell.rb" />
       </list>
     </option>
   </component>
@@ -729,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/widget/base_cell.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/shared/css/client/components/homepage.sass">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -743,13 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -984,13 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_article_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_homepage_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1021,8 +995,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="648">
+          <caret line="127" column="9" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/site_settings/theme/theme_article_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/widget/base_cell.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/widget/homepage_cell.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
