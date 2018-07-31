@@ -20,7 +20,7 @@ module NavHelper
       end
 
     elsif controller_name == "discussions" && action_name.downcase == "show"
-      menu_style = ss('theme.discussion.menu_style')
+      menu_style = ss("theme.discussion.menu_style")
       category_color = @entry.category.color.name
 
       # we want to eliminate transparency if the background is set as solid
@@ -53,7 +53,7 @@ module NavHelper
       end
     elsif %w[members profile].include?(controller_name)
       color = "black"
-      menu_class(transparent: false , expanded_color: color, collapsed_color: menu_color)
+      menu_class(transparent: false, expanded_color: color, collapsed_color: menu_color)
     elsif %w[sessions registrations passwords confirmations].include?(controller_name)
       # auth fullscreen image option
       # we want to have an inverted logo that's why we're passing the *expanded_color: black*

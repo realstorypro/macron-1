@@ -3,7 +3,7 @@
 module Zapier
   class NewsletterSubscription < Zapier::Base
     def call_operation
-      HTTParty.post(ss('integration.newsletter_webhook'), body: params)
+      HTTParty.post(ss("integration.newsletter_webhook"), body: params)
     end
 
     def params

@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-#
+
 namespace :permissions do
   desc "Enables permission for a user"
   task enable: :environment do
@@ -10,7 +10,7 @@ namespace :permissions do
 
     # loads the actual components
     components = components["components"]
-    component_names = components.map {|component| component[0]}
+    component_names = components.map { |component| component[0] }
 
     # loads in the auth file
     auth = YAML.load_file(Rails.root.join("core").join("auth.yml"))
@@ -25,10 +25,10 @@ namespace :permissions do
     permissions_path = Rails.root.join("core").join("permissions").to_s
 
     # get all of the files inside a directory
-    permissions = Dir.entries(permissions_path).select {|f| !File.directory? f}
+    permissions = Dir.entries(permissions_path).select { |f| !File.directory? f }
 
     # get only the names of the files
-    role_names = permissions.map {|f| f.split(".")[0]}
+    role_names = permissions.map { |f| f.split(".")[0] }
 
     selected_role = prompt.select "Which role?", role_names, per_page: 20, filter: true
     selected_component = prompt.select "Which component?", component_names, per_page: 20, filter: true
@@ -39,6 +39,7 @@ namespace :permissions do
 
     permission_file = YAML.load_file(Rails.root.join("core").join("permissions").join("#{selected_role}.yml"))
     permission_file["selected_component"]
+
     selected_ability.each do |ability|
       if permission_file["auth"]["permissions"][selected_role][selected_component].nil?
         permission_file["auth"]["permissions"][selected_role][selected_component] = {}
@@ -46,7 +47,9 @@ namespace :permissions do
       permission_file["auth"]["permissions"][selected_role][selected_component][ability] = nil
     end
 
-    File.open(Rails.root.join("core").join("permissions").join("#{selected_role}.yml"), "w") {|f| f.write permission_file.to_yaml }
+    File.open(Rails.root.join("core").join("permissions").join("#{selected_role}.yml"), "w") do |f|
+      f.write permission_file.to_yaml
+    end
   end
 
   desc "Disable disables permission for a user"

@@ -16,11 +16,11 @@ describe Palette, "default colors" do
   end
 
   it "it should return 'inverted' if the color is on inverted list" do
-    expect(@palette.contrast('red')).to eq('inverted')
+    expect(@palette.contrast("red")).to eq("inverted")
   end
 
   it "it should return 'regular' if the color is on inverted list" do
-    expect(@palette.contrast('white')).to eq('regular')
+    expect(@palette.contrast("white")).to eq("regular")
   end
 end
 
@@ -33,10 +33,10 @@ describe Palette, "passed in colors" do
   end
 
   it "it should return 'inverted' if the color is on inverted list" do
-    expect(@palette.contrast('yellow')).to eq('inverted')
+    expect(@palette.contrast("yellow")).to eq("inverted")
   end
 
   it "it should return 'regular' if the color is on inverted list" do
-    expect(@palette.contrast('blue')).to eq('regular')
+    expect(@palette.contrast("blue")).to eq("regular")
   end
 end

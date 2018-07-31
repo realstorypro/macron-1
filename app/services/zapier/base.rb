@@ -39,7 +39,6 @@ module Zapier
         site_settings = $redis.get("site_settings")
         @site_settings = JSON.parse(site_settings)
       end
-
   end
 end
 # rubocop:enable GlobalVars

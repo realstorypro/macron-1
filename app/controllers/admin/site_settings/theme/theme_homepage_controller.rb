@@ -33,7 +33,7 @@ module Admin::SiteSettings::Theme
       def set_breadcrumb
         semantic_breadcrumb "Settings", admin_settings_root_path
         semantic_breadcrumb "Theme", admin_settings_theme_root_path
-        semantic_breadcrumb "Homepage", ''
+        semantic_breadcrumb "Homepage", ""
       end
   end
 end
