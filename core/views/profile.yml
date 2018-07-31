@@ -1,5 +1,5 @@
 views:
-  profile:
+  profiles:
     new:
       basics_header:
         type: 'header'

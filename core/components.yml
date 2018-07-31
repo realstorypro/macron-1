@@ -166,7 +166,7 @@ components:
     path: 'podcasts'
     enabled: true
 
-  profile:
+  profiles:
     name: 'Profile'
     description: 'Provides profile capabilities'
     klass: 'Profile'

@@ -33,24 +33,8 @@ class Podcast < Entry
   end
 
   private
-    # TODO Move to the palete
     def play_button_color(color)
-      color_map = {
-          red: "B03060",
-          orange: "FF8243",
-          yellow: "FFD700",
-          olive: "32CD32",
-          green: "21BA45",
-          teal: "008080",
-          blue: "2185D0",
-          violet: "EE82EE",
-          purple: "B413EC",
-          pink: "FF1493",
-          brown: "A52A2A",
-          grey: "A0A0A0",
-          black: "666666",
-          white: "000000"
-      }
-      color_map[color.to_sym]
+      palette = Palette.new
+      palette.color_value(color)
     end
 end

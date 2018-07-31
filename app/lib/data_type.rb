@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class DataType
-  def initialize(options= {} )
+  def initialize(options = {})
     defaults = {
       text_datatypes: %w(text rich),
       string_datatypes: %w(string date datepicker image),

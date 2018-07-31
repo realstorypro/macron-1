@@ -11,7 +11,7 @@ auth:
         moderate: 
       members:
         read: 
-      profile:
+      profiles:
         create: 
         read: 
         update: 

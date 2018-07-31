@@ -14,8 +14,8 @@ module Autoloadable
     # removing non payloadable fields
     rejected_types = %w(header association dropdown).freeze
     rejected_names = %w(name slug published_date).freeze
-    fields = fields.reject {|field| rejected_types.include?(field[1].type) }
-    fields = fields.reject {|field| rejected_names.include?(field[0].to_s) }
+    fields = fields.reject { |field| rejected_types.include?(field[1].type) }
+    fields = fields.reject { |field| rejected_names.include?(field[0].to_s) }
 
     # adding payload
     fields.each do |field|
