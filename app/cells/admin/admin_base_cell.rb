@@ -13,6 +13,7 @@ module Admin
     #  Record Render Main Switch
     ########################################################
 
+    # TODO refactor out unused types and combine if possible
     # renders record value based on field type
     def record_value(field, row = nil)
       type = field_type(field)

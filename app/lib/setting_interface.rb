@@ -2,6 +2,8 @@
 
 # traverses the settings path
 class SettingInterface
+  attr_accessor :settings
+
   def initialize(settings)
     @settings = settings
   end
