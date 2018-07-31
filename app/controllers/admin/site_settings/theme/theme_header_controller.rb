@@ -8,12 +8,12 @@ module Admin::SiteSettings::Theme
 
     def show
       add_to_actions(
-          text: "Edit",
-          class: "primary",
-          icon: "edit",
-          url: edit_admin_settings_theme_header_path,
-          permission: policy(@entry).edit?,
-          data: { widget: "crud", action: "edit" }
+        text: "Edit",
+        class: "primary",
+        icon: "edit",
+        url: edit_admin_settings_theme_header_path,
+        permission: policy(@entry).edit?,
+        data: { widget: "crud", action: "edit" }
       )
 
       render "admin/crud/show"
@@ -21,19 +21,19 @@ module Admin::SiteSettings::Theme
 
     private
 
-    def load_entry
-      @entry = SiteSettings::Theme::Header.instance
-    end
+      def load_entry
+        @entry = SiteSettings::Theme::Header.instance
+      end
 
-    def entry_params
-      allowed_attrs = set_allowed_attrs
-      params.require(:site_settings_theme_header).permit(*allowed_attrs)
-    end
+      def entry_params
+        allowed_attrs = set_allowed_attrs
+        params.require(:site_settings_theme_header).permit(*allowed_attrs)
+      end
 
-    def set_breadcrumb
-      semantic_breadcrumb "Settings", admin_settings_root_path
-      semantic_breadcrumb "Theme", admin_settings_theme_root_path
-      semantic_breadcrumb "Header", ''
-    end
+      def set_breadcrumb
+        semantic_breadcrumb "Settings", admin_settings_root_path
+        semantic_breadcrumb "Theme", admin_settings_theme_root_path
+        semantic_breadcrumb "Header", ""
+      end
   end
 end

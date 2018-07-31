@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Palette
   attr_accessor :colors, :regular, :inverted
 
@@ -20,6 +22,4 @@ class Palette
       "regular"
     end
   end
-
 end
-

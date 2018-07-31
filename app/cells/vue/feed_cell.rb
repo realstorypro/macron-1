@@ -50,7 +50,7 @@ module Vue
     end
 
     def find_entry(comment)
-      @model.each {|entry| return entry if entry.id == comment.commentable_id}
+      @model.each { |entry| return entry if entry.id == comment.commentable_id }
     end
   end
 end

@@ -1,5 +1,7 @@
 # rubocop:disable CyclomaticComplexity
 
+# TODO: Refactor to make compatible with forzen strings
+
 module Admin
   class AdminBaseCell < Cell::ViewModel
     include ApplicationHelper

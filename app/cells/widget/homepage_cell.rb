@@ -62,7 +62,7 @@ module Widget
     end
 
     def image_class
-      return 'fixed background' if image_style == 'fixed'
+      return "fixed background" if image_style == "fixed"
       nil
     end
 

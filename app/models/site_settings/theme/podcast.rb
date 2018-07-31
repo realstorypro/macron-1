@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module SiteSettings::Theme
   class Podcast < Setting
-
     before_create do
       errors.add(:base, "already one setting object existing") && (return false) if Podcast.exists?
     end

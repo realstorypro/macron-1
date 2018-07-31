@@ -33,7 +33,7 @@ module Widget
 
     # shortcut for accessing position
     def position
-      ss('theme.header.menu_position')
+      ss("theme.header.menu_position")
     end
   end
 end

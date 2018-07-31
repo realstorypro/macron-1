@@ -24,7 +24,7 @@ module Widget
     end
 
     # TODO this is code duplication. find  way to remove this and only rely on site_settings_helper
-    def site_setting(path, opts={})
+    def site_setting(path, opts = {})
       # split the path into an array
       path_array = path.split(".")
       value = nil

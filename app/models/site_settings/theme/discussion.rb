@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module SiteSettings::Theme
   class Discussion < Setting
-
     before_create do
       errors.add(:base, "already one setting object existing") && (return false) if Discussion.exists?
     end
@@ -13,6 +14,5 @@ module SiteSettings::Theme
         settings.menu_style = "transparent"
       end
     end
-
   end
 end

@@ -109,7 +109,6 @@ group :development do
   # CLI
   gem "thor"
   gem "tty-prompt"
-
 end
 
 group :test do

@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module SiteSettings::Theme
   class Homepage < Setting
-
     before_create do
       errors.add(:base, "already one setting object existing") && (return false) if Homepage.exists?
     end
@@ -42,6 +43,5 @@ module SiteSettings::Theme
         settings.comment_count = "hide"
       end
     end
-
   end
 end

@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 # traverses the settings path
 class SettingInterface
   def initialize(settings)
     @settings = settings
   end
 
-  def fetch_setting(path, options={})
+  def fetch_setting(path, options = {})
     # split the path into an array
     path_array = path.split(".")
     value = nil
