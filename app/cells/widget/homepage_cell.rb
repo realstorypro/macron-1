@@ -57,7 +57,7 @@ module Widget
       elsif category_style == "black boxed"
         "sub boxed blacked white"
       else
-        "sub #{@item.category.color.name} #{contrast(overlay_color)}"
+        "sub #{@item.category.color.name} #{palette.contrast(overlay_color)}"
       end
     end
 
@@ -70,7 +70,7 @@ module Widget
       Palette.new
     end
 
-    # theme setting shortcuts
+    # theme settin shortcuts
     def item_count
       ss("theme.homepage.featured_items")
     end
