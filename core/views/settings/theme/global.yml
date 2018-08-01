@@ -14,6 +14,7 @@ views:
         - Lato
         - Relevay
         - Roboto
+        required: true
 
       body_font:
         advanced: true
@@ -23,9 +24,7 @@ views:
         - Lato
         - Relevay
         - Roboto
-
-
-
+        required: true
 
       overlay_header:
         advanced: true
@@ -39,4 +38,4 @@ views:
         options:
         - auto
         - fixed
-
+        required: true

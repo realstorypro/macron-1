@@ -8,11 +8,13 @@ views:
       color:
         label: 'Color'
         type: 'color'
+        required: true
 
       button_color:
         advanced: true
         label: 'Button Color'
         type: 'color'
+        required: true
 
       button_style:
         advanced: true
@@ -21,6 +23,7 @@ views:
         options:
         - regular
         - inverted
+        required: true
 
       icon:
         advanced: true
@@ -29,6 +32,7 @@ views:
         options:
         - show
         - hide
+        required: true
 
       item_order:
         advanced: true
@@ -37,6 +41,7 @@ views:
         options:
         - auto
         - reversed
+        required: true
 
       content_header:
         type: 'header'
@@ -46,7 +51,9 @@ views:
         label: 'About Us'
         type: 'rich'
         hint: 'Write two short paragraphs describing the web site.'
+        required: true
 
       copyrights:
         label: 'Copyrights'
         type: 'string'
+        required: true
