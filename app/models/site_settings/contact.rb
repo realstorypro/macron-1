@@ -2,21 +2,11 @@
 
 module SiteSettings
   class Contact < Setting
+    include Autoloadable
+
     before_create do
       errors.add(:base, "already one setting object existing") && (return false) if Contact.exists?
     end
-
-    content_attr :phone, :string
-    content_attr :email, :string
-    content_attr :website, :string
-    content_attr :address1, :string
-    content_attr :address2, :string
-    content_attr :address3, :string
-
-
-    content_attr :twitter, :string
-    content_attr :facebook, :string
-
 
     validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, allow_blank: true
     validates :facebook, url: { schemes: ["https"] }, allow_blank: true
