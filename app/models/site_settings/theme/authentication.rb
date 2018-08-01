@@ -20,6 +20,7 @@ module SiteSettings::Theme
         settings.sign_up_title = "Sign Up"
         settings.sign_up_subtitle = "Join The Community"
         settings.sign_in_title = "Sign In"
+        settings.auth_background = "logo.png"
       end
     end
   end

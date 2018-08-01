@@ -15,7 +15,7 @@ views:
 
       sign_in_title:
         advanced: true
-        label: '"Sign In" title'
+        label: '"Sign in" title'
         type: 'string'
         hint: 'Title of the Sign In Box'
 

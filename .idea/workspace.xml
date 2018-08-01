@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/lib/display_data_type.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/display_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/display_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/advertisements.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/advertisements.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/users.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/after_signup_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/after_signup_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/site_settings/theme/authentication.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/site_settings/theme/authentication.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/after_signup/set_phone_number.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/after_signup/set_phone_number.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/after_signup/validate_phone_number.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/after_signup/validate_phone_number.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/shared/_links.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views/settings/theme/authentication.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/views/settings/theme/authentication.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/discussions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/discussions.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -101,12 +106,12 @@
           <entry key="json" value="12" />
           <entry key="md" value="304" />
           <entry key="rake" value="3038" />
-          <entry key="rb" value="24795" />
+          <entry key="rb" value="24879" />
           <entry key="sass" value="2330" />
           <entry key="scss" value="263" />
           <entry key="slim" value="8700" />
           <entry key="webpack" value="4" />
-          <entry key="yml" value="4243" />
+          <entry key="yml" value="4244" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -115,11 +120,11 @@
           <entry key="JSON" value="12" />
           <entry key="Markdown" value="304" />
           <entry key="PLAIN_TEXT" value="155" />
-          <entry key="Ruby" value="27914" />
+          <entry key="Ruby" value="27998" />
           <entry key="SCSS" value="263" />
           <entry key="Sass" value="2330" />
           <entry key="Slim" value="8700" />
-          <entry key="YAML" value="4243" />
+          <entry key="YAML" value="4244" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -130,7 +135,7 @@
           <entry key="js" value="2" />
           <entry key="md" value="1" />
           <entry key="rake" value="6" />
-          <entry key="rb" value="297" />
+          <entry key="rb" value="299" />
           <entry key="sass" value="6" />
           <entry key="scss" value="2" />
           <entry key="slim" value="33" />
@@ -145,7 +150,7 @@
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Ruby" value="308" />
+          <entry key="Ruby" value="310" />
           <entry key="SCSS" value="2" />
           <entry key="Sass" value="6" />
           <entry key="Slim" value="33" />
@@ -174,30 +179,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/views/settings/theme/authentication.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="150">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/discussion.rb">
+        <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/authentication.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="225">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/display_controller.rb">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="120" column="10" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="10" />
-            </state>
+            <state relative-caret-position="-175" />
           </provider>
         </entry>
       </file>
@@ -212,11 +215,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>descri</find>
-      <find>embedded</find>
-      <find>emb</find>
-      <find>video</find>
-      <find>audi</find>
       <find>lan</find>
       <find>card_</find>
       <find>long</find>
@@ -241,13 +239,14 @@
       <find>linked_item</find>
       <find>image: ss(:auth_background)</find>
       <find>image: ss(:auth_background)a</find>
+      <find>theme.global.overlay_background</find>
+      <find>ss(:overlay_background)</find>
+      <find>ss(:auth_background)</find>
+      <find>ss(:name)</find>
+      <find>ss(&quot;theme.auth</find>
       <find>landscape_image</find>
     </findStrings>
     <replaceStrings>
-      <replace>0.75) 40%)</replace>
-      <replace>$large</replace>
-      <replace>Vue::CoverCell.(nil, overlay_background: ss(:overlay_background),</replace>
-      <replace>w-nav-</replace>
       <replace>f-ftr</replace>
       <replace>@date_start..@date_end</replace>
       <replace>options[:style]</replace>
@@ -274,6 +273,10 @@
       <replace>ss(&quot;general.name&quot;)</replace>
       <replace>profiles:</replace>
       <replace>:profiles</replace>
+      <replace>ss(&quot;theme.global.overlay_background&quot;)</replace>
+      <replace>ss(&quot;theme.auth.auth_background&quot;)</replace>
+      <replace>ss('general.name')</replace>
+      <replace />
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/frontend/semantic</dir>
@@ -302,8 +305,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/helpers/settings_helper.rb" />
-        <option value="$PROJECT_DIR$/app/lib/colors_interface.rb" />
         <option value="$USER_HOME$/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/webpacker-3.5.5/lib/tasks/webpacker/check_binstubs.rake" />
         <option value="$PROJECT_DIR$/app/lib/color_interface.rb" />
         <option value="$PROJECT_DIR$/app/helpers/footer_helper.rb" />
@@ -353,6 +354,8 @@
         <option value="$PROJECT_DIR$/app/lib/display_data_type.rb" />
         <option value="$PROJECT_DIR$/app/cells/admin/admin_base_cell.rb" />
         <option value="$PROJECT_DIR$/app/controllers/display_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/site_settings/theme/authentication.rb" />
+        <option value="$PROJECT_DIR$/core/views/settings/theme/authentication.yml" />
       </list>
     </option>
   </component>
@@ -625,16 +628,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/cells/widget/base_cell.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/home.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/views/settings/theme/article.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -931,10 +924,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/authentication.yml">
+    <entry file="file://$PROJECT_DIR$/app/controllers/display_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="111">
+          <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -945,10 +938,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/display_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/concerns/site_settings.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="120" column="10" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="10" />
+        <state relative-caret-position="-175" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/authentication.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views/settings/theme/authentication.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>
