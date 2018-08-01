@@ -39,7 +39,7 @@ views:
         type: 'string'
       image:
         label: 'Image'
-        type: 'image_tiny'
+        type: 'image'
       tags:
         label: 'Tags'
         type: 'unlinked_list'

@@ -106,8 +106,8 @@ class DisplayController < MetaController
         title: @entry.long_title,
         description: @entry.description,
         image: {
-          _: @entry.landscape_image,
-          alt: @entry.image_alt
+          _: (@entry.landscape_image if @entry.respond_to?(:landscape_image)),
+          alt: (@entry.image_alt if @entry.respond_to?(:image_alt))
         }
       }
     end
@@ -119,8 +119,8 @@ class DisplayController < MetaController
         description: @entry.description,
         url: request.original_url,
         image: {
-          _: @entry.landscape_image,
-          alt: @entry.image_alt
+          _: (@entry.landscape_image if @entry.respond_to?(:landscape_image)),
+          alt: (@entry.image_alt if @entry.respond_to?(:image_alt))
         }
       }
     end
