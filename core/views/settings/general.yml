@@ -8,11 +8,14 @@ views:
         label: 'Name'
         type: 'string'
         hint: 'Site name. Used in page title generation. Critical for SEO.'
+        required: true
       description:
         label: 'Description'
         type: 'string'
+        required: true
       url:
         label: 'URL'
         type: 'string'
         hint: 'Must start with https://'
+        required: true
 

@@ -69,6 +69,18 @@ module Admin
       content_tag(:div, rendering.html_safe, class: "ui labels")
     end
 
+    # returns linked item
+    def render_linked_item(item)
+      rendering = ActiveSupport::SafeBuffer.new
+
+      unless item.nil?
+        link_path = "admin_#{item.model_name.name.downcase}_path"
+        rendering << (link_to(item.name, url_helpers.send(link_path, item)))
+      end
+
+      rendering.html_safe
+    end
+
     # returns an image
     def render_image(src, size)
       case size
