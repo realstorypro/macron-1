@@ -120,7 +120,7 @@ class AfterSignupController < ApplicationController
     def send_authenication_request
       @verification_request = @nexmo.verify.request(country: current_user.country.upcase,
                                                     number: current_user.phone_number,
-                                                    brand: ss('general.name'))
+                                                    brand: ss("general.name"))
       @request_id = @verification_request.try(:request_id)
     end
 end

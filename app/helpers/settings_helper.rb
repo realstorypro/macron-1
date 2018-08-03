@@ -2,9 +2,12 @@
 
 module SettingsHelper
   # this is needed because there are function calls still refer to it
-  def settings(path, fatal = false)
+  def settings(path, options = {})
+    defaults = { fatal_exception: false }
+    options = defaults.merge(options)
+
     settings ||= SettingInterface.new(Settings)
-    settings.fetch_setting(path, fatal_exception: fatal)
+    settings.fetch_setting(path, options)
   end
 
   # Shortcut for settings with fatal exception enabled

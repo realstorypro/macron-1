@@ -8,10 +8,10 @@ module Autoloadable
     class_name = self.name.downcase.pluralize
 
     # except for site settings
-    if class_name.include?('sitesettings')
+    if class_name.include?("sitesettings")
       class_name = self.name.downcase.singularize
-      class_name = class_name.gsub('sitesettings', 'site_settings')
-      class_name = class_name.gsub('::', '_')
+      class_name = class_name.gsub("sitesettings", "site_settings")
+      class_name = class_name.gsub("::", "_")
     end
 
     setting = SettingInterface.new(Settings)
