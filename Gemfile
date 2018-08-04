@@ -128,6 +128,7 @@ group :test do
   # testing
   gem "rspec-rails"
   gem "rspec-cells"
+  gem 'rspec_tap'
   gem "rails-controller-testing"
   gem "factory_bot_rails"
   gem "faker"
