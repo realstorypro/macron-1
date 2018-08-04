@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "== Running Rubocop =="
-rubocop
+rubocop --format tap
 
 echo "== Running Rspec =="
-bundle exec rspec
+bundle exec rspec -f RspecTap::Formatter

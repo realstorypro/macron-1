@@ -427,6 +427,7 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
+    rspec_tap (0.1.0)
     rubocop (0.58.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -611,6 +612,7 @@ DEPENDENCIES
   rollbar
   rspec-cells
   rspec-rails
+  rspec_tap
   rubocop
   rubocop-rails_config
   selenium-webdriver
