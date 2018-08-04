@@ -20,22 +20,26 @@ views:
         label: 'Image'
         type: 'image'
         size: ['627','560']
+        required: true
       url:
         label: 'URL'
         type: 'string'
+        required: true
       title:
         label: 'Title'
         type: 'string'
+        required: true
       text:
         label: 'Text'
         type: 'text'
+        required: true
     list:
       name:
         label: 'Name'
         type: 'string'
       image:
         label: 'Image'
-        type: 'image_tiny'
+        type: 'image'
       tags:
         label: 'Tags'
         type: 'unlinked_list'

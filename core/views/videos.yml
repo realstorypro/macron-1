@@ -14,6 +14,7 @@ views:
         type: 'text'
         maxlength: '160'
         hint: 'Limited to 160 characters'
+        required: true
       category:
         label: 'Category'
         type: 'dropdown'
@@ -31,19 +32,23 @@ views:
         label: 'Landscape Image'
         type: 'image'
         size: ['2048','1024']
+        required: true
       card_image:
         label: 'Card Image'
         type: 'image'
         size: ['1100','900']
+        required: true
       image_alt:
         label: 'Image Description'
         type: 'string'
         maxlength: '40'
         hint: 'Limited to 40 characters'
+        required: true
       video:
         label: 'Video'
         type: 'string'
         hint: 'Vimeo or Youtube URL'
+        required: true
 
       details_header:
         type: 'header'
@@ -53,7 +58,9 @@ views:
         type: 'string'
         maxlength: '85'
         hint: 'Limited to 85 characters'
+        required: true
       body:
         label: 'Video Body'
         type: 'rich'
+        required: true
 

@@ -2,21 +2,18 @@
 
 module SiteSettings
   class General < Setting
+    include Autoloadable
+
     before_create do
       errors.add(:base, "already one setting object existing") && (return false) if General.exists?
     end
 
-    validates_presence_of :name,
-                          :description,
-                          :url
+    # manually inluding name since autoloadable ignores it
+    content_attr :name, :string
+    validates_presence_of :name
 
     validates :url, url: { schemes: ["https"] }
 
-    content_attr :name, :string
-    content_attr :description, :string
-    content_attr :url, :string
-    content_attr :about, :text
-    content_attr :copyrights, :string
 
 
     def self.instance

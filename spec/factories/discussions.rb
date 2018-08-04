@@ -7,7 +7,6 @@ FactoryBot.define do
     body { Faker::Demographic.race }
     long_title { Faker::Name.name }
     long_summary { Faker::Demographic.race }
-    image_alt { Faker::Name.name }
     published_date { Faker::Date.forward(7) }
     association :category, factory: :category
   end

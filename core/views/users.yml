@@ -48,7 +48,7 @@ views:
         type: 'string'
       avatar_with_default:
         label: 'Avatar'
-        type: 'image_small'
+        type: 'image'
         association: 'profile'
       title:
         label: 'Title'

@@ -39,4 +39,8 @@ describe Palette, "passed in colors" do
   it "it should return 'regular' if the color is on inverted list" do
     expect(@palette.contrast("blue")).to eq("regular")
   end
+
+  it "it should return the correct color from the color map" do
+    expect(@palette.color_value("blue")).to eq("2185D0")
+  end
 end

@@ -12,7 +12,7 @@ auth:
         create: 
         read: 
         delete: 
-      profile:
+      profiles:
         create: 
         read: 
         update: 

@@ -10,7 +10,7 @@ auth:
         all: 
       members:
         all: 
-      profile:
+      profiles:
         all: 
       articles:
         all: 

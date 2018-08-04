@@ -14,6 +14,7 @@ views:
         type: 'text'
         maxlength: '160'
         hint: 'Limited to 160 characters'
+        required: true
       category:
         label: 'Category'
         type: 'dropdown'
@@ -32,9 +33,12 @@ views:
         type: 'string'
         maxlength: '85'
         hint: 'Limited to 85 characters'
+        required: true
       long_summary:
         label: 'Long Summary'
         type: 'rich'
+        required: true
       body:
         label: 'Discussion Body'
         type: 'rich'
+        required: true

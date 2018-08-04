@@ -2,18 +2,9 @@
 
 class Profile < ApplicationRecord
   include Payloadable
+  include Autoloadable
+
   belongs_to :user
-
-  content_attr :title, :string
-  content_attr :avatar, :string
-  content_attr :location, :string
-  content_attr :age, :integer
-  content_attr :signature, :string
-  content_attr :twitter, :string
-  content_attr :instagram, :string
-  content_attr :url, :string
-
-  content_attr :card_color, :string
 
   validates_presence_of :user
 

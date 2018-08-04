@@ -9,7 +9,7 @@ auth:
         read:
       comments:
         read:
-      profile:
+      profiles:
         read:
       members:
         read:

@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   get "sitemap", to: "page#sitemap"
 
   resources :members, component: "members", only: %i[index show]
-  resource  :profile, controller: "profile", component: "profile", only: %i[show edit update]
+  resource  :profile, controller: "profile", component: "profiles", only: %i[show edit update]
 
   resources :articles, component: "articles", only: %i[index]
   get "articles/:category", to: "articles#index", as: "article_category", component: "articles"

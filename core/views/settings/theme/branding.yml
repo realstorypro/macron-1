@@ -4,10 +4,13 @@ views:
       logo:
         label: 'Logo'
         type: 'image'
+        required: true
       inverted_logo:
         label: 'Inverted Logo'
         type: 'image'
+        required: true
       icon:
         label: 'Icon'
         type: 'image'
         size: ['180','180']
+        required: true

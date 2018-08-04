@@ -2,13 +2,11 @@
 
 module SiteSettings
   class Integration < Setting
+    include Autoloadable
+
     before_create do
       errors.add(:base, "already one setting object existing") && (return false) if Integration.exists?
     end
-
-    content_attr :newsletter_webhook, :string
-    content_attr :segment_js_key, :string
-    content_attr :segment_server_key, :string
 
     validates :newsletter_webhook, url: { schemes: ["https"] }
 
