@@ -28,8 +28,8 @@ class DisplayController < MetaController
   private
     def find_related_ad
       @ad = Tag.find_by_id(@entry.tags.map(&:id))
-                 &.advertisements&.order("random()")&.limit(1)
-      @ad = Advertisement.order("random()").limit(1) if @ad.nil?
+                 &.advertisements&.order(Arel.sql("random()"))&.limit(1)
+      @ad = Advertisement.order(Arel.sql("random()")).limit(1) if @ad.nil?
     end
 
 
@@ -38,11 +38,11 @@ class DisplayController < MetaController
                         .where.not(taggable_id: @entry.id)
       content_ids = taggings.map(&:taggable_id)
       @related_content = Entry.where(id: content_ids)
-      @related_content = @related_content.order("random()").limit(6)
+      @related_content = @related_content.order(Arel.sql("random()")).limit(6)
 
       # look up via a category if no tags are found
       if @related_content.blank?
-        @related_content = Entry.where(category: @entry.category).order("random()").limit(6)
+        @related_content = Entry.where(category: @entry.category).order(Arel.sql("random()")).limit(6)
       end
     end
 
