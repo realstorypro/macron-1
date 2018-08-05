@@ -6,7 +6,7 @@ include ApplicationHelper
 @pages = s("pages")
 
 @pages.each do |p|
-  describe "Testing Page : #{node_name(p).capitalize}", type: :feature do
+  describe "Page : #{node_name(p).capitalize}", type: :feature do
     before(:each) do
       visit "/#{node_name(p)}"
     end
