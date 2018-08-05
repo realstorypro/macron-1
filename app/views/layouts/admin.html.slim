@@ -49,7 +49,7 @@ html
         window.fcWidget.user.setEmail(window.user.email);
         window.fcWidget.user.setProperties({
             username: '#{current_user.username}',
-            site_name: '#{ss(:site_name)}'
+            site_name: '#{ss("general.name")}'
         });
 
         window.fcWidget.init({
