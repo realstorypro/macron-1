@@ -42,9 +42,6 @@ gem "rack-mini-profiler"
 # Pagination
 gem "kaminari", github: "kaminari/kaminari", branch: "master"
 
-# Active Record
-gem "store_base_sti_class"
-
 # Authentication
 gem "devise"
 gem "devise-async"
