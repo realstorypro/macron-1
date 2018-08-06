@@ -1,7 +1,8 @@
 AQUARIUS
 --------
+[![codecov](https://codecov.io/gh/leouofa/aquarius/branch/master/graph/badge.svg?token=SpfdxrArOG)](https://codecov.io/gh/leouofa/aquarius)
 
-###### "with great power comes great responsibility"
+##### "with great power comes great responsibility"
      
      
 ![macron1](https://user-images.githubusercontent.com/433219/40011503-dbe773e4-575c-11e8-9c2c-dbb35c84dc1c.jpeg) 
