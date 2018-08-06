@@ -2,10 +2,7 @@
 
 require "rails_helper"
 
-include ApplicationHelper
-@pages = s("pages")
-
-describe "Support Page Testing", type: :feature do
+describe "Support Page", type: :feature do
   before(:each) do
     sign_in FactoryBot.create(:user, :admin)
     visit "/admin/support/"

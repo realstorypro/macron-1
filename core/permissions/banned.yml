@@ -7,6 +7,8 @@ auth:
         read:
       videos:
         read:
+      podcasts:
+        read:
       comments:
         read:
       profiles:

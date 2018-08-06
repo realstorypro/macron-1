@@ -22,6 +22,8 @@ module Widget
         url_helpers.video_details_path(item.category.slug, item.slug)
       elsif item.type == "Discussion"
         url_helpers.discussion_details_path(item.category.slug, item.slug)
+      elsif item.type == "Podcast"
+        url_helpers.podcast_details_path(item.category.slug, item.slug)
       end
     end
   end
