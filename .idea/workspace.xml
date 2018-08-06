@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b32a9eba-dac7-4b95-9301-d1f561681f73" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/spec/features/admin_component_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/display_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/display_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.last_run.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.last_run.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -96,7 +98,7 @@
           <entry key="json" value="12" />
           <entry key="md" value="304" />
           <entry key="rake" value="3038" />
-          <entry key="rb" value="28895" />
+          <entry key="rb" value="29604" />
           <entry key="sass" value="2330" />
           <entry key="scss" value="263" />
           <entry key="slim" value="8858" />
@@ -111,7 +113,7 @@
           <entry key="JSON" value="12" />
           <entry key="Markdown" value="304" />
           <entry key="PLAIN_TEXT" value="167" />
-          <entry key="Ruby" value="32023" />
+          <entry key="Ruby" value="32732" />
           <entry key="SCSS" value="263" />
           <entry key="Sass" value="2330" />
           <entry key="Slim" value="8858" />
@@ -126,7 +128,7 @@
           <entry key="js" value="2" />
           <entry key="md" value="1" />
           <entry key="rake" value="6" />
-          <entry key="rb" value="340" />
+          <entry key="rb" value="342" />
           <entry key="sass" value="6" />
           <entry key="scss" value="2" />
           <entry key="slim" value="38" />
@@ -142,7 +144,7 @@
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Ruby" value="353" />
+          <entry key="Ruby" value="355" />
           <entry key="SCSS" value="2" />
           <entry key="Sass" value="6" />
           <entry key="Slim" value="38" />
@@ -172,10 +174,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/display_controller.rb">
+        <entry file="file://$PROJECT_DIR$/spec/features/admin_component_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="30" column="57" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="57" />
+            <state relative-caret-position="75">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/features/support_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -281,7 +292,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/views/podcasts.yml" />
         <option value="$PROJECT_DIR$/core/views/discussions.yml" />
         <option value="$PROJECT_DIR$/app/models/discussion.rb" />
         <option value="$PROJECT_DIR$/app/lib/palette.rb" />
@@ -332,6 +342,7 @@
         <option value="$PROJECT_DIR$/app/cells/widget/related_cell.rb" />
         <option value="$PROJECT_DIR$/app/cells/widget/related/regular.slim" />
         <option value="$PROJECT_DIR$/app/controllers/display_controller.rb" />
+        <option value="$PROJECT_DIR$/spec/features/admin_component_spec.rb" />
       </list>
     </option>
   </component>
@@ -614,13 +625,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/header.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/site_settings/theme/branding.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -847,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/features/support_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/views/settings/theme/article.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -950,8 +947,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/display_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="30" column="57" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="57" />
+        <state relative-caret-position="420">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/features/support_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/features/admin_component_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
