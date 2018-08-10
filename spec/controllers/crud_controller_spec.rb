@@ -251,7 +251,7 @@ describe Admin::CrudController, type: :controller do
            attrs = FactoryBot.build(entry_factory(test)).attributes
            payload = attrs["payload"]
            attrs.delete("payload")
-           attrs = attrs.merge(payload)
+           attrs = attrs.merge(payload) unless payload.nil?
 
            @params = { component: test.component }
            @params[entry_factory(test)] = attrs
@@ -291,7 +291,7 @@ describe Admin::CrudController, type: :controller do
           attrs = FactoryBot.build(entry_factory(test)).attributes
           payload = attrs["payload"]
           attrs.delete("payload")
-          attrs = attrs.merge(payload)
+          attrs = attrs.merge(payload) unless payload.nil?
           attrs["name"] = nil
 
           @params = { component: test.component }
@@ -321,7 +321,7 @@ describe Admin::CrudController, type: :controller do
     # ~~~~~~~~ DELETE ACTIONS ~~~~~~~~ #
 
     if test.crud.include?("create")
-      describe "destroy create actions for #{test.component}" do
+      describe "destroy actions for #{test.component}" do
          before(:all) do
            @admin = FactoryBot.create(:user, :admin)
            FactoryBot.create_list(entry_factory(test), 20)

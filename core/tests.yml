@@ -23,13 +23,13 @@ tests:
         - index
         - show
       crud:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - create
-        - destroy
+          - index
+          - show
+          - new
+          - edit
+          - update
+          - create
+          - destroy
 
 
     - component: discussions
@@ -43,6 +43,14 @@ tests:
       frontend:
         - index
         - show
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
+        - destroy
 
     - component: videos
       admin:
@@ -55,6 +63,14 @@ tests:
       frontend:
         - index
         - show
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
+        - destroy
 
     - component: podcasts
       admin:
@@ -67,6 +83,14 @@ tests:
       frontend:
         - index
         - show
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
+        - destroy
 
     - component: advertisements
       admin:
@@ -75,6 +99,14 @@ tests:
         - new
         - edit
         - update
+        - destroy
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
         - destroy
 
     - component: tags
@@ -85,6 +117,14 @@ tests:
         - edit
         - update
         - destroy
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
+        - destroy
 
     - component: categories
       admin:
@@ -94,6 +134,14 @@ tests:
         - edit
         - create
         - update
+        - destroy
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
         - destroy
 
     - component: support
