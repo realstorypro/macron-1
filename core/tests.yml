@@ -3,10 +3,6 @@ tests:
       admin:
         - index
 
-    - component:  members
-      frontend:
-        - show
-
     - component: users
       admin:
         - index
