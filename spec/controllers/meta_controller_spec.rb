@@ -1,4 +1,16 @@
 # rubocop:disable BlockLength
+#
+require "rails_helper"
+include ApplicationHelper
+
+
+@components = s("components")
+@tests = s("tests").select {|test| test.admin != nil}
+
+describe "Meta Controller Test", type: :controller do
+
+end
+
 
 # require "rails_helper"
 #

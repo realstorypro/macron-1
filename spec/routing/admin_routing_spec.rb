@@ -5,7 +5,7 @@ require "rails_helper"
 include PathHelper
 
 # builds the path
-def visit_path(test)
+def visit_admin_path(test)
   "/admin/#{test.component}/"
 end
 
@@ -28,7 +28,7 @@ describe "Admin Meta Routing Spec", type: :feature do
   @tests.each do |test|
     if test.admin.include?("index")
       it "can visit :: #{test.component} :: index" do
-        visit visit_path(test)
+        visit visit_admin_path(test)
         expect(page.status_code).to be 200
       end
     end
@@ -36,7 +36,7 @@ describe "Admin Meta Routing Spec", type: :feature do
     if test.admin.include?("show")
       it "can visit :: #{test.component} :: show" do
         built_component = FactoryBot.create(test.component.singularize)
-        visit ("#{visit_path(test)}#{built_component.id}")
+        visit ("#{visit_admin_path(test)}#{built_component.id}")
         expect(page).to have_content built_component.name
       end
     end

@@ -3,7 +3,7 @@ require "rails_helper"
 include PathHelper
 
 # builds the path
-def visit_path(test)
+def visit_admin_settings_path(test)
   return_path = "/admin/#{test.component.gsub(/site_settings_?/, 'settings/')}/"
   return_path.gsub!('theme_','theme/')
 end
@@ -32,14 +32,14 @@ describe "Settings Meta Routing Spec", type: :feature do
   @tests.each do |test|
     if test.admin_settings.include?("index")
       it "can visit :: #{pretty_name(test.component)} :: index" do
-        visit visit_path(test)
+        visit visit_admin_settings_path(test)
         expect(page.status_code).to be 200
       end
     end
 
     if test.admin_settings.include?("edit")
       it "can visit :: #{pretty_name(test.component)} :: edit" do
-        visit ("#{visit_path(test)}#edit")
+        visit ("#{visit_admin_settings_path(test)}#edit")
         expect(page.status_code).to be 200
       end
     end
