@@ -318,6 +318,52 @@ describe Admin::CrudController, type: :controller do
       end
     end
 
+    # ~~~~~~~~ DELETE ACTIONS ~~~~~~~~ #
+
+    if test.crud.include?("create")
+      describe "destroy create actions for #{test.component}" do
+         before(:all) do
+           @admin = FactoryBot.create(:user, :admin)
+           FactoryBot.create_list(entry_factory(test), 20)
+         end
+
+         after(:each) do
+           sign_out @admin
+         end
+
+         before(:each) do
+           sign_in @admin
+           @last_entry = entry_class(test).last
+           params = {
+             component: test.component,
+             id: @last_entry.id
+           }
+
+           patch :destroy, params: params
+         end
+
+         it "The entry class is properly set." do
+           expect(controller_class).to be entry_class(test)
+         end
+
+         it "loads a correct entry" do
+           expect(controller_entry(controller)).to eq(@last_entry)
+         end
+
+         it "destroys an entry" do
+           expect(entry_class(test).find_by_id(@last_entry.id)).to be_nil
+         end
+
+         it "The response is 302" do
+           expect(response.status).to be 302
+         end
+
+         it "Receives a success header" do
+           expect(response.headers["status"]).to eq "success"
+         end
+
+      end
+    end
 
   end
 end
@@ -428,13 +474,6 @@ end
 #           patch :destroy, params: params
 #         end
 #
-#         it "The entry class is properly set." do
-#           expect(entry_class(controller)).to be build_class(t)
-#         end
-#
-#         it "loads a correct entry" do
-#           expect(entry(controller)).to eq(@last_entry)
-#         end
 
 #         it "destroys an entry" do
 #           expect(build_class(t).find_by_id(@last_entry.id)).to be_nil
