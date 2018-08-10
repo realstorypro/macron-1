@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.3.1"
+ruby "2.5.0"
 
 # Core
 gem "rails", "~> 5.2.0"
@@ -41,9 +41,6 @@ gem "rack-mini-profiler"
 
 # Pagination
 gem "kaminari", github: "kaminari/kaminari", branch: "master"
-
-# Active Record
-gem "store_base_sti_class"
 
 # Authentication
 gem "devise"

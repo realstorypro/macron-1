@@ -1,105 +1,133 @@
 tests:
     - component: dashboard
-      implementation: true
-      admin : true
-      frontend: false
-      actions:
+      admin:
         - index
-
-    - component:  members
-      implementation: true
-      admin : false
-      frontend: true
-      actions:
-        - show
 
     - component: users
-      implementation: true
-      admin : true
-      frontend: false
-      actions:
+      admin:
         - index
         - show
+        - edit
+        - update
         - destroy
 
     - component: articles
-      implementation: false
-      admin : true
-      frontend: false
-      actions:
+      admin:
         - index
         - show
         - new
         - edit
         - update
         - destroy
+      frontend:
+        - index
+        - show
+      crud:
+          - index
+          - show
+          - new
+          - edit
+          - update
+          - create
+          - destroy
+
 
     - component: discussions
-      implementation: false
-      admin : true
-      frontend: false
-      actions:
+      admin:
         - index
         - show
         - new
         - edit
         - update
+        - destroy
+      frontend:
+        - index
+        - show
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
         - destroy
 
     - component: videos
-      implementation: false
-      admin : true
-      frontend: false
-      actions:
+      admin:
         - index
         - show
         - new
         - edit
         - update
+        - destroy
+      frontend:
+        - index
+        - show
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
         - destroy
 
     - component: podcasts
-      implementation: false
-      admin : true
-      frontend: false
-      actions:
+      admin:
         - index
         - show
         - new
         - edit
         - update
+        - destroy
+      frontend:
+        - index
+        - show
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
         - destroy
 
     - component: advertisements
-      implementation: true
-      admin : true
-      frontend: false
-      actions:
+      admin:
         - index
         - show
         - new
         - edit
         - update
+        - destroy
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
         - destroy
 
     - component: tags
-      implementation: true
-      admin : true
-      frontend: false
-      actions:
+      admin:
         - index
         - show
         - new
         - edit
-        - create
         - update
+        - destroy
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
         - destroy
 
     - component: categories
-      implementation: true
-      admin : true
-      frontend: false
-      actions:
+      admin:
         - index
         - show
         - new
@@ -107,45 +135,89 @@ tests:
         - create
         - update
         - destroy
-
-    - component: site_settings
-      implementation: false
-      admin: false
-      frontned: false
-      actions:
-
-    - component: site_settings_general
-      implementation: false
-      admin: false
-      frontned: false
-      actions:
-
-    - component: site_settings_branding
-      implementation: false
-      admin: false
-      frontned: false
-      actions:
-
-    - component: site_settings_theme
-      implementation: false
-      admin: false
-      frontned: false
-      actions:
-
-    - component: site_settings_contact
-      implementation: false
-      admin: false
-      frontned: false
-      actions:
-
-    - component: site_settings_integration
-      implementation: false
-      admin: false
-      frontned: false
-      actions:
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
+        - destroy
 
     - component: support
-      implementation: false
-      admin: false
-      frontned: false
-      actions:
+      admin:
+        - index
+
+    # SITE SETTINGS #
+    - component: site_settings
+      admin_settings:
+      - index
+
+    - component: site_settings_general
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme
+      admin_settings:
+        - index
+
+    - component: site_settings_contact
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_integration
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_homepage
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_discussion
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_global
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_header
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_footer
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_podcast
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_article
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_video
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_authentication
+      admin_settings:
+        - index
+        - edit
+
+    - component: site_settings_theme_branding
+      admin_settings:
+        - index
+        - edit
