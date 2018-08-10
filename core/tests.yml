@@ -97,30 +97,20 @@ tests:
 
     - component: site_settings_general
       settings:
-      - show
-      - edit
-      - update
+      - index
 
     - component: site_settings_branding
       settings:
-      - show
-      - edit
-      - update
+      - index
 
     - component: site_settings_theme
       settings:
-      - show
-      - edit
-      - update
+      - index
 
     - component: site_settings_contact
       settings:
-      - show
-      - edit
-      - update
+      - index
 
     - component: site_settings_integration
       settings:
-      - show
-      - edit
-      - update
+      - index
