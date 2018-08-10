@@ -99,6 +99,7 @@ tests:
     - component: site_settings_general
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme
       admin_settings:
@@ -107,47 +108,59 @@ tests:
     - component: site_settings_contact
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_integration
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_homepage
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_discussion
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_global
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_header
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_footer
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_podcast
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_article
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_video
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_authentication
       admin_settings:
       - index
+      - edit
 
     - component: site_settings_theme_branding
       admin_settings:
       - index
+      - edit

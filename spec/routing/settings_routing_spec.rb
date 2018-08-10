@@ -8,6 +8,11 @@ def visit_path(test)
   return_path.gsub!('theme_','theme/')
 end
 
+# returns a pretty setting name
+def pretty_name(component)
+  "Test #{component.gsub(/site_settings/, 'settings')}".gsub(/settings_?/,"settings ")
+end
+
 describe "Settings Meta Routing Spec", type: :feature do
   @components = s("components")
   @tests = s("tests").select { |test| test.admin_settings != nil }
@@ -26,17 +31,16 @@ describe "Settings Meta Routing Spec", type: :feature do
 
   @tests.each do |test|
     if test.admin_settings.include?("index")
-      it "can visit :: #{test.component} :: index" do
+      it "can visit :: #{pretty_name(test.component)} :: index" do
         visit visit_path(test)
         expect(page.status_code).to be 200
       end
     end
 
-    if test.admin_settings.include?("show")
-      it "can visit :: #{test.component} :: show" do
-        built_component = FactoryBot.create(test.component.singularize)
-        visit ("#{visit_path(test)}#{built_component.id}")
-        expect(page).to have_content built_component.name
+    if test.admin_settings.include?("edit")
+      it "can visit :: #{pretty_name(test.component)} :: edit" do
+        visit ("#{visit_path(test)}#edit")
+        expect(page.status_code).to be 200
       end
     end
   end
