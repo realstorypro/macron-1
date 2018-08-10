@@ -1,17 +1,16 @@
-# frozen_string_literal: true
-
 require "rails_helper"
 
 include PathHelper
 
 # builds the path
 def visit_path(test)
-  "/admin/#{test.component.gsub('site_settings', '')}/"
+  return_path = "/admin/#{test.component.gsub(/site_settings_?/, 'settings/')}/"
+  return_path.gsub!('theme_','theme/')
 end
 
 describe "Settings Meta Routing Spec", type: :feature do
   @components = s("components")
-  @tests = s("tests").select { |test| test.settings != nil }
+  @tests = s("tests").select { |test| test.admin_settings != nil }
 
   before(:all) do
     @admin = FactoryBot.create(:user, :admin)
@@ -26,14 +25,14 @@ describe "Settings Meta Routing Spec", type: :feature do
   end
 
   @tests.each do |test|
-    if test.admin.include?("index")
+    if test.admin_settings.include?("index")
       it "can visit :: #{test.component} :: index" do
         visit visit_path(test)
         expect(page.status_code).to be 200
       end
     end
 
-    if test.admin.include?("show")
+    if test.admin_settings.include?("show")
       it "can visit :: #{test.component} :: show" do
         built_component = FactoryBot.create(test.component.singularize)
         visit ("#{visit_path(test)}#{built_component.id}")

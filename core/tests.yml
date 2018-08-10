@@ -91,26 +91,63 @@ tests:
       admin:
         - index
 
+    # SITE SETTINGS #
     - component: site_settings
-      settings:
+      admin_settings:
       - index
 
     - component: site_settings_general
-      settings:
-      - index
-
-    - component: site_settings_branding
-      settings:
+      admin_settings:
       - index
 
     - component: site_settings_theme
-      settings:
+      admin_settings:
       - index
 
     - component: site_settings_contact
-      settings:
+      admin_settings:
       - index
 
     - component: site_settings_integration
-      settings:
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_homepage
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_discussion
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_global
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_header
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_footer
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_podcast
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_article
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_video
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_authentication
+      admin_settings:
+      - index
+
+    - component: site_settings_theme_branding
+      admin_settings:
       - index
