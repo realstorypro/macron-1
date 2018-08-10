@@ -28,6 +28,7 @@ tests:
         - new
         - edit
         - update
+        - create
         - destroy
 
 
