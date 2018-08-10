@@ -102,7 +102,7 @@ describe Admin::CrudController, type: :controller do
 
         before(:each) do
           sign_in @admin
-         get :new, params: { component: test.component }
+          get :new, params: { component: test.component }
         end
 
         after(:each) do
@@ -153,6 +153,49 @@ describe Admin::CrudController, type: :controller do
         it "The response is 200" do
           expect(response.status).to be 200
         end
+
+      end
+    end
+
+    # ~~~~~~~~ UPDATE ACTIONS ~~~~~~~~ #
+
+    if test.crud.include?("update")
+      describe "valid update actions for #{test.component}" do
+         before(:all) do
+           @admin = FactoryBot.create(:user, :admin)
+           @last_entry = FactoryBot.create_list(entry_factory(test), 20).last
+         end
+
+         before(:each) do
+           sign_in @admin
+           params = {
+             component: test.component,
+             id: @last_entry.id,
+             test.component.to_s.singularize => { name: Faker::Name.name }
+           }
+
+           patch :update, params: params
+         end
+
+         after(:each) do
+           sign_out @admin
+         end
+
+         it "The entry class is properly set." do
+           expect(controller_class).to be entry_class(test)
+         end
+
+         it "loads a correct entry" do
+           expect(controller_entry(controller)).to eq(@last_entry)
+         end
+
+         it "The response is 204" do
+           expect(response.status).to be 204
+         end
+
+         it "Receives a success header" do
+           expect(response.headers["status"]).to eq "success"
+         end
 
       end
     end
@@ -245,37 +288,6 @@ end
 #
 #   describe @controller_class, type: :controller do
 #
-#     if t[:actions].include?("edit")
-#       describe "edit actions" do
-#         before(:all) do
-#           @admin = build_admin
-#
-#           build_factory t
-#           @last_entry = build_class(t).last
-#         end
-#
-#         before(:each) do
-#           sign_in @admin
-#           get :edit, params: { component: t[:component], id: @last_entry.id }
-#         end
-#
-#         after(:each) do
-#           sign_out @admin
-#         end
-#
-#         it "The entry class is properly set." do
-#           expect(entry_class(controller)).to be build_class(t)
-#         end
-#
-#         it "loads a correct entry" do
-#           expect(entry(controller)).to eq(@last_entry)
-#         end
-#
-#         it "The response is 200" do
-#           expect(response.status).to be 200
-#         end
-#       end
-#     end
 #
 #     if t[:actions].include?("update")
 #       describe "valid update actions" do
