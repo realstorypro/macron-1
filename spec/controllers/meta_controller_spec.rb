@@ -93,35 +93,70 @@ describe Admin::CrudController, type: :controller do
 
 
     # ~~~~~~~~ NEW ACTIONS ~~~~~~~~ #
+
     if test.crud.include?("new")
       describe "new actions for #{test.component}" do
         before(:all) do
-         @admin = FactoryBot.create(:user, :admin)
+          @admin = FactoryBot.create(:user, :admin)
         end
 
         before(:each) do
-         sign_in @admin
+          sign_in @admin
          get :new, params: { component: test.component }
         end
 
         after(:each) do
-         sign_out @admin
+          sign_out @admin
         end
 
-       it "The entry class is properly set." do
-         expect(controller_class).to be entry_class(test)
-       end
+        it "The entry class is properly set." do
+          expect(controller_class).to be entry_class(test)
+        end
 
-       it "creates the correct new class entry" do
-         expect(controller_entry(controller)).to be_a_new entry_class(test)
-       end
+        it "creates the correct new class entry" do
+          expect(controller_entry(controller)).to be_a_new entry_class(test)
+        end
 
-       it "The response is 200" do
-         expect(response.status).to be 200
-       end
+        it "The response is 200" do
+          expect(response.status).to be 200
+        end
 
       end
     end
+
+    # ~~~~~~~~ EDIT ACTIONS ~~~~~~~~ #
+
+    if test.crud.include?("edit")
+      describe "edit actions for #{test.component}" do
+        before(:all) do
+          @admin = FactoryBot.create(:user, :admin)
+          @last_entry = FactoryBot.create_list(entry_factory(test), 20).last
+        end
+
+        before(:each) do
+          sign_in @admin
+          get :edit, params: { component: test.component, id: @last_entry.id }
+        end
+
+        after(:each) do
+          sign_out @admin
+        end
+
+        it "The entry class is properly set." do
+          expect(controller_class).to be entry_class(test)
+        end
+
+        it "loads a correct entry" do
+          expect(controller_entry(controller)).to eq(@last_entry)
+        end
+
+        it "The response is 200" do
+          expect(response.status).to be 200
+        end
+
+      end
+    end
+
 
 
   end
