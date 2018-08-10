@@ -4,11 +4,127 @@ require "rails_helper"
 include ApplicationHelper
 
 
-@components = s("components")
-@tests = s("tests").select {|test| test.admin != nil}
+describe Admin::CrudController, type: :controller do
+  @components = s("components")
+  @tests = s("tests").select {|test| test.crud != nil}
 
-describe "Meta Controller Test", type: :controller do
+  def entry_factory(test)
+    s("components.#{test.component}.klass").downcase.singularize.to_sym
+  end
 
+  def entry_class(test)
+    s("components.#{test.component}.klass").constantize
+  end
+
+  def controller_class
+    controller.instance_variable_get(:@entry_class)
+  end
+
+  def controller_entry(controller)
+    controller.instance_variable_get(:@entry)
+  end
+
+  @tests.each do |test|
+
+    # ~~~~~~~~ INDEX ACTIONS ~~~~~~~~ #
+
+    if test.crud.include?("index")
+      describe "index actions for #{test.component}" do
+        before(:all) do
+          @admin = FactoryBot.create(:user, :admin)
+        end
+
+        before(:each) do
+          sign_in @admin
+          get :index, params: { component: test.component }
+        end
+
+        after(:each) do
+          sign_out @admin
+        end
+
+        it "The entry class is properly set." do
+          expect(controller_class).to be entry_class(test)
+        end
+
+        it "The length of entries is not null" do
+          FactoryBot.create_list(entry_factory(test), 20)
+          controller_entries = controller.instance_variable_get(:@entries)
+          expect(controller_entries.length).to_not be_nil
+        end
+
+        it "The response is 200" do
+          expect(response.status).to be 200
+        end
+      end
+    end
+
+    # ~~~~~~~~ SHOW ACTIONS ~~~~~~~~ #
+
+    if test.crud.include?("show")
+      describe "show actions for #{test.component}" do
+        before(:all) do
+          @admin = FactoryBot.create(:user, :admin)
+          @last_entry = FactoryBot.create_list(entry_factory(test), 20).last
+        end
+
+        before(:each) do
+          sign_in @admin
+          get :show, params: { component: test.component, id: @last_entry.id }
+        end
+
+        after(:each) do
+          sign_out @admin
+        end
+
+        it "The entry class is properly set." do
+          expect(controller_class).to be entry_class(test)
+        end
+
+        it "loads a correct entry" do
+          expect(controller_entry(controller)).to eq(@last_entry)
+        end
+
+        it "The response is 200" do
+          expect(response.status).to be 200
+        end
+      end
+    end
+
+
+    # ~~~~~~~~ NEW ACTIONS ~~~~~~~~ #
+    if test.crud.include?("new")
+      describe "new actions for #{test.component}" do
+        before(:all) do
+         @admin = FactoryBot.create(:user, :admin)
+        end
+
+        before(:each) do
+         sign_in @admin
+         get :new, params: { component: test.component }
+        end
+
+        after(:each) do
+         sign_out @admin
+        end
+
+       it "The entry class is properly set." do
+         expect(controller_class).to be entry_class(test)
+       end
+
+       it "creates the correct new class entry" do
+         expect(controller_entry(controller)).to be_a_new entry_class(test)
+       end
+
+       it "The response is 200" do
+         expect(response.status).to be 200
+       end
+
+      end
+    end
+
+
+  end
 end
 
 
@@ -93,98 +209,6 @@ end
 #   @controller_class = t[:controller].classify.constantize
 #
 #   describe @controller_class, type: :controller do
-#     if t[:actions].include?("index")
-#       describe "index actions" do
-#         before(:all) do
-#           @admin = build_admin
-#         end
-#
-#         before(:each) do
-#           sign_in @admin
-#           get :index, params: { component: t[:component] }
-#         end
-#
-#         after(:each) do
-#           sign_out @admin
-#         end
-#
-#         if t[:klass]
-#           it "The entry class is properly set." do
-#             expect(entry_class(controller)).to be build_class(t)
-#           end
-#
-#           it "The length of entries is not null" do
-#             build_factory t
-#             expect(entries(controller).length).to_not be_nil
-#           end
-#         end
-#
-#         it "The response is 200" do
-#           expect(response.status).to be 200
-#         end
-#       end
-#     end
-#
-#     if t[:actions].include?("show")
-#       describe "show actions" do
-#         before(:all) do
-#           @admin = build_admin
-#
-#           build_factory t
-#           @last_entry = build_class(t).last
-#         end
-#
-#         before(:each) do
-#           sign_in @admin
-#           get :show, params: { component: t[:component], id: @last_entry.id }
-#         end
-#
-#         after(:each) do
-#           sign_out @admin
-#         end
-#
-#         it "The entry class is properly set." do
-#           expect(entry_class(controller)).to be build_class(t)
-#         end
-#
-#         it "loads a correct entry" do
-#           expect(entry(controller)).to eq(@last_entry)
-#         end
-#
-#         it "The response is 200" do
-#           expect(response.status).to be 200
-#         end
-#       end
-#     end
-#
-#     if t[:actions].include?("new")
-#       describe "new actions" do
-#         before(:all) do
-#           @admin = build_admin
-#         end
-#
-#         before(:each) do
-#           sign_in @admin
-#           get :new, params: { component: t[:component] }
-#         end
-#
-#         after(:each) do
-#           sign_out @admin
-#         end
-#
-#         it "The entry class is properly set." do
-#           expect(entry_class(controller)).to be build_class(t)
-#         end
-#
-#         it "creates the correct new class entry" do
-#           expect(entry(controller)).to be_a_new build_class(t)
-#         end
-#
-#         it "The response is 200" do
-#           expect(response.status).to be 200
-#         end
-#       end
-#     end
 #
 #     if t[:actions].include?("edit")
 #       describe "edit actions" do

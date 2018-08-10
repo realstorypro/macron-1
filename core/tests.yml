@@ -22,6 +22,14 @@ tests:
       frontend:
         - index
         - show
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - destroy
+
 
     - component: discussions
       admin:
