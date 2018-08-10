@@ -87,43 +87,40 @@ tests:
         - update
         - destroy
 
-    - component: site_settings
+    - component: support
       admin:
         - index
 
+    - component: site_settings
+      settings:
+      - index
+
     - component: site_settings_general
-      admin:
-        - show
-        - edit
-        - update
+      settings:
+      - show
+      - edit
+      - update
 
     - component: site_settings_branding
-      admin:
-        - show
-        - edit
-        - update
+      settings:
+      - show
+      - edit
+      - update
 
     - component: site_settings_theme
-      admin:
-        - show
-        - edit
-        - update
+      settings:
+      - show
+      - edit
+      - update
 
     - component: site_settings_contact
-      admin:
-        - show
-        - edit
-        - update
+      settings:
+      - show
+      - edit
+      - update
 
     - component: site_settings_integration
-      admin:
-        - show
-        - edit
-        - update
-
-    - component: support
-      admin:
-        - show
-        - edit
-        - update
-
+      settings:
+      - show
+      - edit
+      - update

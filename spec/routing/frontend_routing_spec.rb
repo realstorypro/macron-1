@@ -4,7 +4,7 @@ require "rails_helper"
 
 include PathHelper
 
-describe "Front End Meta Feature Test", type: :feature do
+describe "Front End Meta Routing Spec", type: :feature do
   @components = s("components")
   @tests = s("tests").select {|test| test.frontend != nil}
 
