@@ -2,6 +2,8 @@
 
 module SiteSettings::Theme
   class Video < Setting
+    include Autoloadable
+
     before_create do
       errors.add(:base, "already one setting object existing") && (return false) if Video.exists?
     end
