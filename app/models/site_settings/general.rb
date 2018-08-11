@@ -8,7 +8,7 @@ module SiteSettings
       errors.add(:base, "already one setting object existing") && (return false) if General.exists?
     end
 
-    # manually inluding name since autoloadable ignores it
+    # manually including name since autoloadable ignores it
     content_attr :name, :string
     validates_presence_of :name
 
