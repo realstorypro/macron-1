@@ -152,6 +152,13 @@ components:
     path: 'events'
     enabled: true
 
+  products:
+    name: 'Products'
+    description: 'Provides product selling capabilities'
+    klass: 'Product'
+    path: 'products'
+    enabled: true
+
   discussions:
     name: 'Discussions'
     description: 'Provides discussion capabilities'

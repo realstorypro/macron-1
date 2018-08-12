@@ -57,6 +57,10 @@ Rails.application.routes.draw do
   resources :events, component: "events", only: %i[index]
   get "events/:category", to: "events#index", as: "event_category", component: "events"
   get "events/:category/:id", to: "events#show", as: "event_details", component: "events"
+  
+  resources :products, component: "products", only: %i[index]
+  get "products/:category", to: "products#index", as: "product_category", component: "products"
+  get "products/:category/:id", to: "products#show", as: "product_details", component: "products"
 
   post "newsletter/subscribe/", to: "newsletter#subscribe"
 
@@ -78,6 +82,7 @@ Rails.application.routes.draw do
 
     resources :articles, component: "articles", controller: 'crud'
     resources :events, component: "events", controller: 'crud'
+    resources :products, component: "products", controller: 'crud'
     resources :discussions, component: "discussions", controller: 'crud'
     resources :videos, component: "videos", controller: 'crud'
     resources :podcasts, component: "podcasts", controller: 'crud'

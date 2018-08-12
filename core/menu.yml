@@ -58,6 +58,12 @@ menu:
         icon: calendar outline
         enabled: true
 
+      - name: Products
+        component: products
+        path: admin_products
+        icon: shopping basket
+        enabled: true
+
       - name: Articles
         component: articles
         path: admin_articles

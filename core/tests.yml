@@ -51,6 +51,26 @@ tests:
         - create
         - destroy
 
+    - component: products
+      admin:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - destroy
+      frontend:
+        - index
+        - show
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
+        - destroy
+
 
     - component: discussions
       admin:
