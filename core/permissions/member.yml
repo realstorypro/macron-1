@@ -22,3 +22,5 @@ auth:
         read: 
       podcasts:
         read: 
+      events:
+        read: 

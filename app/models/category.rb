@@ -14,6 +14,7 @@ class Category < ApplicationRecord
   has_many :articles
   has_many :videos
   has_many :podcasts
+  has_many :events
 
   def self.policy_class
     MetaPolicy

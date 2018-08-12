@@ -6,6 +6,10 @@ menu:
         icon: compass
         enabled: true
 
+      - name: Events
+        path: events
+        enabled: true
+
       - name: Articles
         path: articles
         enabled: true
@@ -21,7 +25,8 @@ menu:
       - name: Discussions
         path: discussions
         enabled: true
-        
+
+
   footer:
   legal:
     - section:
@@ -45,6 +50,12 @@ menu:
         component: users
         path: admin_users
         icon: users
+        enabled: true
+
+      - name: Events
+        component: events
+        path: admin_events
+        icon: calendar outline
         enabled: true
 
       - name: Articles

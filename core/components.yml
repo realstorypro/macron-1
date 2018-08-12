@@ -145,6 +145,13 @@ components:
     path: 'articles'
     enabled: true
 
+  events:
+    name: 'Events'
+    description: 'Provides event publishing capabilities'
+    klass: 'Event'
+    path: 'events'
+    enabled: true
+
   discussions:
     name: 'Discussions'
     description: 'Provides discussion capabilities'
