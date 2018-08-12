@@ -25,7 +25,7 @@ module Admin
       return if value.nil?
 
       case data_type.which?(type)
-      when :string, :text
+      when :string, :text, :integer
         value
       when :date
         "#{time_ago_in_words(value)} ago"

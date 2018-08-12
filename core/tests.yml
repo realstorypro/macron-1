@@ -31,6 +31,26 @@ tests:
           - create
           - destroy
 
+    - component: events
+      admin:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - destroy
+      frontend:
+        - index
+        - show
+      crud:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - create
+        - destroy
+
 
     - component: discussions
       admin:

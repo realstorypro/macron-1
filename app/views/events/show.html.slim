@@ -1,0 +1,34 @@
+= component 'event details'
+  = fragment 'header fullscreen'
+    == Vue::CoverCell.(nil, overlay_background: ss('theme.global.overlay_background'), image: @entry.fullscreen_image)
+    = container
+      = grid
+        = row
+          = column computer: 16, tablet: 16, mobile: 16
+            = h3 'breadcrumb'
+              .ui.breadcrumb.large
+                .section = link_to 'Events', events_path
+                = divider text: '/'
+                .section = link_to params[:category].capitalize, event_category_path(params[:category])
+            = h1
+              = @entry.long_title
+            = list 'relaxed horizontal meta'
+              = item
+                = icon 'calendar alternate outline'
+                = content
+                  = header ui: :off, text: 'Start'
+                  = @entry.start_date
+              = item
+                = icon 'calendar alternate outline'
+                = content
+                  = header ui: :off, text: 'Finish'
+                  = @entry.end_date
+              = item
+                = icon 'dollar'
+                = content
+                  = header ui: :off, text: 'Ticket Price'
+                  = number_to_currency(@entry.price.to_i)
+              = item
+            .summary
+              = @entry.long_summary.html_safe
+  = render 'partials/show_content'

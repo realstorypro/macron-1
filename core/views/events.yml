@@ -1,0 +1,89 @@
+views:
+  events:
+    new:
+      meta_header:
+        type: 'header'
+        text: 'Meta Data'
+      name:
+        label: 'Short Title'
+        type: 'string'
+        maxlength: '70'
+        hint: 'Limited to 70 characters'
+      description:
+        label: 'Short Summary'
+        type: 'text'
+        maxlength: '160'
+        hint: 'Limited to 160 characters'
+        required: true
+      category:
+        label: 'Category'
+        type: 'dropdown'
+      tags:
+        label: 'Tags'
+        type: 'association'
+      published_date:
+        label: 'Published Date'
+        type: 'datepicker'
+
+      event_header:
+        type: 'header'
+        text: 'Event Details'
+      ticket_link:
+        label: 'Ticket Link'
+        type: 'string'
+        required: true
+      price:
+        label: 'Price'
+        type: 'integer'
+        required: true
+      start_date:
+        label: 'Start Date'
+        type: 'datepicker'
+        required: true
+      end_date:
+        label: 'End Date'
+        type: 'datepicker'
+        required: true
+
+      images_header:
+        type: 'header'
+        text: 'Images'
+      fullscreen_image:
+        label: 'Fullscreen Image'
+        type: 'image'
+        size: ['2560','1456']
+        required: true
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image'
+        size: ['2048','1024']
+        required: true
+      card_image:
+        label: 'Card Image'
+        type: 'image'
+        size: ['1100','900']
+        required: true
+      image_alt:
+        label: 'Image Description'
+        type: 'string'
+        maxlength: '40'
+        hint: 'Limited to 40 characters'
+        required: true
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+        required: true
+      long_summary:
+        label: 'Long Summary'
+        type: 'rich'
+        required: true
+      body:
+        label: 'Event Body'
+        type: 'rich'
+        required: true

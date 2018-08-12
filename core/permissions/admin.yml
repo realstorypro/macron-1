@@ -66,3 +66,5 @@ auth:
         all: 
       site_settings_theme_branding:
         all: 
+      events:
+        all: 
