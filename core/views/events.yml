@@ -34,7 +34,7 @@ views:
         required: true
       price:
         label: 'Price'
-        type: 'integer'
+        type: 'string'
         required: true
       start_date:
         label: 'Start Date'
