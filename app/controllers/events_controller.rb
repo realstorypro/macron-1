@@ -5,7 +5,7 @@ class EventsController < DisplayController
     @entries = if params[:category]
                  entry_class.joins(:category)
                      .where(categories: { slug: params[:category] })
-                     .order("published_date desc")
+                     .order("(payload ->> 'start_date')::timestamptz ASC")
                      .page params[:page]
                else
                  entry_class.all.order("(payload ->> 'start_date')::timestamptz ASC").page params[:page]
