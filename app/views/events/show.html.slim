@@ -12,23 +12,6 @@
                 .section = link_to params[:category].capitalize, event_category_path(params[:category])
             = h1
               = @entry.long_title
-            /= list 'relaxed horizontal meta'
-              = item
-                = icon 'calendar alternate outline'
-                = content
-                  = header ui: :off, text: 'Start'
-                  = @entry.start_date
-              = item
-                = icon 'calendar alternate outline'
-                = content
-                  = header ui: :off, text: 'Finish'
-                  = @entry.end_date
-              = item
-                = icon 'dollar'
-                = content
-                  = header ui: :off, text: 'Ticket Price'
-                  = number_to_currency(@entry.price.to_i, unit: '')
-              = item
             .summary
               = @entry.long_summary.html_safe
   = fragment 'content'
@@ -53,4 +36,6 @@
                   td Ticket Price
                   td= @entry.price
               script async="async" src="https://widget.picatic.com/latest/js/embed.min.js" id="picatic-widget-script"
-              a href="https://www.picatic.com/209619" class="button ui fluid primary" Get Tickets
+              a href=@entry.ticket_link class="button ui fluid primary" Get Tickets
+
+  = render "partials/engager"
