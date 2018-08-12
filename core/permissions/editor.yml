@@ -33,3 +33,5 @@ auth:
         read: 
       support:
         all: 
+      events:
+        all: 

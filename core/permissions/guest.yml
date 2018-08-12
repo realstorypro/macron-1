@@ -1,19 +1,22 @@
+---
 auth:
   permissions:
     guest:
       articles:
-        read:
+        read: 
       discussions:
-        read:
+        read: 
       videos:
-        read:
+        read: 
       podcasts:
-        read:
+        read: 
       comments:
-        read:
+        read: 
       profiles:
-        read:
+        read: 
       members:
-        read:
+        read: 
       advertisements:
-        read:
+        read: 
+      events:
+        read: 
