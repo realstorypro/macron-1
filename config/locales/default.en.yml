@@ -20,6 +20,9 @@ en:
       videos:
         title: 'Videos'
         description: 'Videos Description'
+      events:
+        title: 'Events'
+        description: 'Events Description'
       members:
         title: 'Members'
         description: 'Members Description'

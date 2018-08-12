@@ -15,7 +15,7 @@ module Widget
       elsif item.type == "Podcast"
         icon("#{options[:style]} podcast #{options[:contrast]} #{options[:size]}")
       elsif item.type == "Event"
-        icon("#{options[:style]} calendar outline #{options[:contrast]} #{options[:size]}")
+        icon("#{options[:style]} calendar alternate outline #{options[:contrast]} #{options[:size]}")
       end
     end
 

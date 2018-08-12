@@ -25,9 +25,9 @@ views:
         label: 'Published Date'
         type: 'datepicker'
 
-      event_header:
+      ticket_header:
         type: 'header'
-        text: 'Event Details'
+        text: 'Ticket Info'
       ticket_link:
         label: 'Ticket Link'
         type: 'string'

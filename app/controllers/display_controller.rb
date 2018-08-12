@@ -34,15 +34,15 @@ class DisplayController < MetaController
 
 
     def find_related_content
-      taggings = Tagging.where(tag_id: @entry.tags.map(&:id), taggable_type: %w(Article Video Discussion))
+      taggings = Tagging.where(tag_id: @entry.tags.map(&:id), taggable_type: %w(Article Video Discussion Podcast Event))
                         .where.not(taggable_id: @entry.id)
       content_ids = taggings.map(&:taggable_id)
       @related_content = Entry.where(id: content_ids)
-      @related_content = @related_content.order(Arel.sql("random()")).limit(6)
+      @related_content = @related_content.order(Arel.sql("random()")).limit(4)
 
       # look up via a category if no tags are found
       if @related_content.blank?
-        @related_content = Entry.where(category: @entry.category).order(Arel.sql("random()")).limit(6)
+        @related_content = Entry.where(category: @entry.category).order(Arel.sql("random()")).limit(4)
       end
     end
 

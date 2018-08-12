@@ -23,19 +23,20 @@
             = widget 'normal rich text'
               = @entry.body.html_safe
           = column computer: 5, tablet: 16, mobile: 16
-            = segment 'secondary'
-              = h5 text: 'Event Details'
-              = table 'very basic'
-                tr
-                  td Start Date
-                  td= @entry.start_date
-                tr
-                  td End Date
-                  td= @entry.end_date
-                tr
-                  td Ticket Price
-                  td= @entry.price
-              script async="async" src="https://widget.picatic.com/latest/js/embed.min.js" id="picatic-widget-script"
-              a href=@entry.ticket_link class="button ui fluid primary" Get Tickets
+            = fragment 'meta holder'
+              = segment 'secondary'
+                = h5 text: 'Event Details'
+                = table 'very basic unstackable'
+                  tr
+                    td Start Date
+                    td= @entry.start_date
+                  tr
+                    td End Date
+                    td= @entry.end_date
+                  tr
+                    td Ticket Price
+                    td= @entry.price
+                script async="async" src="https://widget.picatic.com/latest/js/embed.min.js" id="picatic-widget-script"
+                a href=@entry.ticket_link class="button ui fluid primary" Get Tickets
 
   = render "partials/engager"
