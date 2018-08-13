@@ -2,7 +2,7 @@
 
 module NavHelper
   def menu_color_class
-    transparent_controllers = %w(articles videos events)
+    transparent_controllers = %w(articles videos events products)
     menu_color = ss("theme.header.menu_color")
 
     # in case of homepage apply the homepage colors

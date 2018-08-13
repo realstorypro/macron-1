@@ -6,6 +6,10 @@ menu:
         icon: compass
         enabled: true
 
+      - name: Store
+        path: products
+        enabled: true
+
       - name: Events
         path: events
         enabled: true

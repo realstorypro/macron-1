@@ -9,7 +9,6 @@ class Product < Entry
   validates_presence_of :category
 
   before_save :extract_product_code
-  #validates_presence_of :product_code
 
 
   paginates_per 5

@@ -1,0 +1,160 @@
+= component 'product details'
+  = fragment 'header fullscreen'
+    == Vue::CoverCell.(nil, overlay_background: ss('theme.global.overlay_background'), image: @entry.fullscreen_image)
+    = container
+      = grid
+        = row
+          = column computer: 16, tablet: 16, mobile: 16
+            = h3 'breadcrumb'
+              .ui.breadcrumb.large
+                .section = link_to 'Store', products_path
+                = divider text: '/'
+                .section = link_to params[:category].capitalize, product_category_path(params[:category])
+            = h1
+              = @entry.long_title
+            = list 'relaxed horizontal meta'
+              = item
+                = icon 'clock'
+                = content
+                  = header ui: :off, text: 'Reading Time'
+                  = @entry.body.reading_time
+              = item
+                = icon 'comments'
+                = content
+                  = header ui: :off, text: 'Replies'
+                  = @entry.comments.count
+            .summary
+              = @entry.long_summary.html_safe
+  = fragment 'content'
+    = container
+      = grid
+        = row
+          = column computer: 11, tablet: 16, mobile: 16
+            == Vue::SocialSharingCell.(nil)
+            = widget 'normal rich text'
+              = @entry.body.html_safe
+          = column computer: 5, tablet: 16, mobile: 16
+            = fragment 'meta holder'
+              = segment 'secondary'
+                = h5 text: 'Product Details'
+                div id='product-component-3b4a7b6832d'
+                javascript:
+                  (function () {
+                    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+                    loadScript();
+
+                    function loadScript() {
+                      var script = document.createElement('script');
+                      script.async = true;
+                      script.src = scriptURL;
+                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                      script.onload = ShopifyBuyInit;
+                    }
+
+                    function ShopifyBuyInit() {
+                      var client = ShopifyBuy.buildClient({
+                        domain: '#{ss("integration.shopify_domain")}',
+                        apiKey: '#{ss("integration.shopify_buy_token")}',
+                        appId: '6',
+                      });
+
+                      ShopifyBuy.UI.onReady(client).then(function (ui) {
+                        ui.createComponent('product', {
+                          id: [#{@entry.product_code}],
+                          node: document.getElementById('product-component-3b4a7b6832d'),
+                          moneyFormat: '%24%7B%7Bamount%7D%7D',
+                          options: {
+                    "product": {
+                      "variantId": "all",
+                      "width": "100%",
+                      "contents": {
+                        "img": false,
+                        "imgWithCarousel": false,
+                        "title": false,
+                        "variantTitle": false,
+                        "price": false,
+                        "description": false,
+                        "buttonWithQuantity": false,
+                        "quantity": false
+                      },
+                      "text": {
+                          "button": "Add to Cart"
+                      },
+                      "styles": {
+                        "product": {
+                          "text-align": "left",
+                          "@media (min-width: 601px)": {
+                            "max-width": "100%",
+                            "margin-left": "0",
+                            "margin-bottom": "50px"
+                          }
+                        },
+                        "button": {
+                          "width": "100%",
+                          "margin-top": "0",
+                          "padding-left": "px",
+                          "padding-right": "px",
+                          "border-radius": "0px",
+                          "background-color": "#FF8243",
+                          "color": "white",
+                          "font-family": "Roboto, sans-serif",
+                          "font-weight": "bold"
+                        },
+                        "compareAt": {
+                          "font-size": "12px"
+                        }
+                      }
+                    },
+                    "cart": {
+                      "contents": {
+                        "button": true
+                      },
+                      "styles": {
+                        "button": {
+                          "border-radius": "0px"
+                        },
+                        "footer": {
+                          "background-color": "#ffffff"
+                        }
+                      }
+                    },
+                    "modalProduct": {
+                      "contents": {
+                        "img": false,
+                        "imgWithCarousel": true,
+                        "variantTitle": false,
+                        "buttonWithQuantity": true,
+                        "button": false,
+                        "quantity": false
+                      },
+                      "styles": {
+                        "product": {
+                          "@media (min-width: 601px)": {
+                            "max-width": "100%",
+                            "margin-left": "0px",
+                            "margin-bottom": "0px"
+                          }
+                        },
+                        "button": {
+                          "padding-left": "px",
+                          "padding-right": "px",
+                          "border-radius": "0px"
+                        }
+                      }
+                    },
+                    "productSet": {
+                      "styles": {
+                        "products": {
+                          "@media (min-width: 601px)": {
+                            "margin-left": "-20px"
+                          }
+                        }
+                      }
+                    }
+                  }
+                    });
+                    });
+                    }
+                  })();
+
+    = render "partials/engager"

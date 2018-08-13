@@ -1,0 +1,15 @@
+= widget name: 'item listing'
+  = items 'unstackable'
+    - @model.each do |product|
+      = item
+        - if @options[:image]
+          = link_to preload_image(product.card_image), url_helpers.product_details_path(product.category.slug, product.slug), class: 'image'
+        = content
+          = header
+            = link_to product.name, url_helpers.product_details_path(product.category.slug, product.slug)
+          - if @options[:date] && product.published_date
+            = meta
+              = list 'horizontal bulleted'
+                = item text: "#{product.published_date.strftime('%b %d, %Y')}"
+          - if @options[:description]
+            = description text: product.description

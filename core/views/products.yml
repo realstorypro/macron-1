@@ -35,7 +35,7 @@ views:
       product_link:
         label: 'Product Link'
         type: 'string'
-        required: false
+        required: true
 
 
       images_header:
