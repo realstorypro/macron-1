@@ -7,7 +7,7 @@ menu:
         enabled: true
 
       - name: Store
-        path: products
+        path: store_index
         enabled: true
 
       - name: Events

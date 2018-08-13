@@ -1,4 +1,4 @@
-= component 'product details'
+= component 'store details'
   = fragment 'header fullscreen'
     == Vue::CoverCell.(nil, overlay_background: ss('theme.global.overlay_background'), image: @entry.fullscreen_image)
     = container
@@ -7,9 +7,9 @@
           = column computer: 16, tablet: 16, mobile: 16
             = h3 'breadcrumb'
               .ui.breadcrumb.large
-                .section = link_to 'Store', products_path
+                .section = link_to 'Store', store_index_path
                 = divider text: '/'
-                .section = link_to params[:category].capitalize, product_category_path(params[:category])
+                .section = link_to params[:category].capitalize, store_category_path(params[:category])
             = h1
               = @entry.long_title
             = list 'relaxed horizontal meta'

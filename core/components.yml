@@ -159,6 +159,13 @@ components:
     path: 'products'
     enabled: true
 
+  store:
+    name: 'Store'
+    description: 'Provides product selling capabilities'
+    klass: 'Product'
+    path: 'store'
+    enabled: true
+
   discussions:
     name: 'Discussions'
     description: 'Provides discussion capabilities'
