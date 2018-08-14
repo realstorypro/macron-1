@@ -1,3 +1,11 @@
+- unless ss("integration.shopify_domain").blank?
+  javascript:
+      window.shopify_domain = "#{ss('integration.shopify_domain')}"
+
+- unless ss("integration.shopify_buy_token").blank?
+  javascript:
+      window.shopify_buy_token = "#{ss('integration.shopify_buy_token')}"
+
 - unless ss('integration.segment_js_key').blank?
   javascript:
     window.segment_js_write_key = "#{ss('integration.segment_js_key')}"
