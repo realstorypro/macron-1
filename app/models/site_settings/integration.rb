@@ -16,6 +16,8 @@ module SiteSettings
         # initializing as blank keys
         settings.segment_js_key = ""
         settings.segment_server_key = ""
+        settings.shopify_domain = ""
+        settings.shopify_buy_token = ""
       end
     end
   end
