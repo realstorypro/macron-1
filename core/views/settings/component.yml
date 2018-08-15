@@ -4,8 +4,8 @@ views:
       contact_header:
         type: 'header'
         text: 'Contact Info'
-      phone:
-        label: 'Phone'
+      articles:
+        label: 'Articles'
         type: 'string'
         maxlength: '20'
         hint: 'Limited to 20 Characters'
