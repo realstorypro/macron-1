@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module SiteSettings::Theme
   class <~~ class_name ~~> < Setting
+    include Autoloadable
 
     before_create do
       errors.add(:base, "already one setting object existing") && (return false) if <~~ class_name ~~>.exists?
