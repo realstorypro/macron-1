@@ -1,0 +1,3 @@
+views:
+  site_settings_<~~ class_name ~~>:
+    new:
