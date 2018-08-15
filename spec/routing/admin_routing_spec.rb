@@ -11,7 +11,7 @@ end
 
 describe "Admin Meta Routing Spec", type: :feature do
   @components = s("components")
-  @tests = s("tests").select {|test| test.admin != nil}
+  @tests = s("tests").select { |test| test.admin != nil }
 
   before(:all) do
     @admin = FactoryBot.create(:user, :admin)
@@ -40,7 +40,5 @@ describe "Admin Meta Routing Spec", type: :feature do
         expect(page).to have_content built_component.name
       end
     end
-
-
   end
 end

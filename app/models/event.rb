@@ -19,9 +19,9 @@ class Event < Entry
 
   def cleanup_ticket_url
     if ticket_link.include?("picatic")
-      ticket_slug = ticket_link.split('/').last
+      ticket_slug = ticket_link.split("/").last
       unless is_number?(ticket_slug)
-        resp = HTTParty.get( "https://api.picatic.com/v2/event/#{ticket_slug}" )
+        resp = HTTParty.get("https://api.picatic.com/v2/event/#{ticket_slug}")
         self.ticket_link = "https://www.picatic.com/#{resp.parsed_response["data"]["id"]}"
       end
     end
@@ -29,8 +29,7 @@ class Event < Entry
 
   private
 
-  def is_number? string
-    true if Float(string) rescue false
-  end
-
+    def is_number?(string)
+      true if Float(string) rescue false
+    end
 end

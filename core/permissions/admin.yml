@@ -68,3 +68,7 @@ auth:
         all: 
       events:
         all: 
+      products:
+        all: 
+      store:
+        read: 

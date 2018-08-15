@@ -6,7 +6,7 @@ include PathHelper
 
 describe "Front End Meta Routing Spec", type: :feature do
   @components = s("components")
-  @tests = s("tests").select {|test| test.frontend != nil}
+  @tests = s("tests").select { |test| test.frontend != nil }
 
   @tests.each do |test|
     if test.frontend.include?("index")

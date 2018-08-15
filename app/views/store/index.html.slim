@@ -1,0 +1,11 @@
+= component 'store listing'
+  = segment 'basic'
+    = container
+      = grid
+        = row
+          = column computer: 16, tablet: 16, mobile: 16
+            == Widget::FilterCell.(nil, layout: :version_1, component: params[:component], categories: @categories, active_category: params[:category])
+        = row
+          = column computer: 14, tablet: 16, mobile: 16
+            == Widget::ProductCell.(@entries, layout: :listing, image: true, description: true, date: false)
+  = render 'partials/paginator'

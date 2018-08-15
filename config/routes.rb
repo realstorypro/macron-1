@@ -53,10 +53,14 @@ Rails.application.routes.draw do
   resources :podcasts, component: "podcasts", only: %i[index]
   get "podcasts/:category", to: "podcasts#index", as: "podcast_category", component: "podcasts"
   get "podcasts/:category/:id", to: "podcasts#show", as: "podcast_details", component: "podcasts"
-  
+
   resources :events, component: "events", only: %i[index]
   get "events/:category", to: "events#index", as: "event_category", component: "events"
   get "events/:category/:id", to: "events#show", as: "event_details", component: "events"
+
+  resources :store, component: "store", only: %i[index]
+  get "store/:category", to: "store#index", as: "store_category", component: "store"
+  get "store/:category/:id", to: "store#show", as: "store_details", component: "store"
 
   post "newsletter/subscribe/", to: "newsletter#subscribe"
 
@@ -76,14 +80,15 @@ Rails.application.routes.draw do
       get "disable_advanced", on: :member
     end
 
-    resources :articles, component: "articles", controller: 'crud'
-    resources :events, component: "events", controller: 'crud'
-    resources :discussions, component: "discussions", controller: 'crud'
-    resources :videos, component: "videos", controller: 'crud'
-    resources :podcasts, component: "podcasts", controller: 'crud'
-    resources :advertisements, component: "advertisements", controller: 'crud'
-    resources :tags, component: "tags", controller: 'crud'
-    resources :categories, component: "categories", controller: 'crud'
+    resources :articles, component: "articles", controller: "crud"
+    resources :events, component: "events", controller: "crud"
+    resources :products, component: "products", controller: "crud"
+    resources :discussions, component: "discussions", controller: "crud"
+    resources :videos, component: "videos", controller: "crud"
+    resources :podcasts, component: "podcasts", controller: "crud"
+    resources :advertisements, component: "advertisements", controller: "crud"
+    resources :tags, component: "tags", controller: "crud"
+    resources :categories, component: "categories", controller: "crud"
     resources :support, component: "support", only: %i[index]
 
     scope :settings, module: "site_settings", component: "site_settings", as: "settings"  do

@@ -38,6 +38,7 @@ class Richtext
         buttonIconEnabled: true,
         publicKey: '0a21efa3fc2174ed24f0'
 
+    # init this via a widget vs every time
     $R 'textarea.rich'
 
 

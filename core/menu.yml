@@ -6,6 +6,10 @@ menu:
         icon: compass
         enabled: true
 
+      - name: Store
+        path: store_index
+        enabled: true
+
       - name: Events
         path: events
         enabled: true
@@ -56,6 +60,12 @@ menu:
         component: events
         path: admin_events
         icon: calendar outline
+        enabled: true
+
+      - name: Products
+        component: products
+        path: admin_products
+        icon: shopping basket
         enabled: true
 
       - name: Articles

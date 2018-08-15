@@ -10,6 +10,17 @@ views:
       segment_server_key:
         label: 'Server Key'
         type: 'string'
+
+      shopify_header:
+        type: 'header'
+        text: 'Shopify'
+      shopify_buy_token:
+        label: 'Buy Button Token'
+        type: 'string'
+      shopify_domain:
+        label: 'Shopify Domain'
+        type: 'string'
+
       webhook_header:
         type: 'header'
         text: 'Webhooks'

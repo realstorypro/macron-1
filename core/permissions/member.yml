@@ -24,3 +24,5 @@ auth:
         read: 
       events:
         read: 
+      store:
+        read: 

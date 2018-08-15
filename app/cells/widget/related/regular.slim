@@ -1,7 +1,7 @@
 - unless @model[0].nil?
   = widget 'related'
     = segment 'padded'
-      = h5 text: 'Realted Content', class: 'dividing'
+      = h5 text: 'Realted Items', class: 'dividing'
       = widget name: "table listing #{'headless' unless options[:header]}"
         = table 'very basic'
           - if options[:header]

@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :event do
+  factory :product, aliases: [:store] do
     name { Faker::Name.name }
     description { Faker::Name.name }
+    price { Faker::Number.number(3) }
+    product_link { "https://oh-its-leonid.shopify.com/admin/products/1405444358214" }
     body { Faker::Demographic.race }
-    ticket_link { "https://www.picatic.com/209619" }
-    price { "10.99" }
-    start_date { Faker::Date.forward(20) }
-    end_date { Faker::Date.forward(25) }
     long_title { Faker::Name.name }
     long_summary { Faker::Demographic.race }
     published_date { Faker::Date.forward(7) }
@@ -17,8 +15,8 @@ FactoryBot.define do
     card_image { Faker::Avatar.image }
     image_alt { Faker::Name.name }
     association :category, factory: :category
-    after(:create) do |event|
-      create(:comment, commentable: event)
+    after(:create) do |product|
+      create(:comment, commentable: product)
     end
   end
 end

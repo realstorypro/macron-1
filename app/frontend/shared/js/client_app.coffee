@@ -14,6 +14,7 @@ import Multiselect from './widgets/multiselect'
 import Navigation from './widgets/navigation'
 import ImagePreloader from './widgets/image_preloader'
 import ConversionTracker from './widgets/conversion_tracker'
+import ShopifyButton from './widgets/shopify_button'
 
 import Comments from './vue/comments'
 import CategoryFilter from './vue/category_filter'
@@ -45,6 +46,7 @@ multiselect = new Multiselect
 navigation = new Navigation
 image_preloader = new ImagePreloader
 conversion_tracker = new ConversionTracker
+shopify_button = new ShopifyButton
 
 # Vue Addons
 comments = new Comments
@@ -77,6 +79,7 @@ class Client_app
     multiselect.setup()
     image_preloader.setup()
     conversion_tracker.setup()
+    shopify_button.setup()
     navigation.setup()
 
   teardown: ->
@@ -88,6 +91,7 @@ class Client_app
     multiselect.teardown()
     image_preloader.teardown()
     conversion_tracker.teardown()
+    shopify_button.teardown()
     navigation.teardown()
 
     utils.log 'status', 'teardown() complete'
