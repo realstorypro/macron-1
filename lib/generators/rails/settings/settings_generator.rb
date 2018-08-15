@@ -2,11 +2,11 @@
 
 # rubocop:disable LineLength
 
-class Rails::ThemeSettingsGenerator < Rails::Generators::NamedBase
+class Rails::SettingsGenerator < Rails::Generators::NamedBase
   require "yaml"
   source_root File.expand_path("templates", __dir__)
 
-  def copy_theme_settings_file
+  def copy_settings_file
     # copy routing files
     route = 'resource :<~~ singular_name ~~>, controller: "<~~ singular_name ~~>", component: "site_settings_<~~ singular_name ~~>"'
     route.gsub!("<~~ singular_name ~~>", plural_name.singularize)
