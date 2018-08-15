@@ -12,6 +12,8 @@
 # SupportedStyles: when_needed, always, never
 Style/FrozenStringLiteralComment:
   Exclude:
+    - 'bin/webpack'
+    - 'bin/webpack-dev-server'
     - 'actionview/test/**/*.builder'
     - 'actionview/test/**/*.ruby'
     - 'actionpack/test/**/*.builder'

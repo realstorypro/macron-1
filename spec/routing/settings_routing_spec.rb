@@ -1,3 +1,5 @@
+# rubocop:disable FrozenStringLiteralComment
+
 require "rails_helper"
 
 include PathHelper
@@ -5,12 +7,12 @@ include PathHelper
 # builds the path
 def visit_admin_settings_path(test)
   return_path = "/admin/#{test.component.gsub(/site_settings_?/, 'settings/')}/"
-  return_path.gsub!('theme_','theme/')
+  return_path.gsub!("theme_", "theme/")
 end
 
 # returns a pretty setting name
 def pretty_name(component)
-  "Test #{component.gsub(/site_settings/, 'settings')}".gsub(/settings_?/,"settings ")
+  "Test #{component.gsub(/site_settings/, 'settings')}".gsub(/settings_?/, "settings ")
 end
 
 describe "Settings Meta Routing Spec", type: :feature do
@@ -45,3 +47,5 @@ describe "Settings Meta Routing Spec", type: :feature do
     end
   end
 end
+
+# rubocop:enable FrozenStringLiteralComment

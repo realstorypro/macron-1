@@ -5,7 +5,7 @@ FactoryBot.define do
     name { Faker::Name.name }
     description { Faker::Name.name }
     price { Faker::Number.number(3) }
-    product_link { 'https://oh-its-leonid.shopify.com/admin/products/1405444358214' }
+    product_link { "https://oh-its-leonid.shopify.com/admin/products/1405444358214" }
     body { Faker::Demographic.race }
     long_title { Faker::Name.name }
     long_summary { Faker::Demographic.race }

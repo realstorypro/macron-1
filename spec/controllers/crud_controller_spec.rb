@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 # rubocop:disable BlockLength
-#
+
 require "rails_helper"
 include ApplicationHelper
 
 
 describe Admin::CrudController, type: :controller do
   @components = s("components")
-  @tests = s("tests").select {|test| test.crud != nil}
+  @tests = s("tests").select { |test| test.crud != nil }
 
   def entry_factory(test)
     s("components.#{test.component}.klass").downcase.singularize.to_sym
@@ -25,7 +27,6 @@ describe Admin::CrudController, type: :controller do
   end
 
   @tests.each do |test|
-
     # ~~~~~~~~ INDEX ACTIONS ~~~~~~~~ #
 
     if test.crud.include?("index")
@@ -120,7 +121,6 @@ describe Admin::CrudController, type: :controller do
         it "The response is 200" do
           expect(response.status).to be 200
         end
-
       end
     end
 
@@ -153,7 +153,6 @@ describe Admin::CrudController, type: :controller do
         it "The response is 200" do
           expect(response.status).to be 200
         end
-
       end
     end
 
@@ -161,42 +160,41 @@ describe Admin::CrudController, type: :controller do
 
     if test.crud.include?("update")
       describe "valid update actions for #{test.component}" do
-         before(:all) do
-           @admin = FactoryBot.create(:user, :admin)
-           @last_entry = FactoryBot.create_list(entry_factory(test), 20).last
-         end
+        before(:all) do
+          @admin = FactoryBot.create(:user, :admin)
+          @last_entry = FactoryBot.create_list(entry_factory(test), 20).last
+        end
 
-         before(:each) do
-           sign_in @admin
-           params = {
-             component: test.component,
-             id: @last_entry.id,
-             test.component.to_s.singularize => { name: Faker::Name.name }
-           }
+        before(:each) do
+          sign_in @admin
+          params = {
+            component: test.component,
+            id: @last_entry.id,
+            test.component.to_s.singularize => { name: Faker::Name.name }
+          }
 
-           patch :update, params: params
-         end
+          patch :update, params: params
+        end
 
-         after(:each) do
-           sign_out @admin
-         end
+        after(:each) do
+          sign_out @admin
+        end
 
-         it "The entry class is properly set." do
-           expect(controller_class).to be entry_class(test)
-         end
+        it "The entry class is properly set." do
+          expect(controller_class).to be entry_class(test)
+        end
 
-         it "loads a correct entry" do
-           expect(controller_entry(controller)).to eq(@last_entry)
-         end
+        it "loads a correct entry" do
+          expect(controller_entry(controller)).to eq(@last_entry)
+        end
 
-         it "The response is 204" do
-           expect(response.status).to be 204
-         end
+        it "The response is 204" do
+          expect(response.status).to be 204
+        end
 
-         it "Receives a success header" do
-           expect(response.headers["status"]).to eq "success"
-         end
-
+        it "Receives a success header" do
+          expect(response.headers["status"]).to eq "success"
+        end
       end
     end
 
@@ -237,7 +235,6 @@ describe Admin::CrudController, type: :controller do
         it "Receives a success header" do
           expect(response.headers["status"]).to eq "error"
         end
-
       end
     end
 
@@ -245,43 +242,43 @@ describe Admin::CrudController, type: :controller do
 
     if test.crud.include?("create")
       describe "valid create actions for #{test.component}" do
-         before(:each) do
-           @admin = FactoryBot.create(:user, :admin)
+        before(:each) do
+          @admin = FactoryBot.create(:user, :admin)
 
-           attrs = FactoryBot.build(entry_factory(test)).attributes
-           payload = attrs["payload"]
-           attrs.delete("payload")
-           attrs = attrs.merge(payload) unless payload.nil?
+          attrs = FactoryBot.build(entry_factory(test)).attributes
+          payload = attrs["payload"]
+          attrs.delete("payload")
+          attrs = attrs.merge(payload) unless payload.nil?
 
-           @params = { component: test.component }
-           @params[entry_factory(test)] = attrs
-         end
+          @params = { component: test.component }
+          @params[entry_factory(test)] = attrs
+        end
 
-         before(:each) do
-           sign_in @admin
-           post :create, params: @params
-           @last_entry = entry_class(test).last
-         end
+        before(:each) do
+          sign_in @admin
+          post :create, params: @params
+          @last_entry = entry_class(test).last
+        end
 
-         after(:each) do
-           sign_out @admin
-         end
+        after(:each) do
+          sign_out @admin
+        end
 
-         it "The entry class is properly set." do
-           expect(controller_class).to be entry_class(test)
-         end
+        it "The entry class is properly set." do
+          expect(controller_class).to be entry_class(test)
+        end
 
-         it "loads a correct entry" do
-           expect(controller_entry(controller)).to eq(@last_entry)
-         end
+        it "loads a correct entry" do
+          expect(controller_entry(controller)).to eq(@last_entry)
+        end
 
-         it "The response is 204" do
-           expect(response.status).to be 204
-         end
+        it "The response is 204" do
+          expect(response.status).to be 204
+        end
 
-         it "Receives a success header" do
-           expect(response.headers["status"]).to eq "success"
-         end
+        it "Receives a success header" do
+          expect(response.headers["status"]).to eq "success"
+        end
       end
 
       describe "in-valid create actions for #{test.component}" do
@@ -322,49 +319,47 @@ describe Admin::CrudController, type: :controller do
 
     if test.crud.include?("create")
       describe "destroy actions for #{test.component}" do
-         before(:all) do
-           @admin = FactoryBot.create(:user, :admin)
-           FactoryBot.create_list(entry_factory(test), 20)
-         end
+        before(:all) do
+          @admin = FactoryBot.create(:user, :admin)
+          FactoryBot.create_list(entry_factory(test), 20)
+        end
 
-         after(:each) do
-           sign_out @admin
-         end
+        after(:each) do
+          sign_out @admin
+        end
 
-         before(:each) do
-           sign_in @admin
-           @last_entry = entry_class(test).last
-           params = {
-             component: test.component,
-             id: @last_entry.id
-           }
+        before(:each) do
+          sign_in @admin
+          @last_entry = entry_class(test).last
+          params = {
+            component: test.component,
+            id: @last_entry.id
+          }
 
-           patch :destroy, params: params
-         end
+          patch :destroy, params: params
+        end
 
-         it "The entry class is properly set." do
-           expect(controller_class).to be entry_class(test)
-         end
+        it "The entry class is properly set." do
+          expect(controller_class).to be entry_class(test)
+        end
 
-         it "loads a correct entry" do
-           expect(controller_entry(controller)).to eq(@last_entry)
-         end
+        it "loads a correct entry" do
+          expect(controller_entry(controller)).to eq(@last_entry)
+        end
 
-         it "destroys an entry" do
-           expect(entry_class(test).find_by_id(@last_entry.id)).to be_nil
-         end
+        it "destroys an entry" do
+          expect(entry_class(test).find_by_id(@last_entry.id)).to be_nil
+        end
 
-         it "The response is 302" do
-           expect(response.status).to be 302
-         end
+        it "The response is 302" do
+          expect(response.status).to be 302
+        end
 
-         it "Receives a success header" do
-           expect(response.headers["status"]).to eq "success"
-         end
-
+        it "Receives a success header" do
+          expect(response.headers["status"]).to eq "success"
+        end
       end
     end
-
   end
 end
 
