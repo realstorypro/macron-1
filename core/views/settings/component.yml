@@ -1,0 +1,11 @@
+views:
+  site_settings_component:
+    new:
+      contact_header:
+        type: 'header'
+        text: 'Contact Info'
+      phone:
+        label: 'Phone'
+        type: 'string'
+        maxlength: '20'
+        hint: 'Limited to 20 Characters'

@@ -115,6 +115,13 @@ components:
     path: 'admin_settings_integration'
     enabled: true
 
+  site_settings_component:
+    name: 'Component Settings'
+    description: 'Disable and enable componets from here'
+    klass: 'SiteSettings::Component'
+    path: 'admin_settings_component'
+    enabled: true
+
   site_settings:
     name: 'Settings'
     description: >

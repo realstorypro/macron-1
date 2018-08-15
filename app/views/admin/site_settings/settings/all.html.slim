@@ -31,6 +31,14 @@
                 | INTEGRATIONS
               = description
                 | Segment &amp; Webhooks
+        - if current_user.advanced
+            = link_to admin_settings_component_path, class: 'item'
+              = icon 'large middle aligned qrcode'
+              = content
+                = header ui: :off
+                  | COMPONENTS
+                = description
+                  | Enable & Disable site components
     - if current_user.help
       = column size: 6
         = render 'partials/side_help'

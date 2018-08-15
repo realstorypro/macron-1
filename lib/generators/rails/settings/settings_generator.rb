@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # rubocop:disable LineLength
 
 class Rails::SettingsGenerator < Rails::Generators::NamedBase
