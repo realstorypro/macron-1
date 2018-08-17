@@ -56,16 +56,10 @@ menu:
         icon: users
         enabled: true
 
-      - name: Events
-        component: events
-        path: admin_events
-        icon: calendar outline
-        enabled: true
-
-      - name: Products
-        component: products
-        path: admin_products
-        icon: shopping basket
+      - name: Pages
+        component: pages
+        path: admin_pages
+        icon: sticky note
         enabled: true
 
       - name: Articles
@@ -90,6 +84,19 @@ menu:
         component: discussions
         path: admin_discussions
         icon: comments outline
+        enabled: true
+
+    - section:
+      - name: Events
+        component: events
+        path: admin_events
+        icon: calendar outline
+        enabled: true
+
+      - name: Products
+        component: products
+        path: admin_products
+        icon: shopping basket
         enabled: true
 
       - name: Native Ads

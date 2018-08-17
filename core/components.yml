@@ -144,6 +144,13 @@ components:
     path: 'users'
     enabled: true
 
+  pages:
+    name: 'Pages'
+    description: 'Provides page creation capabilities'
+    klass: 'Page'
+    path: 'pages'
+    enabled: true
+
   articles:
     name: 'Articles'
     description: 'Provides article writing capabilities'

@@ -72,3 +72,5 @@ auth:
         all: 
       store:
         read: 
+      pages:
+        all: 

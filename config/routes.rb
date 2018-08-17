@@ -80,6 +80,7 @@ Rails.application.routes.draw do
       get "disable_advanced", on: :member
     end
 
+    resources :pages, component: "pages"
     resources :articles, component: "articles", controller: "crud"
     resources :events, component: "events", controller: "crud"
     resources :products, component: "products", controller: "crud"
