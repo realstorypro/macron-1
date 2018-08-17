@@ -20,14 +20,13 @@ module Permissions
 
   # checks if the component is enabled
   def component_enabled?(component)
-    settings "components.#{component}.enabled", fatal_exception: true
-
+    # return false if the component has been disabled on the site basis
     site_components = ss("components")
     site_components.each do |site_component|
       return false if site_component["name"] == component.to_s && site_component["enabled"] == false
     end
 
-    true
+    settings "components.#{component}.enabled", fatal_exception: true
   end
 
   # fetches all of the existing roles

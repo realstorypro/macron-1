@@ -4,4 +4,4 @@
       = render_menu_item menu_item
     - elsif menu_item[:component].nil?
       = render_menu_item menu_item
-  = divider unless sections.length == (section_index + 1) || !show_divider?
+  = divider unless sections.length == (section_index + 1) || empty_section?(section_array.section) ||!show_divider?

@@ -60,6 +60,11 @@ class MenuCell < BaseCell
       true
     end
 
+    # returns true if the section is empty
+    def empty_section? (section)
+      return true unless section.any? {|menu_item| options[:policy].index?(menu_item[:component])}
+    end
+
     ################################
     ###### Argument Shortcuts ######
     ################################
@@ -94,6 +99,7 @@ class MenuCell < BaseCell
       return false unless options[:show_icons]
       true
     end
+
 
     def show_divider?
       return false unless options[:show_divider]
