@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Admin
+    title Administration
     meta content = 'text/html' charset = 'UTF-8' http-equiv = 'Content-Type'
     meta content = 'width=device-width initial-scale=1.0' name = 'viewport'
 
@@ -20,8 +20,7 @@ html
 
     .pusher
       = fragment 'full height'
-        = fragment 'side nav'
-          = render 'layouts/partials/admin/sidebar'
+        = render 'layouts/partials/admin/sidebar'
         = fragment 'main'
           .scrollable
             = container

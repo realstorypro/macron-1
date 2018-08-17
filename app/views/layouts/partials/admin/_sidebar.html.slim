@@ -1,6 +1,14 @@
-= menu ui:true, class: 'inverted vertical text sidemenu'
-  = item 'logo cell'
-    = link_to '/', data: {turbolinks: false}
-      = image_tag 'logo_inverted.png', class: 'ui image logo'
-  = divider
-  = render 'layouts/partials/admin/menu'
+= fragment 'side nav'
+  = menu ui: true, class: 'inverted vertical text sidemenu'
+    = item 'logo cell'
+      = link_to '/', data: {turbolinks: false}
+        = image_tag 'logo_inverted.png', class: 'ui image logo'
+    = divider
+    ==  MenuCell.(nil,
+            menu: s('menu.admin'),
+            policy: Pundit.policy(current_user, :headless),
+            active_icon: 'double right angle',
+            show_divider: true,
+            show_icons: true,
+            request: request,
+            site_settings: @site_settings)
