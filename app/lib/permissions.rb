@@ -21,6 +21,16 @@ module Permissions
   # checks if the component is enabled
   def component_enabled?(component)
     settings "components.#{component}.enabled", fatal_exception: true
+
+    site_component = Component.find_by_name(component)
+
+    # check if the component is toggleable site component
+    # and disable it if it is disabled
+    unless site_component.nil?
+      return false if !site_component.enabled
+    end
+
+    true
   end
 
   # fetches all of the existing roles

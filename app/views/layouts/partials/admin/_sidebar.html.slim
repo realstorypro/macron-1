@@ -1,5 +1,5 @@
 = fragment 'side nav'
-  = menu ui: true, class: 'inverted vertical text sidemenu'
+  = menu ui: true, class: 'inverted vertical text sidemenu', dynamic: :on, id: 'admin-side-nav'
     = item 'logo cell'
       = link_to '/', data: {turbolinks: false}
         = image_tag 'logo_inverted.png', class: 'ui image logo'
