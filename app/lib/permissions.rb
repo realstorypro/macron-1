@@ -22,12 +22,9 @@ module Permissions
   def component_enabled?(component)
     settings "components.#{component}.enabled", fatal_exception: true
 
-    site_component = Component.find_by_name(component)
-
-    # check if the component is toggleable site component
-    # and disable it if it is disabled
-    unless site_component.nil?
-      return false if !site_component.enabled
+    site_components = ss("components")
+    site_components.each do |site_component|
+      return false if site_component["name"] == component.to_s && site_component["enabled"] == false
     end
 
     true
@@ -56,5 +53,12 @@ module Permissions
       return true if @record.user.eql?(@user)
     end
     false
+  end
+
+  # shortcut for site settings
+  def ss(path)
+    site_settings = JSON.parse($redis.get("site_settings"))
+    settings ||= SettingInterface.new(site_settings)
+    settings.fetch_setting(path, fatal_exception: true)
   end
 end

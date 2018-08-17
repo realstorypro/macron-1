@@ -18,6 +18,7 @@ module SiteSettings
       if site_settings.nil?
         site_settings = Hash.new
 
+        component_settings = SiteSettings::Component.all
         general_settings = SiteSettings::General.instance.payload
         contact_settings = SiteSettings::Contact.instance.payload
         integration_settings = SiteSettings::Integration.instance.payload
@@ -32,6 +33,7 @@ module SiteSettings
         podcast_theme_settings = SiteSettings::Theme::Podcast.instance.payload
         video_theme_settings = SiteSettings::Theme::Video.instance.payload
 
+        site_settings[:components] = component_settings
         site_settings[:general] = general_settings
         site_settings[:contact] = contact_settings
         site_settings[:integration] = integration_settings
