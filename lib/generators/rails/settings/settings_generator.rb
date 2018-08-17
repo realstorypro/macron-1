@@ -1,3 +1,4 @@
+# rubocop:disable FrozenStringLiteralComment
 # rubocop:disable LineLength
 
 class Rails::SettingsGenerator < Rails::Generators::NamedBase
@@ -30,4 +31,5 @@ class Rails::SettingsGenerator < Rails::Generators::NamedBase
   end
 end
 
+# rubocop:enable FrozenStringLiteralComment
 # rubocop:enable LineLength
