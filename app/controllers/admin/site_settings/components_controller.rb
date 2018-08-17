@@ -11,17 +11,17 @@ module Admin::SiteSettings
     before_action :append_actions, only: :index
 
     def index
-      @components = Component.all.order(:name)
+      @components = SiteSettings::Component.all.order(:name)
     end
 
     def disable
-      component = Component.find(params[:id])
+      component = SiteSettings::Component.find(params[:id])
       component.disable!
       redirect_back(fallback_location: admin_root_path)
     end
 
     def enable
-      component = Component.find(params[:id])
+      component = SiteSettings::Component.find(params[:id])
       component.enable!
       redirect_back(fallback_location: admin_root_path)
     end

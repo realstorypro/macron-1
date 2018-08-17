@@ -8,7 +8,7 @@ class EventsController < DisplayController
           .order("(payload ->> 'start_date')::timestamptz ASC")
           .page params[:page]
     else
-      entry_class.all.order("(payload ->> 'start_date')::timestamptz ASC").page params[:page]
+      entry_class.all.order(Arel.sql("(payload ->> 'start_date')::timestamptz ASC")).page params[:page]
     end
     authorize @entries
   end
