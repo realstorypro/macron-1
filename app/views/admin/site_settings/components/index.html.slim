@@ -1,0 +1,18 @@
+= segment class: 'no padding basic', dynamic: :on, id: 'all_settings'
+  = grid "#{'divided' if current_user.help}"
+    = column size: (current_user.help ? 10 : 16)
+      = table 'very basic celled'
+        - @components.each do |component|
+          tr
+            td= component.name.capitalize
+            - if component.enabled
+              td
+                = link_to disable_admin_settings_component_path(component), class: 'button ui red', data: { widget: "clicker", action: "click"}
+                  | Disable
+            - else
+              td
+                = link_to enable_admin_settings_component_path(component.id), class: 'button ui green', data: { widget: "clicker", action: "click"}
+                  | Enable
+    - if current_user.help
+      = column size: 6
+        = render 'partials/side_help'

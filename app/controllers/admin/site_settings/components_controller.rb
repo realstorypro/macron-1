@@ -7,11 +7,23 @@ module Admin::SiteSettings
     include AdminAccess
     layout "layouts/admin"
 
-    before_action :set_breadcrumb, only: :show
-    before_action :append_actions, only: :show
+    before_action :set_breadcrumb, only: :index
+    before_action :append_actions, only: :index
 
-    def show
+    def index
       @components = Component.all.order(:name)
+    end
+
+    def disable
+      component = Component.find(params[:id])
+      component.disable!
+      redirect_back(fallback_location: admin_root_path)
+    end
+
+    def enable
+      component = Component.find(params[:id])
+      component.enable!
+      redirect_back(fallback_location: admin_root_path)
     end
 
     private
