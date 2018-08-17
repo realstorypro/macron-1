@@ -93,7 +93,6 @@ Rails.application.routes.draw do
 
     scope :settings, module: "site_settings", component: "site_settings", as: "settings"  do
       root to: "settings#all"
-        resource :component, controller: "component", component: "site_settings_component"
       resource :general, controller: "general", component: "site_settings_general"
       resource :contact, controller: "contact", component: "site_settings_contact"
       resource :integration, controller: "integration", component: "site_settings_integration"
