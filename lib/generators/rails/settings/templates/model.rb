@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SiteSettings::Theme
+module SiteSettings
   class <~~ class_name ~~> < Setting
     include Autoloadable
 

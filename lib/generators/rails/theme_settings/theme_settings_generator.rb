@@ -1,5 +1,4 @@
-# frozen_string_literal: true
-
+# rubocop:disable FrozenStringLiteralComment
 # rubocop:disable LineLength
 
 class Rails::ThemeSettingsGenerator < Rails::Generators::NamedBase
@@ -32,4 +31,5 @@ class Rails::ThemeSettingsGenerator < Rails::Generators::NamedBase
   end
 end
 
+# rubocop:enable FrozenStringLiteralComment
 # rubocop:enable LineLength

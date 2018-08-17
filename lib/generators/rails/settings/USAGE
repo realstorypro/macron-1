@@ -1,0 +1,8 @@
+Description:
+    Creates a setting
+
+Example:
+    rails generate settings setting
+
+    This will create:
+        will create a model, routes and all corresponding files
