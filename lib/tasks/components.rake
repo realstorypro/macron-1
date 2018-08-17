@@ -6,7 +6,7 @@ namespace :components do
 
     # load up components and remove the non-disableable components
     components = Settings.components.reject do |component|
-      reject_list = %w(dummy admin comments profiles members users)
+      reject_list = %w(dummy admin comments profiles members users dashboard categories tags support)
       reject_list.include?(component[0].to_s)
     end
 

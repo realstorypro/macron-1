@@ -108,6 +108,12 @@ components:
     path: 'admin_settings_contact'
     enabled: true
 
+  site_settings_components:
+    name: 'Components Settings'
+    description: 'Toggle the components you want to be available to the end user.'
+    path: 'admin_settings_components'
+    enabled: true
+
   site_settings_integration:
     name: 'Integrations Settings'
     description: 'Provides general settings capabilities'
