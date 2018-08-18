@@ -92,6 +92,11 @@ Rails.application.routes.draw do
     resources :categories, component: "categories", controller: "crud"
     resources :support, component: "support", only: %i[index]
 
+    scope :elements, controller: "elements", module: "elements", component: "elements", as: "elements" do
+      root to: "elements#all"
+      resources :heading, controller: "crud", component: "elements_heading"
+    end
+
     scope :settings, module: "site_settings", component: "site_settings", as: "settings"  do
       root to: "settings#all"
       resources :components, component: "site_settings_components" do

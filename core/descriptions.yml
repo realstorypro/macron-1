@@ -1,0 +1,154 @@
+components:
+  admin:
+    name: 'Admin'
+    description: 'Headless admin module'
+
+  dashboard:
+    name: 'Dashboard'
+    description: 'Provides dashboard capabilities'
+
+  support:
+    name: 'Support'
+    description: 'Provides info about Support'
+
+  elements:
+    name: 'Elements'
+    description: 'Provides info about Elements'
+
+  elements_heading:
+    name: 'Heading'
+    description: 'Allows you to create a heading'
+
+  site_settings_general:
+    name: 'General Settings'
+    description: 'Provides general settings capabilities'
+
+  site_settings_theme:
+    name: 'Theme Settings'
+    description: 'Provides general settings capabilities'
+
+  site_settings_theme_homepage:
+    name: 'Homepage Theme Settings'
+    description: 'Provides general settings capabilities'
+
+  site_settings_theme_discussion:
+    name: 'Discussion Theme Settings'
+    description: 'Provides discussion theme settings capabilities'
+
+  site_settings_theme_global:
+    name: 'Global Theme Settings'
+    description: 'Provides discussion theme settings capabilities'
+
+  site_settings_theme_header:
+    name: 'Header Theme Settings'
+    description: 'Provides header theme settings capabilities'
+
+  site_settings_theme_footer:
+    name: 'Footer Theme Settings'
+    description: 'Provides header theme settings capabilities'
+
+  site_settings_theme_podcast:
+    name: 'Podcast Theme Settings'
+    description: 'Provides header theme settings capabilities'
+
+  site_settings_theme_article:
+    name: 'Article Theme Settings'
+    description: 'Provides header theme settings capabilities'
+
+  site_settings_theme_video:
+    name: 'Video Theme Settings'
+    description: 'Provides header theme settings capabilities'
+
+  site_settings_theme_authentication:
+    name: 'Authentication Theme Settings'
+    description: 'Provides header theme settings capabilities'
+
+  site_settings_theme_branding:
+    name: 'Branding Theme Settings'
+    description: 'Provides header theme settings capabilities'
+
+  site_settings_contact:
+    name: 'Contact Settings'
+    description: 'Provides general settings capabilities'
+
+  site_settings_components:
+    name: 'Components Settings'
+    description: 'Toggle the components you want to be available to the end user.'
+
+  site_settings_integration:
+    name: 'Integrations Settings'
+    description: 'Provides general settings capabilities'
+
+  site_settings:
+    name: 'Settings'
+    description: >
+                  Provides settings capabilities like a boss.
+                  <strong>Click advanced mode to ball.</strong>
+
+  members:
+    name: 'Members'
+    description: 'Allows for members being viewed'
+
+  users:
+    name: 'Users'
+    description: 'Allows for user management'
+
+  pages:
+    name: 'Pages'
+    description: 'Provides page creation capabilities'
+
+  articles:
+    name: 'Articles'
+    description: 'Provides article writing capabilities'
+
+  events:
+    name: 'Events'
+    description: 'Provides event publishing capabilities'
+
+  products:
+    name: 'Products'
+    description: 'Provides product selling capabilities'
+
+  store:
+    name: 'Store'
+    description: 'Provides product selling capabilities'
+
+  discussions:
+    name: 'Discussions'
+    description: 'Provides discussion capabilities'
+
+  videos:
+    name: 'Videos'
+    description: 'Provides video capabilities'
+
+  podcasts:
+    name: 'Podcasts'
+    description: 'Provides podcasting capabilities'
+
+  profiles:
+    name: 'Profile'
+    description: 'Provides profile capabilities'
+
+  comments:
+    name: 'Comments'
+    description: 'Provides commenting capabilities'
+
+  advertisements:
+    name: 'Advertisements'
+    description: 'Provides ad capabilities'
+
+  tags:
+    name: 'Tags'
+    description: 'Provides tagging capabilities'
+
+  categories:
+    name: 'Categories'
+    description: 'Provides categorization capabilities'
+
+  reports:
+    name: 'Reports'
+    description: 'Provides reporting capabilities'
+
+  dummy:
+    name: 'Dummy Component'
+    description: 'Always Disabled. Used by tests'

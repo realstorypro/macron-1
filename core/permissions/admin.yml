@@ -74,3 +74,5 @@ auth:
         read: 
       pages:
         all: 
+      elements_heading:
+        all: 

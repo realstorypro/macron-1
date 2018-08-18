@@ -1,0 +1,31 @@
+menu:
+  main:
+  - section:
+    - name: Home
+      path: root
+      icon: compass
+      enabled: true
+
+    - name: Store
+      path: store_index
+      enabled: true
+
+    - name: Events
+      path: events
+      enabled: true
+
+    - name: Articles
+      path: articles
+      enabled: true
+
+    - name: Videos
+      path: videos
+      enabled: true
+
+    - name: Podcasts
+      path: podcasts
+      enabled: true
+
+    - name: Discussions
+      path: discussions
+      enabled: true
