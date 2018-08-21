@@ -1,3 +1,5 @@
+# TODO :: Factor Out into navigation cell
+
 class MenuCell < BaseCell
   def show
     render

@@ -1,0 +1,13 @@
+menu:
+  elements:
+    - section:
+      - name: Heading
+        hint: 'edit the header here'
+        path: admin_elements_heading_index
+        icon: right angle
+        enabled: true
+      - name: Heading
+        hint: 'edit the header here as well'
+        path: admin_elements_heading_index
+        icon: right angle
+        enabled: true

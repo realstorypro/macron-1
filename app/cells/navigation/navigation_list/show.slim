@@ -1,0 +1,9 @@
+= list 'relaxed divided'
+  - menu.each_with_index do |section_array, section_index|
+    - section_array.section.each do |menu_item|
+      - if show_item?(menu_item)
+        = link_to link_path(menu_item[:path]), class: 'item'
+          = icon class: "#{menu_item[:icon]} left middle aligned"
+          = content
+            = header text: menu_item[:name].upcase, ui: :off
+            = description text: menu_item[:hint]
