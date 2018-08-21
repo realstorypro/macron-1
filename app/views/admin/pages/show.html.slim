@@ -10,10 +10,10 @@
       = row
         = column size: 16
           = divider
-          = segment 'center aligned basic empty pageheader'
-            = button 'black large'
-              | Pick Header
+          - @entry.elements.each do |element|
+            = segment 'basic empty element'
+              = h5
+                = element.type.gsub('Elements::','')
           = segment 'center aligned basic empty element'
-            = button 'grey large'
-              | Add Section
+            = link_to 'Add Element', add_element_admin_page_path, class: 'ui button black large', data: { widget: "crud", action: "new" }
 

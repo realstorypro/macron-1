@@ -120,7 +120,6 @@ class MetaController < ApplicationController
       def determine_namespace
         namespace = self.class.parent.to_s.downcase
         return nil if namespace.eql? "object"
-        # namespace.gsub!("#{DC.configuration.engine.downcase}::", '') unless DC.configuration.engine.nil?
         "admin"
       end
 
