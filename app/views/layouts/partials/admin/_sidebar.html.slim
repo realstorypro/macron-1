@@ -4,7 +4,7 @@
       = link_to '/', data: {turbolinks: false}
         = image_tag 'logo_inverted.png', class: 'ui image logo'
     = divider
-    ==  MenuCell.(nil,
+    ==  Navigation::SidenavCell.(nil,
             menu: s('menu.admin'),
             policy: Pundit.policy(current_user, :headless),
             active_icon: 'double right angle',
