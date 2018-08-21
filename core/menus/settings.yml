@@ -1,0 +1,31 @@
+menu:
+  settings:
+    - section:
+      - name: General
+        hint: Set name, description, and url
+        path: admin_settings_general
+        icon: setting
+        enabled: true
+      - name: Components
+        hint: Manage website components
+        path: admin_settings_components
+        icon: qrcode
+        enabled: true
+        advanced: true
+      - name: Theme
+        hint: Adjust the look and feel of the platform
+        path: admin_settings_theme_root
+        icon: paint brush
+        enabled: true
+        advanced: true
+      - name: Contact
+        hint: Set the contact info
+        path: admin_settings_contact
+        icon: address card
+        enabled: true
+      - name: Integrations
+        hint: Shopify, Segment, Webhooks
+        path: admin_settings_integration
+        icon: plug
+        enabled: true
+        advanced: true

@@ -1,5 +1,7 @@
 module Navigation
   class NavigationCell < BaseCell
+    include Devise::Controllers::Helpers
+
     def show
       render
     end
@@ -10,6 +12,9 @@ module Navigation
       def show_item?(menu_item)
         # short circuits rendering unless the menu is enabled
         return false unless menu_item[:enabled]
+
+        # hide advanced menu items unless user is in advancd mdoe
+        return false if menu_item[:advanced] && !current_user.advanced
 
         return true if menu_item[:component] && options[:policy].index?(menu_item[:component])
         return true if menu_item[:component].nil?
