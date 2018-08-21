@@ -4,5 +4,4 @@
       = link_to link_path(menu_item[:path]), class: "item #{'active' if active_path?(menu_item[:path])}", 'data-turbolinks': menu_item[:turbolinks]
         = icon class: "#{active_path?(menu_item[:path]) ? active_icon : menu_item[:icon]}" if show_icons?
         = menu_item[:name]
-        = menu_item[:turbolinks]
   = divider if show_divider?(section_array.section)
