@@ -2,12 +2,12 @@ menu:
   elements:
     - section:
       - name: Heading
-        hint: 'edit the header here'
+        hint: 'insert a header element'
         path: admin_elements_heading_index
-        icon: right angle
+        icon: heading
         enabled: true
-      - name: Heading
-        hint: 'edit the header here as well'
+      - name: Rich Text
+        hint: 'insert a rich text element'
         path: admin_elements_heading_index
-        icon: right angle
+        icon: edit outline
         enabled: true
