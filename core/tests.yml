@@ -39,14 +39,6 @@ tests:
         - edit
         - update
         - destroy
-      crud:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - create
-        - destroy
 
     - component: events
       admin:
