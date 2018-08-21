@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Navigation
   class NavigationCell < BaseCell
     include Devise::Controllers::Helpers
@@ -13,7 +15,7 @@ module Navigation
         # short circuits rendering unless the menu is enabled
         return false unless menu_item[:enabled]
 
-        # hide advanced menu items unless user is in advancd mdoe
+        # hide advanced menu items unless user is in advanced mode
         return false if menu_item[:advanced] && !current_user.advanced
 
         return true if menu_item[:component] && options[:policy].index?(menu_item[:component])
@@ -24,7 +26,7 @@ module Navigation
       def link_path(path)
         # this is a regular path
         if path.include?("/")
-         path
+          path
         else
           url_helpers.send(path + "_path")
         end
@@ -32,12 +34,9 @@ module Navigation
 
       # checks if the path is active
       def active_path?(path)
-        # get the actual link
-        path = link_path(path)
-
         # the root path is never active, because it returns to the main app
-        return false if %w[/].include? path
-        return false unless path.nil? || request.env["PATH_INFO"].include?(path)
+        return false if %w[/].include? link_path(path)
+        return false unless link_path(path).nil? || request.env["PATH_INFO"].include?(link_path(path))
         true
       end
 
