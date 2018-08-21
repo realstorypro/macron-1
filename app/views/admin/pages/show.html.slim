@@ -1,0 +1,19 @@
+= component 'pages'
+  = segment class: 'basic no padding', id: 'details', dynamic: :on
+    = grid "#{'divided' if current_user.help}"
+      = row
+        = column size: (current_user.help ? 10 : 16)
+          == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
+        - if current_user.help
+          = column size: 6
+            = render 'partials/side_help'
+      = row
+        = column size: 16
+          = divider
+          = segment 'center aligned basic empty pageheader'
+            = button 'black large'
+              | Pick Header
+          = segment 'center aligned basic empty element'
+            = button 'grey large'
+              | Add Section
+

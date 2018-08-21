@@ -1,44 +1,12 @@
 = segment class: 'no padding basic', dynamic: :on, id: 'all_settings'
   = grid "#{'divided' if current_user.help}"
     = column size: (current_user.help ? 10 : 16)
-      = list 'relaxed divided'
-        - if current_user.advanced
-          = link_to admin_settings_components_path, class: 'item'
-            = icon 'large middle aligned qrcode'
-            = content
-              = header ui: :off
-                | COMPONENTS
-              = description
-                | Enable & disable site components
-        = link_to admin_settings_general_path, class: 'item'
-          = icon 'large middle aligned setting'
-          = content
-            = header ui: :off
-              | GENERAL
-            = description
-              | Set name, description and url.
-        = link_to admin_settings_theme_root_path, class: 'item'
-          = icon 'large middle aligned paint brush'
-          = content
-            = header ui: :off
-              | THEME
-            = description
-              | Look and feel of the platform.
-        = link_to admin_settings_contact_path, class: 'item'
-          = icon 'large middle aligned address card'
-          = content
-            = header ui: :off
-              | CONTACT
-            = description
-              | Contact info including physical address and social media.
-        - if current_user.advanced
-          = link_to admin_settings_integration_path, class: 'item'
-            = icon 'large middle aligned plug'
-            = content
-              = header ui: :off
-                | INTEGRATIONS
-              = description
-                | Shopify, segment &amp; webhooks.
+      ==  Navigation::NavigationListCell.(nil,
+              layout: 'main',
+              menu: s('menu.settings'),
+              request: request,
+              show_icons: true,
+              site_settings: @site_settings)
     - if current_user.help
       = column size: 6
         = render 'partials/side_help'

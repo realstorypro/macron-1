@@ -16,12 +16,12 @@ namespace :components do
     components = components.select { |component| component[1].enabled }
 
     components.each do |component|
-      Component.find_or_create_by name: component[0].to_s, enabled: component[1].enabled
+      SiteSettings::Component.find_or_create_by name: component[0].to_s, enabled: component[1].enabled
     end
   end
 
   desc "Delete all components"
   task delete_all: :environment do
-    Component.delete_all
+    SiteSettings::Component.delete_all
   end
 end

@@ -1,0 +1,7 @@
+- sections.each_with_index do |section_array, section_index|
+  - section_array.section.each do |menu_item|
+    - if menu_item[:component] && options[:policy].index?(menu_item[:component])
+      = render_menu_item menu_item
+    - elsif menu_item[:component].nil?
+      = render_menu_item menu_item
+  = divider unless sections.length == (section_index + 1) || empty_section?(section_array.section) ||!show_divider?

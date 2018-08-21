@@ -1,0 +1,28 @@
+menu:
+  theme:
+  - section:
+    - name: Global
+      hint: Fonts, overlays, etc
+      path: admin_settings_theme_global
+      icon: globe
+      enabled: true
+    - name: Branding
+      hint: Logos & icons
+      path: admin_settings_theme_branding
+      icon: paint brush
+      enabled: true
+    - name: Header
+      hint: Navigation styling
+      path: admin_settings_theme_header
+      icon: window maximize
+      enabled: true
+    - name: Footer
+      hint: Footer variants & styling
+      path: admin_settings_theme_footer
+      icon: window maximize flipped vertically
+      enabled: true
+    - name: Authentication
+      hint: Verbiage & background styling
+      path: admin_settings_theme_authentication
+      icon: lock
+      enabled: true

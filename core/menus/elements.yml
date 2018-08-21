@@ -1,0 +1,13 @@
+menu:
+  elements:
+    - section:
+      - name: Heading
+        hint: 'insert a header element'
+        path: admin_elements_heading_index
+        icon: heading
+        enabled: true
+      - name: Rich Text
+        hint: 'insert a rich text element'
+        path: admin_elements_heading_index
+        icon: edit outline
+        enabled: true

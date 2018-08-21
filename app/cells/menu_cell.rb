@@ -1,3 +1,5 @@
+# TODO :: Factor Out into navigation cell
+
 class MenuCell < BaseCell
   def show
     render
@@ -62,7 +64,7 @@ class MenuCell < BaseCell
 
     # returns true if the section is empty
     def empty_section? (section)
-      return true unless section.any? {|menu_item| options[:policy].index?(menu_item[:component])}
+      return true unless section.any? { |menu_item| options[:policy].index?(menu_item[:component]) }
     end
 
     ################################

@@ -31,6 +31,15 @@ tests:
           - create
           - destroy
 
+    - component: pages
+      admin:
+        - index
+        - show
+        - new
+        - edit
+        - update
+        - destroy
+
     - component: events
       admin:
         - index

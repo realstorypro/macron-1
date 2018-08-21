@@ -80,6 +80,7 @@ Rails.application.routes.draw do
       get "disable_advanced", on: :member
     end
 
+    resources :pages, component: "pages"
     resources :articles, component: "articles", controller: "crud"
     resources :events, component: "events", controller: "crud"
     resources :products, component: "products", controller: "crud"
@@ -90,6 +91,11 @@ Rails.application.routes.draw do
     resources :tags, component: "tags", controller: "crud"
     resources :categories, component: "categories", controller: "crud"
     resources :support, component: "support", only: %i[index]
+
+    scope :elements, controller: "elements", module: "elements", component: "elements", as: "elements" do
+      root to: "elements#all"
+      resources :heading, controller: "crud", component: "elements_heading"
+    end
 
     scope :settings, module: "site_settings", component: "site_settings", as: "settings"  do
       root to: "settings#all"

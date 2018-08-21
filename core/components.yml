@@ -1,241 +1,186 @@
 components:
   admin:
-    name: 'Admin'
-    description: 'Headless admin module'
     path: 'admin'
     enabled: true
 
   dashboard:
-    name: 'Dashboard'
-    description: 'Provides dashboard capabilities'
     path: 'dashboard'
     enabled: true
 
   support:
-    name: 'Support'
-    description: 'Provides info about Support'
     path: 'support'
     enabled: true
 
+  elements:
+    klass: 'Elements'
+    path: 'elements'
+    enabled: true
+
+  elements_heading:
+    klass: 'Elements::Heading'
+    path: 'elements_heading'
+    enabled: true
+
+  site_settings:
+    klass: 'Setting'
+    path: 'settings'
+    enabled: true
+
   site_settings_general:
-    name: 'General Settings'
-    description: 'Provides general settings capabilities'
     klass: 'SiteSettings::General'
     path: 'admin_settings_general'
     enabled: true
 
-  site_settings_theme:
-    name: 'Theme Settings'
-    description: 'Provides general settings capabilities'
-    klass: 'SiteSettings::Theme'
-    path: 'admin_settings_theme'
-    enabled: true
-
-  site_settings_theme_homepage:
-    name: 'Homepage Theme Settings'
-    description: 'Provides general settings capabilities'
-    klass: 'SiteSettings::Theme::Homepage'
-    path: 'admin_settings_theme_homepage'
-    enabled: true
-
-  site_settings_theme_discussion:
-    name: 'Discussion Theme Settings'
-    description: 'Provides discussion theme settings capabilities'
-    klass: 'SiteSettings::Theme::Discussion'
-    path: 'admin_settings_theme_discussion'
-    enabled: true
-
-  site_settings_theme_global:
-    name: 'Global Theme Settings'
-    description: 'Provides discussion theme settings capabilities'
-    klass: 'SiteSettings::Theme::Global'
-    path: 'admin_settings_theme_global'
-    enabled: true
-
-  site_settings_theme_header:
-    name: 'Header Theme Settings'
-    description: 'Provides header theme settings capabilities'
-    klass: 'SiteSettings::Theme::Header'
-    path: 'admin_settings_theme_header'
-    enabled: true
-
-  site_settings_theme_footer:
-    name: 'Footer Theme Settings'
-    description: 'Provides header theme settings capabilities'
-    klass: 'SiteSettings::Theme::Footer'
-    path: 'admin_settings_theme_footer'
-    enabled: true
-
-  site_settings_theme_podcast:
-    name: 'Podcast Theme Settings'
-    description: 'Provides header theme settings capabilities'
-    klass: 'SiteSettings::Theme::Podcast'
-    path: 'admin_settings_theme_podcast'
-    enabled: true
-    
-  site_settings_theme_article:
-    name: 'Article Theme Settings'
-    description: 'Provides header theme settings capabilities'
-    klass: 'SiteSettings::Theme::Article'
-    path: 'admin_settings_theme_article'
-    enabled: true
-    
-  site_settings_theme_video:
-    name: 'Video Theme Settings'
-    description: 'Provides header theme settings capabilities'
-    klass: 'SiteSettings::Theme::Video'
-    path: 'admin_settings_theme_video'
-    enabled: true
-
-  site_settings_theme_authentication:
-    name: 'Authentication Theme Settings'
-    description: 'Provides header theme settings capabilities'
-    klass: 'SiteSettings::Theme::Authentication'
-    path: 'admin_settings_theme_authentication'
-    enabled: true
-
-  site_settings_theme_branding:
-    name: 'Branding Theme Settings'
-    description: 'Provides header theme settings capabilities'
-    klass: 'SiteSettings::Theme::Branding'
-    path: 'admin_settings_theme_branding'
-    enabled: true
-
   site_settings_contact:
-    name: 'Contact Settings'
-    description: 'Provides general settings capabilities'
     klass: 'SiteSettings::Contact'
     path: 'admin_settings_contact'
     enabled: true
 
   site_settings_components:
-    name: 'Components Settings'
-    description: 'Toggle the components you want to be available to the end user.'
     path: 'admin_settings_components'
     enabled: true
 
   site_settings_integration:
-    name: 'Integrations Settings'
-    description: 'Provides general settings capabilities'
     klass: 'SiteSettings::Integrations'
     path: 'admin_settings_integration'
     enabled: true
 
-  site_settings:
-    name: 'Settings'
-    description: >
-                  Provides settings capabilities like a boss.
-                  <strong>Click advanced mode to ball.</strong>
-    klass: 'Setting'
-    path: 'settings'
+  site_settings_theme:
+    klass: 'SiteSettings::Theme'
+    path: 'admin_settings_theme'
     enabled: true
 
+  site_settings_theme_homepage:
+    klass: 'SiteSettings::Theme::Homepage'
+    path: 'admin_settings_theme_homepage'
+    enabled: true
+
+  site_settings_theme_discussion:
+    klass: 'SiteSettings::Theme::Discussion'
+    path: 'admin_settings_theme_discussion'
+    enabled: true
+
+  site_settings_theme_global:
+    klass: 'SiteSettings::Theme::Global'
+    path: 'admin_settings_theme_global'
+    enabled: true
+
+  site_settings_theme_header:
+    klass: 'SiteSettings::Theme::Header'
+    path: 'admin_settings_theme_header'
+    enabled: true
+
+  site_settings_theme_footer:
+    klass: 'SiteSettings::Theme::Footer'
+    path: 'admin_settings_theme_footer'
+    enabled: true
+
+  site_settings_theme_podcast:
+    klass: 'SiteSettings::Theme::Podcast'
+    path: 'admin_settings_theme_podcast'
+    enabled: true
+
+  site_settings_theme_article:
+    klass: 'SiteSettings::Theme::Article'
+    path: 'admin_settings_theme_article'
+    enabled: true
+
+  site_settings_theme_video:
+    klass: 'SiteSettings::Theme::Video'
+    path: 'admin_settings_theme_video'
+    enabled: true
+
+  site_settings_theme_authentication:
+    klass: 'SiteSettings::Theme::Authentication'
+    path: 'admin_settings_theme_authentication'
+    enabled: true
+
+  site_settings_theme_branding:
+    klass: 'SiteSettings::Theme::Branding'
+    path: 'admin_settings_theme_branding'
+    enabled: true
+
+
+
   members:
-    name: 'Members'
-    description: 'Allows for members being viewed'
     klass: 'User'
     path: 'members'
     enabled: true
 
   users:
-    name: 'Users'
-    description: 'Allows for user management'
     klass: 'User'
     path: 'users'
     enabled: true
 
+  pages:
+    klass: 'Page'
+    path: 'pages'
+    enabled: true
+
   articles:
-    name: 'Articles'
-    description: 'Provides article writing capabilities'
     klass: 'Article'
     path: 'articles'
     enabled: true
 
   events:
-    name: 'Events'
-    description: 'Provides event publishing capabilities'
     klass: 'Event'
     path: 'events'
     enabled: true
 
   products:
-    name: 'Products'
-    description: 'Provides product selling capabilities'
     klass: 'Product'
     path: 'products'
     enabled: true
 
   store:
-    name: 'Store'
-    description: 'Provides product selling capabilities'
     klass: 'Product'
     path: 'store'
     enabled: true
 
   discussions:
-    name: 'Discussions'
-    description: 'Provides discussion capabilities'
     klass: 'Discussion'
     path: 'discussions'
     enabled: true
 
   videos:
-    name: 'Videos'
-    description: 'Provides video capabilities'
     klass: 'Video'
     path: 'videos'
     enabled: true
 
   podcasts:
-    name: 'Podcasts'
-    description: 'Provides podcasting capabilities'
     klass: 'Podcast'
     path: 'podcasts'
     enabled: true
 
   profiles:
-    name: 'Profile'
-    description: 'Provides profile capabilities'
     klass: 'Profile'
     path: 'profile'
     enabled: true
 
   comments:
-    name: 'Comments'
-    description: 'Provides commenting capabilities'
     klass: 'Comment'
     path: 'comments'
     enabled: true
 
   advertisements:
-    name: 'Advertisements'
-    description: 'Provides ad capabilities'
     klass: 'Advertisement'
     path: 'advertisements'
     enabled: true
 
   tags:
-    name: 'Tags'
-    description: 'Provides tagging capabilities'
     klass: 'Tag'
     path: 'tags'
     enabled: true
 
   categories:
-    name: 'Categories'
-    description: 'Provides categorization capabilities'
     klass: 'Category'
     path: 'categories'
     enabled: true
 
   reports:
-    name: 'Reports'
-    description: 'Provides reporting capabilities'
     path: 'admin/reports'
     enabled: true
 
   dummy:
-    name: 'Dummy Component'
-    description: 'Always Disabled. Used by tests'
     path: 'admin/dummy'
     enabled: false

@@ -1,0 +1,7 @@
+- menu.each_with_index do |section_array, section_index|
+  - section_array.section.each do |menu_item|
+    - if show_item?(menu_item)
+      = link_to link_path(menu_item[:path]), class: "item #{'active' if active_path?(menu_item[:path])}", 'data-turbolinks': menu_item[:turbolinks]
+        = icon class: "#{active_path?(menu_item[:path]) ? active_icon : menu_item[:icon]}" if show_icons?
+        = menu_item[:name]
+  = divider if show_divider?(section_array.section)

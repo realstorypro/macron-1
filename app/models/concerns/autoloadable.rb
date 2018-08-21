@@ -14,6 +14,12 @@ module Autoloadable
       class_name = class_name.gsub("::", "_")
     end
 
+    # and elements
+    if class_name.include?("elements")
+      class_name = self.name.downcase.singularize
+      class_name = class_name.gsub("::", "_")
+    end
+
     setting = SettingInterface.new(Settings)
     data_type = DataType.new()
 
