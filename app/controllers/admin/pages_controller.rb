@@ -15,7 +15,8 @@ module Admin
       element = s("components.#{params[:element]}.klass").classify.constantize.create
       page = Page.find_by_id(params[:id])
       PageElement.create(page: page, element: element)
-      response_status :success
+      #response_status :success
+      redirect_back(fallback_location: admin_root_path)
     end
 
     # removes an element

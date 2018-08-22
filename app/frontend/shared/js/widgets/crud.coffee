@@ -31,16 +31,23 @@ class Crud
       url: href
       type: "GET"
       success: (data, textStatus, jqXHR) =>
-        $.ajax
-          url: $(location).attr('href')
-          type: 'GET'
-          success: (data, textStatus, jqXHR) =>
-            vent.channel().trigger "render",
-              action: "refresh"
-              html: data
+        vent.channel().trigger "render",
+          action: "refresh"
+          html: data
 
-            vent.channel().trigger "widget:drawer",
-             action: "close"
+        vent.channel().trigger "widget:drawer",
+          action: "close"
+
+        # $.ajax
+        #   url: $(location).attr('href')
+        #   type: 'GET'
+        #   success: (data, textStatus, jqXHR) =>
+        #     vent.channel().trigger "render",
+        #       action: "refresh"
+        #       html: data
+
+        #     vent.channel().trigger "widget:drawer",
+        #     action: "close"
 
 
   form: (options, href, context) ->
