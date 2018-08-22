@@ -80,7 +80,11 @@ Rails.application.routes.draw do
       get "disable_advanced", on: :member
     end
 
-    resources :pages, component: "pages"
+    resources :pages, component: "pages" do
+      get "pick_element", on: :member
+      get "add/:element", to: "pages#add", as: "add_element", on: :member
+      get "remove/:element_id", to: "pages#remove", as: "remove_element", on: :member
+    end
     resources :articles, component: "articles", controller: "crud"
     resources :events, component: "events", controller: "crud"
     resources :products, component: "products", controller: "crud"

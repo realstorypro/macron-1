@@ -10,10 +10,18 @@
       = row
         = column size: 16
           = divider
-          = segment 'center aligned basic empty pageheader'
-            = button 'black large'
-              | Pick Header
-          = segment 'center aligned basic empty element'
-            = button 'grey large'
-              | Add Section
-
+          = widget name: 'page builder'
+            - @entry.elements.each do |element|
+              = segment 'basic element'
+                .title
+                  = left
+                    = h5
+                      = content
+                        = icon 'align justify'
+                        = element.type.gsub('Elements::','')
+                  = right
+                    = link_to 'Delete', remove_element_admin_page_path(element_id: element.id), class: 'button ui red small compact', data: { widget: "clicker", action: "click" }
+                    = link_to 'Edit','', class: 'button ui primary small compact'
+                = divider
+            = segment 'center aligned basic empty element'
+              = link_to 'Add Element', pick_element_admin_page_path, class: 'ui button green small compact', data: { widget: "crud", action: "new" }

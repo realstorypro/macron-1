@@ -1,0 +1,20 @@
+= segment 'basic'
+  = container
+    = grid 'centered'
+      = column computer: 12, tablet: 16, mobile: 16, class: 'head wrapper'
+        = fragment 'action bar just bordered'
+          = left
+            =h4 text: 'Pick an Element'
+          = right
+            = button url: '#', class: 'basic', data: { action: 'close', widget: 'drawer' }
+              | Close
+  = container
+    = grid 'centered'
+      = column computer: 12, tablet: 16, mobile: 16
+        ==  Navigation::ElementListCell.(nil,
+                layout: 'main',
+                policy: Pundit.policy(current_user, :headless),
+                menu: s('menu.elements'),
+                request: request,
+                show_icons: true,
+                site_settings: @site_settings)

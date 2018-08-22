@@ -32,7 +32,7 @@ module Admin
       unless current_user.help
         add_to_actions(
           text: "Help",
-          class: "",
+          class: "black",
           icon: "question circle",
           url: enable_help_admin_user_path(current_user.id),
           permission: policy(current_user).enable_help?,
@@ -41,7 +41,7 @@ module Admin
       end
       add_to_actions(
         text: "Delete",
-        class: "negative basic enhanced",
+        class: "negative enhanced",
         icon: "eraser",
         url: send(delete_path("admin"), @entry),
         permission: policy(@entry).destroy?,
