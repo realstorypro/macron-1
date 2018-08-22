@@ -14,6 +14,7 @@ class Crud
       vent.channel().on "widget:crud", (options, href, context) =>
 
         switch options['action']
+          when 'pick' then @pick(options, href, context)
           when 'new' then @form(options, href, context)
           when 'edit' then @form(options, href, context)
           when 'save' then @save(options, href, context)
@@ -21,6 +22,25 @@ class Crud
 
     else
       instance
+
+  pick: (options, href, context) ->
+    $(context).find('.icon.element').hide()
+    $(context).find('.icon.loading').removeClass('hidden')
+
+    $.ajax
+      url: href
+      type: "GET"
+      success: (data, textStatus, jqXHR) =>
+        $.ajax
+          url: $(location).attr('href')
+          type: 'GET'
+          success: (data, textStatus, jqXHR) =>
+            vent.channel().trigger "render",
+              action: "refresh"
+              html: data
+
+            vent.channel().trigger "widget:drawer",
+             action: "close"
 
 
   form: (options, href, context) ->

@@ -1,9 +1,13 @@
-= list 'relaxed divided'
-  - menu.each_with_index do |section_array, section_index|
-    - section_array.section.each do |menu_item|
-      - if show_item?(menu_item)
-        = link_to link_path(menu_item[:component]), class: 'item'
-          = icon class: "#{menu_item[:icon]} inverted purple bordered left middle aligned"
-          = content
-            = header text: menu_item[:name].upcase, ui: :off
-            = description text: menu_item[:hint]
+= widget name: 'element picker'
+  = list 'relaxed divided'
+    - menu.each_with_index do |section_array, section_index|
+      - section_array.section.each do |menu_item|
+        - if show_item?(menu_item)
+          = link_to link_path(menu_item[:component]), class: 'item', data: { widget: "crud", action: "pick" }
+            .icon.holder
+              = icon class: "#{menu_item[:icon]} middle aligned element"
+              = icon class: "circle notch middle aligned loading hidden"
+
+            = content
+              = header text: menu_item[:name].upcase, ui: :off
+              = description text: menu_item[:hint]

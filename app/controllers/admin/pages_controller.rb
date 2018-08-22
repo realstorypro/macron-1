@@ -7,7 +7,7 @@ module Admin
 
     # picks an element
     def pick_element
-      render :add_element, layout: false
+      render :pick_element, layout: false
     end
 
     # adds an element
@@ -15,6 +15,7 @@ module Admin
       element = s("components.#{params[:element]}.klass").classify.constantize.create
       page = Page.find_by_id(params[:id])
       PageElement.create(page: page, element: element)
+      response_status :success
     end
 
     # removes an element
