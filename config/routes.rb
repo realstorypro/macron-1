@@ -81,9 +81,9 @@ Rails.application.routes.draw do
     end
 
     resources :pages, component: "pages" do
-      get "add_element", on: :member
-      get "add/:element", to: 'pages#add', on: :member
-      get "remove/:element_id", to: 'pages#remove', on: :member
+      get "pick_element", on: :member
+      get "add/:element", to: 'pages#add', as: 'add_element', on: :member
+      get "remove/:element_id", to: 'pages#remove', as: 'remove_element', on: :member
     end
     resources :articles, component: "articles", controller: "crud"
     resources :events, component: "events", controller: "crud"
