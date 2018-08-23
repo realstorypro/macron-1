@@ -1,5 +1,6 @@
-==  Navigation::NavigationListCell.(nil,
+==  Navigation::ElementListCell.(nil,
         layout: 'main',
+        policy: Pundit.policy(current_user, :headless),
         menu: s('menu.elements'),
         request: request,
         show_icons: true,

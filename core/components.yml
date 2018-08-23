@@ -18,7 +18,7 @@ components:
 
   elements_heading:
     klass: 'Elements::Heading'
-    path: 'elements_heading'
+    path: 'elements'
     enabled: true
 
   site_settings:
