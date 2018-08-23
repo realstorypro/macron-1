@@ -13,6 +13,7 @@ import Dropdown from './widgets/dropdown'
 import Datepicker from './widgets/datepicker'
 import Daterange from './widgets/daterange'
 import Clicker from './widgets/clicker'
+import Sorter from './widgets/sorter'
 import Multiselect from './widgets/multiselect'
 import Richtext from './widgets/richtext'
 import Navigation from './widgets/navigation'
@@ -43,6 +44,7 @@ dropdown = new Dropdown
 datepicker = new Datepicker
 daterange = new Daterange
 clicker = new Clicker
+sorter = new Sorter
 multiselect = new Multiselect
 richtext = new Richtext
 navigation = new Navigation
@@ -76,6 +78,7 @@ class App
     datepicker.setup()
     daterange.setup()
     clicker.setup()
+    sorter.setup()
     multiselect.setup()
     richtext.setup()
     image_preloader.setup()
@@ -90,6 +93,7 @@ class App
     datepicker.teardown()
     daterange.teardown()
     clicker.teardown()
+    sorter.teardown()
     multiselect.teardown()
     richtext.teardown()
     image_preloader.teardown()
