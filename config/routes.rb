@@ -96,7 +96,7 @@ Rails.application.routes.draw do
     resources :categories, component: "categories", controller: "crud"
     resources :support, component: "support", only: %i[index]
 
-    resources :elements, component: "elements", only: %i[edit update create destroy]
+    resources :elements, component: "elements", only: %i[edit update]
 
     scope :settings, module: "site_settings", component: "site_settings", as: "settings"  do
       root to: "settings#all"

@@ -21,7 +21,7 @@
                         = element.type.gsub('Elements::','')
                   = right
                     = link_to 'Delete', remove_element_admin_page_path(element_id: element.id), class: 'button ui red small compact', data: { widget: "clicker", action: "click" }
-                    = link_to 'Edit','', class: 'button ui primary small compact'
+                    = link_to 'Edit',edit_admin_element_path(element.id), class: 'button ui primary small compact', data: { widget: "crud", action: "edit" }
                 = divider
             = segment 'center aligned basic empty element'
-              = link_to 'Add Element', pick_element_admin_page_path, class: 'ui button green small compact', data: { widget: "crud", action: "new" }
+              = link_to 'Add Element', pick_element_admin_page_path, class: 'ui button green', data: { widget: "crud", action: "new" }

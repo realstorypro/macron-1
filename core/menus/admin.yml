@@ -76,12 +76,6 @@ menu:
       enabled: true
 
   - section:
-    - name: Elements
-      component: reports
-      path: 'admin_elements'
-      icon: compress
-      enabled: true
-
     - name: Reports
       component: reports
       path: '/admin/reports'
