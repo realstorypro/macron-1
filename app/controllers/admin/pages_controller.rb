@@ -22,5 +22,13 @@ module Admin
       Element.find_by_id(params[:element_id]).destroy
       redirect_back(fallback_location: admin_root_path)
     end
+
+    # orders the elements
+    def reorder
+      params[:order].each_with_index do |page_element, index|
+        PageElement.where(element_id: page_element).update_all(position: index + 1)
+      end
+      head :ok
+    end
   end
 end

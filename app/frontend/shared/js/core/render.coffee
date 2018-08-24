@@ -4,6 +4,7 @@ import Dispatcher from './dispatcher'
 import Dropdown from '../widgets/dropdown'
 import Datepicker from '../widgets/datepicker'
 import Richtext from '../widgets/richtext'
+import Sorter from '../widgets/sorter'
 import Multiselect from '../widgets/multiselect'
 import _ from 'underscore'
 
@@ -12,6 +13,7 @@ vent =  new Vent
 dispatcher = new Dispatcher
 dropdown = new Dropdown
 datepicker = new Datepicker
+sorter = new Sorter
 multiselect = new Multiselect
 richtext = new Richtext
 
@@ -57,6 +59,7 @@ class Render
       datepicker.reinit()
       multiselect.reinit()
       richtext.reinit()
+      sorter.reinit()
       dispatcher.reinit()
 
     catch error
@@ -83,6 +86,7 @@ class Render
       datepicker.reinit()
       multiselect.reinit()
       richtext.reinit()
+      sorter.reinit()
       dispatcher.reinit()
 
     catch error
