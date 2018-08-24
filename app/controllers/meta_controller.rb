@@ -43,6 +43,7 @@ class MetaController < ApplicationController
     if @entry.update(entry_params)
       flash[:success] = "#{component_name} was successfully updated."
       response_status :success
+      redirect_back(fallback_location: admin_root_path)
     else
       response_status :error
       render :edit, layout: false
