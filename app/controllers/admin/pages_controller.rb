@@ -25,8 +25,8 @@ module Admin
 
     # orders the elements
     def reorder
-      params[:order].each do |page_element|
-
+      params[:order].each_with_index do |page_element, index|
+        PageElement.where(element_id: page_element).update_all(position: index + 1)
       end
       head :ok
     end

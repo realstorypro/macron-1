@@ -9,7 +9,7 @@ class Page < ApplicationRecord
   after_update :ping_sitemap unless Rails.env.test?
   after_create :ping_sitemap unless Rails.env.test?
 
-  has_many :page_elements
+  has_many :page_elements, -> { order(:position) }
   has_many :elements, through: :page_elements
 
   def self.policy_class

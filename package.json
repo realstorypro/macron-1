@@ -44,6 +44,7 @@
     "default-passive-events": "^1.0.10",
     "del": "^3.0.0",
     "extend": "^3.0.1",
+    "global": "^4.3.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-chmod": "^2.0.0",
@@ -97,7 +98,8 @@
     "vue-template-compiler": "^2.5.16",
     "vue-tweet-embed": "^2.1.1",
     "webpack-dev-server": "^2.11.1",
-    "yamljs": "^0.3.0"
+    "yamljs": "^0.3.0",
+    "yarn": "^1.9.4"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.15",
