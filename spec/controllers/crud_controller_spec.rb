@@ -188,8 +188,8 @@ describe Admin::CrudController, type: :controller do
           expect(controller_entry(controller)).to eq(@last_entry)
         end
 
-        it "The response is 204" do
-          expect(response.status).to be 204
+        it "The response is 302" do
+          expect(response.status).to be 302
         end
 
         it "Receives a success header" do
