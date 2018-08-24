@@ -75,7 +75,7 @@ class Crud
             action: "close"
           Turbolinks.visit jqXHR.getResponseHeader('redirect')
 
-        # reload the page & close the drawer if submission is successful
+        # update the page & close the drawer if submission is successful
         else if jqXHR.getResponseHeader('status') is 'success'
 
           vent.channel().trigger "render",
