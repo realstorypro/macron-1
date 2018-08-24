@@ -38,17 +38,6 @@ class Crud
         vent.channel().trigger "widget:drawer",
           action: "close"
 
-        # $.ajax
-        #   url: $(location).attr('href')
-        #   type: 'GET'
-        #   success: (data, textStatus, jqXHR) =>
-        #     vent.channel().trigger "render",
-        #       action: "refresh"
-        #       html: data
-
-        #     vent.channel().trigger "widget:drawer",
-        #     action: "close"
-
 
   form: (options, href, context) ->
     vent.channel().trigger 'widget:drawer',
@@ -86,18 +75,15 @@ class Crud
             action: "close"
           Turbolinks.visit jqXHR.getResponseHeader('redirect')
 
-        # reload the page & close the drawer if submission is successful
+        # update the page & close the drawer if submission is successful
         else if jqXHR.getResponseHeader('status') is 'success'
-          $.ajax
-            url: $(location).attr('href')
-            type: 'GET'
-            success: (data, textStatus, jqXHR) =>
-                vent.channel().trigger "render",
-                  action: "refresh"
-                  html: data
 
-                vent.channel().trigger "widget:drawer",
-                  action: "close"
+          vent.channel().trigger "render",
+            action: "refresh"
+            html: data
+
+          vent.channel().trigger "widget:drawer",
+            action: "close"
 
         # reload the form if the submission contains an error
         else if jqXHR.getResponseHeader('status') is 'error'

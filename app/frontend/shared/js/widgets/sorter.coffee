@@ -30,9 +30,10 @@ class Sorter
     widget = $('.sortable')
     target = widget.data('target')
 
-    @sortable = Sortable.create widget[0],
-      onSort: ->
-        axios.post target, { order: @.toArray() }
+    if widget.length > 0
+      @sortable = Sortable.create widget[0],
+        onSort: ->
+          axios.post target, { order: @.toArray() }
 
   teardown: ->
     utils.log 'teardown', 'teardown()', 'sorter'

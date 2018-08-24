@@ -40,6 +40,10 @@ module CrudHelper
     end
   end
 
+  def element_component_name(element)
+    element.type.gsub("::", "_").downcase
+  end
+
   def action_name(action = params[:action])
     action.capitalize
   end

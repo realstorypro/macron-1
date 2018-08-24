@@ -11,19 +11,23 @@
         = column size: 16
           = divider
           = widget name: 'page builder'
-            = widget name: 'sortable', data: {target: reorder_admin_page_path(@entry.id)}
-              - @entry.elements.each do |element|
-                = segment class: 'basic element', data: {id: element.id}
-                  .title
-                    = left
-                      = h5
-                        = content
-                          = icon 'align justify'
-                          = element.type.gsub('Elements::','')
-                          = " - #{element.id}"
-                    = right
-                      = link_to 'Delete', remove_element_admin_page_path(element_id: element.id), class: 'button ui red small compact', data: { widget: "clicker", action: "click" }
-                      = link_to 'Edit',edit_admin_element_path(element.id), class: 'button ui primary small compact', data: { widget: "crud", action: "edit" }
-                  = divider
+            - unless @entry.elements.blank?
+              = widget name: 'sortable', data: {target: reorder_admin_page_path(@entry.id)}
+                - @entry.elements.each do |element|
+                  = segment class: 'basic element', data: {id: element.id}
+                    .title
+                      = left
+                        = h5
+                          = content
+                            = icon 'align justify'
+                            = element.type.gsub('Elements::','')
+                      = right
+                        = link_to 'Delete', remove_element_admin_page_path(element_id: element.id), class: 'button ui red small compact', data: { widget: "clicker", action: "click" }
+                        = link_to 'Edit',edit_admin_element_path(element.id), class: 'button ui primary small compact', data: { widget: "crud", action: "edit" }
+                    == Admin::DetailsCell.(nil,
+                            records: element,
+                            user: current_user,
+                            fields: component_show_fields(element_component_name(element)),
+                            controller_namespace: self.controller.class.parent.to_s ) if element.payload
             = segment 'center aligned basic empty element'
               = link_to 'Add Element', pick_element_admin_page_path, class: 'ui button green', data: { widget: "crud", action: "new" }
