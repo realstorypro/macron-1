@@ -13,7 +13,7 @@ module Admin
     def add
       element = s("components.#{params[:element]}.klass").classify.constantize.create
       page = Page.find_by_id(params[:id])
-      PageElement.create(page: page, element: element)
+      page.elements << element
       redirect_back(fallback_location: admin_root_path)
     end
 

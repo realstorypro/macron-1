@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_161127) do
+ActiveRecord::Schema.define(version: 2018_08_24_202511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -169,6 +169,8 @@ ActiveRecord::Schema.define(version: 2018_08_24_161127) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "position"
+    t.integer "elementable_id"
+    t.string "elementable_type"
     t.index ["element_id"], name: "index_page_elements_on_element_id"
     t.index ["page_id"], name: "index_page_elements_on_page_id"
   end
