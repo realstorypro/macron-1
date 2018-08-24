@@ -41,7 +41,7 @@ module CrudHelper
   end
 
   def element_component_name(element)
-    element.type.gsub('::','_').downcase
+    element.type.gsub("::", "_").downcase
   end
 
   def action_name(action = params[:action])
