@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_202511) do
+ActiveRecord::Schema.define(version: 2018_08_24_205131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -164,7 +164,6 @@ ActiveRecord::Schema.define(version: 2018_08_24_202511) do
   end
 
   create_table "page_elements", force: :cascade do |t|
-    t.bigint "page_id"
     t.bigint "element_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -172,7 +171,6 @@ ActiveRecord::Schema.define(version: 2018_08_24_202511) do
     t.integer "elementable_id"
     t.string "elementable_type"
     t.index ["element_id"], name: "index_page_elements_on_element_id"
-    t.index ["page_id"], name: "index_page_elements_on_page_id"
   end
 
   create_table "pages", force: :cascade do |t|
@@ -265,5 +263,4 @@ ActiveRecord::Schema.define(version: 2018_08_24_202511) do
   end
 
   add_foreign_key "page_elements", "elements"
-  add_foreign_key "page_elements", "pages"
 end
