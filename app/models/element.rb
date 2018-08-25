@@ -3,13 +3,10 @@
 class Element < ApplicationRecord
   include Payloadable
 
-  has_one :page_element, dependent: :destroy
-  has_one :page, through: :page_elements
-
-  belongs_to :elementable, polymorphic: true
+  belongs_to :elementable, polymorphic: true, optional: true
   has_many :elements, -> { order(:position) }, as: :elementable
 
-  belongs_to :page
+  belongs_to :page, optional: true
 
   def self.policy_class
     MetaPolicy
