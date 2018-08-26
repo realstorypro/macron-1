@@ -25,7 +25,6 @@ module Admin
     end
 
     def reorder
-      #parent = parent_class.find(params[:parent_id])
       params[:order].each_with_index do |element, index|
         Element.where(id: element).update_all(position: index + 1)
       end
