@@ -71,6 +71,13 @@ Rails.application.routes.draw do
     root to: "dashboard#index"
     resources :dashboard, only: :index
 
+    resources :elements, component: "elements", only: %i[edit update] do
+      get "pick_element", on: :collection
+      get "add/:element", to: "elements#add", as: "add_element", on: :collection
+      get "destroy", to: "elements#destroy", as: "destroy", on: :member
+      post :reorder, on: :collection
+    end
+
     resources :users, component: "users" do
       get "ban", on: :member
       get "unban", on: :member
@@ -81,10 +88,6 @@ Rails.application.routes.draw do
     end
 
     resources :pages, component: "pages" do
-      post :reorder, on: :member
-      get "pick_element", on: :member
-      get "add/:element", to: "pages#add", as: "add_element", on: :member
-      get "remove/:element_id", to: "pages#remove", as: "remove_element", on: :member
     end
 
     resources :articles, component: "articles", controller: "crud"
@@ -98,7 +101,6 @@ Rails.application.routes.draw do
     resources :categories, component: "categories", controller: "crud"
     resources :support, component: "support", only: %i[index]
 
-    resources :elements, component: "elements", only: %i[edit update]
 
     scope :settings, module: "site_settings", component: "site_settings", as: "settings"  do
       root to: "settings#all"
