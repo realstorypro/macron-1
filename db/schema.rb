@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_161127) do
+ActiveRecord::Schema.define(version: 2018_08_25_175823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -140,12 +140,13 @@ ActiveRecord::Schema.define(version: 2018_08_24_161127) do
   end
 
   create_table "elements", force: :cascade do |t|
-    t.string "name"
     t.string "type"
     t.jsonb "payload"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.jsonb "areas"
+    t.integer "elementable_id"
+    t.string "elementable_type"
+    t.integer "position"
   end
 
   create_table "entries", force: :cascade do |t|
@@ -161,16 +162,6 @@ ActiveRecord::Schema.define(version: 2018_08_24_161127) do
     t.index ["slug"], name: "index_entries_on_slug"
     t.index ["type"], name: "index_entries_on_type"
     t.index ["user_id"], name: "index_entries_on_user_id"
-  end
-
-  create_table "page_elements", force: :cascade do |t|
-    t.bigint "page_id"
-    t.bigint "element_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "position"
-    t.index ["element_id"], name: "index_page_elements_on_element_id"
-    t.index ["page_id"], name: "index_page_elements_on_page_id"
   end
 
   create_table "pages", force: :cascade do |t|
@@ -262,6 +253,4 @@ ActiveRecord::Schema.define(version: 2018_08_24_161127) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
-  add_foreign_key "page_elements", "elements"
-  add_foreign_key "page_elements", "pages"
 end

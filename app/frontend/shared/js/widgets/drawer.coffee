@@ -57,6 +57,7 @@ class Drawer
     sidebar = $(".drawer.sidebar.#{options.position}")
     sidebar.dimmer('show')
     sidebar.find('.dimmer').addClass('inverted').html('<div class="ui loader text">Loading</div>')
+    sidebar.find('.inside').empty()
 
     sidebar.sidebar 'setting', 'onChange', ->
       if active_sidebar?
