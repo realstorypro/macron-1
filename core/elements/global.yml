@@ -1,0 +1,8 @@
+elements:
+  heading:
+    areas:
+    - content
+
+  paragraph:
+    areas:
+    - content
