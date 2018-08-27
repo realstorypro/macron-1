@@ -6,7 +6,7 @@ class Element < ApplicationRecord
   belongs_to :elementable, polymorphic: true, optional: true
   has_many :elements, -> { order(:position) }, as: :elementable, dependent: :destroy
 
-  belongs_to :page, optional: true
+  belongs_to :area, optional: true
 
   def self.policy_class
     MetaPolicy
