@@ -488,6 +488,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    store_base_sti_class (1.2.0)
+      activerecord (>= 4.0)
     temple (0.8.0)
     terminal-notifier-guard (1.6.4)
     thor (0.20.0)
@@ -621,6 +623,7 @@ DEPENDENCIES
   slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
+  store_base_sti_class
   terminal-notifier-guard (~> 1.6.1)
   thor
   tty-prompt
