@@ -2,31 +2,34 @@
   = grid "#{'divided' if current_user.help}"
     = row
       = column size: (current_user.help ? 10 : 16)
-        == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
+        /== Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
       - if current_user.help
         = column size: 6
           = render 'partials/side_help'
     = row
       = column size: 16
         = widget name: 'page builder'
-          - if component_areas&.include?('content')
+          - if component_areas&.include?('header')
             = h5 class: 'dividing', text: 'Header'
             = widget name: 'sortable', data: {target: reorder_admin_elements_path}
-            /- @entry.elements.each do |element|
-              = segment class: 'basic element', data: {id: element.id}
-                .title
-                  = left
-                    = h5
-                      = content
-                        = icon 'align justify'
-                        = element.type.gsub('Elements::','')
-                  = right
-                    = link_to 'Delete', destroy_admin_element_path(id: element.id), class: 'button ui red small compact', data: { widget: "clicker", action: "click" }
-                    = link_to 'Edit',edit_admin_element_path(element.id), class: 'button ui primary small compact', data: { widget: "crud", action: "edit" }
-                == Admin::DetailsCell.(nil,
-                        records: element,
-                        user: current_user,
-                        fields: component_show_fields(element_component_name(element)),
-                        controller_namespace: self.controller.class.parent.to_s ) if element.payload
-          = segment 'center aligned basic empty element'
-            = link_to 'Add Header Element', pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id), class: 'ui button green', data: { widget: "crud", action: "new" }
+              - @entry.areas.each do |area|
+                - if area.type.downcase.include?('header')
+                  - area.elements.each do |element|
+                    = segment class: 'basic element', data: {id: element.id}
+                      .title
+                        = left
+                          = h5
+                            = content
+                              = icon 'align justify'
+                              = element.type.gsub('Elements::','')
+                        = right
+                          = link_to 'Delete', destroy_admin_element_path(id: element.id), class: 'button ui red small compact', data: { widget: "clicker", action: "click" }
+                          = link_to 'Edit',edit_admin_element_path(element.id), class: 'button ui primary small compact', data: { widget: "crud", action: "edit" }
+                      == Admin::DetailsCell.(nil,
+                              records: element,
+                              user: current_user,
+                              fields: component_show_fields(element_component_name(element)),
+                              controller_namespace: self.controller.class.parent.to_s ) if element.payload
+          - if component_areas&.include?('header')
+            = segment 'center aligned basic empty element'
+              = link_to 'Add Element', pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'header'), class: 'ui button green', data: { widget: "crud", action: "new" }
