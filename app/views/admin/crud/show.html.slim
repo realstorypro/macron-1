@@ -2,7 +2,7 @@
   = grid "#{'divided' if current_user.help}"
     = row
       = column size: (current_user.help ? 10 : 16)
-        /== Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
+        == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
       - if current_user.help
         = column size: 6
           = render 'partials/side_help'
@@ -10,10 +10,10 @@
       = column size: 16
         = widget name: 'page builder'
           - if component_areas&.include?('header')
-            = h5 class: 'dividing', text: 'Header'
+            == Admin::ElementsCell.(nil, areas: @entry.areas, area: 'header', reorder_path: reorder_admin_elements_path)
             = widget name: 'sortable', data: {target: reorder_admin_elements_path}
               - @entry.areas.each do |area|
-                - if area.type.downcase.include?('header')
+                /- if area.type.downcase.include?('header')
                   - area.elements.each do |element|
                     = segment class: 'basic element', data: {id: element.id}
                       .title
