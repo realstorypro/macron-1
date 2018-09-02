@@ -21,10 +21,22 @@ class ImagePreloader
 
     $('[data-src]').each (index,  value) ->
 
+      container_height = Math.ceil($(@).height()) * 2
+
       item = $(value)
       image_src = item.data('src')
+
+      resize = image_src.match(/\/resize\/[^/]*\//g)
+
+      # resize the resize if it exists or append it
+      if resize
+        image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/x#{container_height}/")
+      else
+        image_src = image_src + "-/resize/x#{container_height}/"
+
       image_css_src = "url(#{image_src})"
       image_klass = item.data('klass')
+
 
       preloaded_image = new Image()
       preloaded_image.src = image_src

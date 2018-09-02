@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module Admin
   class ElementsCell < Cell::ViewModel
     include ApplicationHelper
     include DcUi::Helpers
 
-    #shortcuts
+    # shortcuts
     def area_name
       options[:area]
     end
@@ -17,4 +19,3 @@ module Admin
     end
   end
 end
-
