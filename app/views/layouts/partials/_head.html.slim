@@ -24,11 +24,12 @@ meta content = 'width=device-width initial-scale=1' name = 'viewport'
 
 = csrf_meta_tags
 = stylesheet_pack_tag 'client_css'
+= stylesheet_pack_tag 'client_js'
 = stylesheet_pack_tag 'client_deferred_css', media: 'none', onload: "if(media!='all')media='all'"
 = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Releway|Roboto', media: 'none', onload: "if(media!='all')media='all'"
-= uploadcare_settings
 = javascript_pack_tag 'client_js', async: ''
-= stylesheet_pack_tag 'client_js'
+
+= uploadcare_settings
 
 
 = render 'layouts/partials/inline_js'
