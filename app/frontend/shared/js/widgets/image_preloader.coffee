@@ -21,7 +21,10 @@ class ImagePreloader
 
     $('[data-src]').each (index,  value) ->
 
-      container_height = Math.ceil($(@).height()) * 2
+      if (typeof navigator.connection == 'undefined') || navigator.connection.downlink > 2.5
+        container_height = Math.ceil($(@).height()) * 2
+      else
+        container_height = Math.ceil($(@).height())
 
       item = $(value)
       image_src = item.data('src')
