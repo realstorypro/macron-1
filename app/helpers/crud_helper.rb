@@ -31,6 +31,7 @@ module CrudHelper
     settings "components.#{component}.description", fatal_exception: false
   end
 
+
   def component_help_link(component = params[:component])
     link = settings "components.#{component}.help_link", fatal_exception: false
     if link
@@ -38,6 +39,10 @@ module CrudHelper
     else
       nil
     end
+  end
+
+  def component_areas(component = params[:component])
+    settings "components.#{component}.areas", fatal_exception: false
   end
 
   def element_component_name(element)

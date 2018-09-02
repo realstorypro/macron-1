@@ -14,8 +14,18 @@ module Admin
 
     def add
       parent = parent_class.find(params[:parent_id])
+
+      # Create new area for the parent if one does not exist
+      if parent.areas.count == 0 || parent.areas.any? { |area| area.type.include?(params[:area].capitalize) } == false
+        parent.areas << "Areas::#{params[:area].capitalize}".classify.constantize.create
+      end
+
+      # Pick the right area
+      area = parent.areas.select { |area| area.type.include?(params[:area].capitalize) }.last
+
+
       element = s("components.#{params[:element]}.klass").classify.constantize.create
-      parent.elements << element
+      area.elements << element
       redirect_back(fallback_location: admin_root_path)
     end
 

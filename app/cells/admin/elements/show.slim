@@ -1,0 +1,20 @@
+= h5 class: 'dividing', text: area_name
+= widget name: 'sortable', data: {target: reorder_path}
+  - areas.each do |area|
+    - if area.type.downcase.include?(area_name)
+      - area.elements.each do |element|
+        = segment class: 'basic element', data: {id: element.id}
+          .title
+              = left
+                = h5
+                  = content
+                    = icon 'align justify'
+                    = element.type.gsub('Elements::','')
+              = right
+                /= link_to 'Delete', destroy_admin_element_path(id: element.id), class: 'button ui red small compact', data: { widget: "clicker", action: "click" }
+                /= link_to 'Edit',edit_admin_element_path(element.id), class: 'button ui primary small compact', data: { widget: "crud", action: "edit" }
+          /== Admin::DetailsCell.(nil,
+                  records: element,
+                  user: current_user,
+                  fields: component_show_fields(element_component_name(element)),
+                  controller_namespace: self.controller.class.parent.to_s ) if element.payload

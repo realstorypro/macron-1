@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-class Element < ApplicationRecord
-  include Payloadable
+class Area < ApplicationRecord
+  belongs_to :areable, polymorphic: true, optional: true
 
-  belongs_to :elementable, polymorphic: true, optional: true
   has_many :elements, -> { order(:position) }, as: :elementable, dependent: :destroy
 
-  belongs_to :area, optional: true
+  belongs_to :entry, optional: true
 
   def self.policy_class
     MetaPolicy

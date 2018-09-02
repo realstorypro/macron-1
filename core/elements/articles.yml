@@ -1,0 +1,12 @@
+elements:
+  article_image_header:
+    areas:
+    - header
+    components:
+    - articles
+
+  article_video_header:
+    areas:
+    - header
+    components:
+    - articles

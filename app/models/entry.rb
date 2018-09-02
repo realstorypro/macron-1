@@ -15,6 +15,8 @@ class Entry < ApplicationRecord
   after_create :ping_sitemap unless Rails.env.test?
 
   has_many :comments, as: :commentable
+  has_many :areas, as: :areable
+  has_many :elements, through: :areas
 
   def self.policy_class
     MetaPolicy
