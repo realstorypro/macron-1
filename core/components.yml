@@ -121,9 +121,9 @@ components:
     klass: 'Article'
     path: 'articles'
     enabled: true
-    #areas:
-    #  - header
-    #  - content
+    areas:
+      - header
+      - content
 
   events:
     klass: 'Event'

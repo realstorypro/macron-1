@@ -5,6 +5,8 @@ module Admin
     include ApplicationHelper
     include DcUi::Helpers
 
+    delegate :url_helpers, to: "::Rails.application.routes"
+
     # shortcuts
     def area_name
       options[:area]
@@ -14,8 +16,12 @@ module Admin
       options[:areas]
     end
 
-    def reorder_path
-      options[:reorder_path]
+    def controller_namespace
+      options[:controller_namespace]
+    end
+
+    def current_user
+      options[:user]
     end
   end
 end
