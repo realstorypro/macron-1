@@ -14,3 +14,9 @@
           - if component_areas&.include?('header')
             = segment 'center aligned basic empty element'
               = link_to 'Add Element', pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'header'), class: 'ui button green', data: { widget: "crud", action: "new" }
+
+          - if component_areas&.include?('content')
+            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'content', controller_namespace: self.controller.class.parent.to_s)
+          - if component_areas&.include?('content')
+            = segment 'center aligned basic empty element'
+              = link_to 'Add Element', pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'content'), class: 'ui button green', data: { widget: "crud", action: "new" }

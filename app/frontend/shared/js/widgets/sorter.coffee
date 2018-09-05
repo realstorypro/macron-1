@@ -12,7 +12,7 @@ class Sorter
   axios.defaults.headers.common['Accept'] = 'application/json'
 
   constructor: ->
-    @sortable = null
+    @sortable = []
 
     if !instance
       instance = this
@@ -27,20 +27,22 @@ class Sorter
   setup: ->
     utils.log 'setup', 'setup()', 'sorter'
 
-    widget = $('.sortable')
-    target = widget.data('target')
+    $('.sortable').each ->
+      widget = $(@)
+      target = widget.data('target')
 
-    if widget.length > 0
-      @sortable = Sortable.create widget[0],
-        onSort: ->
-          axios.post target, { order: @.toArray() }
+      if widget.length > 0
+        @sortable << Sortable.create widget[0],
+          onSort: ->
+            axios.post target, { order: @.toArray() }
 
   teardown: ->
     utils.log 'teardown', 'teardown()', 'sorter'
 
-    unless @sortable == null
-      @sortable.destroy()
-      @sortable = null
+    $(@sortable).each ->
+      @.destroy()
+
+    @sortable = []
 
 
 export { Sorter as default }
