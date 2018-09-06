@@ -20,6 +20,9 @@ components:
     klass: 'Elements::Heading'
     path: 'elements'
     enabled: true
+    restricted:
+      areas:
+        - content
 
   site_settings:
     klass: 'Setting'

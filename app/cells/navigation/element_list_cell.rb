@@ -8,5 +8,24 @@ module Navigation
                                                   area: request.filtered_parameters["area"],
                                                   element: path)
     end
+
+    private
+
+    # checks if the menu item should be shown
+    def show_item?(menu_item)
+      # short circuits rendering unless the menu is enabled
+      return false unless menu_item[:enabled]
+
+      # hide advanced menu items unless user is in advanced mode
+      return false if menu_item[:advanced] && !current_user.advanced
+
+      # hide restricted areas
+      restricted_areas = settings("components.#{menu_item["component"]}.restricted.areas")
+      return false unless restricted_areas.any? {|area| area == request.filtered_parameters["area"] } if restricted_areas
+
+      return true if menu_item[:component] && options[:policy].index?(menu_item[:component])
+      return true if menu_item[:component].nil?
+      false
+    end
   end
 end
