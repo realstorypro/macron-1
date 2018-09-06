@@ -116,14 +116,14 @@ components:
     klass: 'Page'
     path: 'pages'
     enabled: true
+    areas:
+    - header
+    - content
 
   articles:
     klass: 'Article'
     path: 'articles'
     enabled: true
-    areas:
-      - header
-      - content
 
   events:
     klass: 'Event'
