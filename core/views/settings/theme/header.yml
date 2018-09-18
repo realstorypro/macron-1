@@ -9,6 +9,12 @@ views:
         type: 'color'
         required: true
 
+      button_color:
+        advanced: true
+        label: 'Button Color'
+        type: 'color'
+        required: true
+
       menu_position:
         advanced: true
         label: 'Menu Position'

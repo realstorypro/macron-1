@@ -14,6 +14,7 @@ module SiteSettings::Theme
         settings.mobile_logo_size = 120
 
         settings.menu_color = "black"
+        settings.button_color = "black"
         settings.menu_position = "left"
       end
     end
