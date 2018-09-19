@@ -35,5 +35,16 @@ module Widget
     def position
       ss("theme.header.menu_position")
     end
+
+    private
+
+    # checks if the menu item should be shown
+    def show_item?(menu_item)
+      # short circuits rendering unless the menu is enabled
+      return false unless menu_item[:enabled]
+      return true if menu_item[:component] && options[:policy].index?(menu_item[:component])
+      return true if menu_item[:component].nil?
+      false
+    end
   end
 end

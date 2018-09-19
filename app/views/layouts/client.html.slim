@@ -9,6 +9,7 @@ html
     ==  Widget::SidenavCell.(nil,
             layout: 'main',
             menu: s('menu.main'),
+            policy: Pundit.policy(current_user, :headless),
             request: request,
             show_icons: false,
             site_settings: @site_settings)
