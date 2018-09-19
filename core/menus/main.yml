@@ -11,21 +11,26 @@ menu:
       enabled: true
 
     - name: Events
+      component: events
       path: events
       enabled: true
 
     - name: Articles
+      component: articles
       path: articles
       enabled: true
 
     - name: Videos
+      component: videos
       path: videos
       enabled: true
 
     - name: Podcasts
+      component: podcasts
       path: podcasts
       enabled: true
 
     - name: Discussions
+      component: discussions
       path: discussions
       enabled: true

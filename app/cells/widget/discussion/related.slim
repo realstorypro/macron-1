@@ -1,6 +1,6 @@
 - unless @model[0].nil?
   = segment 'padded'
-    = h5 text: 'Realted Discussions', class: 'dividing'
+    = h5 text: 'Related Discussions', class: 'dividing'
     = widget name: "table listing #{'headless' unless options[:header]}"
       = table 'very basic'
         - if options[:header]
