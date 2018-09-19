@@ -19,6 +19,7 @@ gem "erubis"
 gem "friendly_id", "~> 5.1.0"
 gem "wicked"
 gem "sidekiq"
+gem "store_base_sti_class"
 
 # Analytics
 gem "ahoy_matey"
