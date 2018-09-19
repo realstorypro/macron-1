@@ -5,6 +5,7 @@
       ==  Navigation::NavigationListCell.(nil,
               layout: 'main',
               menu: s('menu.theme'),
+              policy: Pundit.policy(current_user, :headless),
               request: request,
               show_icons: true,
               site_settings: @site_settings)
@@ -13,6 +14,7 @@
       ==  Navigation::NavigationListCell.(nil,
               layout: 'main',
               menu: s('menu.theme_components'),
+              policy: Pundit.policy(current_user, :headless),
               request: request,
               show_icons: true,
               site_settings: @site_settings)

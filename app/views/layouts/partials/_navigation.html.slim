@@ -30,7 +30,7 @@
         - else
           = item "cta #{'flush ' if ss('theme.header.menu_position') == 'right'}"
             = link_to sign_in_path
-              = button "sign in inverted secondary large #{'flush ' if ss('theme.header.menu_position') == 'left'}"
+              = button "sign in inverted large #{ss('theme.header.button_color')} #{'flush ' if ss('theme.header.menu_position') == 'left'}"
                 | Sign In
         - if ss('theme.header.menu_position') == 'right'
           = item tag: :button, class: 'enhanced button icon hamburger right', url: '', v: {'on:click.prevent': "toggle_sidenav()"}

@@ -4,6 +4,7 @@
       ==  Navigation::NavigationListCell.(nil,
               layout: 'main',
               menu: s('menu.settings'),
+              policy: Pundit.policy(current_user, :headless),
               request: request,
               show_icons: true,
               site_settings: @site_settings)
