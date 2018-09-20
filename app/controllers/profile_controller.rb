@@ -49,6 +49,7 @@ class ProfileController < MembersController
 
     # overriding the entry to use
     def load_entry
-      authorize @entry = current_user.profile
+      redirect_to root_path if current_user.nil?
+      authorize @entry = current_user.profile unless current_user.nil?
     end
 end
