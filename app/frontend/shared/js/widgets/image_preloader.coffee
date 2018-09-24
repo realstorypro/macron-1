@@ -31,10 +31,10 @@ class ImagePreloader
       document.addEventListener 'turbolinks:before-cache', ->
         $('[data-src] .ui.dimmer').dimmer('show')
 
+      window.onload = null
       @first_load = false
     else
       @load_images()
-
 
 
 
