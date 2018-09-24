@@ -6,7 +6,7 @@ class ImagePreloader
   instance = null
 
   constructor: ->
-    @first_load = false
+    @first_load = true
 
     if !instance
       instance = this
