@@ -29,7 +29,7 @@ class ImagePreloader
     # we're using event_added to ensure that
     # we only add the event once
     unless @event_added
-      @load_images()
+      window.onload = @load_images()
 
       window.addEventListener 'turbolinks:load', =>
         @load_images()
