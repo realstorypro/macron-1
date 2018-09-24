@@ -24,31 +24,31 @@ class ImagePreloader
     # Setting Dimmer as Active
     $('[data-src] .ui.dimmer').dimmer('set dimmed', true)
 
-    window.addEventListener 'load', =>
-      @load_images()
 
     # TODO: this is a bit hacky. We want to refactorit later
     # we're using event_added to ensure that
     # we only add the event once
     unless @event_added
+      @load_images()
+
       window.addEventListener 'turbolinks:load', =>
         @load_images()
+
+      # Unload Images Before Cache
+      document.addEventListener 'turbolinks:before-cache', ->
+        $('[data-src]').each (index,  value) ->
+          item = $(value)
+          item.css('background-image', '')
+
+        $('[data-src] .ui.dimmer').dimmer('show')
+
       @event_added = true
-
-    # Unload Images Before Cache
-    document.addEventListener 'turbolinks:before-cache', ->
-      $('[data-src]').each (index,  value) ->
-        item = $(value)
-        item.css('background-image', '')
-
-      $('[data-src] .ui.dimmer').dimmer('show')
 
 
   teardown: () ->
     utils.log 'teardown', 'teardown()', 'image_preloader'
 
   load_images: () ->
-    console.log 'load iamges fired'
     $('[data-src]').each (index,  value) ->
 
       if (typeof navigator.connection == 'undefined') || navigator.connection.downlink > 2.5
