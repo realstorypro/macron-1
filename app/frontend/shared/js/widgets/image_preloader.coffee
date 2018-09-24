@@ -6,7 +6,7 @@ class ImagePreloader
   instance = null
 
   constructor: ->
-    @first_load = false
+    @first_load = true
 
     if !instance
       instance = this
@@ -25,6 +25,7 @@ class ImagePreloader
     $('[data-src] .ui.dimmer').dimmer('set dimmed', true)
 
     if @first_load
+      console.log 'first load'
       window.onload = @load_images()
 
       # Add event to unload images before switching ages
