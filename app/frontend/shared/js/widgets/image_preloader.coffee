@@ -28,13 +28,17 @@ class ImagePreloader
       window.onload = @load_images()
 
       # show the dimmer when switching off things
+      # and unloads image before cache
       document.addEventListener 'turbolinks:before-cache', ->
+        $('[data-src]').each (index,  value) ->
+          item = $(value)
+          item.css('background-image', '')
         $('[data-src] .ui.dimmer').dimmer('show')
 
+      window.onload = null
       @first_load = false
     else
       @load_images()
-
 
 
 
@@ -59,9 +63,6 @@ class ImagePreloader
         image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/x#{container_height}/")
       else
         image_src = image_src + "-/resize/x#{container_height}/"
-
-      # make things progressive
-      image_src = image_src + "-/progressive/yes/"
 
       image_css_src = "url(#{image_src})"
       image_klass = item.data('klass')
