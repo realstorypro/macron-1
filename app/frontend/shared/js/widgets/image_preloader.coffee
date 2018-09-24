@@ -49,7 +49,6 @@ class ImagePreloader
     utils.log 'teardown', 'teardown()', 'image_preloader'
 
   load_images: () ->
-    console.log 'load iamges fired'
     $('[data-src]').each (index,  value) ->
 
       if (typeof navigator.connection == 'undefined') || navigator.connection.downlink > 2.5
