@@ -6,7 +6,7 @@ class ImagePreloader
   instance = null
 
   constructor: ->
-    @event_added = false
+    @first_load = false
 
     if !instance
       instance = this
@@ -24,17 +24,10 @@ class ImagePreloader
     # Setting Dimmer as Active
     $('[data-src] .ui.dimmer').dimmer('set dimmed', true)
 
-
-    # TODO: this is a bit hacky. We want to refactorit later
-    # we're using event_added to ensure that
-    # we only add the event once
-    unless @event_added
+    if @first_load
       window.onload = @load_images()
 
-      window.addEventListener 'turbolinks:load', =>
-        @load_images()
-
-      # Unload Images Before Cache
+      # Add event to unload images before switching ages
       document.addEventListener 'turbolinks:before-cache', ->
         $('[data-src]').each (index,  value) ->
           item = $(value)
@@ -42,7 +35,11 @@ class ImagePreloader
 
         $('[data-src] .ui.dimmer').dimmer('show')
 
-      @event_added = true
+      @first_load = false
+    else
+      @load_images()
+
+
 
 
   teardown: () ->
@@ -66,6 +63,9 @@ class ImagePreloader
         image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/x#{container_height}/")
       else
         image_src = image_src + "-/resize/x#{container_height}/"
+
+      # make things progressive
+      image_src = image_src + "-/progressive/yes/"
 
       image_css_src = "url(#{image_src})"
       image_klass = item.data('klass')
