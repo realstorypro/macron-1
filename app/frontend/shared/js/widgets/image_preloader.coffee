@@ -27,12 +27,8 @@ class ImagePreloader
     if @first_load
       window.onload = @load_images()
 
-      # Add event to unload images before switching ages
+      # show the dimmer when switching off things
       document.addEventListener 'turbolinks:before-cache', ->
-        $('[data-src]').each (index,  value) ->
-          item = $(value)
-          item.css('background-image', '')
-
         $('[data-src] .ui.dimmer').dimmer('show')
 
       @first_load = false
