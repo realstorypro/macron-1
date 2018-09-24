@@ -6,8 +6,13 @@ class ImagePreloader
   instance = null
 
   constructor: ->
-    if !instance then instance = this
-    return instance
+    @event_added = false
+
+    if !instance
+      instance = this
+
+    else
+      instance
 
   reinit: () ->
     @teardown()
@@ -22,8 +27,13 @@ class ImagePreloader
     window.addEventListener 'load', =>
       @load_images()
 
-    window.addEventListener 'turbolinks:load', =>
-      @load_images()
+    # TODO: this is a bit hacky. We want to refactorit later
+    # we're using event_added to ensure that
+    # we only add the event once
+    unless @event_added
+      window.addEventListener 'turbolinks:load', =>
+        @load_images()
+      @event_added = true
 
     # Unload Images Before Cache
     document.addEventListener 'turbolinks:before-cache', ->
@@ -38,6 +48,7 @@ class ImagePreloader
     utils.log 'teardown', 'teardown()', 'image_preloader'
 
   load_images: () ->
+    console.log 'load iamges fired'
     $('[data-src]').each (index,  value) ->
 
       if (typeof navigator.connection == 'undefined') || navigator.connection.downlink > 2.5
