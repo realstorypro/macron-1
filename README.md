@@ -12,6 +12,14 @@ AQUARIUS
 foreman start --procfile=Procfile.dev
 ```
 
+## Preparation
+```bash
+
+# pull the database
+heroku pg:pull postgresql-symmetrical-54909 aquarius_development --app demo-idealogic-io-305
+foreman run rake components:setup
+```
+
 ## Enviornment Variables
 ```
 FROM_EMAIL=noreply@idealogic.io
