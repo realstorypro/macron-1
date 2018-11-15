@@ -15,6 +15,9 @@ foreman start --procfile=Procfile.dev
 ## Enviornment Variables
 ```
 FROM_EMAIL=noreply@idealogic.io
+UPLOADCARE_PRIVATE_KEY
+UPLOADCARE_PUBLIC_KEY
+URL
 ```
 
 ### Mail (Development)
