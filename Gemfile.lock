@@ -633,7 +633,7 @@ DEPENDENCIES
   uploadcare-rails (~> 1.1)
   validate_url
   web-console (>= 3.3.0)
-  webpacker (~> 3.0)
+  webpacker (~> 3.5)
   wicked
 
 RUBY VERSION
