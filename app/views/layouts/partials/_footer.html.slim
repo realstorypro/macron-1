@@ -41,14 +41,16 @@
 
       = column size: 16, class: 'center aligned'
         = divider class: footer_item_class
-        = image_tag ss('theme.branding.icon'), class: "ui image mini centered" if ss('theme.footer.icon') == 'show'
         = list "copyright horizontal mini divided link #{footer_item_class}"
-          = item
-            = "&copy; #{ss('theme.footer.copyrights')}".html_safe
           ==  MenuCell.(nil,
                   menu: s('menu.legal'),
                   policy: Pundit.policy(current_user, :headless),
                   request: request,
                   site_settings: @site_settings)
           = item
-            = link_to t('app.powered_by_text'), t('app.powered_by_url')
+            = "&copy; #{ss('theme.footer.copyrights')}".html_safe
+        = divider class: footer_item_class
+        = list "mini link #{footer_item_class} copyright powered"
+          = item url: t('app.powered_by_url'), text: t('app.powered_by_text')
+          = item url: t('app.powered_by_url')
+            = image_tag ('logo_inverted.png'), class: 'ui image footer'

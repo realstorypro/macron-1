@@ -1,6 +1,6 @@
 // Footer
-$f-ftr-padding: 4em 0 3em
-$f-ftr-mobile-padding: 4em 0 3em
+$f-ftr-padding: 4em 0 1.5em
+$f-ftr-mobile-padding: 4em 0 2em
 $f-ftr-header-opacity: 0.95
 $f-ftr-item-opacity: 0.9
 $f-ftr-link-transition: 0.4s all
@@ -22,25 +22,25 @@ $f-ftr-link-transition: 0.4s all
         color: rgba($white, 0.7)
 
   .ui.list.copyright
-    .item, .item a, a.item
-      @if style == regular
-        color: $black
-      @else
-        color: $white
-
-    .item
-      @if style == regular
-        border-left: 1px solid $black
-      @else
-        border-left: 1px solid $white
-      &:first-child
-        border-left: none
-
-      &:hover
+      .item, .item a, a.item
         @if style == regular
-          color: $black !important
+          color: $black
         @else
-          color: $white !important
+          color: $white
+
+      .item
+        @if style == regular
+          border-left: 1px solid $black
+        @else
+          border-left: 1px solid $white
+        &:first-child
+          border-left: none
+
+        &:hover
+          @if style == regular
+            color: $black !important
+          @else
+            color: $white !important
 
 
 .pusher > .footer.fragment
@@ -59,15 +59,36 @@ $f-ftr-link-transition: 0.4s all
     opacity: $f-ftr-item-opacity
 
   .ui.list
+    margin: 0
+
     .item a, a.item
       transition: $f-ftr-link-transition
 
-  .ui.list.copyright
+  .ui.horizontal.list.copyright
     text-transform: uppercase
 
     .item
+      @include media("<tablet")
+        display: block
+        margin-bottom: 1.5em
+        border-left: 0 !important
+
+        &:last-child
+          margin-bottom: 0
+
       &:first-child
         border-left: none
+
+  .ui.mini.link.powered
+    margin-top: 2em
+
+    .item
+      text-transform: uppercase
+      font-weight: bold
+      border-left: 0 !important
+
+  .ui.image.footer
+    width: 100px
 
 @each $color in $g-colors-list
   .pusher > .footer.fragment.#{$color}
