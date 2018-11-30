@@ -10,11 +10,13 @@ class PageController < ApplicationController
     if featured_limit == "auto"
       @featured = Entry.joins(category: :color)
                       .where(type: %w(Article Video Podcast))
+                      .where.not(published_date: nil)
                       .includes(category: :color).order("published_date desc")
                       .limit(5)
     else
       @featured = Entry.joins(category: :color)
                       .where(type: %w(Article Video Podcast))
+                      .where.not(published_date: nil)
                       .includes(category: :color).order("published_date desc")
                       .limit(ss("theme.homepage.featured_items"))
     end
@@ -31,6 +33,7 @@ class PageController < ApplicationController
   def feed
     @entries= Entry.joins(category: :color)
                     .where(type: %w(Article Video Podcast Discussion))
+                    .where.not(published_date: nil)
                     .includes(category: :color).order("published_date desc")
                     .limit(5)
     respond_to do |format|
