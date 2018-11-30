@@ -44,7 +44,6 @@
     "default-passive-events": "^1.0.10",
     "del": "^3.0.0",
     "extend": "^3.0.1",
-    "fsevents": "^1.2.4",
     "global": "^4.3.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
