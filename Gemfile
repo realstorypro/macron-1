@@ -16,8 +16,7 @@ gem "validate_url"
 gem "chronic"
 gem "config"
 gem "erubis"
-gem "friendly_id", "~> 5.1.0"
-gem "wicked"
+gem "friendly_id", "~> 5.1.0" gem "wicked"
 gem "sidekiq"
 gem "store_base_sti_class"
 
@@ -69,7 +68,7 @@ gem "cells-slim"
 gem "chartkick"
 gem "simple_form"
 gem "readingtime"
-gem "webpacker", git: 'https://github.com/rails/webpacker.git'
+gem "webpacker", git: "https://github.com/rails/webpacker.git"
 
 # File Upload
 gem "uploadcare-rails", "~> 1.1"

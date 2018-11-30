@@ -1,9 +1,11 @@
-xml.instruct! :xml, :version => "1.0"
+# frozen_string_literal: true
 
-xml.rss :version => "2.0" do
+xml.instruct! :xml, version: "1.0"
+
+xml.rss version: "2.0" do
   xml.channel do
-    xml.title ss('general.name')
-    xml.description ss('general.description')
+    xml.title ss("general.name")
+    xml.description ss("general.description")
     xml.link root_url
     @entries.each do |entry|
       xml.item do
