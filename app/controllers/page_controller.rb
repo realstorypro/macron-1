@@ -28,6 +28,16 @@ class PageController < ApplicationController
     redirect_to "http://#{ENV['AWS_S3_BUCKET']}.s3.amazonaws.com/sitemaps/sitemap.xml.gz"
   end
 
+  def feed
+    @entries= Entry.joins(category: :color)
+                    .where(type: %w(Article Video Podcast Discussion))
+                    .includes(category: :color).order("published_date desc")
+                    .limit(5)
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
+  end
+
   def action_missing(missing_action, *_args, &_block)
     missing_action.to_s unless page_defined? missing_action
     # giving access to m inside define_method
