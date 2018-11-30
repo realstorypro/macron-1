@@ -87,7 +87,6 @@ Rails.application.routes.draw do
       get "disable_advanced", on: :member
     end
 
-
     resources :pages, component: "pages", controller: "crud"
     resources :articles, component: "articles", controller: "crud"
     resources :events, component: "events", controller: "crud"
@@ -99,7 +98,6 @@ Rails.application.routes.draw do
     resources :tags, component: "tags", controller: "crud"
     resources :categories, component: "categories", controller: "crud"
     resources :support, component: "support", only: %i[index]
-
 
     scope :settings, module: "site_settings", component: "site_settings", as: "settings"  do
       root to: "settings#all"

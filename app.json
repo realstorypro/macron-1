@@ -58,6 +58,7 @@
         "SECRET_KEY_BASE": "2035e6b6440a2bfcac09229995c28b53223498b6a4ca6dc5138bc2f6cb3f315ec0bf02129f07d9626cf2262fdf06d46713b65fd6736df2f7777d1ab9650a94a3"
       },
       "scripts": {
+        "postinstall": "npm rebuild node-sass",
         "test-setup": "./bin/test_prepare",
         "test": "./bin/test_run"
       }

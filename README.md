@@ -7,15 +7,25 @@ AQUARIUS
      
 ![macron1](https://user-images.githubusercontent.com/433219/40011503-dbe773e4-575c-11e8-9c2c-dbb35c84dc1c.jpeg) 
 
-# Running It
+# Running Localy
 ```bash
-foreman s
+foreman start --procfile=Procfile.dev
 ```
 
-### Background Jobs (Development)
-Make sure to ride sidekiq locally
+## Preparation
 ```bash
-foreman run sidekiq -C config/sidekiq.yml --verbose
+
+# pull the database
+heroku pg:pull postgresql-symmetrical-54909 aquarius_development --app demo-idealogic-io-305
+foreman run rake components:setup
+```
+
+## Enviornment Variables
+```
+FROM_EMAIL=noreply@idealogic.io
+UPLOADCARE_PRIVATE_KEY
+UPLOADCARE_PUBLIC_KEY
+URL
 ```
 
 ### Mail (Development)

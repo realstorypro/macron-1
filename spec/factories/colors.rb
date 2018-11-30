@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :color do
-    name "blue"
+    name { "blue" }
   end
 end

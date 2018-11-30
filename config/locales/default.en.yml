@@ -1,7 +1,7 @@
 en:
   app:
-    powered_by_text: 'Powered by IdeaLogic'
-    powered_by_url: 'http://www.idealogic.io'
+    powered_by_text: 'Powered By'
+    powered_by_url: 'https://www.logik.works'
   seo:
     pages:
       terms-of-service:
