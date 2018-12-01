@@ -5,7 +5,7 @@ menu:
       hint: Fonts, overlays, etc
       path: admin_settings_theme_global
       icon: globe
-      enabled: true
+      enabled: false
     - name: Branding
       hint: Logos & icons
       path: admin_settings_theme_branding

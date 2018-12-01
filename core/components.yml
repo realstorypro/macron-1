@@ -14,7 +14,7 @@ components:
   elements:
     klass: 'Elements'
     path: 'elements'
-    enabled: true
+    enabled: false
 
   elements_heading:
     klass: 'Elements::Heading'
@@ -41,7 +41,7 @@ components:
 
   site_settings_components:
     path: 'admin_settings_components'
-    enabled: true
+    enabled: false
 
   site_settings_integration:
     klass: 'SiteSettings::Integrations'
@@ -118,7 +118,7 @@ components:
   pages:
     klass: 'Page'
     path: 'pages'
-    enabled: true
+    enabled: false
     areas:
     - header
     - content
@@ -131,17 +131,17 @@ components:
   events:
     klass: 'Event'
     path: 'events'
-    enabled: true
+    enabled: false
 
   products:
     klass: 'Product'
     path: 'products'
-    enabled: true
+    enabled: false
 
   store:
     klass: 'Product'
     path: 'store'
-    enabled: true
+    enabled: false
 
   discussions:
     klass: 'Discussion'
