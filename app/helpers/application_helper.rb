@@ -9,4 +9,5 @@ module ApplicationHelper
   include ImageHelper
   include NavHelper
   include FooterHelper
+  include EntryHelper
 end

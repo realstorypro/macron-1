@@ -35,6 +35,9 @@ Rails.application.routes.draw do
   # Sitemap
   get "sitemap", to: "page#sitemap"
 
+  # RSS Feed
+  get "feed", to: "page#feed"
+
   resources :members, component: "members", only: %i[index show]
   resource  :profile, controller: "profile", component: "profiles", only: %i[show edit update]
 

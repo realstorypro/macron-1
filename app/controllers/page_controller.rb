@@ -10,11 +10,13 @@ class PageController < ApplicationController
     if featured_limit == "auto"
       @featured = Entry.joins(category: :color)
                       .where(type: %w(Article Video Podcast))
+                      .where.not(published_date: nil)
                       .includes(category: :color).order("published_date desc")
                       .limit(5)
     else
       @featured = Entry.joins(category: :color)
                       .where(type: %w(Article Video Podcast))
+                      .where.not(published_date: nil)
                       .includes(category: :color).order("published_date desc")
                       .limit(ss("theme.homepage.featured_items"))
     end
@@ -26,6 +28,17 @@ class PageController < ApplicationController
 
   def sitemap
     redirect_to "http://#{ENV['AWS_S3_BUCKET']}.s3.amazonaws.com/sitemaps/sitemap.xml.gz"
+  end
+
+  def feed
+    @entries= Entry.joins(category: :color)
+                    .where(type: %w(Article Video Podcast Discussion))
+                    .where.not(published_date: nil)
+                    .includes(category: :color).order("published_date desc")
+                    .limit(5)
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
   end
 
   def action_missing(missing_action, *_args, &_block)
