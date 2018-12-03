@@ -10,5 +10,13 @@ describe PageController, type: :controller do
       response.content_type.should eq("application/rss+xml")
       end
   end
+  describe "GET JSON Feed" do
+    it "retruns an JSON feed" do
+      get :feed, :format => "json"
+      response.should be_success
+      response.should render_template("page/feed")
+      response.content_type.should eq("application/rss+xml")
+      end
+  end
 end
 

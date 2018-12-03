@@ -3,8 +3,8 @@
 echo "== Installing Gems =="
 gem install rubocop
 
-echo "== Rebuilding Node-Sass"
-npm rebuild node-sass
+#echo "== Rebuilding Node-Sass"
+#npm rebuild node-sass
 
 echo "== Precompling Assets =="
 rails assets:precompile
