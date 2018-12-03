@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.title ss("general.name")
 json.description ss("general.description")
 json.link root_url
@@ -10,6 +12,5 @@ json.entries @entries.each do |entry|
   json.type entry.type
   json.category entry.category.name
   json.color entry.category.color.name
-  json.published Time.new(entry.published_date.year, entry.published_date.month, entry.published_date.day).to_formatted_s(:rfc822)
+  json.published long_published_date(entry)
 end
-
