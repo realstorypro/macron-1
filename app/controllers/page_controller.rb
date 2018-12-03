@@ -31,13 +31,17 @@ class PageController < ApplicationController
   end
 
   def feed
-    @entries= Entry.joins(category: :color)
+    @entries = Entry.joins(category: :color)
                     .where(type: %w(Article Video Podcast Discussion))
                     .where.not(published_date: nil)
                     .includes(category: :color).order("published_date desc")
                     .limit(5)
+
+    @age = @entries.maximum("published_date")
+
     respond_to do |format|
-      format.rss { render :layout => false }
+      format.rss { render layout: false }
+      format.json { render layout: false }
     end
   end
 
