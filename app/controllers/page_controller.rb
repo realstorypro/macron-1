@@ -36,8 +36,12 @@ class PageController < ApplicationController
                     .where.not(published_date: nil)
                     .includes(category: :color).order("published_date desc")
                     .limit(5)
+
+    @age = @entries.maximum('published_date')
+
     respond_to do |format|
       format.rss { render :layout => false }
+      format.json { render :layout => false }
     end
   end
 
