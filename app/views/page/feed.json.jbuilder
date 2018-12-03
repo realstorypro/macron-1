@@ -12,5 +12,6 @@ json.entries @entries.each do |entry|
   json.type entry.type
   json.category entry.category.name
   json.color entry.category.color.name
+  json.link entry_url(entry)
   json.published long_published_date(entry)
 end
