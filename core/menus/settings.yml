@@ -10,7 +10,7 @@ menu:
         hint: Manage website components
         path: admin_settings_components
         icon: qrcode
-        enabled: true
+        enabled: false
         advanced: true
       - name: Theme
         hint: Adjust the look and feel of the platform

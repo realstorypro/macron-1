@@ -31,56 +31,56 @@ tests:
           - create
           - destroy
 
-    - component: pages
-      admin:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - destroy
+    # - component: pages
+    #   admin:
+    #     - index
+    #     - show
+    #     - new
+    #     - edit
+    #     - update
+    #     - destroy
 
-    - component: events
-      admin:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - destroy
-      frontend:
-        - index
-        - show
-      crud:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - create
-        - destroy
+    # - component: events
+    #   admin:
+    #     - index
+    #     - show
+    #     - new
+    #     - edit
+    #     - update
+    #     - destroy
+    #   frontend:
+    #     - index
+    #     - show
+    #   crud:
+    #     - index
+    #     - show
+    #     - new
+    #     - edit
+    #     - update
+    #     - create
+    #     - destroy
 
-    - component: products
-      admin:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - destroy
-      crud:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - create
-        - destroy
+    # - component: products
+    #   admin:
+    #     - index
+    #     - show
+    #     - new
+    #     - edit
+    #     - update
+    #     - destroy
+    #   crud:
+    #     - index
+    #     - show
+    #     - new
+    #     - edit
+    #     - update
+    #     - create
+    #     - destroy
 
-    - component: store
-      frontend:
-      - index
-      - show
+    # - component: store
+    #   frontend:
+    #   - index
+    #   - show
 
 
     - component: discussions

@@ -10,19 +10,19 @@ menu:
       hint: Articles look & feel
       path: admin_settings_theme_article
       icon: book
-      enabled: true
+      enabled: false
     - name: Videos
       hint: Videos look & feel
       path: admin_settings_theme_video
       icon: video
-      enabled: true
+      enabled: false
     - name: Discussions
       hint: Discussions look & feel
       path: admin_settings_theme_discussion
       icon: comments
-      enabled: true
+      enabled: false
     - name: Pocasts
       hint: Podcasts look & feel
       path: admin_settings_theme_podcast
       icon: podcast
-      enabled: true
+      enabled: false
