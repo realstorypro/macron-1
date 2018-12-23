@@ -15,10 +15,19 @@
       { href: "#{ss('theme.branding.icon')}-/preview/120x120/", rel: 'apple-touch-icon' },
       { href: "#{ss('theme.branding.icon')}-/preview/152x152/", sizes: '152x152', rel: 'apple-touch-icon' },
       { href: "#{ss('theme.branding.icon')}-/preview/167x167/", sizes: '167x167', rel: 'apple-touch-icon' },
-      { href: "#{ss('theme.branding.icon')}-/preview/180x180/", sizes: '180x180', rel: 'apple-touch-icon' } ]
+      { href: "#{ss('theme.branding.icon')}-/preview/180x180/", sizes: '180x180', rel: 'apple-touch-icon' },
+      { href: "#{ss('theme.branding.icon')}-/preview/192x192/", sizes: '192x192', rel: 'apple-touch-icon' },
+      { href: "#{ss('theme.branding.icon')}-/preview/512x512/", sizes: '512x512', rel: 'apple-touch-icon' },
+      { href: "#{ss('theme.branding.icon')}-/preview/192x192/", sizes: '192x192', rel: 'icon' },
+      { href: "#{ss('theme.branding.icon')}-/preview/512x512/", sizes: '512x512', rel: 'icon' } ]
 
 meta content = 'text/html; charset=UTF-8' http-equiv = 'Content-Type'
 meta content = 'width=device-width initial-scale=1' name = 'viewport'
+
+// PWA 
+link rel="manifest" href="manifest.json"
+meta name="theme-color" content="#000"
+meta name="theme_color" content="#000"
 
 = rel_next_prev_link_tags @entries if @entries
 

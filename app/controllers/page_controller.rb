@@ -45,6 +45,12 @@ class PageController < ApplicationController
     end
   end
 
+  def digest
+    respond_to do |format|
+      format.json { render layout: false }
+    end
+  end
+
   def action_missing(missing_action, *_args, &_block)
     missing_action.to_s unless page_defined? missing_action
     # giving access to m inside define_method

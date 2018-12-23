@@ -1,0 +1,14 @@
+json.name ss('general.name')
+json.short_name ss('general.name')
+json.lang "en-US"
+json.start_url "/"
+json.display "standalone"
+json.theme_color "#000"
+json.background_color "#000"
+
+icons = [
+  {src: image_url('icon.png'), sizes: '512x512'},
+]
+json.icons do 
+  json.merge! icons
+end
