@@ -3,6 +3,9 @@ self.addEventListener('install', function(event) {
       caches.open('v1').then(function(cache) {
             return cache.addAll([
               "/",
+              "https://fonts.googleapis.com/css?family=Releway|Roboto",
+              "<%= stylesheet_pack_url 'client_css' %>",
+              "<%= javascript_pack_url 'client_js' %>",
               "/offline.html",
               "<%= image_url('icon.png') %>"
                   ]);
