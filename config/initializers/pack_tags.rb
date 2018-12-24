@@ -12,10 +12,9 @@ module Webpacker
 
     private
 
-    def source_from_pack(name, type:)
-      return Webpacker.instance.manifest.lookup!("#{name}.css") if type == :stylesheet
-      return Webpacker.instance.manifest.lookup!("#{name}.js") if type == :javascript
-    end
-
+      def source_from_pack(name, type:)
+        return Webpacker.instance.manifest.lookup!("#{name}.css") if type == :stylesheet
+        return Webpacker.instance.manifest.lookup!("#{name}.js") if type == :javascript
+      end
   end
 end
