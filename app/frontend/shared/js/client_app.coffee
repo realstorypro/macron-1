@@ -64,6 +64,7 @@ class Client_app
 
   initialize: ->
     @setup()
+    @register_service_workers()
 
   reload: ->
     @teardown()
@@ -81,6 +82,14 @@ class Client_app
     conversion_tracker.setup()
     shopify_button.setup()
     navigation.setup()
+
+  register_service_workers: ->
+    return unless 'serviceWorker' of navigator
+    navigator.serviceWorker.register('/worker.js').then((reg) ->
+        console.log 'Service Worker Registration succeeded' + reg.scope
+      ).catch (error) ->
+        console.log 'Registration failed with ' + error
+
 
   teardown: ->
     dispatcher.teardown()

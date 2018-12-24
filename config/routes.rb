@@ -41,6 +41,9 @@ Rails.application.routes.draw do
   # PWA Manifest File
   get "manifest", to: "page#manifest"
 
+  # Service Worker
+  get "worker", to: "page#worker"
+
   resources :members, component: "members", only: %i[index show]
   resource  :profile, controller: "profile", component: "profiles", only: %i[show edit update]
 

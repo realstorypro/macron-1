@@ -6,6 +6,8 @@ json.display "standalone"
 json.theme_color "#000"
 json.background_color "#000"
 
+# TODO: pull from an uploaded image
+
 icons = [
   {src: image_url('icon.png'), sizes: '512x512'},
 ]
