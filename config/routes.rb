@@ -3,6 +3,8 @@
 Rails.application.routes.draw do
   # Pulling in Root from Configuration
   root to: Settings.defaults.root_route.to_s
+  get 'index', to: Settings.defaults.root_route.to_s
+
 
   # Exceptions
   get "403", to: "exceptions#forbidden"

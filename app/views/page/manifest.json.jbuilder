@@ -1,7 +1,7 @@
 json.name ss('general.name')
 json.short_name ss('general.name')
 json.lang "en-US"
-json.start_url "/"
+json.start_url "./index.html"
 json.display "standalone"
 json.theme_color "#000"
 json.background_color "#000"
