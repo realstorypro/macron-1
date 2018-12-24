@@ -37,6 +37,9 @@ Rails.application.routes.draw do
 
   # RSS Feed
   get "feed", to: "page#feed"
+  
+  # PWA Manifest File
+  get "manifest", to: "page#manifest"
 
   resources :members, component: "members", only: %i[index show]
   resource  :profile, controller: "profile", component: "profiles", only: %i[show edit update]
