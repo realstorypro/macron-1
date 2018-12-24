@@ -3,7 +3,7 @@ self.addEventListener('install', function(event) {
       caches.open('v1').then(function(cache) {
             return cache.addAll([
               "/",
-              "/500.html",
+              "/offline.html",
               "<%= image_url('icon.png') %>"
                   ]);
           })
@@ -18,7 +18,7 @@ self.addEventListener('fetch', function onFetch(event) {
   event.respondWith(
       fetch(request).catch(function fallback() {
                 caches.match(request).then(function(response) {
-                  response || caches.match("/500.html");
+                  response || caches.match("/offline.html");
                 })
       })
     );
