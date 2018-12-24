@@ -3,11 +3,14 @@ self.addEventListener('install', function(event) {
       caches.open('v1').then(function(cache) {
             return cache.addAll([
               "/",
+              "/worker.js",
               "https://fonts.googleapis.com/css?family=Releway|Roboto",
               "<%= stylesheet_pack_url 'client_css' %>",
               "<%= javascript_pack_url 'client_js' %>",
               "/offline.html",
-              "<%= image_url('icon.png') %>"
+              "<%= image_url(ss('theme.branding.logo')) %>",
+              "<%= image_url(ss('theme.branding.inverted_logo')) %>",
+              "<%= image_url(ss('theme.branding.icon')) %>"
                   ]);
           })
     );
