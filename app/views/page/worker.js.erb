@@ -2,8 +2,24 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
       caches.open('v1').then(function(cache) {
             return cache.addAll([
+              "/",
+              "/offline.html",
               "<%= image_url('icon.png') %>"
                   ]);
           })
+    );
+});
+
+self.addEventListener('fetch', function onFetch(event) {
+  var request = event.request;
+
+  if (request.method !== 'GET') { return; }
+
+  event.respondWith(
+      fetch(request).catch(function fallback() {
+                caches.match(request).then(function(response) {
+                  response || caches.match("/offline.html");
+                })
+      })
     );
 });
