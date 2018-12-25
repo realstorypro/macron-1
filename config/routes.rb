@@ -37,7 +37,7 @@ Rails.application.routes.draw do
 
   # RSS Feed
   get "feed", to: "page#feed"
-  
+
   # PWA Manifest File
   get "manifest", to: "page#manifest"
 
