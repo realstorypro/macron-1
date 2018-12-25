@@ -3,11 +3,11 @@
 module Webpacker
   module Helper
     def stylesheet_pack_url(name)
-      '/' + source_from_pack(name, type: :stylesheet)
+      Rails.application.config.action_controller.asset_host.to_s + source_from_pack(name, type: :stylesheet)
     end
 
     def javascript_pack_url(name)
-      '/' + source_from_pack(name, type: :javascript)
+      Rails.application.config.action_controller.asset_host.to_s + source_from_pack(name, type: :javascript)
     end
 
     private
