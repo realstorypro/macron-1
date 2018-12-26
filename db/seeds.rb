@@ -3,9 +3,9 @@ if User.find_by_email("support@idealogic.io").nil?
 
   password = "id3aman@#{rand(1..5)}"
   user = User.new
-  user.email = "support@idealogic.io"
-  user.username = "support"
-  user.slug = "support"
+  user.email = "support@goodlogik.com"
+  user.username = "logiksupport"
+  user.slug = "logiksupport"
   user.password = password
   user.password_confirmation = password
   user.add_role "admin"
