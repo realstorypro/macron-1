@@ -3,7 +3,6 @@
 class PageController < ApplicationController
   layout "layouts/client"
   before_action :set_meta_data, except: %i[sitemap home]
-  skip_before_action :verify_authenticity_token, only: :worker
 
   def home
     featured_limit = ss("theme.homepage.featured_items")
@@ -43,18 +42,6 @@ class PageController < ApplicationController
     respond_to do |format|
       format.rss { render layout: false }
       format.json { render layout: false }
-    end
-  end
-
-  def digest
-    respond_to do |format|
-      format.json { render layout: false }
-    end
-  end
-
-  def worker
-    respond_to do |format|
-      format.js { render layout: false }
     end
   end
 
