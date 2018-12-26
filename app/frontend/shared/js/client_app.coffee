@@ -86,7 +86,7 @@ class Client_app
   register_service_workers: ->
     return unless 'serviceWorker' of navigator
     navigator.serviceWorker.register('/worker.js').then((reg) ->
-        console.log 'Service Worker Registration Successful'
+        console.log 'Service Worker Registration Successful at:', reg.scope
       ).catch (error) ->
         console.log 'Registration failed with ' + error
 
