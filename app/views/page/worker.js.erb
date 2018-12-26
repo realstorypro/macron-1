@@ -10,6 +10,7 @@ self.addEventListener('install', function(event) {
               "/worker.js",
               "https://fonts.googleapis.com/css?family=Releway|Roboto",
               "<%= stylesheet_pack_url 'client_css' %>",
+              "<%= stylesheet_pack_url 'client_deferred_css' %>",
               "<%= javascript_pack_url 'client_js' %>",
               "/offline.html",
               "<%= image_url(ss('theme.branding.logo')) %>",
