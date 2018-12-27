@@ -14,14 +14,10 @@ module SiteSettings
 
     validates :url, url: { schemes: ["https"] }
 
-
-
     def self.instance
-      General.first_or_create! do |settings|
-        settings.name = "Content hub by Idealogic"
-        settings.description = "Short hub description"
-        settings.url = "https://hub.idealogic.io"
-      end
+      instance = General.first_or_create!
+      #instance.update_defaults
+      instance
     end
   end
 end

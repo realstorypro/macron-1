@@ -12,6 +12,9 @@ module Autoloadable
       class_name = self.name.downcase.singularize
       class_name = class_name.gsub("sitesettings", "site_settings")
       class_name = class_name.gsub("::", "_")
+
+      # set defaults for settings
+      @set_defaults = true
     end
 
     # and elements
@@ -38,5 +41,17 @@ module Autoloadable
       content_attr field[0], data_type.which?(field[1].type)
       validates_presence_of field[0] if field[1].required
     end
+
+    # setting defaults
+    if @set_defaults
+      instance = self.first_or_create!
+
+      fields.each do |field|
+        instance.send("#{field[0]}=",field[1].default) unless instance.payload.key?(field[0].to_s)
+      end
+
+      instance.save
+    end
+
   end
 end
