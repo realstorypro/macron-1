@@ -15,9 +15,7 @@ module SiteSettings
     validates :url, url: { schemes: ["https"] }
 
     def self.instance
-      instance = General.first_or_create!
-      #instance.update_defaults
-      instance
+      General.first_or_create!
     end
   end
 end

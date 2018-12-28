@@ -54,6 +54,5 @@ module Autoloadable
 
       instance.save
     end
-
   end
 end
