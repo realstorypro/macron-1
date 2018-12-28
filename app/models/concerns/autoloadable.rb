@@ -39,7 +39,7 @@ module Autoloadable
     # adding payload
     fields.each do |field|
       content_attr field[0], data_type.which?(field[1].type)
-      validates_presence_of field[0] if field[1].required
+      validates_presence_of field[0], on: :update if field[1].required
     end
 
     # setting defaults
@@ -47,7 +47,9 @@ module Autoloadable
       instance = self.first_or_create!
 
       fields.each do |field|
-        instance.send("#{field[0]}=",field[1].default) unless instance.payload.key?(field[0].to_s)
+        if instance.payload.nil? || !instance.payload.key?(field[0].to_s)
+          instance.send("#{field[0]}=", field[1].default)
+        end
       end
 
       instance.save
