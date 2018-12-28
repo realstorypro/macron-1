@@ -12,10 +12,12 @@ module SiteSettings
     content_attr :name, :string
     validates_presence_of :name
 
-    validates :url, url: { schemes: ["https"] }
+    validates :url, url: { schemes: ["https"] }, on: :update
 
     def self.instance
-      General.first_or_create!
+      General.first_or_create! do
+        settings.name = "Logik"
+      end
     end
   end
 end
