@@ -9,14 +9,7 @@ module SiteSettings::Theme
     end
 
     def self.instance
-      Header.first_or_create! do |settings|
-        settings.desktop_logo_size = 150
-        settings.mobile_logo_size = 120
-
-        settings.menu_color = "black"
-        settings.button_color = "black"
-        settings.menu_position = "left"
-      end
+      Header.first_or_create!
     end
   end
 end

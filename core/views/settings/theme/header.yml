@@ -8,12 +8,14 @@ views:
         label: 'Color'
         type: 'color'
         required: true
+        default: 'black'
 
       button_color:
         advanced: true
         label: 'Button Color'
         type: 'color'
         required: true
+        default: 'black'
 
       menu_position:
         advanced: true
@@ -23,6 +25,7 @@ views:
         - 'left'
         - 'right'
         required: true
+        default: 'left'
 
       logo_header:
         type: 'header'
@@ -34,6 +37,7 @@ views:
         type: 'string'
         hint: '(in pixels)'
         maxlength: '3'
+        default: 150
 
       mobile_logo_size:
         advanced: true
@@ -41,3 +45,4 @@ views:
         type: 'string'
         hint: '(in pixels)'
         maxlength: '3'
+        default: 120

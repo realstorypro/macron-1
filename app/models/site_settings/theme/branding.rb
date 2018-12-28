@@ -9,11 +9,7 @@ module SiteSettings::Theme
     end
 
     def self.instance
-      Branding.first_or_create! do |settings|
-        settings.logo = "logo.png"
-        settings.inverted_logo = "logo_inverted.png"
-        settings.icon = "icon.png"
-      end
+      Branding.first_or_create!
     end
   end
 end

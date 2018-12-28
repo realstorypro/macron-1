@@ -9,12 +9,14 @@ views:
         label: 'Color'
         type: 'color'
         required: true
+        default: 'black'
 
       button_color:
         advanced: true
         label: 'Button Color'
         type: 'color'
         required: true
+        default: 'white'
 
       button_style:
         advanced: true
@@ -24,6 +26,7 @@ views:
         - regular
         - inverted
         required: true
+        default: 'regular'
 
       icon:
         advanced: true
@@ -33,6 +36,7 @@ views:
         - show
         - hide
         required: true
+        default: 'show'
 
       item_order:
         advanced: true
@@ -42,6 +46,7 @@ views:
         - auto
         - reversed
         required: true
+        default: 'auto'
 
       content_header:
         type: 'header'
@@ -52,8 +57,10 @@ views:
         type: 'rich'
         hint: 'Write two short paragraphs describing the web site.'
         required: true
+        default: '<p>Lorem ipsum dolor sit amet</p>'
 
       copyrights:
         label: 'Copyrights'
         type: 'string'
         required: true
+        default: '2017-2018 Logik'

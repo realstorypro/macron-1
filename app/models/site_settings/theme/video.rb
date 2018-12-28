@@ -12,9 +12,7 @@ module SiteSettings::Theme
     content_attr :menu_style, :string
 
     def self.instance
-      Video.first_or_create! do |settings|
-        settings.menu_style = "transparent"
-      end
+      Video.first_or_create!
     end
   end
 end

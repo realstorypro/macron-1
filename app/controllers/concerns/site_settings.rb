@@ -51,6 +51,7 @@ module SiteSettings
         site_settings[:theme][:video] = video_theme_settings
 
         site_settings = site_settings.to_json
+        byebug
 
         $redis.set("site_settings", site_settings)
       end

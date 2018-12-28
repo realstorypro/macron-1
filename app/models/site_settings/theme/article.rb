@@ -9,9 +9,7 @@ module SiteSettings::Theme
     end
 
     def self.instance
-      Article.first_or_create! do |settings|
-        settings.menu_style = "transparent"
-      end
+      Article.first_or_create!
     end
   end
 end

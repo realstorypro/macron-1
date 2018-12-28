@@ -10,4 +10,5 @@ views:
         - transparent
         - matching solid
         - matching transparent
+        default: 'transparent'
 

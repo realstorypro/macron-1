@@ -15,6 +15,7 @@ views:
         - Relevay
         - Roboto
         required: true
+        default: 'Relevay'
 
       body_font:
         advanced: true
@@ -25,6 +26,7 @@ views:
         - Relevay
         - Roboto
         required: true
+        default: 'Roboto'
 
       overlay_header:
         advanced: true
@@ -39,3 +41,4 @@ views:
         - auto
         - fixed
         required: true
+        default: 'auto'
