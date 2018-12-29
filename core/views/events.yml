@@ -1,7 +1,7 @@
 views:
   events:
     config:
-      set_defaults: true
+      set_defaults: false
       rejected_field_names: 'name slug published_date'
     new:
       meta_header:
