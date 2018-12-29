@@ -1,5 +1,8 @@
 views:
   events:
+    config:
+      set_defaults: true
+      rejected_field_names: 'name slug published_date'
     new:
       meta_header:
         type: 'header'

@@ -78,6 +78,7 @@ views:
         label: 'Content Top Padding'
         type: 'integer'
         hint: '(In EM)'
+        default: 0
 
       content_icons:
         advanced: true

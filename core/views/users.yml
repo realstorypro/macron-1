@@ -1,5 +1,8 @@
 views:
   users:
+    config:
+      set_defaults: true
+      rejected_field_names: 'name slug published_date'
     new:
       email:
         label: 'Email'
