@@ -1,5 +1,8 @@
 views:
   site_settings_theme_footer:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       styling_header:
         type: 'header'

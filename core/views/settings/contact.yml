@@ -1,5 +1,8 @@
 views:
   site_settings_contact:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       contact_header:
         type: 'header'

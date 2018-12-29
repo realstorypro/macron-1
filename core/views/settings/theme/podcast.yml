@@ -1,5 +1,8 @@
 views:
   site_settings_theme_podcast:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       menu_style:
         advanced: true
@@ -11,4 +14,4 @@ views:
         - matching solid
         - matching transparent
         default: 'transparent'
-
+        required: true

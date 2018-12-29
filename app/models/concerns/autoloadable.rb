@@ -12,9 +12,6 @@ module Autoloadable
       class_name = self.name.downcase.singularize
       class_name = class_name.gsub("sitesettings", "site_settings")
       class_name = class_name.gsub("::", "_")
-
-      # set defaults for settings
-      @set_defaults = true
     end
 
     # and elements
@@ -29,10 +26,15 @@ module Autoloadable
     # pull in the fields
     fields = setting.fetch_setting("views.#{class_name}.new")
 
+    # pull in configuration
+    config = setting.fetch_setting("views.#{class_name}.config")
+
     # removing non payloadable fields
     rejected_types = %w(header association dropdown).freeze
 
-    rejected_names = %w(name slug published_date).freeze
+    # rejected_names = %w(name slug published_date).freeze
+    rejected_names = config&.rejected_field_names.split(' ')
+
     fields = fields.reject { |field| rejected_types.include?(field[1].type) }
     fields = fields.reject { |field| rejected_names.include?(field[0].to_s) }
 
@@ -43,7 +45,7 @@ module Autoloadable
     end
 
     # setting defaults
-    if @set_defaults
+    if config&.set_defaults
       instance = self.first_or_create!
 
       fields.each do |field|

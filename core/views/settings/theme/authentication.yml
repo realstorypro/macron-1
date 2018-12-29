@@ -1,5 +1,8 @@
 views:
   site_settings_theme_authentication:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       sign_up_title:
         advanced: true

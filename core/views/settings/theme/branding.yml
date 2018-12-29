@@ -1,5 +1,8 @@
 views:
   site_settings_theme_branding:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       logo:
         label: 'Logo'

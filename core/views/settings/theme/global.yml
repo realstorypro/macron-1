@@ -1,5 +1,8 @@
 views:
   site_settings_theme_global:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       font_header:
         advanced: true
