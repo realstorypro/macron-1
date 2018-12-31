@@ -36,8 +36,7 @@ module Zapier
     private
 
       def load_site_settings
-        site_settings = $redis.get("site_settings")
-        @site_settings = JSON.parse(site_settings)
+        @site_settings = $site_setting_interface.fetch_json
       end
   end
 end
