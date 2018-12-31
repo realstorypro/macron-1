@@ -7,6 +7,7 @@ class SiteSettingInterface
   def initialize(redis, namespace)
     @redis = redis
     @namespace = namespace
+    @initialized = false
   end
 
   def update
@@ -46,6 +47,7 @@ class SiteSettingInterface
 
     site_settings = site_settings.to_json
     @redis.set @namespace, site_settings
+    @initialized = true
   end
 
   def fetch_json
@@ -53,6 +55,6 @@ class SiteSettingInterface
   end
 
   def clear_cache
-    $redis.del @namespace
+    $redis.del @namespace unless @initialized
   end
 end
