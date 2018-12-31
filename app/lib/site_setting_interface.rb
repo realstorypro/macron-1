@@ -51,4 +51,8 @@ class SiteSettingInterface
   def fetch_json
     JSON.parse @redis.get(@namespace)
   end
+
+  def clear_cache
+    $redis.del @namespace
+  end
 end

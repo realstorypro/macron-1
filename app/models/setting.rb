@@ -9,7 +9,7 @@ class Setting < ApplicationRecord
     errors.add(:base, "already one setting object existing") && (return false) if !self.new_record? && self.exists?
   end
 
-  #after_save :clear_cache
+  after_save :clear_cache
 
   def self.instance
     self.first_or_create!
@@ -22,7 +22,7 @@ class Setting < ApplicationRecord
   private
 
     def clear_cache
-      $redis.del "site_settings"
+      $site_setting_interface.clear_cache
     end
 end
 

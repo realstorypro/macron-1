@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 # rubocop:disable GlobalVars
-# rubocop:disable Metrics/LineLength
 
 module SiteSettings
   extend ActiveSupport::Concern
@@ -23,4 +22,3 @@ module SiteSettings
 end
 
 # rubocop:enable GlobalVars
-# rubocop:enable Metrics/LineLength
