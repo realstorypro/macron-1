@@ -1,5 +1,8 @@
 views:
   elements_heading:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       header:
         label: 'Header'
