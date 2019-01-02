@@ -14,6 +14,9 @@ require "friendly_id"
 
 ActiveRecord::Migration.maintain_test_schema!
 
+# Ensuring site settings are loaded for the test
+$site_setting_interface.update
+
 RSpec.configure do |config|
   config.include Devise::Test::IntegrationHelpers
   config.include Warden::Test::Helpers, type: :controller

@@ -1,5 +1,8 @@
 views:
   site_settings_general:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       general_header:
         type: 'header'
@@ -8,14 +11,16 @@ views:
         label: 'Name'
         type: 'string'
         hint: 'Site name. Used in page title generation. Critical for SEO.'
+        default: 'Logik'
         required: true
       description:
         label: 'Description'
         type: 'string'
+        default: 'Content Publishing Platform'
         required: true
       url:
         label: 'URL'
         type: 'string'
         hint: 'Must start with https://'
+        default: 'https://post.goodlogik.com'
         required: true
-

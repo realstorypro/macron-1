@@ -18,7 +18,7 @@ module SiteSettings
 
     private
       def clear_cache
-        $redis.del "site_settings"
+        $site_setting_interface.clear_cache
       end
   end
 end

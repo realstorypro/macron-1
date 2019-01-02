@@ -6,13 +6,13 @@ class Setting < ApplicationRecord
   include Payloadable
 
   before_create do
-    # errors.add(:base, "already one setting object existing") && (return false) if Setting.exists?
+    errors.add(:base, "already one setting object existing") && (return false) if !self.new_record? && self.exists?
   end
 
   after_save :clear_cache
 
   def self.instance
-    Setting.first_or_create
+    self.first_or_create!
   end
 
   def self.policy_class
@@ -22,7 +22,7 @@ class Setting < ApplicationRecord
   private
 
     def clear_cache
-      $redis.del "site_settings"
+      $site_setting_interface.clear_cache
     end
 end
 

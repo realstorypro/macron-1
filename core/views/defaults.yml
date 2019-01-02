@@ -1,5 +1,8 @@
 views:
   defaults:
+    config:
+      set_defaults: false
+      rejected_field_names: 'name slug published_date'
     basiclist:
       name:
         label: 'Short Title'

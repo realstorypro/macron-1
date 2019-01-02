@@ -1,13 +1,18 @@
 views:
   site_settings_theme_homepage:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       menu_color:
         label: 'Menu Color'
         type: 'color'
+        default: 'black'
 
       overlay_color:
         label: 'Overlay Color'
         type: 'color'
+        default: 'black'
 
       overlay_background:
         advanced: true
@@ -16,6 +21,7 @@ views:
         options:
         - normal
         - gradient
+        default: 'normal'
 
       image_style:
         advanced: true
@@ -24,6 +30,7 @@ views:
         options:
         - normal
         - fixed
+        default: 'normal'
 
       category_style:
         advanced: true
@@ -34,6 +41,7 @@ views:
         - divided
         - white boxed
         - black boxed
+        default: 'normal'
 
       item_order:
         advanced: true
@@ -42,6 +50,7 @@ views:
         options:
         - auto
         - reversed
+        default: 'auto'
 
       featured_items:
         advanced: true
@@ -53,6 +62,7 @@ views:
         - 3
         - 4
         - 5
+        default: 5
 
       discussion_items:
         advanced: true
@@ -61,12 +71,14 @@ views:
         options:
         - 3
         - 6
+        default: 6
 
       content_top_padding:
         advanced: true
         label: 'Content Top Padding'
         type: 'integer'
         hint: '(In EM)'
+        default: 0
 
       content_icons:
         advanced: true
@@ -75,6 +87,7 @@ views:
         options:
         - show
         - hide
+        default: 'show'
 
       comment_count:
         advanced: true
@@ -83,3 +96,4 @@ views:
         options:
         - show
         - hide
+        default: 'hide'

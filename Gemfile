@@ -69,7 +69,7 @@ gem "cells-slim"
 gem "chartkick"
 gem "simple_form"
 gem "readingtime"
-gem "webpacker", git: "https://github.com/rails/webpacker.git"
+gem "webpacker", "~> 3.5"
 
 # File Upload
 gem "uploadcare-rails", "~> 1.1"

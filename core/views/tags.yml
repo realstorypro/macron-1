@@ -1,5 +1,8 @@
 views:
   tags:
+    config:
+      set_defaults: false
+      rejected_field_names: 'name slug published_date'
     new:
       name:
         label: 'Name'

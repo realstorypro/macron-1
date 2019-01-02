@@ -33,10 +33,7 @@ class ApplicationController < ActionController::Base
     # todo: this ~may~ be a hack ... reevaluate
     # the meta_routing_spec is failing when redis isnt loading
     # we're making sure that the site settings pulled up by redis do in fact exist
-    site_settings = nil
-
-    redis_site_settings = $redis.get("site_settings")
-    site_settings = JSON.parse(redis_site_settings) unless redis_site_settings.nil?
+    site_settings = $site_setting_interface.fetch_json
 
     unless site_settings.nil? || site_settings["integration"]["segment_server_key"].nil?
       analytics = Segment::Analytics.new(write_key: site_settings["integration"]["segment_server_key"])

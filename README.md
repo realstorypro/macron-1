@@ -45,6 +45,19 @@ You can read the sent mail by pointing the  web browser to  **http://127.0.0.1:1
 
 # Framework
 
+## Site Settings
+The site settings are stored in __SiteSettings__ and include the __Autoloadable__ module.
+``` ruby
+## Article Settings
+
+module SiteSettings::Theme
+  class Article < Setting
+    include Autoloadable
+  end
+end
+
+```
+
 ## Authentication
 The authentication is driven by the auth.yml file located under _core/auth.yml_ and is structured as follows
 ```yml

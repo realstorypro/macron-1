@@ -1,5 +1,8 @@
 views:
   site_settings_theme_video:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       menu_style:
         advanced: true
@@ -10,3 +13,5 @@ views:
         - transparent
         - matching solid
         - matching transparent
+        default: 'transparent'
+        required: true

@@ -1,5 +1,8 @@
 views:
   site_settings_theme_authentication:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
     new:
       sign_up_title:
         advanced: true
@@ -7,6 +10,7 @@ views:
         type: 'string'
         hint: 'Title of the Sign Up Box'
         required: true
+        default: 'Sign Up'
 
       sign_up_subtitle:
         advanced: true
@@ -14,6 +18,7 @@ views:
         type: 'string'
         hint: 'Sub Title of the Sign Up Box'
         required: true
+        default: 'Join The Community'
 
       sign_in_title:
         advanced: true
@@ -21,9 +26,11 @@ views:
         type: 'string'
         hint: 'Title of the Sign In Box'
         required: true
+        default: 'Sign In'
 
       auth_background:
         label: 'Authentication'
         type: 'image'
         size: ['2560','1600']
         required: true
+        default: 'logo.png'
