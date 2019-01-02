@@ -46,8 +46,10 @@ You can read the sent mail by pointing the  web browser to  **http://127.0.0.1:1
 # Framework
 
 ## Site Settings
-The site settings are stored in __SiteSettings__
+The site settings are stored in __SiteSettings__ and include the __Autoloadable__ module.
 ``` ruby
+## Article Settings
+
 module SiteSettings::Theme
   class Article < Setting
     include Autoloadable
