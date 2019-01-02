@@ -16,10 +16,10 @@ module SiteSettings
 
       if @site_settings.nil?
         $site_setting_interface.update
-        @analytic = Segment::Analytics.new(write_key: ss("integration.segment_server_key"))
+        @analytics = Segment::Analytics.new(write_key: ss("integration.segment_server_key"))
       end
 
-      @analytic ||= Segment::Analytics.new(write_key: ss("integration.segment_server_key"))
+      @analytics ||= Segment::Analytics.new(write_key: ss("integration.segment_server_key"))
     end
 end
 
