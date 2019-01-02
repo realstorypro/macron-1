@@ -6,10 +6,10 @@
           = item tag: :button, class: "enhanced button icon hamburger left", url: '', v: {'on:click.prevent': "toggle_sidenav()"}
             = icon 'large sidebar'
         = item(name: 'Logo', class: "logo link #{'flush ' if ss('theme.header.menu_position') == 'right'}", url: root_path) do
-          = image_tag ss('theme.branding.logo'), class: 'desktop logo image normal', style: "width: #{ss('theme.header.desktop_logo_size')}px;"
-          = image_tag ss('theme.branding.inverted_logo'), class: 'desktop logo image inverted', style: "width: #{ss('theme.header.desktop_logo_size')}px;"
-          = image_tag ss('theme.branding.logo'), class: 'mobile logo image normal', style: "width: #{ss('theme.header.mobile_logo_size')}px;"
-          = image_tag ss('theme.branding.inverted_logo'), class: 'mobile logo image inverted', style: "width: #{ss('theme.header.mobile_logo_size')}px;"
+          = image_tag ss('theme.branding.logo'), class: 'desktop logo image normal', style: "width: #{ss('theme.header.desktop_logo_size')}px;", alt: 'Logo'
+          = image_tag ss('theme.branding.inverted_logo'), class: 'desktop logo image inverted', style: "width: #{ss('theme.header.desktop_logo_size')}px;", alt: 'Inverted Logo'
+          = image_tag ss('theme.branding.logo'), class: 'mobile logo image normal', style: "width: #{ss('theme.header.mobile_logo_size')}px;", alt: 'Mobile Logo'
+          = image_tag ss('theme.branding.inverted_logo'), class: 'mobile logo image inverted', style: "width: #{ss('theme.header.mobile_logo_size')}px;", alt: 'Inverted Mobile Logo'
       = menu class: 'floated right'
         - if user_signed_in?
           = dropdown 'item widgeted compact profile top right pointing'
