@@ -47,6 +47,7 @@ class SiteSettingInterface
 
     site_settings = site_settings.to_json
     @redis.set @namespace, site_settings
+
     @initialized = true
   end
 
@@ -55,6 +56,6 @@ class SiteSettingInterface
   end
 
   def clear_cache
-    $redis.del @namespace unless @initialized
+    $redis.del @namespace if @initialized
   end
 end
