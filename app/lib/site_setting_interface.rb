@@ -52,7 +52,9 @@ class SiteSettingInterface
   end
 
   def fetch_json
-    JSON.parse @redis.get(@namespace)
+    json = @redis.get(@namespace)
+    return JSON.parse(json) unless json.nil?
+    nil
   end
 
   def clear_cache
