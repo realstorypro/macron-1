@@ -9,7 +9,7 @@ class Setting < ApplicationRecord
     errors.add(:base, "already one setting object existing") && (return false) if !self.new_record? && self.exists?
   end
 
-  # after_save :clear_cache
+  after_save :clear_cache
 
   def self.instance
     self.first_or_create!
