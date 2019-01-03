@@ -4,7 +4,7 @@ require "rails_helper"
 
 describe SiteSettingInterface, "initalized site setting interface" do
   before :all do
-    @settings = SiteSettingInterface.new $redis, 'site_settings'
+    @settings = SiteSettingInterface.instance
   end
 
   it "the update should not raise error" do

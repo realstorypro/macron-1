@@ -327,7 +327,8 @@ Redis.</p>
 9
 10
 11
-12</pre>
+12
+13</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 9</span>
@@ -335,6 +336,7 @@ Redis.</p>
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_redis'>redis</span><span class='comma'>,</span> <span class='id identifier rubyid_namespace'>namespace</span><span class='rparen'>)</span>
   <span class='ivar'>@redis</span> <span class='op'>=</span> <span class='id identifier rubyid_redis'>redis</span>
   <span class='ivar'>@namespace</span> <span class='op'>=</span> <span class='id identifier rubyid_namespace'>namespace</span>
+  <span class='ivar'>@initialized</span> <span class='op'>=</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -411,7 +413,8 @@ Redis.</p>
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'>
-<p>This only happens after the SiteSetting Interface has been initialized.</p>
+<p>the cache is only deleted after the object was initialized for the first
+time. Otherwise false is returned.</p>
 </div>
   </div>
 
@@ -430,15 +433,25 @@ Redis.</p>
       <pre class="lines">
 
 
-65
-66
-67</pre>
+68
+69
+70
+71
+72
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clear_cache'>clear_cache</span>
-  <span class='gvar'>$redis</span><span class='period'>.</span><span class='id identifier rubyid_del'>del</span> <span class='ivar'>@namespace</span> <span class='kw'>if</span> <span class='ivar'>@initialized</span>
+  <span class='kw'>if</span> <span class='ivar'>@initialized</span>
+    <span class='gvar'>$redis</span><span class='period'>.</span><span class='id identifier rubyid_del'>del</span> <span class='ivar'>@namespace</span> 
+    <span class='kw'>return</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -471,14 +484,14 @@ Redis.</p>
       <pre class="lines">
 
 
-57
 58
 59
 60
-61</pre>
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_json'>fetch_json</span>
   <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='ivar'>@redis</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='ivar'>@namespace</span><span class='rparen'>)</span>
@@ -517,7 +530,6 @@ Redis</p>
       <pre class="lines">
 
 
-15
 16
 17
 18
@@ -556,10 +568,11 @@ Redis</p>
 51
 52
 53
-54</pre>
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
   <span class='id identifier rubyid_site_settings'>site_settings</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -611,7 +624,7 @@ Redis</p>
 </div>
 
       <div id="footer">
-  Generated on Thu Jan  3 08:05:54 2019 by
+  Generated on Thu Jan  3 08:43:15 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>

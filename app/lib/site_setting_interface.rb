@@ -2,17 +2,15 @@
 
 # Responsible for setting, retreiving and erasing the SiteSettings
 class SiteSettingInterface
-  attr_accessor :settings
+  include Singleton
 
-  # @param redis [Object] the redis object that operates on redis store
-  # @param namespace [String] the namespace to use for storing variable settings
-  def initialize(redis, namespace)
-    @redis = redis
-    @namespace = namespace
+  def initialize
+    @redis = Redis::Namespace.new("aquarius", redis: Redis.new)
+    @namespace = "site_settings"
     @initialized = false
   end
 
-  # Retreives settings from the DB, converts them to JSON and stores them in Redis
+  # Retrieves settings from the DB, converts them to JSON and stores them in Redis
   def update
     site_settings = Hash.new
 
@@ -63,10 +61,11 @@ class SiteSettingInterface
 
   # Erases Redis Cache
   # @note the cache is only deleted after the object was initialized
-  # for the first time. Otherwise false is returned.
+  #   for the first time. Otherwise false is returned.
+
   def clear_cache
     if @initialized
-      $redis.del @namespace 
+      @redis.del @namespace
       return true
     end
 
