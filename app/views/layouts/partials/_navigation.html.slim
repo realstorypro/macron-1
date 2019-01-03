@@ -3,17 +3,17 @@
     = widget ui: :on, class: "secondary menu", name: 'navigation_buttons', id: 'navigation_buttons', vue: :on
       = menu ui: :on, class: 'secondary'
         - if ss('theme.header.menu_position') == 'left'
-          = item tag: :button, class: "enhanced button icon hamburger left", url: '', v: {'on:click.prevent': "toggle_sidenav()"}
-            = icon 'large sidebar'
+          = item tag: 'a', class: "enhanced button icon hamburger left", title: 'Menu Link', url: '', v: {'on:click.prevent': "toggle_sidenav()"}
+            = icon class: 'large sidebar', title: 'hamburger link'
         = item(name: 'Logo', class: "logo link #{'flush ' if ss('theme.header.menu_position') == 'right'}", url: root_path) do
-          = image_tag ss('theme.branding.logo'), class: 'desktop logo image normal', style: "width: #{ss('theme.header.desktop_logo_size')}px;"
-          = image_tag ss('theme.branding.inverted_logo'), class: 'desktop logo image inverted', style: "width: #{ss('theme.header.desktop_logo_size')}px;"
-          = image_tag ss('theme.branding.logo'), class: 'mobile logo image normal', style: "width: #{ss('theme.header.mobile_logo_size')}px;"
-          = image_tag ss('theme.branding.inverted_logo'), class: 'mobile logo image inverted', style: "width: #{ss('theme.header.mobile_logo_size')}px;"
+          = image_tag ss('theme.branding.logo'), class: 'desktop logo image normal', style: "width: #{ss('theme.header.desktop_logo_size')}px;", alt: 'Logo'
+          = image_tag ss('theme.branding.inverted_logo'), class: 'desktop logo image inverted', style: "width: #{ss('theme.header.desktop_logo_size')}px;", alt: 'Inverted Logo'
+          = image_tag ss('theme.branding.logo'), class: 'mobile logo image normal', style: "width: #{ss('theme.header.mobile_logo_size')}px;", alt: 'Mobile Logo'
+          = image_tag ss('theme.branding.inverted_logo'), class: 'mobile logo image inverted', style: "width: #{ss('theme.header.mobile_logo_size')}px;", alt: 'Inverted Mobile Logo'
       = menu class: 'floated right'
         - if user_signed_in?
           = dropdown 'item widgeted compact profile top right pointing'
-            = image_tag avatar_thumbnail(current_user), class: 'ui mini image avatar'
+            = image_tag avatar_thumbnail(current_user), class: 'ui mini image avatar', alt: 'Avatar'
             = icon 'dropdown'
             = menu
               = header
@@ -33,5 +33,5 @@
               = button "sign in inverted large #{ss('theme.header.button_color')} #{'flush ' if ss('theme.header.menu_position') == 'left'}"
                 | Sign In
         - if ss('theme.header.menu_position') == 'right'
-          = item tag: :button, class: 'enhanced button icon hamburger right', url: '', v: {'on:click.prevent': "toggle_sidenav()"}
-            = icon 'large sidebar'
+          = item tag: :button, class: 'enhanced button icon hamburger right', title: 'Menu Link', url: '', v: {'on:click.prevent': "toggle_sidenav()"}
+            = icon class: 'large sidebar', title: 'hamburger link'
