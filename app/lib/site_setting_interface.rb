@@ -9,6 +9,7 @@ class SiteSettingInterface
   def initialize(redis, namespace)
     @redis = redis
     @namespace = namespace
+    @initialized = false
   end
 
   # Retreives settings from the DB, converts them to JSON and stores them in Redis
@@ -61,8 +62,14 @@ class SiteSettingInterface
   end
 
   # Erases Redis Cache
-  # @note This only happens after the SiteSetting Interface has been initialized.
+  # @note the cache is only deleted after the object was initialized
+  # for the first time. Otherwise false is returned.
   def clear_cache
-    $redis.del @namespace if @initialized
+    if @initialized
+      $redis.del @namespace 
+      return true
+    end
+
+    false
   end
 end
