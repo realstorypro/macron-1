@@ -13,7 +13,7 @@
       = menu class: 'floated right'
         - if user_signed_in?
           = dropdown 'item widgeted compact profile top right pointing'
-            = image_tag avatar_thumbnail(current_user), class: 'ui mini image avatar'
+            = image_tag avatar_thumbnail(current_user), class: 'ui mini image avatar', alt: 'Avatar'
             = icon 'dropdown'
             = menu
               = header
