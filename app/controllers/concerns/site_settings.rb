@@ -12,7 +12,7 @@ module SiteSettings
   private
 
     def load_site_settings
-      @site_settings = $site_setting_interface.fetch_json
+      @site_settings = $site_setting_interface.fetch
 
       if @site_settings.nil?
         $site_setting_interface.update

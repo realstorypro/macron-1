@@ -38,7 +38,7 @@ class SiteSettingInterface
   end
 
   # Returns JSON from the redis if exists otherwise returns nil
-  def fetch_json
+  def fetch
     json = @redis.get(@namespace)
     return JSON.parse(json) unless json.nil?
     nil

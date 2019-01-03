@@ -12,7 +12,7 @@ describe SiteSettingInterface, "initalized site setting interface" do
   end
 
   it "fetch should return non empty json" do
-    expect(@settings.fetch_json).to_not be_nil
+    expect(@settings.fetch).to_not be_nil
   end
 
   it "should return true after running clear_cache" do
