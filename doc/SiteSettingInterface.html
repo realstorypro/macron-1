@@ -102,7 +102,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>traverses the settings path</p>
+<p>Responsible for setting, retreiving and erasing the SiteSettings</p>
 
 
   </div>
@@ -174,7 +174,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Erases Redis Cache.</p>
+</div></span>
   
 </li>
 
@@ -196,7 +198,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Retruns JSON from the redis if exists otherwise returns nil.</p>
+</div></span>
   
 </li>
 
@@ -244,7 +248,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Retreives settings from the DB, converts them to JSON and stores them in
+Redis.</p>
+</div></span>
   
 </li>
 
@@ -273,7 +280,43 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>redis</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the redis object that operates on redis store</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>namespace</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the namespace to use for storing variable settings</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -281,19 +324,17 @@
       <pre class="lines">
 
 
-7
-8
 9
 10
-11</pre>
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_redis'>redis</span><span class='comma'>,</span> <span class='id identifier rubyid_namespace'>namespace</span><span class='rparen'>)</span>
   <span class='ivar'>@redis</span> <span class='op'>=</span> <span class='id identifier rubyid_redis'>redis</span>
   <span class='ivar'>@namespace</span> <span class='op'>=</span> <span class='id identifier rubyid_namespace'>namespace</span>
-  <span class='ivar'>@initialized</span> <span class='op'>=</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -364,18 +405,37 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This only happens after the SiteSetting Interface has been initialized.</p>
+</div>
+  </div>
+
+
+<p>Erases Redis Cache</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-60
-61
-62</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clear_cache'>clear_cache</span>
   <span class='gvar'>$redis</span><span class='period'>.</span><span class='id identifier rubyid_del'>del</span> <span class='ivar'>@namespace</span> <span class='kw'>if</span> <span class='ivar'>@initialized</span>
@@ -394,20 +454,31 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retruns JSON from the redis if exists otherwise returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-54
-55
-56
 57
-58</pre>
+58
+59
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_json'>fetch_json</span>
   <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='ivar'>@redis</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='ivar'>@namespace</span><span class='rparen'>)</span>
@@ -428,14 +499,24 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retreives settings from the DB, converts them to JSON and stores them in
+Redis</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-13
-14
 15
 16
 17
@@ -473,10 +554,12 @@
 49
 50
 51
-52</pre>
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
   <span class='id identifier rubyid_site_settings'>site_settings</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -528,7 +611,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jan  3 07:59:39 2019 by
+  Generated on Thu Jan  3 08:05:54 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>

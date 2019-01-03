@@ -1,15 +1,17 @@
 # frozen_string_literal: true
 
-# traverses the settings path
+# Responsible for setting, retreiving and erasing the SiteSettings
 class SiteSettingInterface
   attr_accessor :settings
 
+  # @param redis [Object] the redis object that operates on redis store
+  # @param namespace [String] the namespace to use for storing variable settings
   def initialize(redis, namespace)
     @redis = redis
     @namespace = namespace
-    @initialized = false
   end
 
+  # Retreives settings from the DB, converts them to JSON and stores them in Redis
   def update
     site_settings = Hash.new
 
@@ -51,12 +53,15 @@ class SiteSettingInterface
     @initialized = true
   end
 
+  # Retruns JSON from the redis if exists otherwise returns nil
   def fetch_json
     json = @redis.get(@namespace)
     return JSON.parse(json) unless json.nil?
     nil
   end
 
+  # Erases Redis Cache
+  # @note This only happens after the SiteSetting Interface has been initialized.
   def clear_cache
     $redis.del @namespace if @initialized
   end
