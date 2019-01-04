@@ -56,7 +56,7 @@ module Permissions
 
   # shortcut for site settings
   def ss(path)
-    site_settings = $site_setting_interface.fetch
+    site_settings = SiteSettingInterface.instance.fetch
     settings ||= SettingInterface.new(site_settings)
     settings.fetch_setting(path, fatal_exception: true)
   end

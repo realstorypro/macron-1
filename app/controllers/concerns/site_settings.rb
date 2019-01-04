@@ -12,10 +12,10 @@ module SiteSettings
   private
 
     def load_site_settings
-      @site_settings = $site_setting_interface.fetch
+      @site_settings = SiteSettingInterface.instance.fetch
 
       if @site_settings.nil?
-        $site_setting_interface.update
+        SiteSettingInterface.instance.update
         @analytics = Segment::Analytics.new(write_key: ss("integration.segment_server_key"))
       end
 

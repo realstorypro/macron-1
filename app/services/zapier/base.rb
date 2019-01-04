@@ -36,7 +36,7 @@ module Zapier
     private
 
       def load_site_settings
-        @site_settings = $site_setting_interface.fetch
+        @site_settings = SiteSettingInterface.instance.fetch
       end
   end
 end

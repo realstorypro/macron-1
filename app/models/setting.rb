@@ -22,7 +22,7 @@ class Setting < ApplicationRecord
   private
 
     def clear_cache
-      $site_setting_interface.clear_cache
+      SiteSettingInterface.instance.clear_cache
     end
 end
 
