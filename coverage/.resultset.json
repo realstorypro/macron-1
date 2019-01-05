@@ -34,10 +34,6 @@
         1,
         1,
         null,
-        null,
-        1,
-        1,
-        null,
         null
       ],
       "/Users/leonid/src/aquarius/spec/rails_helper.rb": [
@@ -2496,7 +2492,6 @@
         null,
         null,
         1,
-        2,
         1,
         null,
         null,
@@ -2506,6 +2501,6 @@
         null
       ]
     },
-    "timestamp": 1546704657
+    "timestamp": 1546704930
   }
 }

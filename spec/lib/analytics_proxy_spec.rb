@@ -27,11 +27,7 @@ describe AnalyticsProxy, "proxy with the segment" do
     @proxy = AnalyticsProxy.instance
   end
 
-  it "it returns true on identify call" do
-    expect(@proxy.identify).to be(true)
-  end
-
-  it "it returns true on track call" do
-    expect(@proxy.track).to be(true)
+  it "it returns false if we call identify without current_user" do
+    expect(@proxy.identify).to be(false)
   end
 end
