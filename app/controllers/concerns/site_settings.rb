@@ -14,6 +14,7 @@ module SiteSettings
     def load_site_settings
       @site_settings = SiteSettingInterface.instance.fetch
 
+      # TODO: this needs to be rewritten to work with env variables
       if @site_settings.nil?
         SiteSettingInterface.instance.update
         @analytics = Segment::Analytics.new(write_key: ss("integration.segment_server_key"))
