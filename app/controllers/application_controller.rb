@@ -30,14 +30,8 @@ class ApplicationController < ActionController::Base
   end
 
   Warden::Manager.after_authentication do |user, auth, opts|
-    # todo: this ~may~ be a hack ... reevaluate
-    # the meta_routing_spec is failing when redis isnt loading
-    # we're making sure that the site settings pulled up by redis do in fact exist
-    site_settings = SiteSettingInterface.instance.fetch
-
-    unless site_settings.nil? || site_settings["integration"]["segment_server_key"].nil?
-      analytics = Segment::Analytics.new(write_key: site_settings["integration"]["segment_server_key"])
-      analytics.identify(
+    if ENV['SEGMENT_SERVER_KEY']
+      Analytics.identify(
         user_id: user.id,
         traits: {
             username: user.username,
