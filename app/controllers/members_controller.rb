@@ -68,7 +68,7 @@ class MembersController < DisplayController
 
       return unless user_signed_in?
 
-      @analytics.track(
+      Analytics.track(
         user_id: current_user.id,
         event: "Viewed Profile",
         properties: {

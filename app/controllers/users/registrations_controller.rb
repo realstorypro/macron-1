@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
                    username: created_user.username,
                    email: created_user.email
 
-        @analytics.track(
+        Analytics.track(
           user_id: created_user.id,
           event: "User Registered",
           properties: {
@@ -25,7 +25,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
         if created_user.newsletter == "1"
           ahoy.track "Subscription Created"
-          @analytics.track(
+          Analytics.track(
             user_id: created_user.id,
             event: "Subscription Created",
             properties: {

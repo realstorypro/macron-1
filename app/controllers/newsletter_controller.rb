@@ -15,7 +15,7 @@ class NewsletterController < ApplicationController
     ahoy.track "Subscription Created"
 
     if user_signed_in?
-      @analytics.track(
+      Analytics.track(
         user_id: current_user.id,
         event: "Subscription Created",
         properties: {
@@ -25,7 +25,7 @@ class NewsletterController < ApplicationController
         }
       )
     else
-      @analytics.track(
+      Analytics.track(
         anonymous_id: current_visit.visitor_token,
         event: "Subscription Created",
         properties: {
