@@ -17,10 +17,12 @@ class AnalyticsProxy
 
   def identify(traits = {})
     return true unless @segment
+    return false
   end
 
   def track(traits = {})
     return true unless @segment
+    return false
   end
 
   private
