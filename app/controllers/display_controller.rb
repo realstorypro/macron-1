@@ -47,26 +47,16 @@ class DisplayController < MetaController
     end
 
     def record_view
-      ahoy.track "Viewed Content",
-                 type: component_name.downcase.singularize,
-                 id: @entry.id,
-                 name: @entry.name,
-                 slug: @entry.slug,
-                 category: @entry.category.name,
-                 tags: @entry.tags.collect(&:name)
-
-      return unless user_signed_in?
-
-      Analytics.track(
-        user_id: current_user.id,
+      track(
+        user: current_user,
         event: "Viewed Content",
-        properties: {
-          type: component_name.downcase.singularize,
-          id: @entry.id,
-          name: @entry.name,
-          slug: @entry.slug,
-          category: @entry.category.name,
-          tags: @entry.tags.collect(&:name)
+        props: {
+            type: component_name.downcase.singularize,
+            id: @entry.id,
+            name: @entry.name,
+            slug: @entry.slug,
+            category: @entry.category.name,
+            tags: @entry.tags.collect(&:name)
         }
       )
     end

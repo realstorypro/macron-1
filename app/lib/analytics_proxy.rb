@@ -16,28 +16,31 @@ class AnalyticsProxy
   end
 
   def identify(user = nil)
-    return true unless @segment
+    return false unless @segment
     return false if @segment && user.nil?
 
-    if @segment && user
-      Analytics.identify(
-        user_id: user.id,
-        traits: {
-            username: user.username,
-            email: user.email,
-            avatar: user.profile.avatar,
-            created_at: user.created_at
-        })
+    @segment.identify(
+      user_id: user.id,
+      traits: {
+          username: user.username,
+          email: user.email,
+          avatar: user.profile.avatar,
+          created_at: user.created_at
+      })
 
-      return true
-    end
+    true
   end
 
-  def track(user = nil, traits = {})
-    return true unless @segment
+  def track(params)
+    return false unless @segment
+
+    @segment.track(
+      user_id: params[:user].id,
+      event: params[:event],
+      properties: params[:props]
+    )
+
+    true
   end
 
-  private
-    def segment_properties
-    end
 end

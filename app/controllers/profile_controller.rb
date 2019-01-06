@@ -29,20 +29,13 @@ class ProfileController < MembersController
     end
 
     def record_view
-      ahoy.track "Viewed Own Profile",
-                 id: @member.id,
-                 username: @member.username,
-                 slug: @member.slug
-
-      return unless user_signed_in?
-
-      Analytics.track(
-        user_id: current_user.id,
+      track(
+        user: current_user,
         event: "Viewed Own Profile",
-        properties: {
-          id: @member.id,
-          username: @member.username,
-          slug: @member.slug
+        props: {
+            id: @member.id,
+            username: @member.username,
+            slug: @member.slug
         }
       )
     end

@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   include Pundit
   include SiteSettings
+  include Trackable
 
 
   before_action :store_user_location!, if: :storable_location?
@@ -30,7 +31,7 @@ class ApplicationController < ActionController::Base
   end
 
   Warden::Manager.after_authentication do |user, _, __|
-    AnalyticsProxy.instance.identify(user)
+    identify(user)
   end
 
     private

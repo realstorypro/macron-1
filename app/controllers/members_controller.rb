@@ -61,20 +61,13 @@ class MembersController < DisplayController
     def set_article_meta; end
 
     def record_view
-      ahoy.track "Viewed Profile",
-                 id: @entry.id,
-                 username: @entry.username,
-                 slug: @entry.slug
-
-      return unless user_signed_in?
-
-      Analytics.track(
-        user_id: current_user.id,
+      track(
+        user: current_user,
         event: "Viewed Profile",
-        properties: {
-          id: @entry.id,
-          username: @entry.username,
-          slug: @entry.slug
+        props: {
+            id: @entry.id,
+            username: @entry.username,
+            slug: @entry.slug
         }
       )
     end
