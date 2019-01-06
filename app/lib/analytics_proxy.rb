@@ -15,12 +15,25 @@ class AnalyticsProxy
     end
   end
 
-  def identify(current_user = nil, traits = {})
+  def identify(user = nil)
     return true unless @segment
-    return false if @segment && current_user.nil?
+    return false if @segment && user.nil?
+
+    if @segment && user
+      Analytics.identify(
+        user_id: user.id,
+        traits: {
+            username: user.username,
+            email: user.email,
+            avatar: user.profile.avatar,
+            created_at: user.created_at
+        })
+
+      return true
+    end
   end
 
-  def track(current_user = nil, traits = {})
+  def track(user = nil, traits = {})
     return true unless @segment
   end
 

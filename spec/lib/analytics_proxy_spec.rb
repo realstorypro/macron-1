@@ -24,10 +24,15 @@ end
 
 describe AnalyticsProxy, "proxy with the segment" do
   before :all do
+    @user = FactoryBot.create(:user, :admin)
     @proxy = AnalyticsProxy.instance
   end
 
-  it "it returns false if we call identify without current_user" do
+  it "it returns false if we call identify without user" do
     expect(@proxy.identify).to be(false)
+  end
+
+  it "it returns false if we call identify with user" do
+    expect(@proxy.identify(@user)).to be(true)
   end
 end

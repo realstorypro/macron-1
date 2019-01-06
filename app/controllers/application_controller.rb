@@ -29,17 +29,8 @@ class ApplicationController < ActionController::Base
     redirect_to("/403", status: 403)
   end
 
-  Warden::Manager.after_authentication do |user, auth, opts|
-    if ENV['SEGMENT_SERVER_KEY']
-      Analytics.identify(
-        user_id: user.id,
-        traits: {
-            username: user.username,
-            email: user.email,
-            avatar: user.profile.avatar,
-            created_at: user.created_at
-        })
-    end
+  Warden::Manager.after_authentication do |user, _, __|
+    AnalyticsProxy.instance.identify(user)
   end
 
     private
