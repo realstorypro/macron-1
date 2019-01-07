@@ -9,11 +9,13 @@ class SettingProxy
   def initialize
   end
 
-  def fetch(path, params)
-    if path.split(".")[0].include?("site")
-      fetch_site_settings path, params
+  def fetch(path, params={})
+    path_array = path.split(".")
+
+    if path_array[0].include?("site")
+      fetch_site_settings path_array.drop(1).join("."), params
     else
-      fetch_settings path, params
+      fetch_settings path_array.join("."), params
     end
   end
 
