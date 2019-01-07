@@ -31,9 +31,8 @@ class ApplicationController < ActionController::Base
   end
 
   Warden::Manager.after_authentication do |user, _, __|
-
-    # Calling the AnalyticsProxy directly, because we're under Warden
-    # and Trackable is not available.
+    # Directly calling the AnalyticsProxy directly,
+    #   because we're under Warden and Trackable is not available.
     AnalyticsProxy.instance.identify(user)
   end
 

@@ -8,7 +8,7 @@ describe SiteSettingInterface, "initalized site setting interface" do
   end
 
   it "the update should not raise error" do
-    expect{@settings.update}.to_not raise_error
+    expect { @settings.update }.to_not raise_error
   end
 
   it "fetch should return non empty json" do
