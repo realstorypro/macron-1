@@ -15,7 +15,7 @@ class AnalyticsProxy
     end
   end
 
-  # identifies a user
+  # Identifies a logged in user with additional metadata.
   # @param [Object] user a user to identify (generally a current_user)
   def identify(user = nil)
     return false unless @segment
@@ -33,10 +33,11 @@ class AnalyticsProxy
     true
   end
 
-  # @param [Hash] opts options to track
-  # @param opts [Object] :user User to track
-  # @param opts [String] :event Name of the event
-  # @param opts [Hash] :props Properties to track
+  # Tracks an event, including the user, name and additional properties.
+  # @param [Hash] params options to track
+  # @option params [Object] :user User to track
+  # @option params [String] :event Name of the event
+  # @option params [Hash] :props Properties to track
   def track(params)
     return false unless @segment
     return false if @segment && params[:user].nil?

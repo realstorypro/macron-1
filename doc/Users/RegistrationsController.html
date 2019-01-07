@@ -185,16 +185,7 @@
 28
 29
 30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40</pre>
+31</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/controllers/users/registrations_controller.rb', line 9</span>
@@ -202,27 +193,18 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
   <span class='kw'>super</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_created_user'>created_user</span><span class='op'>|</span>
     <span class='kw'>unless</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-      <span class='id identifier rubyid_ahoy'>ahoy</span><span class='period'>.</span><span class='id identifier rubyid_track'>track</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>User Registered</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                 <span class='label'>id:</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
-                 <span class='label'>username:</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span>
-                 <span class='label'>email:</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span>
-
-      <span class='ivar'>@analytics</span><span class='period'>.</span><span class='id identifier rubyid_track'>track</span><span class='lparen'>(</span>
-        <span class='label'>user_id:</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_track'>track</span><span class='lparen'>(</span>
         <span class='label'>event:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>User Registered</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='label'>properties:</span> <span class='lbrace'>{</span>
+        <span class='label'>props:</span> <span class='lbrace'>{</span>
             <span class='label'>username:</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span>
             <span class='label'>email:</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span>
         <span class='rbrace'>}</span>
       <span class='rparen'>)</span>
 
       <span class='kw'>if</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_newsletter'>newsletter</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span>
-        <span class='id identifier rubyid_ahoy'>ahoy</span><span class='period'>.</span><span class='id identifier rubyid_track'>track</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Subscription Created</span><span class='tstring_end'>&quot;</span></span>
-        <span class='ivar'>@analytics</span><span class='period'>.</span><span class='id identifier rubyid_track'>track</span><span class='lparen'>(</span>
-          <span class='label'>user_id:</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_track'>track</span><span class='lparen'>(</span>
           <span class='label'>event:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Subscription Created</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-          <span class='label'>properties:</span> <span class='lbrace'>{</span>
-              <span class='label'>username:</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span>
+          <span class='label'>props:</span> <span class='lbrace'>{</span>
               <span class='label'>email:</span> <span class='id identifier rubyid_created_user'>created_user</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span><span class='comma'>,</span>
               <span class='label'>location:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>signup</span><span class='tstring_end'>&quot;</span></span>
           <span class='rbrace'>}</span>
@@ -241,7 +223,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jan  3 08:43:19 2019 by
+  Generated on Mon Jan  7 02:14:40 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>

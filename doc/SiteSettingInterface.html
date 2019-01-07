@@ -87,6 +87,11 @@
   
   
   
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Singleton</dd>
+  </dl>
+  
   
 
   
@@ -113,38 +118,6 @@
 </div>
 
 
-
-  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
-  <ul class="summary">
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#settings-instance_method" title="#settings (instance method)">#<strong>settings</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute settings.</p>
-</div></span>
-  
-</li>
-
-    
-  </ul>
 
 
 
@@ -184,7 +157,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_json-instance_method" title="#fetch_json (instance method)">#<strong>fetch_json</strong>  &#x21d2; Object </a>
+      <a href="#fetch-instance_method" title="#fetch (instance method)">#<strong>fetch</strong>  &#x21d2; Object </a>
     
 
     
@@ -199,7 +172,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Retruns JSON from the redis if exists otherwise returns nil.</p>
+<p>Returns JSON from the redis if exists otherwise returns nil.</p>
 </div></span>
   
 </li>
@@ -208,7 +181,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(redis, namespace)  &#x21d2; SiteSettingInterface </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; SiteSettingInterface </a>
     
 
     
@@ -249,7 +222,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Retreives settings from the DB, converts them to JSON and stores them in
+<p>Retrieves settings from the DB, converts them to JSON and stores them in
 Redis.</p>
 </div></span>
   
@@ -259,13 +232,14 @@ Redis.</p>
     </ul>
   
 
-<div id="constructor_details" class="method_details_list">
+
+  <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(redis, namespace)  &#x21d2; <tt><span class='object_link'><a href="" title="SiteSettingInterface (class)">SiteSettingInterface</a></span></tt> 
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="SiteSettingInterface (class)">SiteSettingInterface</a></span></tt> 
   
 
   
@@ -280,43 +254,7 @@ Redis.</p>
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>redis</span>
-      
-      
-        <span class='type'>(<tt>Object</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>the redis object that operates on redis store</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>namespace</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>the namespace to use for storing variable settings</p>
-</div>
-      
-    </li>
-  
-</ul>
-
 
 </div><table class="source_code">
   <tr>
@@ -324,18 +262,18 @@ Redis.</p>
       <pre class="lines">
 
 
+7
+8
 9
 10
-11
-12
-13</pre>
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 7</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_redis'>redis</span><span class='comma'>,</span> <span class='id identifier rubyid_namespace'>namespace</span><span class='rparen'>)</span>
-  <span class='ivar'>@redis</span> <span class='op'>=</span> <span class='id identifier rubyid_redis'>redis</span>
-  <span class='ivar'>@namespace</span> <span class='op'>=</span> <span class='id identifier rubyid_namespace'>namespace</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='ivar'>@redis</span> <span class='op'>=</span> <span class='const'>Redis</span><span class='op'>::</span><span class='const'>Namespace</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>aquarius</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>redis:</span> <span class='const'>Redis</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+  <span class='ivar'>@namespace</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>site_settings</span><span class='tstring_end'>&quot;</span></span>
   <span class='ivar'>@initialized</span> <span class='op'>=</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -344,54 +282,6 @@ Redis.</p>
 </div>
   
 </div>
-
-  <div id="instance_attr_details" class="attr_details">
-    <h2>Instance Attribute Details</h2>
-    
-      
-      <span id="settings=-instance_method"></span>
-      <div class="method_details first">
-  <h3 class="signature first" id="settings-instance_method">
-  
-    #<strong>settings</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the value of attribute settings</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-5
-6
-7</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 5</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_settings'>settings</span>
-  <span class='ivar'>@settings</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -433,21 +323,21 @@ time. Otherwise false is returned.</p>
       <pre class="lines">
 
 
-68
-69
-70
-71
-72
-73
-74
-75</pre>
+51
+52
+53
+54
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clear_cache'>clear_cache</span>
   <span class='kw'>if</span> <span class='ivar'>@initialized</span>
-    <span class='gvar'>$redis</span><span class='period'>.</span><span class='id identifier rubyid_del'>del</span> <span class='ivar'>@namespace</span> 
+    <span class='ivar'>@redis</span><span class='period'>.</span><span class='id identifier rubyid_del'>del</span> <span class='ivar'>@namespace</span>
     <span class='kw'>return</span> <span class='kw'>true</span>
   <span class='kw'>end</span>
 
@@ -459,9 +349,9 @@ time. Otherwise false is returned.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="fetch_json-instance_method">
+  <h3 class="signature " id="fetch-instance_method">
   
-    #<strong>fetch_json</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>fetch</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -470,7 +360,7 @@ time. Otherwise false is returned.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Retruns JSON from the redis if exists otherwise returns nil</p>
+<p>Returns JSON from the redis if exists otherwise returns nil</p>
 
 
   </div>
@@ -484,16 +374,16 @@ time. Otherwise false is returned.</p>
       <pre class="lines">
 
 
-58
-59
-60
-61
-62</pre>
+41
+42
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 41</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_fetch_json'>fetch_json</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_fetch'>fetch</span>
   <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='ivar'>@redis</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='ivar'>@namespace</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_json'>json</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_json'>json</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='kw'>nil</span>
@@ -515,7 +405,7 @@ time. Otherwise false is returned.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Retreives settings from the DB, converts them to JSON and stores them in
+<p>Retrieves settings from the DB, converts them to JSON and stores them in
 Redis</p>
 
 
@@ -530,6 +420,8 @@ Redis</p>
       <pre class="lines">
 
 
+14
+15
 16
 17
 18
@@ -552,62 +444,30 @@ Redis</p>
 35
 36
 37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55</pre>
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'app/lib/site_setting_interface.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
   <span class='id identifier rubyid_site_settings'>site_settings</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-
-  <span class='id identifier rubyid_component_settings'>component_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Component.html" title="SiteSettings::Component (class)">Component</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
-  <span class='id identifier rubyid_general_settings'>general_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/General.html" title="SiteSettings::General (class)">General</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_contact_settings'>contact_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Contact.html" title="SiteSettings::Contact (class)">Contact</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_integration_settings'>integration_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Integration.html" title="SiteSettings::Integration (class)">Integration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_article_theme_settings'>article_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Article.html" title="SiteSettings::Theme::Article (class)">Article</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_auth_theme_settings'>auth_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Authentication.html" title="SiteSettings::Theme::Authentication (class)">Authentication</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_branding_theme_settings'>branding_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Branding.html" title="SiteSettings::Theme::Branding (class)">Branding</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_discussion_theme_settings'>discussion_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Discussion.html" title="SiteSettings::Theme::Discussion (class)">Discussion</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_footer_theme_settings'>footer_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Footer.html" title="SiteSettings::Theme::Footer (class)">Footer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_global_theme_settings'>global_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Global.html" title="SiteSettings::Theme::Global (class)">Global</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_header_theme_settings'>header_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Header.html" title="SiteSettings::Theme::Header (class)">Header</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_homepage_theme_settings'>homepage_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Homepage.html" title="SiteSettings::Theme::Homepage (class)">Homepage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_podcast_theme_settings'>podcast_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Podcast.html" title="SiteSettings::Theme::Podcast (class)">Podcast</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-  <span class='id identifier rubyid_video_theme_settings'>video_theme_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Video.html" title="SiteSettings::Theme::Video (class)">Video</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
-
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:components</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_component_settings'>component_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:general</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_general_settings'>general_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:contact</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_contact_settings'>contact_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:integration</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_integration_settings'>integration_settings</span>
-
   <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:article</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_article_theme_settings'>article_theme_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:auth</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_auth_theme_settings'>auth_theme_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:branding</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_branding_theme_settings'>branding_theme_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:discussion</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_discussion_theme_settings'>discussion_theme_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:footer</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_footer_theme_settings'>footer_theme_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:global</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_global_theme_settings'>global_theme_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:header</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_header_theme_settings'>header_theme_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:homepage</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_homepage_theme_settings'>homepage_theme_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:podcast</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_podcast_theme_settings'>podcast_theme_settings</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:video</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_video_theme_settings'>video_theme_settings</span>
+
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:components</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Component.html" title="SiteSettings::Component (class)">Component</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:general</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/General.html" title="SiteSettings::General (class)">General</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:contact</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Contact.html" title="SiteSettings::Contact (class)">Contact</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:integration</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Integration.html" title="SiteSettings::Integration (class)">Integration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:article</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Article.html" title="SiteSettings::Theme::Article (class)">Article</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:auth</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Authentication.html" title="SiteSettings::Theme::Authentication (class)">Authentication</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:branding</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Branding.html" title="SiteSettings::Theme::Branding (class)">Branding</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:discussion</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Discussion.html" title="SiteSettings::Theme::Discussion (class)">Discussion</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:footer</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Footer.html" title="SiteSettings::Theme::Footer (class)">Footer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:global</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Global.html" title="SiteSettings::Theme::Global (class)">Global</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:header</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Header.html" title="SiteSettings::Theme::Header (class)">Header</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:homepage</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Homepage.html" title="SiteSettings::Theme::Homepage (class)">Homepage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:podcast</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Podcast.html" title="SiteSettings::Theme::Podcast (class)">Podcast</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
+  <span class='id identifier rubyid_site_settings'>site_settings</span><span class='lbracket'>[</span><span class='symbol'>:theme</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:video</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme/Video.html" title="SiteSettings::Theme::Video (class)">Video</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="Setting.html#instance-class_method" title="Setting.instance (method)">instance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payload'>payload</span>
 
   <span class='id identifier rubyid_site_settings'>site_settings</span> <span class='op'>=</span> <span class='id identifier rubyid_site_settings'>site_settings</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
   <span class='ivar'>@redis</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span> <span class='ivar'>@namespace</span><span class='comma'>,</span> <span class='id identifier rubyid_site_settings'>site_settings</span>
@@ -624,7 +484,7 @@ Redis</p>
 </div>
 
       <div id="footer">
-  Generated on Thu Jan  3 08:43:15 2019 by
+  Generated on Mon Jan  7 02:14:37 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>
