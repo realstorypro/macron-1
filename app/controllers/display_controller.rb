@@ -48,7 +48,6 @@ class DisplayController < MetaController
 
     def record_view
       track(
-        user: current_user,
         event: "Viewed Content",
         props: {
             type: component_name.downcase.singularize,

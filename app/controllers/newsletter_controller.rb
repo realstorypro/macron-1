@@ -13,7 +13,6 @@ class NewsletterController < ApplicationController
 
   def record_subscription
     track(
-      user: current_user,
       event: "Subscription Created",
       props: {
         email: params[:email],

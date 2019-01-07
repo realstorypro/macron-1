@@ -62,7 +62,6 @@ class MembersController < DisplayController
 
     def record_view
       track(
-        user: current_user,
         event: "Viewed Profile",
         props: {
             id: @entry.id,

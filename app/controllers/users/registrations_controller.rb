@@ -10,7 +10,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super do |created_user|
       unless created_user.id.nil?
         track(
-          user: current_user,
           event: "User Registered",
           props: {
               username: created_user.username,
@@ -20,7 +19,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
         if created_user.newsletter == "1"
           track(
-            user: current_user,
             event: "Subscription Created",
             props: {
                 email: created_user.email,

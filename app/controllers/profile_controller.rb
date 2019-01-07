@@ -30,7 +30,6 @@ class ProfileController < MembersController
 
     def record_view
       track(
-        user: current_user,
         event: "Viewed Own Profile",
         props: {
             id: @member.id,
