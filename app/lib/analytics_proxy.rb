@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Class acting as a proxy between Segment and Ahoy
+# Handles event submission to Segment
 class AnalyticsProxy
   include Singleton
 
@@ -33,17 +33,15 @@ class AnalyticsProxy
 
   def track(params)
     return false unless @segment
-
-    user_id = nil if params[:user].nil?
-    user_id = params[:user].id unless params[:user]
+    return false if @segment && params[:user].nil?
+    return false if params[:event].nil?
 
     @segment.track(
-      user_id: user_id,
+      user_id: params[:user].id,
       event: params[:event],
       properties: params[:props]
     )
 
     true
   end
-
 end
