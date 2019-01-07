@@ -1,18 +1,20 @@
 # frozen_string_literal: true
 
-# simplifies event tracking by delegating events to both ahoy and segment
+# Unifies event tracking for the application
 module Trackable
   extend ActiveSupport::Concern
   require 'ostruct'
 
-  # identifies a user
+  # Unified user identification
   # @param [Object] user user to identify, defaults to current_user
   def identify(user = current_user)
     AnalyticsProxy.instance.identify(user)
   end
 
-  # tracks behavior
-  # @param [Object] params parameters to track
+  # Unified event tracking
+  # @param [Hash] params options to track
+  # @option params [String] :event Name of the event
+  # @option params [Hash] :props Properties to track
   def track(params)
 
     # set the default parameters for user

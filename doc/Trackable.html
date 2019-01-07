@@ -96,7 +96,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>simplifies event tracking by delegating events to both ahoy and segment</p>
+<p>Unifies event tracking for the application</p>
 
 
   </div>
@@ -137,7 +137,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>identifies a user.</p>
+<p>Unified user identification.</p>
 </div></span>
   
 </li>
@@ -161,7 +161,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>tracks behavior.</p>
+<p>Unified event tracking.</p>
 </div></span>
   
 </li>
@@ -189,7 +189,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>identifies a user</p>
+<p>Unified user identification</p>
 
 
   </div>
@@ -252,7 +252,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>tracks behavior</p>
+<p>Unified event tracking</p>
 
 
   </div>
@@ -266,18 +266,53 @@
         <span class='name'>params</span>
       
       
-        <span class='type'>(<tt>Object</tt>)</span>
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>parameters to track</p>
+<p>options to track</p>
 </div>
       
     </li>
   
 </ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:event</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Name of the event</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:props</span>
+          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Properties to track</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
 
 
 </div><table class="source_code">
@@ -286,8 +321,6 @@
       <pre class="lines">
 
 
-16
-17
 18
 19
 20
@@ -297,10 +330,12 @@
 24
 25
 26
-27</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/concerns/trackable.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/concerns/trackable.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_track'>track</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
 
@@ -324,7 +359,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Jan  7 02:14:32 2019 by
+  Generated on Mon Jan  7 02:21:06 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>
