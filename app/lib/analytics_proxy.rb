@@ -34,8 +34,11 @@ class AnalyticsProxy
   def track(params)
     return false unless @segment
 
+    user_id = nil if params[:user].nil?
+    user_id = params[:user].id unless params[:user]
+
     @segment.track(
-      user_id: params[:user].id,
+      user_id: user_id,
       event: params[:event],
       properties: params[:props]
     )
