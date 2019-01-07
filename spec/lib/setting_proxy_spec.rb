@@ -18,4 +18,8 @@ describe SettingProxy, "setting interface" do
   it "it returns strings from site settings" do
     expect(@settings.fetch("site.general.name")).to eq("Logik")
   end
+
+  it "it returns strings from ss shortcut" do
+    expect(@settings.ss("general.name")).to eq("Logik")
+  end
 end

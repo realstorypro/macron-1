@@ -331,14 +331,12 @@
 25
 26
 27
-28
-29</pre>
+28</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/controllers/concerns/trackable.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_track'>track</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
-
   <span class='comment'># set the default parameters for user
 </span>  <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>id:</span> <span class='id identifier rubyid_current_visit'>current_visit</span><span class='period'>.</span><span class='id identifier rubyid_visitor_token'>visitor_token</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_current_user'>current_user</span>
   <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_current_user'>current_user</span> <span class='kw'>if</span> <span class='id identifier rubyid_current_user'>current_user</span>
@@ -359,7 +357,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Jan  7 02:21:06 2019 by
+  Generated on Mon Jan  7 08:31:30 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>

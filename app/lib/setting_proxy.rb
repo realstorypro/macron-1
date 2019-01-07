@@ -1,6 +1,4 @@
 # frozen_string_literal: true
-# s (args) -> settings('')
-# ss -> settings('site.(args)')
 
 # Class acting as a proxy between Setting and SiteSettings
 class SettingProxy
@@ -9,7 +7,25 @@ class SettingProxy
   def initialize
   end
 
-  def fetch(path, params={})
+  # shortcut for accessing regular settings
+  # @param [String] path string path in dot notation
+  def s(path)
+    fetch(path, fatal_exception: true)
+  end
+
+  # shortcut for site settings
+  # @param [String] path string path in dot notation
+  def ss(path)
+    path_array = path.split(".")
+    path_array.unshift("site") unless path_array[0].include?("site")
+    fetch(path_array.join("."), fatal_exception: true)
+  end
+
+  # delegates setting requests between settings and site settings
+  # @param [String] path a string path in dot notation
+  # @param [Hash] params fetching options
+  # @option params [Symbol] :fatal_exception raises fatal exception if set to true
+  def fetch(path, params = {})
     path_array = path.split(".")
 
     if path_array[0].include?("site")
@@ -19,11 +35,19 @@ class SettingProxy
     end
   end
 
+  # fetches settings value
+  # @param [String] path a string path in dot notation
+  # @param [Hash] options fetching options
+  # @option params [Symbol] :fatal_exception raises fatal exception if set to true
   def fetch_settings(path, options = {})
     settings ||= SettingInterface.new(Settings)
     settings.fetch_setting(path, fatal_exception: true)
   end
 
+  # fetches site settings values
+  # @param [String] path a string path in dot notation
+  # @param [Hash] options fetching options
+  # @option params [Symbol] :fatal_exception raises fatal exception if set to true
   def fetch_site_settings(path, options = {})
     site_settings = SiteSettingInterface.instance.fetch
     settings ||= SettingInterface.new(site_settings)
