@@ -582,17 +582,13 @@
 
 58
 59
-60
-61
-62</pre>
+60</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ss'>ss</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_site_settings'>site_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SiteSettingInterface.html" title="SiteSettingInterface (class)">SiteSettingInterface</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'>instance</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span>
-  <span class='id identifier rubyid_settings'>settings</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="SettingInterface.html" title="SettingInterface (class)">SettingInterface</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SettingInterface.html#initialize-instance_method" title="SettingInterface#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_site_settings'>site_settings</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_fetch_setting'>fetch_setting</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='label'>fatal_exception:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="SettingProxy.html" title="SettingProxy (class)">SettingProxy</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'>instance</span><span class='period'>.</span><span class='id identifier rubyid_ss'>ss</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -604,7 +600,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Jan  7 08:31:29 2019 by
+  Generated on Tue Jan  8 09:38:07 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>

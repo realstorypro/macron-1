@@ -19,10 +19,10 @@ app/models/setting.rb 59fb99cd7b54a2f09a150df595455b09b37fb6f6
 app/models/tagging.rb 982c5cc4f7e9a1d2b74bdae9f8ae123499445d9b
 app/cells/base_cell.rb 5eb2e0d33dc86d6d2e73fca59b42ca98ecc3b369
 app/cells/menu_cell.rb 67c2a79e958108e0aef7c205acada3511da4ec02
-app/lib/permissions.rb f93e511279ebaac80869e4c3be074a4e26d9d32a
+app/lib/permissions.rb 38fb49a453695f7707a62600c0cc9d526cee2c32
 app/models/category.rb fd203c81dd815f9c7718a31a65ed635c8e834ae7
 app/inputs/rich_input.rb 999c82f04e3e64c46722ef795ae90c37b17fa2ae
-app/lib/setting_proxy.rb 25f20d58cfa35b5e86f10630d3db5a6aeee5a917
+app/lib/setting_proxy.rb 3997d93c117d928e69f92d58f437162690a9f11a
 app/models/ahoy/event.rb 90b23283fc0b640778648e47b67d77be587ccef7
 app/models/ahoy/visit.rb 02487510c64d5573af751e5ca0d7a423efc22efb
 app/models/discussion.rb 023b65ac15f72bde1d7f121fff36856deb81517c
@@ -62,7 +62,7 @@ app/cells/widget/base_cell.rb 87f1ff1b4055310e0b495a3e6c58abdd1c62d420
 app/inputs/left_icon_input.rb 4ca600af1c0199552169bf7e3dec2912dc116d0b
 app/cells/widget/event_cell.rb 6f6a4531deec84cc93b90afbab5796eb6d036564
 app/cells/widget/video_cell.rb 64004b69e519c898832f647f4bfd03dd75ffc3ea
-app/helpers/settings_helper.rb 0471dd78a6473494b38f1cb3a3a636af5fad3289
+app/helpers/settings_helper.rb c5ae0918e82b9b09a79b0ec5dd6b187ced2698c6
 app/inputs/datepicker_input.rb 09f50b566a75b9ce3446ad0a8d760280c8d21f18
 app/models/concerns/seoable.rb abff292e0dd61cbae4fa38b53062c4db382a7676
 app/models/concerns/slugged.rb efcc8ad074c6477ee56faeea9a37d353f643cf4b
@@ -85,7 +85,7 @@ app/cells/widget/related_cell.rb a1165853e5505a72e2308dfe1f515ccb1d065e71
 app/cells/widget/sidenav_cell.rb e33a49b3e614bcd80f4980d197381c430bd77aba
 app/models/application_record.rb 73507b0608fcd792376697d4b0bb8e25f63e1f3d
 app/cells/widget/homepage_cell.rb 1fca0d3c59217d810949f32f0cf5acadc0c1a23a
-app/helpers/application_helper.rb 62079cbfe5adbacb20af086c90464cf5ff3e055a
+app/helpers/application_helper.rb 7eb90fd2665b1c9d6d5b77739d90574587fbd25f
 app/lib/site_setting_interface.rb 0604aacf596a33273b31d6a1d1783b1f23d32fdc
 app/mailers/application_mailer.rb 474c0bf0acabf44f567414d00b7153f606b48fa5
 app/cells/admin/admin_base_cell.rb 2248a70978656cddd2ccf7ec328356e4c1575c27
@@ -98,7 +98,6 @@ app/policies/application_policy.rb a43a8256f8194a7fc2186a30fca1bf87fad70683
 app/cells/widget/discussion_cell.rb 6dec559777eeff982e2fddfb8f22c9fd7bee3e90
 app/cells/widget/newsletter_cell.rb 58e52b32a00db063137e35f17ae18db142e5464f
 app/controllers/store_controller.rb 70640acbb83eea478410cf85c27e966789e24563
-app/helpers/site_settings_helper.rb cec1670110bec6fc525db9821a95aaf17804874c
 app/models/concerns/autoloadable.rb e7eb1d689d0deac34a56200e1872ecd752f558b5
 app/models/site_settings/contact.rb 470ed185f0ebb90e4f5348f415c02578ecde8841
 app/models/site_settings/general.rb a06790e5aea6b9e146e11130d8bbef2db1f46d23
@@ -132,7 +131,7 @@ app/models/site_settings/theme/header.rb 6cf4f5db05aeb5896967524545c70a431651264
 app/cells/navigation/element_list_cell.rb e2d8aca09c2a2f7f9d168af127d8176125d8fbd6
 app/channels/application_cable/channel.rb c37215169051d5564efe41d08f06c645e223bf34
 app/controllers/admin/users_controller.rb 3a6db66d020a5fd532f9f8e98d294d11f7dc4bc0
-app/controllers/application_controller.rb 1653c1a7bcc0432165425bcd0e444d9590bca54d
+app/controllers/application_controller.rb 89d42f87f409b4faf4f0820d0bc71b77b5fcddb8
 app/controllers/concerns/site_settings.rb 7c075a87e7232dda883665fa99df166da1a822bb
 app/controllers/discussions_controller.rb 246ec439de16aeea3b5b6d352424f2e5447cbd54
 app/models/site_settings/theme/article.rb a429e6625c879ede0af3712371684565603aa196
