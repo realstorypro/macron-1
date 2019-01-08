@@ -18,7 +18,7 @@ class SettingProxy
   def ss(path)
     path_array = path.split(".")
     path_array.unshift("site") unless path_array[0].include?("site")
-    fetch(path_array.join("."), fatal_exception: true)
+    fetch(path_array.join("."), fatal_exception: false)
   end
 
   # delegates setting requests between settings and site settings
@@ -41,7 +41,7 @@ class SettingProxy
   # @option params [Symbol] :fatal_exception raises fatal exception if set to true
   def fetch_settings(path, options = {})
     settings ||= SettingInterface.new(Settings)
-    settings.fetch_setting(path, fatal_exception: true)
+    settings.fetch_setting(path, options)
   end
 
   # fetches site settings values
