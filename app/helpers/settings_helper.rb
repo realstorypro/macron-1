@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module SettingsHelper
-  # TODO: factor this out with s() calls
-  # this is needed because there are function calls still refer to it
+
+  # default setting accessor
   def settings(path, options = {})
     defaults = { fatal_exception: false }
     options = defaults.merge(options)
