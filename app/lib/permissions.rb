@@ -56,8 +56,6 @@ module Permissions
 
   # shortcut for site settings
   def ss(path)
-    site_settings = SiteSettingInterface.instance.fetch
-    settings ||= SettingInterface.new(site_settings)
-    settings.fetch_setting(path, fatal_exception: true)
+    SettingProxy.instance.ss(path)
   end
 end

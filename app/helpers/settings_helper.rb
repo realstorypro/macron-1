@@ -1,19 +1,22 @@
 # frozen_string_literal: true
 
 module SettingsHelper
+  # TODO: factor this out with s() calls
   # this is needed because there are function calls still refer to it
   def settings(path, options = {})
     defaults = { fatal_exception: false }
     options = defaults.merge(options)
 
-    settings ||= SettingInterface.new(Settings)
-    settings.fetch_setting(path, options)
+    SettingProxy.instance.fetch(path, options)
   end
 
   # Shortcut for settings with fatal exception enabled
   def s(path)
-    settings ||= SettingInterface.new(Settings)
-    settings.fetch_setting(path, fatal_exception: true)
+    SettingProxy.instance.s(path)
+  end
+
+  def ss(path)
+    SettingProxy.instance.ss(path)
   end
 
   # returns the name of the setting node

@@ -2,7 +2,6 @@
 
 class ApplicationController < ActionController::Base
   include SettingsHelper
-  include SiteSettingsHelper
 
   include Pundit
   include SiteSettings
