@@ -51,6 +51,6 @@ class SettingProxy
   def fetch_site_settings(path, options = {})
     site_settings = SiteSettingInterface.instance.fetch
     settings ||= SettingInterface.new(site_settings)
-    settings.fetch_setting(path, fatal_exception: true)
+    settings.fetch_setting(path, options)
   end
 end
