@@ -19,7 +19,7 @@ app/models/setting.rb 59fb99cd7b54a2f09a150df595455b09b37fb6f6
 app/models/tagging.rb 982c5cc4f7e9a1d2b74bdae9f8ae123499445d9b
 app/cells/base_cell.rb 5eb2e0d33dc86d6d2e73fca59b42ca98ecc3b369
 app/cells/menu_cell.rb 67c2a79e958108e0aef7c205acada3511da4ec02
-app/lib/permissions.rb 24918c4f0cd1ee4365fc1ae8d9fac7349568853f
+app/lib/permissions.rb a18ab330bab14610f027dc97d5bd8ff7cc74720e
 app/models/category.rb fd203c81dd815f9c7718a31a65ed635c8e834ae7
 app/inputs/rich_input.rb 999c82f04e3e64c46722ef795ae90c37b17fa2ae
 app/lib/setting_proxy.rb 3997d93c117d928e69f92d58f437162690a9f11a

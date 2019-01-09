@@ -156,7 +156,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>checks if the component is enabled.</p>
+<p>Checks if the component is enabled.</p>
 </div></span>
   
 </li>
@@ -189,7 +189,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_user_roles-instance_method" title="#fetch_user_roles (instance method)">#<strong>fetch_user_roles</strong>  &#x21d2; Object </a>
+      <a href="#fetch_user_roles-instance_method" title="#fetch_user_roles (instance method)">#<strong>fetch_user_roles</strong>  &#x21d2; Array </a>
     
 
     
@@ -204,7 +204,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>fetches all of the existing roles.</p>
+<p>fetches all of user roles.</p>
 </div></span>
   
 </li>
@@ -229,30 +229,6 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>checks if the role has an ability.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#ss-instance_method" title="#ss (instance method)">#<strong>ss</strong>(path)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>shortcut for site settings.</p>
 </div></span>
   
 </li>
@@ -414,13 +390,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>checks if the component is enabled</p>
+<p>Checks if the component is enabled</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>component</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>component to check</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -430,6 +426,11 @@
         <span class='type'>(<tt>Boolean</tt>)</span>
       
       
+      
+        &mdash;
+        <div class='inline'>
+<p>returns true if the component is enabled and false if it isn&#39;t.</p>
+</div>
       
     </li>
   
@@ -441,18 +442,18 @@
       <pre class="lines">
 
 
-29
-30
-31
 32
 33
 34
 35
 36
-37</pre>
+37
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_component_enabled?'>component_enabled?</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='rparen'>)</span>
   <span class='comment'># return false if the component has been disabled on the site basis
@@ -494,13 +495,13 @@
       <pre class="lines">
 
 
-48
-49
-50
-51</pre>
+52
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_ability'>fetch_ability</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_ability'>ability</span> <span class='op'>=</span> <span class='id identifier rubyid_settings'>settings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth.actions.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_action'>action</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>fatal_exception:</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -514,7 +515,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_user_roles-instance_method">
   
-    #<strong>fetch_user_roles</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>fetch_user_roles</strong>  &#x21d2; <tt>Array</tt> 
   
 
   
@@ -523,13 +524,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>fetches all of the existing roles</p>
+<p>fetches all of user roles</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>returns an array of role names</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -537,15 +556,15 @@
       <pre class="lines">
 
 
-40
-41
-42
-43
 44
-45</pre>
+45
+46
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_user_roles'>fetch_user_roles</span>
   <span class='kw'>return</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_roles'>roles</span><span class='period'>.</span><span class='id identifier rubyid_pluck'>pluck</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -597,18 +616,18 @@
       <pre class="lines">
 
 
-54
-55
-56
-57
 58
 59
 60
 61
-62</pre>
+62
+63
+64
+65
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_role_can?'>role_can?</span><span class='lparen'>(</span><span class='id identifier rubyid_role'>role</span><span class='comma'>,</span> <span class='id identifier rubyid_ability'>ability</span><span class='comma'>,</span> <span class='id identifier rubyid_component'>component</span><span class='comma'>,</span> <span class='id identifier rubyid_restrict_to_owner'>restrict_to_owner</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='comment'># short circuit authorization is the role can do it all
@@ -624,53 +643,12 @@
 </table>
 </div>
     
-      <div class="method_details ">
-  <h3 class="signature " id="ss-instance_method">
-  
-    #<strong>ss</strong>(path)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>shortcut for site settings</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-65
-66
-67</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 65</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_ss'>ss</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
-  <span class='const'><span class='object_link'><a href="SettingProxy.html" title="SettingProxy (class)">SettingProxy</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'>instance</span><span class='period'>.</span><span class='id identifier rubyid_ss'>ss</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Wed Jan  9 09:48:49 2019 by
+  Generated on Wed Jan  9 09:53:27 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>

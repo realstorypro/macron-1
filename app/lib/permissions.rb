@@ -25,7 +25,10 @@ module Permissions
     false
   end
 
-    # checks if the component is enabled
+  # Checks if the component is enabled
+  # @param [String] component component to check
+  # @return [Boolean] returns true if the component is enabled
+  #   and false if it isn't.
   def component_enabled?(component)
     # return false if the component has been disabled on the site basis
     site_components = ss("components")
@@ -36,7 +39,8 @@ module Permissions
     settings "components.#{component}.enabled", fatal_exception: true
   end
 
-    # fetches all of the existing roles
+  # fetches all of user roles
+  # @return [Array] returns an array of role names
   def fetch_user_roles
     return @user.roles.pluck(:name) unless @user.nil?
 
@@ -44,13 +48,13 @@ module Permissions
     Array.wrap(default_role)
   end
 
-    # fetches the ability
+  # fetches the ability
   def fetch_ability(action)
     ability = settings("auth.actions.#{action}", fatal_exception: true)
     ability.to_sym
   end
 
-    # checks if the role has an ability
+  # checks if the role has an ability
   def role_can?(role, ability, component, restrict_to_owner = false)
     # short circuit authorization is the role can do it all
     return true if settings("auth.permissions.#{role}.#{component}").methods.include?(:all)
@@ -61,7 +65,9 @@ module Permissions
     false
   end
 
-    # shortcut for site settings
+  private
+
+  # shortcut for site settings
   def ss(path)
     SettingProxy.instance.ss(path)
   end
