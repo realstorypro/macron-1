@@ -13,13 +13,18 @@ module SettingsHelper
   end
 
   # Shortcut for settings with fatal exception enabled
+  # @param [String] path a string path in dot notation
   def s(path)
     SettingProxy.instance.s(path)
   end
 
+  # Shortcut for site settings with fatal exception enabled
+  # @param [String] path a string path in dot notation
   def ss(path)
     SettingProxy.instance.ss(path)
   end
+
+  # TODO factor out node_nade & node_value
 
   # returns the name of the setting node
   def node_name(node)

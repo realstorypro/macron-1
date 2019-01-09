@@ -18,8 +18,8 @@ class AnalyticsProxy
   # Identifies a logged in user with additional metadata.
   # @param [Object] user a user to identify (generally a current_user)
   def identify(user = nil)
-    return false unless @segment
-    return false if @segment && user.nil?
+    return false unless ENV["SEGMENT_SERVER_KEY"]
+    return false if user.nil?
 
     @segment.identify(
       user_id: user.id,
@@ -39,8 +39,8 @@ class AnalyticsProxy
   # @option params [String] :event Name of the event
   # @option params [Hash] :props Properties to track
   def track(params)
-    return false unless @segment
-    return false if @segment && params[:user].nil?
+    return false unless ENV["SEGMENT_SERVER_KEY"]
+    return false if params[:user].nil?
     return false if params[:event].nil?
 
     @segment.track(

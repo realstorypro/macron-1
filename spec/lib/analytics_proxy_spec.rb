@@ -6,12 +6,6 @@ require "ostruct"
 describe AnalyticsProxy, "proxy without the segment" do
   before :all do
     @proxy = AnalyticsProxy.instance
-    @temp_segment = @proxy.segment
-    @proxy.segment = nil
-  end
-
-  after :all do
-    @proxy.segment = @temp_segment
   end
 
   it "it returns false on identify call" do
