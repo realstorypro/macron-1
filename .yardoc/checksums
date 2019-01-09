@@ -62,7 +62,7 @@ app/cells/widget/base_cell.rb 87f1ff1b4055310e0b495a3e6c58abdd1c62d420
 app/inputs/left_icon_input.rb 4ca600af1c0199552169bf7e3dec2912dc116d0b
 app/cells/widget/event_cell.rb 6f6a4531deec84cc93b90afbab5796eb6d036564
 app/cells/widget/video_cell.rb 64004b69e519c898832f647f4bfd03dd75ffc3ea
-app/helpers/settings_helper.rb c5ae0918e82b9b09a79b0ec5dd6b187ced2698c6
+app/helpers/settings_helper.rb 70a4ae5800c4474b43195056ef172927f95cf804
 app/inputs/datepicker_input.rb 09f50b566a75b9ce3446ad0a8d760280c8d21f18
 app/models/concerns/seoable.rb abff292e0dd61cbae4fa38b53062c4db382a7676
 app/models/concerns/slugged.rb efcc8ad074c6477ee56faeea9a37d353f643cf4b

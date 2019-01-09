@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 module SettingsHelper
-
-  # default setting accessor
+  # default accessor for settings proxy
+  # @param [String] path a string path in dot notation
+  # @param [Hash] options fetching options
+  # @option options [Symbol] :fatal_exception raises fatal exception if set to true
   def settings(path, options = {})
     defaults = { fatal_exception: false }
     options = defaults.merge(options)
