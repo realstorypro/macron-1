@@ -4,8 +4,6 @@
 class AnalyticsProxy
   include Singleton
 
-  attr_accessor :segment
-
   def initialize
     if ENV["SEGMENT_SERVER_KEY"]
       @segment = Segment::Analytics.new(

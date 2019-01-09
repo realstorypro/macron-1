@@ -19,7 +19,7 @@ app/models/setting.rb 59fb99cd7b54a2f09a150df595455b09b37fb6f6
 app/models/tagging.rb 982c5cc4f7e9a1d2b74bdae9f8ae123499445d9b
 app/cells/base_cell.rb 5eb2e0d33dc86d6d2e73fca59b42ca98ecc3b369
 app/cells/menu_cell.rb 67c2a79e958108e0aef7c205acada3511da4ec02
-app/lib/permissions.rb 38fb49a453695f7707a62600c0cc9d526cee2c32
+app/lib/permissions.rb 24918c4f0cd1ee4365fc1ae8d9fac7349568853f
 app/models/category.rb fd203c81dd815f9c7718a31a65ed635c8e834ae7
 app/inputs/rich_input.rb 999c82f04e3e64c46722ef795ae90c37b17fa2ae
 app/lib/setting_proxy.rb 3997d93c117d928e69f92d58f437162690a9f11a
@@ -34,7 +34,7 @@ app/cells/vue/feed_cell.rb 866149bfa8ea08f1ca7797da389690fe23e8295a
 app/helpers/crud_helper.rb b7732c1f0fcd4bac96136b751c6509171c1b1ad9
 app/helpers/path_helper.rb 7aa4047ee41e15c936186a8c1f4c00cce6158479
 app/helpers/user_helper.rb 97b3bb4c1a19f31f16244e69210a0e6174b4e02a
-app/lib/analytics_proxy.rb e05a1e16ac641c22dfa6c13896d28ab0ee1aeede
+app/lib/analytics_proxy.rb fdb11f930a0f1157f5de4789fdcf0e32c4992ee8
 app/models/areas/footer.rb fc099dbf15a2d0735bd844c6751eadc7ee89ebf5
 app/models/areas/header.rb 056a5c1e0ba0e7ddc9c3bcf7a82dc57e383cc0d1
 app/models/user_context.rb 02abc053f539891827e7a66ac5d70797f0361c0b
@@ -62,7 +62,7 @@ app/cells/widget/base_cell.rb 87f1ff1b4055310e0b495a3e6c58abdd1c62d420
 app/inputs/left_icon_input.rb 4ca600af1c0199552169bf7e3dec2912dc116d0b
 app/cells/widget/event_cell.rb 6f6a4531deec84cc93b90afbab5796eb6d036564
 app/cells/widget/video_cell.rb 64004b69e519c898832f647f4bfd03dd75ffc3ea
-app/helpers/settings_helper.rb 70a4ae5800c4474b43195056ef172927f95cf804
+app/helpers/settings_helper.rb d52efc688b7e87eb5fd69014819e8e15f49a74b6
 app/inputs/datepicker_input.rb 09f50b566a75b9ce3446ad0a8d760280c8d21f18
 app/models/concerns/seoable.rb abff292e0dd61cbae4fa38b53062c4db382a7676
 app/models/concerns/slugged.rb efcc8ad074c6477ee56faeea9a37d353f643cf4b

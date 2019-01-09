@@ -216,7 +216,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Shortcut for site settings with fatal exception enabled.</p>
+</div></span>
   
 </li>
 
@@ -256,12 +258,12 @@
       <pre class="lines">
 
 
-26
-27
-28</pre>
+30
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/helpers/settings_helper.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'app/helpers/settings_helper.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_node_name'>node_name</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_node'>node</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -297,12 +299,12 @@
       <pre class="lines">
 
 
-31
-32
-33</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/helpers/settings_helper.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'app/helpers/settings_helper.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_node_value'>node_value</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_node'>node</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -330,7 +332,27 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>path</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a string path in dot notation</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -441,15 +463,15 @@
       <pre class="lines">
 
 
+8
 9
 10
 11
 12
-13
-14</pre>
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/helpers/settings_helper.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'app/helpers/settings_helper.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_settings'>settings</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>fatal_exception:</span> <span class='kw'>false</span> <span class='rbrace'>}</span>
@@ -471,18 +493,49 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Shortcut for site settings with fatal exception enabled</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>path</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a string path in dot notation</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/helpers/settings_helper.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'app/helpers/settings_helper.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ss'>ss</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="SettingProxy.html" title="SettingProxy (class)">SettingProxy</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'>instance</span><span class='period'>.</span><span class='id identifier rubyid_ss'>ss</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
@@ -497,7 +550,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Jan  8 10:09:52 2019 by
+  Generated on Wed Jan  9 09:48:49 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>
