@@ -17,7 +17,7 @@ class AnalyticsProxy
   # @param [Object] user a user to identify (generally a current_user)
   def identify(user = nil)
     return false unless ENV["SEGMENT_SERVER_KEY"]
-    return false if user.nil?
+    #return false if user.nil?
 
     @segment.identify(
       user_id: user.id,

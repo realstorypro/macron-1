@@ -14,11 +14,9 @@ module Permissions
     # short circuits authorization if the component is disabled
     return false unless component_enabled?(component)
 
-    # fetches all of the users roles
-    roles = fetch_user_roles
-    ability = fetch_ability action
+    ability = lookup_ability action
 
-    roles.each do |role|
+    user_roles.each do |role|
       return true if role_can?(role, ability, component, restrict_to_owner)
     end
 
@@ -41,15 +39,17 @@ module Permissions
 
   # fetches all of user roles
   # @return [Array] returns an array of role names
-  def fetch_user_roles
+  def user_roles
     return @user.roles.pluck(:name) unless @user.nil?
 
     default_role = settings("defaults.permissions.visitor.role", fatal_exception: true)
     Array.wrap(default_role)
   end
 
-  # fetches the ability
-  def fetch_ability(action)
+  # looks up ability based on action
+  # @param [String] action action the ability is linked to
+  # @return [Symbol] ability linked to an action
+  def lookup_ability(action)
     ability = settings("auth.actions.#{action}", fatal_exception: true)
     ability.to_sym
   end

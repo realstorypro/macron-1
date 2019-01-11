@@ -15,11 +15,11 @@ describe HeadlessPolicy, "Headless Policy for logged out users" do
   end
 
   it "it fetches an existing role" do
-    expect(@policy.fetch_user_roles).to include("guest")
+    expect(@policy.user_roles).to include("guest")
   end
 
   it "it does not fetch any other roles" do
-    expect(@policy.fetch_user_roles.count).to equal 1
+    expect(@policy.user_roles.count).to equal 1
   end
 
   ## Action Authorizer Works
@@ -59,24 +59,24 @@ describe HeadlessPolicy, "Headless Policy for logged in users" do
 
   ## Fetching Roles ##
   it "is able to fetch user roles" do
-    expect(@policy.fetch_user_roles).to include("admin")
+    expect(@policy.user_roles).to include("admin")
   end
 
   it "it does not fetch non exist roles" do
-    expect(@policy.fetch_user_roles).to_not include("guest")
+    expect(@policy.user_roles).to_not include("guest")
   end
 
   ## Fetching Abilities ##
   it "throws an error if the action isnt mapped to ability" do
-    expect { @policy.fetch_ability("dance") }.to raise_error(RuntimeError)
+    expect { @policy.lookup_ability("dance") }.to raise_error(RuntimeError)
   end
 
   it "is able to fetch an ability" do
-    expect(@policy.fetch_ability("show")).to be :read
+    expect(@policy.lookup_ability("show")).to be :read
   end
 
   it "is able to fetch a correct ability" do
-    expect(@policy.fetch_ability("update")).to_not be :read
+    expect(@policy.lookup_ability("update")).to_not be :read
   end
 
   ## Checking Role Capabilities ##
