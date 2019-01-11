@@ -6,18 +6,16 @@ module Permissions
   # Checks if the action is authorized
   # @param [String] action action to check
   # @param [String] component component on which the action is performed
-  # @param [Boolean] restrict_to_owner determines whether
+  # @param [Boolean] restrict_record_to_owner determines whether
   #   action is only authorized for the resource owner
   # @return [Boolean] returns true if the action is authorized
   #   and false if it isn't.
-  def action_authorized?(action, component, restrict_to_owner = false)
+  def action_authorized?(action, component, restrict_record_to_owner = false)
     # short circuits authorization if the component is disabled
     return false unless component_enabled?(component)
 
-    ability = lookup_ability action
-
     user_roles.each do |role|
-      return true if role_can?(role, ability, component, restrict_to_owner)
+      return true if role_can?(role, action, component, restrict_record_to_owner)
     end
 
     false
@@ -49,17 +47,18 @@ module Permissions
   # looks up ability based on action
   # @param [String] action action the ability is linked to
   # @return [Symbol] ability linked to an action
-  def lookup_ability(action)
+  def ability(action)
     ability = settings("auth.actions.#{action}", fatal_exception: true)
     ability.to_sym
   end
 
   # checks if the role has an ability
-  def role_can?(role, ability, component, restrict_to_owner = false)
+  def role_can?(role, action, component, restrict_record_to_owner = false)
+
     # short circuit authorization is the role can do it all
     return true if settings("auth.permissions.#{role}.#{component}").methods.include?(:all)
-    if settings("auth.permissions.#{role}.#{component}").methods.include?(ability)
-      return true unless restrict_to_owner
+    if settings("auth.permissions.#{role}.#{component}").methods.include? ability(action)
+      return true unless restrict_record_to_owner
       return true if @record.user.eql?(@user)
     end
     false
