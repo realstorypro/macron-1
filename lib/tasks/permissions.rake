@@ -34,7 +34,7 @@ namespace :permissions do
     selected_component = prompt.select "Which component?", component_names, per_page: 20, filter: true
     selected_ability = prompt.multi_select "Which ability?", abilities, per_page: 20, filter: true
 
-    # breaks out if no ability ahs been selected
+    # breaks out if no ability has been selected
     break puts "no ability selected" if selected_ability.blank?
 
     permission_file = YAML.load_file(Rails.root.join("core").join("permissions").join("#{selected_role}.yml"))
