@@ -117,6 +117,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#ability_from_action-instance_method" title="#ability_from_action (instance method)">#<strong>ability_from_action</strong>(action)  &#x21d2; Symbol </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>looks up ability based on action.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#action_authorized%3F-instance_method" title="#action_authorized? (instance method)">#<strong>action_authorized?</strong>(action, component, restrict_to_owner = false)  &#x21d2; Boolean </a>
     
 
@@ -165,54 +189,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_ability-instance_method" title="#fetch_ability (instance method)">#<strong>fetch_ability</strong>(action)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>fetches the ability.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#fetch_user_roles-instance_method" title="#fetch_user_roles (instance method)">#<strong>fetch_user_roles</strong>  &#x21d2; Array </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>fetches all of user roles.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#role_can%3F-instance_method" title="#role_can? (instance method)">#<strong>role_can?</strong>(role, ability, component, restrict_to_owner = false)  &#x21d2; Boolean </a>
     
 
@@ -234,6 +210,30 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_roles-instance_method" title="#user_roles (instance method)">#<strong>user_roles</strong>  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>fetches all of user roles.</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -244,7 +244,88 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="action_authorized?-instance_method">
+  <h3 class="signature first" id="ability_from_action-instance_method">
+  
+    #<strong>ability_from_action</strong>(action)  &#x21d2; <tt><span class='object_link'><a href="Symbol.html" title="Symbol (class)">Symbol</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>looks up ability based on action</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>action</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>action the ability is linked to</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Symbol.html" title="Symbol (class)">Symbol</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ability linked to an action</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ability_from_action'>ability_from_action</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ability'>ability</span> <span class='op'>=</span> <span class='id identifier rubyid_settings'>settings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth.actions.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_action'>action</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>fatal_exception:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ability'>ability</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="action_authorized?-instance_method">
   
     #<strong>action_authorized?</strong>(action, component, restrict_to_owner = false)  &#x21d2; <tt>Boolean</tt> 
   
@@ -352,9 +433,7 @@
 21
 22
 23
-24
-25
-26</pre>
+24</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 13</span>
@@ -363,11 +442,9 @@
   <span class='comment'># short circuits authorization if the component is disabled
 </span>  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_component_enabled?'>component_enabled?</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='rparen'>)</span>
 
-  <span class='comment'># fetches all of the users roles
-</span>  <span class='id identifier rubyid_roles'>roles</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_user_roles'>fetch_user_roles</span>
-  <span class='id identifier rubyid_ability'>ability</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_ability'>fetch_ability</span> <span class='id identifier rubyid_action'>action</span>
+  <span class='id identifier rubyid_ability'>ability</span> <span class='op'>=</span> <span class='id identifier rubyid_ability_from_action'>ability_from_action</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_roles'>roles</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_role'>role</span><span class='op'>|</span>
+  <span class='id identifier rubyid_user_roles'>user_roles</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_role'>role</span><span class='op'>|</span>
     <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_role_can?'>role_can?</span><span class='lparen'>(</span><span class='id identifier rubyid_role'>role</span><span class='comma'>,</span> <span class='id identifier rubyid_ability'>ability</span><span class='comma'>,</span> <span class='id identifier rubyid_component'>component</span><span class='comma'>,</span> <span class='id identifier rubyid_restrict_to_owner'>restrict_to_owner</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
@@ -442,18 +519,18 @@
       <pre class="lines">
 
 
+30
+31
 32
 33
 34
 35
 36
 37
-38
-39
-40</pre>
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_component_enabled?'>component_enabled?</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='rparen'>)</span>
   <span class='comment'># return false if the component has been disabled on the site basis
@@ -470,9 +547,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="fetch_ability-instance_method">
+  <h3 class="signature " id="role_can?-instance_method">
   
-    #<strong>fetch_ability</strong>(action)  &#x21d2; <tt>Object</tt> 
+    #<strong>role_can?</strong>(role, ability, component, restrict_to_owner = false)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -481,13 +558,85 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>fetches the ability</p>
+<p>checks if the role has an ability</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>role</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>role to check permission against</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ability</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>to check permission against</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>restrict_to_owner</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ensures that the user performing the action is the owner of the record</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>returns true if the user is authorized and false if not</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -495,17 +644,27 @@
       <pre class="lines">
 
 
-52
-53
-54
-55</pre>
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 62</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_fetch_ability'>fetch_ability</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_ability'>ability</span> <span class='op'>=</span> <span class='id identifier rubyid_settings'>settings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth.actions.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_action'>action</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>fatal_exception:</span> <span class='kw'>true</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_ability'>ability</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_role_can?'>role_can?</span><span class='lparen'>(</span><span class='id identifier rubyid_role'>role</span><span class='comma'>,</span> <span class='id identifier rubyid_ability'>ability</span><span class='comma'>,</span> <span class='id identifier rubyid_component'>component</span><span class='comma'>,</span> <span class='id identifier rubyid_restrict_to_owner'>restrict_to_owner</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='comment'># short circuit authorization is the role can do it all
+</span>  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_settings'>settings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth.permissions.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_role'>role</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_methods'>methods</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='symbol'>:all</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_settings'>settings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth.permissions.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_role'>role</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_methods'>methods</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_ability'>ability</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>unless</span> <span class='id identifier rubyid_restrict_to_owner'>restrict_to_owner</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@record</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='ivar'>@user</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -513,9 +672,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="fetch_user_roles-instance_method">
+  <h3 class="signature " id="user_roles-instance_method">
   
-    #<strong>fetch_user_roles</strong>  &#x21d2; <tt>Array</tt> 
+    #<strong>user_roles</strong>  &#x21d2; <tt>Array</tt> 
   
 
   
@@ -556,87 +715,21 @@
       <pre class="lines">
 
 
+42
+43
 44
 45
 46
-47
-48
-49</pre>
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 42</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_fetch_user_roles'>fetch_user_roles</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_user_roles'>user_roles</span>
   <span class='kw'>return</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_roles'>roles</span><span class='period'>.</span><span class='id identifier rubyid_pluck'>pluck</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
 
   <span class='id identifier rubyid_default_role'>default_role</span> <span class='op'>=</span> <span class='id identifier rubyid_settings'>settings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>defaults.permissions.visitor.role</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>fatal_exception:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_wrap'>wrap</span><span class='lparen'>(</span><span class='id identifier rubyid_default_role'>default_role</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="role_can?-instance_method">
-  
-    #<strong>role_can?</strong>(role, ability, component, restrict_to_owner = false)  &#x21d2; <tt>Boolean</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>checks if the role has an ability</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-58
-59
-60
-61
-62
-63
-64
-65
-66</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/lib/permissions.rb', line 58</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_role_can?'>role_can?</span><span class='lparen'>(</span><span class='id identifier rubyid_role'>role</span><span class='comma'>,</span> <span class='id identifier rubyid_ability'>ability</span><span class='comma'>,</span> <span class='id identifier rubyid_component'>component</span><span class='comma'>,</span> <span class='id identifier rubyid_restrict_to_owner'>restrict_to_owner</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='comment'># short circuit authorization is the role can do it all
-</span>  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_settings'>settings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth.permissions.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_role'>role</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_methods'>methods</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='symbol'>:all</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_settings'>settings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth.permissions.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_role'>role</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_methods'>methods</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_ability'>ability</span><span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>unless</span> <span class='id identifier rubyid_restrict_to_owner'>restrict_to_owner</span>
-    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@record</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='ivar'>@user</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-  <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -648,7 +741,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jan  9 09:53:27 2019 by
+  Generated on Sat Jan 12 09:19:44 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>

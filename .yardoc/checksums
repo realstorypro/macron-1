@@ -19,7 +19,7 @@ app/models/setting.rb 59fb99cd7b54a2f09a150df595455b09b37fb6f6
 app/models/tagging.rb 982c5cc4f7e9a1d2b74bdae9f8ae123499445d9b
 app/cells/base_cell.rb 5eb2e0d33dc86d6d2e73fca59b42ca98ecc3b369
 app/cells/menu_cell.rb 67c2a79e958108e0aef7c205acada3511da4ec02
-app/lib/permissions.rb a18ab330bab14610f027dc97d5bd8ff7cc74720e
+app/lib/permissions.rb a7c7470a05d8e1bf5f7fafe4defb79f1a0d469a6
 app/models/category.rb fd203c81dd815f9c7718a31a65ed635c8e834ae7
 app/inputs/rich_input.rb 999c82f04e3e64c46722ef795ae90c37b17fa2ae
 app/lib/setting_proxy.rb 3997d93c117d928e69f92d58f437162690a9f11a
@@ -34,7 +34,7 @@ app/cells/vue/feed_cell.rb 866149bfa8ea08f1ca7797da389690fe23e8295a
 app/helpers/crud_helper.rb b7732c1f0fcd4bac96136b751c6509171c1b1ad9
 app/helpers/path_helper.rb 7aa4047ee41e15c936186a8c1f4c00cce6158479
 app/helpers/user_helper.rb 97b3bb4c1a19f31f16244e69210a0e6174b4e02a
-app/lib/analytics_proxy.rb fdb11f930a0f1157f5de4789fdcf0e32c4992ee8
+app/lib/analytics_proxy.rb be9197a471854f5392191b81ec5f7a094ac45de7
 app/models/areas/footer.rb fc099dbf15a2d0735bd844c6751eadc7ee89ebf5
 app/models/areas/header.rb 056a5c1e0ba0e7ddc9c3bcf7a82dc57e383cc0d1
 app/models/user_context.rb 02abc053f539891827e7a66ac5d70797f0361c0b
