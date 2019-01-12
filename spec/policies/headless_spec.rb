@@ -68,15 +68,15 @@ describe HeadlessPolicy, "Headless Policy for logged in users" do
 
   ## Fetching Abilities ##
   it "throws an error if the action isnt mapped to ability" do
-    expect { @policy.ability("dance") }.to raise_error(RuntimeError)
+    expect { @policy.ability_from_action("dance") }.to raise_error(RuntimeError)
   end
 
   it "is able to fetch an ability" do
-    expect(@policy.ability("show")).to be :read
+    expect(@policy.ability_from_action("show")).to be :read
   end
 
   it "is able to fetch a correct ability" do
-    expect(@policy.ability("update")).to_not be :read
+    expect(@policy.ability_from_action("update")).to_not be :read
   end
 
   ## Checking Role Capabilities ##
