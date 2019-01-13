@@ -4,4 +4,4 @@ echo "== Running Rubocop =="
 rubocop --format tap
 
 echo "== Running Rspec =="
-bundle exec rspec -f RspecTap::Formatter
+# bundle exec rspec -f RspecTap::Formatter
