@@ -37,14 +37,10 @@ describe AnalyticsProxy, "proxy with the segment" do
   end
 
   it "it returns true if we call identify with user" do
-    skip("fix later")
-
     expect(@proxy.identify(@user)).to be(true)
   end
 
   it "it returns false on track call with user" do
-    skip("fix later")
-
     anonymous_user = OpenStruct.new(id: "123")
     expect(@proxy.track(user: anonymous_user, event: "test")).to be(true)
   end
