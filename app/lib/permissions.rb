@@ -2,7 +2,6 @@
 
 # Handles the role based permission logic
 module Permissions
-
   # Checks if the action is authorized
   # @param [String] action action to check
   # @param [String] component component on which the action is performed
