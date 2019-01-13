@@ -2,10 +2,10 @@
 
 class ApplicationController < ActionController::Base
   include SettingsHelper
-  include SiteSettingsHelper
 
   include Pundit
   include SiteSettings
+  include Trackable
 
 
   before_action :store_user_location!, if: :storable_location?
@@ -29,23 +29,10 @@ class ApplicationController < ActionController::Base
     redirect_to("/403", status: 403)
   end
 
-  Warden::Manager.after_authentication do |user, auth, opts|
-    # todo: this ~may~ be a hack ... reevaluate
-    # the meta_routing_spec is failing when redis isnt loading
-    # we're making sure that the site settings pulled up by redis do in fact exist
-    site_settings = $site_setting_interface.fetch_json
-
-    unless site_settings.nil? || site_settings["integration"]["segment_server_key"].nil?
-      analytics = Segment::Analytics.new(write_key: site_settings["integration"]["segment_server_key"])
-      analytics.identify(
-        user_id: user.id,
-        traits: {
-            username: user.username,
-            email: user.email,
-            avatar: user.profile.avatar,
-            created_at: user.created_at
-        })
-    end
+  Warden::Manager.after_authentication do |user, _, __|
+    # Directly calling the AnalyticsProxy directly,
+    #   because we're under Warden and Trackable is not available.
+    AnalyticsProxy.instance.identify(user)
   end
 
     private

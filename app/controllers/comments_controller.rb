@@ -16,14 +16,9 @@ class CommentsController < ApplicationController
     authorize @comment
     render status: 500, json: { notice: "unable to add record" } unless @comment.save
 
-    ahoy.track "Left Comment",
-               type: params[:component].singularize,
-               id: @comment.id, slug: params[:record_id]
-
-    @analytics.track(
-      user_id: current_user.id,
-      event: "Left Comment",
-      properties: {
+    track(
+      event: "Left comment",
+      props: {
         type: params[:component].singularize,
         id: @comment.id, slug: params[:record_id]
       }

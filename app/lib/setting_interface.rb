@@ -1,12 +1,18 @@
 # frozen_string_literal: true
 
-# traverses the settings path
+# Returns the setting value based on the passed path
 class SettingInterface
   attr_accessor :settings
 
   def initialize(settings)
     @settings = settings
   end
+
+  # Returns the setting value based on the passed path.
+  # @param path [String] the setting path separated by '.' notation.
+  # @param options [Hash] options for the fetch operation.
+  # @return [Object] the retreived settings value
+  # @note if _options.fatal_exception_ is set to true then error will be thrown if the fragment is missing.
 
   def fetch_setting(path, options = {})
     # split the path into an array

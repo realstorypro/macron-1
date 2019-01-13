@@ -1,20 +1,30 @@
 # frozen_string_literal: true
 
 module SettingsHelper
-  # this is needed because there are function calls still refer to it
+  # default accessor for settings proxy
+  # @param [String] path a string path in dot notation
+  # @param [Hash] options fetching options
+  # @option options [Symbol] :fatal_exception raises fatal exception if set to true
   def settings(path, options = {})
     defaults = { fatal_exception: false }
     options = defaults.merge(options)
 
-    settings ||= SettingInterface.new(Settings)
-    settings.fetch_setting(path, options)
+    SettingProxy.instance.fetch(path, options)
   end
 
   # Shortcut for settings with fatal exception enabled
+  # @param [String] path a string path in dot notation
   def s(path)
-    settings ||= SettingInterface.new(Settings)
-    settings.fetch_setting(path, fatal_exception: true)
+    SettingProxy.instance.s(path)
   end
+
+  # Shortcut for site settings with fatal exception enabled
+  # @param [String] path a string path in dot notation
+  def ss(path)
+    SettingProxy.instance.ss(path)
+  end
+
+  # TODO factor out node_nade & node_value
 
   # returns the name of the setting node
   def node_name(node)

@@ -1,49 +1,35 @@
 # frozen_string_literal: true
 
-# traverses the settings path
+# Responsible for setting, retreiving and erasing the SiteSettings
 class SiteSettingInterface
-  attr_accessor :settings
+  include Singleton
 
-  def initialize(redis, namespace)
-    @redis = redis
-    @namespace = namespace
+  def initialize
+    @redis = Redis::Namespace.new("aquarius", redis: Redis.new)
+    @namespace = "site_settings"
     @initialized = false
   end
 
+  # Retrieves settings from the DB, converts them to JSON and stores them in Redis
   def update
     site_settings = Hash.new
-
-    component_settings = SiteSettings::Component.all
-    general_settings = SiteSettings::General.instance.payload
-    contact_settings = SiteSettings::Contact.instance.payload
-    integration_settings = SiteSettings::Integration.instance.payload
-    article_theme_settings = SiteSettings::Theme::Article.instance.payload
-    auth_theme_settings = SiteSettings::Theme::Authentication.instance.payload
-    branding_theme_settings = SiteSettings::Theme::Branding.instance.payload
-    discussion_theme_settings = SiteSettings::Theme::Discussion.instance.payload
-    footer_theme_settings = SiteSettings::Theme::Footer.instance.payload
-    global_theme_settings = SiteSettings::Theme::Global.instance.payload
-    header_theme_settings = SiteSettings::Theme::Header.instance.payload
-    homepage_theme_settings = SiteSettings::Theme::Homepage.instance.payload
-    podcast_theme_settings = SiteSettings::Theme::Podcast.instance.payload
-    video_theme_settings = SiteSettings::Theme::Video.instance.payload
-
-    site_settings[:components] = component_settings
-    site_settings[:general] = general_settings
-    site_settings[:contact] = contact_settings
-    site_settings[:integration] = integration_settings
-
     site_settings[:theme] = {}
-    site_settings[:theme][:article] = article_theme_settings
-    site_settings[:theme][:auth] = auth_theme_settings
-    site_settings[:theme][:branding] = branding_theme_settings
-    site_settings[:theme][:discussion] = discussion_theme_settings
-    site_settings[:theme][:footer] = footer_theme_settings
-    site_settings[:theme][:global] = global_theme_settings
-    site_settings[:theme][:header] = header_theme_settings
-    site_settings[:theme][:homepage] = homepage_theme_settings
-    site_settings[:theme][:podcast] = podcast_theme_settings
-    site_settings[:theme][:video] = video_theme_settings
+
+    site_settings[:components] = SiteSettings::Component.all
+    site_settings[:general] = SiteSettings::General.instance.payload
+    site_settings[:contact] = SiteSettings::Contact.instance.payload
+    site_settings[:integration] = SiteSettings::Integration.instance.payload
+
+    site_settings[:theme][:article] = SiteSettings::Theme::Article.instance.payload
+    site_settings[:theme][:auth] = SiteSettings::Theme::Authentication.instance.payload
+    site_settings[:theme][:branding] = SiteSettings::Theme::Branding.instance.payload
+    site_settings[:theme][:discussion] = SiteSettings::Theme::Discussion.instance.payload
+    site_settings[:theme][:footer] = SiteSettings::Theme::Footer.instance.payload
+    site_settings[:theme][:global] = SiteSettings::Theme::Global.instance.payload
+    site_settings[:theme][:header] = SiteSettings::Theme::Header.instance.payload
+    site_settings[:theme][:homepage] = SiteSettings::Theme::Homepage.instance.payload
+    site_settings[:theme][:podcast] = SiteSettings::Theme::Podcast.instance.payload
+    site_settings[:theme][:video] = SiteSettings::Theme::Video.instance.payload
 
     site_settings = site_settings.to_json
     @redis.set @namespace, site_settings
@@ -51,13 +37,23 @@ class SiteSettingInterface
     @initialized = true
   end
 
-  def fetch_json
+  # Returns JSON from the redis if exists otherwise returns nil
+  def fetch
     json = @redis.get(@namespace)
     return JSON.parse(json) unless json.nil?
     nil
   end
 
+  # Erases Redis Cache
+  # @note the cache is only deleted after the object was initialized
+  #   for the first time. Otherwise false is returned.
+
   def clear_cache
-    $redis.del @namespace if @initialized
+    if @initialized
+      @redis.del @namespace
+      return true
+    end
+
+    false
   end
 end

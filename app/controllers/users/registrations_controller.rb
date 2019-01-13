@@ -9,27 +9,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super do |created_user|
       unless created_user.id.nil?
-        ahoy.track "User Registered",
-                   id: created_user.id,
-                   username: created_user.username,
-                   email: created_user.email
-
-        @analytics.track(
-          user_id: created_user.id,
+        track(
           event: "User Registered",
-          properties: {
+          props: {
               username: created_user.username,
               email: created_user.email
           }
         )
 
         if created_user.newsletter == "1"
-          ahoy.track "Subscription Created"
-          @analytics.track(
-            user_id: created_user.id,
+          track(
             event: "Subscription Created",
-            properties: {
-                username: created_user.username,
+            props: {
                 email: created_user.email,
                 location: "signup"
             }

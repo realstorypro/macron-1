@@ -1,24 +1,31 @@
 # frozen_string_literal: true
 
+# Handles the role based permission logic
 module Permissions
+  # Checks if the action is authorized
+  # @param [String] action action to check
+  # @param [String] component component on which the action is performed
+  # @param [Boolean] restrict_to_owner determines whether
+  #   action is only authorized for the resource owner
+  # @return [Boolean] returns true if the action is authorized
+  #   and false if it isn't.
   def action_authorized?(action, component, restrict_to_owner = false)
     # short circuits authorization if the component is disabled
     return false unless component_enabled?(component)
 
-    # fetches all of the users roles
-    roles = fetch_user_roles
-    ability = fetch_ability action
+    ability = ability_from_action(action)
 
-    authorized = false
-
-    roles.each do |role|
-      authorized = true if role_can?(role, ability, component, restrict_to_owner)
+    user_roles.each do |role|
+      return true if role_can?(role, ability, component, restrict_to_owner)
     end
 
-    authorized
+    false
   end
 
-  # checks if the component is enabled
+  # Checks if the component is enabled
+  # @param [String] component component to check
+  # @return [Boolean] returns true if the component is enabled
+  #   and false if it isn't.
   def component_enabled?(component)
     # return false if the component has been disabled on the site basis
     site_components = ss("components")
@@ -29,21 +36,28 @@ module Permissions
     settings "components.#{component}.enabled", fatal_exception: true
   end
 
-  # fetches all of the existing roles
-  def fetch_user_roles
+  # fetches all of user roles
+  # @return [Array] returns an array of role names
+  def user_roles
     return @user.roles.pluck(:name) unless @user.nil?
 
     default_role = settings("defaults.permissions.visitor.role", fatal_exception: true)
     Array.wrap(default_role)
   end
 
-  # fetches the ability
-  def fetch_ability(action)
+  # looks up ability based on action
+  # @param [String] action action the ability is linked to
+  # @return [Symbol] ability linked to an action
+  def ability_from_action(action)
     ability = settings("auth.actions.#{action}", fatal_exception: true)
     ability.to_sym
   end
 
   # checks if the role has an ability
+  # @param [String] role role to check permission against
+  # @param [String] ability to check permission against
+  # @param [Boolean] restrict_to_owner ensures that the user performing the action is the owner of the record
+  # @return [Boolean] returns true if the user is authorized and false if not
   def role_can?(role, ability, component, restrict_to_owner = false)
     # short circuit authorization is the role can do it all
     return true if settings("auth.permissions.#{role}.#{component}").methods.include?(:all)
@@ -54,10 +68,10 @@ module Permissions
     false
   end
 
+  private
+
   # shortcut for site settings
   def ss(path)
-    site_settings = $site_setting_interface.fetch_json
-    settings ||= SettingInterface.new(site_settings)
-    settings.fetch_setting(path, fatal_exception: true)
+    SettingProxy.instance.ss(path)
   end
 end
