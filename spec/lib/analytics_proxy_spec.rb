@@ -24,6 +24,14 @@ describe AnalyticsProxy, "proxy with the segment" do
     @proxy = AnalyticsProxy.instance
   end
 
+  before(:each) do
+    sign_in @user
+  end
+
+  after(:each) do
+    sign_out @user
+  end
+
   it "it returns false if we call identify without user" do
     expect(@proxy.identify).to be(false)
   end
