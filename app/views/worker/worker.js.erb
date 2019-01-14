@@ -4,7 +4,7 @@ self.addEventListener('install', function(event) {
             return cache.addAll([
               "/",
               <% @entries.each do |entry| %>
-              "<%= entry_url(entry) %>",
+              "<% entry_url(entry) %>",
               <% end %>
               "/articles/",
               "/videos/",
