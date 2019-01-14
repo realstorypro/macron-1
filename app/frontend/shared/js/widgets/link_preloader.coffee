@@ -7,6 +7,8 @@ class LinkPreloader
 
   constructor: ->
 
+    @link_history = []
+
     # setting an observer up
     @observer = null
     @observer_config =
@@ -14,7 +16,7 @@ class LinkPreloader
       threshold: 0.01
 
 
-    # number of images we're observing
+    # number of links we're observing
     @link_count = 0
 
     if !instance
@@ -65,6 +67,9 @@ class LinkPreloader
         @observer.unobserve(entry.target)
 
   load_link: (link) =>
-    console.log 'load this', link
+    if @link_history.indexOf(link.href) == -1
+      @link_history.push(link.href)
+      $.get link.href
+
 
 export { LinkPreloader as default }
