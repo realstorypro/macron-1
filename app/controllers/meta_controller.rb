@@ -13,7 +13,9 @@ class MetaController < ApplicationController
     authorize @entries
   end
 
-  def show() end
+  def show
+    expires_in 2.minutes
+  end
 
   def new
     @entry = entry_class.new
