@@ -4,7 +4,7 @@
 module Zapier
   class Base
     include HTTParty
-    include SiteSettingsHelper
+    include SettingsHelper
 
     attr_accessor :error_message, :response, :code, :body
     attr_reader :resource
