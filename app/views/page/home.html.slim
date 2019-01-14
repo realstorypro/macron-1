@@ -6,7 +6,7 @@
         = cards 'three fluid'
           - cache @discussions
             - @discussions.each do |discussion|
-              = link_to discussion_details_path(discussion.category.slug, discussion.slug), class: "ui card fluid" do
+              = link_to discussion_details_path(discussion.category.slug, discussion.slug), class: "ui card fluid", data: { preloadable: true} do
                 = content
                   = header ui: :off
                     = header class: "dividing small sub #{discussion.category.color.name}"
@@ -17,7 +17,7 @@
       = column mobile: 16, class: 'mobile only'
         - cache @discussions
           - @discussions.each do |discussion|
-            = link_to discussion_details_path(discussion.category.slug, discussion.slug), class: "ui card fluid" do
+            = link_to discussion_details_path(discussion.category.slug, discussion.slug), class: "ui card fluid", data: { preloadable: true} do
               = content
                 = header ui: :off
                   = header class: "dividing small sub #{discussion.category.color.name}"

@@ -13,6 +13,7 @@ import Dropdown from './widgets/dropdown'
 import Multiselect from './widgets/multiselect'
 import Navigation from './widgets/navigation'
 import ImagePreloader from './widgets/image_preloader'
+import LinkPreloader from './widgets/link_preloader'
 import ConversionTracker from './widgets/conversion_tracker'
 import ShopifyButton from './widgets/shopify_button'
 
@@ -45,6 +46,7 @@ dropdown = new Dropdown
 multiselect = new Multiselect
 navigation = new Navigation
 image_preloader = new ImagePreloader
+link_preloader = new LinkPreloader
 conversion_tracker = new ConversionTracker
 shopify_button = new ShopifyButton
 
@@ -79,6 +81,7 @@ class Client_app
     dropdown.setup()
     multiselect.setup()
     image_preloader.setup()
+    link_preloader.setup()
     conversion_tracker.setup()
     shopify_button.setup()
     navigation.setup()
@@ -99,6 +102,7 @@ class Client_app
     dropdown.teardown()
     multiselect.teardown()
     image_preloader.teardown()
+    link_preloader.teardown()
     conversion_tracker.teardown()
     shopify_button.teardown()
     navigation.teardown()
