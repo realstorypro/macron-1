@@ -1,7 +1,7 @@
 = item "link #{@size}"
   = preload_image @item.card_image + "-/quality/lightest/-/progressive/yes/", image_class if @image == 'card'
   = preload_image @item.landscape_image + "-/quality/lightest/-/progressive/yes/", image_class if @image == 'landscape'
-  = link_to show_link(@item)
+  = link_to show_link(@item), data: { preloadable: true}
     = overlay "#{@size} #{overlay_color} #{overlay_background}"
       = meta
         - if content_icons == 'show'
