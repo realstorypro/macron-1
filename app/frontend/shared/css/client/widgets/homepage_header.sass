@@ -21,6 +21,10 @@
         background-attachment: fixed
         background-size: contain
 
+      img
+        width: 100%
+        height: 100%
+
     &.tiny .image
       @include media('>=desktop')
         height: $w-homepage-header-tiny-image-height
@@ -54,6 +58,7 @@
       height: $w-homepage-header-mobile-image-height
       align-items: center
       background: $w-homepage-header-mobile-overlay
+
 
 
     &.tiny

@@ -93,13 +93,13 @@ class ImagePreloader
     else
       container_height = Math.ceil(target_image.height())
 
-    #resize = image_src.match(/\/resize\/[^/]*\//g)
+    resize = image_src.match(/\/resize\/[^/]*\//g)
 
     # resize the resize if it exists or append it
-    # if resize
-    #   image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/x#{container_height}/")
-    # else
-    #   image_src = image_src + "-/resize/x#{container_height}/"
+    if resize
+      image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/x#{container_height}/")
+    else
+      image_src = image_src + "-/resize/x#{container_height}/"
 
     image_klass = target_image.data('klass')
 
@@ -107,7 +107,7 @@ class ImagePreloader
     preloaded_image.src = image_src
 
     image_loaded = =>
-      target_image.attr('src', image_src)
+      target_image.find('img').attr('src', image_src)
       target_image.addClass(image_klass)
       target_image.find('.dimmer').dimmer('hide')
       window.dimz =  target_image.find('.dimmer')
