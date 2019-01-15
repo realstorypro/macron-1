@@ -110,8 +110,6 @@ class ImagePreloader
       target_image.find('img').attr('src', image_src)
       target_image.addClass(image_klass)
       target_image.find('.dimmer').dimmer('hide')
-      window.dimz =  target_image.find('.dimmer')
-
 
     preloaded_image.onload = image_loaded
 
