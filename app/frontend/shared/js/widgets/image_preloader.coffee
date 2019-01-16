@@ -87,6 +87,7 @@ class ImagePreloader
 
     target_image = $(image)
     image_src = target_image.data('src')
+    image_alt = target_image.data('alt')
 
     if (typeof navigator.connection == 'undefined') || navigator.connection.downlink > 2.5
       container_height = Math.ceil(target_image.height()) * 2
@@ -100,6 +101,10 @@ class ImagePreloader
       image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/x#{container_height}/")
     else
       image_src = image_src + "-/resize/x#{container_height}/"
+
+    # add the jpeg extension for seo benefits if alt is defined
+    if image_alt?
+      image_src = image_src + image_alt + '.jpg'
 
     image_klass = target_image.data('klass')
 
