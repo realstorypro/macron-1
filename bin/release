@@ -4,3 +4,4 @@ rake colors:setup
 rake roles:setup
 rake components:setup
 rake db:seed
+rake cache:clear
