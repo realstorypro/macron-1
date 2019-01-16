@@ -71,5 +71,4 @@ class LinkPreloader
       @link_history.push(link.href)
       $.get link.href
 
-
 export { LinkPreloader as default }
