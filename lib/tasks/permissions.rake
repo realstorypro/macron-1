@@ -54,6 +54,5 @@ namespace :permissions do
 
   desc "Disable disables permission for a user"
   task disable: :environment do
-    prompt = TTY::Prompt.new
   end
 end

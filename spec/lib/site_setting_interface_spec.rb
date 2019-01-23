@@ -16,6 +16,7 @@ describe SiteSettingInterface, "initalized site setting interface" do
   end
 
   it "should return true after running clear_cache" do
+    @settings.fetch
     expect(@settings.clear_cache).to eq(true)
   end
 end
