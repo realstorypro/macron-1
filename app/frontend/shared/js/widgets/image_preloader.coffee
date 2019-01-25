@@ -6,8 +6,7 @@ class ImagePreloader
   instance = null
 
   constructor: ->
-
-    @add_event_listener()
+    @pre_cache_cleanup()
 
     # setting an observer up
     @observer = null
@@ -28,16 +27,6 @@ class ImagePreloader
   reinit: () ->
     @teardown()
     @setup()
-
-  add_event_listener: () ->
-
-    # show the dimmer when switching off things
-    # and unloads image before cache
-    document.addEventListener 'turbolinks:before-cache', ->
-      $('[data-src]').each (index,  value) ->
-        item = $(value)
-        item.css('background-image', '')
-      $('[data-src] .ui.dimmer').dimmer('show')
 
 
   setup: () =>
@@ -117,5 +106,13 @@ class ImagePreloader
       target_image.find('.dimmer').dimmer('hide')
 
     preloaded_image.onload = image_loaded
+
+  # show the dimmer when switching off things and unloads image
+  pre_cache_cleanup: () ->
+    document.addEventListener 'turbolinks:before-cache', ->
+      $('[data-src]').each (index,  value) ->
+        item = $(value)
+        item.css('background-image', '')
+      $('[data-src] .ui.dimmer').dimmer('show')
 
 export { ImagePreloader as default }

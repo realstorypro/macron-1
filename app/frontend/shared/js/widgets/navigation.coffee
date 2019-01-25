@@ -6,6 +6,8 @@ class Navigation
   instance = null
 
   constructor: ->
+    @pre_cache_cleanup()
+
     if !instance
       instance = this
 
@@ -15,6 +17,7 @@ class Navigation
   reinit: () ->
     @teardown()
     @setup()
+
 
   setup: () ->
     utils.log 'setup', 'setup()', 'navigation'
@@ -87,5 +90,12 @@ class Navigation
     utils.log 'teardown', 'teardown()', 'navigation'
 
     $(window).off('scroll')
+
+  # resets the navbar position to the top of the page
+  pre_cache_cleanup: () ->
+    document.addEventListener 'turbolinks:before-cache', ->
+      navbar = $('.navigation.widget')
+      navbar.css('top', 0)
+      navbar.removeClass('mini')
 
 export { Navigation as default }
