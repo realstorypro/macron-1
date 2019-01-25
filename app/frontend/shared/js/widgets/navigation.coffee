@@ -6,6 +6,8 @@ class Navigation
   instance = null
 
   constructor: ->
+    @add_event_listener()
+
     if !instance
       instance = this
 
@@ -15,6 +17,13 @@ class Navigation
   reinit: () ->
     @teardown()
     @setup()
+
+  add_event_listener: () ->
+    # resets the navbar to the top of the page before cache
+    document.addEventListener 'turbolinks:before-cache', ->
+      navbar = $('.navigation.widget')
+      navbar.css('top', 0)
+      navbar.removeClass('mini')
 
   setup: () ->
     utils.log 'setup', 'setup()', 'navigation'
