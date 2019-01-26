@@ -10,7 +10,7 @@ module Widget
       end
 
       def button_color
-        return_class = rendering = ActiveSupport::SafeBuffer.new
+        return_class = ActiveSupport::SafeBuffer.new
         return_class << ss("theme.footer.button_color")
         return_class << " #{ss("theme.footer.button_style")}"
         return_class
