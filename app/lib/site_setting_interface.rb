@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
-# Responsible for setting, retreiving and erasing the SiteSettings
+# Responsible for setting, retrieving and erasing the SiteSettings
 class SiteSettingInterface
   include Singleton
 
   def initialize
     @redis = Redis::Namespace.new("aquarius", redis: Redis.new)
     @namespace = "site_settings"
-    @initialized = false
   end
 
   # Retrieves settings from the DB, converts them to JSON and stores them in Redis
@@ -33,8 +32,6 @@ class SiteSettingInterface
 
     site_settings = site_settings.to_json
     @redis.set @namespace, site_settings
-
-    @initialized = true
   end
 
   # Returns JSON from the redis if exists otherwise returns nil
@@ -53,11 +50,7 @@ class SiteSettingInterface
   #   for the first time. Otherwise false is returned.
 
   def clear_cache
-    if @initialized
-      @redis.del @namespace
-      return true
-    end
-
-    false
+    @redis.del @namespace
+    true
   end
 end

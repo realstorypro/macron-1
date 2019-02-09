@@ -19,11 +19,8 @@ module FooterHelper
   end
 
   private
-    def render_footer_class(footer_color, options = {})
+    def render_footer_class(footer_color)
       palette = Palette.new
-
-      defaults = {}
-      options = defaults.merge(options)
 
       rendering =  ActiveSupport::SafeBuffer.new
       rendering << " #{palette.contrast(footer_color)}"
@@ -31,11 +28,8 @@ module FooterHelper
       rendering
     end
 
-    def render_footer_item_class(footer_color, options = {})
+    def render_footer_item_class(footer_color)
       palette = Palette.new
-
-      defaults = {}
-      options = defaults.merge(options)
 
       rendering =  ActiveSupport::SafeBuffer.new
       rendering << " #{palette.contrast(footer_color)}"

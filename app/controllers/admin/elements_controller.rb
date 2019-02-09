@@ -8,7 +8,8 @@ module Admin
     skip_before_action :set_breadcrumb
 
     def pick_element
-      parent = parent_class.find(params[:parent_id])
+      # TODO this may be unnecessary. Remove once tested.
+      # parent = parent_class.find(params[:parent_id])
       render :pick_element, layout: false
     end
 
@@ -21,7 +22,7 @@ module Admin
       end
 
       # Pick the right area
-      area = parent.areas.select { |area| area.type.include?(params[:area].capitalize) }.last
+      area = parent.areas.select { |area_item| area_item.type.include?(params[:area].capitalize) }.last
 
 
       element = s("components.#{params[:element]}.klass").classify.constantize.create

@@ -80,16 +80,18 @@ class ImagePreloader
 
     if (typeof navigator.connection == 'undefined') || navigator.connection.downlink > 2.5
       container_height = Math.ceil(target_image.height()) * 2
+      container_width = Math.ceil(target_image.width()) * 2
     else
       container_height = Math.ceil(target_image.height())
+      container_width = Math.ceil(target_image.width())
 
     resize = image_src.match(/\/resize\/[^/]*\//g)
 
     # resize the resize if it exists or append it
     if resize
-      image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/x#{container_height}/")
+      image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/#{container_width}x#{container_height}/")
     else
-      image_src = image_src + "-/resize/x#{container_height}/"
+      image_src = image_src + "-/resize/#{container_width}x#{container_height}/"
 
     # add the jpeg extension for seo benefits if alt is defined
     if image_alt?

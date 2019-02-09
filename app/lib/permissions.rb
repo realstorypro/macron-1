@@ -69,9 +69,8 @@ module Permissions
   end
 
   private
-
-  # shortcut for site settings
-  def ss(path)
-    SettingProxy.instance.ss(path)
-  end
+    # shortcut for site settings
+    def ss(path)
+      SettingProxy.instance.ss(path)
+    end
 end
