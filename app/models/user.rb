@@ -21,6 +21,9 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :profile
   has_many :entries
   has_many :articles
+  has_many :videos
+  has_many :discussions
+  has_many :podcasts
 
   # Setting Default Scope
   default_scope { includes(:profile).joins(:profile) }
