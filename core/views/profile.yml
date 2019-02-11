@@ -14,6 +14,16 @@ views:
       card_color:
         label: 'Card Color'
         type: 'color'
+      first_name:
+        label: 'First Name'
+        type: 'string'
+        maxlength: '50'
+        hint: 'Limited to 50 Characters'
+      last_name:
+        label: 'Last Name'
+        type: 'string'
+        maxlength: '50'
+        hint: 'Limited to 50 Characters'
       title:
         label: 'Title'
         type: 'string'
