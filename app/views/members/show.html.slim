@@ -1,5 +1,45 @@
 = fragment 'extended body wrapper'
   = component 'members'
+    = grid
+      = row class: @member.profile.card_color
+        = column computer: 16, tablet: 16, mobile: 16
+          = container
+            = row
+              = column computer: 16, tablet: 16, mobile: 16
+                = image_tag avatar_thumbnail(@member), class: 'ui image circular small'
+                = h5 'inverted'
+                  = "#{@member.profile.first_name} #{@member.profile.last_name}"
+                  = header 'sub'
+                    = "@#{@member.username}"
+                = list 'horizontal relaxed'
+                  -if @member.profile.location
+                    = item
+                      = "#{icon('map marker alternate')} #{@member.profile.location}".html_safe
+                  -if @member.profile.age
+                    = item
+                      = "#{icon('child')} #{@member.profile.age} years old".html_safe
+                -if @member.profile.signature
+                  = text
+                    ="#{icon('left quote')} #{@member.profile.signature}".html_safe
+
+                = list 'horizontal'
+                  -if @member.profile.url
+                    = item
+                      = link_to @member.profile.url
+                        = icon 'globe inverted large'
+                  -if @member.profile.twitter
+                    = item
+                      = link_to "https://www.twitter.com/@#{@member.profile.twitter}"
+                        = icon 'twitter inverted large'
+                  -if @member.profile.instagram
+                    = item
+                      = link_to "https://www.instagram.com/#{@member.profile.instagram}", target: '_blank'
+                        = icon 'instagram inverted large'
+
+                br
+                br
+                  
+          
     = segment 'basic'
       = container
         = grid 'flipped'
