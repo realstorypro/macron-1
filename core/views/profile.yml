@@ -7,6 +7,10 @@ views:
       basics_header:
         type: 'header'
         text: 'Basics'
+      cover:
+        label: 'Cover'
+        type: 'image'
+        size: ['2560','1456']
       avatar:
         label: 'Avatar'
         type: 'image'
