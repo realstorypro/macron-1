@@ -49,15 +49,24 @@
       = container
         = grid
           = column computer: 16, tablet: 16, mobile: 16
-            .activities.scroller
-              = h4 class: 'dividing'
-                = content
-                  | Latest Activity
-              == Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
-              - if @comments.blank?
-                = message 'icon secondary'
-                  = icon 'user'
-                  = content
-                    = header ui: :off, text: "#{@member.username.capitalize} has no recent activity."
-                    = text text: 'Please check back later.'
+            .activities.holder
+              = menu class: 'top attached tabular secondary pointing', ui: :on
+                = item 'active'
+                  | Activity
+                = item 
+                  | Discussions
+                = item 
+                  | Articles
+                = item 
+                  | Videos
+                = item 
+                  | Podcasts
+              .ui.bottom.attached.tab.segment
+                == Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
+                - if @comments.blank?
+                  = message 'icon secondary'
+                    = icon 'user'
+                    = content
+                      = header ui: :off, text: "#{@member.username.capitalize} has no recent activity."
+                      = text text: 'Please check back later.'
 
