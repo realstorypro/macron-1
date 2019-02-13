@@ -6,13 +6,13 @@
           = container
             = grid
               = row 'profile holder'
-                = column computer: 3
-                  = image_tag avatar_thumbnail(@member, false), class: 'ui image small circular'
+                = column computer: 3, class: 'middle aligned aligned'
+                  = image_tag avatar_thumbnail(@member, false), class: 'ui image circular'
                   - if @editable
                     br
                     = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary editable'
-                = column computer: 10
-                  = h4
+                = column computer: 10, class: 'centered'
+                  = h4 'inverted'
                     = "#{@member.profile.first_name} #{@member.profile.last_name}"
                     = header 'sub'
                       = "@#{@member.username}"
