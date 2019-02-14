@@ -1,44 +1,45 @@
-= fragment 'extended body wrapper'
-  = component 'members'
-    == Vue::CoverCell.(nil, overlay_background: ss('theme.global.overlay_background'), image: @member.profile.url)
-    = container
+= component 'members'
+  = fragment 'header fullscreen'
+      == Vue::CoverCell.(nil, overlay_background: ss('theme.global.overlay_background'), image: @member.profile.cover)
       = grid
-        = row 'profile holder'
-          = column computer: 3, class: 'middle aligned aligned'
-            = image_tag avatar_thumbnail(@member, false), class: 'ui image circular'
-            - if @editable
-              br
-              = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary editable'
-          = column computer: 10, class: 'centered'
-            = h4 'inverted'
-              = "#{@member.profile.first_name} #{@member.profile.last_name}"
-              = header 'sub'
-                = "@#{@member.username}"
-            = text
-              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lectus pretium, congue orci ac, egestas velit. Pellentesque sed auctor urna. In a rhoncus lacus, nec blandit lorem. 
-            = text
-              | Aliquam erat volutpat. Aliquam sodales libero id dui condimentum pharetra. Donec fringilla a nulla sit amet pellentesque. Praesent rutrum magna nec sollicitudin efficitur. Sed feugiat gravida sollicitudin. 
-          = row 'black'
-            = column computer: 16, tablet: 16, mobile: 16
-              = container
-                = grid
-                  = row
-                    = column computer: 2, tablet: 16, mobile: 16, class: 'social holder'
-                      = h5 class: 'inverted', text: 'Connect'
-                    = column computer: 14, tablet: 16, mobile: 16
-                      = list 'horizontal inverted'
-                        -if @member.profile.url
-                          = item
-                            = link_to @member.profile.url
-                              = icon 'globe large middle aligned'
-                        -if @member.profile.twitter
-                          = item
-                            = link_to "https://www.twitter.com/@#{@member.profile.twitter}"
-                              = icon 'twitter large middle aligned'
-                        -if @member.profile.instagram
-                          = item
-                            = link_to "https://www.instagram.com/#{@member.profile.instagram}", target: '_blank'
-                              = icon 'instagram large middle aligned'
+        = row 'black'
+          = column computer: 16, tablet: 16, mobile: 16
+            = container
+              = grid
+                = row
+                  = column computer: 2, tablet: 16, mobile: 16, class: 'social holder'
+                    = h5 class: 'inverted', text: 'Connect'
+                  = column computer: 14, tablet: 16, mobile: 16
+                    = list 'horizontal inverted'
+                      -if @member.profile.url
+                        = item
+                          = link_to @member.profile.url
+                            = icon 'globe large middle aligned'
+                      -if @member.profile.twitter
+                        = item
+                          = link_to "https://www.twitter.com/@#{@member.profile.twitter}"
+                            = icon 'twitter large middle aligned'
+                      -if @member.profile.instagram
+                        = item
+                          = link_to "https://www.instagram.com/#{@member.profile.instagram}", target: '_blank'
+                            = icon 'instagram large middle aligned'
+      = container
+        = grid
+          = row 'profile holder'
+            = column computer: 3, class: 'middle aligned aligned'
+              = image_tag avatar_thumbnail(@member, false), class: 'ui image circular'
+              - if @editable
+                br
+                = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary editable'
+            = column computer: 10, class: 'centered'
+              = h4 'inverted'
+                = "#{@member.profile.first_name} #{@member.profile.last_name}"
+                = header 'sub'
+                  = "@#{@member.username}"
+              = text 'inverted'
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lectus pretium, congue orci ac, egestas velit. Pellentesque sed auctor urna. In a rhoncus lacus, nec blandit lorem. 
+              = text 'inverted'
+                | Aliquam erat volutpat. Aliquam sodales libero id dui condimentum pharetra. Donec fringilla a nulla sit amet pellentesque. Praesent rutrum magna nec sollicitudin efficitur. Sed feugiat gravida sollicitudin. 
 
 
 
