@@ -49,15 +49,15 @@
 = segment 'basic'
   = container
     = grid
-      = column computer: 16, tablet: 16, mobile: 16
+      = column computer: 14, tablet: 16, mobile: 16
         .activities.holder
-          = h5 text: 'Recent Activities'
-          = segment
-            == Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
-            - if @comments.blank?
-              = message 'icon secondary'
-                = icon 'user'
-                = content
-                  = header ui: :off, text: "#{@member.username.capitalize} has no recent activity."
-                  = text text: 'Please check back later.'
+          = h5 class: 'dividing', text: 'Recent Activity'
+          br
+          == Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
+          - if @comments.blank?
+            = message 'icon secondary'
+              = icon 'user'
+              = content
+                = header ui: :off, text: "#{@member.username.capitalize} has no recent activity."
+                = text text: 'Please check back later.'
 
