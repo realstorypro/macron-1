@@ -1,36 +1,55 @@
 .component.members
-  //  padding-top: $header-external-padding - 0.1em
-  //  padding-bottom: $footer-padding
-  //  @include media("<tablet")
-  //    padding-top: $header-external-mobile-padding
-  //    padding-bottom: $footer-mobile-padding
 
-  .ui.basic.segment
-    @include media("<tablet")
-      padding: 0
+  // .ui.basic.segment
+  //   @include media("<tablet")
+  //     padding: 0
 
-  .ui.grid.flipped
-    @include media("<tablet")
-      flex-direction: column-reverse
+  // .ui.grid.flipped
+  //   @include media("<tablet")
+  //     flex-direction: column-reverse
 
   .profile.holder
     padding-top: 8.5em
     padding-bottom: 8.5em
+    @include media("<tablet")
+      padding-top: 2em
+      padding-bottom: 1em
+      text-align: center
 
     .ui.circular.image
       border: 5px solid white
+      @include media("<tablet")
+        width: 250px
+        margin: 0 auto
 
     .text
       font-size: 1.1em
       color: $white
 
   .social.holder
-    padding-top: 4px
+    margin: 5px 0 0
 
-    .header
-      font-size: 1.4em
+    @include media("<tablet")
+      display: none
+      margin: 0
 
-  .activities.holder
+      .header
+        text-align: center
+  
+  .link.holder
+    @include media("<tablet")
+      margin: 3px
+      text-align: center
+    
+
+
+.ui.social.segment
+  margin: 0
+
+  .header
+    font-size: 1.4em
+
+  //.activities.holder
     padding: 2em 0
 
 
