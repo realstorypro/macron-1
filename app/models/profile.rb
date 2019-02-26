@@ -7,6 +7,7 @@ class Profile < ApplicationRecord
   belongs_to :user
 
   validates_presence_of :user
+  before_save :cleanup_twitter, :cleanup_instagram
 
   def erase_profile!
     self.avatar = nil
@@ -23,6 +24,14 @@ class Profile < ApplicationRecord
   def avatar_with_default
     return avatar unless avatar.nil?
     "default-avatar.jpg"
+  end
+
+  def cleanup_twitter
+    twitter.tr!('@','') if twitter.include?('@')
+  end
+
+  def cleanup_instagram
+    instagram.tr!('@','') if instagram.include?('@')
   end
 
   def self.policy_class

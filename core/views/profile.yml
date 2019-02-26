@@ -6,18 +6,15 @@ views:
     new:
       basics_header:
         type: 'header'
-        text: 'Basics'
-      cover:
-        label: 'Cover'
-        type: 'image'
-        size: ['2560','1456']
+        text: 'The Basics'
       avatar:
         label: 'Avatar'
         type: 'image'
         size: ['600','600']
-      card_color:
-        label: 'Card Color'
-        type: 'color'
+      cover:
+        label: 'Cover Picture'
+        type: 'image'
+        size: ['2560','1456']
       first_name:
         label: 'First Name'
         type: 'string'
@@ -28,41 +25,40 @@ views:
         type: 'string'
         maxlength: '50'
         hint: 'Limited to 50 Characters'
-      title:
-        label: 'Title'
-        type: 'string'
-        maxlength: '50'
-        hint: 'Limited to 50 Characters'
-      location:
-        label: 'Location'
-        type: 'string'
-        maxlength: '50'
-        hint: 'Limited to 50 Characters'
-      age:
-        label: 'Age'
-        type: 'integer'
-        maxlength: '200'
-        hint: 'Limited to 200 Characters'
-      signature:
-        label: 'Signature'
-        type: 'string'
-        maxlength: '200'
-        hint: 'Limited to 200 Characters'
-      url:
-        label: 'Your Website'
-        type: 'string'
-        maxlength: '200'
 
       social_header:
         type: 'header'
-        text: 'Social Media'
+        text: 'Social'
+      url:
+        label: 'Website'
+        type: 'string'
+        maxlength: '200'
       twitter:
         label: 'Twitter Username'
         type: 'string'
         maxlength: '200'
-        hint: 'Dont include the @'
       instagram:
         label: 'Instagram Username'
         type: 'string'
         maxlength: '200'
-        hint: 'Dont include the @'
+
+      comment_header:
+        type: 'header'
+        text: 'Commenting'
+      title:
+        label: 'Title'
+        type: 'string'
+        maxlength: '50'
+      location:
+        label: 'Location'
+        type: 'string'
+        maxlength: '50'
+      age:
+        label: 'Age'
+        type: 'integer'
+        maxlength: '200'
+      signature:
+        label: 'Forum Signature'
+        type: 'string'
+        maxlength: '200'
+
