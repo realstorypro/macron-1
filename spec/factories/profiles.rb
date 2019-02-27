@@ -8,5 +8,6 @@ FactoryBot.define do
     age { rand(20..80) }
     location { Faker::Job.title }
     signature { Faker::Seinfeld.quote }
+    verified { false }
   end
 end
