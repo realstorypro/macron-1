@@ -117,3 +117,9 @@
         .header
           color: $f-header-colored-inverted-text-color
         color: $f-header-colored-inverted-text-color
+
+        a
+          @if index($g-colors-regular, $color)
+            color: $black
+          @else
+            color: $white
