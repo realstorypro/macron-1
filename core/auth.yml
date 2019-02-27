@@ -22,6 +22,7 @@ auth:
   - 'update'
   - 'delete'
   - 'moderate'
+  - 'verify'
 
   # Actions to Abilities
   # action:
@@ -46,6 +47,10 @@ auth:
       'moderate'
     unban:
       'moderate'
+    verify:
+      'verify'
+    unverify:
+      'verify'
 
   # Permissions Map
   # user:           # role

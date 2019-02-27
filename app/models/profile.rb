@@ -9,7 +9,8 @@ class Profile < ApplicationRecord
   validates_presence_of :user
   before_save :cleanup_twitter, :cleanup_instagram
 
-  # manually adding the verified state
+  # manually adding the verified state instead of adding it to profile.yml to
+  # prevent uers from manually editing it
   content_attr :verified, :boolean
 
   def erase_profile!
@@ -30,11 +31,21 @@ class Profile < ApplicationRecord
   end
 
   def cleanup_twitter
-    twitter.tr!('@','') if twitter.include?('@')
+    twitter.tr!('@','') if twitter.include?('@') unless twitter.blank?
   end
 
   def cleanup_instagram
-    instagram.tr!('@','') if instagram.include?('@')
+    instagram.tr!('@','') if instagram.include?('@') unless instagram.blank?
+  end
+
+  def verify!
+    self.verified = true 
+    save
+  end
+
+  def unverify!
+    self.verified = false
+    save
   end
 
   def self.policy_class

@@ -11,6 +11,16 @@ class UserPolicy < MetaPolicy
     false
   end
 
+  def verify?
+    return true if action_authorized? :verify, @component
+    false
+  end
+
+  def unverify?
+    return true if action_authorized? :unverify, @component
+    false
+  end
+
   def enable_help?
     true
   end
