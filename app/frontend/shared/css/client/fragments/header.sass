@@ -109,17 +109,19 @@
     .meta
       @if index($g-colors-regular, $color)
         text-shadow: $f-header-colored-box-shadow
+
         .header
           color: $f-header-colored-text-color
         color: $f-header-colored-text-color
+
+        a
+          color: $black
       @else
         text-shadow: $f-header-colored-inverted-box-shadow
+
         .header
           color: $f-header-colored-inverted-text-color
         color: $f-header-colored-inverted-text-color
 
         a
-          @if index($g-colors-regular, $color)
-            color: $black
-          @else
-            color: $white
+          color: $white
