@@ -9,6 +9,9 @@ class Profile < ApplicationRecord
   validates_presence_of :user
   before_save :cleanup_twitter, :cleanup_instagram
 
+  # manually adding the verified state
+  content_attr :verified, :boolean
+
   def erase_profile!
     self.avatar = nil
     self.location = nil
