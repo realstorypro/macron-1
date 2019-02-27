@@ -12,6 +12,7 @@
             = column computer: 10, tablet: 16, mobile: 16, class: 'centered'
               = h4 'inverted'
                 = "#{@member.profile.first_name} #{@member.profile.last_name}"
+                = icon 'check circle outline small' if @member.profile.verified
                 = header 'sub'
                   = "@#{@member.username}"
               = text 'inverted'
