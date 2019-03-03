@@ -12,6 +12,7 @@ FactoryBot.define do
     image_alt { Faker::Name.name }
     video { "https://www.vimeo.com/263142576" }
     association :category, factory: :category
+    association :user
     after(:create) do |article|
       create(:comment, commentable: article)
     end

@@ -9,5 +9,6 @@ FactoryBot.define do
     long_summary { Faker::Demographic.race }
     published_date { Faker::Date.forward(7) }
     association :category, factory: :category
+    association :user
   end
 end
