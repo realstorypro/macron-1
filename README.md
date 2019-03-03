@@ -1,11 +1,11 @@
-AQUARIUS
+MACRON 1
 --------
 [![codecov](https://codecov.io/gh/leouofa/aquarius/branch/master/graph/badge.svg?token=SpfdxrArOG)](https://codecov.io/gh/leouofa/aquarius)
 
 ##### "with great power comes great responsibility"
      
      
-![macron1](https://user-images.githubusercontent.com/433219/40011503-dbe773e4-575c-11e8-9c2c-dbb35c84dc1c.jpeg) 
+![macron1](https://classicanimemuseum.files.wordpress.com/2018/03/goshogun_hd.jpg) 
 
 # Running Localy
 ```bash
