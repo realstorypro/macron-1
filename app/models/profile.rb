@@ -31,15 +31,15 @@ class Profile < ApplicationRecord
   end
 
   def cleanup_twitter
-    twitter.tr!('@','') if twitter.include?('@') unless twitter.blank?
+    twitter.tr!("@", "") if twitter.include?("@") unless twitter.blank?
   end
 
   def cleanup_instagram
-    instagram.tr!('@','') if instagram.include?('@') unless instagram.blank?
+    instagram.tr!("@", "") if instagram.include?("@") unless instagram.blank?
   end
 
   def verify!
-    self.verified = true 
+    self.verified = true
     save
   end
 

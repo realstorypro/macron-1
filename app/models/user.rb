@@ -111,7 +111,6 @@ class User < ApplicationRecord
     assign_default_role!
   end
 
-  
   def verify_profile!
     profile.verify!
   end
