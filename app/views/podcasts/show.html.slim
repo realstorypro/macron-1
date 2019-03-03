@@ -11,6 +11,13 @@
           = h1
             = @entry.long_title
           = list 'relaxed horizontal meta'
+            - if @entry.user
+              = item
+                = icon 'user circle large'
+                = content
+                  = header ui: :off, text: 'Author'
+                  = link_to member_path(@entry.user)
+                    = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name} "
             = item
               = icon 'clock'
               = content

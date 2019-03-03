@@ -19,6 +19,11 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_one :profile, dependent: :destroy
   accepts_nested_attributes_for :profile
+  has_many :entries
+  has_many :articles
+  has_many :videos
+  has_many :discussions
+  has_many :podcasts
 
   # Setting Default Scope
   default_scope { includes(:profile).joins(:profile) }
@@ -104,6 +109,14 @@ class User < ApplicationRecord
     # now we're running role_cleanup manually
     clear_existing_roles!
     assign_default_role!
+  end
+
+  def verify_profile!
+    profile.verify!
+  end
+
+  def unverify_profile!
+    profile.unverify!
   end
 
   def enable_help!

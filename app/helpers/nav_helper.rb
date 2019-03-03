@@ -2,7 +2,7 @@
 
 module NavHelper
   def menu_color_class
-    transparent_controllers = %w(articles videos events store)
+    transparent_controllers = %w(articles videos events store members profile)
     menu_color = ss("theme.header.menu_color")
 
     # in case of homepage apply the homepage colors
@@ -51,9 +51,6 @@ module NavHelper
           menu_class(expanded_color: category_color, collapsed_color: category_color, transparent: true)
         end
       end
-    elsif %w[members profile].include?(controller_name)
-      color = "black"
-      menu_class(transparent: false, expanded_color: color, collapsed_color: menu_color)
     elsif %w[sessions registrations passwords confirmations].include?(controller_name)
       # auth fullscreen image option
       # we want to have an inverted logo that's why we're passing the *expanded_color: black*

@@ -49,6 +49,10 @@ views:
       username:
         label: 'User Name'
         type: 'string'
+      verified:
+        label: 'Verified Profile'
+        type: 'string'
+        association: 'profile'
       avatar_with_default:
         label: 'Avatar'
         type: 'image'

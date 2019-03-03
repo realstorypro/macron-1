@@ -23,6 +23,8 @@ module Admin
       unless @entry.id == current_user.id
         add_delete_ability
         add_edit_ability
+        add_verify_ability unless @entry.profile.verified || @entry.has_role?(:admin)
+        add_unverify_ability if @entry.profile.verified
         add_ban_ability unless @entry.has_role?(:banned) || @entry.has_role?(:admin)
         add_unban_ability if @entry.has_role?(:banned)
       end
@@ -43,6 +45,21 @@ module Admin
       entry_class
       load_entry
       @entry.unban!
+      redirect_to helpers.meta_show_path @entry.id, determine_namespace
+    end
+
+    # handles verifying users
+    def verify
+      entry_class
+      load_entry
+      @entry.verify_profile!
+      redirect_to helpers.meta_show_path @entry.id, determine_namespace
+    end
+
+    def unverify
+      entry_class
+      load_entry
+      @entry.unverify_profile!
       redirect_to helpers.meta_show_path @entry.id, determine_namespace
     end
 
@@ -74,13 +91,11 @@ module Admin
       redirect_back(fallback_location: admin_root_path)
     end
 
-
-
     private
 
       def add_delete_ability
         add_to_actions(
-          text: "Delete #{component_name.singularize}",
+          text: "Delete",
           class: "basic",
           icon: "remove",
           url: send(delete_path("admin"), @entry),
@@ -94,7 +109,7 @@ module Admin
 
       def add_edit_ability
         add_to_actions(
-          text: "Edit #{component_name.singularize}",
+          text: "Edit",
           class: "primary",
           icon: "edit",
           url: send(edit_path("admin"), @entry),
@@ -105,7 +120,7 @@ module Admin
 
       def add_ban_ability
         add_to_actions(
-          text: "Ban #{component_name.singularize}",
+          text: "Ban ",
           class: "black",
           icon: "ban",
           url: ban_admin_user_path(@entry),
@@ -116,11 +131,32 @@ module Admin
 
       def add_unban_ability
         add_to_actions(
-          text: "Unban #{component_name.singularize}",
+          text: "Unban",
           class: "green",
           icon: "ban",
           url: unban_admin_user_path(@entry),
           permission: policy(@entry).unban?,
+          data: { widget: "clicker", action: "click" }
+        )
+      end
+      def add_verify_ability
+        add_to_actions(
+          text: "Verify",
+          class: "blue",
+          icon: "ban",
+          url: verify_admin_user_path(@entry),
+          permission: policy(@entry).verify?,
+          data: { widget: "clicker", action: "click" }
+        )
+      end
+
+      def add_unverify_ability
+        add_to_actions(
+          text: "Unverify",
+          class: "blue",
+          icon: "ban",
+          url: unverify_admin_user_path(@entry),
+          permission: policy(@entry).unverify?,
           data: { widget: "clicker", action: "click" }
         )
       end

@@ -22,6 +22,8 @@ module Vue
       "#{time_ago_in_words(comment.created_at)} ago"
     end
 
+    # shows a different icon based on the item type
+    # currently unused
     def show_icon(comment)
       item = find_entry(comment)
 

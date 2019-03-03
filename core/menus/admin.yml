@@ -56,7 +56,7 @@ menu:
       icon: shopping basket
       enabled: true
 
-    - name: Native Ads
+    - name: Promotions
       component: advertisements
       path: admin_advertisements
       icon: audio description

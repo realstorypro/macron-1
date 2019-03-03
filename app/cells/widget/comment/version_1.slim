@@ -16,6 +16,8 @@
       .profile
         a.author v-bind:href="profile_link(comment.user)"
           | {{ comment.user.username }}
+          .verified v-if='comment.user.verified'
+            = icon 'check mark circular mini inverted yellow'
         .title
           | {{ comment.user.title }}
         .mobile.left.wrapper

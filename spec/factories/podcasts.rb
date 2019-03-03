@@ -12,6 +12,7 @@ FactoryBot.define do
     image_alt { Faker::Name.name }
     audio { "https://soundcloud.com/waximi_ackawala/a-caravana-prem-paz" }
     association :category, factory: :category
+    association :user
     after(:create) do |article|
       create(:comment, commentable: article)
     end

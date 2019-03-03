@@ -112,7 +112,7 @@ module Admin
         row
       end
 
-      # pulls in value from either association ore record itself
+      # pulls in value from either association or record itself
       value = if association(field)
         base.send(association(field)).send(name(field))
       else

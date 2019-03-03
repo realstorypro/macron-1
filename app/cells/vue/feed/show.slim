@@ -2,12 +2,9 @@
   = feed
     - comments.each do |comment|
       = event
+        .label
+          = icon 'pencil alternate bordered grey inverted'
         = content
+          .date =render_date(comment)
           = summary
-            = show_icon(comment)
-            = "Left a comment on #{render_link(comment)}."
-            .date =render_date(comment)
-          .extra
-            blockquote
-              = comment.body
-
+            = "Left comment on #{render_link(comment)}."

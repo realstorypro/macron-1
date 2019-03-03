@@ -1,105 +1,59 @@
 .component.members
-  padding-top: $header-external-padding
-  padding-bottom: $footer-padding
-  @include media("<tablet")
-    padding-top: $header-external-mobile-padding
-    padding-bottom: $footer-mobile-padding
 
-  .ui.basic.segment
+  .profile.holder
+    padding-top: 8.5em
+    padding-bottom: 8.5em
     @include media("<tablet")
-      padding: 0
+      padding-top: 2em
+      padding-bottom: 1em
+      text-align: center
 
-  .ui.grid.flipped
+    .ui.circular.image
+      border: 5px solid white
+      @include media("<tablet")
+        width: 250px
+        margin: 0 auto
+
+    .text
+      font-size: 1.1em
+      color: $white
+
+    .header .icon
+      display: inline-block
+      font-size: 0.85em
+      margin-bottom: 8px
+      margin-left: 5px
+      font-weight: bold
+      color: $yellow
+
+      @include media("<tablet")
+        font-size: 0.9em
+        margin-bottom: 7px
+
+  .social.holder
+    margin: 5px 0 0
+
     @include media("<tablet")
-      flex-direction: column-reverse
+      display: none
+      margin: 0
 
-  // Activities Scroller
-  .activities.scroller
-    padding-right: 1em
-    overflow-y: scroll
-    height: 700px
-
+      .header
+        text-align: center
+  
+  .link.holder
     @include media("<tablet")
-      overflow-y: inherit
-      padding-right: 0
-      height: auto
+      margin: 3px
+      text-align: center
 
-  // Profile Column
-  .profile.column
-    @include media("<tablet")
-      padding: 0
 
-  .profile.container
-    @include media("<tablet")
-      padding: 0 1rem
+.ui.social.segment
+  margin: 0
 
-    .ui.list.extras
-      margin-top: 2.0em !important
-      margin-bottom: 2.0em !important
+  .header
+    font-size: 1.4em
 
-      .item.quote
-        line-height: 1.5em
-
-      blockquote
-        padding: 0 0 0 0.7em
-        margin: 1.5em 0 0 0
-        border-left: 0.5em solid #eee
-        line-height: 1.45em
-
-  // Profile Card
-  .profile.card
-    padding: 0
-    box-shadow: none !important
-
-    .detail.holder
-      position: relative
-
-      @each $color in $g-colors-list
-        &.#{$color}
-          .header, .content, .meta, .description, a
-            @if index($g-colors-regular, $color)
-              color: $black
-            @else
-              color: $white
-
-      .overlay
-        background: rgba(0,0,0,0.5)
-        position: absolute
-        bottom: 0
-        left: 0
-        height: 100%
-        width: 100%
-
-        @each $color in $g-colors-list
-          &.#{$color}
-            background: map-get($c-profile-colors-map, $color)
-
-      .details
-        padding: 0.7em
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 100%
-
-        h5.ui.header
-          margin-bottom: 0em
-          text-align: left
-
-      .social
-        padding: 0.7em
-        position: absolute
-        top: 0
-        right: 0
-        width: 100%
-        text-align: left
-        @include media("<tablet")
-          bottom: 0
-          right: 0
-          top: auto
-          text-align: right
 
   // Editable Button
   .editable.button
     @include media("<tablet")
       margin-bottom: 2em
-

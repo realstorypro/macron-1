@@ -14,6 +14,7 @@ class Entry < ApplicationRecord
   after_update :ping_sitemap unless Rails.env.test?
   after_create :ping_sitemap unless Rails.env.test?
 
+  belongs_to :user, optional: true
   has_many :comments, as: :commentable
   has_many :areas, as: :areable
   has_many :elements, through: :areas
