@@ -1,10 +1,6 @@
 MACRON 1
 --------
 [![codecov](https://codecov.io/gh/leouofa/aquarius/branch/master/graph/badge.svg?token=SpfdxrArOG)](https://codecov.io/gh/leouofa/aquarius)
-
-##### "with great power comes great responsibility"
-     
-     
 ![macron1](https://classicanimemuseum.files.wordpress.com/2018/03/goshogun_hd.jpg) 
 
 # Running Localy
