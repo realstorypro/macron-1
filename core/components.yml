@@ -118,7 +118,7 @@ components:
   pages:
     klass: 'Page'
     path: 'pages'
-    enabled: false
+    enabled: true
     areas:
     - header
     - content
