@@ -27,6 +27,9 @@ views:
       published_date:
         label: 'Published Date'
         type: 'datepicker'
+      user:
+        label: 'Author'
+        type: 'dropdown'
 
       ticket_header:
         type: 'header'

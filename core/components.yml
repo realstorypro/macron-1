@@ -14,7 +14,7 @@ components:
   elements:
     klass: 'Elements'
     path: 'elements'
-    enabled: false
+    enabled: true
 
   elements_heading:
     klass: 'Elements::Heading'
@@ -41,7 +41,7 @@ components:
 
   site_settings_components:
     path: 'admin_settings_components'
-    enabled: false
+    enabled: true
 
   site_settings_integration:
     klass: 'SiteSettings::Integrations'
