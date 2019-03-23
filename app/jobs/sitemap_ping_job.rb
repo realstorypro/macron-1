@@ -34,6 +34,11 @@ class SitemapPingJob < ActiveJob::Base
       Video.find_each do |video|
         add video_details_path(video.category.slug, video.slug), lastmod: video.updated_at
       end
+
+      add events_path, priority: 0.7, changefreq: "daily"
+      Event.find_each do |video|
+        add video_details_path(video.category.slug, video.slug), lastmod: video.updated_at
+      end
     end
 
     SitemapGenerator::Sitemap.ping_search_engines("https://#{ENV['URL']}/sitemap")
