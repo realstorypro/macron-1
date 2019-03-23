@@ -5,7 +5,5 @@ class Event < Entry
 
 
   validates_presence_of :category
-  validates :ticket_link, url: true
-
   paginates_per 5
 end

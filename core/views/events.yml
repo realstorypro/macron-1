@@ -34,10 +34,6 @@ views:
       ticket_header:
         type: 'header'
         text: 'Ticket Info'
-      ticket_link:
-        label: 'Ticket Link'
-        type: 'string'
-        required: true
       price:
         label: 'Price'
         type: 'string'
@@ -49,6 +45,18 @@ views:
       end_date:
         label: 'End Date'
         type: 'datepicker'
+        required: true
+      start_time:
+        label: 'Start Time'
+        type: 'timepicker'
+        required: true
+      end_time:
+        label: 'End Time'
+        type: 'timepicker'
+        required: true
+      location:
+        label: 'Location'
+        type: 'rich'
         required: true
 
       images_header:
