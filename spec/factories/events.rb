@@ -10,6 +10,7 @@ FactoryBot.define do
     end_date { Faker::Date.forward(25) }
     start_time { Faker::Time.forward(20) }
     end_time { Faker::Time.forward(25) }
+    location { Faker::Demographic.race }
     long_title { Faker::Name.name }
     long_summary { Faker::Demographic.race }
     published_date { Faker::Date.forward(7) }

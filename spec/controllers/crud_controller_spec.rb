@@ -245,10 +245,10 @@ describe Admin::CrudController, type: :controller do
         before(:each) do
           @admin = FactoryBot.create(:user, :admin)
 
-          category = FactoryBot.create(:category)
+          # category = FactoryBot.create(:category)
 
           factory = FactoryBot.build(entry_factory(test))
-          factory.category = category
+          # factory.category = category if factory.respond_to?(:category)
 
           attrs = factory.attributes
           payload = attrs["payload"]
