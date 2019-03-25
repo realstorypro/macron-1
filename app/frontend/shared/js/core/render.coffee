@@ -3,6 +3,7 @@ import Vent from './vent'
 import Dispatcher from './dispatcher'
 import Dropdown from '../widgets/dropdown'
 import Datepicker from '../widgets/datepicker'
+import Timepicker from '../widgets/timepicker'
 import Richtext from '../widgets/richtext'
 import Sorter from '../widgets/sorter'
 import Multiselect from '../widgets/multiselect'
@@ -13,6 +14,7 @@ vent =  new Vent
 dispatcher = new Dispatcher
 dropdown = new Dropdown
 datepicker = new Datepicker
+timepicker = new Timepicker
 sorter = new Sorter
 multiselect = new Multiselect
 richtext = new Richtext
@@ -57,6 +59,7 @@ class Render
 
       dropdown.reinit()
       datepicker.reinit()
+      timepicker.reinit()
       multiselect.reinit()
       richtext.reinit()
       sorter.reinit()
@@ -84,6 +87,7 @@ class Render
 
       dropdown.reinit()
       datepicker.reinit()
+      timepicker.reinit()
       multiselect.reinit()
       richtext.reinit()
       sorter.reinit()

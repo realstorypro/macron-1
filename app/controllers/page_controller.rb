@@ -9,13 +9,13 @@ class PageController < ApplicationController
 
     if featured_limit == "auto"
       @featured = Entry.joins(category: :color)
-                      .where(type: %w(Article Video Podcast))
+                      .where(type: %w(Article Video Podcast Event))
                       .where.not(published_date: nil)
                       .includes(category: :color).order("published_date desc")
                       .limit(5)
     else
       @featured = Entry.joins(category: :color)
-                      .where(type: %w(Article Video Podcast))
+                      .where(type: %w(Article Video Podcast Event))
                       .where.not(published_date: nil)
                       .includes(category: :color).order("published_date desc")
                       .limit(ss("theme.homepage.featured_items"))

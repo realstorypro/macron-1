@@ -129,6 +129,6 @@ group :test do
   gem "rspec-cells"
   gem "rspec_tap"
   gem "rails-controller-testing"
-  gem "factory_bot_rails"
+  gem "factory_bot_rails", "< 5.0"
   gem "faker"
 end

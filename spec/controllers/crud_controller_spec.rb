@@ -245,7 +245,12 @@ describe Admin::CrudController, type: :controller do
         before(:each) do
           @admin = FactoryBot.create(:user, :admin)
 
-          attrs = FactoryBot.build(entry_factory(test)).attributes
+          # category = FactoryBot.create(:category)
+
+          factory = FactoryBot.build(entry_factory(test))
+          # factory.category = category if factory.respond_to?(:category)
+
+          attrs = factory.attributes
           payload = attrs["payload"]
           attrs.delete("payload")
           attrs = attrs.merge(payload) unless payload.nil?

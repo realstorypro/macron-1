@@ -2,6 +2,7 @@
 
 module ApplicationHelper
   include SettingsHelper
+  include ComponentHelper
   include PathHelper
   include UserHelper
   include CrudHelper

@@ -11,6 +11,7 @@ import Crud from './widgets/crud'
 import Checkbox from './widgets/checkbox'
 import Dropdown from './widgets/dropdown'
 import Datepicker from './widgets/datepicker'
+import Timepicker from './widgets/timepicker'
 import Daterange from './widgets/daterange'
 import Clicker from './widgets/clicker'
 import Sorter from './widgets/sorter'
@@ -42,6 +43,7 @@ crud = new Crud
 checkbox = new Checkbox
 dropdown = new Dropdown
 datepicker = new Datepicker
+timepicker = new Timepicker
 daterange = new Daterange
 clicker = new Clicker
 sorter = new Sorter
@@ -76,6 +78,7 @@ class App
     checkbox.setup()
     dropdown.setup()
     datepicker.setup()
+    timepicker.setup()
     daterange.setup()
     clicker.setup()
     sorter.setup()
@@ -91,6 +94,7 @@ class App
     checkbox.teardown()
     dropdown.teardown()
     datepicker.teardown()
+    timepicker.teardown()
     daterange.teardown()
     clicker.teardown()
     sorter.teardown()
