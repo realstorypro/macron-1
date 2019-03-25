@@ -5,10 +5,11 @@ FactoryBot.define do
     name { Faker::Name.name }
     description { Faker::Name.name }
     body { Faker::Demographic.race }
-    ticket_link { "https://www.picatic.com/209619" }
     price { "10.99" }
     start_date { Faker::Date.forward(20) }
     end_date { Faker::Date.forward(25) }
+    start_time { Faker::Time.forward(20) }
+    end_time { Faker::Time.forward(25) }
     long_title { Faker::Name.name }
     long_summary { Faker::Demographic.race }
     published_date { Faker::Date.forward(7) }
