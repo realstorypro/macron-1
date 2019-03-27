@@ -244,11 +244,7 @@ describe Admin::CrudController, type: :controller do
       describe "valid create actions for #{test.component}" do
         before(:each) do
           @admin = FactoryBot.create(:user, :admin)
-
-          # category = FactoryBot.create(:category)
-
           factory = FactoryBot.build(entry_factory(test))
-          # factory.category = category if factory.respond_to?(:category)
 
           attrs = factory.attributes
           payload = attrs["payload"]
