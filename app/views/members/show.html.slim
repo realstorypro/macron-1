@@ -65,9 +65,7 @@
           br
           == Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
           - if @comments.blank?
-            = message 'icon secondary'
-              = icon 'user'
-              = content
-                = header ui: :off, text: "#{@member.username.capitalize} has no recent activity."
-                = text text: 'Please check back later.'
-
+            = segment 'placeholder'
+              = header 'icon'
+                = icon 'user'
+                ="#{@member.username.capitalize} has no recent activity."
