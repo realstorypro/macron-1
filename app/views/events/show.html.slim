@@ -12,6 +12,14 @@
                 .section = link_to params[:category].capitalize, event_category_path(params[:category])
             = h1
               = @entry.long_title
+            = list 'relaxed horizontal meta stacked'
+              - if @entry.user
+                = item
+                  = icon 'user circle large'
+                  = content
+                    = header ui: :off, text: 'Promoter'
+                    = link_to member_path(@entry.user)
+                      = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name} "
             .summary
               = @entry.long_summary.html_safe
   = fragment 'content'
