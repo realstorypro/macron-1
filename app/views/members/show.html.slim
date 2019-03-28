@@ -32,18 +32,27 @@
                     = h5 class: 'inverted', text: 'Connect'
                   = column computer: 14, tablet: 16, mobile: 16, class: 'link holder'
                     = list 'horizontal inverted link holder'
-                      -if @member.profile.url
+                      -if @member.profile.url.length > 0
                         = item
                           = link_to @member.profile.url
                             = icon 'globe large middle aligned'
-                      -if @member.profile.twitter
+                      -else
+                        = item
+                          = icon 'globe large middle aligned disabled'
+                      -if @member.profile.twitter.length > 0
                         = item
                           = link_to "https://www.twitter.com/@#{@member.profile.twitter}"
                             = icon 'twitter large middle aligned'
-                      -if @member.profile.instagram
+                      - else 
+                        = item
+                          = icon 'twitter large middle aligned disabled'
+                      -if @member.profile.instagram.length > 0
                         = item
                           = link_to "https://www.instagram.com/#{@member.profile.instagram}", target: '_blank'
                             = icon 'instagram large middle aligned'
+                      -else
+                        = item
+                          = icon 'instagram large middle aligned disabled'
 
 
 

@@ -49,16 +49,3 @@ views:
         label: 'Title'
         type: 'string'
         maxlength: '50'
-      location:
-        label: 'Location'
-        type: 'string'
-        maxlength: '50'
-      age:
-        label: 'Age'
-        type: 'integer'
-        maxlength: '200'
-      signature:
-        label: 'Forum Signature'
-        type: 'string'
-        maxlength: '200'
-
