@@ -19,7 +19,7 @@
           .verified v-if='comment.user.verified'
             = icon 'check mark circular mini inverted yellow'
         .title
-          /| {{ comment.user.title }}
+          | {{ comment.user.title }}
         .mobile.left.wrapper
           a.avatar v-bind:href="profile_link(comment.user)"
             avatar v-bind:username='comment.user.username' v-bind:src='comment.user.avatar' :rounded='true'
@@ -27,6 +27,8 @@
           .aligner
             a.author v-bind:href="profile_link(comment.user)"
               | {{ comment.user.username }}
+              .verified v-if='comment.user.verified'
+                = icon 'check mark circular mini inverted yellow'
             .title
               | {{ comment.user.title }}
         .joined
