@@ -25,6 +25,13 @@ views:
         type: 'string'
         maxlength: '50'
         hint: 'Limited to 50 Characters'
+      title:
+        label: 'Title'
+        type: 'string'
+        maxlength: '50'
+      description:
+        label: 'Description'
+        type: 'text'
 
       social_header:
         type: 'header'
@@ -41,11 +48,3 @@ views:
         label: 'Instagram Username'
         type: 'string'
         maxlength: '200'
-
-      comment_header:
-        type: 'header'
-        text: 'Commenting'
-      title:
-        label: 'Title'
-        type: 'string'
-        maxlength: '50'

@@ -15,10 +15,7 @@
                 = icon 'check circle outline small' if @member.profile.verified
                 = header 'sub'
                   = "@#{@member.username}"
-              = text 'inverted'
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lectus pretium, congue orci ac, egestas velit. Pellentesque sed auctor urna. In a rhoncus lacus, nec blandit lorem. 
-              = text 'inverted'
-                | Aliquam erat volutpat. Aliquam sodales libero id dui condimentum pharetra. Donec fringilla a nulla sit amet pellentesque. Praesent rutrum magna nec sollicitudin efficitur. Sed feugiat gravida sollicitudin. 
+              = text class: 'inverted', text: simple_format(@member.profile.description)
 
   = segment 'black inverted basic social clearing'
     = container
@@ -65,7 +62,9 @@
           br
           == Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
           - if @comments.blank?
-            = segment 'placeholder'
-              = header 'icon'
-                = icon 'user'
-                ="#{@member.username.capitalize} has no recent activity."
+            = message 'icon secondary'
+              = icon 'user'
+              = content
+                = header ui: :off, text: "#{@member.username.capitalize} has no recent activity."
+                = text text: 'Please check back later.'
+
