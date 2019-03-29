@@ -9,6 +9,15 @@ class ProfileController < MembersController
   layout "layouts/client"
   def show
     @editable = true
+
+    @categories = []
+    @categories.push ({name: "Comments", slug: "comments", icon: "comments"})
+    @categories.push ({name: "Events", slug: "events", icon: "calendar"})
+    @categories.push ({name: "Articles", slug: "articles", icon: "book"})
+    @categories.push ({name: "Videos", slug: "videos", icon: "video"})
+    @categories.push ({name: "Discussions", slug: "discussions", icon: "pencil alternate"})
+    @categories.push ({name: "Podcasts", slug: "podcasts", icon: "podcast"})
+
     render "members/show"
   end
 

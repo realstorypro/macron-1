@@ -1,0 +1,26 @@
+= fragment 'action bar'
+  .ui.breadcrumb.huge
+    - if active_category
+      .section= link_to component_name, "/#{component_path}"
+    - else
+      .section= component_name
+
+    - if active_category
+      = divider text: '/'
+      .section= active_category.capitalize
+
+  = right
+    = widget name: 'category filter', id: 'category_filter', vue: :on, data: {component_path: component_path}
+      = dropdown 'selection widgeted'
+        = icon 'dropdown'
+        input type='hidden' name='category' value= active_category
+        = text tag: :div, class: 'default'
+        = menu
+          = header text: 'Filter By Category'
+          = item class: active_category.present? ? '' : 'active', data: {value: ''}, v: {'on:click': "change_category('')"}
+            = icon 'star'
+            | All 
+          - categories.each do |category|
+            = item class: (active_category.present? && category[:slug].eql?(active_category)) ? 'active' : '', data: {value: category[:slug]}, v: {'on:click': "change_category('#{category[:slug]}')"}
+              = icon category[:icon]
+              = category[:name]
