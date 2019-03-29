@@ -3,12 +3,17 @@
 # handles the display of the profile model
 class ProfileController < MembersController
   before_action :set_user_to_current
-  before_action :preload_entry
+  # before_action :preload_entry
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
 
   layout "layouts/client"
   def show
     @editable = true
+
+    enricher = StreamRails::Enrich.new
+    feed = StreamRails.feed_manager.get_user_feed(current_user.id)
+    results = feed.get()['results']
+    @activities = enricher.enrich_activities(results)
 
     @categories = []
     @categories.push ({name: "Comments", slug: "comments", icon: "comments"})
@@ -29,12 +34,12 @@ class ProfileController < MembersController
     end
 
     def preload_entry
-      @comments = Comment.where(
-        user_id: @member.id,
-        commentable_type: %w(Article Discussion Video Podcast)
-      ).order("created_at desc")
-      @content_ids = @comments.map(&:commentable_id)
-      @commented_content = Entry.where(id: @content_ids)
+     #  @comments = Comment.where(
+     #    user_id: @member.id,
+     #    commentable_type: %w(Article Discussion Video Podcast)
+     #  ).order("created_at desc")
+     #  @content_ids = @comments.map(&:commentable_id)
+     #  @commented_content = Entry.where(id: @content_ids)
     end
 
     def record_view
