@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'stream'
 
 # handles the display of the profile model
 class ProfileController < MembersController
@@ -9,6 +10,10 @@ class ProfileController < MembersController
   layout "layouts/client"
   def show
     @editable = true
+
+    client = Stream::Client.new(ENV["STREAM_API_KEY"], ENV["STREAM_API_SECRET"])
+    user_stream = client.feed('user', @member.id)
+    @stream_token = user_stream.readonly_token
 
     enricher = StreamRails::Enrich.new
     feed = StreamRails.feed_manager.get_user_feed(current_user.id)

@@ -60,6 +60,7 @@
         == Widget::ProfileFilterCell.(nil, layout: :version_1, component: params[:component], categories: @categories, active_category: params[:category])
         br
         br
+        = @stream_token
         = @activities
         /== Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
         - if @comments.blank?
