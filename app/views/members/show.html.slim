@@ -57,16 +57,8 @@
   = container
     = grid
       = column computer: 16, tablet: 16, mobile: 16
-        == Widget::ProfileFilterCell.(nil, layout: :version_1, component: params[:component], categories: @categories, active_category: params[:category])
-        br
-        br
-        = @stream_token
-        = @activities
-        /== Vue::FeedCell.(@commented_content, comments: @comments) unless @comments.blank?
-        - if @comments.blank?
-          = message 'icon secondary'
-            = icon 'user'
-            = content
-              = header ui: :off, text: "#{@member.username.capitalize} has no recent activity."
-              = text text: 'Please check back later.'
-
+        = @stream_token.inspect
+        == Vue::FeedCell.(nil, 
+          stream_token: @stream_token, 
+          stream_api: ENV["STREAM_API_KEY"], 
+          user_id: @member.id)

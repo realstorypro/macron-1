@@ -3,8 +3,9 @@ require 'stream'
 
 # handles the display of the profile model
 class ProfileController < MembersController
+  skip_before_action :preload_entry
+
   before_action :set_user_to_current
-  # before_action :preload_entry
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
 
   layout "layouts/client"
@@ -13,20 +14,9 @@ class ProfileController < MembersController
 
     client = Stream::Client.new(ENV["STREAM_API_KEY"], ENV["STREAM_API_SECRET"])
     user_stream = client.feed('user', @member.id)
-    @stream_token = user_stream.readonly_token
 
-    enricher = StreamRails::Enrich.new
-    feed = StreamRails.feed_manager.get_user_feed(current_user.id)
-    results = feed.get()['results']
-    @activities = enricher.enrich_activities(results)
-
-    @categories = []
-    @categories.push ({name: "Comments", slug: "comments", icon: "comments"})
-    @categories.push ({name: "Events", slug: "events", icon: "calendar"})
-    @categories.push ({name: "Articles", slug: "articles", icon: "book"})
-    @categories.push ({name: "Videos", slug: "videos", icon: "video"})
-    @categories.push ({name: "Discussions", slug: "discussions", icon: "pencil alternate"})
-    @categories.push ({name: "Podcasts", slug: "podcasts", icon: "podcast"})
+    @stream_readonly_token = user_stream.readonly_token
+    @stream_token = Stream::Signer.create_user_token(@member.id.to_s, {}, ENV["STREAM_API_SECRET"])
 
     render "members/show"
   end
@@ -39,12 +29,6 @@ class ProfileController < MembersController
     end
 
     def preload_entry
-     #  @comments = Comment.where(
-     #    user_id: @member.id,
-     #    commentable_type: %w(Article Discussion Video Podcast)
-     #  ).order("created_at desc")
-     #  @content_ids = @comments.map(&:commentable_id)
-     #  @commented_content = Entry.where(id: @content_ids)
     end
 
     def record_view

@@ -1,6 +1,7 @@
-= widget name: 'feed', id: 'feed', vue: :on
+= widget name: 'feed', id: 'feed', vue: :on, data: {stream_token: options[:stream_token], stream_api: options[:stream_api], user_id: options[:user_id]}
   = feed
-    - comments.each do |comment|
+    = h1 text: 'hello world'
+    /- comments.each do |comment|
       = event
         .label
           = icon 'pencil alternate bordered grey inverted'
