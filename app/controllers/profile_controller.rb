@@ -11,11 +11,6 @@ class ProfileController < MembersController
   layout "layouts/client"
   def show
     @editable = true
-
-    client = Stream::Client.new(ENV["STREAM_API_KEY"], ENV["STREAM_API_SECRET"])
-    user_stream = client.feed('user', @member.id)
-
-    @stream_readonly_token = user_stream.readonly_token
     @stream_token = Stream::Signer.create_user_token(@member.id.to_s, {}, ENV["STREAM_API_SECRET"])
 
     render "members/show"
