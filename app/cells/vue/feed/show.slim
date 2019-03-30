@@ -1,6 +1,6 @@
 = widget name: 'feed', id: 'feed', vue: :on, data: {stream_token: options[:stream_token], stream_api: options[:stream_api], user_id: options[:user_id]}
   = feed
-    = h1 text: 'hello world'
+    = h1 text: '{{ count }} Activities'
     /- comments.each do |comment|
       = event
         .label
