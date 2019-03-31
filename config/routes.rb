@@ -136,10 +136,17 @@ Rails.application.routes.draw do
     end
   end
 
+  # Reporting (via Blazer)
   authenticate :user, ->(user) { user.can_manage?(:reports) } do
     mount Blazer::Engine, at: "admin/reports"
   end
 
+  # API
+  namespace :api do
+    namespace :v1 do
+      post "enrich_activities" => "enrichment#enrich_activities"
+    end
+  end
 
   # Sidekiq
   require "sidekiq/web"

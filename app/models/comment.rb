@@ -22,13 +22,6 @@ class Comment < ApplicationRecord
     "commented on"
   end
 
-  def activity_extra_data
-    {
-      slug: self.commentable.slug,
-      category_slug: self.commentable.category.slug
-    }
-  end
-
   def self.policy_class
     CommentPolicy
   end

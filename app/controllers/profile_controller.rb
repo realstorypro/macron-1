@@ -9,6 +9,7 @@ class ProfileController < MembersController
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
 
   layout "layouts/client"
+
   def show
     @editable = true
     @stream_token = Stream::Signer.create_user_token(@member.id.to_s, {}, ENV["STREAM_API_SECRET"])

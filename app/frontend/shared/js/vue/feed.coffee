@@ -33,7 +33,6 @@ class Feed
         @token =  $(@.$options.el).data('stream-token')
         @api_key = $(@.$options.el).data('stream-api')
         @user_id = $(@.$options.el).data('user-id')
-
         store.dispatch('loadActivities', { @token, @api_key, @user_id })
 
       computed:
