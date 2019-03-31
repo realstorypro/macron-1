@@ -24,7 +24,10 @@ class Entry < ApplicationRecord
 
   # Notifications
   def activity_extra_data
-    {'slug' => self.slug}
+    {
+      slug: self.slug,
+      category_slug: self.category.slug
+    }
   end
 
   def activity_object

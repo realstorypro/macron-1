@@ -24,7 +24,8 @@ class Comment < ApplicationRecord
 
   def activity_extra_data
     {
-      slug: self.commentable.slug
+      slug: self.commentable.slug,
+      category_slug: self.commentable.category.slug
     }
   end
 
