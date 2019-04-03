@@ -1,26 +1,16 @@
 # frozen_string_literal: true
 
 class Comment < ApplicationRecord
-  include StreamRails::Activity
-
   before_save :sanitize_comment
   belongs_to :commentable, polymorphic: true
   has_many :comments, as: :commentable
 
+  include PublicActivity::Model
+  tracked owner: -> (controller, _model) { controller.current_user }
+
   belongs_to :user, counter_cache: true
 
   validates :body, presence: true
-
-  as_activity
-
-  # Notifications
-  def activity_object
-    "#{self.commentable_type}:#{self.commentable_id}"
-  end
-
-  def activity_verb
-    "commented on"
-  end
 
   def self.policy_class
     CommentPolicy

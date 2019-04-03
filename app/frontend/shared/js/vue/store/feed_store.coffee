@@ -1,6 +1,6 @@
 import Vue from 'vue/dist/vue.esm'
 import Vuex from 'vuex'
-import stream from 'getstream'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -17,16 +17,16 @@ store = new (Vuex.Store)(
       state.activities.push activity
 
   actions:
-    loadActivities: ({commit}, {token, api_key, user_id}) ->
-      client = stream.connect(api_key, token, 49865)
-      user_feed = client.feed('user', user_id)
+    loadActivities: ({commit}, {user_id}) ->
+      axios.get('/api/v1/activities/').then (response) =>
+        console.log response.data.activities
+        commit('load', response.data.activities)
 
-      subscription = user_feed.subscribe (data) ->
-        new_activity = data.new[0]
-        commit('add', new_activity)
+      # client = stream.connect(api_key, token, 49865)
+      # user_feed = client.feed('user', user_id)
 
-      user_feed.get({limit:5}).then (body) ->
-        commit('load', body.results)
+      #user_feed.get({limit:5}).then (body) ->
+      #  commit('load', body.results)
 )
 
 window.store = store

@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-require 'stream'
 
 # handles the display of the profile model
 class ProfileController < MembersController
@@ -12,8 +11,6 @@ class ProfileController < MembersController
 
   def show
     @editable = true
-    @stream_token = Stream::Signer.create_user_token(@member.id.to_s, {}, ENV["STREAM_API_SECRET"])
-
     render "members/show"
   end
 

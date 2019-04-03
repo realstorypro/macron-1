@@ -325,6 +325,11 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     psych (3.1.0)
+    public_activity (1.6.3)
+      actionpack (>= 3.0.0)
+      activerecord (>= 3.0)
+      i18n (>= 0.5.0)
+      railties (>= 3.0.0)
     public_suffix (3.0.3)
     puma (3.12.1)
     pundit (2.0.1)
@@ -494,14 +499,6 @@ GEM
       sprockets (>= 3.0.0)
     store_base_sti_class (1.2.0)
       activerecord (>= 4.0)
-    stream-ruby (3.1.0)
-      faraday (>= 0.10.0, < 1.0)
-      jwt (~> 2.1, >= 2.1.0)
-    stream_rails (2.6.6)
-      actionpack (>= 3.0.0)
-      activerecord (>= 3.0.0)
-      railties (>= 3.0.0)
-      stream-ruby (~> 3.1)
     temple (0.8.1)
     terminal-notifier-guard (1.6.4)
     thor (0.20.3)
@@ -607,6 +604,7 @@ DEPENDENCIES
   nexmo
   pg (>= 0.18, < 2.0)
   phonelib
+  public_activity
   puma (~> 3.11)
   pundit
   rack-cors
@@ -635,7 +633,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   store_base_sti_class
-  stream_rails
   terminal-notifier-guard (~> 1.6.1)
   thor
   tty-prompt

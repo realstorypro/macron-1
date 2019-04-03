@@ -11,6 +11,8 @@ module EntryHelper
       podcast_details_url(entry.category.slug, entry.slug)
     elsif entry.type == "Discussion"
       discussion_details_url(entry.category.slug, entry.slug)
+    elsif entry.type == "Event"
+      event_details_url(entry.category.slug, entry.slug)
     end
   end
 

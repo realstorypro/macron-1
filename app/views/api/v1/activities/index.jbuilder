@@ -1,19 +1,24 @@
+# frozen_string_literal: true
+
 json.activities @activities.each_with_index  do |activity, index|
-    json.time = activity["time"]
-    json.verb = activity["verb"]
 
-    json.user do
-      json.id = activity["actor"].id
-      json.username activity["actor"].username
-      json.slug activity["actor"].slug
-      json.avatar activity["actor"].profile.avatar
-    end
+   json.type activity.trackable_type
+   json.verb activity_verb(activity)
+   json.created_at activity.created_at
+   json.owner do
+     json.username activity.owner.username.capitalize
+     json.avatar activity.owner.profile.avatar
+     json.url member_path(activity.owner.id)
+   end
 
-    json.object do
-      json.id activity["object"].id
-      json.name activity["object"].name
-      json.slug activity["object"].slug
-      json.image activity["object"].card_image
-      json.category activity["object"].category
-    end
-end
+   json.object do
+     if activity.trackable_type == "Comment"
+       json.type activity.trackable.commentable.type
+       json.id activity.trackable.commentable.id
+       json.name activity.trackable.commentable.name
+       json.url entry_url(activity.trackable.commentable)
+       json.category activity.trackable.commentable.category.name
+     end
+   end
+
+ end

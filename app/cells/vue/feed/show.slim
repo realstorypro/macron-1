@@ -1,6 +1,12 @@
-= widget name: 'feed', id: 'feed', vue: :on, data: {stream_token: options[:stream_token], stream_api: options[:stream_api], user_id: options[:user_id]}
+= widget name: 'feed', id: 'feed', vue: :on, data: {user_id: options[:user_id]}
   = feed
-    = h1 text: '{{ count }} Activities'
+    = h4 text: 'Activity'
+    = event v: {for: '(activity in activities'}
+      = text
+        img.ui.image.avatar :src="activity.owner.avatar"
+        a :href="activity.owner.url" {{ activity.owner.username }}
+        |  {{ activity.verb }}
+        a :href="activity.object.url" {{ activity.object.name }}
     /- comments.each do |comment|
       = event
         .label
