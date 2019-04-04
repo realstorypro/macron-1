@@ -1,17 +1,9 @@
 = widget name: 'feed', id: 'feed', vue: :on, data: {user_id: options[:user_id]}
   = feed
-    = h4 text: 'Activity'
+    = h5 text: 'Activity'
     = event v: {for: '(activity in activities'}
       = text
         img.ui.image.avatar :src="activity.owner.avatar"
         a :href="activity.owner.url" {{ activity.owner.username }}
         |  {{ activity.verb }}
         a :href="activity.object.url" {{ activity.object.name }}
-    /- comments.each do |comment|
-      = event
-        .label
-          = icon 'pencil alternate bordered grey inverted'
-        = content
-          .date =render_date(comment)
-          = summary
-            = "Left comment on #{render_link(comment)}."
