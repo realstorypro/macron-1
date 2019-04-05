@@ -17,8 +17,6 @@ class CommentsController < ApplicationController
 
     render status: 500, json: { notice: "unable to add record" } unless @comment.save
 
-    broadcast_activity(@comment)
-
     track(
       event: "Left comment",
       props: {
@@ -56,17 +54,5 @@ class CommentsController < ApplicationController
       # checks if the entry has a slug
       def slugged?(entry)
         entry.column_names.include? "slug"
-      end
-
-      # broadcasts an activity via action cable
-      def broadcast_activity(comment)
-        ActionCable.server.broadcast(
-          "activity_#{comment.user.id}",
-          #activity_id: comment.activities.last.to_json
-          activity: render(
-            partial: 'api/v1/activities/activity',
-            locals: { activity: comment.activities.last }
-          )
-        )
       end
 end

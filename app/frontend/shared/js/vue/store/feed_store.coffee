@@ -9,6 +9,7 @@ Vue.use(Vuex)
 
 store = new (Vuex.Store)(
   state:
+    new_activities: []
     activities: []
     loading: false
 
@@ -16,24 +17,35 @@ store = new (Vuex.Store)(
     load: (state, activities) ->
       state.activities = activities
 
-    add: (state, activity) ->
-      state.activities.unshift(activity)
+    add: (state, activities) ->
+      for activity in activities
+        state.activities.unshift(activity)
+
+    add_new_activity: (state, activity_id) ->
+      state.new_activities.push activity_id
+
+    clear_new_activities: (state) ->
+      state.new_activities = []
+
 
   actions:
     # TODO: Modify to pull in an actual user
     loadActivities: ({commit}, {user_id}) ->
-      axios.get('/api/v1/activities/').then (response) =>
-        commit('load', response.data.activities)
+      axios.get("/api/v1/activities/#{user_id}").then (response) =>
+        commit('load', response.data)
 
-    loadActivity: ({commit}, {user_id})->
-      console.log 'load an activity'
+    loadNewActivities: ({commit, state}, {user_id})->
+      axios.get("/api/v1/activities/#{user_id}"
+        params:
+          activities: state.new_activities
+      ).then (response) =>
+        commit('clear_new_activities')
+        commit('add', response.data)
 
     subscribeToUpdaes: ({commit}, {user_id})->
-      window.cable = cable
       cable.subscriptions.create { channel: 'ActivityChannel', user_id: user_id },
         received: (data) ->
-          #console.log data.activity
-          commit('add', JSON.parse(data.activity))
+          commit('add_new_activity', data.activity_id)
 
 )
 

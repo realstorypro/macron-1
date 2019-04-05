@@ -16,9 +16,4 @@ module ActivityHelper
     elsif activity.trackable_type == "Event"
     end
   end
-
-  # returns long date of the trackable in RFC882 Form
-  def long_published_date(trackable)
-    Time.new(trackable.published_date.year, trackable.published_date.month, trackable.published_date.day).to_formatted_s(:rfc822)
-  end
 end

@@ -1,10 +1,15 @@
 = widget name: 'feed', id: 'feed', vue: :on, data: {user_id: options[:user_id]}
   = feed
-    = h4 text: "{{ count }}"
-    = h5 text: 'Activity'
+    = button class: 'fluid small', v: {'on:click.prevent': "load_new_activities()", show: 'new_activities_count'}
+      = icon 'up double chevron'
+      | Load New Activities
     = event v: {for: '(activity in activities'}
       = text
         img.ui.image.avatar :src="activity.owner.avatar"
         a :href="activity.owner.url" {{ activity.owner.username }}
         |  {{ activity.verb }}
         a :href="activity.object.url" {{ activity.object.name }}
+        |&nbsp;{{ activity.created_at | calendar_date }}
+    = button class: 'fluid small', v: {'on:click.prevent': "load_more_activities()"}
+      = icon 'down double chevron'
+      | Load More Activities

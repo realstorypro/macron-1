@@ -4,6 +4,7 @@ import Vue from 'vue/dist/vue.esm'
 import turbolinks_adapter from './mixins/turbolinks'
 import store from './store/feed_store'
 import axios from 'axios'
+import moment from 'moment'
 
 utils = new Utils
 vent = new Vent
@@ -47,6 +48,22 @@ class Feed
 
         count: ->
           store.state.activities.length
+
+        new_activities_count: ->
+          store.state.new_activities.length
+
+      methods:
+        load_new_activities: ->
+          store.dispatch('loadNewActivities', { @user_id })
+
+
+
+      filters:
+        calendar_date: (datestamp) ->
+          moment(datestamp).calendar()
+
+        short_date: (datestamp) ->
+          moment(datestamp).format('MMMM YYYY')
 
 
 export { Feed as default }
