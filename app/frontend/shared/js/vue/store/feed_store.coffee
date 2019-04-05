@@ -17,7 +17,7 @@ store = new (Vuex.Store)(
       state.activities = activities
 
     add: (state, activity) ->
-      state.activities.push activity
+      state.activities.unshift(activity)
 
   actions:
     # TODO: Modify to pull in an actual user
@@ -32,7 +32,8 @@ store = new (Vuex.Store)(
       window.cable = cable
       cable.subscriptions.create { channel: 'ActivityChannel', user_id: user_id },
         received: (data) ->
-          console.log 'received data', data
+          #console.log data.activity
+          commit('add', JSON.parse(data.activity))
 
 )
 

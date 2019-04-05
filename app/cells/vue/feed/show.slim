@@ -1,5 +1,6 @@
 = widget name: 'feed', id: 'feed', vue: :on, data: {user_id: options[:user_id]}
   = feed
+    = h4 text: "{{ count }}"
     = h5 text: 'Activity'
     = event v: {for: '(activity in activities'}
       = text

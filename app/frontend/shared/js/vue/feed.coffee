@@ -45,5 +45,8 @@ class Feed
         activities: ->
           store.state.activities
 
+        count: ->
+          store.state.activities.length
+
 
 export { Feed as default }

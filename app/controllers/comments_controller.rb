@@ -58,11 +58,15 @@ class CommentsController < ApplicationController
         entry.column_names.include? "slug"
       end
 
-      # handles the broadcast to activity cable
+      # broadcasts an activity via action cable
       def broadcast_activity(comment)
         ActionCable.server.broadcast(
           "activity_#{comment.user.id}",
-          activity: render('api/v1/activities/activity')
+          #activity_id: comment.activities.last.to_json
+          activity: render(
+            partial: 'api/v1/activities/activity',
+            locals: { activity: comment.activities.last }
+          )
         )
       end
 end
