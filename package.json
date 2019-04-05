@@ -28,6 +28,7 @@
   "dependencies": {
     "@rails/webpacker": "^3.5.5",
     "@shopify/buy-button-js": "^0.8.6",
+    "actioncable": "^5.2.3",
     "ahoy.js": "^0.3.2",
     "axios": "^0.17.1",
     "babel-core": "^6.26.3",

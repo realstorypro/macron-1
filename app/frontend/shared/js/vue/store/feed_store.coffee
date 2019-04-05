@@ -1,6 +1,9 @@
 import Vue from 'vue/dist/vue.esm'
 import Vuex from 'vuex'
 import axios from 'axios'
+import Cable from '../../core/cable'
+
+cable = (new Cable).cable
 
 Vue.use(Vuex)
 
@@ -17,17 +20,20 @@ store = new (Vuex.Store)(
       state.activities.push activity
 
   actions:
+    # TODO: Modify to pull in an actual user
     loadActivities: ({commit}, {user_id}) ->
       axios.get('/api/v1/activities/').then (response) =>
-        console.log response.data.activities
         commit('load', response.data.activities)
 
-      # client = stream.connect(api_key, token, 49865)
-      # user_feed = client.feed('user', user_id)
+    loadActivity: ({commit}, {user_id})->
+      console.log 'load an activity'
 
-      #user_feed.get({limit:5}).then (body) ->
-      #  commit('load', body.results)
+    subscribeToUpdaes: ({commit}, {user_id})->
+      window.cable = cable
+      cable.subscriptions.create { channel: 'ActivityChannel', user_id: user_id },
+        received: (data) ->
+          console.log 'received data', data
+
 )
 
-window.store = store
 export {store as default}

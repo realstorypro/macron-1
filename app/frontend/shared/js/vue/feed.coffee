@@ -37,6 +37,8 @@ class Feed
       mixins: [turbolinks_adapter]
       mounted: ->
         @user_id = $(@.$options.el).data('user-id')
+
+        store.dispatch('subscribeToUpdaes', { @user_id })
         store.dispatch('loadActivities', { @user_id })
 
       computed:

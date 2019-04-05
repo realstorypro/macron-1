@@ -164,4 +164,7 @@ Rails.application.routes.draw do
   end if Rails.env.production?
 
   mount Sidekiq::Web => "/sidekiq"
+
+  # ActionCable
+  mount ActionCable.server => '/cable'
 end

@@ -14,7 +14,10 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.new comment_params
     @comment.user = current_user
     authorize @comment
+
     render status: 500, json: { notice: "unable to add record" } unless @comment.save
+
+    broadcast_activity(@comment)
 
     track(
       event: "Left comment",
@@ -53,5 +56,13 @@ class CommentsController < ApplicationController
       # checks if the entry has a slug
       def slugged?(entry)
         entry.column_names.include? "slug"
+      end
+
+      # handles the broadcast to activity cable
+      def broadcast_activity(comment)
+        ActionCable.server.broadcast(
+          "activity_#{comment.user.id}",
+          activity: render('api/v1/activities/activity')
+        )
       end
 end
