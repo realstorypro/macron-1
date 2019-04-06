@@ -2,6 +2,7 @@
 
 class Article < Entry
   include Autoloadable
+  include Trackable
 
   validates_presence_of :category
 

@@ -8,9 +8,6 @@ class Entry < ApplicationRecord
   include Slugged
   include Seoable
 
-  include PublicActivity::Model
-  tracked owner: -> (_controller, model) { model.user }
-
   validates :slug, uniqueness: { scope: :type, allow_blank: true }
   scope :published, (-> { all.where.not(published_date: nil) })
 
