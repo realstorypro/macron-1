@@ -27,32 +27,38 @@ store = new (Vuex.Store)(
       for activity in activities
         state.activities.push(activity)
 
-    start_appending_activities: (state) ->
-      state.appending = true
-
-    stop_appending_activities: (state) ->
-      state.appending = false
-
     add_new_activity: (state, activity_id) ->
       state.new_activities.push activity_id
 
     clear_new_activities: (state) ->
       state.new_activities = []
 
+    start_appending_activities: (state) ->
+      state.appending = true
+
+    stop_appending_activities: (state) ->
+      state.appending = false
+
+    start_prepending_activities: (state) ->
+      state.prepending = true
+
+    stop_prepending_activities: (state) ->
+      state.prepending = false
 
   actions:
-    # TODO: Modify to pull in an actual user
     loadActivities: ({commit}, {user_id}) ->
       axios.get("/api/v1/activities/#{user_id}").then (response) =>
         commit('load', response.data)
 
     loadNewActivities: ({commit, state}, {user_id})->
+      commit('start_prepending_activities')
       axios.get("/api/v1/activities/#{user_id}"
         params:
           activities: state.new_activities
       ).then (response) =>
         commit('clear_new_activities')
         commit('prepend_activities', response.data)
+        commit('stop_prepending_activities')
 
     loadMoreActivities: ({commit, state}, {user_id}) ->
       commit('start_appending_activities')

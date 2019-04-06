@@ -49,6 +49,10 @@ class Feed
         count: ->
           store.state.activities.length
 
+        prepending: ->
+          return "disabled loading" if store.state.prepending
+          return "" unless store.state.prepending
+
         appending: ->
           return "disabled loading" if store.state.appending
           return "" unless store.state.appending
