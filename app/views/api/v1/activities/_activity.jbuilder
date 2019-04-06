@@ -17,5 +17,11 @@ json.object do
     json.name activity.trackable.commentable.name
     json.url entry_url(activity.trackable.commentable)
     json.category activity.trackable.commentable.category.name
+  else
+    json.type activity.trackable.type
+    json.id activity.trackable.id
+    json.name activity.trackable.name
+    json.url entry_url(activity.trackable)
+    json.category activity.trackable.category.name
   end
 end

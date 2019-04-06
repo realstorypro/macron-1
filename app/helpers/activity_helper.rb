@@ -6,7 +6,7 @@ module ActivityHelper
     if activity.trackable_type == "Comment"
       "has left a comment on "
     elsif activity.trackable_type == "Article"
-      "published a "
+      "wrote an article "
     elsif activity.trackable_type == "Video"
       "published a "
     elsif activity.trackable_type == "Podcast"
@@ -14,6 +14,7 @@ module ActivityHelper
     elsif activity.trackable_type == "Discussion"
       "published a "
     elsif activity.trackable_type == "Event"
+      "is promoting an event "
     end
   end
 end

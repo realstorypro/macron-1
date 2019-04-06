@@ -2,7 +2,7 @@
 
 class Podcast < Entry
   include Autoloadable
-  include Trackable
+  include Activitible
 
   before_save :embed_audio
   content_attr :embedded_audio, :string

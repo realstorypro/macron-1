@@ -2,7 +2,7 @@
 
 class Article < Entry
   include Autoloadable
-  include Trackable
+  include Activitible
 
   validates_presence_of :category
 
