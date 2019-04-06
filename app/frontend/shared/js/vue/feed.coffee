@@ -49,12 +49,20 @@ class Feed
         count: ->
           store.state.activities.length
 
+        appending: ->
+          return "disabled loading" if store.state.appending
+          return "" unless store.state.appending
+
+
         new_activities_count: ->
           store.state.new_activities.length
 
       methods:
         load_new_activities: ->
           store.dispatch('loadNewActivities', { @user_id })
+
+        load_more_activities: ->
+          store.dispatch('loadMoreActivities', { @user_id })
 
 
 

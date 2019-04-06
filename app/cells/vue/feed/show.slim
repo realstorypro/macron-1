@@ -10,6 +10,6 @@
         |  {{ activity.verb }}
         a :href="activity.object.url" {{ activity.object.name }}
         |&nbsp;{{ activity.created_at | calendar_date }}
-    = button class: 'fluid small', v: {'on:click.prevent': "load_more_activities()"}
-      = icon 'down double chevron'
+    = button class: 'fluid small', v: {'on:click.prevent': "load_more_activities()", 'bind:class': 'appending'}
+      = icon class: 'down double chevron'
       | Load More Activities
