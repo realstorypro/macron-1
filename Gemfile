@@ -21,6 +21,7 @@ gem "wicked"
 gem "sidekiq"
 gem "store_base_sti_class"
 gem "public_activity"
+gem "socialization"
 
 # Analytics
 gem "ahoy_matey"
