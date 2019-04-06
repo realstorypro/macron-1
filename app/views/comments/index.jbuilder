@@ -19,9 +19,6 @@ json.comments @comments do |comment|
     json.posts comment.user.comments_count
     json.title comment.user.profile.title
     json.avatar comment.user.profile.avatar
-    json.location comment.user.profile.location
-    json.age comment.user.profile.age
-    json.signature comment.user.profile.signature
     json.verified comment.user.profile.verified
   end
 end

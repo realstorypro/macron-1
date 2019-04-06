@@ -1,10 +1,15 @@
-= widget name: 'feed', id: 'feed', vue: :on
+= widget name: 'feed', id: 'feed', vue: :on, data: {user_id: options[:user_id]}
   = feed
-    - comments.each do |comment|
-      = event
-        .label
-          = icon 'pencil alternate bordered grey inverted'
-        = content
-          .date =render_date(comment)
-          = summary
-            = "Left comment on #{render_link(comment)}."
+    = button class: 'fluid small new activities', v: {'on:click.prevent': "load_new_activities()", show: 'new_activities_count', 'bind:class': 'prepending'}
+      = icon 'up double chevron'
+      | Load New Activities
+    = event v: {for: '(activity in activities'}
+      = text
+        img.ui.image.avatar :src="activity.owner.avatar"
+        a :href="activity.owner.url" {{ activity.owner.username }}
+        |  {{ activity.verb }}
+        a :href="activity.object.url" {{ activity.object.name }}
+        |&nbsp;{{ activity.created_at | calendar_date }}
+    = button class: 'fluid small more activities', v: {'on:click.prevent': "load_more_activities()", 'bind:class': 'appending'}
+      = icon class: 'down double chevron'
+      | Load More Activities

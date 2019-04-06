@@ -15,6 +15,7 @@ FactoryBot.define do
     card_image { Faker::Avatar.image }
     image_alt { Faker::Name.name }
     association :category, factory: :category
+    association :user
     after(:create) do |product|
       create(:comment, commentable: product)
     end

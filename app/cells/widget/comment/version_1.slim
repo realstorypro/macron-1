@@ -27,20 +27,17 @@
           .aligner
             a.author v-bind:href="profile_link(comment.user)"
               | {{ comment.user.username }}
+              .verified v-if='comment.user.verified'
+                = icon 'check mark circular mini inverted yellow'
             .title
               | {{ comment.user.title }}
         .joined
           | Joined: {{ comment.user.created_at | short_date }}
-        .location v-if='comment.user.location'
-          | Location: {{ comment.user.location }}
         .age v-if='comment.user.age' Age: {{ comment.user.age }}
         .posts Posts: {{ comment.user.posts }}
 
       .content
         .text v-html='comment.body'
-        .ui.divider
-        p
-          | {{ comment.user.signature }}
 
   form.ui.form.reply @submit.prevent="add_comment($event)" v-if="current_user"
     - if current_user && current_user.has_role?(:banned)

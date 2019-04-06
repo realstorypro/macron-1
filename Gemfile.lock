@@ -325,6 +325,11 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     psych (3.1.0)
+    public_activity (1.6.3)
+      actionpack (>= 3.0.0)
+      activerecord (>= 3.0)
+      i18n (>= 0.5.0)
+      railties (>= 3.0.0)
     public_suffix (3.0.3)
     puma (3.12.1)
     pundit (2.0.1)
@@ -599,6 +604,7 @@ DEPENDENCIES
   nexmo
   pg (>= 0.18, < 2.0)
   phonelib
+  public_activity
   puma (~> 3.11)
   pundit
   rack-cors

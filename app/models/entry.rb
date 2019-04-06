@@ -19,6 +19,7 @@ class Entry < ApplicationRecord
   has_many :areas, as: :areable
   has_many :elements, through: :areas
 
+  # Security
   def self.policy_class
     MetaPolicy
   end

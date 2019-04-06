@@ -2,6 +2,7 @@
 
 class Video < Entry
   include Autoloadable
+  include Trackable
 
   content_attr :embedded_video, :string
   before_save :embed_video

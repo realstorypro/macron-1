@@ -20,11 +20,12 @@ module Admin
     end
 
     def show
+      add_verify_ability unless @entry.profile.verified
+      add_unverify_ability if @entry.profile.verified
+
       unless @entry.id == current_user.id
         add_delete_ability
         add_edit_ability
-        add_verify_ability unless @entry.profile.verified || @entry.has_role?(:admin)
-        add_unverify_ability if @entry.profile.verified
         add_ban_ability unless @entry.has_role?(:banned) || @entry.has_role?(:admin)
         add_unban_ability if @entry.has_role?(:banned)
       end

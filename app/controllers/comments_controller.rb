@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.new comment_params
     @comment.user = current_user
     authorize @comment
+
     render status: 500, json: { notice: "unable to add record" } unless @comment.save
 
     track(

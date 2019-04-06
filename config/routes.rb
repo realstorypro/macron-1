@@ -45,6 +45,8 @@ Rails.application.routes.draw do
   resources :members, component: "members", only: %i[index show]
   resource  :profile, controller: "profile", component: "profiles", only: %i[show edit update]
 
+  get "profile/:section", to: "profile#show", as: "profile_section", component: "profiles"
+
   resources :articles, component: "articles", only: %i[index]
   get "articles/:category", to: "articles#index", as: "article_category", component: "articles"
   get "articles/:category/:id", to: "articles#show", as: "article_details", component: "articles"
@@ -134,10 +136,17 @@ Rails.application.routes.draw do
     end
   end
 
+  # Reporting (via Blazer)
   authenticate :user, ->(user) { user.can_manage?(:reports) } do
     mount Blazer::Engine, at: "admin/reports"
   end
 
+  # API
+  namespace :api do
+    namespace :v1 do
+      resources :activities, only: %i[index show]
+    end
+  end
 
   # Sidekiq
   require "sidekiq/web"
@@ -154,4 +163,7 @@ Rails.application.routes.draw do
   end if Rails.env.production?
 
   mount Sidekiq::Web => "/sidekiq"
+
+  # ActionCable
+  mount ActionCable.server => '/cable'
 end

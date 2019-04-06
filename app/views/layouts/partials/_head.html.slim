@@ -24,11 +24,14 @@
 meta content = 'text/html; charset=UTF-8' http-equiv = 'Content-Type'
 meta content = 'width=device-width initial-scale=1' name = 'viewport'
 
+= action_cable_meta_tag
+
 // PWA 
 // TODO: Make dynamic
-link rel="manifest" href="manifest.json"
+link rel="manifest" href="/manifest.json"
 meta name="theme-color" content="#000"
 meta name="theme_color" content="#000"
+
 
 = rel_next_prev_link_tags @entries if @entries
 

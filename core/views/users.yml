@@ -61,16 +61,3 @@ views:
         label: 'Title'
         type: 'string'
         association: 'profile'
-      location:
-        label: 'Location'
-        type: 'string'
-        association: 'profile'
-      age:
-        label: 'Age'
-        type: 'string'
-        association: 'profile'
-      signature:
-        label: 'Signature'
-        type: 'string'
-        association: 'profile'
-

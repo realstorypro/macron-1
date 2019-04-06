@@ -10,4 +10,5 @@ module ApplicationHelper
   include NavHelper
   include FooterHelper
   include EntryHelper
+  include ActivityHelper
 end

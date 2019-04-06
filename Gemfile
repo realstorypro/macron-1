@@ -20,6 +20,7 @@ gem "friendly_id", "~> 5.1.0"
 gem "wicked"
 gem "sidekiq"
 gem "store_base_sti_class"
+gem "public_activity"
 
 # Analytics
 gem "ahoy_matey"

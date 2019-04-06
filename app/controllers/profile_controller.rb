@@ -2,11 +2,13 @@
 
 # handles the display of the profile model
 class ProfileController < MembersController
+  skip_before_action :preload_entry
+
   before_action :set_user_to_current
-  before_action :preload_entry
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
 
   layout "layouts/client"
+
   def show
     @editable = true
     render "members/show"
@@ -20,12 +22,6 @@ class ProfileController < MembersController
     end
 
     def preload_entry
-      @comments = Comment.where(
-        user_id: @member.id,
-        commentable_type: %w(Article Discussion Video Podcast)
-      ).order("created_at desc")
-      @content_ids = @comments.map(&:commentable_id)
-      @commented_content = Entry.where(id: @content_ids)
     end
 
     def record_view
