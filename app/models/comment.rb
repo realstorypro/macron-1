@@ -6,7 +6,7 @@ class Comment < ApplicationRecord
   has_many :comments, as: :commentable
 
   include PublicActivity::Model
-  tracked owner: -> (controller, _model) { controller.current_user }
+  tracked owner: -> (_controller, model) { model.user }
 
   belongs_to :user, counter_cache: true
 
