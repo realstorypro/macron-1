@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-json.type activity.trackable_type
+json.type activity.trackable_type.downcase
 json.verb activity_verb(activity)
 json.created_at activity.created_at
 
@@ -17,11 +17,13 @@ json.object do
     json.name activity.trackable.commentable.name
     json.url entry_url(activity.trackable.commentable)
     json.category activity.trackable.commentable.category.name
+    json.body strip_tags(activity.trackable.body).truncate(200)
   else
     json.type activity.trackable.type
     json.id activity.trackable.id
     json.name activity.trackable.name
     json.url entry_url(activity.trackable)
     json.category activity.trackable.category.name
+    json.card_image activity.trackable.card_image
   end
 end

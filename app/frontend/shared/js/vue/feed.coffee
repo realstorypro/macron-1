@@ -68,9 +68,18 @@ class Feed
         load_more_activities: ->
           store.dispatch('loadMoreActivities', { @user_id })
 
+        type_with_images: (type) ->
+          image_types = ['article', 'event']
+          for image_type in image_types
+            return true if image_type == type
+          return false
+
 
 
       filters:
+        from_now_date: (datestamp) ->
+          moment(datestamp).fromNow()
+
         calendar_date: (datestamp) ->
           moment(datestamp).calendar()
 
