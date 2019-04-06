@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ActivityChannel < ApplicationCable::Channel
   def subscribed
     params[:user_id] ||= current_user.id

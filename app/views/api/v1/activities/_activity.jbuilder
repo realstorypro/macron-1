@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.type activity.trackable_type
 json.verb activity_verb(activity)
 json.created_at activity.created_at

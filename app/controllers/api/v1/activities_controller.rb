@@ -1,9 +1,10 @@
-class API::V1::ActivitiesController < ApplicationController
+# frozen_string_literal: true
 
+class API::V1::ActivitiesController < ApplicationController
   # returns all activities
   def index
     where_clause = {}
-    where_clause['id'] = params[:activities] if params[:activities]
+    where_clause["id"] = params[:activities] if params[:activities]
     @activities = PublicActivity::Activity.order("created_at desc")
                       .where(where_clause)
                       .preload(:owner, :trackable)
@@ -14,8 +15,8 @@ class API::V1::ActivitiesController < ApplicationController
   # returns activities for a single user
   def show
     where_clause = {}
-    where_clause['owner_id'] = params[:id]
-    where_clause['id'] = params[:activities] if params[:activities]
+    where_clause["owner_id"] = params[:id]
+    where_clause["id"] = params[:activities] if params[:activities]
 
     @activities = PublicActivity::Activity.order("created_at desc")
                       .where(where_clause)
