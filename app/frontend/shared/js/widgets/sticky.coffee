@@ -19,8 +19,20 @@ class Sticky
   setup: () ->
     utils.log 'setup', 'setup()', 'sticky'
 
-    $('.ui.dropdown').not('.multiple').not('.widgeted').dropdown()
-    $('.sticky .stuck') .sticky({ context: '.sticky .context' })
+
+    $(".widget.sticky").each (index, item) ->
+      random_id =  Math.floor(Math.random() * 100)
+
+      $(item).find('.context').attr('id', "stuckable_#{random_id}")
+      $(item).find('.ui.sticky').sticky
+        context: "#stuckable_#{random_id}"
+        offset: 120
+
+    # TODO: Maybe we should turn this into an event call
+    setTimeout ( ->
+      $('.ui.sticky').sticky('refresh')
+    ), 500
+
 
 
   teardown: () ->

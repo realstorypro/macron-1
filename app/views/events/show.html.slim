@@ -22,32 +22,33 @@
                       = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name} "
             .summary
               = @entry.long_summary.html_safe
-  = fragment 'content'
-    = container
-      = grid
-        = row 'sticky'
-          = column computer: 11, tablet: 16, mobile: 16, class: 'context'
-            /== Vue::SocialSharingCell.(nil)
-            = widget 'normal rich text'
-              = @entry.body.html_safe
-          = column computer: 5, tablet: 16, mobile: 16
-            = fragment class: 'meta holder stuck'
-              = segment 'secondary'
-                = table 'very basic unstackable'
-                  tr valign="top"
-                    td
-                      = icon 'clock'
-                    td
-                      = show_event_date(@entry)
-                      br
-                      = "#{@entry.start_time} &mdash; #{@entry.end_time}".html_safe
-                  tr valign="top"
-                    td
-                      = icon 'dollar'
-                    td= @entry.price
-                  tr valign="top"
-                    td
-                      = icon 'map marker alternate'
-                    td= @entry.location.html_safe
+  = widget 'sticky'
+    = fragment 'content'
+      = container
+        = grid
+          = row
+            = column computer: 11, tablet: 16, mobile: 16, class: "context"
+              = widget 'normal rich text'
+                = @entry.body.html_safe
+            = column computer: 5, tablet: 16, mobile: 16
+              .ui.sticky
+                = fragment class: 'meta holder'
+                  = segment 'secondary'
+                    = table 'very basic unstackable'
+                      tr valign="top"
+                        td
+                          = icon 'clock'
+                        td
+                          = show_event_date(@entry)
+                          br
+                          = "#{@entry.start_time} &mdash; #{@entry.end_time}".html_safe
+                      tr valign="top"
+                        td
+                          = icon 'dollar'
+                        td= @entry.price
+                      tr valign="top"
+                        td
+                          = icon 'map marker alternate'
+                        td= @entry.location.html_safe
 
   = render "partials/engager"

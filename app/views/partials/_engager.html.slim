@@ -1,15 +1,12 @@
-= fragment 'secondary'
-  = container
-    = grid
-      = row
-        = column computer: 11, tablet: 16, mobile: 16
-          == Widget::CommentCell.(@entry, layout: :version_1, user: current_user, support_email: ss('contact.email'), component: params[:component])
-        = column computer: 5, tablet: 16, mobile: 16
-          = fragment 'sidebar'
-            = container
-              = grid
-                = row
-                  = column computer: 16, tablet: 8, mobile: 16
-                    == Widget::RelatedCell.(@related_content, layout: :regular, headless: true, category: true, icon: true) unless @related_content.blank?
-                  = column computer: 16, tablet: 8, mobile: 16
-                    == Widget::AdvertisingCell.(@ad, layout: :sidebar) unless @ad.blank?
+= widget 'sticky delayed'
+  = fragment 'secondary'
+    = container
+      = grid
+        = row
+          = column computer: 11, tablet: 16, mobile: 16, class: "context"
+            == Widget::CommentCell.(@entry, layout: :version_1, user: current_user, support_email: ss('contact.email'), component: params[:component])
+          = column computer: 5, tablet: 16, mobile: 16
+            .ui.sticky
+              = fragment 'sidebar'
+                == Widget::RelatedCell.(@related_content, layout: :regular, headless: true, category: true, icon: true) unless @related_content.blank?
+                == Widget::AdvertisingCell.(@ad, layout: :sidebar) unless @ad.blank?
