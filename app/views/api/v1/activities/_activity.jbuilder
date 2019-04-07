@@ -18,6 +18,11 @@ json.object do
     json.url entry_url(activity.trackable.commentable)
     json.category activity.trackable.commentable.category.name
     json.body strip_tags(activity.trackable.body).truncate(200)
+  elsif activity.trackable_type == "Follow"
+    json.type activity.trackable.follower_type
+    json.id activity.trackable.followable.id
+    json.name activity.trackable.followable.username
+    json.url member_path(activity.trackable.followable)
   else
     json.type activity.trackable.type
     json.id activity.trackable.id

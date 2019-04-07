@@ -8,6 +8,9 @@ class Entry < ApplicationRecord
   include Slugged
   include Seoable
 
+  acts_as_follower
+  acts_as_followable
+
   validates :slug, uniqueness: { scope: :type, allow_blank: true }
   scope :published, (-> { all.where.not(published_date: nil) })
 

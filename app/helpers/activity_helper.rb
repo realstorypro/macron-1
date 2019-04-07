@@ -15,6 +15,8 @@ module ActivityHelper
       "published a "
     elsif activity.trackable_type == "Event"
       "is promoting an event "
+    elsif activity.trackable_type == "Follow"
+      "has followed "
     end
   end
 end

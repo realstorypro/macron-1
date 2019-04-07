@@ -46,6 +46,9 @@ class User < ApplicationRecord
   # Adding Alias
   alias_attribute :name, :username
 
+  acts_as_follower
+  acts_as_followable
+
   # Temproarley Disabling Until 2FA is Enabled
 
   # validates_presence_of :country, :phone_number, on: :update
