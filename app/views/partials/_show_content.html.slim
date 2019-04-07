@@ -1,10 +1,18 @@
-= fragment 'content'
-  = container
-    = grid
-      = row
-        = column computer: 12, tablet: 16, mobile: 16
-          == Vue::SocialSharingCell.(nil)
-          = widget 'normal rich text'
-            = @entry.body.html_safe
+= widget 'sticky'
+  = fragment 'content'
+    = container
+      = grid
+        = row
+          = column computer: 11, tablet: 16, mobile: 16, class: "context"
+            == Vue::SocialSharingCell.(nil)
+            = widget 'normal rich text'
+              = @entry.body.html_safe
+          = column computer: 5, tablet: 16, mobile: 16
+            = sticky
+              = fragment class: 'meta holder'
+                = segment 'secondary'
+                  = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name}"
+                  = link_to "@#{@entry.user.username}", members_path(@entry.user)
+                  = h4 text: 'Hello World'
 
 = render "partials/engager"

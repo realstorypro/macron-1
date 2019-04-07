@@ -88,8 +88,6 @@ class Comments
             @comments = response.data.comments
             $("##{widget.id}").removeClass('hidden')
 
-            vent.channel().trigger "sticky", action: "refresh"
-
 
       filters:
         calendar_date: (datestamp) ->
