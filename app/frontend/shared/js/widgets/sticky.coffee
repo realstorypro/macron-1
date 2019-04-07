@@ -25,19 +25,23 @@ class Sticky
     utils.log 'setup', 'setup()', 'sticky'
 
 
-    $(".widget.sticky").each (index, item) ->
-      random_id =  Math.floor(Math.random() * 100)
+    unless utils.is_mobile()
 
-      $(item).find('.context').attr('id', "stuckable_#{random_id}")
-      $(item).find('.ui.sticky').sticky
-        context: "#stuckable_#{random_id}"
-        offset: 90
+      $(".widget.sticky").each (index, item) ->
+        random_id =  Math.floor(Math.random() * 100)
+
+        $(item).find('.context').attr('id', "stuckable_#{random_id}")
+        $(item).find('.ui.sticky').sticky
+          context: "#stuckable_#{random_id}"
+          offset: 90
 
 
   refresh: () ->
-    setTimeout ( ->
-      $('.ui.sticky.refreshing').sticky('refresh')
-    ), 1
+    unless utils.is_mobile()
+      setTimeout ( ->
+        $('.ui.sticky.refreshing').sticky('refresh')
+      ), 1
+
   teardown: () ->
     utils.log 'teardown', 'teardown()', 'sticky'
 
