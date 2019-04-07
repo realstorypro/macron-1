@@ -163,6 +163,10 @@ defaults:
     css_class: 'statistic'
     ui: :off
 
+  sticky:
+    tag: div
+    css_class: 'sticky'
+
 
   # css framework builder classes
 

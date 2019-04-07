@@ -31,7 +31,7 @@
               = widget 'normal rich text'
                 = @entry.body.html_safe
             = column computer: 5, tablet: 16, mobile: 16
-              .ui.sticky
+              = sticky
                 = fragment class: 'meta holder'
                   = segment 'secondary'
                     = table 'very basic unstackable'

@@ -1,6 +1,8 @@
 import Utils from '../core/utils'
+import Vent from '../core/vent'
 
 utils =  new Utils
+vent =  new Vent
 
 class Sticky
   instance = null
@@ -9,8 +11,11 @@ class Sticky
     if !instance
       instance = this
 
-    else
-      instance
+      vent.channel().on "sticky", (options) =>
+        switch options['action']
+          when 'refresh' then @refresh(options)
+
+    instance
 
   reinit: () ->
     @teardown()
@@ -26,15 +31,13 @@ class Sticky
       $(item).find('.context').attr('id', "stuckable_#{random_id}")
       $(item).find('.ui.sticky').sticky
         context: "#stuckable_#{random_id}"
-        offset: 120
+        offset: 90
 
-    # TODO: Maybe we should turn this into an event call
+
+  refresh: () ->
     setTimeout ( ->
-      $('.ui.sticky').sticky('refresh')
-    ), 500
-
-
-
+      $('.ui.sticky.refreshing').sticky('refresh')
+    ), 1
   teardown: () ->
     utils.log 'teardown', 'teardown()', 'sticky'
 

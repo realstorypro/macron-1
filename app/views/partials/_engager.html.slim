@@ -1,4 +1,4 @@
-= widget 'sticky delayed'
+= widget 'sticky'
   = fragment 'secondary'
     = container
       = grid
@@ -6,7 +6,7 @@
           = column computer: 11, tablet: 16, mobile: 16, class: "context"
             == Widget::CommentCell.(@entry, layout: :version_1, user: current_user, support_email: ss('contact.email'), component: params[:component])
           = column computer: 5, tablet: 16, mobile: 16
-            .ui.sticky
+            = sticky 'refreshing'
               = fragment 'sidebar'
                 == Widget::RelatedCell.(@related_content, layout: :regular, headless: true, category: true, icon: true) unless @related_content.blank?
                 == Widget::AdvertisingCell.(@ad, layout: :sidebar) unless @ad.blank?
