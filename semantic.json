@@ -19,5 +19,5 @@
   "autoInstall": true,
   "rtl": false,
   "version": "2.4.2",
-  "components": ["reset", "site", "button", "container", "divider", "header", "icon", "image", "input", "label", "list", "loader", "segment", "breadcrumb", "flag", "form", "grid", "menu", "message", "table", "card", "item", "statistic", "checkbox", "dimmer", "dropdown", "sidebar", "transition", "form", "state", "visibility", "feed", "placeholder"]
+  "components": ["reset", "site", "button", "container", "divider", "header", "icon", "image", "input", "label", "list", "loader", "segment", "breadcrumb", "flag", "form", "grid", "menu", "message", "table", "card", "item", "statistic", "checkbox", "dimmer", "dropdown", "sidebar", "transition", "form", "state", "visibility", "feed", "placeholder", "sticky"]
 }

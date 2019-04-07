@@ -11,6 +11,7 @@ import Crud from './widgets/crud'
 import Checkbox from './widgets/checkbox'
 import Dropdown from './widgets/dropdown'
 import Multiselect from './widgets/multiselect'
+import Sticky from './widgets/sticky'
 import Navigation from './widgets/navigation'
 import ImagePreloader from './widgets/image_preloader'
 import LinkPreloader from './widgets/link_preloader'
@@ -44,6 +45,7 @@ crud = new Crud
 checkbox = new Checkbox
 dropdown = new Dropdown
 multiselect = new Multiselect
+sticky = new Sticky
 navigation = new Navigation
 image_preloader = new ImagePreloader
 link_preloader = new LinkPreloader
@@ -80,6 +82,7 @@ class Client_app
     checkbox.setup()
     dropdown.setup()
     multiselect.setup()
+    sticky.setup()
     image_preloader.setup()
     link_preloader.setup()
     conversion_tracker.setup()
@@ -101,6 +104,7 @@ class Client_app
     checkbox.teardown()
     dropdown.teardown()
     multiselect.teardown()
+    sticky.teardown()
     image_preloader.teardown()
     link_preloader.teardown()
     conversion_tracker.teardown()
