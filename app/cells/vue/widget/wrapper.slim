@@ -1,2 +1,2 @@
-= widget name: name.humanize.downcase, vue: :on, id: id, data: data
-  = render "../templates/#{name}"
+= widget name: name, vue: :on, id: id, data: data
+  = render "../templates/#{name.gsub(' ','_')}"

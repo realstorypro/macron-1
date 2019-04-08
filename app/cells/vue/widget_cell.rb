@@ -10,7 +10,7 @@ module Vue
 
     def id
       uuid ||= Random.new.rand(100)
-      name.to_s + uuid.to_s
+      name.gsub(' ','_') + uuid.to_s
     end
 
     def name
