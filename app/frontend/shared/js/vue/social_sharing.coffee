@@ -2,6 +2,7 @@ import Utils from '../core/utils'
 import Vent from '../core/vent'
 import Vue from 'vue/dist/vue.esm'
 import turbolinks_adapter from './mixins/turbolinks'
+import VueGoodshareTumblr from 'vue-goodshare/src/providers/Tumblr.vue'
 import VueGoodshareFacebook from 'vue-goodshare/src/providers/Facebook.vue'
 import VueGoodshareTwitter from 'vue-goodshare/src/providers/Twitter.vue'
 import VueGoodshareLinkedin from 'vue-goodshare/src/providers/LinkedIn.vue'
@@ -34,7 +35,7 @@ class SocialSharing
     @app = new Vue
       el: "##{widget.id}"
       mixins: [turbolinks_adapter]
-      components: { VueGoodshareFacebook, VueGoodshareTwitter, VueGoodshareLinkedin, VueGoodshareReddit, VueGoodsharePinterest }
+      components: { VueGoodshareTumblr,VueGoodshareFacebook, VueGoodshareTwitter, VueGoodshareLinkedin, VueGoodshareReddit, VueGoodsharePinterest }
       props:
         url: ''
 

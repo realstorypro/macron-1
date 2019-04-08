@@ -4,15 +4,39 @@
       = grid
         = row
           = column computer: 11, tablet: 16, mobile: 16, class: "context"
-            == Vue::SocialSharingCell.(nil)
             = widget 'normal rich text'
               = @entry.body.html_safe
           = column computer: 5, tablet: 16, mobile: 16
             = sticky
               = fragment class: 'meta holder'
                 = segment 'secondary'
-                  = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name}"
-                  = link_to "@#{@entry.user.username}", members_path(@entry.user)
-                  = h4 text: 'Hello World'
+                  = h5
+                    = image_tag @entry.user.profile.avatar, class: 'ui image avatar'
+                    = content
+                      = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name}"
+                      = header 'sub'
+                        = link_to "@#{@entry.user.username}", member_path(@entry.user)
+                  = text text: @entry.user.profile.short_bio
+                  = divider
+                  = button 'fluid left labeled icon primary'
+                    = icon 'plus'
+                    | Follow
+
+                = segment 'primary'
+                  .ui.button.labeled.fluid
+                    = button 'fluid blue left labeled icon'
+                      = icon 'heart white inverted'
+                      | Like
+                    .ui.label.basic.blue
+                      | 2,048
+
+                  = divider
+
+                  = button 'fluid left labeled icon'
+                    | Share
+                    = icon 'bookmark'
+                  /== Vue::SocialSharingCell.(nil)
+
+                /= segment 'basic'
 
 = render "partials/engager"

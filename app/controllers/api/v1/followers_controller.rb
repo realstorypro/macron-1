@@ -7,14 +7,27 @@ class API::V1::FollowersController < ApplicationController
   end
 
   def add
-    followee = User.find(params[:follower])
-    current_user.follow! followee
+    followable = User.find(params[:follower])
+    current_user.follow! followable
+
+    follow = Follow.where(follower: current_user, followable: followable).last
+    follow.create_activity key: 'follower_created', owner: current_user, recipient: followable
+
     return head 200
   end
 
   def remove
-    followee = User.find(params[:follower])
-    current_user.unfollow! followee
+    followable = User.find(params[:follower])
+
+    # get rid of the activity
+    follow = Follow.where(follower: current_user, followable: followable).last
+    activity = PublicActivity::Activity.where(trackable: follow, owner: current_user, recipient: followable).first
+    activity.destroy
+
+    # unfollow the followable
+    current_user.unfollow! followable
+
     return head 200
+
   end
 end

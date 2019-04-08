@@ -43,6 +43,10 @@ defaults:
     tag: h5
     css_class: 'header'
 
+  h6:
+    tag: h6
+    css_class: 'header'
+
 
   text:
     tag: p
@@ -220,6 +224,10 @@ defaults:
   ribbon:
     tag: div
     css_class: 'ribbon label'
+
+  ui_label:
+    tag: div
+    css_class: 'label'
 
   tagging:
     tag: div
