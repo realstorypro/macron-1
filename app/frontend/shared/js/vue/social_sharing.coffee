@@ -39,6 +39,8 @@ class SocialSharing
       data:
         flipped: false
 
+      mounted: ->
+        console.log 'mounted'
       methods:
         flip_card: () ->
           @flipped = true

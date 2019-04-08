@@ -1,0 +1,15 @@
+.container
+  .card v-bind:class="{ flipped: flipped }"
+
+    .front
+      = button class: 'fluid left labeled icon', v: {'on:click.prevent': "flip_card()"}
+        | Share
+        = icon 'bookmark'
+
+    .back
+      vue-goodshare-facebook has_icon="has_icon" has_square_edges="has_square_edges"
+      vue-goodshare-pinterest has_icon="has_icon" has_square_edges="has_square_edges"
+      vue-goodshare-linkedin has_icon="has_icon" has_square_edges="has_square_edges"
+      vue-goodshare-twitter has_icon="has_icon" has_square_edges="has_square_edges"
+      vue-goodshare-tumblr has_icon="has_icon" has_square_edges="has_square_edges"
+      vue-goodshare-reddit has_icon="has_icon" has_square_edges="has_square_edges"

@@ -23,11 +23,12 @@
                         = link_to "@#{@entry.user.username}", member_path(@entry.user)
                   = text text: @entry.user.profile.short_bio
                   = divider
-                  == Vue::FollowerCell.(nil, user: @entry.user)
+                  /== Vue::WidgetCell.(nil, name: 'follower', data: { user: @entry.user } )
 
                 = segment 'primary'
-                  == Vue::LikeCell.(nil, entry: @entry)
+                  /== Vue::LikeCell.(nil, entry: @entry)
+                  /== Vue::WidgetCell.(nil, name: 'like', data: { user: @entry.user } )
                   = divider
-                  == Vue::SocialSharingCell.(nil)
+                  == Vue::WidgetCell.(nil, name: 'social_sharing', data: { user: @entry.user } )
 
 = render "partials/engager"
