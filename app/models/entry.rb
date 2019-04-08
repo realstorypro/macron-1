@@ -14,8 +14,9 @@ class Entry < ApplicationRecord
   validates :slug, uniqueness: { scope: :type, allow_blank: true }
   scope :published, (-> { all.where.not(published_date: nil) })
 
-  after_update :ping_sitemap unless Rails.env.test?
-  after_create :ping_sitemap unless Rails.env.test?
+  after_update :ping_sitemap unless Rails.env.test? || Rails.env.development?
+  after_create :ping_sitemap unless Rails.env.test? || Rails.env.development?
+  after_update :delete_old_author_activity
 
   belongs_to :user, optional: true
   has_many :comments, as: :commentable
@@ -29,5 +30,11 @@ class Entry < ApplicationRecord
 
   def ping_sitemap
     SitemapPingJob.perform_later
+  end
+
+  def delete_old_author_activity
+    1+1
+    byebug
+    2+2
   end
 end

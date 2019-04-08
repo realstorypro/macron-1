@@ -4,6 +4,11 @@
       = grid
         = row
           = column computer: 11, tablet: 16, mobile: 16, class: "context"
+            = h3 'breadcrumb'
+              .ui.breadcrumb.large
+                .section = link_to 'Articles', articles_path
+                = divider text: '/'
+                .section = link_to params[:category].capitalize, article_category_path(params[:category])
             = widget 'normal rich text'
               = @entry.body.html_safe
           = column computer: 5, tablet: 16, mobile: 16
@@ -32,10 +37,7 @@
 
                   = divider
 
-                  = button 'fluid left labeled icon'
-                    | Share
-                    = icon 'bookmark'
-                  /== Vue::SocialSharingCell.(nil)
+                  == Vue::SocialSharingCell.(nil)
 
                 /= segment 'basic'
 

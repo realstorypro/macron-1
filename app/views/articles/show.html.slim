@@ -5,26 +5,8 @@
       = grid
         = row
           = column computer: 16, tablet: 16, mobile: 16
-            = h3 'breadcrumb'
-              .ui.breadcrumb.large
-                .section = link_to 'Articles', articles_path
-                = divider text: '/'
-                .section = link_to params[:category].capitalize, article_category_path(params[:category])
             = h1
               = @entry.long_title
-            = list 'relaxed horizontal meta stacked'
-              - if @entry.user
-                = item
-                  = icon 'user circle large'
-                  = content
-                    = header ui: :off, text: 'Author'
-                    = link_to member_path(@entry.user)
-                      = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name} "
-              = item
-                = icon 'clock large'
-                = content
-                  = header ui: :off, text: 'Reading Time'
-                  = @entry.body.reading_time
             .summary
               = @entry.long_summary.html_safe
   = render 'partials/show_content'

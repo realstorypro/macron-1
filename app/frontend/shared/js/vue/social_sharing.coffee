@@ -36,7 +36,11 @@ class SocialSharing
       el: "##{widget.id}"
       mixins: [turbolinks_adapter]
       components: { VueGoodshareTumblr,VueGoodshareFacebook, VueGoodshareTwitter, VueGoodshareLinkedin, VueGoodshareReddit, VueGoodsharePinterest }
-      props:
-        url: ''
+      data:
+        flipped: false
+
+      methods:
+        flip_card: () ->
+          @flipped = true
 
 export { SocialSharing as default }
