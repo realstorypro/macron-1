@@ -23,22 +23,11 @@
                         = link_to "@#{@entry.user.username}", member_path(@entry.user)
                   = text text: @entry.user.profile.short_bio
                   = divider
-                  = button 'fluid left labeled icon primary'
-                    = icon 'plus'
-                    | Follow
+                  == Vue::FollowerCell.(nil, user: @entry.user)
 
                 = segment 'primary'
-                  .ui.button.labeled.fluid
-                    = button 'fluid blue left labeled icon'
-                      = icon 'heart white inverted'
-                      | Like
-                    .ui.label.basic.blue
-                      | 2,048
-
+                  == Vue::LikeCell.(nil, entry: @entry)
                   = divider
-
                   == Vue::SocialSharingCell.(nil)
-
-                /= segment 'basic'
 
 = render "partials/engager"
