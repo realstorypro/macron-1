@@ -12,8 +12,6 @@ class Common
     @register_events()
 
   register_events: ->
-    utils.log 'setup', 'register_event()', @event_name
-
     vent.channel().on "vue:#{@event_name}", (widget, action) =>
 
       switch action

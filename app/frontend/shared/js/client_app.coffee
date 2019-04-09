@@ -28,6 +28,7 @@ import Audio from './vue/audio'
 import Cover from './vue/cover'
 import Feed from './vue/feed'
 import SocialSharing from './vue/social_sharing'
+import Follower from './vue/follower'
 import Liker from './vue/liker'
 
 
@@ -64,6 +65,7 @@ audio = new Audio
 cover = new Cover
 feed = new Feed
 social_sharing = new SocialSharing
+follower = new Follower
 liker = new Liker
 
 class Client_app
