@@ -23,7 +23,7 @@
                         = link_to "@#{@entry.user.username}", member_path(@entry.user)
                   = text text: @entry.user.profile.short_bio
                   = divider
-                  == vue_widget name: 'follower', data: { user_id: @entry.user.id }
+                  == vue_widget name: 'follower', data: { user_id: @entry.user.id, following: current_user.follows?(@entry).to_s }
 
                 = segment 'primary'
                   == vue_widget name: 'liker', data: { user_id: @entry.user.id }

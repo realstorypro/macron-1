@@ -13,7 +13,11 @@ import VueGoodsharePinterest from 'vue-goodshare/src/providers/Pinterest.vue'
 class SocialSharing extends Common
 
   constructor: ->
-    super('social_sharing')
+    if !instance
+      @register_events('social_sharing')
+      instance = this
+    else
+      instance
 
   setup: (widget) ->
 

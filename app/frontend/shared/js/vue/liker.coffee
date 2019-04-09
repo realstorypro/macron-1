@@ -5,14 +5,21 @@ import data_loader from './mixins/data_loader'
 
 
 class Liker extends Common
+  instance = null
 
   constructor: ->
-    super('liker')
+    if !instance
+      @register_events('liker')
+      instance = this
+    else
+      instance
 
   setup: (widget) ->
 
     @app = new Vue
       el: "##{widget.id}"
       mixins: [turbolinks_adapter, data_loader]
+      mounted: ->
+        console.log 'liker ::::', @passed
 
 export { Liker as default }
