@@ -2,6 +2,7 @@ import Utils from './core/utils'
 import Settings from './core/settings'
 import Vent from './core/vent'
 import Dispatcher from './core/dispatcher'
+import Token from './core/token'
 import Render from './core/render'
 import Vue from './core/vue'
 
@@ -34,6 +35,7 @@ import Liker from './vue/liker'
 
 # Core Components
 dispatcher = new Dispatcher
+token = new Token
 render = new Render
 vue = new Vue
 settings = new Settings
@@ -80,6 +82,7 @@ class Client_app
 
   setup: ->
     dispatcher.setup()
+    token.setup()
     vue.setup()
 
     notifications.setup()

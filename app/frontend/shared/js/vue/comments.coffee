@@ -12,17 +12,12 @@ import dropdown from './components/dropdown'
 
 import redactor from '../plugins/redactor/redactor'
 
-
 utils = new Utils
 vent = new Vent
 
 class Comments
   instance = null
   app = null
-
-  token = document.getElementsByName('csrf-token')[0].content
-  axios.defaults.headers.common['X-CSRF-Token'] = token
-  axios.defaults.headers.common['Accept'] = 'application/json'
 
   constructor: ->
     if !instance

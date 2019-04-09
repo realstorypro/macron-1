@@ -2,6 +2,7 @@ import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
 import data_loader from './mixins/data_loader'
+import axios from 'axios'
 
 
 class Follower extends Common
