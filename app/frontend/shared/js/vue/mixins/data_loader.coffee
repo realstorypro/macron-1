@@ -1,4 +1,5 @@
 module.exports =
+  data:
+    passed: {}
   mounted: ->
-    console.log $("#{@.$options.el}")
-    window.el = @
+    @.passed = $("#{@.$options.el}").data()

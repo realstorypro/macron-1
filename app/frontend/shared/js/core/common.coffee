@@ -9,15 +9,10 @@ class Common
   app = null
 
   constructor: (@event_name) ->
-    if !instance
-      instance = this
-      @register_events()
-
-    else
-      instance
+    @register_events()
 
   register_events: ->
-    utils.log 'setup', 'setup()', 'social_sharing'
+    utils.log 'setup', 'register_event()', @event_name
 
     vent.channel().on "vue:#{@event_name}", (widget, action) =>
 

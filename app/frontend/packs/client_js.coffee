@@ -15,8 +15,8 @@ app = new App
 settings = new Settings
 utils = new Utils
 
-settings.set version: 'Version 2.1 ' # set the application version
-settings.set debug: false # show the debug messages
+settings.set version: 'Version 2.2 ' # set the application version
+settings.set debug: true # show the debug messages
 settings.set design: false # design mode disables the uploadcare widget
 
 utils.draw 'blank_header'
