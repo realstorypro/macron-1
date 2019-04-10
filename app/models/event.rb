@@ -2,7 +2,7 @@
 
 class Event < Entry
   include Autoloadable
-  include Trackable
+  include Activitible
 
   validates_presence_of :category
   paginates_per 5

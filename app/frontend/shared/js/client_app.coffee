@@ -2,6 +2,7 @@ import Utils from './core/utils'
 import Settings from './core/settings'
 import Vent from './core/vent'
 import Dispatcher from './core/dispatcher'
+import Token from './core/token'
 import Render from './core/render'
 import Vue from './core/vue'
 
@@ -11,6 +12,7 @@ import Crud from './widgets/crud'
 import Checkbox from './widgets/checkbox'
 import Dropdown from './widgets/dropdown'
 import Multiselect from './widgets/multiselect'
+import Sticky from './widgets/sticky'
 import Navigation from './widgets/navigation'
 import ImagePreloader from './widgets/image_preloader'
 import LinkPreloader from './widgets/link_preloader'
@@ -27,10 +29,13 @@ import Audio from './vue/audio'
 import Cover from './vue/cover'
 import Feed from './vue/feed'
 import SocialSharing from './vue/social_sharing'
+import Follower from './vue/follower'
+import Liker from './vue/liker'
 
 
 # Core Components
 dispatcher = new Dispatcher
+token = new Token
 render = new Render
 vue = new Vue
 settings = new Settings
@@ -44,6 +49,7 @@ crud = new Crud
 checkbox = new Checkbox
 dropdown = new Dropdown
 multiselect = new Multiselect
+sticky = new Sticky
 navigation = new Navigation
 image_preloader = new ImagePreloader
 link_preloader = new LinkPreloader
@@ -61,6 +67,8 @@ audio = new Audio
 cover = new Cover
 feed = new Feed
 social_sharing = new SocialSharing
+follower = new Follower
+liker = new Liker
 
 class Client_app
 
@@ -74,12 +82,14 @@ class Client_app
 
   setup: ->
     dispatcher.setup()
+    token.setup()
     vue.setup()
 
     notifications.setup()
     checkbox.setup()
     dropdown.setup()
     multiselect.setup()
+    sticky.setup()
     image_preloader.setup()
     link_preloader.setup()
     conversion_tracker.setup()
@@ -101,6 +111,7 @@ class Client_app
     checkbox.teardown()
     dropdown.teardown()
     multiselect.teardown()
+    sticky.teardown()
     image_preloader.teardown()
     link_preloader.teardown()
     conversion_tracker.teardown()

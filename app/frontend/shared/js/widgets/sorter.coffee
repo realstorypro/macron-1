@@ -7,10 +7,6 @@ utils = new Utils
 class Sorter
   instance = null
 
-  token = document.getElementsByName('csrf-token')[0].content
-  axios.defaults.headers.common['X-CSRF-Token'] = token
-  axios.defaults.headers.common['Accept'] = 'application/json'
-
   constructor: ->
     @sortable = []
 

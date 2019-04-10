@@ -5,8 +5,7 @@ class Comment < ApplicationRecord
   belongs_to :commentable, polymorphic: true
   has_many :comments, as: :commentable
 
-  include PublicActivity::Model
-  tracked owner: -> (_controller, model) { model.user }
+  include Activitible
 
   belongs_to :user, counter_cache: true
 

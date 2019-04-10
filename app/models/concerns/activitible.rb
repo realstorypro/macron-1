@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Trackable
+module Activitible
   extend ActiveSupport::Concern
 
   included do

@@ -29,6 +29,10 @@ views:
         label: 'Title'
         type: 'string'
         maxlength: '50'
+      short_bio:
+        label: 'Short Bio'
+        type: 'text'
+        maxlength: '500'
       description:
         label: 'Description'
         type: 'text'

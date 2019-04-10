@@ -145,6 +145,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :activities, only: %i[index show]
+      resources :followers, only: %i[index] do
+        post "add", to: "followers#add", as: "add_follower", on: :member
+        post "remove", to: "followers#remove", as: "remove_follower", on: :member
+      end
     end
   end
 

@@ -485,6 +485,8 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (>= 3.0, < 5.0)
+    socialization (1.2.1)
+      activerecord
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -630,6 +632,7 @@ DEPENDENCIES
   simplecov
   sitemap_generator
   slim-rails
+  socialization
   spring
   spring-watcher-listen (~> 2.0.0)
   store_base_sti_class

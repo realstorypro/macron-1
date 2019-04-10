@@ -1,24 +1,38 @@
-= fragment 'content'
-  = container
-    = grid
-      = row
-        = column computer: 12, tablet: 16, mobile: 16
-          == Vue::SocialSharingCell.(nil)
-          = widget 'normal rich text'
-            = @entry.body.html_safe
+= widget 'sticky'
+  = fragment 'content'
+    = container
+      = grid
+        = row
+          = column computer: 11, tablet: 16, mobile: 16, class: "context"
+            = h3 'breadcrumb'
+              .ui.breadcrumb.large
+                .section = link_to 'Articles', articles_path
+                = divider text: '/'
+                .section = link_to params[:category].capitalize, article_category_path(params[:category])
+            = widget 'normal rich text'
+              = @entry.body.html_safe
+          = column computer: 5, tablet: 16, mobile: 16
+            = sticky
+              = fragment class: 'meta holder'
+                = segment 'secondary'
+                  = h5
+                    = image_tag @entry.user.profile.avatar, class: 'ui image avatar' if @entry.user.profile.avatar
+                    = content
+                      = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name}"
+                      = header 'sub'
+                        = link_to "@#{@entry.user.username}", member_path(@entry.user)
+                        br
+                        | Rep: 5,000
 
-= fragment 'secondary'
-  = container
-    = grid
-      = row
-        = column computer: 11, tablet: 16, mobile: 16
-          == Widget::CommentCell.(@entry, layout: :version_1, user: current_user, support_email: ss('contact.email'), component: params[:component])
-        = column computer: 5, tablet: 16, mobile: 16
-          = fragment 'sidebar'
-            = container
-              = grid
-                = row
-                  = column computer: 16, tablet: 8, mobile: 16
-                    == Widget::RelatedCell.(@related_content, layout: :regular, header: false, category: true, icon: true) unless @related_content.blank?
-                  = column computer: 16, tablet: 8, mobile: 16
-                    == Widget::AdvertisingCell.(@ad, layout: :sidebar) unless @ad.blank?
+                  = divider
+                  = text text: @entry.user.profile.short_bio
+                  = divider
+                  == vue_widget name: 'follower', data: { user_id: @entry.user.id, following: current_user.follows?(@entry.user) } if current_user
+
+                br
+                = segment 'primary'
+                  == vue_widget name: 'liker', data: { user_id: @entry.user.id, likes: 500 }
+                  = divider
+                  == vue_widget name: 'social sharing'
+
+= render "partials/engager"

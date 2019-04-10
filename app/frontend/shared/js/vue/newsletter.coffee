@@ -12,10 +12,6 @@ class Newsletter
   instance = null
   app = null
 
-  token = document.getElementsByName('csrf-token')[0].content
-  axios.defaults.headers.common['X-CSRF-Token'] = token
-  axios.defaults.headers.common['Accept'] = 'application/json'
-
   constructor: ->
     if !instance
       instance = this
