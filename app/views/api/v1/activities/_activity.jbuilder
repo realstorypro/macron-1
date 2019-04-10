@@ -23,6 +23,11 @@ json.object do
     json.id activity.trackable.followable.id
     json.name activity.trackable.followable.username
     json.url member_path(activity.trackable.followable)
+  elsif activity.trackable_type == "Like"
+    #json.type activity.trackable.likeable_type
+    json.id activity.trackable.likeable.id
+    json.name activity.trackable.likeable.name
+    json.url entry_url(activity.trackable.likeable)
   else
     json.type activity.trackable.type
     json.id activity.trackable.id

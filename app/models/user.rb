@@ -48,6 +48,7 @@ class User < ApplicationRecord
 
   acts_as_follower
   acts_as_followable
+  acts_as_liker
 
   # Temproarley Disabling Until 2FA is Enabled
 

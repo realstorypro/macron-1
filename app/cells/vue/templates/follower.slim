@@ -1,10 +1,10 @@
 template v-if="widget.following"
-  = button class: 'fluid left compact blue',
+  = button class: 'fluid left blue',
           v: {'on:click.prevent': 'toggle'}
-    = icon 'checkmark'
+    = icon 'checkmark inverted'
     | Following
 template v-else="widget.following"
-  = button class: 'fluid left compact blue',
+  = button class: 'fluid left blue basic',
           v: {'on:click.prevent': 'toggle'}
     = icon 'plus'
     | Follow

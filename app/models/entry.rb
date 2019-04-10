@@ -8,8 +8,12 @@ class Entry < ApplicationRecord
   include Slugged
   include Seoable
 
-  acts_as_follower
+  # Necessery to fix a really weird error with the STI
+  # https://github.com/galetahub/ckeditor/issues/739 <- somewhat related info
+  # self.inheritance_column = nil
+
   acts_as_followable
+  acts_as_likeable
 
   validates :slug, uniqueness: { scope: :type, allow_blank: true }
   scope :published, (-> { all.where.not(published_date: nil) })
@@ -36,3 +40,5 @@ class Entry < ApplicationRecord
   def delete_old_author_activity
   end
 end
+
+require_dependency 'article'

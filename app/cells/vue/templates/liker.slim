@@ -1,7 +1,16 @@
-.ui.labeled.button.fluid
-  = button 'pink fluid'
-    = icon 'heart white inverted'
-    | Like
-  a.ui.basic.pink.left.pointing.label
-    | {{ widget.likes }}
+template v-if="widget.liked"
+  .ui.labeled.button.fluid
+    = button class: 'pink fluid', v: {'on:click.prevent': 'toggle'}
+      = icon 'heart white inverted'
+      | Liked
+    a.ui.basic.pink.left.pointing.label
+      | {{ widget.likes }}
 
+template v-else="widget.liked"
+
+  .ui.labeled.button.fluid
+    = button class: 'pink fluid basic', v: {'on:click.prevent': 'toggle'}
+      = icon 'heart white'
+      | Like
+    a.ui.basic.pink.left.pointing.label
+      | {{ widget.likes }}
