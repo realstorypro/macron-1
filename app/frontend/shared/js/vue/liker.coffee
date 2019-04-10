@@ -1,25 +1,19 @@
 import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
-import data_loader from './mixins/data_loader'
 
 
 class Liker extends Common
-  instance = null
 
   constructor: ->
-    if !instance
-      @register_events('liker')
-      instance = this
-    else
-      instance
+      super('liker')
 
   setup: (widget) ->
 
     @app = new Vue
       el: "##{widget.id}"
-      mixins: [turbolinks_adapter, data_loader]
-      mounted: ->
-        console.log 'liker ::::', @passed
+      mixins: [turbolinks_adapter]
+      data:
+        widget: $("##{widget.id}").data()
 
 export { Liker as default }

@@ -1,3 +1,10 @@
-= button class: 'fluid left labeled icon primary', v: {'on:click.prevent': 'toggle'}
-  = icon 'plus'
-  | Follow
+template v-if="widget.following"
+  = button class: 'fluid left compact blue',
+          v: {'on:click.prevent': 'toggle'}
+    = icon 'checkmark'
+    | Following
+template v-else="widget.following"
+  = button class: 'fluid left compact blue',
+          v: {'on:click.prevent': 'toggle'}
+    = icon 'plus'
+    | Follow

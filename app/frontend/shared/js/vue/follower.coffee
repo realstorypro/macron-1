@@ -1,7 +1,6 @@
 import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
-import data_loader from './mixins/data_loader'
 import axios from 'axios'
 
 
@@ -9,30 +8,34 @@ class Follower extends Common
   instance = null
 
   constructor: ->
-
-    if !instance
-      @register_events('follower')
-      instance = this
-    else
-      instance
-
+    super('follower')
 
   setup: (widget) ->
 
     @app = new Vue
       el: "##{widget.id}"
-      mixins: [turbolinks_adapter, data_loader]
-      mounted: ->
-        console.log 'follower ::::', @passed
+      mixins: [turbolinks_adapter]
+      data:
+        widget: $("##{widget.id}").data()
       methods:
+        add_follower: ->
+          axios.post("/api/v1/followers/#{@widget.userId}/add").then(
+            (rsp) ->
+              console.log 'successful', rsp
+          ).catch(
+            (err) ->
+              console.log 'error', err
+          )
+
+        remove_follower: ->
+          axios.post("/api/v1/followers/#{@widget.userId}/remove")
+
         toggle: ->
-          #console.log @, @passed, @passed.name, @passed.following
-
-          console.log 'passed', @passed
-
-          if @passed.following
-            @passed.following = false
+          if @widget.following
+            @remove_follower()
           else
-            @passed.following = true
+            @add_follower()
+
+          @widget.following = !@widget.following
 
 export { Follower as default }

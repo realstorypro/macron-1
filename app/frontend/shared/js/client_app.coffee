@@ -70,8 +70,6 @@ social_sharing = new SocialSharing
 follower = new Follower
 liker = new Liker
 
-console.log follower, liker
-
 class Client_app
 
   initialize: ->

@@ -32,9 +32,7 @@ class Entry < ApplicationRecord
     SitemapPingJob.perform_later
   end
 
+  # TODO: Implement delete the old author activity if the author has changed
   def delete_old_author_activity
-    1+1
-    byebug
-    2+2
   end
 end

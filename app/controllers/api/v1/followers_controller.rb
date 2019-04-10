@@ -7,7 +7,7 @@ class API::V1::FollowersController < ApplicationController
   end
 
   def add
-    followable = User.find(params[:follower])
+    followable = User.find(params[:id])
     current_user.follow! followable
 
     follow = Follow.where(follower: current_user, followable: followable).last
@@ -17,7 +17,7 @@ class API::V1::FollowersController < ApplicationController
   end
 
   def remove
-    followable = User.find(params[:follower])
+    followable = User.find(params[:id])
 
     # get rid of the activity
     follow = Follow.where(follower: current_user, followable: followable).last

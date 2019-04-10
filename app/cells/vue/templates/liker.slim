@@ -1,6 +1,7 @@
-.ui.button.labeled.fluid
-  = button 'fluid blue left labeled icon'
+.ui.labeled.button.fluid
+  = button 'pink fluid'
     = icon 'heart white inverted'
     | Like
-  .ui.label.basic.blue
-      | {{ passed.userId }}
+  a.ui.basic.pink.left.pointing.label
+    | {{ widget.likes }}
+

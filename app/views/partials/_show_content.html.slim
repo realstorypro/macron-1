@@ -16,17 +16,22 @@
               = fragment class: 'meta holder'
                 = segment 'secondary'
                   = h5
-                    = image_tag @entry.user.profile.avatar, class: 'ui image avatar'
+                    = image_tag @entry.user.profile.avatar, class: 'ui image avatar' if @entry.user.profile.avatar
                     = content
                       = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name}"
                       = header 'sub'
                         = link_to "@#{@entry.user.username}", member_path(@entry.user)
+                        br
+                        | Rep: 5,000
+
+                  = divider
                   = text text: @entry.user.profile.short_bio
                   = divider
-                  == vue_widget name: 'follower', data: { user_id: @entry.user.id, following: current_user.follows?(@entry).to_s }
+                  == vue_widget name: 'follower', data: { user_id: @entry.user.id, following: current_user.follows?(@entry.user) } if current_user
 
+                br
                 = segment 'primary'
-                  == vue_widget name: 'liker', data: { user_id: @entry.user.id }
+                  == vue_widget name: 'liker', data: { user_id: @entry.user.id, likes: 500 }
                   = divider
                   == vue_widget name: 'social sharing'
 
