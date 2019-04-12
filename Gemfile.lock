@@ -25,6 +25,13 @@ GIT
       hashie (~> 3.5.7)
       rails (~> 5.2.0)
 
+GIT
+  remote: https://github.com/tcocca/acts_as_follower.git
+  revision: c5ac7b9601c4af01eb4d9112330b27be4d694ecc
+  specs:
+    acts_as_follower (0.2.1)
+      activerecord (>= 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -69,9 +76,9 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    acts_as_follower (0.2.1)
     acts_as_list (0.9.19)
       activerecord (>= 3.0)
+    acts_as_votable (0.12.0)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     ahoy_matey (2.2.0)
@@ -484,8 +491,6 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (>= 3.0, < 5.0)
-    socialization (1.2.1)
-      activerecord
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -565,8 +570,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts_as_follower
+  acts_as_follower!
   acts_as_list
+  acts_as_votable (~> 0.12.0)
   ahoy_matey
   analytics-ruby
   better_errors
@@ -632,7 +638,6 @@ DEPENDENCIES
   simplecov
   sitemap_generator
   slim-rails
-  socialization
   spring
   spring-watcher-listen (~> 2.0.0)
   store_base_sti_class

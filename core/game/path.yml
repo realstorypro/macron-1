@@ -1,0 +1,13 @@
+# path = point category for Meritable gem
+# the badge rank is increased based on the trait score
+
+paths:
+  shamanism:
+    badge:
+      name: Shaman
+      description: A path of a Shaman
+
+  yoga:
+    badge:
+      name: Yogi
+      description: A path of a Yogi

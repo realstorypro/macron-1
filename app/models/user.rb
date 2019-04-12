@@ -49,8 +49,8 @@ class User < ApplicationRecord
   # Adding Alias
   alias_attribute :name, :username
 
-  acts_as_follower
   acts_as_followable
+  acts_as_follower
 
   # Temproarley Disabling Until 2FA is Enabled
 

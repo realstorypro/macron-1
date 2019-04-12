@@ -21,9 +21,12 @@ gem "wicked"
 gem "sidekiq"
 gem "store_base_sti_class"
 
-# Social Stuff
+# Gamification
 gem 'merit'
-gem 'acts_as_follower'
+gem "acts_as_follower", github: "tcocca/acts_as_follower"
+gem 'acts_as_votable', '~> 0.12.0'
+
+
 
 
 # Analytics
