@@ -3,6 +3,8 @@
 require "friendly_id"
 
 class User < ApplicationRecord
+  has_merit
+
   include SettingsHelper
   extend FriendlyId
 
