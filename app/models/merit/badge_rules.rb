@@ -44,6 +44,7 @@ module Merit
       #
       #   user.name.length > 4
       # end
+      #
     end
   end
 end

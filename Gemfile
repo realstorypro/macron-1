@@ -22,8 +22,8 @@ gem "sidekiq"
 gem "store_base_sti_class"
 
 # Social Stuff
-gem "socialization"
 gem 'merit'
+gem 'acts_as_follower'
 
 
 # Analytics
