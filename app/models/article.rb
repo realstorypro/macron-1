@@ -7,9 +7,5 @@ class Article < Entry
 
   validates_presence_of :category
 
-
-
-
-
   paginates_per 5
 end

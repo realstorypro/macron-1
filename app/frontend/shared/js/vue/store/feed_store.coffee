@@ -48,6 +48,7 @@ store = new (Vuex.Store)(
   actions:
     loadActivities: ({commit}, {user_id}) ->
       axios.get("/api/v1/activities/#{user_id}").then (response) =>
+        console.log response.data
         commit('load', response.data)
 
     loadNewActivities: ({commit, state}, {user_id})->

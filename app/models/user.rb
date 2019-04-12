@@ -24,6 +24,7 @@ class User < ApplicationRecord
   has_many :videos
   has_many :discussions
   has_many :podcasts
+  has_many :activities, as: :actable
 
   # Setting Default Scope
   default_scope { includes(:profile).joins(:profile) }
