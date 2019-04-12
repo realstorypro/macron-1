@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_11_072624) do
+ActiveRecord::Schema.define(version: 2019_04_12_053703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.string "actable_type"
-    t.bigint "actable_id"
-    t.string "subjectable_type"
-    t.bigint "subjectable_id"
+    t.string "actor_type"
+    t.bigint "actor_id"
+    t.string "subject_type"
+    t.bigint "subject_id"
     t.json "payload"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["actable_type", "actable_id"], name: "index_activities_on_actable_type_and_actable_id"
-    t.index ["subjectable_type", "subjectable_id"], name: "index_activities_on_subjectable_type_and_subjectable_id"
+    t.index ["actor_type", "actor_id"], name: "index_activities_on_actor_type_and_actor_id"
+    t.index ["subject_type", "subject_id"], name: "index_activities_on_subject_type_and_subject_id"
   end
 
   create_table "ahoy_events", force: :cascade do |t|

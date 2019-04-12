@@ -5,14 +5,14 @@ class Activity < ApplicationRecord
 
   after_create :broadcast_activity
 
-  belongs_to :actable, polymorphic: true
-  belongs_to :subjectable, polymorphic:  true
+  belongs_to :actor, polymorphic: true
+  belongs_to :subject, polymorphic:  true
 
   content_attr :action
 
   def broadcast_activity
     ActionCable.server.broadcast(
-        "activity_#{self.actable.id}",
+        "activity_#{self.actor.id}",
         activity_id: self.id
     )
 

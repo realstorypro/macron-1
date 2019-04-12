@@ -24,7 +24,7 @@ class User < ApplicationRecord
   has_many :videos
   has_many :discussions
   has_many :podcasts
-  has_many :activities, as: :actable
+  has_many :activities, as: :actor
 
   # Setting Default Scope
   default_scope { includes(:profile).joins(:profile) }
@@ -49,7 +49,6 @@ class User < ApplicationRecord
 
   acts_as_follower
   acts_as_followable
-  acts_as_liker
 
   # Temproarley Disabling Until 2FA is Enabled
 

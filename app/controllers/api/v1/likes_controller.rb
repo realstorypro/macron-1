@@ -10,7 +10,8 @@ class API::V1::LikesController < ApplicationController
   def add
     current_user.like! @likeable
     like = Like.where(liker: current_user, likeable: @likeable).last
-    like.create_activity key: 'like_created', owner: current_user
+
+    #like.create_activity key: 'like_created', owner: current_user
 
     render json: @likeable
   end
@@ -19,10 +20,10 @@ class API::V1::LikesController < ApplicationController
     # get rid of like & activity
 
     likes = Like.where(liker: current_user, likeable: @likeable)
-    likes.each do |like|
-      PublicActivity::Activity.where(trackable: like, owner: current_user ).first.destroy
-      like.destroy
-    end
+    # likes.each do |like|
+    #   PublicActivity::Activity.where(trackable: like, owner: current_user ).first.destroy
+    #   like.destroy
+    # end
 
     current_user.unlike! @likeable
 

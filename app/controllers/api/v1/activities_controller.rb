@@ -14,7 +14,7 @@ class API::V1::ActivitiesController < ApplicationController
   # returns activities for a single user
   def show
     where_clause = {}
-    where_clause["actable_id"] = params[:id]
+    where_clause["actor_id"] = params[:id]
     where_clause["id"] = params[:activities] if params[:activities]
 
     @activities = Activity.order("created_at desc")
