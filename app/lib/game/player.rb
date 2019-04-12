@@ -7,14 +7,15 @@ module Game
       @player = player
     end
 
-    # returns the current player state
-    def state
+    # @return [Object] the current state of the player
+    # @param [Object] allows to filter the state by path
+    def state(path = nil)
       state = []
 
       # iterate through all of the paths
-      all_paths.each do |path|
+      paths(path).each do |path_item|
         current_path = OpenStruct.new
-        current_path.name = path[0].to_s
+        current_path.name = path_item[0].to_s
 
         # get points
         current_path.points = points(current_path.name)
@@ -26,10 +27,10 @@ module Game
       end
 
       # collect spells appropriate for the level
-      state.each do |path|
-        path.spells = []
-        s("spells.#{path.name}").each do |spell|
-          path.spells << spell if spell[1].level <= path.level
+      state.each do |current_path|
+        current_path.spells = []
+        s("spells.#{current_path.name}").each do |spell|
+          current_path.spells << spell if spell[1].level <= current_path.level
         end
       end
 
@@ -117,8 +118,9 @@ module Game
     end
 
     # returns all available paths
-    def all_paths
-      s('paths')
+    def paths(path = nil)
+      return s('paths') unless path
+      s("paths.#{patch}")
     end
 
     # returns the level based on the amount of points
