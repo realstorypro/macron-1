@@ -27,7 +27,7 @@
                   = divider
                   = text text: @entry.user.profile.short_bio
                   = divider
-                  == vue_widget name: 'follower', data: { user_id: @entry.user.id, following: current_user.follows?(@entry.user) } if current_user
+                  //== vue_widget name: 'follower', data: { user_id: @entry.user.id, following: current_user.follows?(@entry.user) } if current_user
 
                 br
                 = segment 'primary'

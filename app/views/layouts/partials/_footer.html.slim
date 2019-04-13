@@ -1,46 +1,7 @@
 = segment "footer fragment vertical #{footer_class}"
   = container 'center aligned'
     = grid "stackable left aligned #{footer_item_order}"
-      = column size: 6
-        = h5 text: 'About Us', class: footer_item_class
-        = ss('theme.footer.about').html_safe
-      - unless footer_reversed?
-        = column size:1, only: :computer
-      = column size: 4 do
-        = h5 text: 'Contact Us', class: footer_item_class
-        = list "relaxed divided link #{footer_item_class}"
-          - if ss('contact.phone') && !ss('contact.phone').blank?
-            = item
-              = icon 'phone'
-              = content text: ss('contact.phone')
-          - if ss('contact.website') && !ss('contact.website').blank?
-            = item
-              = icon 'globe'
-              = content
-                = link_to ss('contact.website').gsub('https://','').gsub('http://',''), ss('contact.website'), class: 'email link'
-          - if ss('contact.email') && !ss('contact.email').blank?
-            = item
-              = icon 'mail'
-              = content
-                = link_to ss('contact.email'), "mailto:#{ss('contact.email')}", class: 'email link'
-          - if ss('contact.address1') && !ss('contact.address1').blank?
-            = item
-              = icon 'map'
-              = content
-                = ss('contact.address1')
-                - if ss('contact.address2') && !ss('contact.address2').blank?
-                  br
-                  = ss('contact.address2')
-                - if ss('contact.address3') && !ss('contact.address3').blank?
-                  br
-                  = ss('contact.address3')
-      - if footer_reversed?
-        = column size:1, only: :computer
-      = column size: 5
-        == Widget::NewsletterCell.(nil, current_user: current_user, button_color: ss('theme.footer.button_color') ,layout: :footer, site_settings: @site_settings)
-
-      = column size: 16, class: 'center aligned'
-        = divider class: footer_item_class
+      = column size: 8, class: 'middle aligned'
         = list "copyright horizontal mini divided link #{footer_item_class}"
           ==  MenuCell.(nil,
                   menu: s('menu.legal'),
@@ -49,8 +10,9 @@
                   site_settings: @site_settings)
           = item
             = "&copy; #{ss('theme.footer.copyrights')}".html_safe
-        = divider class: footer_item_class
+      = column size: 8, class: 'middle right aligned'
         = list "mini link #{footer_item_class} copyright powered"
-          = item url: t('app.powered_by_url'), text: t('app.powered_by_text')
+          /= item url: t('app.powered_by_url')
+            = t('app.powered_by_text')
           = item url: t('app.powered_by_url')
             = image_tag ('logo_inverted.png'), class: 'ui image footer', alt: 'logik logo'

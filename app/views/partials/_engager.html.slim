@@ -9,4 +9,4 @@
             = sticky
               = fragment 'sidebar'
                 == Widget::RelatedCell.(@related_content, layout: :regular, headless: true, category: true, icon: true) unless @related_content.blank?
-                == Widget::AdvertisingCell.(@ad, layout: :sidebar) unless @ad.blank?
+                /== Widget::AdvertisingCell.(@ad, layout: :sidebar) unless @ad.blank?
