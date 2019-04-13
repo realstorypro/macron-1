@@ -2,7 +2,7 @@
 # - the badge rank from meritable is used as a point multiplier
 # - the reactions available are determined by the bade rank level for the trait
 
-spells:
+abilities:
   shamanism:
     aho:
       name: "Aho"
