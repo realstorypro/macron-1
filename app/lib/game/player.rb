@@ -37,6 +37,10 @@ module Game
       state
     end
 
+    ###################
+    ##### POINTS ######
+    ###################
+
     # returns paths and points for a given user
     # path may be passed as a filter
     def points(path = nil)
@@ -61,6 +65,12 @@ module Game
       @player.subtract_points(amount, category: path)
     end
 
+
+    #######################
+    ##### SUPPORTERS ######
+    #######################
+
+
     # returns all of the supporters the user has
     def supporters
       @player.user_followers
@@ -70,15 +80,20 @@ module Game
       @player.followers_by_type_count('User')
     end
 
-    # adds a supporter to the user
-    def add_supporter(supporter)
-      supporter.follow(@player)
+    # support a user
+    def support(user)
+      @player.follow(user)
     end
 
-    # remove a supporter to the user
-    def remove_supporter(supporter)
-      supporter.stop_following(@player)
+    # stop supporting a user
+    def stop_supporting(user)
+      @player.stop_following(user)
     end
+
+
+    #######################
+    ####### SPELLS ########
+    #######################
 
 
     # returns all available spells
