@@ -9,6 +9,7 @@ class Entry < ApplicationRecord
   include Seoable
 
   acts_as_followable
+  acts_as_votable
 
   validates :slug, uniqueness: { scope: :type, allow_blank: true }
   scope :published, (-> { all.where.not(published_date: nil) })

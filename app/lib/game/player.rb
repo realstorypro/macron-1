@@ -5,7 +5,7 @@ module Game
 
     include Game::Supporters
     include Game::Points
-    include Game::Abilities
+    include Game::Spells
 
     def initialize(player)
       @player = player
@@ -35,9 +35,9 @@ module Game
 
       # collect spells appropriate for the level
       state.paths.each do |current_path|
-        current_path.abilities = []
-        s("abilities.#{current_path.name}").each do |ability|
-          current_path.abilities << ability if ability[1].level <= current_path.level
+        current_path.spells = []
+        s("spells.#{current_path.name}").each do |spell|
+          current_path.spells << spell if spell[1].level <= current_path.level
         end
       end
 

@@ -32,9 +32,3 @@ end
 #   Merit::Badge.create! attrs
 # end
 #
-
-Merit::Badge.create!(
-  id: 1,
-  name: "Shaman",
-  description: "is recognized as shaman"
-)
