@@ -1,0 +1,24 @@
+spells:
+  aho:
+    name: "Aho"
+    path: shamanism
+    points: 1
+    level: 0
+
+  haux:
+    name: "Haux Haux"
+    path: shamanism
+    points: 10
+    level: 2
+
+  om:
+    name: "Om"
+    path: yoga
+    points: 1
+    level: 0
+
+  namaste:
+    name: "Namaste"
+    path: yoga
+    points: 10
+    level: 2

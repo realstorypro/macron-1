@@ -38,7 +38,7 @@ describe Game::Player, "playing points" do
   end
 
   it "adding points changes the path points" do
-    expect { @player.add_points(:shamanism, 200) }.to change { @player.points(:shamanism) }.by(200)
+    expect { @player.add_points(:shamanism, 200) }.to change { @player.get_points(:shamanism) }.by(200)
   end
 
   it "subtracting points changes the total state points" do
@@ -46,20 +46,20 @@ describe Game::Player, "playing points" do
   end
 
   it "subtracting points changes the path points" do
-    expect { @player.subtract_points(:shamanism, 200) }.to change { @player.points(:shamanism) }.by(-200)
+    expect { @player.subtract_points(:shamanism, 200) }.to change { @player.get_points(:shamanism) }.by(-200)
   end
 end
 
 describe Game::Player, "playing with others" do
   before :all do
     player1 = FactoryBot.create(:user, :admin)
-    player2 = FactoryBot.create(:user, :admin)
     @player1 = Game::Player.new(player1)
-    @player2 = Game::Player.new(player2)
+    @article = FactoryBot.create(:article)
+    @player2 = Game::Player.new(@article.user)
   end
 
-  it "can cast a spell on another player" do
-    expect { @player1.cast_spell!(:aho, @player2) }.to change { @player2.state.points }.by(1)
-
+  it "can cast a spell and uncasting spells on subject and another player" do
+    expect { @player1.cast_spell!(:aho, @article) }.to change { @player2.state.points }.by(1)
+    expect { @player1.undo_spell!(:aho, @article) }.to change { @player2.state.points }.by(-1)
   end
 end

@@ -2,14 +2,6 @@
 
 module Game::Points
 
-  # @param [String] a filter for the progression path
-  # @return [Integer] a summation of points
-  def points(progression_path = nil)
-    return false unless path_exists?(progression_path)
-
-    return @player.score_points(category: progression_path).sum(:num_points) if progression_path
-    @player.score_points.sum(:num_points)
-  end
 
     # adds points to the user
     # @return [Boolean] returns true if operation is successful
@@ -28,4 +20,14 @@ module Game::Points
     @player.subtract_points(amount, category: path)
     true
   end
+
+  # @param [String] a filter for the progression path
+  # @return [Integer] a summation of points
+  def get_points(progression_path = nil)
+    return false unless path_exists?(progression_path)
+
+    return @player.score_points(category: progression_path).sum(:num_points) if progression_path
+    @player.score_points.sum(:num_points)
+  end
+
 end
