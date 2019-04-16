@@ -10,8 +10,8 @@ module Game
       @player = player
     end
 
+    # @param [String] progression_path a filter for the progression path
     # @return [Object] the current state of the player
-    # @param [Object] allows to filter the state by path
     def state(progression_path = nil)
       state = OpenStruct.new
       state.points = get_points(progression_path)
@@ -23,18 +23,19 @@ module Game
     private
 
       # checks whether path actually exists
+      # @param [String] progression_path a filter for the progression path
       def path_exists?(progression_path)
         s("paths.#{progression_path}")
         true
       end
 
       # returns all available paths
-      # @param [String] progression_path a filter
+      # @param [String] progression_path a filter for the progression path
       def get_paths(progression_path = nil)
         paths = s("paths") unless progression_path
         paths = s("paths.#{progression_path}") if progression_path
 
-        path_colletion = []
+        path_arr = []
 
         paths.each do |path|
           path_obj = OpenStruct.new
@@ -46,10 +47,10 @@ module Game
           # get level
           path_obj.level = get_level(path_obj.points)
 
-          path_colletion << path_obj
+          path_arr << path_obj
         end
 
-        path_colletion
+        path_arr
       end
 
 

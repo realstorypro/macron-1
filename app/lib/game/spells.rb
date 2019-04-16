@@ -13,7 +13,7 @@ module Game::Spells
     # add the spell on the subject
     subject.vote_by voter: @player, vote: "like", vote_scope: spell, vote_weight: castable.points
 
-    # add the points the article owner
+    # add the points the castable owner
     player2.add_points(castable.path, castable.points)
     true
   end
