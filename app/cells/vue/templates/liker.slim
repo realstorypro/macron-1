@@ -1,4 +1,14 @@
-template v-if="widget.liked"
+v-popover name="hi"
+  = button 'red'
+    | ACT
+  template slot="popover"
+    = h1
+      | HELLO WORLD
+  /actionable
+
+
+/actionable
+/template v-if="widget.liked"
   .ui.labeled.button.fluid
     = button class: 'pink fluid', v: {'on:click.prevent': 'toggle'}
       = icon 'heart white inverted'
@@ -6,8 +16,7 @@ template v-if="widget.liked"
     a.ui.basic.pink.left.pointing.label
       | {{ widget.likes }}
 
-template v-else="widget.liked"
-
+/template v-else="widget.liked"
   .ui.labeled.button.fluid
     = button class: 'pink fluid basic', v: {'on:click.prevent': 'toggle'}
       = icon 'heart white'
