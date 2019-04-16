@@ -31,8 +31,8 @@
 
                 br
                 = segment 'primary'
-                  == vue_widget name: 'liker', data: { component: params[:component], user_id: @entry.user.id,
-                          record_id: @entry.id, liked: false, likes: 200 }
+                  == vue_widget name: 'actioner', data: { component: params[:component], player: @entry.user.id,
+                          subject: @entry.id  }
                   = divider
                   == vue_widget name: 'social sharing'
 

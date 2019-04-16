@@ -30,7 +30,7 @@ import Cover from './vue/cover'
 import Feed from './vue/feed'
 import SocialSharing from './vue/social_sharing'
 import Follower from './vue/follower'
-import Liker from './vue/liker'
+import Actioner from './vue/actioner'
 
 
 # Core Components
@@ -68,7 +68,7 @@ cover = new Cover
 feed = new Feed
 social_sharing = new SocialSharing
 follower = new Follower
-liker = new Liker
+actioner = new Actioner
 
 class Client_app
 

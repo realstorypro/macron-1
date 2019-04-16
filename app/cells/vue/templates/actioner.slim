@@ -1,0 +1,52 @@
+v-popover name="hi" class="actioner tooltip" placement="left"
+  = button 'red fluid'
+    = icon 'cube'
+    | Spells
+  template slot="popover"
+    .actioner.wrapper
+      = grid
+        = row
+          = column size: 16
+            = h5
+              | Yogic
+        = row
+          = column size: 16
+            = button 'icon'
+              | 🕉
+            = button 'icon disabled'
+              | 🙏
+        = row
+          = column size: 16
+            = h5
+              | Shamanic
+        = row
+          = column size: 16
+            = divider
+        = row
+          = column size: 4
+            | 🙏
+          = column size: 12
+            = header
+              | Namaste
+            = text
+              | +10pts Shamanism
+
+  /actionable
+
+
+/actionable
+/template v-if="widget.liked"
+  .ui.labeled.button.fluid
+    = button class: 'pink fluid', v: {'on:click.prevent': 'toggle'}
+      = icon 'heart white inverted'
+      | Liked
+    a.ui.basic.pink.left.pointing.label
+      | {{ widget.likes }}
+
+/template v-else="widget.liked"
+  .ui.labeled.button.fluid
+    = button class: 'pink fluid basic', v: {'on:click.prevent': 'toggle'}
+      = icon 'heart white'
+      | Like
+    a.ui.basic.pink.left.pointing.label
+      | {{ widget.likes }}
