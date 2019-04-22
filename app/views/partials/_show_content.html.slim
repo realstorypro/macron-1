@@ -31,8 +31,12 @@
 
                 br
                 = segment 'primary'
-                  == vue_widget name: 'actioner', data: { component: params[:component], player: @entry.user.id,
-                          subject: @entry.id  }
+                  == vue_widget name: 'actioner', data: { component: params[:component],
+                          all_spells: @game_world.all_spells,
+                          all_paths: @game_world.all_paths,
+                          player_spells: @player.get_spells,
+                          player_id: @entry.user.id,
+                          subject_id: @entry.id  }
                   = divider
                   == vue_widget name: 'social sharing'
 

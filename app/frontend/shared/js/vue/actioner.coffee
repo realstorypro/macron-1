@@ -3,6 +3,7 @@ import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
 import axios from 'axios'
 import Actions from './components/actions'
+import Profile from './components/profile'
 import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
 
 class Actioner extends Common

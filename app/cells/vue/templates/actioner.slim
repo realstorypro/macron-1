@@ -6,6 +6,23 @@ v-popover name="hi" class="actioner tooltip" placement="left"
     .actioner.wrapper
       = grid
         = row
+          = column size: 4
+          .profile.holder
+            .top.meta
+              = "@#{current_user.username}"
+              = icon 'check mark circular mini inverted yellow'
+            .picture
+              = image_tag current_user.profile.avatar, class: 'ui image avatar small' if current_user.profile.avatar
+            .bottom.meta
+              = h6 text: "XP"
+          = column size: 12
+            = h6 text: "Level Bar"
+            = h6 text: "Energy Bar"
+            = h6 text: "Caster Bar"
+        = row
+          = column size: 16
+            = divider
+        = row
           = column size: 16
             = h5
               | Yogic

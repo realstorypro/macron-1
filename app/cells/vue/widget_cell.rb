@@ -13,6 +13,10 @@ module Vue
       name.gsub(' ','_') + uuid.to_s
     end
 
+    def current_user
+      options[:current_user]
+    end
+
     def name
       options[:name]
     end

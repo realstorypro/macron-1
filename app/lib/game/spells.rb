@@ -34,6 +34,20 @@ module Game::Spells
     player2.subtract_points(castable.path, castable.points)
   end
 
+  # returns all available spells
+  # @param [String] progression_path a filter
+  def get_spells(progression_path = nil)
+    spells = []
+
+    s("spells").each do |spell|
+      path_level = get_level get_points(spell[1].path)
+      next if progression_path && spell[1].path != progression_path
+      spells << spell if spell[1].level <= path_level
+    end
+
+    spells
+  end
+
   private
 
     # a spell authorization method
@@ -51,17 +65,4 @@ module Game::Spells
       get_spells.each { |current_spell| return current_spell[1] if current_spell[0] == spell }
     end
 
-    # returns all available spells
-    # @param [String] progression_path a filter
-    def get_spells(progression_path = nil)
-      spells = []
-
-      s("spells").each do |spell|
-        path_level = get_level get_points(spell[1].path)
-        next if progression_path && spell[1].path != progression_path
-        spells << spell if spell[1].level <= path_level
-      end
-
-      spells
-    end
 end
