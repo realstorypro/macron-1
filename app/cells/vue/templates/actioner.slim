@@ -7,7 +7,8 @@ v-popover name="hi" class="actioner tooltip" placement="left"
       = grid
         = row
           = column size: 4
-          .profile.holder
+            profile :avatar="#{current_user.profile.avatar}"
+          /.profile.holder
             .top.meta
               = "@#{current_user.username}"
               = icon 'check mark circular mini inverted yellow'

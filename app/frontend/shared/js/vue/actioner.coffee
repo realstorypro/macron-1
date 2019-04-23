@@ -19,6 +19,7 @@ class Actioner extends Common
       components:
         'actions' : Actions
         'v-popover': VPopover
+        'profile': Profile
       directives:
         'tooltip': VTooltip
         'close-popover': VClosePopover
