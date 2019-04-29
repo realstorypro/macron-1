@@ -74,6 +74,7 @@
     "node-gyp": "^3.8.0",
     "node-sass": "^4.11.0",
     "npm": "^5.8.0",
+    "numeral": "^2.0.6",
     "pickadate-webpack": "^3.5.6",
     "postcss": "^6.0.19",
     "postcss-smart-import": "^0.7.6",

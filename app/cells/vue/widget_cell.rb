@@ -3,6 +3,7 @@
 module Vue
   class WidgetCell < Cell::ViewModel
     include DcUi::Helpers
+    delegate :url_helpers, to: "::Rails.application.routes"
 
     def show
       render :wrapper

@@ -1,4 +1,16 @@
 .actioner
+  .profile.holder
+    background: #eee
+    border-bottom: 1px solid #ccc
+
+  .abilities.holder
+    padding: 0.5em 0
+
+  .selected.ability.holder
+    background: #eee
+    border-top: 1px solid #ccc
+    min-height: 100px
+
   &.tooltip
     width: 100%
 
@@ -17,8 +29,7 @@
   .tooltip-inner
     background: black
     color: white
-    border-radius: 16px
-    padding: 5px 10px 4px
+    padding: 0
 
   .tooltip-arrow
     width: 0
@@ -96,8 +107,8 @@
     .popover-inner
       background: $color
       color: black
-      border-radius: 5px
-      box-shadow: 0 5px 30px rgba(black, .1)
+      border-radius: 0px
+      box-shadow: 0 5px 30px rgba(black, .8)
 
 
     .popover-arrow
