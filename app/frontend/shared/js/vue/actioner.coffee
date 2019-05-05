@@ -7,6 +7,7 @@ import Profile from './components/profile'
 import ProgressBar from './components/progress_bar'
 import AbilityButton from './components/ability_button'
 import AbilityDetails from './components/ability_details'
+import SelectAbility from './components/select_ability'
 import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
 
 class Actioner extends Common
@@ -26,23 +27,33 @@ class Actioner extends Common
         'progress-bar': ProgressBar
         'ability-button': AbilityButton
         'ability-details': AbilityDetails
+        'select-ability': SelectAbility
       directives:
         'tooltip': VTooltip
         'close-popover': VClosePopover
       methods:
         useAbility: (event) ->
           @current_access_key = event
+        startCasting: (event) ->
+          @castTime = event
       computed:
         selectedAbility: ->
           return false unless @current_access_key
           @abilities.filter((item) =>
             item.access_key == @current_access_key
           )
+        castLength: ->
+          return 0 unless @current_access_key
+          @abilities.filter((item) =>
+            item.access_key == @current_access_key
+          )[0].castTime
 
       data:
         widget: $("##{widget.id}").data()
         current_access_key: null
-
+        totalEnergy: 100
+        currentEnergy: 80
+        castTime: 0
         abilities:[
           {
             name: 'Aho'
@@ -55,6 +66,8 @@ class Actioner extends Common
               low: 60
               high: 100
             direction: 'positive'
+            energy: 20
+            castTime: 10000
           },
           {
             name: 'Haux Haux'
@@ -67,6 +80,8 @@ class Actioner extends Common
               low: 120
               high: 500
             direction: 'positive'
+            energy: 50
+            castTime: 20000
           },
           {
             name: 'Silence'
@@ -79,6 +94,8 @@ class Actioner extends Common
               low: 500
               high: 1020
             direction: 'negative'
+            energy: 100
+            castTime: 15000
           }
         ]
 

@@ -1,6 +1,12 @@
 import Utils from '../core/utils'
 import Vent from '../core/vent'
 
+
+import GlobalVue from 'vue/dist/vue.esm'
+import Vue2TouchEvents from 'vue2-touch-events'
+
+GlobalVue.use(Vue2TouchEvents)
+
 utils =  new Utils
 vent =  new Vent
 

@@ -29,4 +29,6 @@
     .ui.progress
         margin-bottom: 1.5em !important
         background: rgba(0, 0, 0, 0.75) !important
+    .bar
+        transition: 1.0s all
 </style>

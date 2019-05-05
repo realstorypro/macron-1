@@ -20,7 +20,7 @@
             description: String
             icon: String
             color: String
-            points: String
+            points: Object
             direction: String
         computed:
             directionSign: ->
@@ -33,6 +33,9 @@
     $red: red
     $green: green
     $blue: blue
+
+    .wrapper
+        min-height: 120px
 
     .detail-wrapper
         display: flex

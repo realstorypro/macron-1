@@ -8,17 +8,17 @@ v-popover name="hi" class="actioner tooltip" placement="left"
         = column size: 4
           profile avatar=current_user.profile.avatar url=url_helpers.member_path(current_user) username=current_user.username :level=1 :verified="true" :xp=2500
         = column size: 12
-          progress-bar label="Level 1" color="purple" :start="0" :end="100" :current="80"
-          progress-bar label="Energy" color="orange" :start="2" :end="100" :current="90"
-          progress-bar label="Casting" color="blue" :start="0" :end="100" :current="0"
+          progress-bar label="Level 1" color="purple" :end="100" :current="80"
+          progress-bar label="Energy" color="orange" :end="totalEnergy" :current="currentEnergy"
+          progress-bar label="Casting" color="blue" :end="castLength" :current="castTime"
       = grid 'abilities holder'
         = column size: 16
-          ability-button @use-ability="useAbility" label="Aho" icon="hand rock" color="green" access_key="applause" :disabled="false"
-          ability-button @use-ability="useAbility" label="Haux" icon="shield" color="green" access_key="haux" :disabled="false"
-          ability-button @use-ability="useAbility" label="Silence" icon="microphone slash" color="red" access_key="silence" :disabled="false"
+          ability-button @use-ability="useAbility" @casting="startCasting" :cast-time="10000" label="Aho" icon="hand rock" color="green" access_key="applause" :disabled="false"
+          ability-button @use-ability="useAbility" @casting="startCasting" :cast-time="15000" label="Haux" icon="shield" color="green" access_key="haux" :disabled="false"
+          ability-button @use-ability="useAbility" @casting="startCasting" :cast-time="20000" label="Silence" icon="microphone slash" color="red" access_key="silence" :disabled="false"
       = grid 'selected ability holder'
         = column size: 16
           template v-if="selectedAbility"
             ability-details v-bind="selectedAbility"
           template v-else=""
-            | No Ability Selected
+            select-ability
