@@ -36,26 +36,21 @@ class Actioner extends Common
       methods:
         useAbility: (event) ->
           @current_access_key = event
-        doCast: (percent)
-          @castTime = percent
+        doCast: (percent) ->
+          @castPercent = percent
       computed:
         selectedAbility: ->
           return false unless @current_access_key
           @abilities.filter((item) =>
             item.access_key == @current_access_key
           )
-        castLength: ->
-          return 0 unless @current_access_key
-          @abilities.filter((item) =>
-            item.access_key == @current_access_key
-          )[0].castTime
 
       data:
         widget: $("##{widget.id}").data()
         current_access_key: null
         totalEnergy: 100
         currentEnergy: 80
-        castTime: 0
+        castPercent: 0
         abilities:[
           {
             name: 'Aho'
@@ -83,7 +78,7 @@ class Actioner extends Common
               high: 500
             direction: 'positive'
             energy: 50
-            castTime: 2000
+            castTime: 400
           },
           {
             name: 'Silence'
@@ -97,7 +92,7 @@ class Actioner extends Common
               high: 1020
             direction: 'negative'
             energy: 100
-            castTime: 1500
+            castTime: 500
           }
         ]
 

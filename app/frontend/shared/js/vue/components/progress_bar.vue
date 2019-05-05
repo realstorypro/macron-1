@@ -12,12 +12,10 @@
         props:
             label: String
             color: String
-            start: Number
-            end: Number
-            current: Number
+            percent: Number
         computed:
             progress: ->
-                @current/@end*100 + '%'
+                @percent + '%'
 
 </script>
 

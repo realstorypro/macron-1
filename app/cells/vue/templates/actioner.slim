@@ -8,14 +8,14 @@ v-popover name="hi" class="actioner tooltip" placement="left"
         = column size: 4
           profile avatar=current_user.profile.avatar url=url_helpers.member_path(current_user) username=current_user.username :level=1 :verified="true" :xp=2500
         = column size: 12
-          progress-bar label="Level 1" color="purple" :end="100" :current="80"
-          progress-bar label="Energy" color="orange" :end="totalEnergy" :current="currentEnergy"
-          progress-bar label="Casting" color="blue" :end="castLength" :current="castTime"
+          progress-bar label="Level 1" color="purple" :percent="100"
+          progress-bar label="Energy" color="orange" :percent="100"
+          progress-bar label="Casting" color="blue" :percent="castPercent"
       = grid 'abilities holder'
         = column size: 16
-          ability-button @use-ability="useAbility" @casting="doCast" :cast-time="10000" label="Aho" icon="hand rock" color="green" access_key="applause"
-          ability-button @use-ability="useAbility" @casting="doCast" :cast-time="15000" label="Haux" icon="shield" color="green" access_key="haux"
-          ability-button @use-ability="useAbility" @casting="doCast" :cast-time="20000" label="Silence" icon="microphone slash" color="red" access_key="silence"
+          ability-button @use-ability="useAbility" @casting="doCast" :cast-time="1000" label="Aho" icon="hand rock" color="green" access_key="applause"
+          ability-button @use-ability="useAbility" @casting="doCast" :cast-time="1500" label="Haux" icon="shield" color="green" access_key="haux"
+          ability-button @use-ability="useAbility" @casting="doCast" :cast-time="2000" label="Silence" icon="microphone slash" color="red" access_key="silence"
       = grid 'selected ability holder'
         = column size: 16
           template v-if="selectedAbility"

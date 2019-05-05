@@ -32,11 +32,12 @@
                 @interval = setInterval(@castCounter,@castInterval)
 
             onMouseUp: ->
-                console.log 'mouseUP'
+                @stopCasting()
                 @stopCounter()
 
             onMouseOut: ->
-                @stopCounter
+                @stopCasting()
+                @stopCounter()
                 @.$emit('use-ability', null)
 
             castCounter: ->
@@ -50,6 +51,8 @@
 
             stopCounter: ->
                 clearInterval(@interval)
+
+            stopCasting: ->
                 @processing = false
                 @.$emit('casting', 0)
 
