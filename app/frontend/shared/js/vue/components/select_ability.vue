@@ -3,15 +3,10 @@
         h5.ui.header
             i.icon.huge.hand.pointing.up
             .content Select an Ability
-        .detail-wrapper(v-bind:class='[color]')
+        .detail-wrapper
             .details
                 p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat et arcu nec venenatis.
 </template>
-
-<script lang="coffee">
-    export default
-        data: {}
-</script>
 
 <style lang="sass" scoped>
     .wrapper

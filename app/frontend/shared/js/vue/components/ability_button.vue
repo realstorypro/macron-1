@@ -21,25 +21,26 @@
                 @disabled = true
                 @interval = setInterval(@castCounter,@castInterval)
             onMouseUp: ->
-                clearInterval(@interval)
-                @currentCastTime = 0
+                @stopCounter
             onMouseOver: ->
                 @.$emit('use-ability', @access_key)
             onMouseOut: ->
                 @.$emit('use-ability', null)
-                clearInterval(@interval)
-                @currentCastTime = 0
-            castCounter: ->
-                final_count = false
-                final_count = true if @currentCastTime + @castInterval >= @castTime
+                @stopCounter
 
-                if final_count
-                    @currentCastTime += @castInterval
-                    @.$emit('casting', @currentCastTime)
+            castCounter: ->
+                if @currentCastTime + @castInterval >= @castTime
+                    @stopCounter()
                 else
+                    @currentCastTime += @castInterval
                     @.$emit('casting', @castTime)
                     @.$emit('status', 'cast')
                     @onMouseUp
+
+            stopCounter: ->
+                clearInterval(@interval)
+                @currentCastTime = 0
+                @.$emit('casting', @currentCastTime)
 
 </script>
 

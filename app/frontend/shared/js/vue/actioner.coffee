@@ -2,13 +2,15 @@ import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
 import axios from 'axios'
+import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
+
+# Components
 import Actions from './components/actions'
 import Profile from './components/profile'
 import ProgressBar from './components/progress_bar'
 import AbilityButton from './components/ability_button'
 import AbilityDetails from './components/ability_details'
 import SelectAbility from './components/select_ability'
-import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
 
 class Actioner extends Common
 
