@@ -28,6 +28,10 @@ module Game::Points
     @player.score_points.sum(:num_points)
   end
 
+  # @param [Integer] points the number of points the spell is worth
+  # @param [Integer] level of the path
+  # @param [Symbol] range lower of high range
+  # @return [Integer] points for the give range
   def get_points_range(points, level, range)
     case range
     when :low

@@ -2,6 +2,7 @@ import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
 import axios from 'axios'
+import store from './store/player_store'
 import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
 
 # Components
@@ -39,11 +40,26 @@ class Actioner extends Common
         doCast: (percent) ->
           @castPercent = percent
       computed:
+        username: ->
+          store.state.player.username
+
+        level: ->
+          store.state.player.level
+
+        points: ->
+          store.state.player.points
+
+        spells: ->
+          store.state.player.spells
+
         selectedAbility: ->
           return false unless @current_access_key
-          @abilities.filter((item) =>
+          store.state.player.spells.filter((item) =>
             item.access_key == @current_access_key
           )
+
+      mounted: ->
+        store.dispatch('loadPlayer')
 
       data:
         widget: $("##{widget.id}").data()

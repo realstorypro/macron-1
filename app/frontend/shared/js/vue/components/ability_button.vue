@@ -7,7 +7,6 @@
 <script lang="coffee">
     export default
         props:
-            label: String
             icon: String
             color: String
             castTime: Number
@@ -46,7 +45,6 @@
                     @stopCounter()
                 else
                     @currentCastTime += @castInterval
-                    console.log @completed_percent
                     @.$emit('casting', @completed_percent)
 
             stopCounter: ->
