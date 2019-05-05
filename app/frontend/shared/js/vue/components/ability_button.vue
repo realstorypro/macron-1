@@ -1,6 +1,6 @@
 <template lang="pug">
     .ability
-        .ui.icon.button(v-bind:class="[color, disabled]" @mousedown="onMouseDown" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
+        .ui.icon.button(v-bind:class="[color, {processing: processing}]" @mousedown="onMouseDown" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
             i.icon.normal.inverted(v-bind:class="icon")
 </template>
 
@@ -14,33 +14,45 @@
             access_key: String
         data: ->
             currentCastTime: 0
-            castInterval: 50
-            disabled: false
+            castInterval: 100
+            processing: false
+        computed:
+            completed_percent: ->
+                percent = Math.floor(@currentCastTime/@castTime*100)
+                console.log @currentCastTime, @castTime, percent
+                percent
         methods:
-            onMouseDown: ->
-                @disabled = true
-                @interval = setInterval(@castCounter,@castInterval)
-            onMouseUp: ->
-                @stopCounter
             onMouseOver: ->
                 @.$emit('use-ability', @access_key)
+
+            onMouseDown: ->
+                console.log 'mouseDOWN'
+                @currentCastTime = 0
+                @processing = true
+                @interval = setInterval(@castCounter,@castInterval)
+
+            onMouseUp: ->
+                console.log 'mouseUP'
+                @stopCounter()
+
             onMouseOut: ->
-                @.$emit('use-ability', null)
                 @stopCounter
+                @.$emit('use-ability', null)
 
             castCounter: ->
                 if @currentCastTime + @castInterval >= @castTime
+                    @.$emit('casting', 100)
                     @stopCounter()
                 else
                     @currentCastTime += @castInterval
-                    @.$emit('casting', @castTime)
-                    @.$emit('status', 'cast')
-                    @onMouseUp
+                    console.log @completed_percent
+                    @.$emit('casting', @completed_percent)
 
             stopCounter: ->
                 clearInterval(@interval)
-                @currentCastTime = 0
-                @.$emit('casting', @currentCastTime)
+                @processing = false
+                @.$emit('casting', 0)
+
 
 </script>
 

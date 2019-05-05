@@ -13,9 +13,9 @@ v-popover name="hi" class="actioner tooltip" placement="left"
           progress-bar label="Casting" color="blue" :end="castLength" :current="castTime"
       = grid 'abilities holder'
         = column size: 16
-          ability-button @use-ability="useAbility" @casting="startCasting" :cast-time="10000" label="Aho" icon="hand rock" color="green" access_key="applause" :disabled="false"
-          ability-button @use-ability="useAbility" @casting="startCasting" :cast-time="15000" label="Haux" icon="shield" color="green" access_key="haux" :disabled="false"
-          ability-button @use-ability="useAbility" @casting="startCasting" :cast-time="20000" label="Silence" icon="microphone slash" color="red" access_key="silence" :disabled="false"
+          ability-button @use-ability="useAbility" @casting="doCast" :cast-time="10000" label="Aho" icon="hand rock" color="green" access_key="applause"
+          ability-button @use-ability="useAbility" @casting="doCast" :cast-time="15000" label="Haux" icon="shield" color="green" access_key="haux"
+          ability-button @use-ability="useAbility" @casting="doCast" :cast-time="20000" label="Silence" icon="microphone slash" color="red" access_key="silence"
       = grid 'selected ability holder'
         = column size: 16
           template v-if="selectedAbility"

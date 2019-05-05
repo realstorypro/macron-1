@@ -36,8 +36,8 @@ class Actioner extends Common
       methods:
         useAbility: (event) ->
           @current_access_key = event
-        startCasting: (event) ->
-          @castTime = event
+        doCast: (percent)
+          @castTime = percent
       computed:
         selectedAbility: ->
           return false unless @current_access_key
@@ -69,7 +69,7 @@ class Actioner extends Common
               high: 100
             direction: 'positive'
             energy: 20
-            castTime: 10000
+            castTime: 1000
           },
           {
             name: 'Haux Haux'
@@ -83,7 +83,7 @@ class Actioner extends Common
               high: 500
             direction: 'positive'
             energy: 50
-            castTime: 20000
+            castTime: 2000
           },
           {
             name: 'Silence'
@@ -97,7 +97,7 @@ class Actioner extends Common
               high: 1020
             direction: 'negative'
             energy: 100
-            castTime: 15000
+            castTime: 1500
           }
         ]
 
