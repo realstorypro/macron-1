@@ -44,7 +44,6 @@ module Game::Spells
       next if progression_path && spell[1].path != progression_path
       spells << spell if spell[1].level <= path_level
     end
-
     spells
   end
 

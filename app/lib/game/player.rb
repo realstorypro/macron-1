@@ -16,6 +16,7 @@ module Game
     def state(progression_path = nil)
       state = OpenStruct.new
       state.points = get_points(progression_path)
+      state.level = get_level(state.points)
       state.paths = get_paths(progression_path)
       state.spells = get_spells(progression_path)
       state

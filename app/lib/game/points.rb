@@ -27,4 +27,14 @@ module Game::Points
     return @player.score_points(category: progression_path).sum(:num_points) if progression_path
     @player.score_points.sum(:num_points)
   end
+
+  def get_points_range(points, level, range)
+    case range
+    when :low
+      (points * level) / 2
+    when :high
+      (points * level) * 2
+    end
+
+  end
 end
