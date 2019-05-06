@@ -39,6 +39,12 @@ class Actioner extends Common
           @current_access_key = event
         doCast: (percent) ->
           @castPercent = percent
+
+          store.dispatch('castSpell',
+            spell: @current_access_key,
+            subject_id: @widget.subjectId,
+            component: @widget.component
+          ) if @castPercent == 100
       computed:
         username: ->
           store.state.player.username

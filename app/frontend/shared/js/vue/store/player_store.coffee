@@ -23,6 +23,10 @@ store = new (Vuex.Store)(
       axios.get("/api/v1/player/").then (response) =>
         console.log response.data
         commit('load', response.data)
+
+    castSpell: ({commit}, options) ->
+      axios.post("/api/v1/player/cast", options).then (response) =>
+        console.log response.data
 )
 
 export {store as default}

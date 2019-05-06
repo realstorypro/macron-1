@@ -18,14 +18,12 @@
         computed:
             completed_percent: ->
                 percent = Math.floor(@currentCastTime/@castTime*100)
-                console.log @currentCastTime, @castTime, percent
                 percent
         methods:
             onMouseOver: ->
                 @.$emit('use-ability', @access_key)
 
             onMouseDown: ->
-                console.log 'mouseDOWN'
                 @currentCastTime = 0
                 @processing = true
                 @interval = setInterval(@castCounter,@castInterval)

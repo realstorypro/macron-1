@@ -52,6 +52,9 @@ class User < ApplicationRecord
   acts_as_followable
   acts_as_follower
 
+  # Gamification
+  acts_as_voter
+
   # Temproarley Disabling Until 2FA is Enabled
 
   # validates_presence_of :country, :phone_number, on: :update

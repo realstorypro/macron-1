@@ -153,7 +153,9 @@ Rails.application.routes.draw do
         post "add", to: "likes#add", as: "add_like", on: :member
         post "remove", to: "likes#remove", as: "remove_like", on: :member
       end
-      resource :player
+      resource :player do
+        post "cast", to: "players#cast", as: "cast_spell", on: :member
+      end
     end
   end
 
