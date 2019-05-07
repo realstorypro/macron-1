@@ -11,10 +11,19 @@ module Game::Spells
     castable = get_spell(spell)
 
     # add the spell on the subject
-    subject.vote_by voter: @player, vote: "like", vote_scope: spell, vote_weight: castable.points
+    if castable.direction == 'positive'
+      subject.vote_by voter: @player, vote: "like", vote_scope: spell, vote_weight: castable.points
+    else
+      subject.vote_by voter: @player, vote: "bad", vote_scope: spell, vote_weight: castable.points
+    end
 
     # add the points the castable owner
-    player2.add_points(castable.path, castable.points)
+    if castable.direction == 'positive'
+      player2.add_points(castable.path, castable.points)
+    else
+      player2.subtract_points(castable.path, castable.points)
+    end
+
     true
   end
 
