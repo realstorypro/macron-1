@@ -28,9 +28,13 @@ module Game::Paths
       # get level
       path_obj.level = get_level(path_obj.points)
 
+      path_obj.skill = path[1].skill
+      path_obj.icon = path[1].icon
+
       path_arr << path_obj
     end
 
-    path_arr
+    # ensures that the highest level paths are shown first
+    path_arr.sort! { |a, b| b.level <=> a.level }
   end
 end

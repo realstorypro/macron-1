@@ -1,8 +1,10 @@
 paths:
   shamanism:
-    name: "Shamanism"
+    skill: "Shaman"
+    icon: "shield alternate"
     description: A path of a Shaman
 
   yoga:
-    name: "Yogic"
+    skill: "Yogi"
+    icon: "eye"
     description: A path of a Yogi

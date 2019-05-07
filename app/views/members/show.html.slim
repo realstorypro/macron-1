@@ -56,10 +56,58 @@
 = segment 'basic'
   = container
     = grid
-      = column computer: 10, tablet: 16, mobile: 16
+      = column computer: 11, tablet: 16, mobile: 16
         = h5 text: 'Recent Activity'
         == Vue::FeedCell.(nil, user_id: @member.id)
-      = column computer: 6, tablet: 16, mobile: 16
-        = h5 text: 'Shouts'
-        /- current_user.badges.each do |badge|
-          = badge.name
+      = column computer: 5, tablet: 16, mobile: 16
+
+        = h5 class: 'dividing', text: 'Highlights'
+        = list
+          = item
+            = icon 'briefcase'
+            = content text: "CEO at GoodLogik"
+          = item
+            = icon 'certificate'
+            = content
+              | Bachelors, University of Airzona
+          = item
+            = icon 'fire'
+            = content text: "#{number_with_delimiter(@player.state.points)} Reputation"
+
+          - @player.state.paths.each do |path|
+            = item
+              = icon path.icon
+              = content text: "Level #{path.level} #{path.skill}"
+
+        = h5 class: 'dividing', text: 'Contributions'
+        = list
+          - if @member.events.count > 0
+            = item
+              = icon 'calendar'
+              = content
+                = pluralize(@member.events.count, "Event")
+          - if @member.articles.count > 0
+            = item
+              = icon 'book'
+              = content
+                = pluralize(@member.articles.count, "Article")
+          - if @member.videos.count > 0
+            = item
+              = icon 'video'
+              = content
+                = pluralize(@member.videos.count, "Video")
+          - if @member.podcasts.count > 0
+            = item
+              = icon 'podcast'
+              = content
+                = pluralize(@member.podcasts.count, "Podcast")
+          - if @member.discussions.count > 0
+            = item
+              = icon 'comments'
+              = content
+                = pluralize(@member.discussions.count, "Discussion")
+          - if @member.comments.count > 0
+            = item
+              = icon 'comments'
+              = content
+                = pluralize(@member.comments.count, "Comment")

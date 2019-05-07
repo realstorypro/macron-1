@@ -15,6 +15,7 @@ class MembersController < DisplayController
 
   def show
     @editable = false
+    @player = Game::Player.new(@member)
   end
 
   private

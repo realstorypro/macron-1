@@ -11,6 +11,7 @@ class ProfileController < MembersController
 
   def show
     @editable = true
+    @player = Game::Player.new(@member)
     render "members/show"
   end
 

@@ -26,6 +26,7 @@ class User < ApplicationRecord
   has_many :videos
   has_many :discussions
   has_many :podcasts
+  has_many :events
   has_many :activities, as: :actor
 
   # Setting Default Scope
