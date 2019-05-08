@@ -75,9 +75,10 @@
             = content text: "#{number_with_delimiter(@player.state.points)} Reputation"
 
           - @player.state.paths.each do |path|
-            = item
-              = icon path.icon
-              = content text: "Level #{path.level} #{path.skill}"
+            - if path.level > 0
+              = item
+                = icon path.icon
+                = content text: "Level #{path.level} #{path.skill}"
 
         = h5 class: 'dividing', text: 'Contributions'
         = list
