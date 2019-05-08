@@ -25,17 +25,15 @@ views:
         type: 'string'
         maxlength: '50'
         hint: 'Limited to 50 Characters'
-      title:
-        label: 'Title'
+      bio:
+        label: 'Bio'
+        type: 'text'
+      job:
+        label: 'Job Title'
         type: 'string'
-        maxlength: '50'
-      short_bio:
-        label: 'Short Bio'
-        type: 'text'
-        maxlength: '500'
-      description:
-        label: 'Description'
-        type: 'text'
+      education:
+        label: 'Education'
+        type: 'string'
 
       social_header:
         type: 'header'

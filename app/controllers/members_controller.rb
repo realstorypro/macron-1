@@ -5,7 +5,7 @@ class MembersController < DisplayController
   layout "layouts/client"
   before_action :preload_entry, only: [:show]
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
-  skip_before_action :find_related_ad, :find_related_content
+  skip_before_action :find_related_ad, :find_related_content, :set_article_meta
 
   def index
     # we're not offering an index view
@@ -15,18 +15,13 @@ class MembersController < DisplayController
 
   def show
     @editable = false
-    @player = Game::Player.new(@member)
   end
 
   private
 
     def preload_entry
       @member = User.joins(:profile).friendly.find(params[:id])
-      @comments = Comment.where(user_id: @member.id,
-                                commentable_type: %w(Article Discussion Video Podcast Event))
-                      .order("created_at desc")
-      @content_ids = @comments.map(&:commentable_id)
-      @commented_content = Entry.where(id: @content_ids).limit(25)
+      @player = Game::Player.new(@member)
     end
 
     def set_show_seo_meta
@@ -57,9 +52,6 @@ class MembersController < DisplayController
         }
       }
     end
-
-    # TODO: Not Used. Use Skip Action Instead
-    def set_article_meta; end
 
     def record_view
       track(

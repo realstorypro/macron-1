@@ -15,7 +15,7 @@
                 = icon 'check circle outline small' if @member.profile.verified
                 = header 'sub'
                   = "@#{@member.username}"
-              = text class: 'inverted', text: simple_format(@member.profile.description)
+              = text class: 'inverted', text: simple_format(@member.profile.bio)
 
   = segment 'black inverted basic social clearing'
     = container
@@ -65,11 +65,11 @@
         = list
           = item
             = icon 'briefcase'
-            = content text: "CEO at GoodLogik"
+            = content text: @member.profile.job
           = item
             = icon 'certificate'
-            = content
-              | Bachelors, University of Airzona
+            = content text: @member.profile.education
+
           = item
             = icon 'fire'
             = content text: "#{number_with_delimiter(@player.state.points)} Reputation"
