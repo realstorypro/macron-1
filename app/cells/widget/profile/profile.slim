@@ -1,0 +1,19 @@
+= widget name: 'profile'
+  = list
+    - if @member.profile.job
+      = item
+        = icon 'briefcase'
+        = content text: @member.profile.job
+    - if @member.profile.education
+      = item
+        = icon 'certificate'
+        = content text: @member.profile.education
+    = item
+      = icon 'fire'
+      = content text: "#{number_with_delimiter(@player.state.points)} Reputation"
+
+    - @player.state.paths.each do |path|
+      - if path.level > 0
+        = item
+          = icon path.icon
+          = content text: "Level #{path.level} #{path.skill}"

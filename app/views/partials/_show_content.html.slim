@@ -23,6 +23,7 @@
                         = header class: 'sub', text: "@#{@entry.user.username}"
 
                   = divider
+                  == Widget::ProfileCell.(nil, layout: 'profile', user: @entry.user)
                   = divider
                   == vue_widget name: 'follower', data: { user_id: @entry.user.id, following: true } if current_user
 
