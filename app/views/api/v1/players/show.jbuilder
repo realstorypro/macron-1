@@ -1,6 +1,8 @@
 json.username current_user.username
 json.level @player.state.level
 json.points @player.state.points
+json.job @user.profile.job
+json.education @user.profile.education
 
 json.paths do
   json.array! @player.state.paths.each do |path|

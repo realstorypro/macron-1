@@ -1,14 +1,21 @@
 # frozen_string_literal: true
 
 class API::V1::PlayersController < ApplicationController
-  before_action :find_player
-  
   # returns  the profile of the player
   def show
+    if params[:user_id]
+      @user = User.find([params[:user_id]]).first
+    else
+      @user = current_user
+    end
+
+    @player = Game::Player.new(@user)
   end
 
   def cast
-    subject= if slugged?(entry_class)
+    @player = Game::Player.new(current_user)
+
+    subject = if slugged?(entry_class)
       entry_class.friendly.find(params[:subject_id])
     else
       entry_class.find(params[:subject_id])
@@ -17,11 +24,6 @@ class API::V1::PlayersController < ApplicationController
     @player.cast_spell!(params[:spell].to_sym, subject)
   end
 
-  private
-  def find_player
-    @player = Game::Player.new(current_user)
-  end
-  
   # returns the entry class
   def entry_class
     @entry_class ||= settings("components.#{params[:component]}.klass", fatal_exception: true).classify.constantize
