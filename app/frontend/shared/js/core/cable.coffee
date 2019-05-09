@@ -8,7 +8,7 @@ class Cable
     if !instance
       instance = this
       @cable = cable.createConsumer()
-    else
-      instance
+
+    instance
 
 export { Cable as default}
