@@ -1,14 +1,22 @@
-json.username current_user.username
+json.username @user.username
+json.avatar @user.profile.avatar
+json.first_name @user.profile.first_name
+json.last_name @user.profile.last_name
 json.level @player.state.level
 json.points @player.state.points
+
 json.job @user.profile.job
 json.education @user.profile.education
+
+json.supporters @player.supporters_count
 
 json.paths do
   json.array! @player.state.paths.each do |path|
     json.path path.name
+    json.skill path.skill
     json.points path.points
     json.level path.level
+    json.icon path.icon
   end
 end
 

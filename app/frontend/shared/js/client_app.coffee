@@ -33,6 +33,8 @@ import Follower from './vue/follower'
 import Actioner from './vue/actioner'
 import Author from './vue/author'
 
+import Cable from './core/cable'
+
 
 # Core Components
 dispatcher = new Dispatcher
@@ -77,6 +79,7 @@ class Client_app
   initialize: ->
     @setup()
     @register_service_workers()
+    @setup_action_cable()
 
   reload: ->
     @teardown()
@@ -104,6 +107,9 @@ class Client_app
         console.log 'Service Worker Registration Successful at:', reg.scope
       ).catch (error) ->
         console.log 'Registration failed with ' + error
+
+  setup_action_cable: ->
+    window.cable = (new Cable).consumer()
 
 
   teardown: ->

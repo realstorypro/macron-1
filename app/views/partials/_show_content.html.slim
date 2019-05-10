@@ -15,16 +15,7 @@
             = sticky
               = fragment class: 'meta holder'
                 = segment 'secondary'
-                  == vue_widget name: 'author', data: { user_id: @entry.user.id }
-                  /= h5
-                    = image_tag @entry.user.profile.avatar, class: 'ui image avatar' if @entry.user.profile.avatar
-                    = content
-                      = link_to member_path(@entry.user)
-                        = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name}"
-                        = header class: 'sub', text: "@#{@entry.user.username}"
-
-                  /== vue_widget name: 'follower', data: { user_id: @entry.user.id, following: true } if current_user
-
+                  == vue_widget name: 'author', user: @entry.user, data: { user_id: @entry.user.id, supporting: @player.supporting?(@entry.user) }
                 /br
                 /= segment 'primary'
                   /- if current_user

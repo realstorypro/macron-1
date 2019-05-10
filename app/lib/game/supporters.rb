@@ -10,6 +10,11 @@ module Game::Supporters
     @player.followers_by_type_count('User')
   end
 
+  def supporting?(user)
+    return false unless user && @player
+    @player.following?(user)
+  end
+
   # support a user
   def support(user)
     @player.follow(user)

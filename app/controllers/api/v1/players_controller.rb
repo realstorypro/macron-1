@@ -3,8 +3,8 @@
 class API::V1::PlayersController < ApplicationController
   # returns  the profile of the player
   def show
-    if params[:user_id]
-      @user = User.find([params[:user_id]]).first
+    if params[:id]
+      @user = User.find([params[:id]]).first
     else
       @user = current_user
     end
@@ -22,6 +22,18 @@ class API::V1::PlayersController < ApplicationController
     end
 
     @player.cast_spell!(params[:spell].to_sym, subject)
+  end
+
+  def support
+    @player = Game::Player.new(current_user)
+    @player.support(User.find(params[:id]))
+    head 200
+  end
+
+  def stop_supporting
+    @player = Game::Player.new(current_user)
+    @player.stop_supporting(User.find(params[:id]))
+    head 200
   end
 
   # returns the entry class

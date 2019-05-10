@@ -1,9 +1,6 @@
 import Vue from 'vue/dist/vue.esm'
 import Vuex from 'vuex'
 import axios from 'axios'
-import Cable from '../../core/cable'
-
-cable = (new Cable).cable
 
 Vue.use(Vuex)
 
