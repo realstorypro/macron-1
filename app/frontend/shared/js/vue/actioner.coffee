@@ -65,7 +65,7 @@ class Actioner extends Common
           )
 
       mounted: ->
-        store.dispatch('loadPlayer')
+        store.dispatch('loadPlayer', @widget.userId)
 
       data:
         widget: $("##{widget.id}").data()
