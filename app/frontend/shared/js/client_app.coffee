@@ -29,7 +29,6 @@ import Audio from './vue/audio'
 import Cover from './vue/cover'
 import Feed from './vue/feed'
 import SocialSharing from './vue/social_sharing'
-import Follower from './vue/follower'
 import Actioner from './vue/actioner'
 import Author from './vue/author'
 
@@ -70,7 +69,6 @@ audio = new Audio
 cover = new Cover
 feed = new Feed
 social_sharing = new SocialSharing
-follower = new Follower
 actioner = new Actioner
 author = new Author
 

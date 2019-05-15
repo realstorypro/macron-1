@@ -20,7 +20,6 @@ store = new (Vuex.Store)(
   actions:
     loadPlayer: ({commit}, id) ->
       axios.get("/api/v1/players/#{id}").then (response) =>
-        console.log response.data
         commit('load', response.data)
 
     # TODO: Rrefactor to just use IDs

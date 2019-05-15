@@ -145,16 +145,6 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :activities, only: %i[index show]
-
-      # todo : remove the followers and likes controllers
-      resources :followers, only: %i[index] do
-        post "add", to: "followers#add", as: "add_follower", on: :member
-        post "remove", to: "followers#remove", as: "remove_follower", on: :member
-      end
-      resources :likes, only: %i[index] do
-        post "add", to: "likes#add", as: "add_like", on: :member
-        post "remove", to: "likes#remove", as: "remove_like", on: :member
-      end
       resources :players do
         post "cast", to: "players#cast", as: "cast_spell", on: :member
         post "support", to: "players#support", as: "support", on: :member
