@@ -67,6 +67,8 @@ class Author extends Common
           axios.post("/api/v1/players/#{@widget.userId}/stop_supporting")
 
         toggle: ->
+          @isLoading = true
+
           if @widget.supporting
             @stop_supporting()
           else
@@ -77,11 +79,13 @@ class Author extends Common
       mounted: ->
         store.dispatch('loadPlayer', @widget.userId)
 
-        # cable.subscriptions.create { channel: 'PlayersChannel', user_id: id},
-        #   received: (data) ->
-        #     commit('add_new_activity', data.activity_id)
+        cable.subscriptions.create { channel: 'PlayerChannel', user_id: @widget.userId},
+          received: (_data) =>
+            store.dispatch('loadPlayer', @widget.userId)
+            @isLoading =  false
 
       data:
         widget: $("##{widget.id}").data()
+        isLoading: false
 
 export { Author as default }

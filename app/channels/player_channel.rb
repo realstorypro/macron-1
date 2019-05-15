@@ -2,6 +2,6 @@
 
 class PlayerChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "players"
+    stream_from "player_#{params[:user_id]}"
   end
 end

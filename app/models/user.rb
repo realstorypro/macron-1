@@ -41,6 +41,8 @@ class User < ApplicationRecord
   after_create :assign_default_role!
   before_create :build_profile
   before_save :unverify_phone?
+  after_update :broadcast_activity
+
 
   # Validations
   validates :username, presence: true, uniqueness: { case_sensitive: false }
@@ -159,4 +161,12 @@ class User < ApplicationRecord
   def self.policy_class
     UserPolicy
   end
+
+  def broadcast_activity
+    ActionCable.server.broadcast(
+        "player_#{self.id}",
+        user_id: self.id
+    )
+  end
+
 end

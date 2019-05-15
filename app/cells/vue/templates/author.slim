@@ -23,11 +23,11 @@
 = divider
 template v-if="widget.supporting"
   = button class: 'fluid black',
-          v: {'on:click.prevent': 'toggle'}
+          v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
     = icon 'angle double down'
     | Stop Supporting
 template v-else="widget.supporting"
   = button class: 'fluid orange',
-          v: {'on:click.prevent': 'toggle'}
+          v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
     = icon 'angle double up'
     | Support

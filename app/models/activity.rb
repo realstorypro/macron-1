@@ -16,10 +16,11 @@ class Activity < ApplicationRecord
         activity_id: self.id
     )
 
-    ActionCable.server.broadcast(
-        "activities",
-        activity_id: self.id
-    )
+    # TODO: Remove this .. maybe?
+    # ActionCable.server.broadcast(
+    #     "activities",
+    #     activity_id: self.id
+    # )
   end
 
 end
