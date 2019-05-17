@@ -41,6 +41,7 @@ class Actioner extends Common
           @castPercent = percent
 
           store.dispatch('castSpell',
+            id: @widget.userId
             spell: @current_access_key,
             subject_id: @widget.subjectId,
             component: @widget.component

@@ -81,6 +81,7 @@ class Author extends Common
 
         cable.subscriptions.create { channel: 'PlayerChannel', user_id: @widget.userId},
           received: (_data) =>
+            console.log 'player channel is '
             store.dispatch('loadPlayer', @widget.userId)
             @isLoading =  false
 

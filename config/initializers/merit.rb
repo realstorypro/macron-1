@@ -31,4 +31,3 @@ end
 # }].each do |attrs|
 #   Merit::Badge.create! attrs
 # end
-#

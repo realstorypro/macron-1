@@ -6,7 +6,7 @@ spells:
     path: shamanism
     points: 5
     energy: 10
-    level: 1
+    level: 0
     direction: 'positive'
     description: 'A spell of protection cast by the Shamans of the amazon.'
     castTime: 500
