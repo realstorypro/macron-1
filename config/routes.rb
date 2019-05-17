@@ -150,6 +150,7 @@ Rails.application.routes.draw do
         post "support", to: "players#support", as: "support", on: :member
         post "stop_supporting", to: "players#stop_supporting", as: "stop_supporting", on: :member
       end
+      resources :world, only: %i[show]
     end
   end
 
