@@ -163,10 +163,7 @@ class User < ApplicationRecord
   end
 
   def broadcast_activity
-    ActionCable.server.broadcast(
-        "player_#{self.id}",
-        user_id: self.id
-    )
+    ActionCable.server.broadcast("player_#{self.id}", user_id: self.id)
   end
 
 end

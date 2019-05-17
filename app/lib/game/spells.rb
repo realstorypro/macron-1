@@ -12,9 +12,9 @@ module Game::Spells
 
     # add the spell on the subject
     if castable.direction == 'positive'
-      subject.vote_by voter: @player, vote: "like", vote_scope: spell, vote_weight: castable.points
+      subject.vote_by voter: @player, vote: "like", vote_scope: spell, vote_weight: castable.points, :duplicate => true
     else
-      subject.vote_by voter: @player, vote: "bad", vote_scope: spell, vote_weight: castable.points
+      subject.vote_by voter: @player, vote: "bad", vote_scope: spell, vote_weight: castable.points, :duplicate => true
     end
 
     # add the points the castable owner
