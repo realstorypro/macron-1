@@ -2,7 +2,7 @@ import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
 import axios from 'axios'
-import store from './store/player_store'
+import store from './store/author_store'
 
 # Components
 import moment from 'moment'
