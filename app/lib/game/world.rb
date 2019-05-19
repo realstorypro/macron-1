@@ -2,10 +2,24 @@
 
 module Game
   class World
-    def initialize
-
+    def initialize(entry)
+      @entry = entry
     end
 
+    def points
+      points = {}
+      s('spells').each do |spell|
+        points[spell[0]] = @entry.find_votes_for(:vote_scope => spell[0]).size
+      end
+
+      spells = all_spells.each do |spell|
+        spell[1][:points] = points[spell[0]]
+      end
+
+      spells
+    end
+
+    #TODO: REMOVE THIS
     # @return [Object] all available paths
     def all_paths
       options_to_object('paths')
@@ -17,6 +31,7 @@ module Game
 
     private
 
+    #TODO: REMOVE THIS
     def options_to_object(options_path)
       path_obj = {}
       s(options_path).each do |path|

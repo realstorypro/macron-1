@@ -4,7 +4,7 @@ class API::V1::WorldController < ApplicationController
   # returns the world state for the entry
   def show
     @entry = entry_class.find(params[:id])
-    world = Game::World.new(@entry)
+    @world = Game::World.new(@entry)
   end
 
   # returns the entry class
