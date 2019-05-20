@@ -31,6 +31,7 @@ class Actioner extends Common
         'ability-button': AbilityButton
         'ability-details': AbilityDetails
         'select-ability': SelectAbility
+        'score' : ''
       directives:
         'tooltip': VTooltip
         'close-popover': VClosePopover
@@ -58,6 +59,9 @@ class Actioner extends Common
 
         spells: ->
           store.state.player.spells
+
+        worlds: ->
+          store.state.world
 
         selectedAbility: ->
           return false unless @current_access_key

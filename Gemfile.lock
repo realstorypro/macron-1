@@ -138,6 +138,7 @@ GEM
     chartkick (3.0.2)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
+    choice (0.2.0)
     chromedriver-helper (2.1.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
@@ -370,6 +371,11 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-erd (1.6.0)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      choice (~> 0.2.0)
+      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
     railties (5.2.2.1)
@@ -453,6 +459,7 @@ GEM
     rubocop-rails_config (0.4.4)
       railties (>= 3.0)
       rubocop (~> 0.58)
+    ruby-graphviz (1.2.4)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.2)
@@ -618,6 +625,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 5.2.0)
   rails-controller-testing
+  rails-erd
   rb-readline
   readingtime
   redis
