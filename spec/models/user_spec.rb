@@ -122,8 +122,7 @@ describe User, type: :model do
     end
 
     it "can cast a spell and uncasting spells on subject and another player" do
-      expect { @player1.cast_spell!(:aho, @article) }.to change { @player2.state.points }.by(1)
-      expect { @player1.undo_spell!(:aho, @article) }.to change { @player2.state.points }.by(-1)
+      expect { @player1.cast_spell!(:aho, @article) }.to change { @player2.state.points }.by(5)
     end
   end
 

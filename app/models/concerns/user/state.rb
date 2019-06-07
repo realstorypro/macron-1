@@ -29,9 +29,9 @@ module User::State
 
       # add the points the castable owner
       if castable.direction == "positive"
-        subject.add_game_points(castable.path, castable.points)
+        subject.user.add_game_points(castable.path, castable.points)
       else
-        subject.subtract_game_points(castable.path, castable.points)
+        subject.user.subtract_game_points(castable.path, castable.points)
       end
 
       true
@@ -128,7 +128,6 @@ module User::State
       end
 
 
-
       # returns all available spells
       # @param [String] progression_path a filter
       def get_spells(progression_path = nil)
@@ -141,6 +140,22 @@ module User::State
         end
         spells
       end
+
+      # a spell authorization method
+      # @param [String] spell to be cast
+      # @return [Boolean] returns true if the spell can be cast and false if it cant
+      def can_cast?(spell)
+        get_spells.each do |available_spell|
+          return true if available_spell[0] == spell
+        end
+        false
+      end
+
+      # returns a singular spell object
+      def get_spell(spell)
+        get_spells.each { |current_spell| return current_spell[1] if current_spell[0] == spell }
+      end
+
 
   end
 end
