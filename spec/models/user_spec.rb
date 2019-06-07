@@ -49,5 +49,24 @@ describe User, type: :model do
       expect { last_user.add_role(:editor) }.not_to raise_error
     end
   end
+
+  describe "supporters" do
+    it "should have no supporters"  do
+      FactoryBot.create(:user)
+      first_user = User.first
+      # FactoryBot.create(:user)
+      # second_user = User.first
+      expect(first_user.supporters.count).to eq 0
+    end
+
+    it "should successfuly add a supporter" do
+      FactoryBot.create(:user)
+      first_user = User.first
+      FactoryBot.create(:user)
+      second_user = User.first
+      byebug
+      expect { first_user.support(second_user) }.to change { second_user.supporters_count }.by(1)
+    end
+  end
 end
 # rubocop:enable BlockLength

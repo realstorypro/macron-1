@@ -10,6 +10,7 @@ module Game::Supporters
     @player.followers_by_type_count('User')
   end
 
+  # TODO BE REFACTORED
   def supporting?(user)
     return false unless user && @player
     @player.following?(user)

@@ -8,6 +8,9 @@ class User < ApplicationRecord
   include SettingsHelper
   extend FriendlyId
 
+  # Social & Gamification Concerns
+  include User::Supporters
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -162,6 +165,7 @@ class User < ApplicationRecord
     UserPolicy
   end
 
+  # TODO Refactor this out to be a user channel
   def broadcast_activity
     ActionCable.server.broadcast("player_#{self.id}", user_id: self.id)
   end

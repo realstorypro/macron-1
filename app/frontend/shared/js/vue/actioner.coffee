@@ -31,7 +31,6 @@ class Actioner extends Common
         'ability-button': AbilityButton
         'ability-details': AbilityDetails
         'select-ability': SelectAbility
-        'score' : ''
       directives:
         'tooltip': VTooltip
         'close-popover': VClosePopover
