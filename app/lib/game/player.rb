@@ -3,7 +3,6 @@
 module Game
   class Player
     include Game::Paths
-    include Game::Supporters
     include Game::Points
     include Game::Spells
 

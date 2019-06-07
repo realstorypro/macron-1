@@ -25,14 +25,12 @@ class API::V1::PlayersController < ApplicationController
   end
 
   def support
-    @player = Game::Player.new(current_user)
-    @player.support(User.find(params[:id]))
+    current_user.support(User.find(params[:id]))
     head 200
   end
 
   def stop_supporting
-    @player = Game::Player.new(current_user)
-    @player.stop_supporting(User.find(params[:id]))
+    current_user.stop_supporting(User.find(params[:id]))
     head 200
   end
 
