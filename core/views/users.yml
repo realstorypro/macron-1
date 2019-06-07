@@ -57,7 +57,3 @@ views:
         label: 'Avatar'
         type: 'image'
         association: 'profile'
-      title:
-        label: 'Title'
-        type: 'string'
-        association: 'profile'
