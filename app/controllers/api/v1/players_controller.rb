@@ -8,20 +8,16 @@ class API::V1::PlayersController < ApplicationController
     else
       @user = current_user
     end
-
-    @player = Game::Player.new(@user)
   end
 
   def cast
-    @player = Game::Player.new(current_user)
-
     subject = if slugged?(entry_class)
       entry_class.friendly.find(params[:subject_id])
     else
       entry_class.find(params[:subject_id])
     end
 
-    @player.cast_spell!(params[:spell].to_sym, subject)
+    current_user.cast_spell!(params[:spell].to_sym, subject)
   end
 
   def support

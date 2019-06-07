@@ -17,9 +17,6 @@ module User::State
 
     def cast_spell!(spell, subject)
       return false unless can_cast?(spell)
-      # find second player
-      player2 = Game::Player.new(subject.user)
-
       # get the spell details
       castable = get_spell(spell)
 
@@ -32,49 +29,14 @@ module User::State
 
       # add the points the castable owner
       if castable.direction == "positive"
-        player2.add_points(castable.path, castable.points)
+        subject.add_game_points(castable.path, castable.points)
       else
-        player2.subtract_points(castable.path, castable.points)
+        subject.subtract_game_points(castable.path, castable.points)
       end
 
       true
     end
 
-    # removes a spell from a subject
-    def undo_spell!(spell, subject)
-      return false unless can_cast?(spell)
-      # find second player
-      player2 = Game::Player.new(subject.user)
-
-      # get the spell details
-      castable = get_spell(spell)
-
-      # remove spell from the subject
-      subject.unvote voter: self, vote_scope: spell
-
-      # add the points the article owner
-      player2.subtract_points(castable.path, castable.points)
-    end
-    
-    # adds points to the user
-    # @return [Boolean] returns true if operation is successful
-    # TODO: Rename to avoid conflicts
-    def add_points(path, amount)
-      return false unless path_exists?(path)
-
-      self.add_points(amount, category: path)
-      true
-    end
-
-    # subtracts points from the user
-    # @return [Boolean] returns true if operation is successful
-    # TODO: Rename to avoid conflicts
-    def subtract_points(path, amount)
-      return false unless path_exists?(path)
-
-      self.subtract_points(amount, category: path)
-      true
-    end
 
     # @param [Integer] points the number of points the spell is worth
     # @param [Integer] level of the path
@@ -161,6 +123,24 @@ module User::State
           spells << spell if spell[1].level <= path_level
         end
         spells
+      end
+
+      # adds points to the user
+      # @return [Boolean] returns true if operation is successful
+      def add_game_points(path, amount)
+        return false unless path_exists?(path)
+
+        self.add_points(amount, category: path)
+        true
+      end
+
+      # subtracts points from the user
+      # @return [Boolean] returns true if operation is successful
+      def subtract_game_points(path, amount)
+        return false unless path_exists?(path)
+
+        self.subtract_points(amount, category: path)
+        true
       end
   end
 end
