@@ -2,7 +2,7 @@ import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
 import axios from 'axios'
-import store from './store/player_store'
+import store from './store/user_store'
 import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
 
 # Components
@@ -48,28 +48,28 @@ class Actioner extends Common
           ) if @castPercent == 100
       computed:
         username: ->
-          store.state.player.username
+          store.state.user.username
 
         level: ->
-          store.state.player.level
+          store.state.user.level
 
         points: ->
-          store.state.player.points
+          store.state.user.points
 
         spells: ->
-          store.state.player.spells
+          store.state.user.spells
 
         worlds: ->
           store.state.world
 
         selectedAbility: ->
           return false unless @current_access_key
-          store.state.player.spells.filter((item) =>
+          store.state.user.spells.filter((item) =>
             item.access_key == @current_access_key
           )
 
       mounted: ->
-        store.dispatch('loadPlayer', @widget.userId)
+        store.dispatch('loadUser', @widget.userId)
         store.dispatch('loadWorld', { id: @widget.subjectId, component: @widget.component } )
 
       data:

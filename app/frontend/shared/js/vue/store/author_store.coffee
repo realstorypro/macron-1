@@ -18,12 +18,12 @@ store = new (Vuex.Store)(
       state.player = player
 
   actions:
-    loadPlayer: ({commit}, id) ->
-      axios.get("/api/v1/players/#{id}").then (response) =>
+    loadUser: ({commit}, id) ->
+      axios.get("/api/v1/users/#{id}").then (response) =>
         commit('load', response.data)
 
     castSpell: ({commit}, options) ->
-      axios.post("/api/v1/players/#{options.id}/cast", options).then (response) =>
+      axios.post("/api/v1/users/#{options.id}/cast", options).then (response) =>
         console.log response.data
 )
 

@@ -18,7 +18,7 @@ class Follow < ActiveRecord::Base
 
   def broadcast_activity
     ActionCable.server.broadcast(
-        "player_#{self.followable.id}",
+        "user_#{self.followable.id}",
         user_id: self.followable.id
     )
   end

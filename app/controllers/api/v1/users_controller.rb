@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class API::V1::PlayersController < ApplicationController
+class API::V1::UsersController < ApplicationController
   # returns  the profile of the player
   def show
     if params[:id]

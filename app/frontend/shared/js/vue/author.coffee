@@ -55,16 +55,14 @@ class Author extends Common
 
       methods:
         support: ->
-          axios.post("/api/v1/players/#{@widget.userId}/support").then(
+          axios.post("/api/v1/users/#{@widget.userId}/support").then(
             (rsp) ->
-              console.log 'successful', rsp
           ).catch(
             (err) ->
-              console.log 'error', err
           )
 
         stop_supporting: ->
-          axios.post("/api/v1/players/#{@widget.userId}/stop_supporting")
+          axios.post("/api/v1/users/#{@widget.userId}/stop_supporting")
 
         toggle: ->
           @isLoading = true
@@ -77,11 +75,11 @@ class Author extends Common
           @widget.supporting = !@widget.supporting
 
       mounted: ->
-        store.dispatch('loadPlayer', @widget.userId)
+        store.dispatch('loadUser', @widget.userId)
 
-        cable.subscriptions.create { channel: 'PlayerChannel', user_id: @widget.userId},
+        cable.subscriptions.create { channel: 'UserChannel', user_id: @widget.userId},
           received: (_data) =>
-            store.dispatch('loadPlayer', @widget.userId)
+            store.dispatch('loadUser', @widget.userId)
             @isLoading =  false
 
       data:

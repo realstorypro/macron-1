@@ -166,9 +166,8 @@ class User < ApplicationRecord
     UserPolicy
   end
 
-  # TODO Refactor this out to be a user channel
   def broadcast_activity
-    ActionCable.server.broadcast("player_#{self.id}", user_id: self.id)
+    ActionCable.server.broadcast("user_#{self.id}", user_id: self.id)
   end
 
 end

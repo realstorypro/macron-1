@@ -4,7 +4,7 @@ import axios from 'axios'
 
 store = new (Vuex.Store)(
   state:
-    player:
+    user:
       username: 'guest'
       job: 'unemployed'
       education: 'none'
@@ -15,15 +15,15 @@ store = new (Vuex.Store)(
     world: {}
 
   mutations:
-    load: (state, player) ->
-      state.player = player
+    load: (state, user) ->
+      state.user = user
 
     loadWorld: (state, world) ->
       state.world = world
 
   actions:
-    loadPlayer: ({commit}, id) ->
-      axios.get("/api/v1/players/#{id}").then (response) =>
+    loadUser: ({commit}, id) ->
+      axios.get("/api/v1/users/#{id}").then (response) =>
         commit('load', response.data)
 
     loadWorld: ({commit}, options) ->
@@ -33,8 +33,7 @@ store = new (Vuex.Store)(
         commit('loadWorld', response.data)
 
     castSpell: ({commit}, options) ->
-      axios.post("/api/v1/players/#{options.id}/cast", options).then (response) =>
-        console.log response.data
+      axios.post("/api/v1/users/#{options.id}/cast", options).then (response) =>
 )
 
 export {store as default}

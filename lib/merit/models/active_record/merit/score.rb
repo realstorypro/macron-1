@@ -24,7 +24,7 @@ module Merit
 
       def broadcast_activity
         user = User.where(sash: self.score.sash).last
-        ActionCable.server.broadcast("player_#{user.id}", user_id: user.id)
+        ActionCable.server.broadcast("user_#{user.id}", user_id: user.id)
       end
     end
   end
