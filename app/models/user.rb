@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   # Social & Gamification Concerns
   include User::Supporters
+  include User::State
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
