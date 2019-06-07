@@ -37,6 +37,14 @@ module User::State
       true
     end
 
+    # @param [String] progression_path a filter for the progression path
+    # @return [Integer] a summation of points
+    def get_points(progression_path = nil)
+      return false unless path_exists?(progression_path)
+
+      return self.score_points(category: progression_path).sum(:num_points) if progression_path
+      self.score_points.sum(:num_points)
+    end
 
     # @param [Integer] points the number of points the spell is worth
     # @param [Integer] level of the path
@@ -49,6 +57,24 @@ module User::State
       when :high
         (points * level) * 2
       end
+    end
+
+    # adds points to the user
+    # @return [Boolean] returns true if operation is successful
+    def add_game_points(path, amount)
+      return false unless path_exists?(path)
+
+      self.add_points(amount, category: path)
+      true
+    end
+
+    # subtracts points from the user
+    # @return [Boolean] returns true if operation is successful
+    def subtract_game_points(path, amount)
+      return false unless path_exists?(path)
+
+      self.subtract_points(amount, category: path)
+      true
     end
 
     private
@@ -102,15 +128,6 @@ module User::State
       end
 
 
-      # @param [String] progression_path a filter for the progression path
-      # @return [Integer] a summation of points
-      def get_points(progression_path = nil)
-        return false unless path_exists?(progression_path)
-
-        return self.score_points(category: progression_path).sum(:num_points) if progression_path
-        self.score_points.sum(:num_points)
-      end
-
 
       # returns all available spells
       # @param [String] progression_path a filter
@@ -125,22 +142,5 @@ module User::State
         spells
       end
 
-      # adds points to the user
-      # @return [Boolean] returns true if operation is successful
-      def add_game_points(path, amount)
-        return false unless path_exists?(path)
-
-        self.add_points(amount, category: path)
-        true
-      end
-
-      # subtracts points from the user
-      # @return [Boolean] returns true if operation is successful
-      def subtract_game_points(path, amount)
-        return false unless path_exists?(path)
-
-        self.subtract_points(amount, category: path)
-        true
-      end
   end
 end

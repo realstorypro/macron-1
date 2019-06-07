@@ -63,10 +63,69 @@ describe User, type: :model do
       FactoryBot.create(:user)
       first_user = User.first
       FactoryBot.create(:user)
-      second_user = User.first
-      byebug
+      second_user = User.last
       expect { first_user.support(second_user) }.to change { second_user.supporters_count }.by(1)
     end
   end
+
+  describe "new player state" do
+    before :all do
+      @user = FactoryBot.create(:user, :admin)
+    end
+
+    it "returns a state" do
+      expect(@user.state).to_not be_nil
+    end
+
+    it "returns paths" do
+      expect(@user.state.paths).to_not be_nil
+    end
+
+    it "paths level should be empty" do
+      @user.state.paths.each do |path|
+        expect(path.level).to be(0)
+      end
+    end
+
+    it "the points are set to 0" do
+      expect(@user.state.points).to be(0)
+    end
+  end
+  
+  describe "playing points" do
+    before :all do
+      @user = FactoryBot.create(:user, :admin)
+    end
+
+    it "adding points changes the total state points" do
+      expect { @user.add_game_points(:shamanism, 200) }.to change { @user.state.points }.by(200)
+    end
+
+    it "adding points changes the path points" do
+      expect { @user.add_game_points(:shamanism, 200) }.to change { @user.get_points(:shamanism) }.by(200)
+    end
+
+    it "subtracting points changes the total state points" do
+      expect { @user.subtract_game_points(:shamanism, 200) }.to change { @user.state.points }.by(-200)
+    end
+
+    it "subtracting points changes the path points" do
+      expect { @user.subtract_game_points(:shamanism, 200) }.to change { @user.get_points(:shamanism) }.by(-200)
+    end
+  end
+
+  describe "playing with others" do
+    before :all do
+      @player1 = FactoryBot.create(:user, :admin)
+      @article = FactoryBot.create(:article)
+      @player2 = @article.user
+    end
+
+    it "can cast a spell and uncasting spells on subject and another player" do
+      expect { @player1.cast_spell!(:aho, @article) }.to change { @player2.state.points }.by(1)
+      expect { @player1.undo_spell!(:aho, @article) }.to change { @player2.state.points }.by(-1)
+    end
+  end
+
 end
 # rubocop:enable BlockLength
