@@ -15,7 +15,6 @@ class MetaController < ApplicationController
 
   def show
     expires_in 2.minutes
-    @world = Game::World.new(@entry)
   end
 
   def new

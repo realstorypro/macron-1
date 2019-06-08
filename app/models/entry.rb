@@ -7,6 +7,7 @@ class Entry < ApplicationRecord
   include Taggable
   include Slugged
   include Seoable
+  include Pointable
 
   acts_as_followable
   acts_as_votable

@@ -13,7 +13,6 @@ class ProfileController < MembersController
 
     def preload_entry
       @member = current_user
-      @player = Game::Player.new(@member)
     end
 
     def record_view

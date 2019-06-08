@@ -21,7 +21,6 @@ class MembersController < DisplayController
 
     def preload_entry
       @member = User.joins(:profile).friendly.find(params[:id])
-      @player = Game::Player.new(@member)
     end
 
     def set_show_seo_meta

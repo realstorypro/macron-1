@@ -27,7 +27,7 @@ store = new (Vuex.Store)(
         commit('load', response.data)
 
     loadWorld: ({commit}, options) ->
-      axios.get("/api/v1/world/#{options.id}/",
+      axios.get("/api/v1/entries/#{options.id}/",
         params: {component: options.component}
       ).then (response) =>
         commit('loadWorld', response.data)

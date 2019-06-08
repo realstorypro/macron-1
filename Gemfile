@@ -125,7 +125,7 @@ group :test do
   gem "codecov", require: false
 
   # rubocop
-  gem "rubocop"
+  gem "rubocop", "~> 0.66.0"
   gem "rubocop-rails_config"
 
   # browser testing

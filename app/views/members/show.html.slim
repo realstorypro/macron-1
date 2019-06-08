@@ -72,9 +72,9 @@
 
           = item
             = icon 'fire'
-            = content text: "#{number_with_delimiter(@player.state.points)} Reputation"
+            = content text: "#{number_with_delimiter(@member.state.points)} Reputation"
 
-          - @player.state.paths.each do |path|
+          - @member.state.paths.each do |path|
             - if path.level > 0
               = item
                 = icon path.icon

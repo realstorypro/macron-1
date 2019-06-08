@@ -3,11 +3,7 @@
 class API::V1::UsersController < ApplicationController
   # returns  the profile of the player
   def show
-    if params[:id]
-      @user = User.find([params[:id]]).first
-    else
-      @user = current_user
-    end
+    @user = User.find([params[:id]]).first
   end
 
   def cast

@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-class API::V1::WorldController < ApplicationController
+class API::V1::EntriesController < ApplicationController
   # returns the world state for the entry
   def show
     @entry = entry_class.find(params[:id])
-    @world = Game::World.new(@entry)
   end
 
   # returns the entry class
