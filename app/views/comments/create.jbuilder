@@ -16,7 +16,6 @@ json.user do
   json.slug @comment.user.slug
   json.created_at @comment.user.created_at
   json.posts @comment.user.comments_count
-  json.title @comment.user.profile.title
   json.avatar @comment.user.profile.avatar
   json.verified @comment.user.profile.verified
 end
