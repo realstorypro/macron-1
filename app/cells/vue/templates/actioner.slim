@@ -1,8 +1,20 @@
 template v-for="spell in entries"
-  span
+  v-popover name="hi" class="entry points" placement="top" trigger="hover"
+    span class="spell point"
+    = icon v: {'bind:class': '[spell.icon, spell.color]'}
     | {{ spell.points }}
-    = icon v: {'bind:class': 'spell.icon'}
-v-popover name="hi" class="actioner tooltip" placement="left"
+    template slot="popover"
+      .entry.points.wrapper
+        = grid
+          = row
+            = column size: 16
+              =h5 class: 'dividing', v: {'bind:class': 'spell.color'}
+                = icon v: {'bind:class': '[spell.icon, spell.color]'}
+                | {{ spell.name }}
+              p
+                | {{ spell.description }}
+= divider
+v-popover class="actioner tooltip" placement="left"
   = button 'blue fluid'
     = icon 'left double angle'
     | React

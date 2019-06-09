@@ -5,12 +5,14 @@ import axios from 'axios'
 store = new (Vuex.Store)(
   state:
     player:
-      username: 'guest'
-      job: 'unemployed'
-      education: 'none'
+      first_name: 'Guest'
+      last_name: 'User'
+      username: 'Guest'
+      job: 'Unemployed'
+      education: 'High School'
       level: 0
       points: 0
-      followers: 0
+      supporters: 0
       spells: {}
 
   mutations:

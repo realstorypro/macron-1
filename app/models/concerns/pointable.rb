@@ -9,7 +9,7 @@ module Pointable
 
       points = {}
       setting.fetch_setting("spells").each do |spell|
-        points[spell[0]] = self.find_votes_for(vote_scope: spell[0]).size
+        points[spell[0]] = self.find_votes_for(vote_scope: spell[0]).sum(:vote_weight)
       end
 
       spells = setting.fetch_setting("spells").each do |spell|
