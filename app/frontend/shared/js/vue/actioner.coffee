@@ -59,8 +59,8 @@ class Actioner extends Common
         spells: ->
           store.state.user.spells
 
-        worlds: ->
-          store.state.world
+        entries: ->
+          store.state.entry
 
         selectedAbility: ->
           return false unless @current_access_key
@@ -70,7 +70,11 @@ class Actioner extends Common
 
       mounted: ->
         store.dispatch('loadUser', @widget.userId)
-        store.dispatch('loadWorld', { id: @widget.subjectId, component: @widget.component } )
+        store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
+
+        cable.subscriptions.create { channel: 'EntryChannel', entry_id: @widget.subjectId},
+          received: (_data) =>
+            store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
 
       data:
         widget: $("##{widget.id}").data()

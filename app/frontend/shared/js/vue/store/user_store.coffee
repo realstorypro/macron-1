@@ -12,25 +12,25 @@ store = new (Vuex.Store)(
       points: 0
       followers: 0
       spells: {}
-    world: {}
+    entry: {}
 
   mutations:
     load: (state, user) ->
       state.user = user
 
-    loadWorld: (state, world) ->
-      state.world = world
+    loadEntry: (state, entry) ->
+      state.entry = entry
 
   actions:
     loadUser: ({commit}, id) ->
       axios.get("/api/v1/users/#{id}").then (response) =>
         commit('load', response.data)
 
-    loadWorld: ({commit}, options) ->
+    loadEntry: ({commit}, options) ->
       axios.get("/api/v1/entries/#{options.id}/",
         params: {component: options.component}
       ).then (response) =>
-        commit('loadWorld', response.data)
+        commit('loadEntry', response.data)
 
     castSpell: ({commit}, options) ->
       axios.post("/api/v1/users/#{options.id}/cast", options).then (response) =>
