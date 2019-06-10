@@ -29,4 +29,5 @@
         background: rgba(0, 0, 0, 0.75) !important
     .bar
         transition: 1.0s all
+        min-width: 3px !important
 </style>

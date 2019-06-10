@@ -4,6 +4,8 @@ json.first_name @user.profile.first_name
 json.last_name @user.profile.last_name
 json.level @user.state.level
 json.points @user.state.points
+json.energy @user.energy
+json.max_energy @user.state.max_energy
 
 json.job @user.profile.job
 json.education @user.profile.education

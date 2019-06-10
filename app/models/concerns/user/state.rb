@@ -3,6 +3,7 @@
 module User::State
   extend ActiveSupport::Concern
 
+
   included do
     # @param [String] progression_path a filter for the progression path
     # @return [Object] the current state of the player
@@ -10,6 +11,7 @@ module User::State
       state = OpenStruct.new
       state.points = get_points(progression_path)
       state.level = get_level(state.points)
+      state.max_energy = get_max_energy(state.level)
       state.paths = get_paths(progression_path)
       state.spells = get_spells(progression_path)
       state
@@ -86,10 +88,15 @@ module User::State
         current_level = 0
 
         s("levels").each do |level|
-          current_level = level[0].to_s.to_i if level[1] < points
+          current_level = level[0].to_s.to_i if level[1].points < points
         end
 
         current_level
+      end
+
+      # returns the maximum amount of energy for the level
+      def get_max_energy(level)
+        s("levels.#{level}").energy
       end
 
       # checks whether path actually exists

@@ -59,6 +59,12 @@ class Actioner extends Common
         spells: ->
           store.state.user.spells
 
+        energy: ->
+          store.state.user.energy
+
+        energyPercent: ->
+          store.state.user.energy / store.state.user.max_energy * 100
+
         entries: ->
           store.state.entry
 
