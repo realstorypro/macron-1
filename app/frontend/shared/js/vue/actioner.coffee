@@ -40,12 +40,15 @@ class Actioner extends Common
         doCast: (percent) ->
           @castPercent = percent
 
-          store.dispatch('castSpell',
-            id: @widget.userId
-            spell: @current_access_key,
-            subject_id: @widget.subjectId,
-            component: @widget.component
-          ) if @castPercent == 100
+          if @castPercent == 100
+            store.dispatch('castSpell',
+              id: @widget.userId
+              spell: @current_access_key,
+              subject_id: @widget.subjectId,
+              component: @widget.component
+            )
+
+            @activeCast = true
       computed:
         username: ->
           store.state.user.username
@@ -85,9 +88,11 @@ class Actioner extends Common
         cable.subscriptions.create { channel: 'UserChannel', user_id: @widget.userId},
           received: (_data) =>
             store.dispatch('loadUser', @widget.userId)
+            @activeCast = false
 
       data:
         widget: $("##{widget.id}").data()
         current_access_key: null
         castPercent: 0
+        activeCast: true
 export { Actioner as default }

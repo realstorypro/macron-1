@@ -24,13 +24,13 @@ v-popover class="actioner tooltip" placement="left"
         = column size: 4
           profile avatar=current_user.profile.avatar url=url_helpers.member_path(current_user) :username="username" :level="level" :verified="true" :xp="points"
         = column size: 12
-          progress-bar :label="'Level ' + level" color="purple" :percent="70"
-          progress-bar label="Energy" color="orange" :percent="energyPercent"
-          progress-bar label="Casting" color="blue" :percent="castPercent"
+          progress-bar :label="'Level ' + level" color="purple" :percent="70" :active-cast="false"
+          progress-bar label="Energy" color="orange" :percent="energyPercent" :active-cast="false"
+          progress-bar label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast"
       = grid 'abilities holder'
         = column size: 16
           template v-for="spell in spells"
-            ability-button @use-ability="useAbility" @casting="doCast" v-bind="spell"
+            ability-button @use-ability="useAbility" @casting="doCast" v-bind="spell" v-bind:active-cast="activeCast"
       = grid 'selected ability holder'
         = column size: 16
           template v-if="selectedAbility"

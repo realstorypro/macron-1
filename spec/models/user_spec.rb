@@ -81,9 +81,9 @@ describe User, type: :model do
       expect(@user.state.paths).to_not be_nil
     end
 
-    it "paths level should be empty" do
+    it "paths level should be 1" do
       @user.state.paths.each do |path|
-        expect(path.level).to be(0)
+        expect(path.level).to be(1)
       end
     end
 
