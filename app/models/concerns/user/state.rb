@@ -22,6 +22,9 @@ module User::State
       # get the spell details
       castable = get_spell(spell)
 
+      # short cirtucit if there isn't enogh energy
+      return false if self.energy <= castable.energy
+
       # add the spell on the subject
       if castable.direction == "positive"
         subject.vote_by voter: self, vote: "like", vote_scope: spell, vote_weight: castable.points, duplicate: true
@@ -35,6 +38,10 @@ module User::State
       else
         subject.user.subtract_game_points(castable.path, castable.points)
       end
+
+      # reduce the available energy
+      self.energy = self.energy - castable.energy
+      self.save
 
       true
     end

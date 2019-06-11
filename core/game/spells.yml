@@ -6,9 +6,9 @@ spells:
     path: shamanism
     points: 5
     energy: 10
-    level: 0
+    level: 1
     direction: 'positive'
-    description: 'A spell of protection cast by the Shamans of the amazon.'
+    description: 'A spell of agreement & acknowledgement.'
     castTime: 500
 
   haux:

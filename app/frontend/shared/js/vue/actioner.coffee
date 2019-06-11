@@ -82,10 +82,12 @@ class Actioner extends Common
           received: (_data) =>
             store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
 
+        cable.subscriptions.create { channel: 'UserChannel', user_id: @widget.userId},
+          received: (_data) =>
+            store.dispatch('loadUser', @widget.userId)
+
       data:
         widget: $("##{widget.id}").data()
         current_access_key: null
-        totalEnergy: 100
-        currentEnergy: 80
         castPercent: 0
 export { Actioner as default }
