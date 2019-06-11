@@ -17,6 +17,10 @@ module User::State
       state
     end
 
+    # casts a spell onto a subject and passes points on a user associated
+    # with the subject
+    # @param [Symbol] spell the name of the spell
+    # @param [Object] subject an object with an attached user to perform a spell on
     def cast_spell!(spell, subject)
       return false unless can_cast?(spell)
       # get the spell details
@@ -86,13 +90,19 @@ module User::State
       true
     end
 
+    # regenerates energy for the user based on their level
+    def regenerate_energy
+      self.energy = get_max_energy(self.state.level)
+      self.save
+    end
+
     private
 
       # returns the level based on the amount of points
       # @param [Integer] points number of points
       # @return [Integer] a level for the number of points
       def get_level(points)
-        current_level = 0
+        current_level = 1
 
         s("levels").each do |level|
           current_level = level[0].to_s.to_i if level[1].points < points
@@ -169,7 +179,6 @@ module User::State
       def get_spell(spell)
         get_spells.each { |current_spell| return current_spell[1] if current_spell[0] == spell }
       end
-
 
   end
 end
