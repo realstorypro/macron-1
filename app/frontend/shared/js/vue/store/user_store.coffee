@@ -14,6 +14,9 @@ store = new (Vuex.Store)(
     loadEntry: (state, entry) ->
       state.entry = entry
 
+    updateEnergy: (state, energy) ->
+      state.user.energy = energy
+
   actions:
     loadUser: ({commit}, id) ->
       axios.get("/api/v1/users/#{id}").then (response) =>
@@ -27,6 +30,10 @@ store = new (Vuex.Store)(
 
     castSpell: ({commit}, options) ->
       axios.post("/api/v1/users/#{options.id}/cast", options).then (response) =>
+
+    reduceEnergy:({commit, state}, amount) ->
+      commit 'updateEnergy', (state.user.energy - amount)
+
 )
 
 export {store as default}

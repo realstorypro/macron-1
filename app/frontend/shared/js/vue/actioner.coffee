@@ -48,6 +48,11 @@ class Actioner extends Common
               component: @widget.component
             )
 
+            ability = store.state.user.spells.filter((item) =>
+              item.access_key == @current_access_key
+            )
+            store.dispatch('reduceEnergy', ability[0].energy)
+
             @activeCast = true
       computed:
         username: ->
@@ -94,5 +99,5 @@ class Actioner extends Common
         widget: $("##{widget.id}").data()
         current_access_key: null
         castPercent: 0
-        activeCast: true
+        activeCast: false
 export { Actioner as default }

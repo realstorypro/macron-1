@@ -14,7 +14,7 @@
             activeCast: Boolean
         data: ->
             currentCastTime: 0
-            castInterval: 100
+            castInterval: 70
             processing: false
         computed:
             completed_percent: ->
@@ -39,7 +39,7 @@
                 @.$emit('use-ability', null)
 
             castCounter: ->
-                if @currentCastTime + @castInterval >= @castTime
+                if (@currentCastTime + @castInterval >= @castTime) || (@completed_percent == 100)
                     @.$emit('casting', 100)
                     @stopCounter()
                 else
