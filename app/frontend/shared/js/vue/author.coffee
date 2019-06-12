@@ -8,6 +8,7 @@ import store from './store/author_store'
 import moment from 'moment'
 import Avatar from 'vue-avatar'
 import numeral from 'numeral'
+import AnimatedNumber from "animated-number-vue"
 
 class Author extends Common
 
@@ -22,6 +23,7 @@ class Author extends Common
       store: store
       components:
         'avatar': Avatar
+        'animated-number': AnimatedNumber
       computed:
         username: ->
           store.state.player.username
@@ -54,6 +56,8 @@ class Author extends Common
           store.state.player.paths
 
       methods:
+        formatToInt: (value) ->
+          "#{Number(value).toFixed(0)} Reputation"
         support: ->
           axios.post("/api/v1/users/#{@widget.userId}/support").then(
             (rsp) ->

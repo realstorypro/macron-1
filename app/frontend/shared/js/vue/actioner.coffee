@@ -12,6 +12,7 @@ import ProgressBar from './components/progress_bar'
 import AbilityButton from './components/ability_button'
 import AbilityDetails from './components/ability_details'
 import SelectAbility from './components/select_ability'
+import AnimatedNumber from "animated-number-vue"
 
 class Actioner extends Common
 
@@ -31,10 +32,13 @@ class Actioner extends Common
         'ability-button': AbilityButton
         'ability-details': AbilityDetails
         'select-ability': SelectAbility
+        'animated-number': AnimatedNumber
       directives:
         'tooltip': VTooltip
         'close-popover': VClosePopover
       methods:
+        formatToInt: (value) ->
+          return Number(value).toFixed(0)
         useAbility: (event) ->
           @current_access_key = event
         doCast: (percent) ->

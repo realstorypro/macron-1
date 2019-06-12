@@ -2,7 +2,7 @@ template v-for="spell in entries"
   v-popover name="hi" class="entry points" placement="top" trigger="hover"
     span class="spell point"
     = icon v: {'bind:class': '[spell.icon, spell.color]'}
-    | {{ spell.points }}
+    animated-number :value="spell.points" :format-value="formatToInt" :duration="400"
     template slot="popover"
       .entry.points.wrapper
         = grid

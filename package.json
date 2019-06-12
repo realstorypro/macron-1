@@ -30,6 +30,7 @@
     "@shopify/buy-button-js": "^0.8.6",
     "actioncable": "^5.2.3",
     "ahoy.js": "^0.3.2",
+    "animated-number-vue": "^0.1.5",
     "axios": "^0.17.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
