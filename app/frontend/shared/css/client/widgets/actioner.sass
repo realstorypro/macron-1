@@ -12,6 +12,16 @@
     background: #eee
     border-bottom: 1px solid #ccc
 
+    .desktop.wrapper
+      display: block
+      @include media("<desktop")
+        display: none
+
+    .mobile.wrapper
+      display: none
+      @include media("<desktop")
+        display: block
+
   .abilities.holder
     padding: 0.5em 0
 
@@ -29,6 +39,8 @@
   &.wrapper
     padding: 1em
     width: 500px
+    @include media("<desktop")
+      width: 100%
 
 
 .tooltip

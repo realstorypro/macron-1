@@ -21,9 +21,9 @@ v-popover class="actioner tooltip" placement="left"
   template slot="popover"
     .actioner.wrapper
       = grid 'profile holder'
-        = column size: 4
+        = column computer: 4, mobile: 16
           profile avatar=current_user.profile.avatar url=url_helpers.member_path(current_user) :username="username" :level="level" :verified="true" :xp="points"
-        = column size: 12
+        = column computer: 12, mobile: 16
           progress-bar :label="'Level ' + level" color="purple" :percent="70" :active-cast="false"
           progress-bar label="Energy" color="orange" :percent="energyPercent" :active-cast="false"
           progress-bar label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast"
