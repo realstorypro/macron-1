@@ -1,23 +1,20 @@
 <template lang="pug">
-    .wrapper
-        flipper(:flipKey="flipKey")
-            template(v-for="score in scores")
-                score(v-bind="score")
-            .ui.divider
-            .ui.button.green.fluid(@click="trigger")
-                i.icon.magic.large
+    .wrap
+        template(v-for="score in scores")
+            score(v-bind="score")
+        .ui.divider
+        v-popover(class="actioner tooltip" placement="left")
+            .ui.button.green.large.fluid
+                i.icon.magic
                 | Respond
+            template(slot="popover")
+                h1 hello world guys
 
-            flipped(flipId="reactions")
-                template(v-for="score in scores")
-                    score(v-bind="score")
-                h1 I am FLIPPED
 </template>
 
 <script lang="coffee">
     import axios from 'axios'
     import store from '../store/user_store'
-    import { Flipper, Flipped } from "vue-flip-toolkit"
     import Score from './reactions/score'
 
     import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
@@ -29,19 +26,14 @@
             component: String
         components:
             'score': Score
-            'flipped': Flipped
-            'flipper': Flipper
+            'v-popover': VPopover
+        directives:
+            'tooltip': VTooltip
+            'close-popover': VClosePopover
         computed:
             scores: ->
                 store.state.entry
-            flipKey: ->
-                @open.toString()
-        data: ->
-            flipper: null
-            open: false
-        methods:
-            trigger: ->
-                @open = !@open
+        data: -> {}
         mounted: ->
             store.dispatch('loadEntry', { id: @subjectId, component: @component } )
 </script>
