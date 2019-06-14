@@ -10053,6 +10053,13 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-flip-toolkit@^6.5.8:
+  version "6.6.3"
+  resolved "https://npm.devlogic.io/react-flip-toolkit/-/react-flip-toolkit-6.6.3.tgz#5f6304abcfdcb267d7ab7f2a1971919b1526ce34"
+  integrity sha512-CfHjXzRQIdGCVY4p+jBApO5BDCUK9YnlgvB89JYyS4oyiEkB866/qc0RrT3Bo+6H3WctqQvJqDUo873oUxy8hA==
+  dependencies:
+    rematrix "0.2.2"
+
 read-cache@^1.0.0:
   version "1.0.0"
   resolved "https://npm.devlogic.io/read-cache/-/read-cache-1.0.0.tgz#e664ef31161166c9751cdbe8dbcf86b5fb58f774"
@@ -10379,6 +10386,11 @@ relateurl@0.2.x:
   version "0.2.7"
   resolved "https://npm.devlogic.io/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
+
+rematrix@0.2.2:
+  version "0.2.2"
+  resolved "https://npm.devlogic.io/rematrix/-/rematrix-0.2.2.tgz#c96a050260782db9908904885991256e23beda5d"
+  integrity sha512-agFFS3RzrLXJl5LY5xg/xYyXvUuVAnkhgKO7RaO9J1Ssth6yvbO+PIiV67V59MB5NCdAK2flvGvNT4mdKVniFA==
 
 remove-bom-buffer@^3.0.0:
   version "3.0.0"
@@ -12622,6 +12634,13 @@ vue-avatar@^2.1.1:
   version "2.1.7"
   resolved "https://npm.devlogic.io/vue-avatar/-/vue-avatar-2.1.7.tgz#00fca25f59ad9311159d55aacc4a98f70a23bd9d"
   integrity sha512-1nYbgzCHPaQIN+LkOW0VH+2CrB0ljM5aiVaPtHqJ0/Uf8PnHRWLXzO3NFmXy5EPaYRjeLwnmm3ox2zac1AhBtA==
+
+vue-flip-toolkit@^1.3.0:
+  version "1.3.0"
+  resolved "https://npm.devlogic.io/vue-flip-toolkit/-/vue-flip-toolkit-1.3.0.tgz#f6e3185748054c402ea7f4c5930a9f3449461da6"
+  integrity sha512-ys5+yb05vGKu/KBdHZL/3a/gKDq0Tt3sdgJftXeRYOzG1t/6Fpje2k9MPlW68rvUxna7pyxQZVw9nEQ40XcYQQ==
+  dependencies:
+    react-flip-toolkit "^6.5.8"
 
 vue-goodshare@^0.9.3:
   version "0.9.3"

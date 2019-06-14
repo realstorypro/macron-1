@@ -1,8 +1,10 @@
-template v-for="spell in entries"
+reactions :user-id="#{options[:data][:user_id]}" :subject-id="#{options[:data][:subject_id]}" component="#{options[:data][:component]}"
+
+/template v-for="spell in entries"
   v-popover name="hi" class="entry points" placement="top" trigger="hover"
     span class="spell point"
     = icon v: {'bind:class': '[spell.icon, spell.color]'}
-    animated-number :value="spell.points" :format-value="formatToInt" :duration="400"
+    /animated-number :value="spell.points" :format-value="formatToInt" :duration="400"
     template slot="popover"
       .entry.points.wrapper
         = grid

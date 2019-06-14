@@ -1,9 +1,15 @@
 import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
+
+# REMOVE SOON #
 import axios from 'axios'
 import store from './store/user_store'
 import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
+# REMOVE SOON #
+
+# Refactor Begins
+import Reactions from './components/reactions'
 
 # Components
 import Actions from './components/actions'
@@ -25,6 +31,7 @@ class Actioner extends Common
       el: "##{widget.id}"
       mixins: [turbolinks_adapter]
       components:
+        'reactions' : Reactions
         'actions' : Actions
         'v-popover': VPopover
         'profile': Profile
