@@ -9,7 +9,10 @@ import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
 # REMOVE SOON #
 
 # Refactor Begins
+import VModal from 'vue-js-modal'
 import Reactions from './components/reactions'
+
+Vue.use(VModal)
 
 # Components
 import Actions from './components/actions'

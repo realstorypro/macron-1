@@ -6,30 +6,30 @@
                 | {{username}}
                 .verified(v-if='verified')
                     i.icon.check.mark.circular.mini.inverted.yellow
-            .level
-                | Level {{level}}
+            //.level
+            //    | Level {{level}}
         a(:href="url")
             avatar(v-bind:username='username' v-bind:src='avatar' :rounded='true' :size='50')
         .bottom.meta
             i.icon.fire.red
             | {{ xp | format_xp }}
-    .mobile.wrapper
-        .ui.grid.divided
-            .row
-                .three.wide.column
-                 .avatar.holder
-                     a(:href="url")
-                         avatar(v-bind:username='username' v-bind:src='avatar' :rounded='true' :size='40')
-                .thirteen.wide.column
-                    a.author(:href="url")
-                        | {{username}}
-                        .verified(v-if='verified')
-                            i.icon.check.mark.circular.mini.inverted.yellow
-                    .level
-                        | Level {{level}}
-                    .points
-                        i.icon.fire
-                        | {{ xp | format_xp }} Reputation
+    // .mobile.wrapper
+    //     .ui.grid.divided
+    //         .row
+    //             .three.wide.column
+    //              .avatar.holder
+    //                  a(:href="url")
+    //                      avatar(v-bind:username='username' v-bind:src='avatar' :rounded='true' :size='40')
+    //             .thirteen.wide.column
+    //                 a.author(:href="url")
+    //                     | {{username}}
+    //                     .verified(v-if='verified')
+    //                         i.icon.check.mark.circular.mini.inverted.yellow
+    //                 .level
+    //                     | Level {{level}}
+    //                 .points
+    //                     i.icon.fire
+    //                     | {{ xp | format_xp }} Reputation
         .ui.divider
 
 </template>
