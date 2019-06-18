@@ -37,46 +37,49 @@
     .wrapper
         min-height: 120px
 
-    .detail-wrapper
-        display: flex
-        padding-top: 1em
+        .header
+            margin-top: 1em
 
-        &.green
-            border-top: 2px solid $green
+        .detail-wrapper
+            display: flex
+            padding-top: 1em
 
-        &.red
-            border-top: 2px solid $red
+            &.green
+                border-top: 2px solid $green
 
-        &.blue
-            border-top: 2px solid $blue
+            &.red
+                border-top: 2px solid $red
 
-    .direction
-        display: flex
-        flex: 1%
-        font-size: 1.1em
-        font-weight: bold
-        justify-content: center
-        flex-direction: column
+            &.blue
+                border-top: 2px solid $blue
 
-    .points
-        display: flex
-        flex: 12%
-        font-size: 1.2em
-        text-align: center
-        justify-content: center
-        flex-direction: column
-    .details
-        flex: 85%
+        .direction
+            display: flex
+            flex: 1%
+            font-size: 1.1em
+            font-weight: bold
+            justify-content: center
+            flex-direction: column
 
-        p
-            color: black
+        .points
+            display: flex
+            flex: 12%
+            font-size: 1.2em
+            text-align: center
+            justify-content: center
+            flex-direction: column
+        .details
+            flex: 85%
 
-    .green
-       color: $green
+            p
+                color: black
 
-    .red
-        color: $red
+        .green
+           color: $green
 
-    .blue
-        color: $blue
+        .red
+            color: $red
+
+        .blue
+            color: $blue
 </style>

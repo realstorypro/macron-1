@@ -1,25 +1,27 @@
 <template lang="pug">
     .wrap
-        .mobile.scores
-            template(v-for="score in scores")
-                score(v-bind="score")
-        .ui.divider
         .ui.grid
             .column.sixteen.wide
-                progress-bar(:label="'Level ' + level" color="purple" :percent="70" :active-cast="false")
-                progress-bar(label="Energy" color="orange" :percent="energyPercent" :active-cast="false")
-                progress-bar(label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast")
-        .ui.divider
-        .ui.grid
-            .column.sixteen.wide
-                template(v-for="spell in spells")
-                    ability-button(@use-ability="useAbility" @casting="doCast" v-bind="spell" v-bind:active-cast="activeCast")
-        .ui.gid
-            .column.sixteen.wide
-                template(v-if="selectedAbility")
-                    ability-details(v-bind="selectedAbility")
-                template(v-else="")
-                    select-ability
+                .scores
+                    template(v-for="score in scores")
+                        score(v-bind="score")
+                .bars
+                    progress-bar(:label="'Level ' + level" color="purple" :percent="70" :active-cast="false")
+                    progress-bar(label="Energy" color="orange" :percent="energyPercent" :active-cast="false")
+                    progress-bar(label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast")
+                .comment-box
+                    redactor(v-model='comment' :config='redactorConfig')
+                .abilities
+                    template(v-for="spell in spells")
+                        ability-button(@use-ability="useAbility" @casting="doCast" v-bind="spell" v-bind:active-cast="activeCast")
+                .details
+                    template(v-if="selectedAbility")
+                        ability-details(v-bind="selectedAbility")
+                    template(v-else="")
+                        // select-ability
+                        h5.ui.header
+                            i.icon.huge.hand.pointing.up
+                            .content Select a Reaction
 
 </template>
 
@@ -34,6 +36,7 @@
     import AbilityButton from './ability_button'
     import AbilityDetails from './ability_details'
     import SelectAbility from './select_ability'
+    import Redactor from '../redactor'
 
     import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
 
@@ -51,6 +54,7 @@
             'ability-button': AbilityButton
             'ability-details': AbilityDetails
             'select-ability': SelectAbility
+            'redactor': Redactor
         directives:
             'tooltip': VTooltip
             'close-popover': VClosePopover
@@ -96,7 +100,29 @@
             current_access_key: null
             castPercent: 0
             activeCast: false
+            comment: ''
+            redactorConfig:
+                minHeight: '100%'
+                maxHeight: '100%'
         mounted: ->
+            wrap_height =  $(@.$el).outerHeight()
+            scores_height =  $(@.$el).find('.scores').outerHeight()
+            bars_height =  $(@.$el).find('.bars').outerHeight()
+            abilities_height =  $(@.$el).find('.abilities').outerHeight()
+            details_height =  $(@.$el).find('.details').outerHeight()
+
+            console.log 'heights', wrap_height, scores_height, bars_height, abilities_height, details_height
+
+
+            # 54 is the size of the readactor toolbar
+            comment_height = wrap_height - scores_height - bars_height - abilities_height - details_height - 54 - 50
+            console.log comment_height
+
+            $(@.$el).find('.redactor-in').css('min-height', "#{comment_height}px")
+            $(@.$el).find('.redactor-in').css('max-height', "#{comment_height}px")
+
+
+
             store.dispatch('loadUser', @userId)
             store.dispatch('loadEntry', { id: @subjectId, component: @component } )
             
@@ -110,7 +136,33 @@
                     @activeCast = false
 </script>
 
-<style lang="sass">
-        .mobile.scores
-            text-align: center
+<style lang="sass" scoped>
+    $border: 2px solid #00000080
+    .wrap
+        height: 100%
+    .scores
+        text-align: center
+        border-top: $border
+        border-bottom: $border
+        padding: 0.5em 0
+
+    .bars
+        border-bottom: $border
+
+    .comment-box
+        border-bottom: $border
+        padding: 1em 0
+
+    .abilities
+        padding: 1em 0
+        border-bottom: $border
+
+    .details
+        height: 100px
+        max-height: 100px
+        padding-bottom: 1em
+
+        .header
+            margin-top: 1em
+
 </style>

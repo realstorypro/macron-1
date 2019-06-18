@@ -34,8 +34,10 @@
         z-index: 1
         color: white !important
     .ui.progress
-        margin-bottom: 1.5em !important
+        margin-top: 0.90em !important
+        margin-bottom: 0.90em !important
         background: rgba(0, 0, 0, 0.75) !important
+
     .bar
         transition: 1.0s all
         min-width: 3px !important
