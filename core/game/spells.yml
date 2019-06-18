@@ -8,31 +8,19 @@ spells:
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of agreement & acknowledgement.'
-    castTime: 500
-
-  haux:
-    name: "Haux Haux"
-    color: "green"
-    icon: 'heart'
-    path: shamanism
-    points: 10
-    energy: 10
-    level: 2
-    direction: 'positive'
-    description: 'A spell of protection cast by the Shamans of the amazon.'
+    description: 'A sign of agreement first used by the Native American Tribes.'
     castTime: 500
 
   shush:
     name: "Shush"
     color: "red"
-    icon: 'stop circle'
+    icon: 'shield alternate'
     path: shamanism
-    points: 10
+    points: 5
     energy: 10
-    level: 2
+    level: 1
     direction: 'negative'
-    description: 'A spell of protection cast by the Shamans of the amazon.'
+    description: 'A spell of disagreement used by the Shamans of the amazon.'
     castTime: 500
 
   om:
@@ -44,17 +32,17 @@ spells:
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of protection cast by the Shamans of the amazon.'
+    description: 'A spell of agreement first cast by Yogis of india.'
     castTime: 500
 
-  namaste:
-    name: "Namaste"
-    color: "green"
-    icon: 'hand spock'
+  hush:
+    name: "Hush"
+    color: "red"
+    icon: 'bell'
     path: yoga
-    points: 10
+    points: 5
     energy: 10
-    level: 2
-    direction: 'positive'
-    description: 'A spell of protection cast by the Shamans of the amazon.'
+    level: 1
+    direction: 'negative'
+    description: 'A spell of dis-agreement first cast by Yogis of india.'
     castTime: 500

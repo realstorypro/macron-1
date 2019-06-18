@@ -32,7 +32,10 @@
             'close-popover': VClosePopover
         methods:
             formatToInt: (value) ->
-                Number(value).toFixed(0)
+                if value > 1000
+                    "#{Number(value/1000).toFixed(1)}k"
+                else
+                    Number(value).toFixed(0)
 </script>
 
 <style lang="sass" scoped>
