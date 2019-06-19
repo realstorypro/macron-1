@@ -1,8 +1,6 @@
 import Vue from 'vue/dist/vue.esm'
-import Vuex from 'vuex'
 import axios from 'axios'
-
-Vue.use(Vuex)
+import Vuex from 'vuex'
 
 store = new (Vuex.Store)(
   state:

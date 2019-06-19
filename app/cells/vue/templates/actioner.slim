@@ -1,1 +1,6 @@
-reactions :user-id="#{options[:data][:user_id]}" :subject-id="#{options[:data][:subject_id]}" component="#{options[:data][:component]}"
+template v-for="score in scores"
+  score v-bind="score"
+= divider
+= button class: 'green fluid', v: {'on:click': 'showMobileModal'}
+  = icon 'comment'
+  | Respond

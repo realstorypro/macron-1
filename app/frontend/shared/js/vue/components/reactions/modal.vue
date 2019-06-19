@@ -1,27 +1,28 @@
 <template lang="pug">
-    .wrap
-        .ui.grid
-            .sixteen.wide.mobile.seven.wide.computer.centered.column
-                .scores
-                    template(v-for="score in scores")
-                        score(v-bind="score")
-                .bars
-                    progress-bar(:label="'Level ' + level" color="purple" :percent="70" :active-cast="false")
-                    progress-bar(label="Energy" color="orange" :percent="energyPercent" :active-cast="false")
-                    progress-bar(label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast")
-                .comment-box
-                    redactor(v-model='comment' :config='redactorConfig')
-                .abilities
-                    template(v-for="spell in spells")
-                        ability-button(@use-ability="useAbility" @casting="doCast" v-bind="spell" v-bind:active-cast="activeCast")
-                .details
-                    template(v-if="selectedAbility")
-                        ability-details(v-bind="selectedAbility")
-                    template(v-else="")
-                        // select-ability
-                        h5.ui.header
-                            i.icon.huge.hand.pointing.up
-                            .content Select a Reaction
+    modal(name='reaction-modal' width="100%" height="100%" transition="pop-out" :classes="modalClasses")
+        .wrap
+            .ui.grid
+                .sixteen.wide.mobile.seven.wide.computer.centered.column
+                    .scores
+                        template(v-for="score in scores")
+                            score(v-bind="score")
+                    .bars
+                        progress-bar(:label="'Level ' + level" color="purple" :percent="70" :active-cast="false")
+                        progress-bar(label="Energy" color="orange" :percent="energyPercent" :active-cast="false")
+                        progress-bar(label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast")
+                    .comment-box
+                        redactor(v-model='comment' :config='redactorConfig')
+                    .abilities
+                        template(v-for="spell in spells")
+                            ability-button(@use-ability="useAbility" @casting="doCast" v-bind="spell" v-bind:active-cast="activeCast")
+                    .details
+                        template(v-if="selectedAbility")
+                            ability-details(v-bind="selectedAbility")
+                        template(v-else="")
+                            // select-ability
+                            h5.ui.header
+                                i.icon.huge.hand.pointing.up
+                                .content Select a Reaction
 
 </template>
 
@@ -59,6 +60,10 @@
             'tooltip': VTooltip
             'close-popover': VClosePopover
         computed:
+            modalClasses: ->
+                classes = ["reaction-modal"]
+                classes.push ["mobile-version"] if @isMobile()
+                classes
             scores: ->
                 store.state.entry
             level: ->
@@ -96,6 +101,10 @@
                     store.dispatch('reduceEnergy', ability[0].energy)
 
                     @activeCast = true
+            isMobile: ->
+                utils.is_mobile()
+            showMobileModal: ->
+                @.$modal.show('reaction-modal')
         data: ->
             current_access_key: null
             castPercent: 0
@@ -105,7 +114,7 @@
                 minHeight: '100%'
                 maxHeight: '100%'
         mounted: ->
-            wrap_height =  $(@.$el).outerHeight()
+            wrap_height =  $(@.$el).find('.wrap').outerHeight()
             scores_height =  $(@.$el).find('.scores').outerHeight()
             bars_height =  $(@.$el).find('.bars').outerHeight()
             abilities_height =  $(@.$el).find('.abilities').outerHeight()

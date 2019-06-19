@@ -5,6 +5,7 @@ import Dispatcher from './core/dispatcher'
 import Token from './core/token'
 import Render from './core/render'
 import Vue from './core/vue'
+import VueComponents from './core/vue_components'
 
 import Notifications from './widgets/notifications'
 import Drawer from './widgets/drawer'
@@ -30,6 +31,7 @@ import Cover from './vue/cover'
 import Feed from './vue/feed'
 import SocialSharing from './vue/social_sharing'
 import Actioner from './vue/actioner'
+import ReactionsModal from './vue/reactions_modal'
 import Author from './vue/author'
 
 import Cable from './core/cable'
@@ -70,6 +72,7 @@ cover = new Cover
 feed = new Feed
 social_sharing = new SocialSharing
 actioner = new Actioner
+reactions_modal = new ReactionsModal
 author = new Author
 
 class Client_app
