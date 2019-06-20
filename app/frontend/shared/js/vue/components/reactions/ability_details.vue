@@ -3,7 +3,7 @@
         h5.ui.header
             i.icon.huge(v-bind:class='[icon, color]')
             .content {{ name }}
-        .detail-wrapper(v-bind:class='[color]')
+        .detail-wrapper
             .direction(v-bind:class='[color]')
                 | {{ directionSign }}
             .points(v-bind:class='[color]')
@@ -30,8 +30,9 @@
 </script>
 
 <style lang="sass" scoped>
-    $red: red
+    $border: 2px solid #00000080
     $green: green
+    $red: red
     $blue: blue
 
     .wrapper
@@ -42,16 +43,7 @@
 
         .detail-wrapper
             display: flex
-            padding-top: 1em
-
-            &.green
-                border-top: 2px solid $green
-
-            &.red
-                border-top: 2px solid $red
-
-            &.blue
-                border-top: 2px solid $blue
+                border-top: 2px solid $border
 
         .direction
             display: flex
@@ -73,6 +65,7 @@
 
             p
                 color: black
+                margin-bottom: 0
 
         .green
            color: $green

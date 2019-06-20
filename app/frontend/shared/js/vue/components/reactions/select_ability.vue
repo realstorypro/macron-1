@@ -19,7 +19,6 @@
 
     .details
         flex: 85%
-
         p
             color: black
 </style>

@@ -1,24 +1,28 @@
 //modal :user-id="#{options[:data][:user_id]}" :subject-id="#{options[:data][:subject_id]}" component="#{options[:data][:component]}"
-modal name='reaction-modal' transition="pop-out" height="80%" width="70%"
-  = grid 'centered'
-    = column computer: 7, mobile: 16
-      .scores
-        template v-for="score in scores"
-          score v-bind="score"
-      .bars
-        progress-bar :label="'Level ' + level" color="purple" :percent="70" :active-cast="false"
-        progress-bar label="Energy" color="orange" :percent="energyPercent" :active-cast="false"
-        progress-bar label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast"
-      .comment-box
-        redactor v-model='comment' :config='redactorConfig'
-      .abilities
-        template v-for="spell in spells"
-          ability-button @use-ability="useAbility" @casting="doCast" v-bind="spell" v-bind:active-cast="activeCast"
-      .details
-        template v-if="selectedAbility"
-          ability-details v-bind="selectedAbility"
-        template(v-else="")
-          = h5
-            = icon 'huge hand pointing up'
-            = content
-              | Select a Reaction
+modal name='reaction-modal' transition="pop-out" :height="modalHeight" :width="modalWidth" @opened="sizeCommentsBox"
+  = grid
+    = column computer: 16, mobile: 16
+      = content
+        //.score
+        //  template v-for="score in scores"
+        //    score v-bind="score"
+        .close.holder
+          a @click="closeModal"
+            = icon class: 'close'
+        .bars
+          progress-bar :label="'Level ' + level" color="purple" :percent="70" :active-cast="false"
+          progress-bar label="Energy" color="orange" :percent="energyPercent" :active-cast="false"
+          progress-bar label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast"
+        .comment-box
+          redactor v-model='comment' :config='redactorConfig'
+        .abilities
+          template v-for="spell in spells"
+            ability-button @use-ability="useAbility" @casting="doCast" v-bind="spell" v-bind:active-cast="activeCast"
+        .details
+          template v-if="selectedAbility"
+            ability-details v-bind="selectedAbility"
+          template(v-else="")
+            = h5
+              = icon 'huge hand pointing up'
+              = content
+                | Select a Reaction

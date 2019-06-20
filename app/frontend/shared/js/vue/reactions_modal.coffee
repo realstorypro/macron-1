@@ -15,6 +15,8 @@ import AbilityDetails from '../vue/components/reactions/ability_details'
 import SelectAbility from '../vue/components/reactions/select_ability'
 import Redactor from '../vue/components/redactor'
 
+utils = new Utils
+
 
 class ReactionsModal extends Common
   constructor: ->
@@ -56,6 +58,19 @@ class ReactionsModal extends Common
           store.state.user.spells.filter((item) =>
             item.access_key == @current_access_key
           )
+
+        modalWidth: ->
+          if utils.is_mobile()
+            "100%"
+          else
+            "650px"
+
+        modalHeight: ->
+          if utils.is_mobile()
+            "100%"
+          else
+            "700px"
+
       methods:
         useAbility: (event) ->
           @current_access_key = event
@@ -76,26 +91,27 @@ class ReactionsModal extends Common
             store.dispatch('reduceEnergy', ability[0].energy)
 
             @activeCast = true
+        closeModal: ->
+          @.$modal.hide('reaction-modal')
+
+        sizeCommentsBox: (e) ->
+          wrap_height =  $(@.$el).find('.v--modal').outerHeight(true)
+          bars_height =  $(@.$el).find('.bars').outerHeight(true)
+          abilities_height =  $(@.$el).find('.abilities').outerHeight(true)
+          details_height =  $(@.$el).find('.details').outerHeight(true)
+
+          if utils.is_mobile()
+            adjustment = 150
+          else
+            adjustment = 140
+
+          # 54 is the size of the readactor toolbar
+          comment_height = wrap_height - bars_height - abilities_height - details_height - 54 - adjustment
+
+          $(@.$el).find('.redactor-in').css('min-height', "#{comment_height}px")
+          $(@.$el).find('.redactor-in').css('max-height', "#{comment_height}px")
 
       mounted: ->
-        wrap_height =  $(@.$el).find('.wrap').outerHeight()
-        scores_height =  $(@.$el).find('.scores').outerHeight()
-        bars_height =  $(@.$el).find('.bars').outerHeight()
-        abilities_height =  $(@.$el).find('.abilities').outerHeight()
-        details_height =  $(@.$el).find('.details').outerHeight()
-
-        console.log 'heights', wrap_height, scores_height, bars_height, abilities_height, details_height
-
-
-        # 54 is the size of the readactor toolbar
-        comment_height = wrap_height - scores_height - bars_height - abilities_height - details_height - 54 - 50
-        console.log comment_height
-
-        $(@.$el).find('.redactor-in').css('min-height', "#{comment_height}px")
-        $(@.$el).find('.redactor-in').css('max-height', "#{comment_height}px")
-
-
-
         store.dispatch('loadUser', @widget.userId)
         store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
 
