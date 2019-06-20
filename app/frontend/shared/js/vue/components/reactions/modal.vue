@@ -1,5 +1,6 @@
 <template lang="pug">
-    modal(name='reaction-modal' width="100%" height="100%" transition="pop-out" :classes="modalClasses")
+    //modal(name='reaction-modal' width="100%" height="100%" transition="pop-out" :classes="modalClasses")
+    modal(name='reaction-modal' transition="pop-out")
         .wrap
             .ui.grid
                 .sixteen.wide.mobile.seven.wide.computer.centered.column
