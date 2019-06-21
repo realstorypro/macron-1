@@ -2,8 +2,11 @@ import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
 import turbolinks_adapter from './mixins/turbolinks'
 
-# Refactor Out
 import Utils from '../core/utils'
+import Vent from '../core/vent'
+
+utils = new Utils
+vent = new Vent
 
 import axios from 'axios'
 import store from '../vue/store/user_store'
@@ -15,7 +18,6 @@ import AbilityDetails from '../vue/components/reactions/ability_details'
 import SelectAbility from '../vue/components/reactions/select_ability'
 import Redactor from '../vue/components/redactor'
 
-utils = new Utils
 
 
 class ReactionsModal extends Common
@@ -95,6 +97,8 @@ class ReactionsModal extends Common
           @.$modal.hide('reaction-modal')
 
         sizeCommentsBox: (e) ->
+          vent.channel().trigger "navigation", "hide"
+
           wrap_height =  $(@.$el).find('.v--modal').outerHeight(true)
           bars_height =  $(@.$el).find('.bars').outerHeight(true)
           abilities_height =  $(@.$el).find('.abilities').outerHeight(true)
