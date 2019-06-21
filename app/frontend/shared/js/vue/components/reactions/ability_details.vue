@@ -38,12 +38,9 @@
     .wrapper
         min-height: 120px
 
-        .header
-            margin-top: 1em
-
         .detail-wrapper
             display: flex
-                border-top: 2px solid $border
+                border-top: $border
 
         .direction
             display: flex
