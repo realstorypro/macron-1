@@ -9,7 +9,7 @@
             .points(v-bind:class='[color]')
                 .low {{ points.low }}
                 .high {{ points.high }}
-            .details
+            .details-text
                 p.text {{ description}}
 </template>
 
@@ -28,48 +28,3 @@
                 return "-" if @direction is 'negative'
 
 </script>
-
-<style lang="sass" scoped>
-    $border: 2px solid #00000080
-    $green: green
-    $red: red
-    $blue: blue
-
-    .wrapper
-        min-height: 120px
-
-        .detail-wrapper
-            display: flex
-                border-top: $border
-
-        .direction
-            display: flex
-            flex: 1%
-            font-size: 1.1em
-            font-weight: bold
-            justify-content: center
-            flex-direction: column
-
-        .points
-            display: flex
-            flex: 12%
-            font-size: 1.2em
-            text-align: center
-            justify-content: center
-            flex-direction: column
-        .details
-            flex: 85%
-
-            p
-                color: black
-                margin-bottom: 0
-
-        .green
-           color: $green
-
-        .red
-            color: $red
-
-        .blue
-            color: $blue
-</style>

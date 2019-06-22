@@ -20,9 +20,52 @@ $border: 2px solid #00000080
     border-bottom: $border
 
   .details
-    height: 100px
-    max-height: 100px
+    height: 70px
+    max-height: 70px
     padding-bottom: 1em
 
     .header
       margin-top: 0em
+      margin-bottom: 0
+
+    .detail-wrapper
+      display: flex
+      border-top: $border
+      padding-top: 1em
+
+    .direction
+      display: flex
+      flex: 1%
+      font-size: 1.1em
+      font-weight: bold
+      justify-content: center
+      flex-direction: column
+
+    .points
+      display: flex
+      flex: 12%
+      font-size: 1.2em
+      text-align: center
+      justify-content: center
+      flex-direction: column
+      @include media("<desktop")
+        flex: 20%
+
+    .details-text
+      flex: 85%
+      @include media("<desktop")
+        flex: 80%
+
+      p
+        color: black
+        margin-bottom: 0
+
+    .green
+      color: $green
+
+    .red
+      color: $red
+
+    .blue
+      color: $blue
+

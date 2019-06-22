@@ -65,13 +65,13 @@ class ReactionsModal extends Common
           if utils.is_mobile()
             "100%"
           else
-            "650px"
+            "500px"
 
         modalHeight: ->
           if utils.is_mobile()
-            "100%"
+            "400px"
           else
-            "700px"
+            "420px"
 
       methods:
         useAbility: (event) ->
@@ -93,29 +93,17 @@ class ReactionsModal extends Common
             store.dispatch('reduceEnergy', ability[0].energy)
 
             @activeCast = true
+
+        # Modal Methods
         closeModal: ->
-          $('body').css('overflow', 'auto')
           @.$modal.hide('reaction-modal')
 
-        afterModelOpen: (e) ->
+        afterModalOpen: (e) ->
           vent.channel().trigger "navigation", "hide"
           $('body').css('overflow', 'hidden')
 
-          wrap_height =  $(@.$el).find('.v--modal').outerHeight(true)
-          bars_height =  $(@.$el).find('.bars').outerHeight(true)
-          abilities_height =  $(@.$el).find('.abilities').outerHeight(true)
-          details_height =  $(@.$el).find('.details').outerHeight(true)
-
-          if utils.is_mobile()
-            adjustment = 150
-          else
-            adjustment = 140
-
-          # 54 is the size of the readactor toolbar
-          comment_height = wrap_height - bars_height - abilities_height - details_height - 54 - adjustment
-
-          $(@.$el).find('.redactor-in').css('min-height', "#{comment_height}px")
-          $(@.$el).find('.redactor-in').css('max-height', "#{comment_height}px")
+        afterModalClosed: (e) ->
+          $('body').css('overflow', '')
 
       mounted: ->
         store.dispatch('loadUser', @widget.userId)

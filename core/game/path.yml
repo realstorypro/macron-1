@@ -1,7 +1,7 @@
 paths:
   shamanism:
     skill: "Shaman"
-    icon: "universal access"
+    icon: "fire"
     description: A path of a Shaman
 
   yoga:
