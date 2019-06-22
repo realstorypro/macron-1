@@ -100,10 +100,8 @@ class ReactionsModal extends Common
 
         afterModalOpen: (e) ->
           vent.channel().trigger "navigation", "hide"
-          $('body').css('overflow', 'hidden')
 
         afterModalClosed: (e) ->
-          $('body').css('overflow', '')
 
       mounted: ->
         store.dispatch('loadUser', @widget.userId)

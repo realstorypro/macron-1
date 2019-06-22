@@ -57,7 +57,10 @@ class Author extends Common
 
       methods:
         formatToInt: (value) ->
-          "#{Number(value).toFixed(0)} Reputation"
+          if value > 1000
+            "#{Number(value/1000).toFixed(1)}k Reputation"
+          else
+            "#{Number(value).toFixed(0)} Reputation"
         support: ->
           axios.post("/api/v1/users/#{@widget.userId}/support").then(
             (rsp) ->
