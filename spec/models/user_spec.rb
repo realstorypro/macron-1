@@ -117,6 +117,7 @@ describe User, type: :model do
   describe "playing with others" do
     before :all do
       @player1 = FactoryBot.create(:user, :admin)
+      @player1.regenerate_energy
       @article = FactoryBot.create(:article)
       @player2 = @article.user
     end
