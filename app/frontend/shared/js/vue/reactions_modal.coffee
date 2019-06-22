@@ -117,5 +117,6 @@ class ReactionsModal extends Common
           received: (_data) =>
             store.dispatch('loadUser', @widget.userId)
             @activeCast = false
+            @closeModal()
 
 export { ReactionsModal as default }
