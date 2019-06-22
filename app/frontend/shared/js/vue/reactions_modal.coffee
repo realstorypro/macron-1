@@ -94,10 +94,12 @@ class ReactionsModal extends Common
 
             @activeCast = true
         closeModal: ->
+          $('body').css('overflow', 'auto')
           @.$modal.hide('reaction-modal')
 
-        sizeCommentsBox: (e) ->
+        afterModelOpen: (e) ->
           vent.channel().trigger "navigation", "hide"
+          $('body').css('overflow', 'hidden')
 
           wrap_height =  $(@.$el).find('.v--modal').outerHeight(true)
           bars_height =  $(@.$el).find('.bars').outerHeight(true)
