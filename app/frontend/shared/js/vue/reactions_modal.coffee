@@ -101,8 +101,6 @@ class ReactionsModal extends Common
         afterModalOpen: (e) ->
           vent.channel().trigger "navigation", "hide"
 
-        afterModalClosed: (e) ->
-
       mounted: ->
         store.dispatch('loadUser', @widget.userId)
         store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
