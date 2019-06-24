@@ -20,7 +20,6 @@ class Setting < ApplicationRecord
   end
 
   private
-
     def clear_cache
       SiteSettingInterface.instance.clear_cache
     end

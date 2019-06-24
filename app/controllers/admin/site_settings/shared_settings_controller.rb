@@ -10,7 +10,6 @@ module Admin::SiteSettings
     before_action :append_actions, only: :show
 
     private
-
       def append_actions
         unless current_user.help
           add_to_actions(

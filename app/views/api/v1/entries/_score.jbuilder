@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.access_key score[0]
 json.name score[1][:name]
 json.icon score[1][:icon]

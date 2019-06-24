@@ -97,7 +97,6 @@ module User::State
     end
 
     private
-
       # returns the level based on the amount of points
       # @param [Integer] points number of points
       # @return [Integer] a level for the number of points
@@ -179,6 +178,5 @@ module User::State
       def get_spell(spell)
         get_spells.each { |current_spell| return current_spell[1] if current_spell[0] == spell }
       end
-
   end
 end

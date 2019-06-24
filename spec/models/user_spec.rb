@@ -91,7 +91,7 @@ describe User, type: :model do
       expect(@user.state.points).to be(0)
     end
   end
-  
+
   describe "playing points" do
     before :all do
       @user = FactoryBot.create(:user, :admin)
@@ -126,6 +126,5 @@ describe User, type: :model do
       expect { @player1.cast_spell!(:aho, @article) }.to change { @player2.state.points }.by(5)
     end
   end
-
 end
 # rubocop:enable BlockLength

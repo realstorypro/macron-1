@@ -9,7 +9,7 @@ module User::Supporters
     end
 
     def supporters_count
-      self.followers_by_type_count('User')
+      self.followers_by_type_count("User")
     end
 
     def supporting?(user)

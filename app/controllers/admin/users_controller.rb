@@ -93,7 +93,6 @@ module Admin
     end
 
     private
-
       def add_delete_ability
         add_to_actions(
           text: "Delete",

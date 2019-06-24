@@ -10,7 +10,6 @@ class ProfileController < MembersController
   end
 
   private
-
     def preload_entry
       @member = current_user
     end

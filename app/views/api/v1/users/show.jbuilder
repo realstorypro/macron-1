@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.username @user.username
 json.avatar @user.profile.avatar
 json.first_name @user.profile.first_name

@@ -8,7 +8,6 @@ module AdminAccess
   end
 
     private
-
       def authorize_admin
         redirect_to "/403" unless Pundit.policy(current_user, :headless).index?(:admin)
       end

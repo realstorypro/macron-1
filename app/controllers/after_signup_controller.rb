@@ -85,7 +85,6 @@ class AfterSignupController < ApplicationController
   end
 
   private
-
     def init_nexmo
       @nexmo = Nexmo::Client.new
     end

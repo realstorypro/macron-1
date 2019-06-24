@@ -11,7 +11,7 @@ module Vue
 
     def id
       uuid ||= Random.new.rand(100)
-      name.gsub(' ','_') + uuid.to_s
+      name.gsub(" ", "_") + uuid.to_s
     end
 
     def current_user

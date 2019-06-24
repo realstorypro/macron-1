@@ -66,7 +66,6 @@ module NavHelper
   end
 
   private
-
     def menu_class(options = {})
       defaults = { expanded_color: "black", collapsed_color: "black", bordered: false }
       options = defaults.merge(options)

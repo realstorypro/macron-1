@@ -10,7 +10,6 @@ module Navigation
     end
 
     private
-
       # checks if the menu item should be shown
       def show_item?(menu_item)
         # short circuits rendering unless the menu is enabled
