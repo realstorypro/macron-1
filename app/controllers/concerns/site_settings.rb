@@ -10,7 +10,6 @@ module SiteSettings
   end
 
   private
-
     def load_site_settings
       @site_settings = SiteSettingInterface.instance.fetch
     end

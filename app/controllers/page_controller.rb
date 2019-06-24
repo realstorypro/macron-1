@@ -57,7 +57,6 @@ class PageController < ApplicationController
   end
 
     private
-
       def page_defined?(name)
         Settings.pages.each do |page|
           return true if page.to_s == name.to_s

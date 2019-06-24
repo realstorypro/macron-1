@@ -38,7 +38,6 @@ module Admin
     end
 
     private
-
       def build_button_class(base_class)
         base_class ||= ""
         base_class << (" " + icon_position.to_s + " labeled icon") if labeled?

@@ -2,7 +2,6 @@
 
 # Unifies event tracking for the application
 module Trackable
-  require "ostruct"
   extend ActiveSupport::Concern
 
   # Unified user identification
@@ -16,8 +15,10 @@ module Trackable
   # @option params [String] :event Name of the event
   # @option params [Hash] :props Properties to track
   def track(params)
-    # set the default parameters for user
-    params[:user] = OpenStruct.new(id: current_visit.visitor_token) unless current_user
+    # TODO: Add guest users for analytics
+    # OLD CODE FOR REFERENCE ONLY
+    # NO LONGER FUNCTIONAL
+    # params[:user] = OpenStruct.new(id: current_visit.visitor_token) unless current_user
     params[:user] = current_user if current_user
 
     # record event in ahoy

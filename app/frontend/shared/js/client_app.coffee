@@ -5,6 +5,7 @@ import Dispatcher from './core/dispatcher'
 import Token from './core/token'
 import Render from './core/render'
 import Vue from './core/vue'
+import VueComponents from './core/vue_components'
 
 import Notifications from './widgets/notifications'
 import Drawer from './widgets/drawer'
@@ -29,8 +30,11 @@ import Audio from './vue/audio'
 import Cover from './vue/cover'
 import Feed from './vue/feed'
 import SocialSharing from './vue/social_sharing'
-import Follower from './vue/follower'
-import Liker from './vue/liker'
+import Actioner from './vue/actioner'
+import ReactionsModal from './vue/reactions_modal'
+import Author from './vue/author'
+
+import Cable from './core/cable'
 
 
 # Core Components
@@ -67,14 +71,16 @@ audio = new Audio
 cover = new Cover
 feed = new Feed
 social_sharing = new SocialSharing
-follower = new Follower
-liker = new Liker
+actioner = new Actioner
+reactions_modal = new ReactionsModal
+author = new Author
 
 class Client_app
 
   initialize: ->
     @setup()
     @register_service_workers()
+    @setup_action_cable()
 
   reload: ->
     @teardown()
@@ -102,6 +108,9 @@ class Client_app
         console.log 'Service Worker Registration Successful at:', reg.scope
       ).catch (error) ->
         console.log 'Registration failed with ' + error
+
+  setup_action_cable: ->
+    window.cable = (new Cable).consumer()
 
 
   teardown: ->

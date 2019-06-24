@@ -46,7 +46,6 @@ class AnalyticsProxy
       event: params[:event],
       properties: params[:props]
     )
-
     true
   end
 end

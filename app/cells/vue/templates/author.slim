@@ -1,0 +1,34 @@
+= h5
+    .ui.image.avatar
+      avatar(v-bind:username='username' v-bind:src='avatar' :rounded='true' :size='50')
+    = content
+      = link_to url_helpers.member_path(options[:user])
+        | {{first_name}} {{ last_name }}
+        = header class: 'sub'
+          | @{{ username }}
+= divider
+= list
+  = item
+    = icon 'briefcase'
+    = content text: "{{ job }}"
+  = item
+    = icon 'users'
+    = content text: "{{ supporters }} Supporters "
+  = item
+    = icon 'fire'
+    = content
+      animated-number :value="points" :format-value="formatToInt" :duration="400"
+  = item v: {for: "path in paths"}
+    = icon v:{'bind:class':"path.icon"}
+    = content text: "Level {{path.level}} {{ path.skill }}"
+= divider
+template v-if="widget.supporting"
+  = button class: 'fluid orange',
+          v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
+    | Stop Supporting &nbsp;
+    = icon 'angle double down'
+template v-else="widget.supporting"
+  = button class: 'fluid orange basic',
+          v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
+    | Support &nbsp;
+    = icon 'angle double up'

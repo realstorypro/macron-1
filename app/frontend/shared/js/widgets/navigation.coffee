@@ -1,12 +1,15 @@
 import Utils from '../core/utils'
+import Vent from '../core/vent'
 
 utils =  new Utils
+vent = new Vent
 
 class Navigation
   instance = null
 
   constructor: ->
     @pre_cache_cleanup()
+    @register_events()
 
     if !instance
       instance = this
@@ -17,6 +20,12 @@ class Navigation
   reinit: () ->
     @teardown()
     @setup()
+
+  register_events: () ->
+    vent.channel().on "navigation", (action) =>
+
+      switch action
+        when 'hide' then @hideNavbar()
 
 
   setup: () ->
@@ -85,6 +94,11 @@ class Navigation
 
       last_scroll_position = scroll_position
 
+
+  hideNavbar: () ->
+    navbar = $('.navigation.widget')
+    navbar_height = navbar.outerHeight()
+    navbar.css('top', "-#{navbar_height+15}px")
 
   teardown: () ->
     utils.log 'teardown', 'teardown()', 'navigation'

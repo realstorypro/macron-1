@@ -3,8 +3,14 @@
 require "friendly_id"
 
 class User < ApplicationRecord
+  has_merit
+
   include SettingsHelper
   extend FriendlyId
+
+  # Social & Gamification Concerns
+  include User::Supporters
+  include User::State
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -24,6 +30,8 @@ class User < ApplicationRecord
   has_many :videos
   has_many :discussions
   has_many :podcasts
+  has_many :events
+  has_many :activities, as: :actor
 
   # Setting Default Scope
   default_scope { includes(:profile).joins(:profile) }
@@ -37,6 +45,8 @@ class User < ApplicationRecord
   after_create :assign_default_role!
   before_create :build_profile
   before_save :unverify_phone?
+  after_update :broadcast_activity
+
 
   # Validations
   validates :username, presence: true, uniqueness: { case_sensitive: false }
@@ -46,8 +56,11 @@ class User < ApplicationRecord
   # Adding Alias
   alias_attribute :name, :username
 
-  acts_as_follower
   acts_as_followable
+  acts_as_follower
+
+  # Gamification
+  acts_as_voter
 
   # Temproarley Disabling Until 2FA is Enabled
 
@@ -151,5 +164,9 @@ class User < ApplicationRecord
 
   def self.policy_class
     UserPolicy
+  end
+
+  def broadcast_activity
+    ActionCable.server.broadcast("user_#{self.id}", user_id: self.id)
   end
 end

@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.5.0"
+ruby "2.6.1"
 
 # Core
 gem "acts_as_list"
@@ -20,8 +20,14 @@ gem "friendly_id", "~> 5.1.0"
 gem "wicked"
 gem "sidekiq"
 gem "store_base_sti_class"
-gem "public_activity"
-gem "socialization"
+
+# Gamification
+gem "merit"
+gem "acts_as_follower", github: "tcocca/acts_as_follower"
+gem "acts_as_votable", "~> 0.12.0"
+
+
+
 
 # Analytics
 gem "ahoy_matey"
@@ -91,6 +97,7 @@ end
 
 group :development do
   gem "rb-readline"
+  gem "rails-erd"
 
   gem "better_errors"
   gem "binding_of_caller"
@@ -118,8 +125,8 @@ group :test do
   gem "codecov", require: false
 
   # rubocop
-  gem "rubocop"
-  gem "rubocop-rails_config"
+  gem "rubocop", "~> 0.70"
+  gem "rubocop-rails_config", "~> 0.6.2"
 
   # browser testing
   gem "selenium-webdriver"

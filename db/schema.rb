@@ -10,28 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_164004) do
+ActiveRecord::Schema.define(version: 2019_06_09_082141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.string "trackable_type"
-    t.bigint "trackable_id"
-    t.string "owner_type"
-    t.bigint "owner_id"
-    t.string "key"
-    t.text "parameters"
-    t.string "recipient_type"
-    t.bigint "recipient_id"
+    t.string "actor_type"
+    t.bigint "actor_id"
+    t.string "subject_type"
+    t.bigint "subject_id"
+    t.json "payload"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type"
-    t.index ["owner_type", "owner_id"], name: "index_activities_on_owner_type_and_owner_id"
-    t.index ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type"
-    t.index ["recipient_type", "recipient_id"], name: "index_activities_on_recipient_type_and_recipient_id"
-    t.index ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
-    t.index ["trackable_type", "trackable_id"], name: "index_activities_on_trackable_type_and_trackable_id"
+    t.index ["actor_type", "actor_id"], name: "index_activities_on_actor_type_and_actor_id"
+    t.index ["subject_type", "subject_id"], name: "index_activities_on_subject_type_and_subject_id"
   end
 
   create_table "ahoy_events", force: :cascade do |t|
@@ -78,6 +71,16 @@ ActiveRecord::Schema.define(version: 2019_04_06_164004) do
     t.string "areable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "badges_sashes", force: :cascade do |t|
+    t.integer "badge_id"
+    t.integer "sash_id"
+    t.boolean "notified_user", default: false
+    t.datetime "created_at"
+    t.index ["badge_id", "sash_id"], name: "index_badges_sashes_on_badge_id_and_sash_id"
+    t.index ["badge_id"], name: "index_badges_sashes_on_badge_id"
+    t.index ["sash_id"], name: "index_badges_sashes_on_sash_id"
   end
 
   create_table "blazer_audits", force: :cascade do |t|
@@ -191,12 +194,14 @@ ActiveRecord::Schema.define(version: 2019_04_06_164004) do
     t.index ["user_id"], name: "index_entries_on_user_id"
   end
 
-  create_table "follows", force: :cascade do |t|
-    t.string "follower_type"
-    t.integer "follower_id"
-    t.string "followable_type"
-    t.integer "followable_id"
+  create_table "follows", id: :serial, force: :cascade do |t|
+    t.string "followable_type", null: false
+    t.integer "followable_id", null: false
+    t.string "follower_type", null: false
+    t.integer "follower_id", null: false
+    t.boolean "blocked", default: false, null: false
     t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["followable_id", "followable_type"], name: "fk_followables"
     t.index ["follower_id", "follower_type"], name: "fk_follows"
   end
@@ -221,6 +226,41 @@ ActiveRecord::Schema.define(version: 2019_04_06_164004) do
     t.index ["mentioner_id", "mentioner_type"], name: "fk_mentions"
   end
 
+  create_table "merit_actions", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "action_method"
+    t.integer "action_value"
+    t.boolean "had_errors", default: false
+    t.string "target_model"
+    t.integer "target_id"
+    t.text "target_data"
+    t.boolean "processed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "merit_activity_logs", force: :cascade do |t|
+    t.integer "action_id"
+    t.string "related_change_type"
+    t.integer "related_change_id"
+    t.string "description"
+    t.datetime "created_at"
+  end
+
+  create_table "merit_score_points", force: :cascade do |t|
+    t.bigint "score_id"
+    t.integer "num_points", default: 0
+    t.string "log"
+    t.datetime "created_at"
+    t.index ["score_id"], name: "index_merit_score_points_on_score_id"
+  end
+
+  create_table "merit_scores", force: :cascade do |t|
+    t.bigint "sash_id"
+    t.string "category", default: "default"
+    t.index ["sash_id"], name: "index_merit_scores_on_sash_id"
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.jsonb "payload"
     t.datetime "created_at", null: false
@@ -237,6 +277,11 @@ ActiveRecord::Schema.define(version: 2019_04_06_164004) do
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["name"], name: "index_roles_on_name"
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
+  end
+
+  create_table "sashes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "settings", force: :cascade do |t|
@@ -285,6 +330,9 @@ ActiveRecord::Schema.define(version: 2019_04_06_164004) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.integer "sash_id"
+    t.integer "level", default: 0
+    t.integer "energy", default: 0
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -298,6 +346,20 @@ ActiveRecord::Schema.define(version: 2019_04_06_164004) do
     t.index ["role_id"], name: "index_users_roles_on_role_id"
     t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
     t.index ["user_id"], name: "index_users_roles_on_user_id"
+  end
+
+  create_table "votes", id: :serial, force: :cascade do |t|
+    t.string "votable_type"
+    t.integer "votable_id"
+    t.string "voter_type"
+    t.integer "voter_id"
+    t.boolean "vote_flag"
+    t.string "vote_scope"
+    t.integer "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
+    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
 end

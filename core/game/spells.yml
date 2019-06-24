@@ -1,0 +1,48 @@
+spells:
+  aho:
+    name: "Aho"
+    color: "green"
+    icon: 'shield alternate'
+    path: shamanism
+    points: 5
+    energy: 10
+    level: 1
+    direction: 'positive'
+    description: 'A sign of agreement first used by the Native American Tribes.'
+    castTime: 500
+
+  shush:
+    name: "Shush"
+    color: "red"
+    icon: 'shield alternate'
+    path: shamanism
+    points: 5
+    energy: 10
+    level: 1
+    direction: 'negative'
+    description: 'A spell of disagreement used by the Shamans of the amazon.'
+    castTime: 500
+
+  om:
+    name: "Om"
+    color: "green"
+    icon: 'bell'
+    path: yoga
+    points: 5
+    energy: 10
+    level: 1
+    direction: 'positive'
+    description: 'A spell of agreement first cast by Yogis of india.'
+    castTime: 500
+
+  hush:
+    name: "Hush"
+    color: "red"
+    icon: 'bell'
+    path: yoga
+    points: 5
+    energy: 10
+    level: 1
+    direction: 'negative'
+    description: 'A spell of dis-agreement first cast by Yogis of india.'
+    castTime: 500

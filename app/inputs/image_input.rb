@@ -9,7 +9,6 @@ class ImageInput < SimpleForm::Inputs::Base
   end
 
   private
-
     def size(attribute_name)
       component = options[:component]
       size = settings("views.#{component}.new.#{attribute_name}.size")

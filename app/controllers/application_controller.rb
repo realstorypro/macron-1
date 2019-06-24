@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  include PublicActivity::StoreController
-
   include SettingsHelper
 
   include Pundit
@@ -38,7 +36,6 @@ class ApplicationController < ActionController::Base
   end
 
     private
-
       # Its important that the location is NOT stored if:
       # - The request method is not GET (non idempotent)
       # - The request is handled by a Devise controller such as Devise::SessionsController as that could cause an

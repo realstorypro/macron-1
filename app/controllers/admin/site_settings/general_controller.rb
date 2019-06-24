@@ -20,7 +20,6 @@ module Admin::SiteSettings
     end
 
     private
-
       def load_entry
         @entry = SiteSettings::General.instance
       end

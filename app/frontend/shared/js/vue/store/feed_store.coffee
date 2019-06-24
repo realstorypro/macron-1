@@ -1,11 +1,6 @@
 import Vue from 'vue/dist/vue.esm'
-import Vuex from 'vuex'
 import axios from 'axios'
-import Cable from '../../core/cable'
-
-cable = (new Cable).cable
-
-Vue.use(Vuex)
+import Vuex from 'vuex'
 
 store = new (Vuex.Store)(
   state:
@@ -48,6 +43,7 @@ store = new (Vuex.Store)(
   actions:
     loadActivities: ({commit}, {user_id}) ->
       axios.get("/api/v1/activities/#{user_id}").then (response) =>
+        console.log response.data
         commit('load', response.data)
 
     loadNewActivities: ({commit, state}, {user_id})->

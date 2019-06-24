@@ -1,0 +1,20 @@
+paths:
+  shamanism:
+    skill: "Shaman"
+    icon: "fire"
+    description: A path of a Shaman
+
+  yoga:
+    skill: "Yogi"
+    icon: "heart"
+    description: A path of a Yogi
+
+  scientist:
+    skill: "Scientist"
+    icon: "flask"
+    description: A path of a Yogi
+
+  historian:
+    skill: "Historian"
+    icon: "book"
+    description: A path of a Yogi

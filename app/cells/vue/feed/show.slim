@@ -13,8 +13,8 @@
           a :href="activity.object.url" {{ activity.object.name }}
           .date
             | {{ activity.created_at | from_now_date }}
-        = extra class: 'text', text: "{{ activity.object.body }}", v: {if: 'activity.type == "comment"'}
-        = extra class: 'image', v: {if: 'type_with_images(activity.type)'}
+        /= extra class: 'text', text: "{{ activity.object.body }}", v: {if: 'activity.type == "comment"'}
+        /= extra class: 'image', v: {if: 'type_with_images(activity.type)'}
           img.ui.image.small :src="activity.object.card_image"
 
     = button class: 'fluid small more activities', v: {'on:click.prevent': "load_more_activities()", 'bind:class': 'appending'}

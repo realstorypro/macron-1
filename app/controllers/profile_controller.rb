@@ -2,11 +2,6 @@
 
 # handles the display of the profile model
 class ProfileController < MembersController
-  skip_before_action :preload_entry
-
-  before_action :set_user_to_current
-  before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
-
   layout "layouts/client"
 
   def show
@@ -15,13 +10,8 @@ class ProfileController < MembersController
   end
 
   private
-
-    # setting member to the current user
-    def set_user_to_current
-      @member = current_user
-    end
-
     def preload_entry
+      @member = current_user
     end
 
     def record_view

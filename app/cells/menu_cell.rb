@@ -6,7 +6,6 @@ class MenuCell < BaseCell
   end
 
   private
-
     # renders menu item
     def render_menu_item(menu_item)
       # short circuits rendering unless the menu is enabled

@@ -15,24 +15,13 @@
             = sticky
               = fragment class: 'meta holder'
                 = segment 'secondary'
-                  = h5
-                    = image_tag @entry.user.profile.avatar, class: 'ui image avatar' if @entry.user.profile.avatar
-                    = content
-                      = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name}"
-                      = header 'sub'
-                        = link_to "@#{@entry.user.username}", member_path(@entry.user)
-                        br
-                        | Rep: 5,000
-
-                  = divider
-                  = text text: @entry.user.profile.short_bio
-                  = divider
-                  == vue_widget name: 'follower', data: { user_id: @entry.user.id, following: current_user.follows?(@entry.user) } if current_user
-
-                br
+                  == vue_widget name: 'author', user: @entry.user, data: { user_id: @entry.user.id, supporting: (current_user ? current_user.supporting?(@entry.user) : false) }
                 = segment 'primary'
-                  == vue_widget name: 'liker', data: { user_id: @entry.user.id, likes: 500 }
-                  = divider
+                  - if current_user
+                    == vue_widget name: 'actioner', data: { component: params[:component], subject_id: @entry.id, user_id: current_user.id }
+                    = divider
                   == vue_widget name: 'social sharing'
 
 = render "partials/engager"
+- if current_user
+  == vue_widget name: 'reactions_modal', data: { component: params[:component], subject_id: @entry.id, user_id: current_user.id }

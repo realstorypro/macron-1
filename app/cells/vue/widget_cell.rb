@@ -3,6 +3,7 @@
 module Vue
   class WidgetCell < Cell::ViewModel
     include DcUi::Helpers
+    delegate :url_helpers, to: "::Rails.application.routes"
 
     def show
       render :wrapper
@@ -10,7 +11,11 @@ module Vue
 
     def id
       uuid ||= Random.new.rand(100)
-      name.gsub(' ','_') + uuid.to_s
+      name.gsub(" ", "_") + uuid.to_s
+    end
+
+    def current_user
+      options[:current_user]
     end
 
     def name

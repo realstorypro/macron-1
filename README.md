@@ -65,6 +65,15 @@ permissions:
         - ability
 ```
 
+# Gamification
+
+## Players -> Users
+## Supporters -> Followers
+## Cast -> React
+
+## World
+The instance of the world is created from every entry. The spells can be cast on it.
+
 #### Helpful Documents
 Documentation that may be useful to developers.
 
