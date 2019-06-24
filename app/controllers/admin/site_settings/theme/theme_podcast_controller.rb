@@ -20,7 +20,6 @@ module Admin::SiteSettings::Theme
     end
 
     private
-
       def load_entry
         @entry = SiteSettings::Theme::Podcast.instance
       end

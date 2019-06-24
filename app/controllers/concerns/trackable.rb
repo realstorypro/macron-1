@@ -15,7 +15,6 @@ module Trackable
   # @option params [String] :event Name of the event
   # @option params [Hash] :props Properties to track
   def track(params)
-
     # TODO: Add guest users for analytics
     # OLD CODE FOR REFERENCE ONLY
     # NO LONGER FUNCTIONAL

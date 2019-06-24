@@ -169,5 +169,4 @@ class User < ApplicationRecord
   def broadcast_activity
     ActionCable.server.broadcast("user_#{self.id}", user_id: self.id)
   end
-
 end

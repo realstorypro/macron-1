@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Article < Entry
-
   include Autoloadable
   include Activitible
 

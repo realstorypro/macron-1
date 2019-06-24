@@ -13,7 +13,7 @@ module Activitible
       Activity.create(
         actor: self.user,
         subject: self,
-        action: 'created'
+        action: "created"
       )
     end
 

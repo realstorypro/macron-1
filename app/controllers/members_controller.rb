@@ -18,7 +18,6 @@ class MembersController < DisplayController
   end
 
   private
-
     def preload_entry
       @member = User.joins(:profile).friendly.find(params[:id])
     end

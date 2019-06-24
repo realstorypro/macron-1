@@ -60,7 +60,6 @@ class MetaController < ApplicationController
   end
 
     private
-
       # returns the entry class
       def entry_class
         @entry_class ||= settings("components.#{params[:component]}.klass", fatal_exception: true).classify.constantize

@@ -12,7 +12,7 @@ class Activity < ApplicationRecord
 
   def broadcast_activity
     ActionCable.server.broadcast(
-        "activity_#{self.actor.id}",
+      "activity_#{self.actor.id}",
         activity_id: self.id
     )
 
@@ -22,5 +22,4 @@ class Activity < ApplicationRecord
     #     activity_id: self.id
     # )
   end
-
 end

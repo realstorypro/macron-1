@@ -26,7 +26,6 @@ module Admin
     end
 
     private
-
       # makes fields easily accessable by the view
       def fields
         options[:fields]

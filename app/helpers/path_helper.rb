@@ -52,7 +52,6 @@ module PathHelper
   end
 
   private
-
     def path_getter(component)
       settings "components.#{component}.path", fatal_exception: true
     end
