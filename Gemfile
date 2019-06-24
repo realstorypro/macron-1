@@ -27,8 +27,6 @@ gem "acts_as_follower", github: "tcocca/acts_as_follower"
 gem "acts_as_votable", "~> 0.12.0"
 
 
-
-
 # Analytics
 gem "ahoy_matey"
 gem "analytics-ruby"

@@ -3,19 +3,17 @@
       avatar(v-bind:username='username' v-bind:src='avatar' :rounded='true' :size='50')
     = content
       = link_to url_helpers.member_path(options[:user])
-        | {{first_name}} {{ last_name }}
+        = "@#{options[:user].username}"
+        = icon 'check circle outline small' if options[:user].profile.verified
         = header class: 'sub'
-          | @{{ username }}
+          = "#{options[:user].profile.first_name} #{options[:user].profile.last_name}"
 = divider
 = list
   = item
-    = icon 'briefcase'
-    = content text: "{{ job }}"
-  = item
     = icon 'users'
-    = content text: "{{ supporters }} Supporters "
+    = content text: "{{ supporters }} {{ 'Supporter' | pluralize(supporters)}} "
   = item
-    = icon 'fire'
+    = icon 'star'
     = content
       animated-number :value="points" :format-value="formatToInt" :duration="400"
   = item v: {for: "path in paths"}
