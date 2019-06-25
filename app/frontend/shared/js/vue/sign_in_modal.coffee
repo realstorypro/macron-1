@@ -23,13 +23,13 @@ class SignInModal extends Common
       computed:
         modalWidth: ->
           if utils.is_mobile()
-            "100%"
+            "90%"
           else
             "480px"
 
         modalHeight: ->
           if utils.is_mobile()
-            "400px"
+            "280px"
           else
             "280px"
 
