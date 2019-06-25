@@ -30,9 +30,11 @@ import Audio from './vue/audio'
 import Cover from './vue/cover'
 import Feed from './vue/feed'
 import SocialSharing from './vue/social_sharing'
+import Author from './vue/author'
 import Actioner from './vue/actioner'
 import ReactionsModal from './vue/reactions_modal'
-import Author from './vue/author'
+import SignInModal from './vue/sign_in_modal'
+
 
 import Cable from './core/cable'
 
@@ -71,9 +73,10 @@ audio = new Audio
 cover = new Cover
 feed = new Feed
 social_sharing = new SocialSharing
+author = new Author
 actioner = new Actioner
 reactions_modal = new ReactionsModal
-author = new Author
+sign_in_modal = new SignInModal
 
 class Client_app
 

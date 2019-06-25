@@ -1,0 +1,14 @@
+modal name='sign-in-modal' transition="pop-out" :height="modalHeight" :width="modalWidth" @opened="afterModalOpen"
+  = grid
+    = column size: 16
+      = segment 'placeholder'
+        = header 'icon'
+          = icon 'lock'
+          | Authentication Required
+        = text class: 'centered', text: 'Please authenticate in order to use this feature.'
+        = buttons
+          = button class: 'button secondary large', url: url_helpers.sign_in_path
+            | Sign In
+          .or
+          = button class: 'button primary large', url: url_helpers.sign_up_path
+            | Sign Up

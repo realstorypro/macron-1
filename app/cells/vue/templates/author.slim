@@ -20,13 +20,19 @@
     = icon v:{'bind:class':"path.icon"}
     = content text: "Level {{path.level}} {{ path.skill }}"
 = divider
-template v-if="widget.supporting"
+- if options[:current_user]
+  template v-if="widget.supporting"
+    = button class: 'fluid orange',
+            v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
+      | Stop Supporting &nbsp;
+      = icon 'angle double down'
+  template v-else="widget.supporting"
+    = button class: 'fluid orange basic',
+            v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
+      | Support &nbsp;
+      = icon 'angle double up'
+- else
   = button class: 'fluid orange',
-          v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
-    | Stop Supporting &nbsp;
-    = icon 'angle double down'
-template v-else="widget.supporting"
-  = button class: 'fluid orange basic',
-          v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
+          v: {'on:click.prevent': 'signInModal'}
     | Support &nbsp;
     = icon 'angle double up'

@@ -81,6 +81,9 @@ class Author extends Common
 
           @widget.supporting = !@widget.supporting
 
+        signInModal: ->
+          @.$modal.show('sign-in-modal')
+
       mounted: ->
         store.dispatch('loadUser', @widget.userId)
 
