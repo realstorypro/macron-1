@@ -116,7 +116,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "jest": "^22.4.3",
-    "pug": "^2.0.3",
+    "pug": "^2.0.4",
     "slim-lang-loader": "^0.0.7",
     "vue-jest": "^2.5.0"
   }
