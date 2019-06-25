@@ -10,42 +10,6 @@
   .spell.point
     margin-right: 10px
 
-.actioner
-  .profile.holder
-    background: #eee
-    border-bottom: 1px solid #ccc
-
-    .desktop.wrapper
-      display: block
-      @include media("<desktop")
-        display: none
-
-    .mobile.wrapper
-      display: none
-      @include media("<desktop")
-        display: block
-
-  .abilities.holder
-    padding: 0.5em 0
-
-  .selected.ability.holder
-    background: #eee
-    border-top: 1px solid #ccc
-    min-height: 100px
-
-  &.tooltip
-    width: 100%
-
-    .trigger
-      width: 100%
-
-  &.wrapper
-    padding: 1em
-    width: 500px
-    @include media("<desktop")
-      width: 100%
-
-
 .tooltip
   display: block !important
   z-index: 10000
