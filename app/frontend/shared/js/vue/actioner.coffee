@@ -23,6 +23,8 @@ class Actioner extends Common
       methods:
         showMobileModal: ->
           @.$modal.show('reaction-modal')
+        signInModal: ->
+          @.$modal.show('sign-in-modal')
       data:
         widget: $("##{widget.id}").data()
 
