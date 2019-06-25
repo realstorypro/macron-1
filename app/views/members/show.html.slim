@@ -67,11 +67,11 @@
             = icon 'briefcase'
             = content text: @member.profile.job
           = item
-            = icon 'certificate'
+            = icon 'graduation cap'
             = content text: @member.profile.education
 
           = item
-            = icon 'fire'
+            = icon 'star'
             = content text: "#{number_with_delimiter(@member.state.points)} Reputation"
 
           - @member.state.paths.each do |path|
