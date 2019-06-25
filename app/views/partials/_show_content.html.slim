@@ -15,13 +15,13 @@
             = sticky
               = fragment class: 'meta holder'
                 = segment 'secondary'
-                  == vue_widget name: 'author', user: @entry.user, data: { user_id: @entry.user.id, supporting: (current_user ? current_user.supporting?(@entry.user) : false) }
+                  == vue_widget name: 'author', user: @entry.user, current_user: current_user, data: { user_id: @entry.user.id, supporting: (current_user ? current_user.supporting?(@entry.user) : false) }
                 = segment 'primary'
-                  - if current_user
-                    == vue_widget name: 'actioner', data: { component: params[:component], subject_id: @entry.id, user_id: current_user.id }
-                    = divider
+                  == vue_widget name: 'actioner', current_user: current_user, data: { component: params[:component], subject_id: @entry.id }
+                  = divider
                   == vue_widget name: 'social sharing'
 
 = render "partials/engager"
 - if current_user
   == vue_widget name: 'reactions_modal', data: { component: params[:component], subject_id: @entry.id, user_id: current_user.id }
+== vue_widget name: 'sign_in_modal'
