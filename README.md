@@ -39,6 +39,22 @@ You can then start the mail catcher via
 
 You can read the sent mail by pointing the  web browser to  **http://127.0.0.1:1080/**
 
+# Deployment
+1. Remove existing packs
+```bash
+rm -rf public/packs
+```
+
+2. Precompile assets locally
+```bash
+foreman run rake assets:precompile
+```
+
+3. Push to Heroku
+```bash
+git push heroku master
+```
+
 # Framework
 
 ## Site Settings
