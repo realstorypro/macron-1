@@ -39,6 +39,12 @@ You can then start the mail catcher via
 
 You can read the sent mail by pointing the  web browser to  **http://127.0.0.1:1080/**
 
+# Deployment
+1. Precompile assets locally
+```bash
+foreman run rake assets:precompile RAILS_ENV=production 
+```
+
 # Framework
 
 ## Site Settings
