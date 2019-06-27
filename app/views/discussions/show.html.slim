@@ -10,24 +10,6 @@
               .section = link_to params[:category].capitalize, discussion_category_path(params[:category])
           = h1
             = @entry.long_title
-          = list 'relaxed horizontal meta'
-            - if @entry.user
-              = item
-                = icon 'user circle large'
-                = content
-                  = header ui: :off, text: 'Author'
-                  = link_to member_path(@entry.user)
-                    = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name} "
-            = item
-              = icon 'clock'
-              = content
-                = header ui: :off, text: 'Reading Time'
-                = @entry.body.reading_time
-            = item
-              = icon 'comments'
-              = content
-                = header ui: :off, text: 'Replies'
-                = @entry.comments.count
           .summary
             = @entry.long_summary.html_safe
 

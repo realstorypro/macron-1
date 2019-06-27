@@ -5,6 +5,11 @@
       = grid
         = row
           = column computer: 16, tablet: 16, mobile: 16
+            = h3 'breadcrumb'
+              .ui.breadcrumb.large
+                .section = link_to 'Discussions', discussions_path
+                = divider text: '/'
+                .section = link_to params[:category].capitalize, discussion_category_path(params[:category])
             = h1
               = @entry.long_title
             .summary

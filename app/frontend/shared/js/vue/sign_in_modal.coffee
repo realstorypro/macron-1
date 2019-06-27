@@ -40,7 +40,4 @@ class SignInModal extends Common
         afterModalOpen: (e) ->
           vent.channel().trigger "navigation", "hide"
 
-      mounted: ->
-        console.log 'sign in modal mounted'
-
 export { SignInModal as default }

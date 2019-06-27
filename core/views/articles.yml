@@ -30,6 +30,7 @@ views:
       user:
         label: 'Author'
         type: 'dropdown'
+        required: true
 
       images_header:
         type: 'header'
