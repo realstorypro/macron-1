@@ -55,6 +55,12 @@ foreman run rake assets:precompile
 git push heroku master
 ```
 
+# New Deployment
+Add the rake task to Heroku Scheduler and set it to run every 10 minutes:
+```bash
+rake simple_scheduler
+```
+
 # Framework
 
 ## Site Settings

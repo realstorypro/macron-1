@@ -477,6 +477,9 @@ GEM
     simple_form (4.1.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    simple_scheduler (1.0.0)
+      rails (>= 4.2)
+      sidekiq (>= 4.2)
     simplecov (0.16.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
@@ -631,6 +634,7 @@ DEPENDENCIES
   semantic-ui-sass
   sidekiq
   simple_form
+  simple_scheduler
   simplecov
   sitemap_generator
   slim-rails

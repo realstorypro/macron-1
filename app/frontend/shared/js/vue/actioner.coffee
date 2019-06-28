@@ -22,7 +22,7 @@ class Actioner extends Common
           store.state.entry
       mounted: ->
         store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
-        
+
         cable.subscriptions.create { channel: 'EntryChannel', entry_id: @widget.subjectId},
           received: (_data) =>
             store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
