@@ -29,25 +29,28 @@ module User::State
       # short cirtucit if there isn't enogh energy
       return false if self.energy <= castable.energy
 
+      # get points
+      points = get_castable_points(castable)
+
       # add the spell on the subject
       if castable.direction == "positive"
-        subject.vote_by voter: self, vote: "like", vote_scope: spell, vote_weight: castable.points, duplicate: true
+        subject.vote_by voter: self, vote: "like", vote_scope: spell, vote_weight: points, duplicate: true
       else
-        subject.vote_by voter: self, vote: "bad", vote_scope: spell, vote_weight: castable.points, duplicate: true
+        subject.vote_by voter: self, vote: "bad", vote_scope: spell, vote_weight: points, duplicate: true
       end
 
       # add the points the castable owner
       if castable.direction == "positive"
-        subject.user.add_game_points(castable.path, castable.points)
+        subject.user.add_game_points(castable.path, points)
       else
-        subject.user.subtract_game_points(castable.path, castable.points)
+        subject.user.subtract_game_points(castable.path, points)
       end
 
       # reduce the available energy
       self.energy = self.energy - castable.energy
       self.save
 
-      true
+      points
     end
 
     # @param [String] progression_path a filter for the progression path
@@ -70,6 +73,14 @@ module User::State
       when :high
         (points * level) * 2
       end
+    end
+
+    # @param [Object] spell for which the calculation is performed
+    # @return [Integer] number of points ot be cast
+    def get_castable_points(spell)
+      low = get_points_range(spell.points, self.state.level, :low)
+      high = get_points_range(spell.points, self.state.level, :high)
+      rand(low...high)
     end
 
     # adds points to the user
