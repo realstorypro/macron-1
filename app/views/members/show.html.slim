@@ -15,7 +15,7 @@
                 = icon 'check circle outline small' if @member.profile.verified
                 = header 'sub'
                   = "@#{@member.username}"
-              = text class: 'inverted', text: simple_format(@member.profile.bio)
+              = simple_format(@member.profile.bio, class: 'text')
 
   = segment 'black inverted basic social clearing'
     = container
@@ -63,12 +63,14 @@
 
         = h5 class: 'dividing', text: 'Highlights'
         = list
-          = item
-            = icon 'briefcase'
-            = content text: @member.profile.job
-          = item
-            = icon 'graduation cap'
-            = content text: @member.profile.education
+          - if @member.profile.job && @member.profile.job.length > 0
+            = item
+              = icon 'briefcase'
+              = content text: @member.profile.job
+          - if @member.profile.education && @member.profile.education.length > 0
+            = item
+              = icon 'graduation cap'
+              = content text: @member.profile.education
 
           = item
             = icon 'star'

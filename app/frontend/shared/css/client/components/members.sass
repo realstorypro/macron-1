@@ -12,11 +12,13 @@
       border: 5px solid white
       @include media("<tablet")
         width: 250px
-        margin: 0 auto
+        margin: 0 auto 2em
 
     .text
       font-size: 1.1em
       color: $white
+      @include media("<tablet")
+        font-size: 1.3em
 
     .header .icon
       display: inline-block
