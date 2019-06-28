@@ -63,11 +63,11 @@
 
         = h5 class: 'dividing', text: 'Highlights'
         = list
-          - if @member.profile.job.length > 0
+          - if @member.profile.job && @member.profile.job.length > 0
             = item
               = icon 'briefcase'
               = content text: @member.profile.job
-          - if @member.profile.education.length > 0
+          - if @member.profile.education && @member.profile.education.length > 0
             = item
               = icon 'graduation cap'
               = content text: @member.profile.education
