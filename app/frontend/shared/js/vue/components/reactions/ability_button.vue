@@ -1,6 +1,6 @@
 <template lang="pug">
     .ability
-        .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" v-touch:top="longTap" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
+        .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" v-touch:tap="longTap" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
             i.icon.normal.inverted(v-bind:class="icon")
 </template>
 
@@ -39,7 +39,7 @@
                 @.$emit('use-ability', null)
 
             longTap: ->
-                console.log 'we long taping'
+                @onMouseDown()
 
             castCounter: ->
                 if (@currentCastTime + @castInterval >= @castTime) || (@completed_percent == 100)
