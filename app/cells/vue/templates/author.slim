@@ -19,20 +19,21 @@
   = item v: {for: "path in paths"}
     = icon v:{'bind:class':"path.icon"}
     = content text: "Level {{path.level}} {{ path.skill }}"
-= divider
-- if options[:current_user]
-  template v-if="widget.supporting"
+- unless options[:current_user] && options[:current_user] == options[:user]
+  = divider
+  - if options[:current_user]
+    template v-if="widget.supporting"
+      = button class: 'fluid orange basic',
+              v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
+        | Stop Supporting &nbsp;
+        = icon 'angle double down'
+    template v-else="widget.supporting"
+      = button class: 'fluid orange',
+              v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
+        | Support &nbsp;
+        = icon 'angle double up'
+  - else
     = button class: 'fluid orange',
-            v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
-      | Stop Supporting &nbsp;
-      = icon 'angle double down'
-  template v-else="widget.supporting"
-    = button class: 'fluid orange basic',
-            v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
+            v: {'on:click.prevent': 'signInModal'}
       | Support &nbsp;
       = icon 'angle double up'
-- else
-  = button class: 'fluid orange',
-          v: {'on:click.prevent': 'signInModal'}
-    | Support &nbsp;
-    = icon 'angle double up'
