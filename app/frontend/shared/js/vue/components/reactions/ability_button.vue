@@ -1,8 +1,7 @@
 <template lang="pug">
     .ability
-        v-touch(@press="onPress" @pressUp="onPressUp")
-            .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
-                i.icon.normal.inverted(v-bind:class="icon")
+        .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" v-touch:press="onPress" v-touch:pressup="onPressUp" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
+            i.icon.normal.inverted(v-bind:class="icon")
 </template>
 
 <script lang="coffee">

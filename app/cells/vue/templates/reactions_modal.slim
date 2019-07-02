@@ -5,9 +5,9 @@ modal name='reaction-modal' transition="pop-out" :height="modalHeight" :width="m
         //.score
         //  template v-for="score in scores"
         //    score v-bind="score"
-        .close.holder
-          a @click="closeModal"
-            = icon class: 'close'
+        //.close.holder
+        //  a @click="closeModal"
+        //    = icon class: 'close'
         .bars
           progress-bar :label="'Level ' + level" color="purple" :percent="70" :active-cast="false"
           progress-bar label="Energy" color="orange" :percent="energyPercent" :active-cast="false"
