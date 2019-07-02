@@ -6,6 +6,7 @@ import Vuex from 'vuex'
 import VTooltip from 'v-tooltip'
 import Vue2TouchEvents from 'vue2-touch-events'
 import VuePluralize from 'vue-pluralize'
+import VueTouch from 'vue-touch'
 import Notifications from 'vue-notification'
 
 
@@ -14,4 +15,5 @@ Vue.use(Vuex)
 Vue.use(VTooltip)
 Vue.use(Vue2TouchEvents)
 Vue.use(VuePluralize)
+Vue.use(VueTouch)
 Vue.use(Notifications)

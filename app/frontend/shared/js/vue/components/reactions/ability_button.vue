@@ -1,7 +1,8 @@
 <template lang="pug">
     .ability
-        .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" v-touch:press="press" v-touch:pressup="pressUp" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
-            i.icon.normal.inverted(v-bind:class="icon")
+        v-touch(@press="onPress" @pressUp="onPressUp")
+            .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
+                i.icon.normal.inverted(v-bind:class="icon")
 </template>
 
 <script lang="coffee">
@@ -38,10 +39,10 @@
                 @stopCounter()
                 @.$emit('use-ability', null)
 
-            press: ->
+            onPress: ->
                 @onMouseDown()
 
-            pressUp: ->
+            onPressUp: ->
                 @onMouseUp()
 
             castCounter: ->

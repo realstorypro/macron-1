@@ -17,7 +17,7 @@ Rails.application.config.content_security_policy do |policy|
   #   # Specify URI for violation reports
   #   # policy.report_uri "/csp-violation-report-endpoint"
 
-  policy.connect_src :self, :https, "http://localhost:3035", "ws://localhost:3035", "wss://faye.getstream.io" if Rails.env.development?
+  policy.connect_src :self, :https, "http://localhost:3035", "ws://localhost:3000", "ws://localhost:3035", "wss://faye.getstream.io" if Rails.env.development?
 
   if Rails.env.development?
     policy.script_src :self, :http, :https, "http://cdn.segment.com", "wss://faye.getstream.io", :unsafe_eval, :unsafe_inline
