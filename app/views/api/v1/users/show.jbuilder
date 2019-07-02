@@ -32,6 +32,7 @@ json.spells do
     json.level path[1].level
     json.color path[1].color
     json.description path[1].description
+    json.path_points path[1].points
     json.points do
       json.low @user.get_points_range(path[1].points, path[1].level, :low)
       json.high @user.get_points_range(path[1].points, path[1].level, :high)

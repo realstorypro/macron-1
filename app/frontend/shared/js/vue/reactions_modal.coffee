@@ -92,7 +92,9 @@ class ReactionsModal extends Common
             )
             store.dispatch('reduceEnergy', ability[0].energy)
 
-            @activeCast = true
+            @activeCast = false
+            @castPercent = 0
+            @closeModal()
 
         # Modal Methods
         closeModal: ->
@@ -105,15 +107,12 @@ class ReactionsModal extends Common
         store.dispatch('loadUser', @widget.userId)
         store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
 
-        cable.subscriptions.create { channel: 'EntryChannel', entry_id: @widget.subjectId},
-          received: (_data) =>
-            store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
+        # cable.subscriptions.create { channel: 'EntryChannel', entry_id: @widget.subjectId},
+        #   received: (_data) =>
+        #     store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
 
-        cable.subscriptions.create { channel: 'UserChannel', user_id: @widget.userId},
-          received: (_data) =>
-            store.dispatch('loadUser', @widget.userId)
-            @activeCast = false
-            @castPercent = 0
-            @closeModal()
+        # cable.subscriptions.create { channel: 'UserChannel', user_id: @widget.userId},
+        #   received: (_data) =>
+        #     store.dispatch('loadUser', @widget.userId)
 
 export { ReactionsModal as default }
