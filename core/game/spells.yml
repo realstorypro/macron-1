@@ -4,7 +4,7 @@ spells:
     color: "green"
     icon: 'shield alternate'
     path: shamanism
-    points: 5
+    base_points: 5
     energy: 10
     level: 1
     direction: 'positive'
@@ -16,7 +16,7 @@ spells:
     color: "red"
     icon: 'shield alternate'
     path: shamanism
-    points: 5
+    base_points: 5
     energy: 10
     level: 1
     direction: 'negative'
@@ -28,7 +28,7 @@ spells:
     color: "green"
     icon: 'bell'
     path: yoga
-    points: 5
+    base_points: 5
     energy: 10
     level: 1
     direction: 'positive'
@@ -40,7 +40,7 @@ spells:
     color: "red"
     icon: 'bell'
     path: yoga
-    points: 5
+    base_points: 5
     energy: 10
     level: 1
     direction: 'negative'

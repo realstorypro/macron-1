@@ -8,49 +8,51 @@ module User::State
     # @param [String] progression_path a filter for the progression path
     # @return [Object] the current state of the player
     def state(progression_path = nil)
-      state = OpenStruct.new
-      state.points = get_points(progression_path)
-      state.level = get_level(state.points)
-      state.max_energy = get_max_energy(state.level)
-      state.paths = get_paths(progression_path)
-      state.spells = get_spells(progression_path)
-      state
+      unless @state
+        @state = OpenStruct.new
+        @state.points = get_points(progression_path)
+        @state.level = get_level(state.points)
+        @state.max_energy = get_max_energy(state.level)
+        @state.paths = get_paths(progression_path)
+        @state.spells = get_spells(progression_path)
+      end
+      @state
     end
 
     # casts a spell onto a subject and passes points on a user associated
     # with the subject
-    # @param [Symbol] spell the name of the spell
+    # @param [Symbol] spell_name the name of the spell
     # @param [Object] subject an object with an attached user to perform a spell on
-    def cast_spell!(spell, subject)
-      return false unless can_cast?(spell)
+    def cast_spell!(spell_name, subject)
+      return false unless can_cast?(spell_name)
       # get the spell details
-      castable = get_spell(spell)
+      castable_spell = get_spell_details(spell_name)
 
       # short cirtucit if there isn't enogh energy
-      return false if self.energy <= castable.energy
+      return false if self.energy <= castable_spell.energy
 
       # get points
-      points = get_castable_points(castable)
+      castable_points = get_castable_points(castable_spell)
 
       # add the spell on the subject
-      if castable.direction == "positive"
-        subject.vote_by voter: self, vote: "like", vote_scope: spell, vote_weight: points, duplicate: true
+      if castable_spell.direction == "positive"
+        subject.vote_by voter: self, vote: "like", vote_scope: spell_name, vote_weight: castable_points, duplicate: true
       else
-        subject.vote_by voter: self, vote: "bad", vote_scope: spell, vote_weight: points, duplicate: true
+        subject.vote_by voter: self, vote: "bad", vote_scope: spell_name, vote_weight: castable_points, duplicate: true
       end
 
       # add the points the castable owner
-      if castable.direction == "positive"
-        subject.user.add_game_points(castable.path, points)
+      if castable_spell.direction == "positive"
+        subject.user.add_game_points(castable_spell.path, castable_points)
       else
-        subject.user.subtract_game_points(castable.path, points)
+        subject.user.subtract_game_points(castable_spell.path, castable_points)
       end
 
       # reduce the available energy
-      self.energy = self.energy - castable.energy
+      self.energy = self.energy - castable_spell.energy
       self.save
 
-      points
+      castable_points
     end
 
     # @param [String] progression_path a filter for the progression path
@@ -62,24 +64,24 @@ module User::State
       self.score_points.sum(:num_points)
     end
 
-    # @param [Integer] points the number of points the spell is worth
-    # @param [Integer] level of the path
+    # @param [Integer] spell_points the number of points the spell is worth
+    # @param [Integer] path_level of the path
     # @param [Symbol] range lower of high range
     # @return [Integer] points for the give range
-    def get_points_range(points, level, range)
+    def get_points_range(spell_points, path_level, range)
       case range
       when :low
-        (points * level) / 2
+        (spell_points * path_level) / 2
       when :high
-        (points * level) * 2
+        (spell_points * path_level) * 2
       end
     end
 
     # @param [Object] spell for which the calculation is performed
     # @return [Integer] number of points ot be cast
     def get_castable_points(spell)
-      low = get_points_range(spell.points, self.state.level, :low)
-      high = get_points_range(spell.points, self.state.level, :high)
+      low = get_points_range(spell.base_points, spell.spell_level, :low)
+      high = get_points_range(spell.base_points, spell.spell_level, :high)
       rand(low...high)
     end
 
@@ -109,13 +111,13 @@ module User::State
 
     private
       # returns the level based on the amount of points
-      # @param [Integer] points number of points
+      # @param [Integer] number_of_points number of points
       # @return [Integer] a level for the number of points
-      def get_level(points)
+      def get_level(number_of_points)
         current_level = 1
 
         s("levels").each do |level|
-          current_level = level[0].to_s.to_i if level[1].points < points
+          current_level = level[0].to_s.to_i if level[1].points < number_of_points
         end
 
         current_level
@@ -168,9 +170,12 @@ module User::State
         spells = []
 
         s("spells").each do |spell|
-          path_level = get_level get_points(spell[1].path)
+          spell_level = get_level get_points(spell[1].path)
           next if progression_path && spell[1].path != progression_path
-          spells << spell if spell[1].level <= path_level
+          if spell[1].level <= spell_level
+            spell[1].spell_level = spell_level
+            spells << spell
+          end
         end
         spells
       end
@@ -186,7 +191,7 @@ module User::State
       end
 
       # returns a singular spell object
-      def get_spell(spell)
+      def get_spell_details(spell)
         get_spells.each { |current_spell| return current_spell[1] if current_spell[0] == spell }
       end
   end
