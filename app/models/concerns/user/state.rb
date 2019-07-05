@@ -19,6 +19,11 @@ module User::State
       @state
     end
 
+    # clears the state instance variable
+    def clear_state
+      @state = nil
+    end
+
     # casts a spell onto a subject and passes points on a user associated
     # with the subject
     # @param [Symbol] spell_name the name of the spell
@@ -89,8 +94,8 @@ module User::State
     # @return [Boolean] returns true if operation is successful
     def add_game_points(path, amount)
       return false unless path_exists?(path)
-
       self.add_points(amount, category: path)
+      self.clear_state
       true
     end
 
@@ -98,8 +103,8 @@ module User::State
     # @return [Boolean] returns true if operation is successful
     def subtract_game_points(path, amount)
       return false unless path_exists?(path)
-
       self.subtract_points(amount, category: path)
+      self.clear_state
       true
     end
 
