@@ -67,6 +67,12 @@ class ReactionsModal extends Common
           else
             "390px"
 
+        modalPivotY: ->
+          if utils.is_mobile()
+            1
+          else
+            0.5
+
       methods:
         useAbility: (event) ->
           @current_access_key = event
