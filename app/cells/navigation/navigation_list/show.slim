@@ -4,7 +4,7 @@
       - section_array.section.each do |menu_item|
         - if show_item?(menu_item)
           = link_to link_path(menu_item[:path]), class: 'item'
-            = icon class: "#{menu_item[:icon]} inverted purple bordered left middle aligned"
+            = icon class: "#{menu_item[:icon]} inverted purple bordered left middle aligned fat"
             = content
               = header text: menu_item[:name].upcase, ui: :off
               = description text: menu_item[:hint]
