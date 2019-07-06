@@ -1,18 +1,13 @@
 = segment "footer fragment vertical #{footer_class}"
   = container 'center aligned'
-    = grid "stackable left aligned #{footer_item_order}"
-      = column size: 8, class: 'middle aligned'
+    = grid "stackable left aligned mobile reversed #{footer_item_order}"
+      = column computer: 8, mobile: 16, class: 'middle aligned link holder'
         = list "copyright horizontal mini divided link #{footer_item_class}"
           ==  MenuCell.(nil,
                   menu: s('menu.legal'),
                   policy: Pundit.policy(current_user, :headless),
                   request: request,
                   site_settings: @site_settings)
-          = item
-            = "&copy; #{ss('theme.footer.copyrights')}".html_safe
-      = column size: 8, class: 'middle right aligned'
-        = list "mini link #{footer_item_class} copyright powered"
-          /= item url: t('app.powered_by_url')
-            = t('app.powered_by_text')
-          = item url: t('app.powered_by_url')
-            = image_tag ('logo_inverted.png'), class: 'ui image footer', alt: 'logik logo'
+      = column computer: 8, mobile: 16, class: 'middle right aligned column logo holder mobile-center'
+        = link_to t('app.powered_by_url')
+          = image_tag ('logo_inverted.png'), class: 'ui image footer', alt: 'logik logo'
