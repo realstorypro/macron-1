@@ -35,3 +35,12 @@ menu:
       component: discussions
       path: discussions
       enabled: true
+
+  - section:
+      - name: Privacy Policy
+        path: privacy_policy
+        enabled: true
+
+      - name: Terms of Service
+        path: terms_of_service
+        enabled: true
