@@ -1,6 +1,14 @@
 .homepage.header.widget
   margin: $w-homepage_header-margin
 
+  .row
+    @include media("<tablet")
+
+  .column
+    @include media("<tablet")
+      padding-left: 0
+      padding-right: 0
+
   .column.margined
     @include media("<tablet")
       margin-bottom: 2em
