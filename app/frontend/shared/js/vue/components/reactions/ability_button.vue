@@ -1,6 +1,6 @@
 <template lang="pug">
     .ability
-        .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" v-touch:press="onPress" v-touch:pressup="onPressUp" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
+        .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" v-touch:press="onPress" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
             i.icon.normal.inverted(v-bind:class="icon")
 </template>
 
@@ -40,9 +40,6 @@
 
             onPress: ->
                 @onMouseDown()
-
-            onPressUp: ->
-                @onMouseUp()
 
             castCounter: ->
                 if (@currentCastTime + @castInterval >= @castTime) || (@completed_percent == 100)

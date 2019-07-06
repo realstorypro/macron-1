@@ -9,7 +9,7 @@ spells:
     level: 1
     direction: 'positive'
     description: 'A sign of agreement first used by the Native American Tribes.'
-    castTime: 2000
+    castTime: 1000
 
   shush:
     name: "Shush"
@@ -21,7 +21,7 @@ spells:
     level: 1
     direction: 'negative'
     description: 'A spell of disagreement used by the Shamans of the amazon.'
-    castTime: 2000
+    castTime: 1000
 
   om:
     name: "Om"
@@ -33,7 +33,7 @@ spells:
     level: 1
     direction: 'positive'
     description: 'A spell of agreement first cast by Yogis of india.'
-    castTime: 2000
+    castTime: 1000
 
   hush:
     name: "Hush"
@@ -45,4 +45,4 @@ spells:
     level: 1
     direction: 'negative'
     description: 'A spell of dis-agreement first cast by Yogis of india.'
-    castTime: 2000
+    castTime: 1000
