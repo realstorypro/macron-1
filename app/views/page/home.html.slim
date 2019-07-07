@@ -1,6 +1,6 @@
 = component class: "homepage", style: "padding-top: #{ss('theme.homepage.content_top_padding')}em;"
   ==  Widget::HomepageCell.(@featured, site_settings: @site_settings) unless @featured.empty?
-  = container
+  = container 'wide'
     = grid
       = column computer: 16, class: 'computer only tablet only'
         = cards 'three fluid'

@@ -1,5 +1,5 @@
 = widget class: "navigation #{menu_color_class()}"
-  = container id: 'navigation'
+  = container class: 'wide', id: 'navigation'
     = widget ui: :on, class: "secondary menu", name: 'navigation_buttons', id: 'navigation_buttons', vue: :on
       = menu ui: :on, class: 'secondary'
         - if ss('theme.header.menu_position') == 'left'

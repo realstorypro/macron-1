@@ -7,32 +7,36 @@
         = icon 'check circle outline small' if options[:user].profile.verified
         = header class: 'sub'
           = "#{options[:user].profile.first_name} #{options[:user].profile.last_name}"
-= divider
-= list
-  = item
-    = icon 'users'
-    = content text: "{{ supporters }} {{ 'Supporter' | pluralize(supporters)}} "
-  = item
-    = icon 'star'
-    = content
+= table 'very basic unstackable'
+  tr
+    td.center.aligned.collapsing
+      = icon 'users'
+    td.td.left.aligned= "{{ supporters }} {{ 'Supporter' | pluralize(supporters)}} "
+  tr
+    td.center.aligned= icon 'star'
+    td
       animated-number :value="points" :format-value="formatToInt" :duration="400"
-  = item v: {for: "path in activePaths"}
-    = icon v:{'bind:class':"path.icon"}
-    = content text: "Level {{path.level}} {{ path.skill }}"
+  tr v-for="path in activePaths"
+    td.center.aligned= icon v:{'bind:class':"path.icon"}
+    td
+      | Level {{path.level}} {{ path.skill }}
+
+
 - unless options[:current_user] && options[:current_user] == options[:user]
   - if options[:current_user]
     template v-if="widget.supporting"
-      = button class: 'fluid orange compact',
+      = button class: 'fluid red compact action labeled icon',
               v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
-        | Stop Supporting &nbsp;
-        = icon 'angle double down'
+        = icon 'minus circle'
+        | SUPPORT
     template v-else="widget.supporting"
-      = button class: 'fluid orange compact',
+      = button class: 'fluid green compact action right labeled icon',
               v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
-        | Support &nbsp;
-        = icon 'angle double up'
+        = icon 'plus circle'
+        | SUPPORT
   - else
-    = button class: 'fluid orange compact',
+    = button class: 'fluid orange compact action',
             v: {'on:click.prevent': 'signInModal'}
-      | Support &nbsp;
+      | SUPPORT &nbsp;
       = icon 'angle double up'
+= divider
