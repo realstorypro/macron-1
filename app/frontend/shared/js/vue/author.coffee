@@ -55,6 +55,11 @@ class Author extends Common
         paths: ->
           store.state.player.paths
 
+        activePaths: ->
+          @paths.filter (p) ->
+            p.level > 1
+
+
       methods:
         formatToInt: (value) ->
           if value > 1000

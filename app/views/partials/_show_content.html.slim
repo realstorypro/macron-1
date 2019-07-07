@@ -9,12 +9,10 @@
           = column computer: 5, tablet: 16, mobile: 16
             = sticky
               = fragment class: 'meta holder'
-                = segment 'secondary'
+                = segment 'basic'
                   == vue_widget name: 'author', user: @entry.user, current_user: current_user, data: { user_id: @entry.user.id, supporting: (current_user ? current_user.supporting?(@entry.user) : false) }
-                = segment 'primary'
-                  == vue_widget name: 'actioner', current_user: current_user, data: { component: params[:component], subject_id: @entry.id }
                   = divider
-                  == vue_widget name: 'social sharing'
+                  == vue_widget name: 'actioner', current_user: current_user, data: { component: params[:component], subject_id: @entry.id }
 
 = render "partials/engager"
 - if current_user

@@ -2,11 +2,11 @@ template v-for="score in scores"
   score v-bind="score"
 = divider
 - if options[:current_user]
-  = button class: 'green fluid', v: {'on:click': 'showMobileModal'}
+  = button class: 'green fluid compact', v: {'on:click': 'showMobileModal'}
       = icon 'bullhorn'
       | Respond
 - else
-  = button class: 'green fluid',
+  = button class: 'green fluid compact',
           v: {'on:click.prevent': 'signInModal'}
     = icon 'bullhorn'
     | Respond
