@@ -23,7 +23,7 @@
   = divider
   - if options[:current_user]
     template v-if="widget.supporting"
-      = button class: 'fluid orange basic',
+      = button class: 'fluid orange',
               v: {'on:click.prevent': 'toggle', 'bind:class': '{loading: isLoading}'}
         | Stop Supporting &nbsp;
         = icon 'angle double down'

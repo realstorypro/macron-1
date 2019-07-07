@@ -16,7 +16,6 @@ import ProgressBar from '../vue/components/reactions/progress_bar'
 import AbilityButton from '../vue/components/reactions/ability_button'
 import AbilityDetails from '../vue/components/reactions/ability_details'
 import SelectAbility from '../vue/components/reactions/select_ability'
-import Redactor from '../vue/components/redactor'
 
 
 
@@ -35,16 +34,11 @@ class ReactionsModal extends Common
         'ability-button': AbilityButton
         'ability-details': AbilityDetails
         'select-ability': SelectAbility
-        'redactor': Redactor
       data: ->
         widget: $("##{widget.id}").data()
         current_access_key: null
         castPercent: 0
         activeCast: false
-        comment: ''
-        redactorConfig:
-          minHeight: '100%'
-          maxHeight: '100%'
 
       computed:
         scores: ->
@@ -71,7 +65,13 @@ class ReactionsModal extends Common
           if utils.is_mobile()
             "400px"
           else
-            "420px"
+            "390px"
+
+        modalPivotY: ->
+          if utils.is_mobile()
+            1
+          else
+            0.5
 
       methods:
         useAbility: (event) ->
@@ -91,13 +91,14 @@ class ReactionsModal extends Common
               item.access_key == @current_access_key
             )
             store.dispatch('reduceEnergy', ability[0].energy)
-
-            @activeCast = false
-            @castPercent = 0
             @closeModal()
+
 
         # Modal Methods
         closeModal: ->
+          @current_access_key = null
+          @activeCast = false
+          @castPercent = 0
           @.$modal.hide('reaction-modal')
 
         afterModalOpen: (e) ->
@@ -107,12 +108,8 @@ class ReactionsModal extends Common
         store.dispatch('loadUser', @widget.userId)
         store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
 
-        # cable.subscriptions.create { channel: 'EntryChannel', entry_id: @widget.subjectId},
-        #   received: (_data) =>
-        #     store.dispatch('loadEntry', { id: @widget.subjectId, component: @widget.component } )
-
-        # cable.subscriptions.create { channel: 'UserChannel', user_id: @widget.userId},
-        #   received: (_data) =>
-        #     store.dispatch('loadUser', @widget.userId)
+        cable.subscriptions.create { channel: 'UserChannel', user_id: @widget.userId},
+          received: (_data) =>
+            store.dispatch('loadUser', @widget.userId)
 
 export { ReactionsModal as default }

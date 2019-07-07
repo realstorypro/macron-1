@@ -2,7 +2,10 @@
   = container
     = grid item_order
       = column computer: 11, tablet: 8, mobile: 16
-        = widget_item @model[0], size: 'tall'
+        = grid
+          = row
+            = column computer: 16, tablet: 16, mobile: 16
+              = widget_item @model[0], size: 'tall'
       = column computer: 5, tablet: 8, mobile: 16
         = grid
           = row
