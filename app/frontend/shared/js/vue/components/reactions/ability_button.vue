@@ -1,6 +1,6 @@
 <template lang="pug">
     .ability
-        .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" v-touch:tap="onTap" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
+        .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
             i.icon.normal.inverted(v-bind:class="icon")
 </template>
 
@@ -16,6 +16,8 @@
             currentCastTime: 0
             castInterval: 70
             processing: false
+            active: false
+            interval: ''
         computed:
             completed_percent: ->
                 percent = Math.floor(@currentCastTime/@castTime*100)
@@ -25,9 +27,7 @@
                 @.$emit('use-ability', @access_key)
 
             onMouseDown: ->
-                @currentCastTime = 0
-                @processing = true
-                @interval = setInterval(@castCounter,@castInterval)
+                @startCasting()
 
             onMouseUp: ->
                 @stopCasting()
@@ -39,13 +39,20 @@
                 @.$emit('use-ability', null)
 
             onTap: ->
-                if !@processing
-                    @onMouseDown()
+
+                console.log 'active: ' ,@active
+                if !@active
+                    @startCasting()
                 else
-                    @onMouseUp()
+                    @stopCasting()
+                    @stopCounter()
+
+                @active = !@active
 
 
             castCounter: ->
+                console.log 'counter tick'
+                console.log 'interval tick', window.interval
                 if (@currentCastTime + @castInterval >= @castTime) || (@completed_percent == 100)
                     @.$emit('casting', 100)
                     @stopCounter()
@@ -54,11 +61,17 @@
                     @.$emit('casting', @completed_percent)
 
             stopCounter: ->
-                clearInterval(@interval)
+                clearInterval(window.interval)
 
             stopCasting: ->
+                @currentCastTime = 0
                 @processing = false
                 @.$emit('casting', 0)
+
+            startCasting: ->
+                @currentCastTime = 0
+                @processing = true
+                window.interval = setInterval(@castCounter,@castInterval)
 
 
 </script>
