@@ -39,8 +39,10 @@
                 @.$emit('use-ability', null)
 
             onTap: ->
-                console.log 'tapping'
-                @onMouseDown()
+                if !@processing
+                    @onMouseDown()
+                else
+                    @onMouseUp()
 
 
             castCounter: ->
