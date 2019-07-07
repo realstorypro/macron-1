@@ -55,6 +55,7 @@
                     @stopCasting()
                     @stopCounter()
                 else
+                    @.$emit('use-ability', @access_key)
                     @startCasting()
 
                 @active = !@active
@@ -80,7 +81,6 @@
                 @currentCastTime = 0
                 @processing = true
                 window.interval = setInterval(@castCounter,@castInterval)
-                console.log 'window.interval'
 
 
 </script>
