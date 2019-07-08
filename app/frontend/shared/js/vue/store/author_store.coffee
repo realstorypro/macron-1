@@ -14,6 +14,7 @@ store = new (Vuex.Store)(
       points: 0
       supporters: 0
       spells: {}
+      paths: []
 
   mutations:
     load: (state, player) ->

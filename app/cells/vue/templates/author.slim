@@ -39,6 +39,7 @@
             v: {'on:click.prevent': 'signInModal'}
       | SUPPORT &nbsp;
       = icon 'angle double up'
-.toggler
-  toggle-button :value="widget.supporting" @change="toggle" :sync="true" :labels="{checked: 'DONT SUPPORT', unchecked: 'SUPPORT'}" :color="{checked: 'rgba(14, 164, 50, 0.65)', unchecked: '#0ea432', disabled: '#cccccc'}" :width="200" :height="35" :font-size="15" :margin="8"
-/= divider
+
+= h1 'divider horizontal action'
+  .toggler
+    toggle-button :value="widget.supporting" @change="toggle" :sync="true" :labels="{checked: 'SUPPORTED', unchecked: 'SUPPORT'}" :color="{checked: 'rgba(14, 164, 50, 0.65)', unchecked: '#0ea432', disabled: '#cccccc'}" :width="160" :height="35" :font-size="15" :margin="8"
