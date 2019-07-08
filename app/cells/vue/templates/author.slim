@@ -22,7 +22,7 @@
       | Level {{path.level}} {{ path.skill }}
 
 
-- unless options[:current_user] && options[:current_user] == options[:user]
+/- unless options[:current_user] && options[:current_user] == options[:user]
   - if options[:current_user]
     template v-if="widget.supporting"
       = button class: 'fluid red compact action labeled icon',
@@ -39,4 +39,6 @@
             v: {'on:click.prevent': 'signInModal'}
       | SUPPORT &nbsp;
       = icon 'angle double up'
-= divider
+.toggler
+  toggle-button :value="widget.supporting" @change="toggle" :sync="true" :labels="{checked: 'DONT SUPPORT', unchecked: 'SUPPORT'}" :color="{checked: 'rgba(14, 164, 50, 0.65)', unchecked: '#0ea432', disabled: '#cccccc'}" :width="200" :height="35" :font-size="15" :margin="8"
+/= divider

@@ -7,6 +7,7 @@ import VTooltip from 'v-tooltip'
 import Vue2TouchEvents from 'vue2-touch-events'
 import VuePluralize from 'vue-pluralize'
 import VueTouch from 'vue-touch'
+import ToggleButton from 'vue-js-toggle-button'
 import Notifications from 'vue-notification'
 
 
@@ -16,4 +17,5 @@ Vue.use(VTooltip)
 Vue.use(Vue2TouchEvents)
 Vue.use(VuePluralize)
 Vue.use(VueTouch)
+Vue.use(ToggleButton)
 Vue.use(Notifications)

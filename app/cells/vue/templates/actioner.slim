@@ -1,11 +1,16 @@
+= h5 'horizontal divider'
+  | Scores
 template v-for="score in scores"
   score v-bind="score"
 - if options[:current_user]
-  = button class: 'green fluid compact action', v: {'on:click': 'showMobileModal'}
-    = icon 'ambulance'
-    | Respond &nbsp;
+  = button tag: :div, class: 'red compact action fluid animated', v: {'on:click': 'showMobileModal'}
+    = content 'visible'
+      | VOTE
+    = content 'hidden'
+      = icon 'hand rock'
+      | BE HEARD &nbsp;
 - else
   = button class: 'green fluid compact action',
           v: {'on:click.prevent': 'signInModal'}
     = icon 'bullhorn'
-    | Respond
+    | CAST A VOTE
