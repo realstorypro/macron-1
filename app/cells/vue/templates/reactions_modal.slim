@@ -3,7 +3,6 @@ modal name='reaction-modal' transition="pop-out" :height="modalHeight" :width="m
     = column computer: 16, mobile: 16
       = content
         .bars
-          progress-bar :label="'Level ' + level" color="purple" :percent="70" :active-cast="false"
           progress-bar label="Energy" color="orange" :percent="energyPercent" :active-cast="false"
           progress-bar label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast"
         .abilities
