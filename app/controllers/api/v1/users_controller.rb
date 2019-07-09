@@ -13,7 +13,7 @@ class API::V1::UsersController < ApplicationController
       entry_class.find(params[:subject_id])
     end
 
-    current_user.cast_spell!(params[:spell].to_sym, subject)
+    render json: { points: current_user.cast_spell!(params[:spell].to_sym, subject) }
   end
 
   def support

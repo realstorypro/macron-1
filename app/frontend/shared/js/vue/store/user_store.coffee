@@ -30,6 +30,7 @@ store = new (Vuex.Store)(
 
     castSpell: ({commit}, options) ->
       axios.post("/api/v1/users/#{options.id}/cast", options).then (response) =>
+        return response
 
     reduceEnergy:({commit, state}, amount) ->
       commit 'updateEnergy', (state.user.energy - amount)

@@ -80,12 +80,20 @@ class ReactionsModal extends Common
           @castPercent = percent
 
           if @castPercent == 100
-            store.dispatch('castSpell',
+            cast_response = store.dispatch('castSpell',
               id: @widget.userId
               spell: @current_access_key,
               subject_id: @widget.subjectId,
               component: @widget.component
             )
+
+            cast_response.then (rsp) =>
+              cast_points = rsp.data.points
+
+              @.$notify
+                group: 'game'
+                title: 'Spell Cast'
+                text: "Spell was cast for #{cast_points} points"
 
             ability = store.state.user.spells.filter((item) =>
               item.access_key == @current_access_key

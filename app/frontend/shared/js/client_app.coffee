@@ -34,6 +34,7 @@ import Author from './vue/author'
 import Actioner from './vue/actioner'
 import ReactionsModal from './vue/reactions_modal'
 import SignInModal from './vue/sign_in_modal'
+import VueNotifications from './vue/vue_notifications'
 
 
 import Cable from './core/cable'
@@ -77,6 +78,7 @@ author = new Author
 actioner = new Actioner
 reactions_modal = new ReactionsModal
 sign_in_modal = new SignInModal
+vue_notifications = new VueNotifications
 
 class Client_app
 
