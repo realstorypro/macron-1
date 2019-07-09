@@ -12,7 +12,11 @@ template v-for="score in scores"
         = icon 'hand rock'
         | BE HEARD &nbsp;
   - else
-    = button class: 'green fluid compact action',
-            v: {'on:click.prevent': 'signInModal'}
-      = icon 'bullhorn'
-      | CAST A VOTE
+    = button tag: :div, class: 'red compact action animated',
+            v: {'on:click': 'signInModal'}
+      = content 'visible'
+        | VOTE
+      = content 'hidden'
+        = icon 'hand rock'
+        | BE HEARD &nbsp;
+
