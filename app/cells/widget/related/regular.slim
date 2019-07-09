@@ -13,10 +13,11 @@
           tbody
             - @model.each do |entry|
               tr
+                - if options[:category]
+                  td.collapsing.top.aligned.iconified
+                    = link_to show_link(entry)
+                      = show_icon(entry)
                 td
                   = link_to show_link(entry)
                     = entry.name
-                - if options[:category]
-                  td.collapsing.top.aligned
-                    = link_to show_link(entry)
-                      = show_icon(entry)
+        = divider 'endcap'

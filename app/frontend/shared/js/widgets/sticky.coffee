@@ -24,9 +24,6 @@ class Sticky
       $(".widget.sticky").each (index, item) ->
         random_id =  Math.floor(Math.random() * 100)
 
-        # Ensures that we only adjust bottom once
-        @bottomAdjusted = false
-
         $(item).find('.context').attr('id', "stuckable_#{random_id}")
         $(item).find('.ui.sticky').sticky
           context: "#stuckable_#{random_id}"
@@ -34,10 +31,9 @@ class Sticky
           observeChanges: true
           onBottom: () ->
             # hacky fix to stuck column having incorrect width
-            unless @bottomAdjusted
-              bottom_width = $(item).find('.ui.sticky').parent().width()
-              $(item).find('.ui.sticky').width(bottom_width)
-              @bottomAdjusted = true
+            parent = $(item).find('.ui.sticky').parent()
+            bottom_width = parent.width()
+            $(item).find('.ui.sticky').css('width', "#{bottom_width}px")
 
 
 
