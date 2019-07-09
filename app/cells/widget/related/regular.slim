@@ -3,7 +3,7 @@
     = segment 'basic'
       = h5 text: 'Related Content', class: 'divider horizontal'
       = widget name: "table listing #{'headless' unless options[:header]}"
-        = table 'very basic'
+        = table 'very basic unstackable'
           - if options[:header]
             thead
               tr
