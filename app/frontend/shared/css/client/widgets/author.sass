@@ -1,5 +1,12 @@
+$w-author-header-font-weight: 300
+
 .widget.author
+  margin-bottom: 3em
+
   .header
+    font-size: 1.25em
+    font-weight: $w-author-header-font-weight
+
     a
       color: $black
 
@@ -10,3 +17,43 @@
       margin-left: 5px
       font-weight: bold
       color: $orange
+
+  .sub.header
+    font-weight: $w-author-header-font-weight
+
+
+  .table
+    margin-bottom: 0
+
+    td
+      padding: 0 0 5px 5px
+      border-top: none
+      color: rgba(0, 0, 0, 0.66)
+
+  .action.button
+    margin-bottom: 1.5em
+    font-weight: $w-author-header-font-weight
+
+
+  .divider.action
+    margin-top: 0.5em
+
+
+  .toggler
+    margin: 0.5em auto 0.5em
+    text-align: center
+
+    .vue-js-switch
+      .v-switch-core
+        border-radius: 8px !important
+
+      .v-switch-button
+        border-radius: 8px !important
+
+      .v-switch-label
+        &.v-left
+          left: 20px
+
+        &.v-right
+          right: 20px
+

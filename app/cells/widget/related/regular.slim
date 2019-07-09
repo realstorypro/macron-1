@@ -1,9 +1,9 @@
 - unless @model[0].nil?
   = widget 'related'
-    = segment 'padded'
-      = h5 text: 'Related', class: 'dividing'
+    = segment 'basic'
+      = h5 text: 'Related Content', class: 'divider horizontal'
       = widget name: "table listing #{'headless' unless options[:header]}"
-        = table 'very basic'
+        = table 'very basic unstackable'
           - if options[:header]
             thead
               tr
@@ -13,10 +13,11 @@
           tbody
             - @model.each do |entry|
               tr
+                - if options[:category]
+                  td.collapsing.top.aligned.iconified
+                    = link_to show_link(entry)
+                      = show_icon(entry)
                 td
                   = link_to show_link(entry)
                     = entry.name
-                - if options[:category]
-                  td.collapsing.top.aligned
-                    = link_to show_link(entry)
-                      = show_icon(entry)
+        = divider 'endcap'

@@ -1,10 +1,17 @@
 <template lang="pug">
     .ability
-        .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" v-touch:tap="onTap" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
-            i.icon.normal.inverted(v-bind:class="icon")
+        template(v-if="isMobile")
+            .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" v-touch:tap="onTap")
+                i.icon.normal.inverted(v-bind:class="icon")
+        template(v-else)
+            .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
+                i.icon.normal.inverted(v-bind:class="icon")
 </template>
 
 <script lang="coffee">
+    import Utils from '../../../core/utils'
+    utils = new Utils
+
     export default
         props:
             icon: String
@@ -16,18 +23,23 @@
             currentCastTime: 0
             castInterval: 70
             processing: false
+            active: false
+            interval: ''
         computed:
             completed_percent: ->
                 percent = Math.floor(@currentCastTime/@castTime*100)
                 percent
+            isMobile: ->
+                if utils.is_mobile()
+                    true
+                else
+                    false
         methods:
             onMouseOver: ->
                 @.$emit('use-ability', @access_key)
 
             onMouseDown: ->
-                @currentCastTime = 0
-                @processing = true
-                @interval = setInterval(@castCounter,@castInterval)
+                @startCasting()
 
             onMouseUp: ->
                 @stopCasting()
@@ -39,8 +51,14 @@
                 @.$emit('use-ability', null)
 
             onTap: ->
-                console.log 'tapping'
-                @onMouseDown()
+                if @active
+                    @stopCasting()
+                    @stopCounter()
+                else
+                    @.$emit('use-ability', @access_key)
+                    @startCasting()
+
+                @active = !@active
 
 
             castCounter: ->
@@ -52,11 +70,17 @@
                     @.$emit('casting', @completed_percent)
 
             stopCounter: ->
-                clearInterval(@interval)
+                clearInterval(window.interval)
 
             stopCasting: ->
+                @currentCastTime = 0
                 @processing = false
                 @.$emit('casting', 0)
+
+            startCasting: ->
+                @currentCastTime = 0
+                @processing = true
+                window.interval = setInterval(@castCounter,@castInterval)
 
 
 </script>

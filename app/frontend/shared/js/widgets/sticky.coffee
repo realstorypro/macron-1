@@ -29,6 +29,13 @@ class Sticky
           context: "#stuckable_#{random_id}"
           offset: 90
           observeChanges: true
+          onBottom: () ->
+            # hacky fix to stuck column having incorrect width
+            parent = $(item).find('.ui.sticky').parent()
+            bottom_width = parent.width()
+            $(item).find('.ui.sticky').css('width', "#{bottom_width}px")
+
+
 
   teardown: () ->
     utils.log 'teardown', 'teardown()', 'sticky'

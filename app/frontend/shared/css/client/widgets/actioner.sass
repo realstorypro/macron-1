@@ -1,6 +1,14 @@
 .widget.actioner
   text-align: center
 
+  .action.button
+    width: 200px
+    margin-bottom: 0.3em
+
+    // hacky override to make the animated button work
+    .hidden
+      display: block
+
 .entry.points
   display: inline-block
 
@@ -9,6 +17,8 @@
 
   .spell.point
     margin-right: 10px
+
+
 
 .tooltip
   display: block !important

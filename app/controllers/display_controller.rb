@@ -38,7 +38,7 @@ class DisplayController < MetaController
                         .where.not(taggable_id: @entry.id)
       content_ids = taggings.map(&:taggable_id)
       @related_content = Entry.where(id: content_ids)
-      @related_content = @related_content.order(Arel.sql("random()")).limit(4)
+      @related_content = @related_content.order(Arel.sql("random()")).limit(8)
 
       # look up via a category if no tags are found
       if @related_content.blank?
