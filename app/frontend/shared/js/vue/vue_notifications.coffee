@@ -20,21 +20,14 @@ class VueNotifications extends Common
       data: ->
         widget: $("##{widget.id}").data()
       mounted: ->
-        this.$notify({
-          group: 'game',
-          title: 'Important message',
-          text: 'Hello user! This is a notification!'
-        });
-        this.$notify({
-          group: 'game',
-          title: 'Important message',
-          text: 'Hello user! This is a notification!'
-        });
-        this.$notify({
-          group: 'game',
-          title: 'Important message',
-          text: 'Hello user! This is a notification!'
-        });
+          title = Object.keys(window.notifications)[0]
+          notification = window.notifications[Object.keys(window.notifications)[0]]
+          if notification
+            this.$notify({
+              group: 'game',
+              title: title.toUpperCase(),
+              text: notification
+            });
 
 
 export { VueNotifications as default }
