@@ -87,13 +87,25 @@ class ReactionsModal extends Common
               component: @widget.component
             )
 
+            current_spells = store.state.user.spells.filter((item) =>
+              item.access_key == @current_access_key
+            )
+
+            spell_name = current_spells[0].name
+
             cast_response.then (rsp) =>
               cast_points = rsp.data.points
+              unless cast_points is false
+                @.$notify
+                  group: 'game'
+                  title: 'Vote Cast'
+                  text: "#{spell_name} was cast for #{cast_points} points."
+              else
+                @.$notify
+                  group: 'game'
+                  title: 'Error Casting a Vote'
+                  text: "#{spell_name} was not cast. Please try again later."
 
-              @.$notify
-                group: 'game'
-                title: 'Spell Cast'
-                text: "Spell was cast for #{cast_points} points"
 
             ability = store.state.user.spells.filter((item) =>
               item.access_key == @current_access_key
