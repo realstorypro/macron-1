@@ -58,3 +58,28 @@ $border: 1px solid #00000080
     .blue
       color: $blue
 
+  .ability
+    display: inline-block
+    margin-right: 0.5em
+
+  .active
+    animation-name: borderPulse
+    animation-duration: 2s
+    animation-iteration-count: infinite
+
+  @-webkit-keyframes bgPulse
+    from
+      box-shadow: 0 0 9px #21BA45
+    50%
+      box-shadow: 0 0 12px #91bd09
+    to
+      box-shadow: 0 0 9px #21BA45
+
+  @-webkit-keyframes borderPulse
+    from
+      border: 2px solid #21BA45
+    50%
+      border: 2px solid #00d8ff
+    to
+      border: 2px solid #21BA45
+

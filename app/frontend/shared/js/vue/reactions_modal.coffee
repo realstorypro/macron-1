@@ -40,6 +40,10 @@ class ReactionsModal extends Common
         castPercent: 0
         activeCast: false
 
+        casting: false
+        currentCastTime: 0
+        castInterval: 70
+
       computed:
         scores: ->
           store.state.entry
@@ -73,9 +77,57 @@ class ReactionsModal extends Common
           else
             0.5
 
+
+
+
+        completedPercent: ->
+          current_ability = @currentAbility()
+          Math.floor(@currentCastTime/current_ability.castTime*100)
+
+
       methods:
         useAbility: (event) ->
           @current_access_key = event
+
+
+
+
+        # REFACTOR BEGINS
+
+        currentAbility: ->
+          return false unless @current_access_key
+          store.state.user.spells.filter((item) =>
+            item.access_key == @current_access_key
+          )[0]
+
+
+        cast: ->
+          @currentCastTime = 0
+
+          unless @casting
+            console.log 'start casting'
+            @interval = setInterval(@castCounter,@castInterval)
+          else
+            console.log 'stop casting'
+            clearInterval(@interval)
+
+          @casting = !@casting
+
+
+        castCounter: ->
+          current_ability = @currentAbility()
+          if (@currentCastTime + @castInterval >= current_ability.castTime) || (@completed_percent == 100)
+            clearInterval(@interval)
+            @casting = false
+            @doCast(100)
+          else
+            @currentCastTime += @castInterval
+
+
+
+
+        ## REFACTOR ENDS ###
+
         doCast: (percent) ->
           @castPercent = percent
 
