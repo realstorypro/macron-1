@@ -3,11 +3,11 @@ modal name='reaction-modal' transition="pop-out" :height="modalHeight" :width="m
     = column computer: 16, mobile: 16
       = content
         .bars
-          progress-bar label="Energy" color="orange" :percent="energyPercent" :active-cast="false"
-          progress-bar label="Casting" color="blue" :percent="completedPercent" :active-cast="activeCast"
+          progress-bar label="Energy" color="orange" :percent="energyPercent"
+          progress-bar label="Casting" color="blue" :percent="completedPercent"
         .abilities
           template v-for="spell in spells"
-            ability-button @use-ability="useAbility" v-bind="spell"
+            ability-button @use-ability="useAbility" v-bind="spell" v-bind:current_access_key="current_access_key"
         .details
           template v-if="selectedAbility"
             ability-details v-bind="selectedAbility"

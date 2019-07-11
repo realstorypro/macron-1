@@ -1,6 +1,6 @@
 <template lang="pug">
     .ability
-        .ui.icon.button(v-bind:class="[color, {active: active}]" v-touch:tap="onTap")
+        .ui.icon.button(v-bind:class="[color, {active: testing}]" v-touch:tap="onTap")
             i.icon.normal.inverted(v-bind:class="icon")
 </template>
 
@@ -9,17 +9,17 @@
         props:
             icon: String
             color: String
-            castTime: Number
             access_key: String
+            current_access_key: String
         data: ->
             active: false
+        computed:
+            testing: ->
+              return true if @access_key == @current_access_key
+              false
         methods:
             onTap: ->
                 @active = !@active
                 @.$emit('use-ability', @access_key)
-
-            # Factor this intot the main thing later
-            # onMouseOut: ->
-            #     @.$emit('use-ability', null)
 
 </script>

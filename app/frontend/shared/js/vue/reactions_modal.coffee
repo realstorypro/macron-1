@@ -37,8 +37,6 @@ class ReactionsModal extends Common
       data: ->
         widget: $("##{widget.id}").data()
         current_access_key: null
-        castPercent: 0
-        activeCast: false
 
         casting: false
         currentCastTime: 0
@@ -118,8 +116,7 @@ class ReactionsModal extends Common
           current_ability = @currentAbility()
           if (@currentCastTime + @castInterval >= current_ability.castTime) || (@completed_percent == 100)
             clearInterval(@interval)
-            @casting = false
-            @doCast(100)
+            @doCast()
           else
             @currentCastTime += @castInterval
 
@@ -128,49 +125,47 @@ class ReactionsModal extends Common
 
         ## REFACTOR ENDS ###
 
-        doCast: (percent) ->
-          @castPercent = percent
+        doCast: ->
+          cast_response = store.dispatch('castSpell',
+            id: @widget.userId
+            spell: @current_access_key,
+            subject_id: @widget.subjectId,
+            component: @widget.component
+          )
 
-          if @castPercent == 100
-            cast_response = store.dispatch('castSpell',
-              id: @widget.userId
-              spell: @current_access_key,
-              subject_id: @widget.subjectId,
-              component: @widget.component
-            )
+          current_spells = store.state.user.spells.filter((item) =>
+            item.access_key == @current_access_key
+          )
 
-            current_spells = store.state.user.spells.filter((item) =>
-              item.access_key == @current_access_key
-            )
+          spell_name = current_spells[0].name
 
-            spell_name = current_spells[0].name
-
-            cast_response.then (rsp) =>
-              cast_points = rsp.data.points
-              unless cast_points is false
-                @.$notify
-                  group: 'game'
-                  title: 'Vote Cast'
-                  text: "#{spell_name} was cast for #{cast_points} points."
-              else
-                @.$notify
-                  group: 'game'
-                  title: 'Error Casting a Vote'
-                  text: "#{spell_name} was not cast. Please try again later."
+          cast_response.then (rsp) =>
+            cast_points = rsp.data.points
+            unless cast_points is false
+              @.$notify
+                group: 'game'
+                title: 'Vote Cast'
+                text: "#{spell_name} was cast for #{cast_points} points."
+            else
+              @.$notify
+                group: 'game'
+                title: 'Error Casting a Vote'
+                text: "#{spell_name} was not cast. Please try again later."
 
 
-            ability = store.state.user.spells.filter((item) =>
-              item.access_key == @current_access_key
-            )
-            store.dispatch('reduceEnergy', ability[0].energy)
-            @closeModal()
+          ability = store.state.user.spells.filter((item) =>
+            item.access_key == @current_access_key
+          )
+          store.dispatch('reduceEnergy', ability[0].energy)
+
+          @closeModal()
 
 
         # Modal Methods
         closeModal: ->
           @current_access_key = null
-          @activeCast = false
-          @castPercent = 0
+          @currentCastTime = 0
+          @casting = false
           @.$modal.hide('reaction-modal')
 
         afterModalOpen: (e) ->
