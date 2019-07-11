@@ -57,7 +57,7 @@ module User::State
       self.energy = self.energy - castable_spell.energy
       self.save
 
-      return castable_points
+      castable_points
     end
 
     # @param [String] progression_path a filter for the progression path

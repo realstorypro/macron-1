@@ -65,7 +65,7 @@ class ReactionsModal extends Common
           if utils.is_mobile()
             "400px"
           else
-            "390px"
+            "380px"
 
         modalPivotY: ->
           if utils.is_mobile()

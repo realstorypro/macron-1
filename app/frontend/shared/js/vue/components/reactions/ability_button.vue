@@ -4,7 +4,7 @@
             .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" v-touch:tap="onTap")
                 i.icon.normal.inverted(v-bind:class="icon")
         template(v-else)
-            .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseDown" @mouseup="onMouseUp" @mouseover="onMouseOver" @mouseout="onMouseOut")
+            .ui.icon.button(v-bind:class="[color, {processing: processing}, {active_cast: activeCast && processing}]" @mousedown="onMouseOver")
                 i.icon.normal.inverted(v-bind:class="icon")
 </template>
 
