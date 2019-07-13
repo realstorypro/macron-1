@@ -17,5 +17,5 @@ modal name='reaction-modal' transition="pop-out" :height="modalHeight" :width="m
               = content
                 | Pick a Reaction
         .actions
-          = button class: 'compact blue fluid', v: {'on:click.prevent': 'cast()'}
+          = button class: 'compact blue fluid', v: {'on:click.prevent': 'cast()', 'bind:class': 'actionClass'}
             | CAST

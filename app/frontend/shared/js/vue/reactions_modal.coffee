@@ -82,12 +82,14 @@ class ReactionsModal extends Common
           current_ability = @currentAbility()
           Math.floor(@currentCastTime/current_ability.castTime*100)
 
+        actionClass: ->
+          return 'disabled' if @current_access_key == null
+          return 'casting' if @casting 
+
 
       methods:
         useAbility: (event) ->
           @current_access_key = event
-
-
 
 
         # REFACTOR BEGINS
@@ -163,9 +165,12 @@ class ReactionsModal extends Common
 
         # Modal Methods
         closeModal: ->
+          # Resetting variables to defaults
           @current_access_key = null
           @currentCastTime = 0
           @casting = false
+
+          # Closing the actual modal
           @.$modal.hide('reaction-modal')
 
         afterModalOpen: (e) ->
