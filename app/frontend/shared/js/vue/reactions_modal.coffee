@@ -75,9 +75,6 @@ class ReactionsModal extends Common
           else
             0.5
 
-
-
-
         completedPercent: ->
           current_ability = @currentAbility()
           Math.floor(@currentCastTime/current_ability.castTime*100)
@@ -90,9 +87,6 @@ class ReactionsModal extends Common
       methods:
         useAbility: (event) ->
           @current_access_key = event
-
-
-        # REFACTOR BEGINS
 
         currentAbility: ->
           return false unless @current_access_key
@@ -121,11 +115,6 @@ class ReactionsModal extends Common
             @doCast()
           else
             @currentCastTime += @castInterval
-
-
-
-
-        ## REFACTOR ENDS ###
 
         doCast: ->
           cast_response = store.dispatch('castSpell',
