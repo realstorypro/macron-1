@@ -64,28 +64,43 @@ $border: 1px solid #00000080
 
   .active
     animation-name: bgPulse
-    animation-duration: 2s
+    animation-duration: 2s !important
     animation-iteration-count: infinite
 
   .actions .ui.button
-      &.casting
-        animation-name: bgPulse !important
-        animation-duration: 2s !important
-        animation-iteration-count: infinite !important
+    border: 3px solid transparent
+
+    &:active, &:focus
+      background-color: $blue !important
+
+    &.casting
+      animation-name: bgPulse2 !important
+      animation-duration: 1s !important
+      animation-iteration-count: infinite !important
 
   @-webkit-keyframes bgPulse
     from
-      box-shadow: 0 0 9px #21BA45
+      box-shadow: 0 0 9px $blue
     50%
-      box-shadow: 0 0 12px #91bd09
+      box-shadow: 0 0 12px ligthen($blue, 20)
     to
-      box-shadow: 0 0 9px #21BA45
+      box-shadow: 0 0 9px $blue
+
+  @-webkit-keyframes bgPulse2
+    from
+      box-shadow: inset 0 0 5px $blue
+    50%
+      box-shadow: inset 0 0 5px lighten($blue, 20)
+    to
+      box-shadow: inset 0 0 5px $blue
 
   @-webkit-keyframes borderPulse
     from
-      border: 2px solid #21BA45
+      border: 3px solid $blue
     50%
-      border: 2px solid #00d8ff
+      border: 3px solid darken($blue, 5)
     to
-      border: 2px solid #21BA45
+      border: 3px solid $blue
+
+
 
