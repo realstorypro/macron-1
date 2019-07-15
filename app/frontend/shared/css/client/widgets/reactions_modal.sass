@@ -64,7 +64,7 @@ $border: 1px solid #00000080
 
   .active
     animation-name: bgPulse
-    animation-duration: 2s !important
+    animation-duration: 1s !important
     animation-iteration-count: infinite
 
   .actions .ui.button
@@ -80,11 +80,11 @@ $border: 1px solid #00000080
 
   @-webkit-keyframes bgPulse
     from
-      box-shadow: 0 0 9px $blue
+      box-shadow: 0 0 9px $black
     50%
-      box-shadow: 0 0 12px ligthen($blue, 20)
+      box-shadow: 0 0 12px ligthen($black, 50)
     to
-      box-shadow: 0 0 9px $blue
+      box-shadow: 0 0 9px $black
 
   @-webkit-keyframes bgPulse2
     from

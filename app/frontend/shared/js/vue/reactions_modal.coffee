@@ -65,7 +65,7 @@ class ReactionsModal extends Common
 
         modalHeight: ->
           if utils.is_mobile()
-            "400px"
+            "385px"
           else
             "380px"
 
