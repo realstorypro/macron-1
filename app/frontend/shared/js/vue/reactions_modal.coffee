@@ -18,7 +18,6 @@ import AbilityDetails from '../vue/components/reactions/ability_details'
 import SelectAbility from '../vue/components/reactions/select_ability'
 
 
-
 class ReactionsModal extends Common
   constructor: ->
       super('reactions_modal')
@@ -80,9 +79,24 @@ class ReactionsModal extends Common
           Math.floor(@currentCastTime/current_ability.castTime*100)
 
         actionClass: ->
-          return 'disabled' if @current_access_key == null
-          return 'casting' if @casting 
+          current_ability = @currentAbility()
+          ability_direction = current_ability.direction
 
+          ability_class = 'green' if ability_direction == 'positive'
+          ability_class = 'red' if ability_direction == 'negative'
+
+          return 'grey disabled' if (store.state.user.energy == 0) || (current_ability && current_ability.energy > store.state.user.energy)
+          return 'grey disabled' if @current_access_key == null
+          return "#{ability_class} casting" if @casting 
+          return ability_class unless @casting
+
+
+        actionText: ->
+          current_ability = @currentAbility()
+
+          return 'NEED ENERGY' if (store.state.user.energy == 0) || (current_ability && current_ability.energy > store.state.user.energy)
+          return 'CANCEL' if @casting
+          return 'CAST' unless @casting
 
       methods:
         useAbility: (event) ->
