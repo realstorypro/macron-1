@@ -37,8 +37,10 @@ class ReactionsModal extends Common
       data: ->
         widget: $("##{widget.id}").data()
         current_access_key: null
-        castPercent: 0
-        activeCast: false
+
+        casting: false
+        currentCastTime: 0
+        castInterval: 70
 
       computed:
         scores: ->
@@ -63,9 +65,9 @@ class ReactionsModal extends Common
 
         modalHeight: ->
           if utils.is_mobile()
-            "400px"
+            "385px"
           else
-            "390px"
+            "380px"
 
         modalPivotY: ->
           if utils.is_mobile()
@@ -73,32 +75,91 @@ class ReactionsModal extends Common
           else
             0.5
 
+        completedPercent: ->
+          current_ability = @currentAbility()
+          Math.floor(@currentCastTime/current_ability.castTime*100)
+
+        actionClass: ->
+          return 'disabled' if @current_access_key == null
+          return 'casting' if @casting 
+
+
       methods:
         useAbility: (event) ->
           @current_access_key = event
-        doCast: (percent) ->
-          @castPercent = percent
 
-          if @castPercent == 100
-            store.dispatch('castSpell',
-              id: @widget.userId
-              spell: @current_access_key,
-              subject_id: @widget.subjectId,
-              component: @widget.component
-            )
+        currentAbility: ->
+          return false unless @current_access_key
+          store.state.user.spells.filter((item) =>
+            item.access_key == @current_access_key
+          )[0]
 
-            ability = store.state.user.spells.filter((item) =>
-              item.access_key == @current_access_key
-            )
-            store.dispatch('reduceEnergy', ability[0].energy)
-            @closeModal()
+
+        cast: ->
+          @currentCastTime = 0
+
+          unless @casting
+            console.log 'start casting'
+            @interval = setInterval(@castCounter,@castInterval)
+          else
+            console.log 'stop casting'
+            clearInterval(@interval)
+
+          @casting = !@casting
+
+
+        castCounter: ->
+          current_ability = @currentAbility()
+          if (@currentCastTime + @castInterval >= current_ability.castTime) || (@completed_percent == 100)
+            clearInterval(@interval)
+            @doCast()
+          else
+            @currentCastTime += @castInterval
+
+        doCast: ->
+          cast_response = store.dispatch('castSpell',
+            id: @widget.userId
+            spell: @current_access_key,
+            subject_id: @widget.subjectId,
+            component: @widget.component
+          )
+
+          current_spells = store.state.user.spells.filter((item) =>
+            item.access_key == @current_access_key
+          )
+
+          spell_name = current_spells[0].name
+
+          cast_response.then (rsp) =>
+            cast_points = rsp.data.points
+            unless cast_points is false
+              @.$notify
+                group: 'game'
+                type: 'success'
+                title: "#{spell_name} was cast for #{cast_points} points."
+            else
+              @.$notify
+                group: 'game'
+                type: 'error'
+                title: "#{spell_name} was not cast. Please try again later."
+
+
+          ability = store.state.user.spells.filter((item) =>
+            item.access_key == @current_access_key
+          )
+          store.dispatch('reduceEnergy', ability[0].energy)
+
+          @closeModal()
 
 
         # Modal Methods
         closeModal: ->
+          # Resetting variables to defaults
           @current_access_key = null
-          @activeCast = false
-          @castPercent = 0
+          @currentCastTime = 0
+          @casting = false
+
+          # Closing the actual modal
           @.$modal.hide('reaction-modal')
 
         afterModalOpen: (e) ->

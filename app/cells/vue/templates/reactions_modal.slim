@@ -3,11 +3,11 @@ modal name='reaction-modal' transition="pop-out" :height="modalHeight" :width="m
     = column computer: 16, mobile: 16
       = content
         .bars
-          progress-bar label="Energy" color="orange" :percent="energyPercent" :active-cast="false"
-          progress-bar label="Casting" color="blue" :percent="castPercent" :active-cast="activeCast"
+          progress-bar label="Energy" color="orange" :percent="energyPercent"
+          progress-bar label="Casting" color="blue" :percent="completedPercent"
         .abilities
           template v-for="spell in spells"
-            ability-button @use-ability="useAbility" @casting="doCast" v-bind="spell" v-bind:active-cast="activeCast"
+            ability-button @use-ability="useAbility" v-bind="spell" v-bind:current_access_key="current_access_key"
         .details
           template v-if="selectedAbility"
             ability-details v-bind="selectedAbility"
@@ -15,4 +15,7 @@ modal name='reaction-modal' transition="pop-out" :height="modalHeight" :width="m
             = h5
               = icon 'huge hand pointing up'
               = content
-                | Select a Reaction
+                | Pick a Reaction
+        .actions
+          = button class: 'compact blue fluid', v: {'on:click.prevent': 'cast()', 'bind:class': 'actionClass'}
+            | CAST

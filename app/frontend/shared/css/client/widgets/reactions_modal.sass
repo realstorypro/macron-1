@@ -1,27 +1,16 @@
-$border: 2px solid #00000080
+$border: 1px solid #00000080
 
 .reactions_modal.widget
   .content
     padding: 1em 1.5em
 
-  .close.holder
-    display: flex
-    justify-content: flex-end
-
-  .bars
-    border-bottom: $border
-
-  .comment-box
-    border-bottom: $border
-    padding: 1em 0
-
   .abilities
-    padding: 1em 0
+    padding: 0.1em 0 1em
     border-bottom: $border
 
   .details
-    height: 70px
-    max-height: 70px
+    height: 150px
+    max-height: 150px
     padding-bottom: 1em
 
     .header
@@ -69,3 +58,38 @@ $border: 2px solid #00000080
     .blue
       color: $blue
 
+  .ability
+    display: inline-block
+    margin-right: 0.5em
+
+  .active
+    animation-name: bgPulse
+    animation-duration: 1s !important
+    animation-iteration-count: infinite
+
+  .actions .ui.button
+    border: 3px solid transparent
+
+    &:active, &:focus
+      background-color: $blue !important
+
+    &.casting
+      animation-name: bgPulse2 !important
+      animation-duration: 1s !important
+      animation-iteration-count: infinite !important
+
+  @-webkit-keyframes bgPulse
+    from
+      box-shadow: 0 0 9px $black
+    50%
+      box-shadow: 0 0 12px ligthen($black, 50)
+    to
+      box-shadow: 0 0 9px $black
+
+  @-webkit-keyframes bgPulse2
+    from
+      box-shadow: inset 0 0 5px $blue
+    50%
+      box-shadow: inset 0 0 5px lighten($blue, 20)
+    to
+      box-shadow: inset 0 0 5px $blue
