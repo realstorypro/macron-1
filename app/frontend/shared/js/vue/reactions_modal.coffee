@@ -129,13 +129,20 @@ class ReactionsModal extends Common
           )
 
           spell_name = current_spells[0].name
+          spell_direction = current_spells[0].direction
+
+          console.log(spell_direction)
+
+          notification_type = 'success' if spell_direction == 'positive'
+          notification_type = 'error' if spell_direction == 'negative'
+
 
           cast_response.then (rsp) =>
             cast_points = rsp.data.points
             unless cast_points is false
               @.$notify
                 group: 'game'
-                type: 'success'
+                type: notification_type
                 title: "#{spell_name} was cast for #{cast_points} points."
             else
               @.$notify
