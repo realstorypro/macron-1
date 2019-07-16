@@ -92,6 +92,7 @@
     "uploadcare": "^0.4.5",
     "uploadcare-widget": "^3.6.1",
     "v-tooltip": "^2.0.1",
+    "velocity-animate": "^1.5.2",
     "vue": "^2.5.16",
     "vue-avatar": "^2.1.1",
     "vue-goodshare": "^0.9.3",

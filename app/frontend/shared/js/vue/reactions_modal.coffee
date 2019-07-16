@@ -99,10 +99,8 @@ class ReactionsModal extends Common
           @currentCastTime = 0
 
           unless @casting
-            console.log 'start casting'
             @interval = setInterval(@castCounter,@castInterval)
           else
-            console.log 'stop casting'
             clearInterval(@interval)
 
           @casting = !@casting
@@ -131,11 +129,8 @@ class ReactionsModal extends Common
           spell_name = current_spells[0].name
           spell_direction = current_spells[0].direction
 
-          console.log(spell_direction)
-
           notification_type = 'success' if spell_direction == 'positive'
           notification_type = 'error' if spell_direction == 'negative'
-
 
           cast_response.then (rsp) =>
             cast_points = rsp.data.points
