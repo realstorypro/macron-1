@@ -19,15 +19,22 @@ class VueNotifications extends Common
       mixins: [turbolinks_adapter]
       data: ->
         widget: $("##{widget.id}").data()
+      computed: 
+        notification_position: ->
+          if utils.is_mobile()
+            "bottom center"
+          else
+            "bottom right"
+
       mounted: ->
           title = Object.keys(window.notifications)[0]
           notification = window.notifications[Object.keys(window.notifications)[0]]
           if notification
-            this.$notify({
-              group: 'game',
-              title: title.toUpperCase(),
+            @.$notify
+              group: 'game'
+              title: title.toUpperCase()
+              type: title.toLowerCase()
               text: notification
-            });
 
 
 export { VueNotifications as default }

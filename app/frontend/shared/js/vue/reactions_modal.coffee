@@ -135,13 +135,13 @@ class ReactionsModal extends Common
             unless cast_points is false
               @.$notify
                 group: 'game'
-                title: 'Vote Cast'
-                text: "#{spell_name} was cast for #{cast_points} points."
+                type: 'success'
+                title: "#{spell_name} was cast for #{cast_points} points."
             else
               @.$notify
                 group: 'game'
-                title: 'Error Casting a Vote'
-                text: "#{spell_name} was not cast. Please try again later."
+                type: 'error'
+                title: "#{spell_name} was not cast. Please try again later."
 
 
           ability = store.state.user.spells.filter((item) =>
