@@ -125,7 +125,8 @@ group :test do
 
   # rubocop
   gem "rubocop"
-  gem "rubocop-rails_config"
+  gem "rubocop-rails_config", github: "logik-works/rubocop-rails_config"
+
 
   # browser testing
   gem "selenium-webdriver"
