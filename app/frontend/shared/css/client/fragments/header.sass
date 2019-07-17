@@ -11,6 +11,11 @@
 
   &.fullscreen
     min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    @include media("<tablet")
+      min-height: 60vh
 
   &.eighty
     min-height: 80vh
@@ -27,6 +32,7 @@
     margin-bottom: $f-header-h1-margin-bottom
     margin-top: 0
     @include media("<desktop")
+      line-height: 1.25em
       font-size: $f-header-mobile-h1-font-size
       margin-bottom: $f-header-mobile-h1-margin-bottom
 
@@ -35,7 +41,6 @@
       margin-top: $f-header-meta-mobile-margin-top
 
   .summary
-    max-width: 85%
     margin-top: $f-header-summary-margin-top
     @include media("<desktop")
       max-width: 100%

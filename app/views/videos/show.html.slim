@@ -2,14 +2,9 @@
   = fragment 'header fullscreen'
     == Vue::CoverCell.(nil, overlay_background: ss('theme.global.overlay_background'), image: @entry.landscape_image)
     = container
-      = grid
+      = grid 'centered'
         = row
-          = column computer: 16, tablet: 16, mobile: 16
-            = h3 'breadcrumb'
-              .ui.breadcrumb.large
-                .section = link_to 'Videos', videos_path
-                = divider text: '/'
-                .section = link_to @entry.category.name.capitalize, video_category_path(params[:category])
+          = column computer: 12, tablet: 16, mobile: 16
             = h1
               = @entry.long_title
           = column computer: 12, tablet: 16, mobile: 16

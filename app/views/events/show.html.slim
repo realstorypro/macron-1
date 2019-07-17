@@ -2,24 +2,11 @@
   = fragment 'header fullscreen'
     == Vue::CoverCell.(nil, overlay_background: ss('theme.global.overlay_background'), image: @entry.fullscreen_image)
     = container
-      = grid
+      = grid 'centered'
         = row
-          = column computer: 16, tablet: 16, mobile: 16
-            = h3 'breadcrumb'
-              .ui.breadcrumb.large
-                .section = link_to 'Events', events_path
-                = divider text: '/'
-                .section = link_to params[:category].capitalize, event_category_path(params[:category])
+          = column computer: 14, tablet: 16, mobile: 16
             = h1
               = @entry.long_title
-            = list 'relaxed horizontal meta stacked'
-              - if @entry.user
-                = item
-                  = icon 'user circle large'
-                  = content
-                    = header ui: :off, text: 'Promoter'
-                    = link_to member_path(@entry.user)
-                      = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name} "
             .summary
               = @entry.long_summary.html_safe
   = widget 'sticky'
@@ -29,26 +16,31 @@
           = row
             = column computer: 11, tablet: 16, mobile: 16, class: "context"
               = widget 'normal rich text'
+                = h3 'breadcrumb'
+                  .ui.breadcrumb.large
+                    .section = link_to 'Articles', articles_path
+                    = divider text: '/'
+                    .section = link_to params[:category].capitalize, article_category_path(params[:category])
                 = @entry.body.html_safe
             = column computer: 5, tablet: 16, mobile: 16
-              = sticky
-                = fragment class: 'meta holder'
-                  = segment 'secondary'
-                    = table 'very basic unstackable'
-                      tr valign="top"
-                        td
-                          = icon 'clock'
-                        td
-                          = show_event_date(@entry)
-                          br
-                          = "#{@entry.start_time} &mdash; #{@entry.end_time}".html_safe
-                      tr valign="top"
-                        td
-                          = icon 'dollar'
-                        td= @entry.price
-                      tr valign="top"
-                        td
-                          = icon 'map marker alternate'
-                        td= @entry.location.html_safe
+              = segment 'basic sticky'
+                = h5 'horizontal divider'
+                  | Details
+                = table 'very basic unstackable'
+                  tr valign="top"
+                    td
+                      = icon 'clock'
+                    td
+                      = show_event_date(@entry)
+                      br
+                      = "#{@entry.start_time} &mdash; #{@entry.end_time}".html_safe
+                  tr valign="top"
+                    td
+                      = icon 'dollar'
+                    td= @entry.price
+                  tr valign="top"
+                    td
+                      = icon 'map marker alternate'
+                    td= @entry.location.html_safe
 
   = render "partials/engager"

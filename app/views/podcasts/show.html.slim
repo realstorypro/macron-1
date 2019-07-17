@@ -1,34 +1,10 @@
 = component 'podcast details'
-  = fragment "header #{@entry.category.color.name}"
+  = fragment "header fullscreen #{@entry.category.color.name}"
     = container
-      = grid
-        = column computer: 16, tablet: 16, mobile: 16
-          = h3 'breadcrumb'
-            .ui.breadcrumb.large
-              .section = link_to 'Podcasts', podcasts_path
-              = divider text: '/'
-              .section = link_to params[:category].capitalize, podcast_category_path(params[:category])
+      = grid 'centered'
+        = column computer: 14, tablet: 16, mobile: 16
           = h1
             = @entry.long_title
-          = list 'relaxed horizontal meta'
-            - if @entry.user
-              = item
-                = icon 'user circle large'
-                = content
-                  = header ui: :off, text: 'Author'
-                  = link_to member_path(@entry.user)
-                    = "#{@entry.user.profile.first_name} #{@entry.user.profile.last_name} "
-            = item
-              = icon 'clock'
-              = content
-                = header ui: :off, text: 'Reading Time'
-                = @entry.body.reading_time
-            = item
-              = icon 'comments'
-              = content
-                = header ui: :off, text: 'Replies'
-                = @entry.comments.count
-          = column computer: 12, tablet: 16, mobile: 16
-            == Vue::AudioCell.(nil, url: @entry.embedded_audio)
+          == Vue::AudioCell.(nil, url: @entry.embedded_audio)
 
   = render 'partials/show_content'
