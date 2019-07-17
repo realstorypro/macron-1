@@ -18,7 +18,6 @@ import AbilityDetails from '../vue/components/reactions/ability_details'
 import SelectAbility from '../vue/components/reactions/select_ability'
 
 
-
 class ReactionsModal extends Common
   constructor: ->
       super('reactions_modal')
@@ -49,6 +48,8 @@ class ReactionsModal extends Common
           store.state.user.level
         spells: ->
           store.state.user.spells
+        energy: ->
+          store.state.user.energy
         energyPercent: ->
           store.state.user.energy / store.state.user.max_energy * 100
         selectedAbility: ->
@@ -80,9 +81,24 @@ class ReactionsModal extends Common
           Math.floor(@currentCastTime/current_ability.castTime*100)
 
         actionClass: ->
-          return 'disabled' if @current_access_key == null
-          return 'casting' if @casting 
+          current_ability = @currentAbility()
+          ability_direction = current_ability.direction
 
+          ability_class = 'green' if ability_direction == 'positive'
+          ability_class = 'red' if ability_direction == 'negative'
+
+          return 'grey disabled' if (store.state.user.energy == 0) || (current_ability && current_ability.energy > store.state.user.energy)
+          return 'grey disabled' if @current_access_key == null
+          return "#{ability_class} casting" if @casting 
+          return ability_class unless @casting
+
+
+        actionText: ->
+          current_ability = @currentAbility()
+
+          return 'NEED ENERGY' if (store.state.user.energy == 0) || (current_ability && current_ability.energy > store.state.user.energy)
+          return 'CANCEL' if @casting
+          return 'CAST' unless @casting
 
       methods:
         useAbility: (event) ->
@@ -99,10 +115,8 @@ class ReactionsModal extends Common
           @currentCastTime = 0
 
           unless @casting
-            console.log 'start casting'
             @interval = setInterval(@castCounter,@castInterval)
           else
-            console.log 'stop casting'
             clearInterval(@interval)
 
           @casting = !@casting
@@ -129,13 +143,17 @@ class ReactionsModal extends Common
           )
 
           spell_name = current_spells[0].name
+          spell_direction = current_spells[0].direction
+
+          notification_type = 'success' if spell_direction == 'positive'
+          notification_type = 'error' if spell_direction == 'negative'
 
           cast_response.then (rsp) =>
             cast_points = rsp.data.points
             unless cast_points is false
               @.$notify
                 group: 'game'
-                type: 'success'
+                type: notification_type
                 title: "#{spell_name} was cast for #{cast_points} points."
             else
               @.$notify

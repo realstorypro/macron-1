@@ -124,8 +124,9 @@ group :test do
   gem "codecov", require: false
 
   # rubocop
-  gem "rubocop", "~> 0.70"
-  gem "rubocop-rails_config", "~> 0.6.2"
+  gem "rubocop"
+  gem "rubocop-rails_config", github: "logik-works/rubocop-rails_config"
+
 
   # browser testing
   gem "selenium-webdriver"

@@ -34,7 +34,7 @@ module User::State
       castable_spell = get_spell_details(spell_name)
 
       # short cirtucit if there isn't enogh energy
-      return false if self.energy <= castable_spell.energy
+      return false if self.energy < castable_spell.energy
 
       # get points
       castable_points = get_castable_points(castable_spell)

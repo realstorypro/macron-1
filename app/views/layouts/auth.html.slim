@@ -17,5 +17,6 @@ html
     .pusher
       = render 'layouts/partials/navigation'
       == yield
+      == vue_widget name: 'vue notifications'
 
     = render 'layouts/partials/loading_js'

@@ -4,8 +4,8 @@ spells:
     color: "green"
     icon: 'shield alternate'
     path: shamanism
-    base_points: 5
-    energy: 10
+    base_points: 50
+    energy: 100
     level: 1
     direction: 'positive'
     description: 'A sign of agreement first used by the Native American Tribes.'

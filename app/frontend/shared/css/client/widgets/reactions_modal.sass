@@ -69,13 +69,14 @@ $border: 1px solid #00000080
 
   .actions .ui.button
     border: 3px solid transparent
+    transition: all 0.025s
 
     &:active, &:focus
-      background-color: $blue !important
+      //background-color: $blue !important
 
     &.casting
       animation-name: bgPulse2 !important
-      animation-duration: 1s !important
+      animation-duration: 2s !important
       animation-iteration-count: infinite !important
 
   @-webkit-keyframes bgPulse
@@ -88,8 +89,8 @@ $border: 1px solid #00000080
 
   @-webkit-keyframes bgPulse2
     from
-      box-shadow: inset 0 0 5px $blue
+      opacity: 1
     50%
-      box-shadow: inset 0 0 5px lighten($blue, 20)
+      opacity: 0.75
     to
-      box-shadow: inset 0 0 5px $blue
+      opacity: 1

@@ -7,7 +7,7 @@ modal name='reaction-modal' transition="pop-out" :height="modalHeight" :width="m
           progress-bar label="Casting" color="blue" :percent="completedPercent"
         .abilities
           template v-for="spell in spells"
-            ability-button @use-ability="useAbility" v-bind="spell" v-bind:current_access_key="current_access_key"
+            ability-button @use-ability="useAbility" v-bind="spell" :current_access_key="current_access_key" :current_energy="energy"
         .details
           template v-if="selectedAbility"
             ability-details v-bind="selectedAbility"
@@ -17,5 +17,5 @@ modal name='reaction-modal' transition="pop-out" :height="modalHeight" :width="m
               = content
                 | Pick a Reaction
         .actions
-          = button class: 'compact blue fluid', v: {'on:click.prevent': 'cast()', 'bind:class': 'actionClass'}
-            | CAST
+          = button class: 'compact fluid', v: {'on:click.prevent': 'cast()', 'bind:class': 'actionClass'}
+            | {{ actionText }}
