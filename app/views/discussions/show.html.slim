@@ -1,13 +1,8 @@
 = component 'discussion details'
-  = fragment "header #{@entry.category.color.name}"
+  = fragment "header fullscreen #{@entry.category.color.name}"
     = container
-      = grid
-        = column computer: 16, tablet: 16, mobile: 16
-          = h3 'breadcrumb'
-            .ui.breadcrumb.large
-              .section = link_to 'Discussions', discussions_path
-              = divider text: '/'
-              .section = link_to params[:category].capitalize, discussion_category_path(params[:category])
+      = grid 'centered'
+        = column computer: 14, tablet: 16, mobile: 16
           = h1
             = @entry.long_title
           .summary

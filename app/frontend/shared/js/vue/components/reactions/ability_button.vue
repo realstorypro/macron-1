@@ -26,7 +26,4 @@
             onTap: ->
                 @active = !@active
                 @.$emit('use-ability', @access_key)
-        mounted: ->
-          console.log 'energy', @energy, @current_energy
-
 </script>

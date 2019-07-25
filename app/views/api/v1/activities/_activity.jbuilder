@@ -23,6 +23,5 @@ json.object do
     json.name activity.subject.name
     json.url entry_url(activity.subject)
     json.category activity.subject.category.name
-    json.card_image activity.subject.card_image
   end
 end
