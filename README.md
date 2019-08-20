@@ -1,4 +1,4 @@
-MACRON 1
+MACRON-1
 --------
 [![codecov](https://codecov.io/gh/leouofa/aquarius/branch/master/graph/badge.svg?token=SpfdxrArOG)](https://codecov.io/gh/leouofa/aquarius)
 ![macron1](https://classicanimemuseum.files.wordpress.com/2018/03/goshogun_hd.jpg) 
