@@ -19,6 +19,7 @@
     .image
       background-size: cover
       background-color: black
+      overflow: hidden
       height: $w-homepage-header-image-height
       @include media("<desktop")
         height: $w-homepage-header-tablet-image-height
@@ -32,6 +33,7 @@
       img
         width: 100%
         height: 100%
+        object-fit: cover
 
     &.tiny .image
       @include media('>=desktop')
