@@ -89,9 +89,11 @@ class ImagePreloader
 
     # resize the resize if it exists or append it
     if resize
-      image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/#{container_width}x#{container_height}/")
+      # image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/#{container_width}x#{container_height}/")
+      image_src = image_src.replace(/\/resize\/[^/]*\//g, "/resize/x#{container_height}/")
     else
-      image_src = image_src + "-/resize/#{container_width}x#{container_height}/"
+      # image_src = image_src + "-/resize/#{container_width}x#{container_height}/"
+      image_src = image_src + "-/resize/x#{container_height}/"
 
     # add the jpeg extension for seo benefits if alt is defined
     if image_alt?
