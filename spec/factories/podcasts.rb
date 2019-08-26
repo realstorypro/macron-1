@@ -10,7 +10,7 @@ FactoryBot.define do
     landscape_image { Faker::Avatar.image }
     card_image { Faker::Avatar.image }
     image_alt { Faker::Name.name }
-    audio { "https://soundcloud.com/waximi_ackawala/a-caravana-prem-paz" }
+    audio { "https://soundcloud.com/carlos-henrique-heilig-123974166/02-soldado-da-rainha" }
     association :category, factory: :category
     association :user
     after(:create) do |article|
