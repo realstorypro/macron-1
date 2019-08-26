@@ -18,12 +18,13 @@
 
 /node_modules
 /yarn-error.log
-
+/public/assets
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /public/packs-test
+/public/packs
 /node_modules
 yarn-debug.log*
 .yarn-integrity
