@@ -1,6 +1,6 @@
 // Footer
 $f-ftr-padding: 2em 0 1.5em
-$f-ftr-mobile-padding: 2em 0 2em
+$f-ftr-mobile-padding: 1.5em 0 1.5em
 $f-ftr-header-opacity: 0.95
 $f-ftr-item-opacity: 0.9
 $f-ftr-link-transition: 0.4s all
@@ -50,6 +50,7 @@ $f-ftr-link-transition: 0.4s all
   padding: $f-ftr-padding
 
   @include media("<tablet")
+    // padding: $f-ftr-mobile-padding
     padding: $f-ftr-mobile-padding
 
   h5
@@ -97,10 +98,10 @@ $f-ftr-link-transition: 0.4s all
       padding-bottom: 0.25em !important
 
   .ui.image.footer
-    width: 100px
+    width: 34px
     display: inline-block
     @include media("<tablet")
-      width: 80px
+      width: 32px
 
 @each $color in $g-colors-list
   .pusher > .footer.fragment.#{$color}
