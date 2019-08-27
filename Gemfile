@@ -20,7 +20,7 @@ gem "friendly_id", "~> 5.1.0"
 gem "wicked"
 gem "sidekiq"
 gem "store_base_sti_class"
-gem "simple_scheduler"
+gem "simple_scheduler", "1.0.0"
 
 # Gamification
 gem "merit"
