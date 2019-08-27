@@ -51,6 +51,11 @@
       @include media('>=desktop')
         height: $w-homepage-header-tall-image-height
 
+    &.wide .image
+      @include media('>=desktop')
+        height: $w-homepage-header-wide-image-height
+
+
   .overlay
     width: 100%
     height: $w-homepage-header-image-height
@@ -87,6 +92,11 @@
       @include media('>=desktop')
         height: $w-homepage-header-tall-image-height !important
 
+    &.wide
+      @include media('>=desktop')
+        height: $w-homepage-header-wide-image-height !important
+
+
 
   .meta
     position: absolute
@@ -122,8 +132,7 @@
         font-weight: 500
 
         &.boxed
-          width: 50%
-          padding: 0.2em 0 0.2em 0.3em
+          padding: 0.3em 0 0.3em 0.3em
           margin-bottom: 0.1em
 
           &.whited
@@ -158,7 +167,7 @@
 
       &.small
         .header
-          font-size: 1.05em
+          font-size: 1.35em
           line-height: 1.5em
         .sub.header
           font-size: 1.0em
@@ -188,7 +197,7 @@
     // Solid Color Generation
     @each $color in $g-colors-list
       &.#{$color}
-        background: rgba(map-get($w-homepage-header-colors-map, $color), .85)
+        background: rgba(map-get($w-homepage-header-colors-map, $color), .55)
 
         .header
           @if index($g-colors-regular, $color)
