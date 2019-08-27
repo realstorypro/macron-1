@@ -10,7 +10,7 @@
           = field class: 'actions'
             = f.input :remember_me, as: :boolean, wrapper: :ui_checkbox, label: 'Remember Me' if devise_mapping.rememberable?
             = separator class: 'forgot remember', text: '·'
-            = link_to 'Forgot Password?', new_user_password_path, class: 'forgot password'
+            = link_to 'Forgot Password?', new_user_password_path, class: 'forgot password', data: { preloadable: true}
           = button_tag type: :submit, class: 'ui right labeled icon button large primary fluid'
             | Sign In
             = icon 'double angle right'
