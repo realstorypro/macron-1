@@ -1,5 +1,5 @@
 // Footer
-$f-ftr-padding: 2em 0 1.5em
+$f-ftr-padding: 1em 0 1em
 $f-ftr-mobile-padding: 1.5em 0 1.5em
 $f-ftr-header-opacity: 0.95
 $f-ftr-item-opacity: 0.9
@@ -105,7 +105,7 @@ $f-ftr-link-transition: 0.4s all
 
 @each $color in $g-colors-list
   .pusher > .footer.fragment.#{$color}
-    background: map-get($f-ftr-colors-map, $color)
+    background: map-get($f-ftr-colors-map, $color) !important
     border-top: 0 !important
 
 .pusher > .footer.fragment.regular
