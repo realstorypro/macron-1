@@ -14,4 +14,4 @@
           /= header subheader_class
             = @item.category.name
           = @item.name
-        = summary text: @model[0].description, class: "#{'shortened' unless @description}"
+        = summary text: @item.description, class: "#{'shortened' unless @description}"
