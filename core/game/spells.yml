@@ -1,17 +1,17 @@
 spells:
-  aho:
+  eurika:
     name: "Eurika"
     color: "green"
     icon: 'flask'
     path: scientist
-    base_points: 50
-    energy: 100
+    base_points: 5
+    energy: 10
     level: 1
     direction: 'positive'
     description: 'A spell of scientifc agreement first cast by Archimedes.'
     castTime: 1500
 
-  shush:
+  abbastanza:
     name: "Abbastanza"
     color: "red"
     icon: 'flask'
@@ -23,7 +23,7 @@ spells:
     description: 'A spell of scientifc disagreement first cast by Galileo Galilei.'
     castTime: 1500
 
-  om:
+  veritas:
     name: "Veritas"
     color: "green"
     icon: 'book'
@@ -35,7 +35,7 @@ spells:
     description: 'A spell of historical agreement first cast by Titus Livius.'
     castTime: 1500
 
-  hush:
+  apketa:
     name: "Apketa"
     color: "red"
     icon: 'book'
