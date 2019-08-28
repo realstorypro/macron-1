@@ -29,7 +29,7 @@
                     = h5 class: 'inverted', text: 'Connect'
                   = column computer: 14, tablet: 16, mobile: 16, class: 'link holder'
                     = list 'horizontal inverted link holder'
-                      -if @member.profile.url.length > 0
+                      -if @member.profile.url && @member.profile.url.length > 0
                         = item
                           = link_to @member.profile.url
                             = icon 'globe large middle aligned'
