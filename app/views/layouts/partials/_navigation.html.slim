@@ -29,7 +29,7 @@
                 | Log Out
         - else
           = item "cta #{'flush ' if ss('theme.header.menu_position') == 'right'}"
-            = link_to sign_in_path
+            = link_to sign_in_path, data: { preloadable: true }
               = button "sign in inverted large #{ss('theme.header.button_color')} #{'flush ' if ss('theme.header.menu_position') == 'left'}"
                 | Sign In
         - if ss('theme.header.menu_position') == 'right'
