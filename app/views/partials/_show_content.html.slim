@@ -6,7 +6,7 @@
           = column computer: 11, tablet: 16, mobile: 16, class: "context"
             = h3 'breadcrumb'
               .ui.breadcrumb.large
-                .section = link_to 'Articles', articles_path
+                .section = link_to params[:category].capitalize, articles_path
                 = divider text: '/'
                 .section = link_to params[:category].capitalize, article_category_path(params[:category])
             = widget 'normal rich text'

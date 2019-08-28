@@ -1,48 +1,48 @@
 spells:
   aho:
-    name: "Aho"
+    name: "Eurika"
     color: "green"
-    icon: 'shield alternate'
-    path: shamanism
+    icon: 'flask'
+    path: scientist
     base_points: 50
     energy: 100
     level: 1
     direction: 'positive'
-    description: 'A sign of agreement first used by the Native American Tribes.'
+    description: 'A spell of scientifc agreement first cast by Archimedes.'
     castTime: 1500
 
   shush:
     name: "Shush"
     color: "red"
-    icon: 'shield alternate'
-    path: shamanism
+    icon: 'flask'
+    path: scientist
     base_points: 5
     energy: 10
     level: 1
     direction: 'negative'
-    description: 'A spell of disagreement used by the Shamans of the amazon.'
+    description: 'A spell of scientifc disagreement first cast by Galileo Galilei.'
     castTime: 1500
 
   om:
-    name: "Om"
+    name: "Veritas"
     color: "green"
-    icon: 'bell'
-    path: yoga
+    icon: 'book'
+    path: historian
     base_points: 5
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of agreement first cast by Yogis of india.'
+    description: 'A spell of historical agreement first cast by Titus Livius.'
     castTime: 1500
 
   hush:
     name: "Hush"
     color: "red"
-    icon: 'bell'
-    path: yoga
+    icon: 'book'
+    path: historian
     base_points: 5
     energy: 10
     level: 1
     direction: 'negative'
-    description: 'A spell of dis-agreement first cast by Yogis of india.'
+    description: 'A spell of historical dis-agreement first cast by Herodotus.'
     castTime: 1500
