@@ -12,7 +12,7 @@ spells:
     castTime: 1500
 
   shush:
-    name: "Shush"
+    name: "Abbastanza"
     color: "red"
     icon: 'flask'
     path: scientist
@@ -36,7 +36,7 @@ spells:
     castTime: 1500
 
   hush:
-    name: "Hush"
+    name: "Apketa"
     color: "red"
     icon: 'book'
     path: historian
