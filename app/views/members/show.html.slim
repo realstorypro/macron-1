@@ -53,64 +53,59 @@
 
 
 
-= segment 'basic'
-  = container
-    = grid
-      = column computer: 11, tablet: 16, mobile: 16
-        = h5 text: 'Recent Activity'
-        == Vue::FeedCell.(nil, user_id: @member.id)
-      = column computer: 5, tablet: 16, mobile: 16
+  = segment 'basic'
+    = container
+      = grid
+        = column computer: 11, tablet: 16, mobile: 16
+          = h5 text: 'Recent Activity'
+          == Vue::FeedCell.(nil, user_id: @member.id)
+        = column computer: 5, tablet: 16, mobile: 16
 
-        = h5 class: 'dividing', text: 'Highlights'
-        = list
-          - if @member.profile.job && @member.profile.job.length > 0
-            = item
-              = icon 'briefcase'
-              = content text: @member.profile.job
-          - if @member.profile.education && @member.profile.education.length > 0
-            = item
-              = icon 'graduation cap'
-              = content text: @member.profile.education
+          = h5 class: 'dividing', text: 'Highlights'
+          = table 'very basic unstackable highlights'
+            - if @member.profile.job && @member.profile.job.length > 0
+              tr
+                td.center.left.aligned.collapsing = icon 'briefcase'
+                td.left.aligned = @member.profile.job
+            - if @member.profile.education && @member.profile.education.length > 0
+              tr
+                td.center.left.aligned.collapsing= icon 'graduation cap'
+                td.left.aligned = @member.profile.education
+            tr
+              td.center.left.aligned.collapsing= icon 'star'
+              td.left.aligned = "#{number_with_delimiter(@member.state.points)} Reputation"
+            - @member.state.paths.each do |path|
+              - if path.level > 0
+                tr
+                  td.center.left.aligned.collapsing
+                    = icon path.icon
+                  td.left.aligned
+                    = "Level #{path.level} #{path.skill}"
 
-          = item
-            = icon 'star'
-            = content text: "#{number_with_delimiter(@member.state.points)} Reputation"
 
-          - @member.state.paths.each do |path|
-            - if path.level > 0
-              = item
-                = icon path.icon
-                = content text: "Level #{path.level} #{path.skill}"
-
-        = h5 class: 'dividing', text: 'Contributions'
-        = list
-          - if @member.events.count > 0
-            = item
-              = icon 'calendar'
-              = content
-                = pluralize(@member.events.count, "Event")
-          - if @member.articles.count > 0
-            = item
-              = icon 'book'
-              = content
-                = pluralize(@member.articles.count, "Article")
-          - if @member.videos.count > 0
-            = item
-              = icon 'video'
-              = content
-                = pluralize(@member.videos.count, "Video")
-          - if @member.podcasts.count > 0
-            = item
-              = icon 'podcast'
-              = content
-                = pluralize(@member.podcasts.count, "Podcast")
-          - if @member.discussions.count > 0
-            = item
-              = icon 'comments'
-              = content
-                = pluralize(@member.discussions.count, "Discussion")
-          - if @member.comments.count > 0
-            = item
-              = icon 'comments'
-              = content
-                = pluralize(@member.comments.count, "Comment")
+          = h5 class: 'dividing', text: 'Contributions'
+          = table 'very basic unstackable highlights'
+            - if @member.events.count > 0
+              tr
+                td.center.left.aligned.collapsing = icon 'calendar'
+                td.left.aligned = pluralize(@member.events.count, "Event")
+            - if @member.articles.count > 0
+              tr
+                td.center.left.aligned.collapsing = icon 'file alternate'
+                td.left.aligned = pluralize(@member.articles.count, "Article")
+            - if @member.videos.count > 0
+              tr
+                td.center.left.aligned.collapsing = icon 'video'
+                td.left.aligned = pluralize(@member.videos.count, "Video")
+            - if @member.podcasts.count > 0
+              tr
+                td.center.left.aligned.collapsing = icon 'podcast'
+                td.left.aligned = pluralize(@member.podcasts.count, "Podcast")
+            - if @member.discussions.count > 0
+              tr
+                td.center.left.aligned.collapsing = icon 'thumb tack'
+                td.left.aligned = pluralize(@member.discussions.count, "Discussion")
+            - if @member.comments.count > 0
+              tr
+                td.center.left.aligned.collapsing = icon 'comments'
+                td.left.aligned = pluralize(@member.comments.count, "Comment")
