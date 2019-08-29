@@ -48,15 +48,21 @@
       text-align: center
 
 
-.ui.social.segment
-  margin: 0
-  background: $black !important
+  .ui.social.segment
+    margin: 0
+    background: $black !important
 
-  .header
-    font-size: 1.4em
+    .header
+      font-size: 1.4em
 
+    // Editable Button
+    .editable.button
+      @include media("<tablet")
+        margin-bottom: 2em
 
-  // Editable Button
-  .editable.button
-    @include media("<tablet")
-      margin-bottom: 2em
+  .highlights.table, .contributions.table
+    margin-bottom: 0
+
+    td
+      padding: 5px 0 5px 5px
+      color: rgba(0, 0, 0, 0.66)

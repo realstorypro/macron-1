@@ -11,7 +11,7 @@ foreman start --procfile=Procfile.dev
 ## Preparation
 ```bash
 
-# pull the database
+# pull the database (use whichever app and database you want to pull the data from)
 heroku pg:pull postgresql-symmetrical-54909 aquarius_development --app demo-idealogic-io-305
 foreman run rake components:setup
 ```
@@ -86,15 +86,6 @@ permissions:
     - role:
         - ability
 ```
-
-# Gamification
-
-## Players -> Users
-## Supporters -> Followers
-## Cast -> React
-
-## World
-The instance of the world is created from every entry. The spells can be cast on it.
 
 #### Helpful Documents
 Documentation that may be useful to developers.

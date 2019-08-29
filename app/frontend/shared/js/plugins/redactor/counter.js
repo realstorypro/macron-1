@@ -1,9 +1,17 @@
 (function($R)
 {
     $R.add('plugin', 'counter', {
+        translations: {
+    		en: {
+    			"words": "words",
+    			"chars": "chars"
+    		}
+        },
         init: function(app)
         {
             this.app = app;
+            this.lang = app.lang;
+            this.utils = app.utils;
             this.editor = app.editor;
             this.statusbar = app.statusbar;
         },
@@ -20,8 +28,8 @@
             var $editor = this.editor.getElement();
             $editor.off('.redactor-plugin-counter');
 
-            this.statusbar.removeItem('words');
-            this.statusbar.removeItem('chars');
+            this.statusbar.remove('words');
+            this.statusbar.remove('chars');
         },
 		count: function()
 		{
@@ -47,8 +55,8 @@
 			this.app.broadcast('counter', data);
 
             // statusbar
-            this.statusbar.add('words', 'words: ' + data.words);
-            this.statusbar.add('chars', 'chars: ' + data.characters);
+            this.statusbar.add('words', this.lang.get('words') + ': ' + data.words);
+            this.statusbar.add('chars', this.lang.get('chars') + ': ' + data.characters);
 		},
 
         // private
@@ -59,9 +67,9 @@
 			html = html.replace(/\t/gi, '');
 			html = html.replace(/\n/gi, ' ');
 			html = html.replace(/\r/gi, ' ');
-			html = html.replace(/\u200B/g, '');
 			html = html.replace(/&nbsp;/g, '1');
 			html = html.trim();
+			html = this.utils.removeInvisibleChars(html);
 
 			return html;
         }

@@ -1,14 +1,4 @@
 paths:
-  shamanism:
-    skill: "Shaman"
-    icon: "fire"
-    description: A path of a Shaman
-
-  yoga:
-    skill: "Yogi"
-    icon: "heart"
-    description: A path of a Yogi
-
   scientist:
     skill: "Scientist"
     icon: "flask"

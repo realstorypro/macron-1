@@ -63,7 +63,6 @@ class Navigation
 
       # scrolling down
       if scroll_position > last_scroll_position
-
         if homepage
           if scroll_position > ( navbar_height * 0.7)
             navbar.css('top', "-#{navbar_height+15}px")
@@ -83,6 +82,7 @@ class Navigation
 
       # scrolling up
       else
+
         navbar.css('top', 0)
 
         if inverted_header

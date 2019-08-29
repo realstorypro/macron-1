@@ -98,19 +98,19 @@ describe User, type: :model do
     end
 
     it "adding points changes the total state points" do
-      expect { @user.add_game_points(:shamanism, 200) }.to change { @user.state.points }.by(200)
+      expect { @user.add_game_points(:scientist, 200) }.to change { @user.state.points }.by(200)
     end
 
     it "adding points changes the path points" do
-      expect { @user.add_game_points(:shamanism, 200) }.to change { @user.get_points(:shamanism) }.by(200)
+      expect { @user.add_game_points(:scientist, 200) }.to change { @user.get_points(:scientist) }.by(200)
     end
 
     it "subtracting points changes the total state points" do
-      expect { @user.subtract_game_points(:shamanism, 200) }.to change { @user.state.points }.by(-200)
+      expect { @user.subtract_game_points(:scientist, 200) }.to change { @user.state.points }.by(-200)
     end
 
     it "subtracting points changes the path points" do
-      expect { @user.subtract_game_points(:shamanism, 200) }.to change { @user.get_points(:shamanism) }.by(-200)
+      expect { @user.subtract_game_points(:scientist, 200) }.to change { @user.get_points(:scientist) }.by(-200)
     end
   end
 
@@ -123,7 +123,7 @@ describe User, type: :model do
     end
 
     it "can cast a spell and uncasting spells on subject and another player" do
-      expect { @player1.cast_spell!(:aho, @article) }.to change { @player2.state.points }.by_at_least(1)
+      expect { @player1.cast_spell!(:eurika, @article) }.to change { @player2.state.points }.by_at_least(1)
     end
   end
 end
