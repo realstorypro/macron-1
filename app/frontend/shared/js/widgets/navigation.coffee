@@ -63,9 +63,9 @@ class Navigation
 
       # scrolling down
       if scroll_position > last_scroll_position
-
-        # making navbar position fixed to keep it at hte top
-        navbar.css('position', 'fixed')
+        
+        # showing navbar on re-apperance
+        navbar.css('opacity', '1')
 
         if homepage
           if scroll_position > ( navbar_height * 0.7)
@@ -89,8 +89,12 @@ class Navigation
 
         # change the css from fixed to relative if we are the top
         # this prevents the navbar from bouncing
-        if scroll_position <= 0
-          navbar.css('position', 'relative')
+        if scroll_position < 0
+          #navbar.css('position', 'relative')
+          #console 'its less then zero bro'
+          #navbar.css('top', scroll_position * -1)
+          navbar.css('transition', '0.4s')
+          navbar.css('opacity', '0')
         else
           navbar.css('top', 0)
 
