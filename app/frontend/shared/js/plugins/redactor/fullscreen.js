@@ -21,6 +21,7 @@
 
             // local
             this.isOpen = false;
+            this.docScroll = 0;
         },
         // public
         start: function()
@@ -33,8 +34,7 @@
             var button = this.toolbar.addButton('fullscreen', data);
             button.setIcon('<i class="re-icon-expand"></i>');
 
-            this.isTarget = (this.opts.toolbarFixedTarget !== document);
-            this.$target = (this.isTarget) ? $R.dom(this.opts.toolbarFixedTarget) : this.$body;
+            this.$target = (this.toolbar.isTarget()) ? this.toolbar.getTargetElement() : this.$body;
 
 			if (this.opts.fullscreen) this.toggle();
 
@@ -45,12 +45,14 @@
 		},
 		open: function()
 		{
+    		this.docScroll = this.$doc.scrollTop();
+
             this._createPlacemarker();
             this.selection.save();
 
             var $container = this.container.getElement();
             var $editor = this.editor.getElement();
-            var $html = (this.isTarget) ? $R.dom('body, html') : this.$target;
+            var $html = (this.toolbar.isTarget()) ? $R.dom('body, html') : this.$target;
 
             if (this.opts.toolbarExternal) this._buildInternalToolbar();
 
@@ -103,14 +105,15 @@
 
     		this._removePlacemarker($container);
             this.selection.restore();
-
+            this.$doc.scrollTop(this.docScroll);
 		},
 
 		// private
 		_resize: function()
 		{
+    		var $toolbar = this.toolbar.getElement();
             var $editor = this.editor.getElement();
-    		var height = this.$win.height();
+    		var height = this.$win.height() - $toolbar.height();
 
     		$editor.height(height);
 		},

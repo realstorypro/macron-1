@@ -39,6 +39,17 @@
     		text-align: right;
 		}
 	}
+	ul[dir="rtl"],
+	ol[dir="rtl"] {
+    	&,
+    	& ul,
+    	& ol {
+        	margin: 0 $base-line-ems 0 0;
+    	}
+		li {
+			text-align: right;
+		}
+	}
     a,
     a:hover {
         color: $color-link;
@@ -92,7 +103,6 @@
 		padding: 0;
 		margin-bottom: $headings-margin-bottom;
 		line-height: $headings-base-line;
-        text-transform:uppercase
 	}
 	h1 { @include font-scaled-size-up(4); }
     h2 { @include font-scaled-size-up(3); }
@@ -222,10 +232,6 @@
 	embed,
 	object {
 		height: auto !important;
-	}
-	embed,
-	object {
-	    height: 100%;
 	}
 	img {
 		vertical-align: middle;
