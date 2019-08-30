@@ -7,7 +7,6 @@
             = column computer: 3, tablet: 16, mobile: 16, class: 'middle aligned aligned'
               = image_tag avatar_thumbnail(@member, false), class: 'ui image circular'
               - if @editable
-                br
                 = button text: 'Edit Profile', url: edit_profile_path, data: {widget: 'crud', action: 'new'}, class: 'fluid primary editable'
             = column computer: 10, tablet: 16, mobile: 16, class: 'centered'
               = h4 'inverted'
