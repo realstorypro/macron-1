@@ -23,6 +23,7 @@ class PageController < ApplicationController
 
     @discussions = Discussion.joins(category: :color)
                                      .includes(category: :color).order("published_date desc")
+                      .where.not(published_date: nil)
                       .limit(ss("theme.homepage.discussion_items"))
   end
 
