@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+#TODO: Refactor and figure out what's needed
 module ApplicationHelper
   include VueHelper
   include SettingsHelper
@@ -12,5 +13,4 @@ module ApplicationHelper
   include FooterHelper
   include EntryHelper
   include ActivityHelper
-  include ContentHelper
 end

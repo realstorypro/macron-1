@@ -7,7 +7,7 @@ module ContentHelper
   def format_content (content)
 
     # scan for embeds
-    # embeds = content.scan(/\[embed]([^<>]*)\[\/embed\]/).flatten
+    embeds = content.scan(/\[embed]([^<>]*)\[\/embed\]/).flatten
     embeds.each do |embed|
       parsed_response = HTTParty.get("https://iframe.ly/api/iframely?url=#{embed}&api_key=#{ENV['IFRAMELY_API']}").parsed_response["html"]
       if parsed_response
