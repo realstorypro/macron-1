@@ -5,9 +5,18 @@
     padding-top: $f-content-mobile-padding-top
     padding-bottom: $f-content-mobile-padding-bottom
 
-  .breadcrumb
-    margin-bottom: 0.15em
+  .ui.breadcrumb
+    margin-bottom: 0.5em
+    @include media("<desktop")
+      margin-bottom: 0.1em
+
+    .ui.divider:not(.vertical):not(.horizontal)
+      font-size: 1.5em
+      @include media("<desktop")
+        font-size: 1em
 
     a
       color: $black
-      font-size: 1.15em
+      font-size: 1.5em
+      @include media("<desktop")
+        font-size: 1em

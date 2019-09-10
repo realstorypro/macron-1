@@ -32,7 +32,7 @@ class Richtext
       pastePlainText: true
       source: true
       buttons: ['html','format', 'bold', 'italic', 'link', 'ol','ul','line']
-      formatting: ['p', 'blockquote', 'h2']
+      formatting: ['p', 'blockquote', 'h2', 'h3', 'h4']
       plugins: ['fullscreen', 'uploadcare', 'video', 'widget', 'embeddable']
       minHeight: '300px'
       uploadcare:
