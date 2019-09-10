@@ -10,8 +10,8 @@
                 = divider text: '/'
                 .section = link_to params[:category].capitalize, article_category_path(params[:category])
             = widget 'normal rich text'
-              - cache @entry
-                = format_content(@entry.body)
+              /- cache @entry
+              = format_content(@entry.body)
           = column computer: 5, tablet: 16, mobile: 16
             = segment 'basic sticky'
               = h5 'horizontal divider'
