@@ -17,6 +17,9 @@ module ContentHelper
       end
     end
 
+    # replace hr with semantic ui divs
+    content.gsub!("<hr>",'<div class="ui divider"></div>')
+
     content.html_safe
   end
 end
