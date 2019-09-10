@@ -14,7 +14,7 @@ class MetaController < ApplicationController
   end
 
   def show
-    expires_in 2.minutes
+    # expires_in 2.minutes
   end
 
   def new
