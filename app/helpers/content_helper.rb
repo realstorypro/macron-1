@@ -11,7 +11,7 @@ module ContentHelper
     embeds.each do |embed|
       parsed_response = HTTParty.get("https://iframe.ly/api/iframely?url=#{embed}&api_key=#{ENV['IFRAMELY_API']}").parsed_response["html"]
       if parsed_response
-        content.gsub!("[embed]#{embed}[/embed]", "<div class='embed'>#{parsed_response}")
+        content.gsub!("[embed]#{embed}[/embed]", "<div class='embed'>#{parsed_response}</div>")
       else
         content.gsub!("[embed]#{embed}[/embed]", "<h4>Embed Unavailable</h4>")
       end
