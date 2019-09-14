@@ -15,8 +15,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :async, :confirmable
+         :recoverable, :rememberable, :trackable, :validatable
 
   rolify role_cname: "Role", before_add: :clear_existing_roles!
   friendly_id :username, use: :slugged
@@ -62,12 +61,10 @@ class User < ApplicationRecord
   # Gamification
   acts_as_voter
 
-  # Temproarley Disabling Until 2FA is Enabled
-
-  # validates_presence_of :country, :phone_number, on: :update
-  # validates :phone_number, phone: { possible: true, allow_blank: true,
-  #                                   types: :mobile,
-  #                                   country_specifier: ->(phone) { phone.country.try(:upcase) } }
+  validates_presence_of :country, :phone_number, on: :update
+  validates :phone_number, phone: { possible: true, allow_blank: true,
+                                    types: :mobile,
+                                    country_specifier: ->(phone) { phone.country.try(:upcase) } }
 
   paginates_per 10
 

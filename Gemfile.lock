@@ -307,8 +307,6 @@ GEM
     multipart-post (2.1.1)
     necromancer (0.5.0)
     nenv (0.3.0)
-    nexmo (5.9.0)
-      jwt (~> 2)
     nio4r (2.5.1)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
@@ -506,7 +504,7 @@ GEM
       sprockets (>= 3.0.0)
     store_base_sti_class (1.2.0)
       activerecord (>= 4.0)
-    temple (0.8.1)
+    temple (0.8.2)
     terminal-notifier-guard (1.6.4)
     thor (0.20.3)
     thread_safe (0.3.6)
@@ -525,6 +523,10 @@ GEM
     turbolinks (5.2.0)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
+    twilio-ruby (5.26.0)
+      faraday (~> 0.9)
+      jwt (>= 1.5, <= 2.5)
+      nokogiri (>= 1.6, < 2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uber (0.1.0)
@@ -557,8 +559,6 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    wicked (1.3.3)
-      railties (>= 3.0.7)
     wisper (2.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
@@ -607,7 +607,6 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   merit
   meta-tags
-  nexmo
   pg (>= 0.18, < 2.0)
   phonelib
   puma (~> 3.11)
@@ -644,12 +643,12 @@ DEPENDENCIES
   thor
   tty-prompt
   turbolinks (~> 5)
+  twilio-ruby
   uglifier (>= 1.3.0)
   uploadcare-rails (~> 1.1)
   validate_url
   web-console (>= 3.3.0)
   webpacker (~> 3.5)
-  wicked
 
 RUBY VERSION
    ruby 2.6.1p33
