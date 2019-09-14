@@ -27,13 +27,14 @@ class Richtext
     utils.log 'setup', 'setup()', 'richtext'
 
     $R.options =
+      autoparse:false
+      autoparsePaste: false
       toolbarFixed: true
-      autoparseVideo: false
       pastePlainText: true
       source: true
       buttons: ['html','format', 'bold', 'italic', 'link', 'ol','ul','line']
       formatting: ['p', 'blockquote', 'h2', 'h3', 'h4']
-      plugins: ['fullscreen', 'uploadcare', 'video', 'widget', 'embeddable']
+      plugins: ['fullscreen', 'uploadcare', 'video', 'widget']
       minHeight: '300px'
       uploadcare:
         buttonIconEnabled: true,
