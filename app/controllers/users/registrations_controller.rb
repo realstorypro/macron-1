@@ -5,6 +5,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :load_country_codes, only: [:edit, :update]
+  before_action :check_for_verified_session, only: [:edit, :update]
 
   def create
     super do |created_user|
@@ -30,7 +31,21 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-    private
+  def update
+    # we want to un-verify the session if the phone number has changed
+    pre_update_phone_number = resource.phone_number
+    super do |updated_user|
+      session[:verified]= false if updated_user.phone_number != pre_update_phone_number
+    end
+  end
+
+  private
+
+  def check_for_verified_session
+    redirect_to root_path unless session[:verified]
+  end
+
+  private
       def configure_permitted_parameters
         added_attrs = %i(username email password password_confirmation remember_me newsletter phone_number country)
         devise_parameter_sanitizer.permit :sign_up, keys: added_attrs

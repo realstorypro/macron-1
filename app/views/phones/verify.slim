@@ -7,7 +7,7 @@
           = column computer: 16, tablet: 16, mobile: 16
             = segment 'auth box'
               = segment 'basic'
-                = h5 text: 'Code Verification'
+                = h5 text: 'Account Verification'
                 = text text: "We've sent a text message to #{number_to_phone(current_user.phone_number)} with a 4 digit code. Please enter it below."
                 = simple_form_for :verification, method: :put, url: phone_verify_otp_path do |f|
                   .field

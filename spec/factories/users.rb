@@ -9,7 +9,6 @@ FactoryBot.define do
     country { "us" }
 
     after(:create) do |user|
-      user.confirm
       user.phone_verified = true
       user.save
     end
