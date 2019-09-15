@@ -61,7 +61,7 @@ class User < ApplicationRecord
   acts_as_voter
 
   # Phone Number & Country Codes
-  before_save :format_phone_number, on: :update
+  before_save :format_phone_number
   validates_presence_of :country, :phone_number, on: :update
   validates :phone_number, phone: { allow_blank: true,
                                     types: :mobile,
@@ -70,6 +70,7 @@ class User < ApplicationRecord
   paginates_per 10
 
   def format_phone_number
+    return true if phone_number.blank?
     numeric_phone = phone_number.gsub(/\D/, "")
     self.phone_number = Phonelib.parse(numeric_phone, country).national(false)
   end
