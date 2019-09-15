@@ -28,6 +28,7 @@ describe "Admin Meta Routing Spec", type: :feature do
   @tests.each do |test|
     if test.admin.include?("index")
       it "can visit :: #{test.component} :: index" do
+        page.set_rack_session(verified: true)
         visit visit_admin_path(test)
         expect(page.status_code).to be 200
       end
@@ -35,6 +36,7 @@ describe "Admin Meta Routing Spec", type: :feature do
 
     if test.admin.include?("show")
       it "can visit :: #{test.component} :: show" do
+        page.set_rack_session(verified: true)
         built_component = FactoryBot.create(test.component.singularize)
         visit ("#{visit_admin_path(test)}#{built_component.id}")
         expect(page).to have_content built_component.name

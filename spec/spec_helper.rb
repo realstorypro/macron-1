@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "capybara/rspec"
+require "rack_session_access/capybara"
 require "byebug"
 require "simplecov"
 
@@ -23,4 +24,5 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
   config.default_formatter = "doc"
   config.order = :random
+
 end

@@ -344,6 +344,9 @@ GEM
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
+    rack_session_access (0.2.0)
+      builder (>= 2.0.0)
+      rack (>= 1.0.0)
     rails (5.2.3)
       actioncable (= 5.2.3)
       actionmailer (= 5.2.3)
@@ -620,6 +623,7 @@ DEPENDENCIES
   puma (~> 3.11)
   pundit
   rack-cors
+  rack_session_access
   rails (~> 5.2.0)
   rails-controller-testing
   rails-erd

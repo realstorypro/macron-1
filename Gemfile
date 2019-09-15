@@ -140,4 +140,5 @@ group :test do
   gem "rails-controller-testing"
   gem "factory_bot_rails", "< 5.0"
   gem "faker", "1.9.6"
+  gem "rack_session_access"
 end
