@@ -61,12 +61,18 @@ class User < ApplicationRecord
   acts_as_voter
 
   # Phone Number & Country Codes
+  before_save :format_phone_number, on: :update
   validates_presence_of :country, :phone_number, on: :update
   validates :phone_number, phone: { allow_blank: true,
                                     types: :mobile,
                                     country_specifier: ->(phone) { phone.country.try(:upcase) } }
 
   paginates_per 10
+
+  def format_phone_number
+    numeric_phone = phone_number.gsub(/\D/, "")
+    self.phone_number = Phonelib.parse(numeric_phone, country).national(false)
+  end
 
   def add_subscription
     return unless newsletter == "1"

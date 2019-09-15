@@ -8,7 +8,7 @@
             = segment 'auth box'
               = segment 'basic'
                 = h5 text: 'Account Verification'
-                = simple_form_for @user, url: phone_path do |f|
+                = simple_form_for current_user, url: phone_path do |f|
                   = f.error_notification
                   .field
                     = dropdown 'selection', name: 'country'

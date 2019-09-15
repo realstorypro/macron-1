@@ -70,8 +70,11 @@ class ApplicationController < ActionController::Base
         return false unless current_user
         
         # if the phone number is blank we want to send people to set phone number
-        redirect_to edit_phone_path action: :set_phone_number if current_user.phone_number.blank?
-        redirect_to phone_verify_path action: :validate_phone_number if phone_needs_verification?
+        if current_user.phone_number.blank?
+          redirect_to edit_phone_path action: :set_phone_number
+        elsif phone_needs_verification?
+          redirect_to phone_verify_path action: :validate_phone_number
+        end
       end
 
       def phone_needs_verification?

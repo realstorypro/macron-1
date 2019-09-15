@@ -11,23 +11,20 @@ class PhonesController < ApplicationController
 
   # don't do the 2fa since we do it here
   skip_before_action :after_sign_in_2fa
+  before_action :set_country_codes, only: %i[edit update]
 
   def edit
-    @user = current_user
-    @country_codes = country_codes
+    # We want to make sure that the phone number can not be edited
+    # if it has already been verified.
+    # This prevents unauthorized phone number change
+    redirect_to phone_verify_path if current_user.phone_verified
   end
 
   def update
-    #first we remove all the non alpha numberic chracters
-    params[:user][:phone_number].gsub!(/\D/, "")
-
-    # we strip out country code data
-    params[:user][:phone_number] = Phonelib.parse(params[:user][:phone_number], params[:user][:country]).national(false)
-
     if current_user.update(user_params)
       redirect_to phone_verify_path
     else
-      redirect_to edit, flash: {error: current_user.errors}
+      render :edit, flash: {error: current_user.errors}
     end
   end
 
@@ -56,6 +53,10 @@ class PhonesController < ApplicationController
     else
       redirect_to phone_verify_path, flash: { error: "The code you've entered is incorrect." }
     end
+  end
+
+  def set_country_codes
+    @country_codes = country_codes
   end
 
   private
