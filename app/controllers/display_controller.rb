@@ -24,7 +24,10 @@ class DisplayController < MetaController
     authorize @entries
   end
 
-
+  def show
+    # caches the show content for 30 minutes
+    expires_in 30.minutes
+  end
 
   private
     def find_related_ad

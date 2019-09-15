@@ -76,6 +76,10 @@ class PhonesController < ApplicationController
       # sets the phone number as verified
       current_user.update(phone_verified: true)
 
+      # clear the cached headers
+      # this makes the link preloader reload all the links
+      # and show the html for logged-in users
+      response.headers["Clear-Site-Data"] = "cache"
 
       if session[:current_location ]
         redirect_to session[:current_location], turbolinks: false, flash: { success: "You've been signed in successfully." }

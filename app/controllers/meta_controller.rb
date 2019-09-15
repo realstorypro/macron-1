@@ -13,10 +13,6 @@ class MetaController < ApplicationController
     authorize @entries
   end
 
-  def show
-    expires_in 2.minutes
-  end
-
   def new
     @entry = entry_class.new
     @colors = Color.all
