@@ -26,9 +26,8 @@ Rails.application.routes.draw do
 
   # Phone Controller (Used by 2FA)
   resource :phone, only: %i[edit update]
-  # get 'phone/set', to: 'after_signup#set_phone_number'
-  # get 'phone/verify', to: 'after_signup#verify_phone_number'
-  # put 'phone/verify_otp', to: 'after_signup#verify_otp'
+  get 'phone/verify', to: 'phones#verify'
+  put 'phone/verify_otp', to: 'phones#verify_otp'
 
   # Loading Pages
   Settings.pages.each do |page|

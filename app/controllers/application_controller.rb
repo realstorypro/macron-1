@@ -66,9 +66,11 @@ class ApplicationController < ActionController::Base
 
 
       def after_sign_in_2fa
+        # we obvisouly don't want to preform 2fa if the user isn't signed
         return false unless current_user
-        redirect_to edit_phone_path
-        #redirect_to phone_set_path action: :set_phone_number if current_user.phone_number.blank?
+        
+        # if the phone number is blank we want to send people to set phone number
+        redirect_to edit_phone_path action: :set_phone_number if current_user.phone_number.blank?
         redirect_to phone_verify_path action: :validate_phone_number if phone_needs_verification?
       end
 
@@ -76,7 +78,8 @@ class ApplicationController < ActionController::Base
         # we need to run a verification if the session has not been verified
         return true if session[:verified].nil?
 
-        # we need to run a verification if the phone number is not verified
+        # if the user updates the country then the phone number gets unverified
+        # therefore we need to run run this verification even if the session verified
         return true unless current_user.phone_verified
       end
 end

@@ -18,23 +18,40 @@ class PhonesController < ApplicationController
   end
 
   def update
+    #first we remove all the non alpha numberic chracters
+    params[:user][:phone_number].gsub!(/\D/, "")
 
+    # we strip out country code data
+    params[:user][:phone_number] = Phonelib.parse(params[:user][:phone_number], params[:user][:country]).national(false)
+
+    if current_user.update(user_params)
+      redirect_to phone_verify_path
+    else
+      redirect_to edit, flash: {error: current_user.errors}
+    end
   end
 
-  def verify_phone_number
+  def verify
     client = Twilio::REST::Client.new
     session[:otp_number] = rand.to_s[2..5]
 
+    country_prefix = ISO3166::Country.find_country_by_alpha2(current_user.country).country_code
+
+
     client.messages.create({
-         from: ENV['TWILIO_PHONE_NUMBER'],
-         to: '+15203709242',
+         from: ENV["TWILIO_PHONE_NUMBER"],
+         to: "+1#{country_prefix}#{current_user.phone_number}",
          body: "Your Verification Code is #{session[:otp_number]}"
      })
   end
 
   def verify_otp
     if params[:verification][:code] && params[:verification][:code] == session[:otp_number]
+      # verifies the session
       session[:verified] = true
+
+      # sets the phone as verified
+      current_user.update(phone_verified: true)
       redirect_to root_path, flash: { success: "You've been signed in successfully." }
     else
       redirect_to phone_verify_path, flash: { error: "The code you've entered is incorrect." }
@@ -66,6 +83,10 @@ class PhonesController < ApplicationController
       us_country = country_codes.delete_at(us_index)
       country_codes.unshift us_country
       country_codes
+    end
+
+    def user_params
+      params.require(:user).permit(:country, :phone_number)
     end
 
 end

@@ -13,7 +13,6 @@ class User < ApplicationRecord
   include User::State
 
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -61,8 +60,9 @@ class User < ApplicationRecord
   # Gamification
   acts_as_voter
 
+  # Phone Number & Country Codes
   validates_presence_of :country, :phone_number, on: :update
-  validates :phone_number, phone: { possible: true, allow_blank: true,
+  validates :phone_number, phone: { allow_blank: true,
                                     types: :mobile,
                                     country_specifier: ->(phone) { phone.country.try(:upcase) } }
 
