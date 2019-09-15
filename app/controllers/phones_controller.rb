@@ -49,7 +49,11 @@ class PhonesController < ApplicationController
 
       # sets the phone as verified
       current_user.update(phone_verified: true)
-      redirect_to session[:current_location], turbolinks: false, flash: { success: "You've been signed in successfully." }
+      if session[:current_location ]
+        redirect_to session[:current_location], turbolinks: false, flash: { success: "You've been signed in successfully." }
+      else
+        redirect_to root_path, turbolinks: false, flash: { success: "You've been signed in successfully." }
+      end
     else
       redirect_to phone_verify_path, flash: { error: "The code you've entered is incorrect." }
     end
