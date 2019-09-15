@@ -37,7 +37,7 @@ class PhonesController < ApplicationController
 
     client.messages.create({
          from: ENV["TWILIO_PHONE_NUMBER"],
-         to: "+1#{country_prefix}#{current_user.phone_number}",
+         to: "+#{country_prefix}#{current_user.phone_number}",
          body: "Your Verification Code is #{session[:otp_number]}"
      })
   end
@@ -49,7 +49,7 @@ class PhonesController < ApplicationController
 
       # sets the phone as verified
       current_user.update(phone_verified: true)
-      redirect_to root_path, flash: { success: "You've been signed in successfully." }
+      redirect_to session[:current_location], turbolinks: false, flash: { success: "You've been signed in successfully." }
     else
       redirect_to phone_verify_path, flash: { error: "The code you've entered is incorrect." }
     end
