@@ -4,7 +4,19 @@ require "rails_helper"
 include ApplicationHelper
 
 describe CommentsController, type: :controller do
-  describe "GET JSON Feed" do
+  describe "Reading Comments" do
+    before(:each) do
+      @article = FactoryBot.create(:article)
+    end
+
+    it "retruns an JSON comment feed" do
+      get :index, params: { component: "articles", record_id: @article.id }, format: "json"
+      response.should be_success
+      response.content_type.should eq("application/json")
+    end
+  end
+
+  describe "Posting Comments" do
     before(:all) do
       @admin = FactoryBot.create(:user, :admin)
     end
@@ -13,14 +25,8 @@ describe CommentsController, type: :controller do
       sign_in @admin
     end
 
-    it "retruns an JSON comment feed" do
-      get :index, params: { component: "articles", record_id: @article.id }, format: "json"
-      response.should be_success
-      response.content_type.should eq("application/json")
-    end
-
-    it "can succesfully create a new comment" do
-      post :create, params: {
+    it "can successfully create a new comment" do
+      post :create, session: {verified: true}, params: {
           component: "articles",
           record_id: @article.id,
           comment: { body: "<p>hello world</p>" }
@@ -30,7 +36,7 @@ describe CommentsController, type: :controller do
     end
 
     it "errors for an empty body" do
-      post :create, params: {
+      post :create, session: {verified: true}, params: {
           component: "articles",
           record_id: @article.id,
           comment: { body: "" }
@@ -40,7 +46,7 @@ describe CommentsController, type: :controller do
     end
 
     it "can delete an existing comment" do
-      post :create, params: {
+      post :create, session: {verified: true}, params: {
           component: "articles",
           record_id: @article.id,
           comment: { body: "<p>hello world</p>" }
