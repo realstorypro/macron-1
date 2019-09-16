@@ -36,6 +36,7 @@ en:
             phone_number:
               invalid: "The phone number is invalid."
               blank: "A valid mobile phone number is required"
+              taken: 'The phone number has already been taken'
             username:
               blank: 'A username is required'
               taken: 'The username has already been taken'

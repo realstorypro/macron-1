@@ -67,6 +67,7 @@ class User < ApplicationRecord
   validates :phone_number, phone: { allow_blank: true,
                                     types: :mobile,
                                     country_specifier: ->(phone) { phone.country.try(:upcase) } }
+  validates :phone_number, uniqueness: true
 
   paginates_per 10
 
