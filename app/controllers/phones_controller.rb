@@ -35,17 +35,17 @@ class PhonesController < ApplicationController
     if current_user.update(user_params)
       redirect_to phone_verify_path
     else
-      render :edit, flash: {error: current_user.errors}
+      render :edit, flash: { error: current_user.errors }
     end
   end
 
   def verify
     # track phone verification
     track(
-        event: "phone verification",
-        props: {
-            location: "phone"
-        }
+      event: "phone verification",
+      props: {
+          location: "phone"
+      }
     )
     client = Twilio::REST::Client.new
     session[:otp_number] = rand.to_s[2..5]
@@ -82,17 +82,21 @@ class PhonesController < ApplicationController
       response.headers["Clear-Site-Data"] = "cache"
 
       if session[:current_location ]
-        redirect_to session[:current_location], turbolinks: false, flash: { success: "You've been signed in successfully." }
+        redirect_to session[:current_location],
+                    turbolinks: false,
+                    flash: { success: "You've been signed in successfully." }
       else
-        redirect_to root_path, turbolinks: false, flash: { success: "You've been signed in successfully." }
+        redirect_to root_path,
+                    turbolinks: false,
+                    flash: { success: "You've been signed in successfully." }
       end
     else
       # track successful phone verification
       track(
-          event: "unsuccessful verification",
-          props: {
-              location: "phone"
-          }
+        event: "unsuccessful verification",
+        props: {
+            location: "phone"
+        }
       )
       redirect_to phone_verify_path, flash: { error: "The code you've entered is incorrect." }
     end
@@ -132,7 +136,6 @@ class PhonesController < ApplicationController
     def user_params
       params.require(:user).permit(:country, :phone_number)
     end
-
 end
 # rubocop:enable CyclomaticComplexity
 # rubocop:enable PerceivedComplexity

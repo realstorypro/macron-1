@@ -26,7 +26,7 @@ describe CommentsController, type: :controller do
     end
 
     it "can successfully create a new comment" do
-      post :create, session: {verified: true}, params: {
+      post :create, session: { verified: true }, params: {
           component: "articles",
           record_id: @article.id,
           comment: { body: "<p>hello world</p>" }
@@ -36,7 +36,7 @@ describe CommentsController, type: :controller do
     end
 
     it "errors for an empty body" do
-      post :create, session: {verified: true}, params: {
+      post :create, session: { verified: true }, params: {
           component: "articles",
           record_id: @article.id,
           comment: { body: "" }
@@ -46,7 +46,7 @@ describe CommentsController, type: :controller do
     end
 
     it "can delete an existing comment" do
-      post :create, session: {verified: true}, params: {
+      post :create, session: { verified: true }, params: {
           component: "articles",
           record_id: @article.id,
           comment: { body: "<p>hello world</p>" }

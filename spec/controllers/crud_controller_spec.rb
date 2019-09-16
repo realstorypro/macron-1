@@ -37,7 +37,7 @@ describe Admin::CrudController, type: :controller do
 
         before(:each) do
           sign_in @admin
-          get :index, session: {verified: true}, params: { component: test.component }
+          get :index, session: { verified: true }, params: { component: test.component }
         end
 
         after(:each) do
@@ -71,7 +71,7 @@ describe Admin::CrudController, type: :controller do
 
         before(:each) do
           sign_in @admin
-          get :show, session: {verified: true}, params: { component: test.component, id: @last_entry.id }
+          get :show, session: { verified: true }, params: { component: test.component, id: @last_entry.id }
         end
 
         after(:each) do
@@ -103,7 +103,7 @@ describe Admin::CrudController, type: :controller do
 
         before(:each) do
           sign_in @admin
-          get :new, session: {verified: true}, params: { component: test.component }
+          get :new, session: { verified: true }, params: { component: test.component }
         end
 
         after(:each) do
@@ -135,7 +135,7 @@ describe Admin::CrudController, type: :controller do
 
         before(:each) do
           sign_in @admin
-          get :edit, session: {verified: true}, params: { component: test.component, id: @last_entry.id }
+          get :edit, session: { verified: true }, params: { component: test.component, id: @last_entry.id }
         end
 
         after(:each) do
@@ -173,7 +173,7 @@ describe Admin::CrudController, type: :controller do
             test.component.to_s.singularize => { name: Faker::Name.name }
           }
 
-          patch :update, params: params, session: {verified: true}
+          patch :update, params: params, session: { verified: true }
         end
 
         after(:each) do
@@ -213,7 +213,7 @@ describe Admin::CrudController, type: :controller do
               test.component.to_s.singularize => { name: nil }
           }
 
-          patch :update, params: params, session: {verified: true}
+          patch :update, params: params, session: { verified: true }
         end
 
         after(:each) do
@@ -257,7 +257,7 @@ describe Admin::CrudController, type: :controller do
 
         before(:each) do
           sign_in @admin
-          post :create, params: @params, session: {verified: true}
+          post :create, params: @params, session: { verified: true }
           @last_entry = entry_class(test).last
         end
 
@@ -298,7 +298,7 @@ describe Admin::CrudController, type: :controller do
 
         before(:each) do
           sign_in @admin
-          post :create, params: @params, session: {verified: true}
+          post :create, params: @params, session: { verified: true }
           @last_entry = entry_class(test).last
         end
 
@@ -337,7 +337,7 @@ describe Admin::CrudController, type: :controller do
             id: @last_entry.id
           }
 
-          patch :destroy, params: params, session: {verified: true}
+          patch :destroy, params: params, session: { verified: true }
         end
 
         it "The entry class is properly set." do

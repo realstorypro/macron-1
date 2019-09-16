@@ -60,25 +60,37 @@ class User < ApplicationRecord
   # Gamification
   acts_as_voter
 
-  # Phone Number & Country Codes
-  before_save :format_phone_number
-  before_save :add_default_country
-  validates_presence_of :country, :phone_number, on: :update
+  # Phone Number Validations
+  validates_presence_of :country
+  before_validation :format_phone_number
+
+  # the account is created without a phone number
+  # we only want to validate presence on the update
+  validates_presence_of :phone_number, on: :update
+
+  # we are checking for an areacode + phone number uniquness
+  # in the future we may have to allow for the same phone number
+  # and area code to be in different countries
+  # currently its an edge case and were not worrying about it
+  validates_uniqueness_of :phone_number, allow_blank: true, allow_nil: true
+
+  # we want to make sure that the number is valid mobile number
+  # for the country carrier
   validates :phone_number, phone: { allow_blank: true,
                                     types: :mobile,
                                     country_specifier: ->(phone) { phone.country.try(:upcase) } }
-  validates_uniqueness_of :phone_number, allow_blank: true
 
   paginates_per 10
 
   def format_phone_number
+    # return true if there the number is blank and we have nothing to format
     return true if phone_number.blank?
-    numeric_phone = phone_number.gsub(/\D/, "")
-    self.phone_number = Phonelib.parse(numeric_phone, country).national(false)
-  end
 
-  def add_default_country
-    self.country ||= "us"
+    # strip out all non numeric characters
+    numeric_phone = phone_number.gsub(/\D/, "")
+
+    # remove the country code if the user typed it in
+    self.phone_number = Phonelib.parse(numeric_phone, country).national(false)
   end
 
   def add_subscription

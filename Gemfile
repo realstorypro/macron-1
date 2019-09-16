@@ -41,7 +41,7 @@ gem "redis-rails"
 gem "redis-rack-cache"
 
 # Phone Tools
-gem 'twilio-ruby'
+gem "twilio-ruby"
 gem "phonelib"
 gem "iso_country_codes"
 gem "countries"

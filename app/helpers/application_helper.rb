@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#TODO: Refactor and figure out what's needed
+# TODO: Refactor and figure out what's needed
 module ApplicationHelper
   include VueHelper
   include SettingsHelper
