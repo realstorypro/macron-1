@@ -16,6 +16,31 @@ describe User, type: :model do
       user.username = nil
       expect(user).to_not be_valid
     end
+
+    it "must have not accept non mobile phone number" do
+      user = FactoryBot.create(:user)
+      user.phone_number = "5205792211"
+      expect(user).to_not be_valid
+    end
+
+    it "must have not accept non invalid phone numbers" do
+      user = FactoryBot.create(:user)
+      user.phone_number = "520579221"
+      expect(user).to_not be_valid
+    end
+
+    it "must have accept mobile phone number" do
+      user = FactoryBot.create(:user)
+      user.phone_number = "5203702211"
+      expect(user).to be_valid
+    end
+
+    it "must have set phone validated field to false once number has changed" do
+      user = FactoryBot.create(:user)
+      user.phone_number = "5203702212"
+      user.save
+      expect(user.phone_verified).to eq false
+    end
   end
 
   describe "factories" do

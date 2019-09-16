@@ -42,7 +42,6 @@ class User < ApplicationRecord
   after_create :add_subscription
   after_create :assign_default_role!
   before_create :build_profile
-  before_save :unverify_phone?
   after_update :broadcast_activity
 
 
@@ -80,6 +79,9 @@ class User < ApplicationRecord
                                     types: :mobile,
                                     country_specifier: ->(phone) { phone.country.try(:upcase) } }
 
+  # un-verifies phone number if phone or country has changed
+  before_save :unverify_phone_if_changed
+
   paginates_per 10
 
   def format_phone_number
@@ -102,8 +104,7 @@ class User < ApplicationRecord
     errors.add(:username, :invalid) if User.where(email: username).exists?
   end
 
-  # un-verifies phone number if phone or country has changed
-  def unverify_phone?
+  def unverify_phone_if_changed
     self.phone_verified = false if phone_number_changed? || country_changed?
   end
 
