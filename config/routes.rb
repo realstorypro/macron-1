@@ -24,8 +24,10 @@ Rails.application.routes.draw do
     get "/sign_up" => "users/registrations#new"
   end
 
-  # After Signup Wizard
-  resources :after_signup
+  # Phone Controller (Used by 2FA)
+  resource :phone, only: %i[edit update]
+  get 'phone/verify', to: 'phones#verify'
+  put 'phone/verify_otp', to: 'phones#verify_otp'
 
   # Loading Pages
   Settings.pages.each do |page|

@@ -13,10 +13,8 @@ class User < ApplicationRecord
   include User::State
 
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :async, :confirmable
+         :recoverable, :rememberable, :trackable, :validatable
 
   rolify role_cname: "Role", before_add: :clear_existing_roles!
   friendly_id :username, use: :slugged
@@ -44,7 +42,6 @@ class User < ApplicationRecord
   after_create :add_subscription
   after_create :assign_default_role!
   before_create :build_profile
-  before_save :unverify_phone?
   after_update :broadcast_activity
 
 
@@ -62,14 +59,41 @@ class User < ApplicationRecord
   # Gamification
   acts_as_voter
 
-  # Temproarley Disabling Until 2FA is Enabled
+  # Phone Number Validations
+  validates_presence_of :country
+  before_validation :format_phone_number
 
-  # validates_presence_of :country, :phone_number, on: :update
-  # validates :phone_number, phone: { possible: true, allow_blank: true,
-  #                                   types: :mobile,
-  #                                   country_specifier: ->(phone) { phone.country.try(:upcase) } }
+  # the account is created without a phone number
+  # we only want to validate presence on the update
+  validates_presence_of :phone_number, on: :update
+
+  # we are checking for an areacode + phone number uniquness
+  # in the future we may have to allow for the same phone number
+  # and area code to be in different countries
+  # currently its an edge case and were not worrying about it
+  validates_uniqueness_of :phone_number, allow_blank: true, allow_nil: true
+
+  # we want to make sure that the number is valid mobile number
+  # for the country carrier
+  validates :phone_number, phone: { allow_blank: true,
+                                    possible: :true,
+                                    country_specifier: ->(phone) { phone.country.try(:upcase) } }
+
+  # un-verifies phone number if phone or country has changed
+  before_save :unverify_phone_if_changed
 
   paginates_per 10
+
+  def format_phone_number
+    # return true if there the number is blank and we have nothing to format
+    return true if phone_number.blank?
+
+    # strip out all non numeric characters
+    numeric_phone = phone_number.gsub(/\D/, "")
+
+    # remove the country code if the user typed it in
+    self.phone_number = Phonelib.parse(numeric_phone, country).national(false)
+  end
 
   def add_subscription
     return unless newsletter == "1"
@@ -80,8 +104,7 @@ class User < ApplicationRecord
     errors.add(:username, :invalid) if User.where(email: username).exists?
   end
 
-  # un-verifies phone number if phone or country has changed
-  def unverify_phone?
+  def unverify_phone_if_changed
     self.phone_verified = false if phone_number_changed? || country_changed?
   end
 

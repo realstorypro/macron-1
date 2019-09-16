@@ -26,3 +26,26 @@ en:
       members:
         title: 'Members'
         description: 'Members Description'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            country:
+              blank: "Please select a country"
+            phone_number:
+              invalid: "The phone number is invalid."
+              blank: "A valid mobile phone number is required"
+              taken: 'The phone number has already been taken'
+            username:
+              blank: 'A username is required'
+              taken: 'The username has already been taken'
+            password:
+              too_short: 'The password is too short (minimum is 6 characters)'
+              invalid: 'The password is incorrect'
+            password_confirmation:
+              confirmation: "The passwords don't match"
+              invalid: 'The password is incorrect'
+            email:
+              blank: 'An email address is required'
+              invlaid: 'The email address is invalid'

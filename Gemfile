@@ -17,7 +17,6 @@ gem "chronic"
 gem "config"
 gem "erubis"
 gem "friendly_id", "~> 5.1.0"
-gem "wicked"
 gem "sidekiq"
 gem "store_base_sti_class"
 gem "simple_scheduler", "1.0.0"
@@ -42,9 +41,10 @@ gem "redis-rails"
 gem "redis-rack-cache"
 
 # Phone Tools
-gem "nexmo"
+gem "twilio-ruby"
 gem "phonelib"
 gem "iso_country_codes"
+gem "countries"
 
 # gem "rack-mini-profiler"
 
@@ -140,4 +140,5 @@ group :test do
   gem "rails-controller-testing"
   gem "factory_bot_rails", "< 5.0"
   gem "faker", "1.9.6"
+  gem "rack_session_access"
 end

@@ -5,11 +5,15 @@ FactoryBot.define do
     email { Faker::Internet.unique.email }
     username { rand(1..5).to_s + Faker::Internet.unique.email }
     password { Faker::Internet.password }
-    phone_number { "5202222222" }
     country { "us" }
+    phone_verified { true }
 
     after(:create) do |user|
-      user.confirm
+      user.phone_number = Faker::PhoneNumber.cell_phone
+      user.save
+
+      # we have to set verified to true after the first save,
+      # because changing phone number unverifies it.
       user.phone_verified = true
       user.save
     end

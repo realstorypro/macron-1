@@ -7,12 +7,11 @@
           = column computer: 16, tablet: 16, mobile: 16
             = segment 'auth box'
               = segment 'basic'
-                = h5 text: 'Code Verification'
+                = h5 text: 'Account Verification'
                 = text text: "We've sent a text message to #{number_to_phone(current_user.phone_number)} with a 4 digit code. Please enter it below."
-                = simple_form_for :verification, url: wizard_path, method: :put  do |f|
+                = simple_form_for :verification, method: :put, url: phone_verify_otp_path do |f|
                   .field
                     .ui.left.icon.input
-                      = f.hidden_field :request_id, as: :hidden, value: @request_id
                       = f.number_field :code, placeholder: 'verification code', required: true, size: 4
                       = icon 'hashtag'
                   = button_tag type: 'submit', class: "ui right labeled icon button positive fluid large"
@@ -20,6 +19,6 @@
                     = icon 'check'
                 - unless current_user.phone_verified
                   br
-                  = link_to previous_wizard_path
+                  = link_to edit_phone_path
                     = icon 'double left angle'
                     | Change Phone Number
