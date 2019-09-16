@@ -21,7 +21,7 @@ describe "Login Flow", type: :feature do
   it "can log in wih real account" do
     skip "refactor needed"
     real_user = FactoryBot.create(:user)
-    real_user.update(phone_number: '5203709242')
+    real_user.update(phone_number: "5203709242")
 
     fill_in :user_login, with: real_user.username
     fill_in :user_password, with: real_user.password
