@@ -26,3 +26,13 @@ en:
       members:
         title: 'Members'
         description: 'Members Description'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            country:
+              blank: "Please select a country"
+            phone_number:
+              invalid: "The phone number is invalid."
+              blank: "A valid mobile phone number is required"

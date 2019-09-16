@@ -9,7 +9,6 @@
               = segment 'basic'
                 = h5 text: 'Account Verification'
                 = simple_form_for current_user, url: phone_path do |f|
-                  = f.error_notification
                   .field
                     = dropdown 'selection', name: 'country'
                       = f.input :country, as: :hidden, wrapper: false
@@ -20,7 +19,7 @@
                           = item data: { value: code[1].downcase }
                             i class="#{code[1].downcase} flag"
                             = code[0]
-                  = f.input :phone_number, required: true, placeholder: 'Phone Number', label: false, as: :tel, input_html: {icon: 'phone'}
+                  = f.input :phone_number, required: true, placeholder: 'Mobile Phone Number', label: false, as: :tel, input_html: {icon: 'phone'}
                   = button_tag type: 'submit', class: "ui right labeled icon button primary fluid large"
                     | Next
                     = icon 'right chevron'

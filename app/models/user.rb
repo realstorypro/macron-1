@@ -62,6 +62,7 @@ class User < ApplicationRecord
 
   # Phone Number & Country Codes
   before_save :format_phone_number
+  before_save :add_default_country
   validates_presence_of :country, :phone_number, on: :update
   validates :phone_number, phone: { allow_blank: true,
                                     types: :mobile,
@@ -73,6 +74,10 @@ class User < ApplicationRecord
     return true if phone_number.blank?
     numeric_phone = phone_number.gsub(/\D/, "")
     self.phone_number = Phonelib.parse(numeric_phone, country).national(false)
+  end
+
+  def add_default_country
+    self.country ||= "us"
   end
 
   def add_subscription
