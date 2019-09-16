@@ -5,13 +5,8 @@ FactoryBot.define do
     email { Faker::Internet.unique.email }
     username { rand(1..5).to_s + Faker::Internet.unique.email }
     password { Faker::Internet.password }
-    phone_number { "5202222222" }
     country { "us" }
-
-    after(:create) do |user|
-      user.phone_verified = true
-      user.save
-    end
+    phone_verified { true }
 
     trait :admin do
       after(:create) do |user|
