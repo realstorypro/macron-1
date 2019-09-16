@@ -57,7 +57,7 @@ class PhonesController < ApplicationController
          from: ENV["TWILIO_PHONE_NUMBER"],
          to: "+#{country_prefix}#{current_user.phone_number}",
          body: "Your Verification Code is #{session[:otp_number]}"
-     })
+     }) unless Rails.env.test?
   end
 
   def verify_otp

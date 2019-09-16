@@ -9,9 +9,11 @@ FactoryBot.define do
     phone_verified { true }
 
     after(:create) do |user|
-      # this is a little ugly, but we want to make sure that the number
-      # we are generating is a valid mobile phone number
-      user.phone_number = "520#{%w(370 213 220 221).sample}#{rand.to_s[2..5]}"
+      user.phone_number = Faker::PhoneNumber.cell_phone
+      user.save
+
+      # we have to set verified to true after the first save,
+      # because changing phone number unverifies it.
       user.phone_verified = true
       user.save
     end

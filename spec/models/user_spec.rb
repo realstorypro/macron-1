@@ -6,51 +6,61 @@ include SettingsHelper
 
 describe User, type: :model do
   describe "validations" do
+    before :each do
+      @user = FactoryBot.create(:user)
+    end
+
+    after :each do
+      @user.delete
+    end
+
     it "must have a unque slug" do
-      user = FactoryBot.create(:user, :admin)
-      expect(user.slug).to_not be nil
+      expect(@user.slug).to_not be nil
     end
 
     it "must have a username" do
-      user = FactoryBot.create(:user)
-      user.username = nil
-      expect(user).to_not be_valid
+      @user.username = nil
+      expect(@user).to_not be_valid
     end
 
     it "must have not accept non mobile phone number" do
-      user = FactoryBot.create(:user)
-      user.phone_number = "5205792211"
-      expect(user).to_not be_valid
+      @user.phone_number = "5205792211"
+      expect(@user).to_not be_valid
     end
 
     it "must have not accept non invalid phone numbers" do
-      user = FactoryBot.create(:user)
-      user.phone_number = "520579221"
-      expect(user).to_not be_valid
+      @user.phone_number = "520579221"
+      expect(@user).to_not be_valid
     end
 
     it "must have accept mobile phone number" do
-      user = FactoryBot.create(:user)
-      user.phone_number = "5203702211"
-      expect(user).to be_valid
+      @user.phone_number = "5203702211"
+      expect(@user).to be_valid
     end
 
     it "must have set phone validated field to false once number has changed" do
-      user = FactoryBot.create(:user)
-      user.phone_number = "5203702212"
-      user.save
-      expect(user.phone_verified).to eq false
+      @user.update(phone_number: "5203708241")
+      expect(@user.phone_verified).to be false
     end
   end
 
   describe "factories" do
+    before :each do
+      @user = FactoryBot.create(:user)
+    end
+
+    after :each do
+      @user.delete
+    end
+
     it "must have a user factory" do
-      expect(FactoryBot.create(:user)).to be_valid
+      expect(@user).to be_valid
     end
 
     it "must have an admin factory" do
       admin = FactoryBot.create(:user, :admin)
       expect(admin.has_role?(:admin)).to be true
+      admin.delete
     end
   end
 
@@ -79,8 +89,6 @@ describe User, type: :model do
     it "should have no supporters"  do
       FactoryBot.create(:user)
       first_user = User.first
-      # FactoryBot.create(:user)
-      # second_user = User.first
       expect(first_user.supporters.count).to eq 0
     end
 

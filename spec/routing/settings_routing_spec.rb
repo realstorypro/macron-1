@@ -34,6 +34,7 @@ describe "Settings Meta Routing Spec", type: :feature do
   @tests.each do |test|
     if test.admin_settings.include?("index")
       it "can visit :: #{pretty_name(test.component)} :: index" do
+        page.set_rack_session(verified: true)
         visit visit_admin_settings_path(test)
         expect(page.status_code).to be 200
       end
@@ -41,6 +42,7 @@ describe "Settings Meta Routing Spec", type: :feature do
 
     if test.admin_settings.include?("edit")
       it "can visit :: #{pretty_name(test.component)} :: edit" do
+        page.set_rack_session(verified: true)
         visit ("#{visit_admin_settings_path(test)}#edit")
         expect(page.status_code).to be 200
       end

@@ -76,7 +76,7 @@ class User < ApplicationRecord
   # we want to make sure that the number is valid mobile number
   # for the country carrier
   validates :phone_number, phone: { allow_blank: true,
-                                    types: :mobile,
+                                    possible: :true,
                                     country_specifier: ->(phone) { phone.country.try(:upcase) } }
 
   # un-verifies phone number if phone or country has changed

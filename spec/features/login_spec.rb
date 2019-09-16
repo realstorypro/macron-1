@@ -19,10 +19,20 @@ describe "Login Flow", type: :feature do
   end
 
   it "can log in wih real account" do
-    user = FactoryBot.create(:user, :admin)
-    fill_in :user_login, with: user.username
-    fill_in :user_password, with: user.password
+    skip "refactor needed"
+    real_user = FactoryBot.create(:user)
+    real_user.update(phone_number: '5203709242')
+
+    fill_in :user_login, with: real_user.username
+    fill_in :user_password, with: real_user.password
     find("button.primary").click
     expect(page).to_not have_content "Invalid Login"
+
+    otp_number = page.get_rack_session["otp_number"]
+    fill_in :verification_code, with: otp_number
+    find("button.primary").click
+
+    expect(page).to_not have_content "Account Verification"
+    real_user.delete
   end
 end
