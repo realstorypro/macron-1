@@ -1,5 +1,5 @@
 Description:
-    Creates a setting
+    Creates an element
 
 Example:
     rails generate elements element
