@@ -2,26 +2,31 @@ MACRON-1
 --------
 [![codecov](https://codecov.io/gh/leouofa/aquarius/branch/master/graph/badge.svg?token=SpfdxrArOG)](https://codecov.io/gh/leouofa/aquarius)
 
-# Running Localy
-```bash
-foreman start --procfile=Procfile.dev
-```
+# Local Setup
 
-## Preparation
+#### Setting Up Database
+You can import the database from an existing Heroku application with __pg:pull__ command. 
 ```bash
-
-# pull the database (use whichever app and database you want to pull the data from)
 heroku pg:pull postgresql-symmetrical-54909 aquarius_development --app demo-idealogic-io-305
 foreman run rake components:setup
 ```
 
-## Enviornment Variables
+#### Running It
+```bash
+./bin/webpack-dev-server
+foreman run sidekiq -C config/sidekiq.yml --verbose
+foreman run rails s
+```
+
+## Setting Environment Variables
 ```
 FROM_EMAIL=noreply@idealogic.io
 UPLOADCARE_PRIVATE_KEY
 UPLOADCARE_PUBLIC_KEY
-URL
 ```
+
+## Database Setup
+
 
 ### Mail (Development)
 We're utilizing the mailcatcher to catch the mail send in development environment.
