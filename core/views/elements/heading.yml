@@ -4,6 +4,16 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      size:
+        label: 'Header Size'
+        type: 'fixed_dropdown'
+        options:
+          - 'H1'
+          - 'H2'
+          - 'H3'
+          - 'H4'
+          - 'H5'
+          - 'H6'
       header:
         label: 'Header'
         type: 'string'
