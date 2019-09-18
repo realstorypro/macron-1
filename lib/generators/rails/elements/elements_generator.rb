@@ -5,10 +5,12 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
   require "yaml"
   source_root File.expand_path("templates", __dir__)
 
-  class_option :desc, type: :string, default: 'Element Description'
+  class_option :desc, type: :string, default: "Element Description"
 
   def copy_element_file
-    @description= options['desc']
+    prompt = TTY::Prompt.new
+
+    @description= options["desc"]
 
     # copy model files
     copy_file "model.rb", "app/models/elements/#{file_name}.rb"
@@ -24,6 +26,7 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
     copy_file "element_view.yml", "core/views/elements/#{file_name}.yml"
     gsub_file "core/views/elements/#{file_name}.yml", "<~~ lowercase_name ~~>", class_name.downcase
 
+    prompt.ok "All Files Copied"
   end
 end
 
