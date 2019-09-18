@@ -63,7 +63,22 @@ rake simple_scheduler
 
 # Framework
 
+## Authentication
+The authentication is driven by the auth.yml file located under _core/auth.yml_ and is structured as follows
+```yml
+roles:
+abilities:
+actions:
+permissions:
+    - role:
+        - ability
+```
+
 ## Site Settings
+Every implementation of the platform can have its own settings stored in the database. 
+We refer to them as "Site Settings".
+
+### Modules
 The Site Setting modules are configured under __/core/site_settings.yml__
 ```yaml
   site_settings_theme_branding:
@@ -72,7 +87,7 @@ The Site Setting modules are configured under __/core/site_settings.yml__
     enabled: true
 ```
 
-The site settings are stored in __SiteSettings__ and include the __Autoloadable__ module.
+The site settings are stored under __SiteSettings__ namespace and include the __Autoloadable__ module.
 ``` ruby
 ## Article Settings
 
@@ -84,16 +99,10 @@ end
 
 ```
 
-## Authentication
-The authentication is driven by the auth.yml file located under _core/auth.yml_ and is structured as follows
-```yml
-roles:
-abilities:
-actions:
-permissions:
-    - role:
-        - ability
-```
+### Menus
+In order for the modules to be enabled
+
+
 
 ## Components
 All components are defined under components.yml
