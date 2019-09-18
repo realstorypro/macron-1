@@ -147,6 +147,8 @@ components:
     klass: 'Discussion'
     path: 'discussions'
     enabled: true
+    areas:
+      - content
 
   videos:
     klass: 'Video'

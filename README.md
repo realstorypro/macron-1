@@ -87,6 +87,34 @@ permissions:
         - ability
 ```
 
+## Components
+All components are defined under components.yml
+
+## Areas
+There are 3 areas in the application. 
+
+- Header
+- Content
+- Footer
+
+They are defined under __app/models/areas__.
+
+Every component can have those areas enabled. By default none are enabled.
+
+```yml
+  discussions:
+    klass: 'Discussion'
+    path: 'discussions'
+    enabled: true
+    areas:
+      - content
+```
+
+## Elements
+
+- Elements are defined in components.yml (change that )
+- The Menu Elements are also defined in menu/elements.yml (maybe change that)
+
 #### Helpful Documents
 Documentation that may be useful to developers.
 

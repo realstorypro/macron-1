@@ -11,6 +11,7 @@
   = container
     = grid 'centered'
       = column computer: 12, tablet: 16, mobile: 16
+        = s('menu.elements').inspect
         ==  Navigation::ElementListCell.(nil,
                 layout: 'main',
                 policy: Pundit.policy(current_user, :headless),
