@@ -1,0 +1,5 @@
+components:
+  elements_divider:
+    klass: 'Elements::Divider'
+    path: 'elements'
+    enabled: true
