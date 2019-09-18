@@ -11,7 +11,15 @@
                 .section = link_to params[:category].capitalize, article_category_path(params[:category])
             = widget 'normal rich text'
               /- cache @entry
-              = format_content(@entry.body)
+              /= format_content(@entry.body)
+
+              // render content area
+              - @entry.areas.each do |area|
+                - if area.type.include?('Content')
+                  - area.elements.each do |element|
+                    - if element.type.include? 'Heading'
+                      =h4 text: element.header
+
           = column computer: 5, tablet: 16, mobile: 16
             = segment 'basic sticky'
               = h5 'horizontal divider'
