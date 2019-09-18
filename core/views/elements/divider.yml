@@ -1,0 +1,6 @@
+views:
+  elements_divider:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
+    new:
