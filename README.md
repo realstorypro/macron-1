@@ -40,26 +40,12 @@ foreman run sidekiq -C config/sidekiq.yml --verbose
 foreman run rails s
 ```
 
-# Deployment
-1. Remove existing packs
-```bash
-rm -rf public/packs
-```
+# Pull Requests
+All changes must come in ways of pull requests and never committed directly to master. 
 
-2. Precompile assets locally
+The must be precompiled locally prior to submitting a PR. This can be done by running the following command.
 ```bash
-foreman run rake assets:precompile
-```
-
-3. Push to Heroku
-```bash
-git push heroku master
-```
-
-# New Deployment
-Add the rake task to Heroku Scheduler and set it to run every 10 minutes:
-```bash
-rake simple_scheduler
+rm -rf public/packs; foreman run rake assets:precompile; git add .; gcam 'precompiled assets'
 ```
 
 # Framework
