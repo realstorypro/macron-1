@@ -1,0 +1,8 @@
+Description:
+    Creates a setting
+
+Example:
+    rails generate elements element
+
+    This will create:
+        will create a model, routes and all corresponding files
