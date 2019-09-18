@@ -64,6 +64,14 @@ rake simple_scheduler
 # Framework
 
 ## Site Settings
+The Site Setting modules are configured under __/core/site_settings.yml__
+```yaml
+  site_settings_theme_branding:
+    klass: 'SiteSettings::Theme::Branding'
+    path: 'admin_settings_theme_branding'
+    enabled: true
+```
+
 The site settings are stored in __SiteSettings__ and include the __Autoloadable__ module.
 ``` ruby
 ## Article Settings
