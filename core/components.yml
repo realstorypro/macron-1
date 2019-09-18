@@ -16,14 +16,6 @@ components:
     path: 'elements'
     enabled: true
 
-  elements_heading:
-    klass: 'Elements::Heading'
-    path: 'elements'
-    enabled: true
-    restricted:
-      areas:
-        - content
-
   members:
     klass: 'User'
     path: 'members'
@@ -32,51 +24,6 @@ components:
   users:
     klass: 'User'
     path: 'users'
-    enabled: true
-
-  pages:
-    klass: 'Page'
-    path: 'pages'
-    enabled: true
-    areas:
-    - header
-    - content
-
-  articles:
-    klass: 'Article'
-    path: 'articles'
-    enabled: true
-
-  events:
-    klass: 'Event'
-    path: 'events'
-    enabled: true
-
-  products:
-    klass: 'Product'
-    path: 'products'
-    enabled: true
-
-  store:
-    klass: 'Product'
-    path: 'store'
-    enabled: true
-
-  discussions:
-    klass: 'Discussion'
-    path: 'discussions'
-    enabled: true
-    areas:
-      - content
-
-  videos:
-    klass: 'Video'
-    path: 'videos'
-    enabled: true
-
-  podcasts:
-    klass: 'Podcast'
-    path: 'podcasts'
     enabled: true
 
   profiles:
