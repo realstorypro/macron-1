@@ -8,8 +8,8 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
   def copy_settings_file
     # copy view files
     # copy model files
-    copy_file "model.rb", "app/models/site_settings/#{file_name}.rb"
-    gsub_file "app/models/site_settings/#{file_name}.rb", "<~~ class_name ~~>", class_name
+    copy_file "model.rb", "app/models/elements/#{file_name}.rb"
+    gsub_file "app/models/elements/#{file_name}.rb", "<~~ class_name ~~>", class_name
   end
 end
 
