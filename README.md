@@ -81,7 +81,7 @@ We refer to them as "Site Settings".
 ### Modules
 The Site Setting modules are configured under __/core/site_settings.yml__
 ```yaml
-  site_settings_theme_branding:
+site_settings_theme_branding:
     klass: 'SiteSettings::Theme::Branding'
     path: 'admin_settings_theme_branding'
     enabled: true
@@ -101,6 +101,17 @@ end
 
 ### Menus
 In order for the modules to be viewable on the backend they must be enabled in the settings under __core/menus/site_settings__
+
+```yaml
+menu:
+  settings:
+    - section:
+      - name: General
+        hint: Set name, description, and url
+        path: admin_settings_general
+        icon: setting
+        enabled: true
+```
 
 ## Components
 All components are defined under components.yml
