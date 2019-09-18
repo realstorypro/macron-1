@@ -7,3 +7,6 @@ views:
       header:
         label: 'Header'
         type: 'string'
+      subheader:
+        label: 'Sub-header'
+        type: 'string'

@@ -13,12 +13,11 @@
               /- cache @entry
               /= format_content(@entry.body)
 
-              // render content area
+              // render the content area
               - @entry.areas.each do |area|
                 - if area.type.include?('Content')
                   - area.elements.each do |element|
-                    - if element.type.include? 'Heading'
-                      =h4 text: element.header
+                    == Elements::ElementCell.(element)
 
           = column computer: 5, tablet: 16, mobile: 16
             = segment 'basic sticky'
