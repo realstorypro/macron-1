@@ -20,6 +20,10 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
     gsub_file "core/elements/#{file_name}.yml", "<~~ class_name ~~>", class_name
     gsub_file "core/elements/#{file_name}.yml", "<~~ element_description ~~>", @description
 
+    # copy the view file
+    copy_file "element_view.yml", "core/views/elements/#{file_name}.yml"
+    gsub_file "core/views/elements/#{file_name}.yml", "<~~ lowercase_name ~~>", class_name.downcase
+
   end
 end
 
