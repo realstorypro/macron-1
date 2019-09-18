@@ -2,8 +2,8 @@
   = menu ui: true, class: 'inverted vertical text sidemenu', dynamic: :on, id: 'admin-side-nav'
     = item 'logo cell'
       = link_to '/', data: {turbolinks: false}
-        = image_tag 'logo_inverted.png', class: 'ui image logo'
-    = divider
+        = image_tag 'admin-logo.png', class: 'ui image logo'
+    = divider 'logorator'
     ==  Navigation::SidenavCell.(nil,
             menu: s('menu.admin'),
             policy: Pundit.policy(current_user, :headless),
