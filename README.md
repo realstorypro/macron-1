@@ -91,13 +91,13 @@ permissions:
 All components are defined under components.yml
 
 ## Areas
-There are 3 areas in the application. 
+There are 3 areas in the application, which are defined under under __/app/models/areas/__.
 
 - Header
 - Content
 - Footer
 
-They are defined under __app/models/areas__.
+
 
 Every component can have those areas enabled. By default none are enabled.
 
