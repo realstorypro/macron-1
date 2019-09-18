@@ -100,9 +100,7 @@ end
 ```
 
 ### Menus
-In order for the modules to be enabled
-
-
+In order for the modules to be viewable on the backend they must be enabled in the settings under __core/menus/site_settings__
 
 ## Components
 All components are defined under components.yml
