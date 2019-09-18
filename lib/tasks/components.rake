@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 namespace :components do
-  desc "Setting up components"
+  desc "Importing components into the database."
   task setup: :environment do
     # load up components and remove the non-disableable components
     components = Settings.components.reject do |component|
