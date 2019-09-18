@@ -1,7 +1,7 @@
 components:
   elements_<~~ lowercase_name ~~>:
-    name: <~~ element_name ~~>
-    description: <~~ element_description ~~>
+    name: '<~~ class_name ~~>'
+    description: '<~~ element_description ~~>'
     klass: 'Elements::<~~ class_name ~~>'
     path: 'elements'
     enabled: true
