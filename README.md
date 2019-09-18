@@ -6,45 +6,39 @@ MACRON-1
 
 ### Setting Up Database
 You can import the database from an existing Heroku application with __pg:pull__ command.  
-Replace the __postgresql-symmetrical-54909__ with the name of the database 
-and __demo-idealogic-io-305__ with the name of the app you are pulling from.
 
 ```bash
-heroku pg:pull postgresql-symmetrical-54909 aquarius_development --app demo-idealogic-io-305
+heroku pg:pull heroku_db_name aquarius_development --app heroku_app_name
 foreman run rake components:setup
 ```
 
-#### Running It
+### Setting Environment Variables
+The environmental variables are stored in a .env file. They can be pulled down from an existing Heroku app.
+
+```bash
+heroku config -s -a heroku_app_name > .env
+```
+
+### Setting up Mailcatcher
+We're using the mailcatcher to catch the mail send in development environment.
+
+Install the gem by running
+```bash
+  gem install mailcatcher
+```
+  
+Start the mail catcher server with
+```bash
+  mailcatcher
+```
+You can read sent mail by at  __http://127.0.0.1:1080/__
+
+### Running It
 ```bash
 ./bin/webpack-dev-server
 foreman run sidekiq -C config/sidekiq.yml --verbose
 foreman run rails s
 ```
-
-## Setting Environment Variables
-```
-FROM_EMAIL=noreply@idealogic.io
-UPLOADCARE_PRIVATE_KEY
-UPLOADCARE_PUBLIC_KEY
-```
-
-## Database Setup
-
-
-### Mail (Development)
-We're utilizing the mailcatcher to catch the mail send in development environment.
-
-If you don't have the gem already installed you do it by running the following
-```
-  gem install mailcatcher
-```
-  
-You can then start the mail catcher via
-```
-  mailcatcher
-```
-
-You can read the sent mail by pointing the  web browser to  **http://127.0.0.1:1080/**
 
 # Deployment
 1. Remove existing packs
