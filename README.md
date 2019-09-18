@@ -4,7 +4,7 @@ MACRON-1
 
 # Local Setup
 
-#### Setting Up Database
+### Setting Up Database
 You can import the database from an existing Heroku application with __pg:pull__ command.  
 Replace the __postgresql-symmetrical-54909__ with the name of the database 
 and __demo-idealogic-io-305__ with the name of the app you are pulling from.
