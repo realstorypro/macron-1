@@ -8,6 +8,5 @@ module Elements
         Elements::HeadingCell
       end
     end
-
   end
 end
