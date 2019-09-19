@@ -27,6 +27,7 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
     gsub_file "core/views/elements/#{file_name}.yml", "<~~ lowercase_name ~~>", class_name.downcase
 
     # copy cell files
+    copy_file "cell.rb", "app/cells/elements/#{file_name}_cell.rb"
 
     prompt.ok "All Files Copied"
   end
