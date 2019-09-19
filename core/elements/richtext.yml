@@ -2,6 +2,7 @@ components:
   elements_richtext:
     name: 'Richtext'
     description: 'The rich text element'
+    icon: 'i cursor'
     klass: 'Elements::Richtext'
     path: 'elements'
     enabled: true

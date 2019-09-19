@@ -6,7 +6,7 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
   source_root File.expand_path("templates", __dir__)
 
   class_option :desc, type: :string, default: "Element Description"
-  class_option :icon, type: :string, default: "Element Icon"
+  class_option :icon, type: :string, default: "align justify"
 
   def copy_element_file
     prompt = TTY::Prompt.new

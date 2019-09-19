@@ -2,6 +2,7 @@ components:
   elements_image:
     name: 'Image'
     description: 'The image element'
+    icon: 'image'
     klass: 'Elements::Image'
     path: 'elements'
     enabled: true

@@ -2,6 +2,7 @@ components:
   elements_divider:
     name: 'Divider'
     description: 'A content divider'
+    icon: 'ellipsis horizontal'
     klass: 'Elements::Divider'
     path: 'elements'
     enabled: true
