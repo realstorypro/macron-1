@@ -13,3 +13,5 @@ views:
         options:
           - 'down'
           - 'double down'
+          - 'flag checkered'
+          - 'heart'

@@ -5,6 +5,11 @@ namespace :permissions do
   task enable: :environment do
     prompt = TTY::Prompt.new
 
+    component_file = prompt.select("What are you modifying permissions for?") do |menu|
+      menu.choice "Components", { file: "components.yml" }
+      menu.choice "Elements", { file: "elements.yml" }
+    end
+
     # loads in the component file
     components = YAML.load_file(Rails.root.join("core").join("components.yml"))
 
