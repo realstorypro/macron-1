@@ -6,3 +6,6 @@ components:
     klass: 'Elements::Richtext'
     path: 'elements'
     enabled: true
+    restricted:
+      areas:
+        - content

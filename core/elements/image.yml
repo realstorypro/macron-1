@@ -6,3 +6,6 @@ components:
     klass: 'Elements::Image'
     path: 'elements'
     enabled: true
+    restricted:
+      areas:
+        - content

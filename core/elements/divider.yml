@@ -6,3 +6,6 @@ components:
     klass: 'Elements::Divider'
     path: 'elements'
     enabled: true
+    restricted:
+      areas:
+        - content

@@ -6,3 +6,6 @@ components:
     klass: 'Elements::Reference'
     path: 'elements'
     enabled: true
+    restricted:
+      areas:
+        - reference

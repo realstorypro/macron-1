@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Areas
-  class Footer < Area
+  class Reference < Area
   end
 end
