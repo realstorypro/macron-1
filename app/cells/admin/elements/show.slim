@@ -1,4 +1,4 @@
-= h5 class: 'dividing', text: area_name
+= h5 class: 'dividing', text: area_title
 = widget name: 'sortable', data: {target: url_helpers.reorder_admin_elements_path}
   - areas.each do |area|
     - if area.type.downcase.include?(area_name)

@@ -1,5 +1,8 @@
-= h4 tag: model.size
-  = model.header
-  - if model.subheader
-    = header 'sub'
-      = model.subheader
+- if model.header
+  = h4 tag: model.size
+    = model.header
+    - if model.subheader
+      = header 'sub'
+        = model.subheader
+- else
+  = h5 text: 'No Header Text Inserted', class: 'horizontal divider'

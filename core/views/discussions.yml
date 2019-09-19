@@ -32,16 +32,14 @@ views:
         type: 'dropdown'
         required: true
 
-      details_header:
+      social_header:
         type: 'header'
-        text: 'Details'
+        text: 'Social Sharing'
       long_title:
-        label: 'Long Title'
+        label: 'Title'
         type: 'string'
         maxlength: '85'
         hint: 'Limited to 85 characters'
-        required: true
       long_summary:
-        label: 'Long Summary'
-        type: 'rich'
-        required: true
+        label: 'Summary'
+        type: 'text'
