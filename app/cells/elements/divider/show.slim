@@ -1,1 +1,6 @@
-h1 view for Divider
+- if model.header
+    = header class: 'divider horizontal', tag: :h6
+        = icon model.icon
+        = model.header
+- else
+    = divider

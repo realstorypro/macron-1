@@ -11,7 +11,8 @@ views:
         label: 'Icon'
         type: 'fixed_dropdown'
         options:
-          - 'down'
-          - 'double down'
+          - 'angle down'
+          - 'angle double down'
           - 'flag checkered'
           - 'heart'
+          - 'graduation cap'
