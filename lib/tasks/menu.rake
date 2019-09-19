@@ -45,15 +45,15 @@ namespace :menu do
 
     menu_file["menu"][modification[:namespace]][0]["section"] <<
         {
-            name: selected_component.name,
-            hint: selected_component.description,
-            component: selected_component.klass.downcase.gsub("::",'_' ),
-            icon: icon,
-            enabled: true
+            "name" => selected_component.name,
+            "hint" => selected_component.description,
+            "component" => selected_component.klass.downcase.gsub("::",'_' ),
+            "icon" => icon,
+            "enabled" => true
         }
 
     File.open(Rails.root.join(modification[:menu]), "w") do |f|
-      f.write menu_file
+      f.write menu_file.to_yaml
     end
 
   end
