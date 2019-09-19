@@ -82,3 +82,5 @@ auth:
         all: 
       :elements_richtext:
         all: 
+      :elements_image:
+        all: 

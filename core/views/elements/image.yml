@@ -1,0 +1,34 @@
+views:
+  elements_image:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
+    new:
+      image:
+        label: 'Image'
+        type: 'image'
+      size:
+        label: 'Size'
+        type: 'fixed_dropdown'
+        options:
+          - fluid
+          - big
+          - large
+          - medium
+          - small
+          - mini
+          - tiny
+      alignment:
+        label: 'Alignment'
+        type: 'fixed_dropdown'
+        options:
+          - left
+          - centered
+          - right
+      style:
+        label: 'Style'
+        type: 'fixed_dropdown'
+        options:
+          - bordered
+          - rounded
+          - circular

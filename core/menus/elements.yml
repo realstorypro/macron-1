@@ -17,3 +17,8 @@ menu:
       component: elements_richtext
       icon: i cursor
       enabled: true
+    - name: Image
+      hint: The image element
+      component: elements_image
+      icon: image
+      enabled: true

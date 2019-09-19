@@ -8,8 +8,6 @@ views:
         label: 'Header Size'
         type: 'fixed_dropdown'
         options:
-          - 'H1'
-          - 'H2'
           - 'H3'
           - 'H4'
           - 'H5'
