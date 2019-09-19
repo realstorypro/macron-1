@@ -12,6 +12,11 @@ module Admin
     end
 
     # shortcuts
+    def area_title
+      # Use area name if title isnt specified
+      options[:title] || options[:area]
+    end
+
     def area_name
       options[:area]
     end

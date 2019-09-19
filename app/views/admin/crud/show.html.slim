@@ -22,7 +22,7 @@
               = link_to 'Add Element', pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'content'), class: 'ui button green', data: { widget: "crud", action: "new" }
 
           - if component_areas&.include?('reference')
-            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'reference', controller_namespace: self.controller.class.parent.to_s)
+            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'reference', title: 'References',  controller_namespace: self.controller.class.parent.to_s)
           - if component_areas&.include?('reference')
             = segment 'center aligned basic empty element'
-              = link_to 'Add Element', pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'reference'), class: 'ui button green', data: {widget: "crud", action: "new"}
+              = link_to 'Add Element', pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'reference', title: 'References'), class: 'ui button green', data: {widget: "crud", action: "new"}
