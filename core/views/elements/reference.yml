@@ -4,11 +4,17 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      title:
+        label: 'Title'
+        type: 'string'
       author:
         label: 'Author'
         type: 'string'
       source:
         label: 'Source'
+        type: 'string'
+      date:
+        label: 'Date'
         type: 'string'
       link:
         label: 'Link'
