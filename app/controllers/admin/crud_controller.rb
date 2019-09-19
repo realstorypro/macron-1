@@ -29,6 +29,7 @@ module Admin
     end
 
     def show
+      super
       unless current_user.help
         add_to_actions(
           text: "Help",
