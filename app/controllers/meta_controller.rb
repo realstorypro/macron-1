@@ -14,6 +14,7 @@ class MetaController < ApplicationController
   end
 
   def show
+    # needed for the the CRUD widget to re-load the page on edit
     response_status :success
   end
 

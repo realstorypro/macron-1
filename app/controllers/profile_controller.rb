@@ -9,6 +9,20 @@ class ProfileController < MembersController
     render "members/show"
   end
 
+  def update
+    # TODO: we want to refactor this entire thing to make profile updates
+    # look more user friendly
+    if @entry.update(entry_params)
+      flash[:success] = "#{component_name} was successfully updated."
+      response_status :success
+      # needed for the the CRUD widget to re-load the page on edit
+      redirect_back(fallback_location: admin_root_path)
+    else
+      response_status :error
+      render :edit, layout: false
+    end
+  end
+
   private
     def preload_entry
       @member = current_user
