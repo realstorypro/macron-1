@@ -23,10 +23,7 @@ namespace :permissions do
       menu.choice "Site Settings", { array: site_settings}
     end
 
-    # TODO what we need are component names
     component_names = component_array[:array].map { |component| component[0] }
-
-    byebug
 
     # loads in the auth file
     auth = YAML.load_file(Rails.root.join("core").join("auth.yml"))
