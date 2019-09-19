@@ -76,7 +76,5 @@ auth:
         all: 
       elements_heading:
         all: 
-      elements_divider:
-        all:
       elements:
         all: 
