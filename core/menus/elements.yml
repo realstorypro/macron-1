@@ -12,3 +12,8 @@ menu:
       component: elements_divider
       icon: ellipsis horizontal
       enabled: true
+    - name: Richtext
+      hint: The rich text element
+      component: elements_richtext
+      icon: i cursor
+      enabled: true

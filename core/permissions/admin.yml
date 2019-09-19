@@ -80,3 +80,5 @@ auth:
         all: 
       :elements_divider:
         all: 
+      :elements_richtext:
+        all: 
