@@ -1,8 +1,14 @@
+---
 menu:
   elements:
-    - section:
-      - name: Heading
-        hint: 'insert a header element'
-        component: elements_heading
-        icon: heading
-        enabled: true
+  - section:
+    - name: Heading
+      hint: insert a header element
+      component: elements_heading
+      icon: heading
+      enabled: true
+    - name: Divider
+      hint: A content divider
+      component: elements_divider
+      icon: ellipsis horizontal
+      enabled: true
