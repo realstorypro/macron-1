@@ -52,7 +52,9 @@ namespace :menu do
             enabled: true
         }
 
-    puts menu_file
+    File.open(Rails.root.join(modification[:menu]), "w") do |f|
+      f.write menu_file
+    end
 
   end
 end
