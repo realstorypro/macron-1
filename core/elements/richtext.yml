@@ -1,6 +1,6 @@
 components:
   elements_richtext:
-    name: 'Richtext'
+    name: 'Rich Text'
     description: 'The rich text element'
     icon: 'file alternate'
     klass: 'Elements::Richtext'

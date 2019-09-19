@@ -11,6 +11,10 @@ module Admin
       icon(s("components.#{element.type.downcase.gsub('::','_')}.icon"))
     end
 
+    def element_name (element)
+      s("components.#{element.type.downcase.gsub('::','_')}.name")
+    end
+
     # shortcuts
     def area_title
       # Use area name if title isnt specified

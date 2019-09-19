@@ -12,23 +12,23 @@ menu:
       component: elements_divider
       icon: ellipsis horizontal
       enabled: true
-    - name: Richtext
-      hint: Paragraphs with formatting, lists and links
+    - name: Rich Text
+      hint: Paragraphs with formatting, links, and lists.
       component: elements_richtext
       icon: file alternate
       enabled: true
     - name: Image
-      hint: Upload an image, with alignment and formatting options
+      hint: Image, with alignment and formatting options.
       component: elements_image
       icon: image
       enabled: true
     - name: Blockquote
-      hint: A quote with an authors name
+      hint: Quote with an authors name.
       component: elements_blockquote
       icon: quote left
       enabled: true
     - name: Reference
-      hint: Content reference, with name, reference and link
+      hint: APA style citation, with name, author, reference and link.
       component: elements_reference
       icon: graduation cap
       enabled: true

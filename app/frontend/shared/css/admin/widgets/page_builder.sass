@@ -1,13 +1,15 @@
 .page.builder.widget
 
   .element
-    border: 2px dashed rgba(0, 0, 0, 0.3)
+    border: 1px dashed lighten($blue, 20)
     font-size: 0.9em
     padding: 0 0.5em
     background: white
 
     &.empty
       padding: 1em
+      background: lighten($blue, 50)
+      border: 2px solid lighten($blue, 30)
 
     .title
       display: flex
@@ -25,7 +27,3 @@
     .details.fragment
       border-top: 1px solid rgba(34, 36, 38, .1)
       padding-bottom: 0.5em
-
-  .empty.pageheader
-    background: rgba(0, 0, 0, 0.2)
-    border: 2px dashed rgba(0, 0, 0, 0.1)
