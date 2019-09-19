@@ -9,19 +9,17 @@ namespace :menu do
     components = Settings.components.reject
 
     # components
+    # todo: implement in the future
     regular_components = components.reject { |component| component[0].to_s.include?("site_settings") || component[0].to_s.include?("elements") }
     regular_components = regular_components.select { |component| component[1].enabled }
 
     # site settings
+    # todo: implement in the future
     site_settings = components.select { |component| component[0].to_s.include? "site_settings" }
     site_settings = site_settings.select { |component| component[1].enabled }
 
     # elements
     elements = components.select { |component| component[0].to_s.include? "elements" }
-
-    puts "regular components: ", regular_components
-    puts "site settings: ", site_settings
-    puts "elements: ", elements
 
     modification = prompt.select("What menu would you like to modify?") do |menu|
       menu.choice "Elements", { menu: "core/menus/elements.yml", components: elements, namespace: 'elements'}
@@ -43,7 +41,18 @@ namespace :menu do
 
     selected_component = prompt.select"What component are we adding?", component_names
 
+    icon = prompt.ask('What is the name of the icon?')
 
+    menu_file["menu"][modification[:namespace]][0]["section"] <<
+        {
+            name: selected_component.name,
+            hint: selected_component.description,
+            component: selected_component.klass.downcase.gsub("::",'_' ),
+            icon: icon,
+            enabled: true
+        }
+
+    puts menu_file
 
   end
 end
