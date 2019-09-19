@@ -7,6 +7,10 @@ module Admin
 
     delegate :url_helpers, to: "::Rails.application.routes"
 
+    def element_icon (element)
+      icon(s("components.#{element.type.downcase.gsub('::','_')}.icon"))
+    end
+
     # shortcuts
     def area_name
       options[:area]

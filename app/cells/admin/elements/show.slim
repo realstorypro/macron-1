@@ -8,7 +8,7 @@
               = left
                 = h5
                   = content
-                    = icon s("components.#{element.type.downcase.gsub('::','_')}.icon")
+                    = element_icon (element)
                     = element.type.gsub('Elements::','')
               = right
                 = link_to 'Delete', url_helpers.destroy_admin_element_path(id: element.id), class: 'button ui red mini compact', data: { widget: "clicker", action: "click", confirm_dialog: 'Are you sure you want to delete this element?' }

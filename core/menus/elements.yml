@@ -15,7 +15,7 @@ menu:
     - name: Richtext
       hint: The rich text element
       component: elements_richtext
-      icon: i cursor
+      icon: file alternate
       enabled: true
     - name: Image
       hint: The image element
