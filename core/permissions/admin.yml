@@ -86,3 +86,5 @@ auth:
         all: 
       :elements_blockquote:
         all: 
+      :elements_reference:
+        all: 

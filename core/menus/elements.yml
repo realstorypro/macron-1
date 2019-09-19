@@ -27,3 +27,8 @@ menu:
       component: elements_blockquote
       icon: quote left
       enabled: true
+    - name: Reference
+      hint: Provide a reference
+      component: elements_reference
+      icon: graduation cap
+      enabled: true
