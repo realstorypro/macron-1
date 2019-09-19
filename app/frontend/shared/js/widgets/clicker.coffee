@@ -21,6 +21,10 @@ class Clicker
 
 
   click: (options, href, context) ->
+
+    if(typeof options.confirmDialog != 'undefined') && !(confirm(options.confirmDialog))
+      return false
+
     $(context).addClass('loading')
 
     $.ajax

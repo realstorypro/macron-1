@@ -11,7 +11,7 @@
                     = icon 'align justify'
                     = element.type.gsub('Elements::','')
               = right
-                = link_to 'Delete', url_helpers.destroy_admin_element_path(id: element.id), class: 'button ui red mini compact', data: { widget: "clicker", action: "click", confirm: 'Are you sure you want to delete this element?' }
+                = link_to 'Delete', url_helpers.destroy_admin_element_path(id: element.id), class: 'button ui red mini compact', data: { widget: "clicker", action: "click", confirm_dialog: 'Are you sure you want to delete this element?' }
                 = link_to 'Edit',url_helpers.edit_admin_element_path(element.id), class: 'button ui primary mini compact', data: { widget: "crud", action: "edit" }
           == Admin::DetailsCell.(nil,
                   records: element,
