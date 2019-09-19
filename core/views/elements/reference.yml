@@ -1,0 +1,15 @@
+views:
+  elements_reference:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
+    new:
+      author:
+        label: 'Author'
+        type: 'string'
+      source:
+        label: 'Source'
+        type: 'string'
+      link:
+        label: 'Link'
+        type: 'string'

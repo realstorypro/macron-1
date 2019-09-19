@@ -2,13 +2,26 @@
 
   .element
     border: 2px dashed rgba(0, 0, 0, 0.3)
+    font-size: 0.9em
+    padding: 0 0.5em 0.5em
+    background: white
+
+    &.empty
+      padding: 1em
 
     .title
       display: flex
       justify-content: space-between
+      align-items: center
+      border-bottom: 1px solid rgba(34, 36, 38, .1)
+      padding: 0.3em 0
+
+      .header
+        font-size: 0.9em
+        cursor: move /* fallback if grab cursor is unsupported */
+        cursor: grab
 
       .content
-        margin-top: 4px
 
   .empty.pageheader
     background: rgba(0, 0, 0, 0.2)
