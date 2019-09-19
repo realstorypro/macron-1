@@ -28,6 +28,7 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
 
     # copy cell files
     copy_file "cell.rb", "app/cells/elements/#{file_name}_cell.rb"
+    gsub_file "app/cells/elements/#{file_name}_cell.rb", "<~~ class_name ~~>", class_name
 
     prompt.ok "All Files Copied"
   end
