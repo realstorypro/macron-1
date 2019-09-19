@@ -1,0 +1,8 @@
+components:
+  elements_imageheader:
+    name: 'Image Header'
+    description: ' An image header with title and optional summary'
+    icon: 'camera retro'
+    klass: 'Elements::Imageheader'
+    path: 'elements'
+    enabled: true

@@ -1,5 +1,5 @@
 views:
-  elements_solidheader:
+  elements_imageheader:
     config:
       set_defaults: true
       rejected_field_names: ''
@@ -12,7 +12,7 @@ views:
       summary:
         label: 'Summary'
         type: 'text'
-      color:
-        label: 'Color'
-        type: 'color'
-        default: 'black'
+      landscape_image:
+        label: 'Landscape Image'
+        type: 'image'
+        size: ['2560','1456']

@@ -90,3 +90,5 @@ auth:
         all: 
       :elements_solidheader:
         all: 
+      :elements_imageheader:
+        all: 

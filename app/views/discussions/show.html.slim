@@ -3,13 +3,4 @@
     - if area.type.include?('Header')
       - area.elements.each do |element|
         == Elements::ElementCell.(element)
-  /= fragment "header fullscreen #{@entry.category.color.name}"
-    = container
-      = grid 'centered'
-        = column computer: 14, tablet: 16, mobile: 16
-          = h1
-            = @entry.long_title
-          .summary
-            = @entry.long_summary.html_safe
-
   = render 'partials/show_content'

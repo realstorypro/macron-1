@@ -45,7 +45,3 @@ views:
         label: 'Long Summary'
         type: 'rich'
         required: true
-      body:
-        label: 'Discussion Body'
-        type: 'rich'
-        required: true

@@ -37,3 +37,8 @@ menu:
       component: elements_solidheader
       icon: newspaper
       enabled: true
+    - name: Image Header
+      hint: " An image header with title and optional summary."
+      component: elements_imageheader
+      icon: camera retro
+      enabled: true
