@@ -6,11 +6,13 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
   source_root File.expand_path("templates", __dir__)
 
   class_option :desc, type: :string, default: "Element Description"
+  class_option :icon, type: :string, default: "Element Icon"
 
   def copy_element_file
     prompt = TTY::Prompt.new
 
-    @description= options["desc"]
+    @description = options["desc"]
+    @icon = options["icon"]
 
     # copy model files
     copy_file "model.rb", "app/models/elements/#{file_name}.rb"
@@ -21,6 +23,7 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
     gsub_file "core/elements/#{file_name}.yml", "<~~ lowercase_name ~~>", class_name.downcase
     gsub_file "core/elements/#{file_name}.yml", "<~~ class_name ~~>", class_name
     gsub_file "core/elements/#{file_name}.yml", "<~~ element_description ~~>", @description
+    gsub_file "core/elements/#{file_name}.yml", "<~~ element_icon ~~>", @icon
 
     # copy the view file
     copy_file "element_view.yml", "core/views/elements/#{file_name}.yml"
