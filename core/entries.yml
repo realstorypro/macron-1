@@ -11,6 +11,10 @@ components:
     klass: 'Article'
     path: 'articles'
     enabled: true
+    areas:
+      - header
+      - content
+      - reference
 
   events:
     klass: 'Event'

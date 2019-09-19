@@ -5,4 +5,7 @@ components:
     icon: 'camera retro'
     klass: 'Elements::Imageheader'
     path: 'elements'
+    restricted:
+      areas:
+        - header
     enabled: true

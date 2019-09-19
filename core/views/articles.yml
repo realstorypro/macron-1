@@ -35,11 +35,6 @@ views:
       images_header:
         type: 'header'
         text: 'Images'
-      fullscreen_image:
-        label: 'Fullscreen Image'
-        type: 'image'
-        size: ['2560','1456']
-        required: true
       landscape_image:
         label: 'Landscape Image'
         type: 'image'
