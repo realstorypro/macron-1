@@ -4,3 +4,6 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      default:
+        label: 'Text'
+        type: 'string'
