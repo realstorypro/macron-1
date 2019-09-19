@@ -1,0 +1,12 @@
+views:
+  elements_blockquote:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
+    new:
+      body:
+        label: 'Body'
+        type: 'text'
+      author:
+        label: 'Author'
+        type: 'string'

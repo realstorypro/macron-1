@@ -1,0 +1,7 @@
+components:
+  elements_blockquote:
+    name: 'Blockquote'
+    description: 'The blockquote element'
+    klass: 'Elements::Blockquote'
+    path: 'elements'
+    enabled: true

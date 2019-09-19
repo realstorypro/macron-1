@@ -22,3 +22,8 @@ menu:
       component: elements_image
       icon: image
       enabled: true
+    - name: Blockquote
+      hint: The blockquote element
+      component: elements_blockquote
+      icon: quote left
+      enabled: true
