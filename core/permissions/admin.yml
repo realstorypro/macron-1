@@ -88,3 +88,5 @@ auth:
         all: 
       :elements_reference:
         all: 
+      :elements_solidheader:
+        all: 

@@ -1,5 +1,9 @@
 = component 'discussion details'
-  = fragment "header fullscreen #{@entry.category.color.name}"
+  - @entry.areas.select do |area|
+    - if area.type.include?('Header')
+      - area.elements.each do |element|
+        == Elements::ElementCell.(element)
+  /= fragment "header fullscreen #{@entry.category.color.name}"
     = container
       = grid 'centered'
         = column computer: 14, tablet: 16, mobile: 16

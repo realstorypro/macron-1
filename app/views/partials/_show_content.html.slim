@@ -10,7 +10,7 @@
                 = divider text: '/'
                 .section = link_to params[:category].capitalize, article_category_path(params[:category])
             = widget 'normal rich text'
-              /- cache @entry
+              //TODO remove once the embed widget is setup
               /= format_content(@entry.body)
 
               // render the content area

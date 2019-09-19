@@ -8,18 +8,21 @@
           = render 'partials/side_help'
     = row
       = column size: 16
+        br
         = widget name: 'page builder'
           - if component_areas&.include?('header')
             == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'header', controller_namespace: self.controller.class.parent.to_s)
           - if component_areas&.include?('header')
             = segment 'center aligned basic empty element'
               = link_to "Add Header Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'header'), class: 'ui button green', data: { widget: "crud", action: "new" }
+            br
 
           - if component_areas&.include?('content')
             == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'content', controller_namespace: self.controller.class.parent.to_s)
           - if component_areas&.include?('content')
             = segment 'center aligned basic empty element'
               = link_to "Add Content Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'content'), class: 'ui button green', data: { widget: "crud", action: "new" }
+            br
 
           - if component_areas&.include?('reference')
             == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'reference', title: 'References',  controller_namespace: self.controller.class.parent.to_s)

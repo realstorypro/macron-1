@@ -1,0 +1,9 @@
+= fragment "header fullscreen #{model.color}"
+  = container
+    = grid 'centered'
+      = column computer: 14, tablet: 16, mobile: 16
+        = h1
+          = model.title
+        - unless model.summary.blank?
+          .summary
+            = simple_format(model.summary)

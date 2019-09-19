@@ -1,0 +1,16 @@
+views:
+  elements_solidheader:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
+    new:
+      title:
+        label: 'Title'
+        type: 'string'
+      summary:
+        label: 'Summary'
+        type: 'text'
+      color:
+        label: 'Color'
+        type: 'color'
+        default: 'black'

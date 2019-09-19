@@ -32,3 +32,8 @@ menu:
       component: elements_reference
       icon: graduation cap
       enabled: true
+    - name: Solid Header
+      hint: A solid color header with title, and optional summary.
+      component: elements_solidheader
+      icon: newspaper
+      enabled: true
