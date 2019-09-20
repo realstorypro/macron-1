@@ -11,6 +11,7 @@ import Drawer from './widgets/drawer'
 import Crud from './widgets/crud'
 import Checkbox from './widgets/checkbox'
 import Dropdown from './widgets/dropdown'
+import Tabs from './widgets/tabs'
 import Datepicker from './widgets/datepicker'
 import Timepicker from './widgets/timepicker'
 import Daterange from './widgets/daterange'
@@ -44,6 +45,7 @@ drawer = new Drawer
 crud = new Crud
 checkbox = new Checkbox
 dropdown = new Dropdown
+tabs = new Tabs
 datepicker = new Datepicker
 timepicker = new Timepicker
 daterange = new Daterange
@@ -80,6 +82,7 @@ class App
     notifications.setup()
     checkbox.setup()
     dropdown.setup()
+    tabs.setup()
     datepicker.setup()
     timepicker.setup()
     daterange.setup()
@@ -96,6 +99,7 @@ class App
     notifications.teardown()
     checkbox.teardown()
     dropdown.teardown()
+    tabs.teardown()
     datepicker.teardown()
     timepicker.teardown()
     daterange.teardown()
