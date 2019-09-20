@@ -1,4 +1,11 @@
-= fragment 'details'
-  = table 'very basic celled'
-    - options[:fields].each do |field|
-      = row(field)
+= menu class: 'tabular top attached', ui: :on
+  - options[:fields].each_with_index do |field, index|
+    - unless field_advanced(field) && !current_user.advanced
+        - if @header_locations.include?(index)
+          = item class: "#{'active' if index == 0}", data: {tab: "admin-tab#{index}"}, text: field_text(field)
+
+- options[:fields].each_with_index do |field, index|
+  - unless field_advanced(field) && !current_user.advanced
+    - if @header_locations.include?(index-1)
+      = segment class: "bottom tab attached #{'active' if (index - 1 == 0)}", data: {tab: "admin-tab#{index-1}"}, id: "admin-tab#{index-1}",  dynamic: :on
+        = render_table(index)

@@ -1,18 +1,11 @@
 = segment class: 'basic no padding'
   = grid "#{'divided' if current_user.help}"
-    = row id: 'meta-data', dynamic: :on
+    = row
       = column size: (current_user.help ? 10 : 16)
-        = menu class: 'tabular top attached', ui: :on
-          = item class:'active', data: { tab: 'settings' }, text: 'Details'
-          = item data: {tab: 'social'}, text: 'Images'
-        = segment class: 'bottom tab attached active', data: {tab: 'settings'}, id: 'settings-details', dynamic: :on
-          == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
-        = segment class: 'bottom tab attached', data: {tab: 'social'}
-          = h5 text: 'Images'
+        == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
       - if current_user.help
         = column size: 6
           = render 'partials/side_help'
-
 
     = row
       = column size: 16, id: 'content-pane', dynamic: :on

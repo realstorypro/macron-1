@@ -1,12 +1,5 @@
-- if field_type(field) == 'header'
-  - unless field_advanced(field) && !current_user.advanced
-    tr.heading
-      td colspan='2'
-        =h5
-          =field_text(field)
-- else
-  - unless field_advanced(field) && !current_user.advanced
-    tr
-      td.top.aligned width='20%'
-        strong = field_label(field)
-      td= record_value(field)
+- unless field_advanced(field) && !current_user.advanced
+  tr
+    td.top.aligned width='20%'
+      strong = field_label(field)
+    td= record_value(field)

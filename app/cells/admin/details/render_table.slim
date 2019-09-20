@@ -1,0 +1,4 @@
+= table 'very basic celled'
+  - options[:fields].each_with_index do |field, index|
+    - if index > @from && index < @to
+      = row(field)
