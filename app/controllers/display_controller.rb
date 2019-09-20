@@ -81,16 +81,13 @@ class DisplayController < MetaController
       @page_description = t("seo.components.#{params[:component]}.description")
     end
 
-    # TODO
-    # ensure that author is properly populated
-    # ensure that the _ for the image isn't causing issues
     def set_show_seo_meta
-      set_meta_tags title: @entry.long_title,
+      set_meta_tags title: @entry.name,
                     description: @entry.description,
                     keywords: @entry.tags.map(&:name),
                     article: {
                       section: @entry.category.name,
-                      author: ss("contact.facebook"),
+                      author: @entry.user.profile.full_name,
                       tag: @entry.tags.map(&:name),
                       published_time: @entry.published_date,
                       modified_time: @entry.updated_at
@@ -100,7 +97,7 @@ class DisplayController < MetaController
     def set_twitter_meta
       set_meta_tags twitter: {
         card: "summary_large_image",
-        title: @entry.long_title,
+        title: @entry.name,
         description: @entry.description,
         image: {
           _: (@entry.landscape_image if @entry.respond_to?(:landscape_image)),
@@ -111,7 +108,7 @@ class DisplayController < MetaController
 
     def set_og_meta
       set_meta_tags og: {
-        title: @entry.long_title,
+        title: @entry.name,
         type: "article",
         description: @entry.description,
         url: request.original_url,
@@ -122,12 +119,10 @@ class DisplayController < MetaController
       }
     end
 
-    # TODO
-    # ensure that author is properly populated
     def set_article_meta
       set_meta_tags article: {
         section: @entry.category.name,
-        author: ss("contact.facebook"),
+        author: @entry.user.profile.full_name,
         tag: @entry.tags.map(&:name),
         published_time: @entry.published_date,
         modified_time: @entry.updated_at

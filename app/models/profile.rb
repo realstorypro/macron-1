@@ -25,6 +25,10 @@ class Profile < ApplicationRecord
     save
   end
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   def avatar_with_default
     return avatar unless avatar.nil?
     "default-avatar.jpg"
