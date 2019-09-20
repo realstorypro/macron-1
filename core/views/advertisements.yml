@@ -6,7 +6,7 @@ views:
     new:
       meta_header:
         type: 'header'
-        text: 'Meta Data'
+        text: 'Meta'
       name:
         label: 'Name'
         type: 'string'

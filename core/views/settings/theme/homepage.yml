@@ -4,6 +4,9 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      configuration_header:
+        type: 'header'
+        text: 'Configuration'
       menu_color:
         label: 'Menu Color'
         type: 'color'
