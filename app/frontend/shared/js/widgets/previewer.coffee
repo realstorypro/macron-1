@@ -20,7 +20,6 @@ class Previewer
 
 
   preview: (options, href, context) ->
-    console.log 'prereview', options, href, context
     $(".ui.preview.modal")
       .modal
         onShow: ->

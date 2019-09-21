@@ -35,6 +35,7 @@ module Admin
           text: "Help",
           class: "black",
           icon: "question circle",
+          id: "help-button",
           url: enable_help_admin_user_path(current_user.id),
           permission: policy(current_user).enable_help?,
           data: { widget: "clicker", action: "click" }
@@ -44,6 +45,7 @@ module Admin
         text: "Delete",
         class: "negative enhanced",
         icon: "eraser",
+        id: "delete-button",
         url: send(delete_path("admin"), @entry),
         permission: policy(@entry).destroy?,
         data: {
@@ -56,6 +58,7 @@ module Admin
         text: "Edit",
         class: "primary enhanced",
         icon: "edit",
+        id: "edit-button",
         url: send(edit_path("admin"), @entry),
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
@@ -67,6 +70,15 @@ module Admin
           url: send(preview_path, @entry.category.slug, @entry.slug),
           permission: policy(@entry).edit?,
           data: {widget: "previewer", action: "preview"}
+      )
+
+      add_to_actions(
+          text: "Focus",
+          class: "grey enhanced",
+          id: 'focus-mode',
+          url: send(preview_path, @entry.category.slug, @entry.slug),
+          permission: policy(@entry).edit?,
+          data: {widget: "focus", action: "focus"}
       )
 
       semantic_breadcrumb @entry.name.truncate(30), "#"

@@ -1,6 +1,6 @@
 - actions.each do |action|
   - if action[:permission]
-    = button class: build_button_class(action[:class]), url: action[:url], data: action[:data]
+    = button class: build_button_class(action[:class]), url: action[:url], data: action[:data], id: action[:id]
       = icon action[:icon] if icons? && icon_position.eql?(:left)
       = action[:text]
       = icon action[:icon] if icons? && icon_position.eql?(:right)

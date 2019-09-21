@@ -1,6 +1,6 @@
 = segment class: 'basic no padding'
   = grid "#{'divided' if current_user.help}"
-    = row
+    = row id: 'admin-details'
       = column size: (current_user.help ? 10 : 16)
         == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
       - if current_user.help

@@ -19,6 +19,7 @@ import Clicker from './widgets/clicker'
 import Sorter from './widgets/sorter'
 import Multiselect from './widgets/multiselect'
 import Previewer from './widgets/previewer'
+import Focus from './widgets/focus'
 import Richtext from './widgets/richtext'
 import Navigation from './widgets/navigation'
 import ImagePreloader from './widgets/image_preloader'
@@ -54,6 +55,7 @@ clicker = new Clicker
 sorter = new Sorter
 multiselect = new Multiselect
 previewer = new Previewer
+focus = new Focus
 richtext = new Richtext
 navigation = new Navigation
 image_preloader = new ImagePreloader
@@ -92,6 +94,7 @@ class App
     sorter.setup()
     multiselect.setup()
     previewer.setup()
+    focus.setup()
     richtext.setup()
     image_preloader.setup()
     navigation.setup()
@@ -110,6 +113,7 @@ class App
     sorter.teardown()
     multiselect.teardown()
     previewer.teardown()
+    focus.teardown()
     richtext.teardown()
     image_preloader.teardown()
     navigation.teardown()
