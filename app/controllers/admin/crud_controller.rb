@@ -54,11 +54,21 @@ module Admin
       )
 
       add_to_actions(
-        text: "Preview",
-        class: "blue enhanced",
+        text: "Desktop Preview",
+        class: "purple enhanced hidden",
+        id: "desktop-browser-preview",
         url: send(preview_path, @entry.category.slug, @entry.slug),
         permission: policy(@entry).edit?,
-        data: { widget: "previewer", action: "preview" }
+        data: { widget: "previewer", action: "desktop" }
+      )
+
+      add_to_actions(
+          text: "Mobile Preview",
+          class: "blue enhanced hidden",
+          id: "mobile-browser-preview",
+          url: send(preview_path, @entry.category.slug, @entry.slug),
+          permission: policy(@entry).edit?,
+          data: { widget: "previewer", action: "mobile" }
       )
 
       add_to_actions(

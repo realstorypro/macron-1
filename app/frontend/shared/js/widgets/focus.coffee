@@ -32,6 +32,8 @@ class Focus
     $('#help-button').toggle()
     $('#delete-button').toggle()
     $('#edit-button').toggle()
+    $('#desktop-browser-preview').toggleClass('hidden')
+    $('#mobile-browser-preview').toggleClass('hidden')
     $('#focus-mode').toggleText('Writer Mode','Exit Writer Mode')
 
   setup: ->
