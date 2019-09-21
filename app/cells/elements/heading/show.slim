@@ -1,8 +1,8 @@
 - if model.header
-  = h4 tag: model.size
+  = header tag: (model.size.blank? == true ? 'h1' : model.size)
     = model.header
     - if model.subheader
       = header 'sub'
         = model.subheader
 - else
-  = h5 text: 'No Header Text Inserted', class: 'horizontal divider'
+  = h6 text: 'No Header Text Inserted', class: 'horizontal divider'
