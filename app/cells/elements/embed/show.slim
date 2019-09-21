@@ -1,5 +1,5 @@
 - if model.url
-  - if model.embedded == false
+  - if model.embedded == false || model.embedded.blank?
     = h6 text: 'Embed Is Not Available (For The URL Inserted)', class: 'horizontal divider'
   - else
     = model.embedded.html_safe

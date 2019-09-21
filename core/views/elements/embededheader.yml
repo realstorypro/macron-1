@@ -4,6 +4,20 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      title:
+        label: 'Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+      alignment:
+        label: 'Title Alignment'
+        type: 'fixed_dropdown'
+        options:
+          - 'left'
+          - 'centered'
+          - 'right'
+          - 'justified'
+        default: 'left'
       url:
         label: 'URL'
         type: 'string'
