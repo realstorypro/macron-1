@@ -26,16 +26,18 @@ class Focus
 
 
   focus: (options, href, context) ->
+    # Focusable
+    $('.focusable').toggleClass('focused')
+
     # Hiding Sidebar
     $('.side.nav.fragment').toggle('display')
 
     # Hiding Breadcrumb and Details
     $('#admin-details').toggle('display')
-    $('.breadcrumb').toggle()
+    # $('.breadcrumb').toggle()
 
     # Hiding Extra Buttons
     $('#help-button').toggle()
-    console.log $('#help-button')
     $('#delete-button').toggle()
     $('#edit-button').toggle()
 

@@ -26,7 +26,7 @@ html
             = container
               = grid
                 = row
-                  = column size: 16
+                  = column size: 16, class: 'focusable'
                     = segment class: "basic no padding #{'dynamic' unless controller_name == 'entry_crud' && action_name.downcase == 'show'}", id: 'header'
                       = fragment 'action bar just bordered'
                         = left
