@@ -5,4 +5,7 @@ components:
     icon: 'plug'
     klass: 'Elements::Embed'
     path: 'elements'
+    restricted:
+      areas:
+        - content
     enabled: true

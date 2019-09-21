@@ -1,17 +1,13 @@
 views:
-  elements_solidheader:
+  elements_embededheader:
     config:
       set_defaults: true
       rejected_field_names: ''
     new:
-      title:
-        label: 'Title'
+      url:
+        label: 'URL'
         type: 'string'
-        maxlength: '85'
-        hint: 'Limited to 85 characters'
-      summary:
-        label: 'Summary'
-        type: 'text'
+        hint: 'URL to be Embedded'
       color:
         label: 'Background Color'
         type: 'color'

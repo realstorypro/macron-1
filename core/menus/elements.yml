@@ -47,3 +47,8 @@ menu:
       component: elements_embed
       icon: plug
       enabled: true
+    - name: Embeded Header
+      hint: " A header with an embedded URL."
+      component: elements_embededheader
+      icon: hdd
+      enabled: true

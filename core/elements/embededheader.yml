@@ -1,0 +1,11 @@
+components:
+  elements_embededheader:
+    name: 'Embeded Header'
+    description: ' A header with an embedded URL.'
+    icon: 'hdd'
+    klass: 'Elements::Embededheader'
+    path: 'elements'
+    restricted:
+      areas:
+        - header
+    enabled: true

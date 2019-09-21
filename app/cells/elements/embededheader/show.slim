@@ -1,0 +1,11 @@
+= fragment "header fullscreen #{model.color}"
+  = container
+    = grid 'centered'
+      = column computer: 14, tablet: 16, mobile: 16
+        - if model.url
+          - if model.embedded == false
+            = h6 text: 'Embed Is Not Available (For The URL Inserted)', class: 'horizontal divider'
+          - else
+            = model.embedded.html_safe
+        - else
+          = h6 text: 'Embed (No URL Inserted)', class: 'horizontal divider'
