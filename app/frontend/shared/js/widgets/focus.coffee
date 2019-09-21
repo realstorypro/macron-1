@@ -32,12 +32,10 @@ class Focus
     # Hiding Sidebar
     $('.side.nav.fragment').toggle('display')
 
-    # Hiding Breadcrumb and Details
+    # Hiding The Admin Details
     $('#admin-details').toggle('display')
-    # $('.breadcrumb').toggle()
 
-    # Hiding Extra Buttons
-    $('#help-button').toggle()
+    # Hiding Distracting Buttons
     $('#delete-button').toggle()
     $('#edit-button').toggle()
 
