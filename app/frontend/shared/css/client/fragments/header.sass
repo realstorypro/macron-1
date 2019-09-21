@@ -36,6 +36,10 @@
       font-size: $f-header-mobile-h1-font-size
       margin-bottom: $f-header-mobile-h1-margin-bottom
 
+    // justified overrides
+    &.justified
+      margin-bottom: 0em
+
   .meta
     @include media("<desktop")
       margin-top: $f-header-meta-mobile-margin-top
@@ -45,11 +49,28 @@
     @include media("<desktop")
       max-width: 100%
 
+    &.left
+      text-align: left
+    &.right
+      text-align: right
+    &.centered
+      text-align: center
+    &.justified
+      text-align: justify
+
     p
       font-size: $f-header-p-font-size
       line-height: $f-header-p-line-height
       @include media("<desktop")
         font-size: $f-header-mobile-p-font-size
+
+  // iframely embed
+  .iframely-embed
+    margin-top: 3.5em
+    background: $white
+
+
+
 
 // ********************** //
 //    --* Variations *--  //
@@ -130,15 +151,3 @@
 
         a
           color: $white
-
-  // iframely embed
-  .iframely-embed
-    margin-top: 4.5em
-    background: $white
-
-  // justified overrides
-  .header.fragment h1.header.justified
-    margin-bottom: 0em
-
-    &+ div
-      margin-top: -25px
