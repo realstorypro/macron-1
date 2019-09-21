@@ -62,7 +62,7 @@ module Admin
       )
 
       add_to_actions(
-        text: "Focus",
+        text: "Writer Mode",
         class: "grey enhanced",
         id: "focus-mode",
         url: send(preview_path, @entry.category.slug, @entry.slug),

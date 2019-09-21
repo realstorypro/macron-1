@@ -32,7 +32,7 @@ class Focus
     $('#help-button').toggle()
     $('#delete-button').toggle()
     $('#edit-button').toggle()
-    $('#focus-mode').toggleText('Focus','Exit Focus Mode')
+    $('#focus-mode').toggleText('Writer Mode','Exit Writer Mode')
 
   setup: ->
     utils.log 'setup', 'setup()', 'focus'
