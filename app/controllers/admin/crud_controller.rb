@@ -30,17 +30,6 @@ module Admin
 
     def show
       super
-      unless current_user.help
-        add_to_actions(
-          text: "Help",
-          class: "black",
-          icon: "question circle",
-          id: "help-button",
-          url: enable_help_admin_user_path(current_user.id),
-          permission: policy(current_user).enable_help?,
-          data: { widget: "clicker", action: "click" }
-        )
-      end
       add_to_actions(
         text: "Delete",
         class: "negative enhanced",
@@ -65,20 +54,20 @@ module Admin
       )
 
       add_to_actions(
-          text: "Preview",
-          class: "blue enhanced",
-          url: send(preview_path, @entry.category.slug, @entry.slug),
-          permission: policy(@entry).edit?,
-          data: {widget: "previewer", action: "preview"}
+        text: "Preview",
+        class: "blue enhanced",
+        url: send(preview_path, @entry.category.slug, @entry.slug),
+        permission: policy(@entry).edit?,
+        data: { widget: "previewer", action: "preview" }
       )
 
       add_to_actions(
-          text: "Focus",
-          class: "grey enhanced",
-          id: 'focus-mode',
-          url: send(preview_path, @entry.category.slug, @entry.slug),
-          permission: policy(@entry).edit?,
-          data: {widget: "focus", action: "focus"}
+        text: "Focus",
+        class: "grey enhanced",
+        id: "focus-mode",
+        url: send(preview_path, @entry.category.slug, @entry.slug),
+        permission: policy(@entry).edit?,
+        data: { widget: "focus", action: "focus" }
       )
 
       semantic_breadcrumb @entry.name.truncate(30), "#"

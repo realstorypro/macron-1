@@ -9,12 +9,16 @@ module Admin
     def rows
       @header_locations = []
       @number_of_fields = 0
-      options[:fields].each_with_index do |field , index|
-        @header_locations << index if field_type(field) == 'header'
+      options[:fields].each_with_index do |field, index|
+        @header_locations << index if field_type(field) == "header"
         @number_of_fields+=1
       end
 
-      render
+      if @header_locations.count > 0
+        render "tabbed_details"
+      else
+        render "simple_details"
+      end
     end
 
     def row(field)
