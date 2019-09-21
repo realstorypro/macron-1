@@ -24,8 +24,8 @@ class Previewer
     $(".ui.preview.modal")
       .modal
         onShow: ->
-          $(".ui.preview.modal iframe").attr('src', context)
-          $(".ui.preview.modal iframe").attr('height', $(window).height() - 80)
+          $(".ui.preview.modal iframe").attr('src', context + "?preview=#{Date.now()}")
+          $(".ui.preview.modal iframe").attr('height', $(window).height() - 100)
         onHide: ->
           $(".ui.preview.modal iframe").attr('src', '')
       .modal('show')
