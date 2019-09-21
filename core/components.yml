@@ -5,10 +5,12 @@ components:
 
   dashboard:
     path: 'dashboard'
+    focusable: false
     enabled: true
 
   support:
     path: 'support'
+    focusable: false
     enabled: true
 
   elements:
@@ -19,40 +21,48 @@ components:
   members:
     klass: 'User'
     path: 'members'
+    focusable: false
     enabled: true
 
   users:
     klass: 'User'
     path: 'users'
+    focusable: false
     enabled: true
 
   profiles:
     klass: 'Profile'
     path: 'profile'
+    focusable: false
     enabled: true
 
   comments:
     klass: 'Comment'
     path: 'comments'
+    focusable: false
     enabled: true
 
   advertisements:
     klass: 'Advertisement'
     path: 'advertisements'
+    focusable: false
     enabled: true
 
   tags:
     klass: 'Tag'
     path: 'tags'
+    focusable: false
     enabled: true
 
   categories:
     klass: 'Category'
     path: 'categories'
+    focusable: false
     enabled: true
 
   reports:
     path: 'admin/reports'
+    focusable: false
     enabled: true
 
   dummy:
