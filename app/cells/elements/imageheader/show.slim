@@ -4,7 +4,7 @@
     = grid 'centered'
       = row
         = column computer: 14, tablet: 16, mobile: 16
-          = h1
+          = h1 class: "#{model.alignment} aligned"
             = model.title
           .summary
             = simple_format(model.summary)

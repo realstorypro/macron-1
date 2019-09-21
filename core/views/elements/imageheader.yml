@@ -12,6 +12,14 @@ views:
       summary:
         label: 'Summary'
         type: 'text'
+      alignment:
+        label: 'Title Alignment'
+        type: 'fixed_dropdown'
+        options:
+          - 'left'
+          - 'centered'
+          - 'right'
+          - 'justified'
       landscape_image:
         label: 'Landscape Image'
         type: 'image'

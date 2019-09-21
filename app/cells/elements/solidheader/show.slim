@@ -2,7 +2,7 @@
   = container
     = grid 'centered'
       = column computer: 14, tablet: 16, mobile: 16
-        = h1
+        = h1 class: "#{model.alignment} aligned"
           = model.title
         - unless model.summary.blank?
           .summary
