@@ -100,13 +100,14 @@ Rails.application.routes.draw do
       get "disable_advanced", on: :member
     end
 
-    resources :pages, component: "pages", controller: "crud"
-    resources :articles, component: "articles", controller: "crud"
-    resources :events, component: "events", controller: "crud"
-    resources :products, component: "products", controller: "crud"
-    resources :discussions, component: "discussions", controller: "crud"
-    resources :videos, component: "videos", controller: "crud"
-    resources :podcasts, component: "podcasts", controller: "crud"
+    resources :pages, component: "pages", controller: "entry_crud"
+    resources :articles, component: "articles", controller: "entry_crud"
+    resources :events, component: "events", controller: "entry_crud"
+    resources :products, component: "products", controller: "entry_crud"
+    resources :discussions, component: "discussions", controller: "entry_crud"
+    resources :videos, component: "videos", controller: "entry_crud"
+    resources :podcasts, component: "podcasts", controller: "entry_crud"
+    
     resources :advertisements, component: "advertisements", controller: "crud"
     resources :tags, component: "tags", controller: "crud"
     resources :categories, component: "categories", controller: "crud"

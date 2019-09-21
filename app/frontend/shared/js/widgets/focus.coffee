@@ -35,16 +35,13 @@ class Focus
 
     # Hiding Extra Buttons
     $('#help-button').toggle()
+    console.log $('#help-button')
     $('#delete-button').toggle()
     $('#edit-button').toggle()
 
     # Showing the Preview Buttons
     $('#desktop-browser-preview').toggleClass('hidden')
     $('#mobile-browser-preview').toggleClass('hidden')
-
-    # Toggling dynamic class to avoid focus mode being lost
-    # once the page refreshes
-    $('#header').toggleClass('dynamic')
 
     $('#focus-mode').toggleText('Writer Mode','Exit Writer Mode')
 
