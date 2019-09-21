@@ -18,6 +18,7 @@ import Daterange from './widgets/daterange'
 import Clicker from './widgets/clicker'
 import Sorter from './widgets/sorter'
 import Multiselect from './widgets/multiselect'
+import Previewer from './widgets/previewer'
 import Richtext from './widgets/richtext'
 import Navigation from './widgets/navigation'
 import ImagePreloader from './widgets/image_preloader'
@@ -52,6 +53,7 @@ daterange = new Daterange
 clicker = new Clicker
 sorter = new Sorter
 multiselect = new Multiselect
+previewer = new Previewer
 richtext = new Richtext
 navigation = new Navigation
 image_preloader = new ImagePreloader
@@ -89,6 +91,7 @@ class App
     clicker.setup()
     sorter.setup()
     multiselect.setup()
+    previewer.setup()
     richtext.setup()
     image_preloader.setup()
     navigation.setup()
@@ -106,6 +109,7 @@ class App
     clicker.teardown()
     sorter.teardown()
     multiselect.teardown()
+    previewer.teardown()
     richtext.teardown()
     image_preloader.teardown()
     navigation.teardown()

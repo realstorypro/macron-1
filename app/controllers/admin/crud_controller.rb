@@ -60,6 +60,15 @@ module Admin
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
       )
+
+      add_to_actions(
+          text: "Preview",
+          class: "blue enhanced",
+          url: send(preview_path, @entry.category.slug, @entry.slug),
+          permission: policy(@entry).edit?,
+          data: {widget: "previewer", action: "preview"}
+      )
+
       semantic_breadcrumb @entry.name.truncate(30), "#"
     end
 

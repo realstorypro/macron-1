@@ -40,10 +40,10 @@ class Clicker
         console.log "call error", jqXHR, textStatus
 
   setup: ->
-    utils.log 'setup', 'setup()', 'help'
+    utils.log 'setup', 'setup()', 'clicker'
 
   teardown: ->
-    utils.log 'teardown', 'teardown()', 'help'
+    utils.log 'teardown', 'teardown()', 'clicker'
 
 
 export { Clicker as default }
