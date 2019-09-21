@@ -3,10 +3,6 @@
 module Admin
   class DetailsCell < AdminBaseCell
     def show
-      rows
-    end
-
-    def rows
       @header_locations = []
       @number_of_fields = 0
       options[:fields].each_with_index do |field, index|
@@ -15,10 +11,18 @@ module Admin
       end
 
       if @header_locations.count > 0
-        render "tabbed_details"
+        tabbed_details
       else
-        render "simple_details"
+        simple_details
       end
+    end
+
+    def tabbed_details
+      render "tabbed_details"
+    end
+
+    def simple_details
+      render "simple_details"
     end
 
     def row(field)
