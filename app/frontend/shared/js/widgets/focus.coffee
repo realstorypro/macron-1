@@ -26,14 +26,26 @@ class Focus
 
 
   focus: (options, href, context) ->
+    # Hiding Sidebar
     $('.side.nav.fragment').toggle('display')
+
+    # Hiding Breadcrumb and Details
     $('#admin-details').toggle('display')
     $('.breadcrumb').toggle()
+
+    # Hiding Extra Buttons
     $('#help-button').toggle()
     $('#delete-button').toggle()
     $('#edit-button').toggle()
+
+    # Showing the Preview Buttons
     $('#desktop-browser-preview').toggleClass('hidden')
     $('#mobile-browser-preview').toggleClass('hidden')
+
+    # Toggling dynamic class to avoid focus mode being lost
+    # once the page refreshes
+    $('#header').toggleClass('dynamic')
+
     $('#focus-mode').toggleText('Writer Mode','Exit Writer Mode')
 
   setup: ->

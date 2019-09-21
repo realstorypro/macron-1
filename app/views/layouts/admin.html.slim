@@ -27,7 +27,7 @@ html
               = grid
                 = row
                   = column size: 16
-                    = segment class: 'basic no padding', id: 'header', dynamic: :on
+                    = segment class: "basic no padding #{'dynamic' unless controller.controller_name == 'crud' && controller.action_name == 'show'}", id: 'header'
                       = fragment 'action bar just bordered'
                         = left
                           == BreadcrumbsCell.(@breadcrumbs) if @breadcrumbs.present?
