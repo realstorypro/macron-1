@@ -34,6 +34,7 @@ module Admin
         text: "Delete",
         class: "negative enhanced",
         icon: "eraser",
+        id: "delete-button",
         url: send(delete_path("admin"), @entry),
         permission: policy(@entry).destroy?,
         data: {
@@ -46,6 +47,7 @@ module Admin
         text: "Edit",
         class: "primary enhanced",
         icon: "edit",
+        id: "edit-button",
         url: send(edit_path("admin"), @entry),
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
