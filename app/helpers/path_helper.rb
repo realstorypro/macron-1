@@ -51,6 +51,11 @@ module PathHelper
     "#{in_namespace(namespace)}#{path_getter(component).singularize}_path"
   end
 
+  # used for the previews in the curd
+  def preview_path(component = params[:component])
+    "#{path_getter(component).singularize}_details_path"
+  end
+
   private
     def path_getter(component)
       settings "components.#{component}.path", fatal_exception: true

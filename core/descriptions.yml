@@ -15,10 +15,6 @@ components:
     name: 'Elements'
     description: 'Provides info about Elements'
 
-  elements_heading:
-    name: 'Heading'
-    description: 'Allows you to create a heading'
-
   site_settings_general:
     name: 'General Settings'
     description: 'Provides general settings capabilities'

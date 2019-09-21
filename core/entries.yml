@@ -1,0 +1,59 @@
+components:
+  pages:
+    klass: 'Page'
+    path: 'pages'
+    focusable: false
+    enabled: true
+    areas:
+      - header
+      - content
+
+  articles:
+    klass: 'Article'
+    path: 'articles'
+    focusable: true
+    enabled: true
+    areas:
+      - header
+      - content
+      - reference
+
+  events:
+    klass: 'Event'
+    path: 'events'
+    focusable: true
+    enabled: true
+
+  products:
+    klass: 'Product'
+    path: 'products'
+    focusable: false
+    enabled: true
+
+  store:
+    klass: 'Product'
+    path: 'store'
+    focusable: true
+    enabled: true
+
+  discussions:
+    klass: 'Discussion'
+    path: 'discussions'
+    focusable: true
+    enabled: true
+    areas:
+      - header
+      - content
+      - reference
+
+  videos:
+    klass: 'Video'
+    path: 'videos'
+    focusable: true
+    enabled: true
+
+  podcasts:
+    klass: 'Podcast'
+    path: 'podcasts'
+    focusable: true
+    enabled: true

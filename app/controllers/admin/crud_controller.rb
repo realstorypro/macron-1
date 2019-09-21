@@ -29,20 +29,12 @@ module Admin
     end
 
     def show
-      unless current_user.help
-        add_to_actions(
-          text: "Help",
-          class: "black",
-          icon: "question circle",
-          url: enable_help_admin_user_path(current_user.id),
-          permission: policy(current_user).enable_help?,
-          data: { widget: "clicker", action: "click" }
-        )
-      end
+      super
       add_to_actions(
         text: "Delete",
         class: "negative enhanced",
         icon: "eraser",
+        id: "delete-button",
         url: send(delete_path("admin"), @entry),
         permission: policy(@entry).destroy?,
         data: {
@@ -55,11 +47,43 @@ module Admin
         text: "Edit",
         class: "primary enhanced",
         icon: "edit",
+        id: "edit-button",
         url: send(edit_path("admin"), @entry),
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
       )
+
+      if s("components.#{params[:component]}.focusable")
+        add_to_actions(
+            text: "Desktop Preview",
+            class: "purple enhanced hidden",
+            id: "desktop-browser-preview",
+            url: send(preview_path, @entry.category.slug, @entry.slug),
+            permission: policy(@entry).edit?,
+            data: { widget: "previewer", action: "desktop" }
+        )
+
+        add_to_actions(
+            text: "Mobile Preview",
+            class: "blue enhanced hidden",
+            id: "mobile-browser-preview",
+            url: send(preview_path, @entry.category.slug, @entry.slug),
+            permission: policy(@entry).edit?,
+            data: { widget: "previewer", action: "mobile" }
+        )
+
+        add_to_actions(
+            text: "Writer Mode",
+            class: "grey enhanced",
+            id: "focus-mode",
+            url: send(preview_path, @entry.category.slug, @entry.slug),
+            permission: policy(@entry).edit?,
+            data: { widget: "focus", action: "focus" }
+        )
+      end
+
       semantic_breadcrumb @entry.name.truncate(30), "#"
+
     end
 
     def set_breadcrumb

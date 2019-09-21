@@ -1,0 +1,9 @@
+views:
+  elements_<~~ lowercase_name ~~>:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
+    new:
+      default:
+        label: 'Text'
+        type: 'string'

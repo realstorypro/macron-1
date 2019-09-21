@@ -1,81 +1,43 @@
 .rich.text.widget
-  figure
-    margin: 2.5em 0
-    max-width: 100%
-
-    img
-      max-width: 100%
+  @include media("<tablet")
+    h1
+      font-size: 2.5rem
+    h2
+      font-size: 2.3rem
+    h3
+      font-size: 2.0rem
 
   p
     font-size: 1.15em
     line-height: 1.8em
 
-  blockquote
-    margin-top: 2.5em
-    margin-bottom: 2.5em
-    padding-left: 0.9em
-    margin-left: 0.3em
-    border-left: 6px solid #ccc
-    font-size: 1.1em
-    line-height: 1.8em
-
-  h2, h3, h4
-    text-transform: uppercase
-
-  h2
-    margin-top: 1.0em
-    margin-bottom: 1.0em
-
-  h4
-    font-size: 1.3em
-
   ul, ol
-    padding-left: 1.2em
+    padding-left: 0.5em
 
   li
     padding-left: 0.1em
     font-size: 1.15em
     line-height: 1.8em
 
-  hr
-    margin: 1.5em 0
-    border-top: 1px solid #ccc
-    border-bottom: 1px solid #ccc
+  //.embed
+  //  margin-bottom: 3.0em
+  //  margin-top: 2.5em
 
-  &.narrow
-    h2
-      max-width: 85%
-      @include media("<desktop")
-        max-width: 100%
+  // image enhancements
+  .ui.image
+    max-width: 99%
+    margin-bottom: 1.5em
 
-    p
-      max-width: 75%
-      @include media("<desktop")
-        max-width: 100%
+    &.right
+      margin-left: auto
 
-    li
-      max-width: 75%
-      @include media("<desktop")
-        max-width: 100%
+  // quotes
+  p.author
+    font-weight: bold
+    color: rgba(0,0,0,0.75)
+    border-left: 5px solid rgba(0,0,0,0.75)
+    padding-left: 15px
+    margin-bottom: 0
 
-    hr
-      max-width: 75%
-      @include media("<desktop")
-        max-width: 100%
-
-    figure
-      max-width: 100%
-      margin: 0
-
-      img
-        max-width: 80%
-        @include media("<desktop")
-          max-width: 100%
-
-  .embed
-    margin-bottom: 3.0em
-    margin-top: 2.5em
-
-  // center aligning
-  .align-center
-    text-align: center
+  .bottom.quote
+    margin-top: 0.85em

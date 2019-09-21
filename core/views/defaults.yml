@@ -12,7 +12,7 @@ views:
         type: 'string'
     list:
       name:
-        label: 'Short Title'
+        label: 'Title'
         type: 'string'
       category:
         label: 'Category'

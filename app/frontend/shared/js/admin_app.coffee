@@ -11,12 +11,15 @@ import Drawer from './widgets/drawer'
 import Crud from './widgets/crud'
 import Checkbox from './widgets/checkbox'
 import Dropdown from './widgets/dropdown'
+import Tabs from './widgets/tabs'
 import Datepicker from './widgets/datepicker'
 import Timepicker from './widgets/timepicker'
 import Daterange from './widgets/daterange'
 import Clicker from './widgets/clicker'
 import Sorter from './widgets/sorter'
 import Multiselect from './widgets/multiselect'
+import Previewer from './widgets/previewer'
+import Focus from './widgets/focus'
 import Richtext from './widgets/richtext'
 import Navigation from './widgets/navigation'
 import ImagePreloader from './widgets/image_preloader'
@@ -44,12 +47,15 @@ drawer = new Drawer
 crud = new Crud
 checkbox = new Checkbox
 dropdown = new Dropdown
+tabs = new Tabs
 datepicker = new Datepicker
 timepicker = new Timepicker
 daterange = new Daterange
 clicker = new Clicker
 sorter = new Sorter
 multiselect = new Multiselect
+previewer = new Previewer
+focus = new Focus
 richtext = new Richtext
 navigation = new Navigation
 image_preloader = new ImagePreloader
@@ -80,12 +86,15 @@ class App
     notifications.setup()
     checkbox.setup()
     dropdown.setup()
+    tabs.setup()
     datepicker.setup()
     timepicker.setup()
     daterange.setup()
     clicker.setup()
     sorter.setup()
     multiselect.setup()
+    previewer.setup()
+    focus.setup()
     richtext.setup()
     image_preloader.setup()
     navigation.setup()
@@ -96,12 +105,15 @@ class App
     notifications.teardown()
     checkbox.teardown()
     dropdown.teardown()
+    tabs.teardown()
     datepicker.teardown()
     timepicker.teardown()
     daterange.teardown()
     clicker.teardown()
     sorter.teardown()
     multiselect.teardown()
+    previewer.teardown()
+    focus.teardown()
     richtext.teardown()
     image_preloader.teardown()
     navigation.teardown()

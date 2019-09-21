@@ -9,7 +9,7 @@ class MembersController < DisplayController
 
   def index
     # we're not offering an index view
-    # we want people to go to members if they try to hit it
+    # we want people to go to homepage if they try to hit it
     redirect_to root_path
   end
 

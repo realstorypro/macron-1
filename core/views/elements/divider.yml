@@ -1,0 +1,17 @@
+views:
+  elements_divider:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
+    new:
+      header:
+        label: 'Text'
+        type: 'string'
+      icon:
+        label: 'Icon'
+        type: 'fixed_dropdown'
+        options:
+          - 'angle down'
+          - 'angle double down'
+          - 'flag checkered'
+          - 'heart'

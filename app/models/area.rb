@@ -5,8 +5,6 @@ class Area < ApplicationRecord
 
   has_many :elements, -> { order(:position) }, as: :elementable, dependent: :destroy
 
-  belongs_to :entry, optional: true
-
   def self.policy_class
     MetaPolicy
   end

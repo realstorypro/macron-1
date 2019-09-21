@@ -107,6 +107,7 @@ Rails.application.routes.draw do
     resources :discussions, component: "discussions", controller: "crud"
     resources :videos, component: "videos", controller: "crud"
     resources :podcasts, component: "podcasts", controller: "crud"
+    
     resources :advertisements, component: "advertisements", controller: "crud"
     resources :tags, component: "tags", controller: "crud"
     resources :categories, component: "categories", controller: "crud"

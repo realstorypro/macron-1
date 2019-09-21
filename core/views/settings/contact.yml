@@ -4,9 +4,9 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
-      contact_header:
+      configuration_header:
         type: 'header'
-        text: 'Contact Info'
+        text: 'Configuration'
       phone:
         label: 'Phone'
         type: 'string'
@@ -33,17 +33,3 @@ views:
         label: 'Address 3'
         type: 'string'
         default: 'Tucson, AZ 85701'
-
-      social_header:
-        type: 'header'
-        text: 'Social Media'
-      twitter:
-        label: 'Twitter Account'
-        type: 'string'
-        hint: 'include the @'
-        default: '@the_idealogic'
-      facebook:
-        label: 'Facebook Page'
-        type: 'string'
-        hint: 'Full URL for the Facebook Page. Must start with https://'
-        default: "https://www.facebook.com/theidealogic"

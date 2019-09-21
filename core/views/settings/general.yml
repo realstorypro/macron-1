@@ -4,9 +4,9 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
-      general_header:
+      configuration_header:
         type: 'header'
-        text: 'General Settings'
+        text: 'Configuration'
       name:
         label: 'Name'
         type: 'string'

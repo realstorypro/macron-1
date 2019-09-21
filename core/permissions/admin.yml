@@ -78,3 +78,17 @@ auth:
         all: 
       elements:
         all: 
+      :elements_divider:
+        all: 
+      :elements_richtext:
+        all: 
+      :elements_image:
+        all: 
+      :elements_blockquote:
+        all: 
+      :elements_reference:
+        all: 
+      :elements_solidheader:
+        all: 
+      :elements_imageheader:
+        all: 

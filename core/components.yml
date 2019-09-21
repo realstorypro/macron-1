@@ -5,10 +5,12 @@ components:
 
   dashboard:
     path: 'dashboard'
+    focusable: false
     enabled: true
 
   support:
     path: 'support'
+    focusable: false
     enabled: true
 
   elements:
@@ -16,175 +18,51 @@ components:
     path: 'elements'
     enabled: true
 
-  elements_heading:
-    klass: 'Elements::Heading'
-    path: 'elements'
-    enabled: true
-    restricted:
-      areas:
-        - content
-
-  site_settings:
-    klass: 'Setting'
-    path: 'settings'
-    enabled: true
-
-  site_settings_general:
-    klass: 'SiteSettings::General'
-    path: 'admin_settings_general'
-    enabled: true
-
-  site_settings_contact:
-    klass: 'SiteSettings::Contact'
-    path: 'admin_settings_contact'
-    enabled: true
-
-  site_settings_components:
-    path: 'admin_settings_components'
-    enabled: true
-
-  site_settings_integration:
-    klass: 'SiteSettings::Integrations'
-    path: 'admin_settings_integration'
-    enabled: true
-
-  site_settings_theme:
-    klass: 'SiteSettings::Theme'
-    path: 'admin_settings_theme'
-    enabled: true
-
-  site_settings_theme_homepage:
-    klass: 'SiteSettings::Theme::Homepage'
-    path: 'admin_settings_theme_homepage'
-    enabled: true
-
-  site_settings_theme_discussion:
-    klass: 'SiteSettings::Theme::Discussion'
-    path: 'admin_settings_theme_discussion'
-    enabled: true
-
-  site_settings_theme_global:
-    klass: 'SiteSettings::Theme::Global'
-    path: 'admin_settings_theme_global'
-    enabled: true
-
-  site_settings_theme_header:
-    klass: 'SiteSettings::Theme::Header'
-    path: 'admin_settings_theme_header'
-    enabled: true
-
-  site_settings_theme_footer:
-    klass: 'SiteSettings::Theme::Footer'
-    path: 'admin_settings_theme_footer'
-    enabled: true
-
-  site_settings_theme_podcast:
-    klass: 'SiteSettings::Theme::Podcast'
-    path: 'admin_settings_theme_podcast'
-    enabled: true
-
-  site_settings_theme_article:
-    klass: 'SiteSettings::Theme::Article'
-    path: 'admin_settings_theme_article'
-    enabled: true
-
-  site_settings_theme_video:
-    klass: 'SiteSettings::Theme::Video'
-    path: 'admin_settings_theme_video'
-    enabled: true
-
-  site_settings_theme_authentication:
-    klass: 'SiteSettings::Theme::Authentication'
-    path: 'admin_settings_theme_authentication'
-    enabled: true
-
-  site_settings_theme_branding:
-    klass: 'SiteSettings::Theme::Branding'
-    path: 'admin_settings_theme_branding'
-    enabled: true
-
-
-
   members:
     klass: 'User'
     path: 'members'
+    focusable: false
     enabled: true
 
   users:
     klass: 'User'
     path: 'users'
-    enabled: true
-
-  pages:
-    klass: 'Page'
-    path: 'pages'
-    enabled: true
-    areas:
-    - header
-    - content
-
-  articles:
-    klass: 'Article'
-    path: 'articles'
-    enabled: true
-
-  events:
-    klass: 'Event'
-    path: 'events'
-    enabled: true
-
-  products:
-    klass: 'Product'
-    path: 'products'
-    enabled: true
-
-  store:
-    klass: 'Product'
-    path: 'store'
-    enabled: true
-
-  discussions:
-    klass: 'Discussion'
-    path: 'discussions'
-    enabled: true
-
-  videos:
-    klass: 'Video'
-    path: 'videos'
-    enabled: true
-
-  podcasts:
-    klass: 'Podcast'
-    path: 'podcasts'
+    focusable: false
     enabled: true
 
   profiles:
     klass: 'Profile'
     path: 'profile'
+    focusable: false
     enabled: true
 
   comments:
     klass: 'Comment'
     path: 'comments'
+    focusable: false
     enabled: true
 
   advertisements:
     klass: 'Advertisement'
     path: 'advertisements'
+    focusable: false
     enabled: true
 
   tags:
     klass: 'Tag'
     path: 'tags'
+    focusable: false
     enabled: true
 
   categories:
     klass: 'Category'
     path: 'categories'
+    focusable: false
     enabled: true
 
   reports:
     path: 'admin/reports'
+    focusable: false
     enabled: true
 
   dummy:

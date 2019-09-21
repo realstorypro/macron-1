@@ -1,22 +1,35 @@
-= segment class: 'basic no padding', id: 'details', dynamic: :on
+= segment class: 'basic no padding'
   = grid "#{'divided' if current_user.help}"
-    = row
+    = row id: 'admin-details', dynamic: :on
       = column size: (current_user.help ? 10 : 16)
         == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
       - if current_user.help
         = column size: 6
           = render 'partials/side_help'
+
     = row
-      = column size: 16
+      = column size: 16, id: 'content-pane', dynamic: :on
+
+        br
+        br
+
         = widget name: 'page builder'
           - if component_areas&.include?('header')
-            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'header', controller_namespace: self.controller.class.parent.to_s)
+            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'header', title: 'Page Header', controller_namespace: self.controller.class.parent.to_s)
           - if component_areas&.include?('header')
             = segment 'center aligned basic empty element'
-              = link_to 'Add Element', pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'header'), class: 'ui button green', data: { widget: "crud", action: "new" }
+              = link_to "Add Header Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'header', title: 'Full Screen Header'), class: 'ui button blue', data: { widget: "crud", action: "new" }
+            br
 
           - if component_areas&.include?('content')
-            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'content', controller_namespace: self.controller.class.parent.to_s)
+            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'content', title: 'Page Body',  controller_namespace: self.controller.class.parent.to_s)
           - if component_areas&.include?('content')
             = segment 'center aligned basic empty element'
-              = link_to 'Add Element', pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'content'), class: 'ui button green', data: { widget: "crud", action: "new" }
+              = link_to "Add Content Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'content', title: 'Page Body'), class: 'ui button blue', data: { widget: "crud", action: "new" }
+            br
+
+          - if component_areas&.include?('reference')
+            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'reference', title: 'References',  controller_namespace: self.controller.class.parent.to_s)
+          - if component_areas&.include?('reference')
+            = segment 'center aligned basic empty element'
+              = link_to "Add Reference Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'reference', title: 'References'), class: 'ui button blue', data: {widget: "crud", action: "new"}

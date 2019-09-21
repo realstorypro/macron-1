@@ -10,3 +10,12 @@ views:
       subheader:
         label: 'Sub-header'
         type: 'string'
+      size:
+        label: 'Size'
+        type: 'fixed_dropdown'
+        options:
+          - 'H1'
+          - 'H2'
+          - 'H3'
+          - 'H4'
+          - 'H5'

@@ -21,6 +21,10 @@ class Clicker
 
 
   click: (options, href, context) ->
+
+    if(typeof options.confirmDialog != 'undefined') && !(confirm(options.confirmDialog))
+      return false
+
     $(context).addClass('loading')
 
     $.ajax
@@ -36,10 +40,10 @@ class Clicker
         console.log "call error", jqXHR, textStatus
 
   setup: ->
-    utils.log 'setup', 'setup()', 'help'
+    utils.log 'setup', 'setup()', 'clicker'
 
   teardown: ->
-    utils.log 'teardown', 'teardown()', 'help'
+    utils.log 'teardown', 'teardown()', 'clicker'
 
 
 export { Clicker as default }

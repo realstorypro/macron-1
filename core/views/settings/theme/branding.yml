@@ -4,6 +4,9 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      configuration_header:
+        type: 'header'
+        text: 'Configuration'
       logo:
         label: 'Logo'
         type: 'image'

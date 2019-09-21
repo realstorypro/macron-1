@@ -4,6 +4,9 @@ views:
       set_defaults: false
       rejected_field_names: 'name slug published_date'
     new:
+      configuration_header:
+        type: 'header'
+        text: 'Configuration'
       name:
         label: 'Name'
         type: 'string'
@@ -18,6 +21,9 @@ views:
         label: 'Name'
         type: 'string'
     show:
+      configuration_header:
+        type: 'header'
+        text: 'Configuration'
       name:
         label: 'Name'
         type: 'string'

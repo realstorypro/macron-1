@@ -13,6 +13,11 @@ class MetaController < ApplicationController
     authorize @entries
   end
 
+  def show
+    # needed for the the CRUD widget to re-load the page on edit
+    response_status :success
+  end
+
   def new
     @entry = entry_class.new
     @colors = Color.all
@@ -41,7 +46,7 @@ class MetaController < ApplicationController
     if @entry.update(entry_params)
       flash[:success] = "#{component_name} was successfully updated."
       response_status :success
-      redirect_back(fallback_location: admin_root_path)
+      redirect_back(fallback_location: admin_root_path, turbolinks: false)
     else
       response_status :error
       render :edit, layout: false

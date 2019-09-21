@@ -7,6 +7,7 @@ module Admin::SiteSettings::Theme
     before_action :set_breadcrumb
 
     def show
+      super
       add_to_actions(
         text: "Edit",
         class: "primary",

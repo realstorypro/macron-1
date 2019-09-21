@@ -32,9 +32,9 @@ class Richtext
       toolbarFixed: true
       pastePlainText: true
       source: true
-      buttons: ['html','format', 'bold', 'italic', 'link', 'ol','ul','line']
-      formatting: ['p', 'blockquote', 'h2', 'h3', 'h4']
-      plugins: ['fullscreen', 'uploadcare', 'video', 'widget']
+      buttons: ['bold', 'italic', 'link', 'ol','ul']
+      formatting: ['p']
+      plugins: ['fullscreen']
       minHeight: '300px'
       uploadcare:
         buttonIconEnabled: true,

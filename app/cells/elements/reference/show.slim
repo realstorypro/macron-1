@@ -1,0 +1,16 @@
+- if model.source
+  = item
+    = content
+        - if model.author
+            = "#{model.author}. "
+        - if model.date
+            = "(#{model.date}). "
+        - if model.title
+            i= "#{model.title}. "
+        - unless model.link.blank?
+          = "#{link_to model.source, model.link, target: "_blank"}."
+        - else
+          - if model.source
+              = "#{model.source}." if model.source
+- else
+  = h6 text: 'Reference without source are not shown', class: 'horizontal divider'

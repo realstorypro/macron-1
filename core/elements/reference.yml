@@ -1,0 +1,11 @@
+components:
+  elements_reference:
+    name: 'Reference'
+    description: 'Provide a reference'
+    icon: 'graduation cap'
+    klass: 'Elements::Reference'
+    path: 'elements'
+    enabled: true
+    restricted:
+      areas:
+        - reference

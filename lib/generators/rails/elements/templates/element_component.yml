@@ -1,0 +1,8 @@
+components:
+  elements_<~~ lowercase_name ~~>:
+    name: '<~~ class_name ~~>'
+    description: '<~~ element_description ~~>'
+    icon: '<~~ element_icon ~~>'
+    klass: 'Elements::<~~ class_name ~~>'
+    path: 'elements'
+    enabled: true

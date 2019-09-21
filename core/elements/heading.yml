@@ -1,0 +1,11 @@
+components:
+  elements_heading:
+    name: 'Heading'
+    description: 'Inserts a header element'
+    icon: 'heading'
+    klass: 'Elements::Heading'
+    path: 'elements'
+    restricted:
+      areas:
+        - content
+    enabled: true

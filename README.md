@@ -1,80 +1,54 @@
 MACRON-1
 --------
 [![codecov](https://codecov.io/gh/leouofa/aquarius/branch/master/graph/badge.svg?token=SpfdxrArOG)](https://codecov.io/gh/leouofa/aquarius)
-![macron1](https://classicanimemuseum.files.wordpress.com/2018/03/goshogun_hd.jpg) 
 
-# Running Localy
+# Local Setup
+
+### Setting Up Database
+You can import the database from an existing Heroku application with __pg:pull__ command.  
+
 ```bash
-foreman start --procfile=Procfile.dev
-```
-
-## Preparation
-```bash
-
-# pull the database (use whichever app and database you want to pull the data from)
-heroku pg:pull postgresql-symmetrical-54909 aquarius_development --app demo-idealogic-io-305
+heroku pg:pull heroku_db_name aquarius_development --app heroku_app_name
 foreman run rake components:setup
 ```
 
-## Enviornment Variables
-```
-FROM_EMAIL=noreply@idealogic.io
-UPLOADCARE_PRIVATE_KEY
-UPLOADCARE_PUBLIC_KEY
-URL
+### Setting Environment Variables
+The environmental variables are stored in a .env file. They can be pulled down from an existing Heroku app.
+
+```bash
+heroku config -s -a heroku_app_name > .env
 ```
 
-### Mail (Development)
-We're utilizing the mailcatcher to catch the mail send in development environment.
+### Setting up Mailcatcher
+We're using the mailcatcher to catch the mail send in development environment.
 
-If you don't have the gem already installed you do it by running the following
-```
+Install the gem by running
+```bash
   gem install mailcatcher
 ```
   
-You can then start the mail catcher via
-```
+Start the mail catcher server with
+```bash
   mailcatcher
 ```
+You can read sent mail by at  __http://127.0.0.1:1080/__
 
-You can read the sent mail by pointing the  web browser to  **http://127.0.0.1:1080/**
-
-# Deployment
-1. Remove existing packs
+### Running It
 ```bash
-rm -rf public/packs
+./bin/webpack-dev-server
+foreman run sidekiq -C config/sidekiq.yml --verbose
+foreman run rails s
 ```
 
-2. Precompile assets locally
-```bash
-foreman run rake assets:precompile
-```
+# Pull Requests
+All changes must come in ways of pull requests and never committed directly to master. 
 
-3. Push to Heroku
+The must be precompiled locally prior to submitting a PR. This can be done by running the following command.
 ```bash
-git push heroku master
-```
-
-# New Deployment
-Add the rake task to Heroku Scheduler and set it to run every 10 minutes:
-```bash
-rake simple_scheduler
+rm -rf public/packs; foreman run rake assets:precompile; git add .; gcam 'precompiled assets'
 ```
 
 # Framework
-
-## Site Settings
-The site settings are stored in __SiteSettings__ and include the __Autoloadable__ module.
-``` ruby
-## Article Settings
-
-module SiteSettings::Theme
-  class Article < Setting
-    include Autoloadable
-  end
-end
-
-```
 
 ## Authentication
 The authentication is driven by the auth.yml file located under _core/auth.yml_ and is structured as follows
@@ -86,6 +60,73 @@ permissions:
     - role:
         - ability
 ```
+
+## Site Settings
+Every implementation of the platform can have its own settings stored in the database. 
+We refer to them as "Site Settings".
+
+### Modules
+The Site Setting modules are configured under __/core/site_settings.yml__
+```yaml
+site_settings_theme_branding:
+    klass: 'SiteSettings::Theme::Branding'
+    path: 'admin_settings_theme_branding'
+    enabled: true
+```
+
+The site settings are stored under __SiteSettings__ namespace and include the __Autoloadable__ module.
+``` ruby
+## Article Settings
+
+module SiteSettings::Theme
+  class Article < Setting
+    include Autoloadable
+  end
+end
+
+```
+
+### Menus
+In order for the modules to be viewable on the backend they must be enabled in the settings under __core/menus/site_settings__
+
+```yaml
+menu:
+  settings:
+    - section:
+      - name: General
+        hint: Set name, description, and url
+        path: admin_settings_general
+        icon: setting
+        enabled: true
+```
+
+## Components
+All components are defined under components.yml
+
+## Areas
+There are 3 areas in the application, which are defined under under __/app/models/areas/__.
+
+- Header
+- Content
+- Footer
+
+
+
+Every component can have those areas enabled. By default none are enabled.
+
+```yml
+  discussions:
+    klass: 'Discussion'
+    path: 'discussions'
+    enabled: true
+    areas:
+      - content
+```
+
+## Elements
+
+- Elements are defined in components.yml (change that )
+- The Menu Elements are also defined in menu/elements.yml (maybe change that)
 
 #### Helpful Documents
 Documentation that may be useful to developers.

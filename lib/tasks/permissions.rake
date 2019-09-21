@@ -5,12 +5,25 @@ namespace :permissions do
   task enable: :environment do
     prompt = TTY::Prompt.new
 
-    # loads in the component file
-    components = YAML.load_file(Rails.root.join("core").join("components.yml"))
-
     # loads the actual components
-    components = components["components"]
-    component_names = components.map { |component| component[0] }
+    components = Settings.components.reject { |component| !component[1].enabled }
+
+    # regular components
+    regular_components = components.reject { |component| component[0].to_s.include?("site_settings") || component[0].to_s.include?("elements") }
+
+    # site settings
+    site_settings = components.select { |component| component[0].to_s.include? "site_settings" }
+
+    # elements
+    elements = components.select { |component| component[0].to_s.include? "elements" }
+
+    component_array = prompt.select("What are you modifying permissions for?") do |menu|
+      menu.choice "Components", { array: regular_components }
+      menu.choice "Elements", { array: elements }
+      menu.choice "Site Settings", { array: site_settings}
+    end
+
+    component_names = component_array[:array].map { |component| component[0] }
 
     # loads in the auth file
     auth = YAML.load_file(Rails.root.join("core").join("auth.yml"))
