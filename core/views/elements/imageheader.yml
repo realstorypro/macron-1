@@ -9,11 +9,19 @@ views:
         type: 'string'
         maxlength: '85'
         hint: 'Limited to 85 characters'
+      title_alignment:
+        label: 'Alignment'
+        type: 'fixed_dropdown'
+        options:
+          - 'left'
+          - 'centered'
+          - 'right'
+          - 'justified'
       summary:
         label: 'Summary'
         type: 'text'
-      alignment:
-        label: 'Title Alignment'
+      summary_alignment:
+        label: 'Alignment'
         type: 'fixed_dropdown'
         options:
           - 'left'

@@ -9,15 +9,14 @@ views:
         type: 'string'
         maxlength: '85'
         hint: 'Limited to 85 characters'
-      alignment:
-        label: 'Title Alignment'
+      title_alignment:
+        label: 'Alignment'
         type: 'fixed_dropdown'
         options:
           - 'left'
           - 'centered'
           - 'right'
           - 'justified'
-        default: 'left'
       url:
         label: 'URL'
         type: 'string'

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
-
 module Elements
-  class SolidheaderCell < BaseElementCell
+  class SolidheaderCell < HeaderCell
   end
 end
