@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Elements
-  class ImageheaderCell < HeaderCell
+  class EmbedCell < BaseElementCell
   end
 end

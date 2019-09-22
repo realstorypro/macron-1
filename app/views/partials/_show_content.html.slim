@@ -10,15 +10,13 @@
                 = divider text: '/'
                 .section = link_to params[:category].capitalize, article_category_path(params[:category])
             = widget 'normal rich text'
-              //TODO remove once the embed widget is setup
-              /= format_content(@entry.body)
-
               // render the content area
               - @entry.areas.select do |area|
                 - if area.type.include?('Content')
                   - area.elements.each do |element|
                     == Elements::ElementCell.(element)
 
+                // render the reference area
               - @entry.areas.select do |area|
                 - if area.type.include?('Reference') && area.elements.count > 0
                   = header class: 'divider horizontal', tag: :h6

@@ -1,0 +1,11 @@
+components:
+  elements_embed:
+    name: 'Embed'
+    description: ' An object that embeds a link into the website.'
+    icon: 'plug'
+    klass: 'Elements::Embed'
+    path: 'elements'
+    restricted:
+      areas:
+        - content
+    enabled: true

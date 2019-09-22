@@ -42,3 +42,13 @@ menu:
       component: elements_imageheader
       icon: camera retro
       enabled: true
+    - name: Embed
+      hint: " An object that embeds a link into the website"
+      component: elements_embed
+      icon: plug
+      enabled: true
+    - name: Embeded Header
+      hint: " A header with an embedded URL."
+      component: elements_embededheader
+      icon: hdd
+      enabled: true

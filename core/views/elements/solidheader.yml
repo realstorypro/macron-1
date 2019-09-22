@@ -1,5 +1,5 @@
 views:
-  elements_imageheader:
+  elements_solidheader:
     config:
       set_defaults: true
       rejected_field_names: ''
@@ -28,7 +28,7 @@ views:
           - 'centered'
           - 'right'
           - 'justified'
-      landscape_image:
-        label: 'Landscape Image'
-        type: 'image'
-        size: ['2560','1456']
+      color:
+        label: 'Background Color'
+        type: 'color'
+        default: 'black'

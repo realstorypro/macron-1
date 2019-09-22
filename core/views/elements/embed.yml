@@ -1,0 +1,10 @@
+views:
+  elements_embed:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
+    new:
+      url:
+        label: 'URL'
+        type: 'string'
+        hint: 'URL to be Embedded'

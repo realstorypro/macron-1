@@ -1,0 +1,22 @@
+= fragment "header fullscreen #{model.color if model.respond_to?(:color)}"
+  == Vue::CoverCell.(nil, image: model.landscape_image)  if model.respond_to?(:landscape_image)
+  = container
+    = grid 'centered'
+      = column computer: 14, tablet: 16, mobile: 16
+
+        // heading and summary
+        = h1 class: "#{model.title_alignment} aligned"
+          = model.title
+        - unless !model.respond_to?(:summary) || model.summary.blank?
+          .summary class="#{model.summary_alignment}"
+            = simple_format(model.summary)
+
+        // the embed logic
+        - if model.respond_to?(:url)
+          - if model.url
+            - if model.embedded == false || model.embedded.blank?
+              = h6 text: 'Embed Is Not Available (For The URL Inserted)', class: 'horizontal divider'
+            - else
+              = model.embedded.html_safe
+          - else
+            = h6 text: 'Embed (No URL Inserted)', class: 'horizontal divider'

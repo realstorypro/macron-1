@@ -92,3 +92,7 @@ auth:
         all: 
       :elements_imageheader:
         all: 
+      :elements_embed:
+        all: 
+      :elements_embededheader:
+        all: 
