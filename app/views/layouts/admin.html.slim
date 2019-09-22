@@ -27,6 +27,8 @@ html
               = grid
                 = row
                   = column size: 16, class: 'focusable'
+                    // disabling the dynamic refresh for the entire page for the crud -> show
+                    // this is enabled manually on a per section basis
                     = segment class: "basic no padding #{'dynamic' unless controller_name == 'crud' && action_name.downcase == 'show'}", id: 'header'
                       = fragment 'action bar just bordered'
                         = left
