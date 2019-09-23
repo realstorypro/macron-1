@@ -41,7 +41,7 @@ class DisplayController < MetaController
       taggings = Tagging.where(tag_id: @entry.tags.map(&:id), taggable_type: %w(Article Video Discussion Podcast Event))
                         .where.not(taggable_id: @entry.id)
       content_ids = taggings.map(&:taggable_id)
-      @related_content = Entry.where(id: content_ids)
+      @related_content = Entry.published.where(id: content_ids)
       @related_content = @related_content.order(Arel.sql("random()")).limit(8)
 
       # look up via a category if no tags are found
