@@ -110,22 +110,10 @@ class PhonesController < ApplicationController
     def country_codes
       country_codes = IsoCountryCodes.for_select.select do |country|
         country[0].include?("United States of America") ||
-          country[0] == "Brazil" ||
-          country[0] == "Canada" ||
-          country[0] == "Spain" ||
-          country[0] == "Portugal" ||
-          country[0] == "India" ||
-          country[0] == "Japan" ||
-          country[0] == "China" ||
-          country[0] == "Israel" ||
-          country[0] == "Russian Federation" ||
-          country[0] == "United Kingdom of Great Britain and Northern Ireland"
+          country[0] == "Brazil"
       end
 
       country_codes.sort_by! { |m| m[0].downcase }
-
-      uk_index = country_codes.index { |country| country[0] == "United Kingdom of Great Britain and Northern Ireland" }
-      country_codes[uk_index][0] = "United Kingdom"
 
       us_index = country_codes.index { |country| country[0] == "United States of America" }
       us_country = country_codes.delete_at(us_index)
