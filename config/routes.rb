@@ -19,6 +19,8 @@ Rails.application.routes.draw do
       }
   )
 
+  get 'users' => Settings.defaults.root_route.to_s
+
   devise_scope :user do
     get "/sign_in" => "users/sessions#new"
     get "/sign_up" => "users/registrations#new"
@@ -26,6 +28,7 @@ Rails.application.routes.draw do
 
   # Phone Controller (Used by 2FA)
   resource :phone, only: %i[edit update]
+  get 'phone', to: "phones#edit"
   get 'phone/verify', to: 'phones#verify'
   put 'phone/verify_otp', to: 'phones#verify_otp'
 

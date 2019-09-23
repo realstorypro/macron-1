@@ -56,6 +56,11 @@ module PathHelper
     "#{path_getter(component).singularize}_details_path"
   end
 
+  # used for generating a breadcrumb category link
+  def meta_category_path(component = params[:component])
+    "#{path_getter(component).singularize}_category_path"
+  end
+
   private
     def path_getter(component)
       settings "components.#{component}.path", fatal_exception: true
