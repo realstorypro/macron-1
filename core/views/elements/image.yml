@@ -29,6 +29,7 @@ views:
         label: 'Style'
         type: 'fixed_dropdown'
         options:
+          - none
           - bordered
           - rounded
           - circular
