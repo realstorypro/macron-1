@@ -14,12 +14,12 @@ class DisplayController < MetaController
 
   def index
     @entries = if params[:category]
-      entry_class.joins(:category)
-                 .where(categories: { slug: params[:category] })
-                 .order("published_date desc")
-                 .page params[:page]
+      entry_class.published.joins(:category)
+                  .where(categories: { slug: params[:category] })
+                  .order("published_date desc")
+                  .page params[:page]
     else
-      entry_class.all.order("published_date desc").page params[:page]
+      entry_class.all.published.order("published_date desc").page params[:page]
     end
     authorize @entries
   end
