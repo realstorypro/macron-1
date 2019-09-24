@@ -33,3 +33,11 @@ views:
         label: 'Address 3'
         type: 'string'
         default: 'Tucson, AZ 85701'
+      social_header:
+        type: 'header'
+        text: 'Social Media'
+      twitter:
+        label: 'Twitter Usernme'
+        type: 'string'
+        default: 'good_logik'
+        hint: 'Include the @ sign in the username.'
