@@ -14,12 +14,12 @@ class DisplayController < MetaController
 
   def index
     @entries = if params[:category]
-      entry_class.joins(:category)
-                 .where(categories: { slug: params[:category] })
-                 .order("published_date desc")
-                 .page params[:page]
+      entry_class.published.joins(:category)
+                  .where(categories: { slug: params[:category] })
+                  .order("published_date desc")
+                  .page params[:page]
     else
-      entry_class.all.order("published_date desc").page params[:page]
+      entry_class.all.published.order("published_date desc").page params[:page]
     end
     authorize @entries
   end
@@ -41,7 +41,7 @@ class DisplayController < MetaController
       taggings = Tagging.where(tag_id: @entry.tags.map(&:id), taggable_type: %w(Article Video Discussion Podcast Event))
                         .where.not(taggable_id: @entry.id)
       content_ids = taggings.map(&:taggable_id)
-      @related_content = Entry.where(id: content_ids)
+      @related_content = Entry.published.where(id: content_ids)
       @related_content = @related_content.order(Arel.sql("random()")).limit(8)
 
       # look up via a category if no tags are found

@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-  # TODO Refactor out BreadcumbsHelper
+  # used to generate breadcrumbs
   helper SemanticBreadcrumbsHelper
 
   def pundit_user

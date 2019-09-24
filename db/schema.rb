@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_03_213515) do
+ActiveRecord::Schema.define(version: 2019_09_23_070704) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -322,7 +322,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_213515) do
     t.string "slug"
     t.integer "comments_count", default: 0
     t.string "phone_number"
-    t.string "country"
+    t.string "country", default: "us"
     t.boolean "phone_verified", default: false, null: false
     t.boolean "help"
     t.boolean "advanced"

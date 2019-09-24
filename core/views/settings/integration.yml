@@ -4,28 +4,6 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
-      segment_header:
-        type: 'header'
-        text: 'Segment'
-      segment_js_key:
-        label: 'Javascript Key'
-        type: 'string'
-        default: ''
-      segment_server_key:
-        label: 'Server Key'
-        type: 'string'
-        default: ''
-      shopify_header:
-        type: 'header'
-        text: 'Shopify'
-      shopify_buy_token:
-        label: 'Buy Button Token'
-        type: 'string'
-        default: ''
-      shopify_domain:
-        label: 'Shopify Domain'
-        type: 'string'
-        default: ''
       webhook_header:
         type: 'header'
         text: 'Webhooks'

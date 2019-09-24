@@ -8,7 +8,7 @@
               .ui.breadcrumb.large
                 .section = link_to params[:component].capitalize, meta_index_path
                 = divider text: '/'
-                .section = link_to params[:category].capitalize, article_category_path(params[:category])
+                .section = link_to params[:category].capitalize, send(meta_category_path, params[:category])
             = widget 'normal rich text'
               // render the content area
               - @entry.areas.select do |area|

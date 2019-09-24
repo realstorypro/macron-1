@@ -7,6 +7,13 @@ views:
       image:
         label: 'Image'
         type: 'image'
+      alt_text:
+        label: 'Alt. Text'
+        type: 'string'
+        hint: 'Describe the image for visually impaired'
+      caption:
+        label: 'Caption'
+        type: 'string'
       size:
         label: 'Size'
         type: 'fixed_dropdown'
@@ -29,6 +36,7 @@ views:
         label: 'Style'
         type: 'fixed_dropdown'
         options:
+          - none
           - bordered
           - rounded
           - circular

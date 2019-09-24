@@ -8,9 +8,15 @@ views:
         type: 'header'
         text: 'Configuration'
       name:
-        label: 'Name'
+        label: 'Platform Name'
         type: 'string'
-        hint: 'Site name. Used in page title generation. Critical for SEO.'
+        hint: 'Used in page title generation. Critical for SEO.'
+        default: 'Logik'
+        required: true
+      legal_name:
+        label: 'Legal Name'
+        type: 'string'
+        hint: 'Used in privacy policy.'
         default: 'Logik'
         required: true
       description:

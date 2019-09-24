@@ -1,4 +1,8 @@
 - if model.image
-  = image_tag model.image, class: image_class
+  figure.image class="#{model.alignment if model.alignment}"
+    = image_tag model.image, class: image_class, alt: model.alt_text
+    - if model.caption
+      p.caption
+        em= model.caption
 - else
   = h5 text: 'No Image Has Been Inserted', class: 'horizontal divider'
