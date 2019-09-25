@@ -20,9 +20,10 @@ module Autoloadable
       class_name = class_name.gsub("::", "_")
     end
 
-    # for entries we want to clean up the class name
+    # for entries we want to clean up the class for entries since
+    # they are just regular components with a namespace
     if class_name.include?("entries")
-      class_name = class_name.gsub("::", "_")
+      class_name.gsub!("entries::", "")
     end
 
     setting = SettingInterface.new(Settings)

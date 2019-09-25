@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :video do
+  factory :entries_video, class: "entries/video" do
     name { Faker::Name.name }
     description { Faker::Name.name }
     body { Faker::Demographic.race }

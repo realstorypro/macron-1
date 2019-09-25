@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :event do
+  factory :entries_event, class: "entries/event" do
     name { Faker::Name.name }
     description { Faker::Name.name }
     body { Faker::Demographic.race }

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :podcast do
+  factory :entries_podcast, class: "entries/podcast" do
     name { Faker::Name.name }
     description { Faker::Name.name }
     body { Faker::Demographic.race }

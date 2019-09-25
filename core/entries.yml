@@ -9,7 +9,7 @@ components:
       - content
 
   articles:
-    klass: 'Article'
+    klass: 'Entries::Article'
     path: 'articles'
     focusable: true
     enabled: true
@@ -19,19 +19,19 @@ components:
       - reference
 
   events:
-    klass: 'Event'
+    klass: 'Entries::Event'
     path: 'events'
     focusable: true
     enabled: true
 
   products:
-    klass: 'Product'
+    klass: 'Entries::Product'
     path: 'products'
     focusable: false
     enabled: true
 
   store:
-    klass: 'Product'
+    klass: 'Entries::Product'
     path: 'store'
     focusable: true
     enabled: true
@@ -47,13 +47,19 @@ components:
       - reference
 
   videos:
-    klass: 'Video'
+    klass: 'Entries::Video'
     path: 'videos'
     focusable: true
     enabled: true
 
   podcasts:
-    klass: 'Podcast'
+    klass: 'Entries::Podcast'
     path: 'podcasts'
     focusable: true
+    enabled: true
+
+  advertisements:
+    klass: 'Entries::Advertisement'
+    path: 'advertisements'
+    focusable: false
     enabled: true

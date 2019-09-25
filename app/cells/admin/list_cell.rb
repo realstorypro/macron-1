@@ -38,7 +38,12 @@ module Admin
       end
 
       def model_name(options = {})
-        model_name = options[:model].class.to_s.underscore.singularize
+        model_class = options[:model].class.to_s
+
+        # Remove Namespace from Regular Component
+        model_class.gsub!("Entries::","")
+
+        model_name = model_class.underscore.singularize
         model_name
       end
   end

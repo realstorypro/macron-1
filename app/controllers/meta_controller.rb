@@ -83,9 +83,10 @@ class MetaController < ApplicationController
       def entry_params
         allowed_attrs = set_allowed_attrs
         component = settings("components.#{params[:component]}.klass").downcase
-        # we only want the class name without any other prefxes
-        # TODO: Can this be removed?
-        component = component.split("::").last.to_sym
+
+        # changing namespaces into the "_" format
+        component.gsub!("::", "_").to_sym
+
         params.require(component).permit(*allowed_attrs)
       end
 

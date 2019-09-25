@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :article do
+  factory :entries_article, class: 'entries/article' do
     name { Faker::Name.name }
     description { Faker::Name.name }
     published_date { Faker::Date.forward(7) }

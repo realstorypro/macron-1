@@ -42,12 +42,6 @@ components:
     focusable: false
     enabled: true
 
-  advertisements:
-    klass: 'Advertisement'
-    path: 'advertisements'
-    focusable: false
-    enabled: true
-
   tags:
     klass: 'Tag'
     path: 'tags'

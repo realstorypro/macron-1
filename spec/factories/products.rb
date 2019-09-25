@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :product, aliases: [:store] do
+  factory :entries_product, class: "entries/product", aliases: [:store] do
     name { Faker::Name.name }
     description { Faker::Name.name }
     price { Faker::Number.number(3) }

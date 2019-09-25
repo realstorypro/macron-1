@@ -11,7 +11,7 @@ describe Admin::CrudController, type: :controller do
   @tests = s("tests").select { |test| test.crud != nil }
 
   def entry_factory(test)
-    s("components.#{test.component}.klass").downcase.singularize.to_sym
+    s("components.#{test.component}.klass").downcase.gsub("::",'_').singularize.to_sym
   end
 
   def entry_class(test)
