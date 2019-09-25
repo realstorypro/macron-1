@@ -3,7 +3,7 @@
 module Elements
   class BaseElementCell < Cell::ViewModel
     include ApplicationHelper
-    include DcUi::Helpers
+    include GoodUi::Helpers
 
     delegate :url_helpers, to: "::Rails.application.routes"
 

@@ -20,6 +20,11 @@ module Autoloadable
       class_name = class_name.gsub("::", "_")
     end
 
+    # for entries we want to clean up the class name
+    if class_name.include?("entries")
+      class_name = class_name.gsub("::", "_")
+    end
+
     setting = SettingInterface.new(Settings)
     data_type = DataType.new()
 

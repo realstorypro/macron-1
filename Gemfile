@@ -67,7 +67,7 @@ gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 
 # Presentation
-gem "dc_ui", github: "leonid-io/dc-ui", branch: "master"
+gem "good_ui", github: "goodlogik/GOOD-UI", branch: "master"
 gem "slim-rails"
 gem "semantic-ui-sass" # Still needed because we're using the breadcrumb helper
 gem "cells"

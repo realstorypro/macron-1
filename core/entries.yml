@@ -37,7 +37,7 @@ components:
     enabled: true
 
   discussions:
-    klass: 'Discussion'
+    klass: 'Entries::Discussion'
     path: 'discussions'
     focusable: true
     enabled: true
