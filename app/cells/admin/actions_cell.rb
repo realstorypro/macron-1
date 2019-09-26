@@ -1,7 +1,7 @@
 module Admin
   class ActionsCell < Cell::ViewModel
     include ApplicationHelper
-    include DcUi::Helpers
+    include GoodUi::Helpers
 
     # Options
     # 'show:' as ['buttons', 'dropdown'] the rendering style

@@ -3,7 +3,7 @@
 module Admin
   class DateRangeCell < Cell::ViewModel
     include ApplicationHelper
-    include DcUi::Helpers
+    include GoodUi::Helpers
 
     def start_date
       options[:start_date].strftime("%m/%d/%Y")
