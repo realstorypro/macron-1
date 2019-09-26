@@ -6,7 +6,7 @@ namespace :menu do
     prompt = TTY::Prompt.new
 
     # load up components and remove the non-disableable components
-    # components = Settings.components.reject
+    components = Settings.components.reject
 
     # components
     # todo: implement in the future
