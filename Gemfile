@@ -67,7 +67,7 @@ gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 
 # Presentation
-gem "dc_ui", github: "leonid-io/dc-ui", branch: "master"
+gem "good_ui", github: "goodlogik/good-ui", branch: "master"
 gem "slim-rails"
 gem "semantic-ui-sass" # Still needed because we're using the breadcrumb helper
 gem "cells"
@@ -90,6 +90,7 @@ gem "rack-cors", require: "rack/cors"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "parallel_tests"
 end
 
 

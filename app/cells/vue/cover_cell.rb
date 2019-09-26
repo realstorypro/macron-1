@@ -2,7 +2,7 @@
 
 module Vue
   class CoverCell < Cell::ViewModel
-    include DcUi::Helpers
+    include GoodUi::Helpers
 
     private
       def overlay_background

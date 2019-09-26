@@ -2,6 +2,6 @@
 
 module Vue
   class VideoCell < Cell::ViewModel
-    include DcUi::Helpers
+    include GoodUi::Helpers
   end
 end
