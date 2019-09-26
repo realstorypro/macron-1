@@ -88,7 +88,7 @@ class Component
     class_path = s("components.#{component}.klass").downcase
 
     # changing namespaces into the "_" format
-    class_path.gsub!("::", "_")
+    class_path.gsub("::", "_")
   end
 
   # @param [String] component a name of the component

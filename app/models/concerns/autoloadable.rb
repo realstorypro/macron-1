@@ -4,17 +4,18 @@ module Autoloadable
   extend ActiveSupport::Concern
 
   included do
+
     # returns the lowercase version of the class
-    class_name = self.name.downcase
+    #class_name = self.name.downcase
 
     # changing namespaces into the "_" format
-    class_name = class_name.gsub("::", "_")
+    #class_name = class_name.gsub("::", "_")
 
     # chance the namespace from sitesettings to site_settings
     # todo get rid of this to keep things consistent
-    if class_name.include?("sitesettings")
-      class_name = class_name.gsub("sitesettings", "site_settings")
-    end
+    # if class_name.include?("sitesettings")
+    #   class_name = class_name.gsub("sitesettings", "site_settings")
+    # end
 
     # for entries we want to clean up the class for entries since
     # they are just regular components with a namespace
@@ -22,14 +23,19 @@ module Autoloadable
     #   class_name.gsub!("entries::", "")
     # end
 
-    setting = SettingInterface.new(Settings)
-    data_type = DataType.new()
 
     # pull in the fields
-    fields = setting.fetch_setting("views.#{class_name}.new")
+    #fields = setting.fetch_setting("views.#{class_name}.new")
 
     # pull in configuration
-    config = setting.fetch_setting("views.#{class_name}.config")
+    #config = setting.fetch_setting("views.#{class_name}.config")
+
+
+    component = Component.new(klass: self)
+    fields = component.view("new")
+    config = component.config
+
+    data_type = DataType.new()
 
     # removing non payloadable fields
     rejected_types = %w(header association dropdown).freeze

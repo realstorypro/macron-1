@@ -1,5 +1,5 @@
 views:
-  site_settings_contact:
+  sitesettings_contact:
     config:
       set_defaults: true
       rejected_field_names: ''
