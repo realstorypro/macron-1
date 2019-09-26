@@ -16,6 +16,7 @@ class MetaController < ApplicationController
   def show
     # needed for the the CRUD widget to re-load the page on edit
     response_status :success
+    # TODO should we include the authorize entry here?
   end
 
   def new
@@ -82,18 +83,13 @@ class MetaController < ApplicationController
 
       def entry_params
         allowed_attrs = set_allowed_attrs
-        component = settings("components.#{params[:component]}.klass").downcase
-
-        # changing namespaces into the "_" format
-        component.gsub!("::", "_").to_sym
-
-        params.require(component).permit(*allowed_attrs)
+        params.require(formatted_component_class.to_sym).permit(*allowed_attrs)
       end
 
       # sets the allowed attributes
       def set_allowed_attrs
         allowed_attrs = %i[id]
-        fields = settings("views.#{params[:component]}.new", fatal_exception: true)
+        fields = settings("views.#{formatted_component_class}.new", fatal_exception: true)
         fields.each do |field|
           case field[1].type
           when "association" then allowed_attrs.append(Hash["#{node_name(field).to_s.singularize}_ids", []])
@@ -125,6 +121,14 @@ class MetaController < ApplicationController
         namespace = self.class.parent.to_s.downcase
         return nil if namespace.eql? "object"
         "admin"
+      end
+
+      def formatted_component_class
+        # returns the lowercase version of the class
+        component = settings("components.#{params[:component]}.klass").downcase
+
+        # changing namespaces into the "_" format
+        component.gsub!("::", "_")
       end
 
       # adds actions to the action list

@@ -37,7 +37,12 @@ describe "Admin Meta Routing Spec", type: :feature do
     if test.admin.include?("show")
       it "can visit :: #{test.component} :: show" do
         page.set_rack_session(verified: true)
-        built_component = FactoryBot.create(test.component.singularize)
+
+        # gets the component class, and substitutes class delimitter with underscores
+        # in order to get the proper factory name
+        component_factory = s("components.#{test.component}.klass").downcase.gsub("::",'_').to_sym
+
+        built_component = FactoryBot.create(component_factory)
         visit ("#{visit_admin_path(test)}#{built_component.id}")
         expect(page).to have_content built_component.name
       end

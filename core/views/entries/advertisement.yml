@@ -1,5 +1,5 @@
 views:
-  advertisements:
+  entries_advertisement:
     config:
       set_defaults: false
       rejected_field_names: 'name slug published_date'

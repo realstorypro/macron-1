@@ -1,5 +1,5 @@
 views:
-  videos:
+  entries_product:
     config:
       set_defaults: false
       rejected_field_names: 'name slug published_date'
@@ -27,14 +27,28 @@ views:
       published_date:
         label: 'Published Date'
         type: 'datepicker'
-      user:
-        label: 'Author'
-        type: 'dropdown'
+
+      product_header:
+        type: 'header'
+        text: 'Product Info'
+      price:
+        label: 'Price'
+        type: 'string'
+        required: true
+      product_link:
+        label: 'Product Link'
+        type: 'string'
         required: true
 
-      media_header:
+
+      images_header:
         type: 'header'
-        text: 'Media'
+        text: 'Images'
+      fullscreen_image:
+        label: 'Fullscreen Image'
+        type: 'image'
+        size: ['2560','1456']
+        required: true
       landscape_image:
         label: 'Landscape Image'
         type: 'image'
@@ -51,11 +65,6 @@ views:
         maxlength: '40'
         hint: 'Limited to 40 characters'
         required: true
-      video:
-        label: 'Video'
-        type: 'string'
-        hint: 'Vimeo or Youtube URL'
-        required: true
 
       details_header:
         type: 'header'
@@ -66,8 +75,11 @@ views:
         maxlength: '85'
         hint: 'Limited to 85 characters'
         required: true
-      body:
-        label: 'Video Body'
+      long_summary:
+        label: 'Long Summary'
         type: 'rich'
         required: true
-
+      body:
+        label: 'Article Body'
+        type: 'rich'
+        required: true

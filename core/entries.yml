@@ -1,6 +1,6 @@
 components:
   pages:
-    klass: 'Page'
+    klass: 'Entries::Page'
     path: 'pages'
     focusable: false
     enabled: true

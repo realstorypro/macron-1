@@ -1,4 +1,6 @@
 # frozen_string_literal: true
 
-class Page < Entry
+module Entries
+  class Page < Entry
+  end
 end

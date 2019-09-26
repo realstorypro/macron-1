@@ -13,10 +13,10 @@ components:
     focusable: false
     enabled: true
 
-  elements:
-    klass: 'Elements'
-    path: 'elements'
-    enabled: true
+  # elements:
+  #   klass: 'Elements'
+  #   path: 'elements'
+  #   enabled: true
 
   members:
     klass: 'User'

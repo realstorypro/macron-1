@@ -55,7 +55,7 @@ end
 describe PathHelper, "meta plular path helper" do
   before(:each) do
     params[:component] = "articles"
-    @entry = FactoryBot.create(:article)
+    @entry = FactoryBot.create(:entries_article)
   end
   after(:each) do
     params[:component] = nil

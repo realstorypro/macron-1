@@ -45,8 +45,8 @@ describe Admin::AdminBaseCell, type: "feature" do
 
   describe "rendering methods" do
     before :each do
-      FactoryBot.create(:article)
-      @article = Article.last
+      FactoryBot.create(:entries_article)
+      @article = Entries::Article.last
     end
 
     it "retruns nil when rendering header" do

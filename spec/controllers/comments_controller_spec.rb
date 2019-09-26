@@ -6,7 +6,7 @@ include ApplicationHelper
 describe CommentsController, type: :controller do
   describe "Reading Comments" do
     before(:each) do
-      @article = FactoryBot.create(:article)
+      @article = FactoryBot.create(:entries_article)
     end
 
     it "retruns an JSON comment feed" do
@@ -21,7 +21,7 @@ describe CommentsController, type: :controller do
       @admin = FactoryBot.create(:user, :admin)
     end
     before(:each) do
-      @article = FactoryBot.create(:article)
+      @article = FactoryBot.create(:entries_article)
       sign_in @admin
     end
 

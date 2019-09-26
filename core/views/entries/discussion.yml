@@ -1,12 +1,12 @@
 views:
-  pages:
+  entries_discussion:
     config:
       set_defaults: false
       rejected_field_names: 'name slug published_date'
     new:
       meta_header:
         type: 'header'
-        text: 'Meta Data'
+        text: 'Meta'
       name:
         label: 'Title'
         type: 'string'
@@ -18,13 +18,16 @@ views:
         maxlength: '160'
         hint: 'Limited to 160 characters'
         required: true
-    list:
-      name:
-        label: 'Title'
-        type: 'string'
-      slug:
-        label: 'URL Slug'
-        type: 'string'
+      user:
+        label: 'Author'
+        type: 'dropdown'
+        required: true
+      category:
+        label: 'Category'
+        type: 'dropdown'
+      tags:
+        label: 'Tags'
+        type: 'association'
       published_date:
-        label: 'Published'
-        type: 'string'
+        label: 'Published Date'
+        type: 'datepicker'

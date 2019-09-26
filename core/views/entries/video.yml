@@ -1,26 +1,22 @@
 views:
-  articles:
+  entries_video:
     config:
       set_defaults: false
       rejected_field_names: 'name slug published_date'
     new:
       meta_header:
         type: 'header'
-        text: 'Meta'
+        text: 'Meta Data'
       name:
-        label: 'Title'
+        label: 'Short Title'
         type: 'string'
         maxlength: '70'
         hint: 'Limited to 70 characters'
       description:
-        label: 'Description'
+        label: 'Short Summary'
         type: 'text'
         maxlength: '160'
         hint: 'Limited to 160 characters'
-        required: true
-      user:
-        label: 'Author'
-        type: 'dropdown'
         required: true
       category:
         label: 'Category'
@@ -31,10 +27,14 @@ views:
       published_date:
         label: 'Published Date'
         type: 'datepicker'
+      user:
+        label: 'Author'
+        type: 'dropdown'
+        required: true
 
-      images_header:
+      media_header:
         type: 'header'
-        text: 'Images'
+        text: 'Media'
       landscape_image:
         label: 'Landscape Image'
         type: 'image'
@@ -51,3 +51,23 @@ views:
         maxlength: '40'
         hint: 'Limited to 40 characters'
         required: true
+      video:
+        label: 'Video'
+        type: 'string'
+        hint: 'Vimeo or Youtube URL'
+        required: true
+
+      details_header:
+        type: 'header'
+        text: 'Details'
+      long_title:
+        label: 'Long Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+        required: true
+      body:
+        label: 'Video Body'
+        type: 'rich'
+        required: true
+

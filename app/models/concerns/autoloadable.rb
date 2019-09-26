@@ -4,27 +4,23 @@ module Autoloadable
   extend ActiveSupport::Concern
 
   included do
-    # the views are plural
-    class_name = self.name.downcase.pluralize
+    # returns the lowercase version of the class
+    class_name = self.name.downcase
 
-    # except for site settings
+    # changing namespaces into the "_" format
+    class_name = class_name.gsub("::", "_")
+
+    # chance the namespace from sitesettings to site_settings
+    # todo get rid of this to keep things consistent
     if class_name.include?("sitesettings")
-      class_name = self.name.downcase.singularize
       class_name = class_name.gsub("sitesettings", "site_settings")
-      class_name = class_name.gsub("::", "_")
-    end
-
-    # and elements
-    if class_name.include?("elements")
-      class_name = self.name.downcase.singularize
-      class_name = class_name.gsub("::", "_")
     end
 
     # for entries we want to clean up the class for entries since
     # they are just regular components with a namespace
-    if class_name.include?("entries")
-      class_name.gsub!("entries::", "")
-    end
+    # if class_name.include?("entries")
+    #   class_name.gsub!("entries::", "")
+    # end
 
     setting = SettingInterface.new(Settings)
     data_type = DataType.new()
