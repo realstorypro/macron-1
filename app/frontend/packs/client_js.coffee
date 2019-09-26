@@ -48,3 +48,6 @@ document.addEventListener 'turbolinks:load', ->
   app.reload()
 
   ahoy.trackView()
+
+  unless typeof(window.segment_js_write_key) == 'undefined'
+    analytics.page()
