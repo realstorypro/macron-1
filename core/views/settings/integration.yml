@@ -4,6 +4,17 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      segment_header:
+        type: 'header'
+        text: 'Segment'
+      segment_js_key:
+        label: 'Javascript Key'
+        type: 'string'
+        default: ''
+      segment_server_key:
+        label: 'Server Key'
+        type: 'string'
+        default: ''
       webhook_header:
         type: 'header'
         text: 'Webhooks'
