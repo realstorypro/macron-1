@@ -41,6 +41,9 @@ class ApplicationController < ActionController::Base
         # we obvisouly don't want to preform 2fa if the user isn't signed
         return false unless current_user
 
+        # we want to verify the session automatically if user is an admin
+        session[:verified] = true if current_user.bypass2fa
+
         # redirect to the phone verification controller if the session isn't verified
         redirect_to edit_phone_path unless session[:verified]
       end
