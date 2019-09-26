@@ -18,7 +18,7 @@ auth:
         update: 
       members:
         read: 
-      advertisements:
+      promotions:
         read: 
       podcasts:
         read: 

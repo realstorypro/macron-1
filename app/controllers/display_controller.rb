@@ -31,9 +31,9 @@ class DisplayController < MetaController
 
   private
     def find_related_ad
-      @ad = Tag.find_by_id(@entry.tags.map(&:id))
-                 &.advertisements&.order(Arel.sql("random()"))&.limit(1)
-      @ad = Advertisement.order(Arel.sql("random()")).limit(1) if @ad.blank?
+      @promo = Tag.find_by_id(@entry.tags.map(&:id))
+                 &.promotions&.order(Arel.sql("random()"))&.limit(1)
+      @promo = Promotion.order(Arel.sql("random()")).limit(1) if @promo.blank?
     end
 
 

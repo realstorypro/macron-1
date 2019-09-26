@@ -143,7 +143,7 @@ tests:
         - create
         - destroy
 
-    - component: advertisements
+    - component: promotions
       admin:
         - index
         - show

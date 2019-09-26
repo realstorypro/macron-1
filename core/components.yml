@@ -42,9 +42,9 @@ components:
     focusable: false
     enabled: true
 
-  advertisements:
-    klass: 'Advertisement'
-    path: 'advertisements'
+  promotions:
+    klass: 'Promotions'
+    path: 'promotions'
     focusable: false
     enabled: true
 

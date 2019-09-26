@@ -57,8 +57,8 @@ menu:
       enabled: true
 
     - name: Promotions
-      component: advertisements
-      path: admin_advertisements
+      component: promotions
+      path: admin_promotions
       icon: audio description
       enabled: true
 
