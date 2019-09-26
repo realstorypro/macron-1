@@ -1,6 +1,7 @@
 import Utils from './utils'
 import Vent from './vent'
 import Dispatcher from './dispatcher'
+import Tabs from '../widgets/tabs'
 import Dropdown from '../widgets/dropdown'
 import Datepicker from '../widgets/datepicker'
 import Timepicker from '../widgets/timepicker'
@@ -12,6 +13,7 @@ import _ from 'underscore'
 utils =  new Utils
 vent =  new Vent
 dispatcher = new Dispatcher
+tabs = new Tabs
 dropdown = new Dropdown
 datepicker = new Datepicker
 timepicker = new Timepicker
@@ -85,6 +87,7 @@ class Render
 
         $("##{id}").html(html)
 
+      tabs.reinit()
       dropdown.reinit()
       datepicker.reinit()
       timepicker.reinit()

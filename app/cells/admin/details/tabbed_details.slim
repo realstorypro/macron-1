@@ -7,5 +7,6 @@
 - options[:fields].each_with_index do |field, index|
   - unless field_advanced(field) && !current_user.advanced
     - if @header_locations.include?(index-1)
-      = segment class: "bottom tab attached #{'active' if (index - 1 == 0)}", data: {tab: "admin-tab#{index-1}"}, id: "admin-tab#{index-1}",  dynamic: :on
-        = render_table(index)
+      = segment class: "bottom tab attached #{'active' if (index - 1 == 0)}", data: {tab: "admin-tab#{index-1}"}
+        .span.dynamic id="admin-tab#{index-1}"
+                = render_table(index)
