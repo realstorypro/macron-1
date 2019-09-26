@@ -9,7 +9,9 @@ namespace :permissions do
     components = Settings.components.reject { |component| !component[1].enabled }
 
     # regular components
-    regular_components = components.reject { |component| component[0].to_s.include?("site_settings") || component[0].to_s.include?("elements") }
+    regular_components = components.reject do |component|
+      component[0].to_s.include?("site_settings") || component[0].to_s.include?("elements")
+    end
 
     # site settings
     site_settings = components.select { |component| component[0].to_s.include? "site_settings" }
@@ -20,7 +22,7 @@ namespace :permissions do
     component_array = prompt.select("What are you modifying permissions for?") do |menu|
       menu.choice "Components", { array: regular_components }
       menu.choice "Elements", { array: elements }
-      menu.choice "Site Settings", { array: site_settings}
+      menu.choice "Site Settings", { array: site_settings }
     end
 
     component_names = component_array[:array].map { |component| component[0] }

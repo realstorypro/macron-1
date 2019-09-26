@@ -8,11 +8,11 @@ module Admin
     delegate :url_helpers, to: "::Rails.application.routes"
 
     def element_icon (element)
-      icon(s("components.#{element.type.downcase.gsub('::','_')}.icon"))
+      icon(s("components.#{element.type.downcase.gsub('::', '_')}.icon"))
     end
 
     def element_name (element)
-      s("components.#{element.type.downcase.gsub('::','_')}.name")
+      s("components.#{element.type.downcase.gsub('::', '_')}.name")
     end
 
     # shortcuts

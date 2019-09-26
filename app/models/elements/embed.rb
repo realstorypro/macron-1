@@ -19,6 +19,5 @@ module Elements
         self.embedded = parsed_response
       end
     end
-
   end
 end

@@ -34,7 +34,7 @@ class Rails::ElementsGenerator < Rails::Generators::NamedBase
     gsub_file "app/cells/elements/#{file_name}_cell.rb", "<~~ class_name ~~>", class_name
 
     # copy the cell show files
-    directory 'cell_view', "app/cells/elements/#{file_name}"
+    directory "cell_view", "app/cells/elements/#{file_name}"
     gsub_file "app/cells/elements/#{file_name}/show.slim", "<~~ class_name ~~>", class_name
 
     prompt.ok "All Files Copied"

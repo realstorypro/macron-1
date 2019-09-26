@@ -55,35 +55,34 @@ module Admin
 
       if s("components.#{params[:component]}.focusable")
         add_to_actions(
-            text: "Desktop Preview",
-            class: "purple enhanced hidden",
-            id: "desktop-browser-preview",
-            url: send(preview_path, @entry.category.slug, @entry.slug),
-            permission: policy(@entry).edit?,
-            data: { widget: "previewer", action: "desktop" }
+          text: "Desktop Preview",
+          class: "purple enhanced hidden",
+          id: "desktop-browser-preview",
+          url: send(preview_path, @entry.category.slug, @entry.slug),
+          permission: policy(@entry).edit?,
+          data: { widget: "previewer", action: "desktop" }
         )
 
         add_to_actions(
-            text: "Mobile Preview",
-            class: "blue enhanced hidden",
-            id: "mobile-browser-preview",
-            url: send(preview_path, @entry.category.slug, @entry.slug),
-            permission: policy(@entry).edit?,
-            data: { widget: "previewer", action: "mobile" }
+          text: "Mobile Preview",
+          class: "blue enhanced hidden",
+          id: "mobile-browser-preview",
+          url: send(preview_path, @entry.category.slug, @entry.slug),
+          permission: policy(@entry).edit?,
+          data: { widget: "previewer", action: "mobile" }
         )
 
         add_to_actions(
-            text: "Writer Mode",
-            class: "grey enhanced",
-            id: "focus-mode",
-            url: send(preview_path, @entry.category.slug, @entry.slug),
-            permission: policy(@entry).edit?,
-            data: { widget: "focus", action: "focus" }
+          text: "Writer Mode",
+          class: "grey enhanced",
+          id: "focus-mode",
+          url: send(preview_path, @entry.category.slug, @entry.slug),
+          permission: policy(@entry).edit?,
+          data: { widget: "focus", action: "focus" }
         )
       end
 
       semantic_breadcrumb @entry.name.truncate(30), "#"
-
     end
 
     def set_breadcrumb
