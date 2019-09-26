@@ -1,11 +1,13 @@
+= segment class: 'basic no padding', id: "user-help", dynamic: :on
+  - if current_user.help
+    = column size: 16
+      = render 'partials/side_help'
+
 = segment class: 'basic no padding'
-  = grid "#{'divided' if current_user.help}"
-    = row id: 'admin-details', dynamic: :on
-      = column size: (current_user.help ? 10 : 16)
+  = grid
+    = row
+      = column
         == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
-      - if current_user.help
-        = column size: 6
-          = render 'partials/side_help'
 
     = row
       = column size: 16, id: 'content-pane', dynamic: :on
