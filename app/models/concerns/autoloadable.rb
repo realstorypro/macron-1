@@ -4,7 +4,6 @@ module Autoloadable
   extend ActiveSupport::Concern
 
   included do
-    Component.new(klass: self)
     # the views are plural
     class_name = self.name.downcase.pluralize
 

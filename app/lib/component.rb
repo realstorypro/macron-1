@@ -14,9 +14,6 @@ class Component
     when !options[:klass].blank?
       @key = component_from_klass(options[:klass])[0]
       @self = component_from_klass(options[:klass])[1]
-    #when !options[:classpath].blank?
-      #@key = component_from_classpath(options[:classpath])[0]
-      #@self = component_from_classpath(options[:classpath])[1]
     else
       raise ArgumentError, "Pass name, klass or classpath in order to build a component"
     end
@@ -72,31 +69,7 @@ class Component
     found_component = s("components.#{component_name}")
   end
 
-  # # pass a classpath and get a component back
-  def component_from_classpath(classpath)
-    found_component = nil
-    s("components").each do |component|
-      if component[1].respond_to?(:klass) && get_classpath(component[0]) == classpath.to_s
-        found_component = component
-      end
-    end
-    return found_component unless found_component.nil?
-    raise StandardError.new "Component with classpath #{classpath.to_s} is not found"
-  end
-
   ##### Component Lookups #####
-  #
-
-  # @param [String] component a name of the component
-  # @return [String] returns formatted class name following the FactoryBot
-  # conventions. The string is lowercase and "::" is replaced by an undescore.
-  def get_classpath(component)
-    # returns the lowercase version of the class
-    class_path = s("components.#{component}.klass").downcase
-
-    # changing namespaces into the "_" format
-    class_path.gsub("::", "_")
-  end
 
   # @param [String] component a name of the component
   # @return [Object] the Config component containing configuration
@@ -108,13 +81,13 @@ class Component
   def view(kind)
     case kind
     when "new"
-      s("views.#{classpath}.new")
+      s("views.#{@id}.new")
     when "list"
-      s("views.#{classpath}.list")
+      s("views.#{@id}.list")
     when "basiclist"
-      s("views.#{classpath}.basiclist")
+      s("views.#{@id}.basiclist")
     when "show"
-      s("views.#{classpath}.show")
+      s("views.#{@id}.show")
     else
       raise StandardError.new "View #{kind} is not defined"
     end
