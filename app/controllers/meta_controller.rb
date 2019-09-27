@@ -66,7 +66,7 @@ class MetaController < ApplicationController
         @entry_class ||= settings("components.#{params[:component]}.klass", fatal_exception: true).classify.constantize
       end
 
-      # retruns the component name
+      # returns the component name
       def component_name
         @component_name ||= settings("components.#{params[:component]}.name")
       end
@@ -82,11 +82,10 @@ class MetaController < ApplicationController
 
       def entry_params
         allowed_attrs = set_allowed_attrs
-        component = settings("components.#{params[:component]}.klass").downcase
+        component_class = settings("components.#{params[:component]}.klass").downcase
         # we only want the class name without any other prefxes
-        # TODO: Can this be removed?
-        component = component.split("::").last.to_sym
-        params.require(component).permit(*allowed_attrs)
+        component_class = component_class.split("::").last.to_sym
+        params.require(component_class).permit(*allowed_attrs)
       end
 
       # sets the allowed attributes
