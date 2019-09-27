@@ -1,4 +1,5 @@
-= render 'microdata'
+= content_for :microdata
+  = render 'microdata'
 = component 'article details'
   - @entry.areas.select do |area|
     - if area.type.include?('Header')

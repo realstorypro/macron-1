@@ -2,6 +2,9 @@ doctype html
 html lang="en"
   head
     = render 'layouts/partials/head'
+    = render 'layouts/partials/org_microdata'
+    = yield :microdata
+
   body class="#{controller_name} #{action_name.downcase.gsub('-',' ')}"
     = render 'layouts/partials/drawers'
     = render 'layouts/partials/notifications'
