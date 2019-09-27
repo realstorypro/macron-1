@@ -22,7 +22,7 @@ auth:
         all: 
       podcasts:
         all: 
-      advertisements:
+      promotions:
         all: 
       categories:
         all: 

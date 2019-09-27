@@ -111,7 +111,7 @@ Rails.application.routes.draw do
     resources :videos, component: "videos", controller: "crud"
     resources :podcasts, component: "podcasts", controller: "crud"
     
-    resources :advertisements, component: "advertisements", controller: "crud"
+    resources :promotions, component: "promotions", controller: "crud"
     resources :tags, component: "tags", controller: "crud"
     resources :categories, component: "categories", controller: "crud"
     resources :support, component: "support", only: %i[index]

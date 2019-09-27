@@ -129,8 +129,8 @@ components:
     name: 'Comments'
     description: 'Provides commenting capabilities'
 
-  advertisements:
-    name: 'Advertisements'
+  promotions:
+    name: 'Promotions'
     description: 'Provides ad capabilities'
 
   tags:

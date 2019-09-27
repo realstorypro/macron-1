@@ -6,7 +6,7 @@ class Tag < ApplicationRecord
 
   has_many :discussions, through: :taggings, source: :taggable, source_type: "Discussion"
   has_many :articles, through: :taggings, source: :taggable, source_type: "Article"
-  has_many :advertisements, through: :taggings, source: :taggable, source_type: "Advertisement"
+  has_many :promotions, through: :taggings, source: :taggable, source_type: "Promotion"
 
   def self.policy_class
     MetaPolicy

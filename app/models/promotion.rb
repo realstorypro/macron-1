@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Advertisement < Entry
+class Promotion < Entry
   include Autoloadable
   validates :url, url: true
 end

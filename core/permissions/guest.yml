@@ -16,7 +16,7 @@ auth:
         read: 
       members:
         read: 
-      advertisements:
+      promotions:
         read: 
       events:
         read: 
