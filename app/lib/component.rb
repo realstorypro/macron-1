@@ -50,19 +50,26 @@ class Component
 
   # pass a class and get a component back
   def component_from_klass(klass)
-    found_component = nil
-    number_found = 0
-    s("components").each do |component|
-      if component[1].respond_to?(:klass) && component[1].klass == klass.to_s
-        number_found += 1
-        found_component = component
-      end
+    # turn class into an actual class if a string was passed
+    klass = klass.constantize unless klass.instance_of? Class
+
+    # component names are based on class names and are plural
+    component_name = klass.name.downcase.pluralize
+
+    # except for site settings
+    if component_name.include?("sitesettings")
+      component_name = self.name.downcase.singularize
+      component_name = component_name.gsub("sitesettings", "site_settings")
+      component_name = component_name.gsub("::", "_")
     end
 
-    raise StandardError.new "Multiple componenets with class #{klass.to_s} found. Use another lookup method." if number_found > 1
-    raise StandardError.new "Component with class #{klass.to_s} is not found" if found_component.nil?
+    # and elements
+    if component_name.include?("elements")
+      component_name = self.name.downcase.singularize
+      component_name = component_name.gsub("::", "_")
+    end
 
-    found_component
+    found_component = s("components.#{component_name}")
   end
 
   # # pass a classpath and get a component back
