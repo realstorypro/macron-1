@@ -4,7 +4,7 @@ module Autoloadable
   extend ActiveSupport::Concern
 
   included do
-    component = Component.new(klass: self)
+    component = Core::Component.new(klass: self)
     config = component.config
     fields = component.view("new")
 
