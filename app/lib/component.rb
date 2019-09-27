@@ -4,18 +4,16 @@
 class Component
   def initialize(options = {})
     case
-
       # key can be passed as a string or a symbol
     when !options[:key].blank?
       @key = options[:key].to_s
       @self = component_from_key(@key)
-
       # klass can either be passed as an actual class or a string
     when !options[:klass].blank?
-      @key = component_from_klass(options[:klass])[0]
-      @self = component_from_klass(options[:klass])[1]
+      @key = key_from_klass(options[:klass])
+      @self = component_from_key(@key)
     else
-      raise ArgumentError, "Pass name, klass or classpath in order to build a component"
+      raise ArgumentError, "Pass the component key or klass in order to build a component"
     end
 
   end
@@ -32,12 +30,6 @@ class Component
     @self
   end
 
-  # @return [String] returns the formatted name of component class.
-  def classpath
-    get_classpath(@key)
-  end
-
-
   ##### Component Lookups #####
 
   # pass a component name and get a component back
@@ -46,27 +38,27 @@ class Component
   end
 
   # pass a class and get a component back
-  def component_from_klass(klass)
+  def key_from_klass(klass)
     # turn class into an actual class if a string was passed
     klass = klass.constantize unless klass.instance_of? Class
 
     # component names are based on class names and are plural
-    component_name = klass.name.downcase.pluralize
+    component_key = klass.name.downcase.pluralize
 
     # except for site settings
-    if component_name.include?("sitesettings")
-      component_name = self.name.downcase.singularize
-      component_name = component_name.gsub("sitesettings", "site_settings")
-      component_name = component_name.gsub("::", "_")
+    if component_key.include?("sitesettings")
+      component_key = component_key.singularize
+      component_key = component_key.gsub("sitesettings", "site_settings")
+      component_key = component_key.gsub("::", "_")
     end
 
     # and elements
-    if component_name.include?("elements")
-      component_name = self.name.downcase.singularize
-      component_name = component_name.gsub("::", "_")
+    if component_key.include?("elements")
+      component_key = component_key.singularize
+      component_key = component_key.gsub("::", "_")
     end
 
-    found_component = s("components.#{component_name}")
+    component_key
   end
 
   ##### Component Lookups #####
@@ -74,20 +66,20 @@ class Component
   # @param [String] component a name of the component
   # @return [Object] the Config component containing configuration
   def config
-    s("views.#{classpath}.config")
+    s("views.#{@key}.config")
   end
 
   # @param [String] kind of view we are retrieving
   def view(kind)
     case kind
     when "new"
-      s("views.#{@id}.new")
+      s("views.#{@key}.new")
     when "list"
-      s("views.#{@id}.list")
+      s("views.#{@key}.list")
     when "basiclist"
-      s("views.#{@id}.basiclist")
+      s("views.#{@key}.basiclist")
     when "show"
-      s("views.#{@id}.show")
+      s("views.#{@key}.show")
     else
       raise StandardError.new "View #{kind} is not defined"
     end

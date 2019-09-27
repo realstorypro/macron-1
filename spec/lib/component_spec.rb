@@ -31,4 +31,15 @@ describe Component, "component tester for macron-1" do
     component = Component.new(klass: Tag)
   end
 
+  it "can access config" do
+    component = Component.new(klass: 'Tag')
+    component.config
+  end
+
+  it "can access new view" do
+    component = Component.new(klass: 'Tag')
+    component.view('new')
+  end
+
+
 end
