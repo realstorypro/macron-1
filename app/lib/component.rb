@@ -30,6 +30,11 @@ class Component
     @self
   end
 
+  # @return [Class] returns a class tied to a component.
+  def klass
+    s("components.#{@key}.klass").classify.constantize
+  end
+
   ##### Component Lookups #####
 
   # pass a component name and get a component back

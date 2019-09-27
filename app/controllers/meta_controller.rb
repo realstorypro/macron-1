@@ -4,6 +4,7 @@ class MetaController < ApplicationController
   include SettingsHelper
   include PathHelper
 
+  before_action :load_component
   before_action :entry_class
   before_action :component_name, only: %i[create update destroy]
   before_action :load_entry, only: %i[show edit update destroy]
@@ -61,9 +62,14 @@ class MetaController < ApplicationController
   end
 
     private
+      # loads a component based the id
+      def load_component
+        @component = Component.new(key: params[:component])
+      end
+
       # returns the entry class
       def entry_class
-        @entry_class ||= settings("components.#{params[:component]}.klass", fatal_exception: true).classify.constantize
+        @entry_class ||= @component.klass
       end
 
       # returns the component name
