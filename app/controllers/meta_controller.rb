@@ -15,7 +15,7 @@ class MetaController < ApplicationController
   end
 
   def show
-    # needed for the the CRUD widget to re-load the page on edit
+    # The CRUD JS widget needs this in order to re-load the page after edit
     response_status :success
   end
 
@@ -69,7 +69,7 @@ class MetaController < ApplicationController
 
       # returns a class object for the entry
       def entry_class
-        @component.klass
+        @entry_class ||= @component.klass
       end
 
       # returns the component name
@@ -86,18 +86,23 @@ class MetaController < ApplicationController
         authorize @entry
       end
 
+      # used by both 'create' and 'update' actions
+      # the require namespace for is generated from the class name
+      # the module namespace is removed.
       def entry_params
         allowed_attrs = set_allowed_attrs
-        component_class = settings("components.#{params[:component]}.klass").downcase
+        component_class = @component.self.klass.downcase
+
         # we only want the class name without any other prefxes
         component_class = component_class.split("::").last.to_sym
+
         params.require(component_class).permit(*allowed_attrs)
       end
 
-      # sets the allowed attributes
+      # sets the allowed attributes based on the component configuration
       def set_allowed_attrs
+        fields = @component.view("new")
         allowed_attrs = %i[id]
-        fields = settings("views.#{params[:component]}.new", fatal_exception: true)
         fields.each do |field|
           case field[1].type
           when "association" then allowed_attrs.append(Hash["#{node_name(field).to_s.singularize}_ids", []])
