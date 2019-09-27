@@ -43,7 +43,7 @@ components:
     enabled: true
 
   promotions:
-    klass: 'Promotions'
+    klass: 'Promotion'
     path: 'promotions'
     focusable: false
     enabled: true
