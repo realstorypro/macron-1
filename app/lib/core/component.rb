@@ -34,6 +34,11 @@ module Core
       s("components.#{@key}.klass").classify.constantize
     end
 
+    # @return [String] returns a component name
+    def name
+      @self.name
+    end
+
     ##### Component Lookups #####
 
     # pass a component name and get a component back

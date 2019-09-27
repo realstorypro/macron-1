@@ -12,7 +12,7 @@ describe Core::Component, "component tester for macron-1" do
 
 
     it "#{component[1].name} can read component name" do
-      component_instance = Core::Component.new(key: component[0]).self.name
+      component_instance = Core::Component.new(key: component[0]).name
     end
 
     if component[1].respond_to?(:klass)

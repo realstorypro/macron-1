@@ -64,17 +64,17 @@ class MetaController < ApplicationController
     private
       # loads a component based the id
       def load_component
-        @component = Core::Component.new(key: params[:component])
+        @component ||= Core::Component.new(key: params[:component])
       end
 
-      # returns the entry class
+      # returns a class object for the entry
       def entry_class
-        @entry_class ||= @component.klass
+        @component.klass
       end
 
       # returns the component name
       def component_name
-        @component_name ||= settings("components.#{params[:component]}.name")
+        @component.name
       end
 
       def load_entry
