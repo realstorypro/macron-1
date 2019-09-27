@@ -1,0 +1,30 @@
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "<%= ss('general.url') + send(show_details,@entry) %>"
+  },
+  "headline": "<%= @entry.name %>",
+  "image": [
+    "<%= @entry.landscape_image %>",
+    "<%= @entry.card_image %>"
+   ],
+  "datePublished": "<%= @entry.published_date.strftime('%Y-%m-%dT%l:%M:%S%z') %>",
+  "dateModified": "<%= @entry.updated_at.strftime('%Y-%m-%dT%l:%M:%S%z') %>",
+  "author": {
+    "@type": "Person",
+    "name": "<%= @entry.user.profile.full_name %>"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "<%= ss('general.legal_name') %>",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<%= ss('theme.branding.logo') %>"
+    }
+  },
+  "description": "<%= @entry.description %>"
+}
+</script>

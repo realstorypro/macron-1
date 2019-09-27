@@ -56,6 +56,9 @@ module PathHelper
     "#{path_getter(component).singularize}_details_path"
   end
 
+  # shows the detail of the entry
+  alias_method :show_details, :preview_path
+
   # used for generating a breadcrumb category link
   def meta_category_path(component = params[:component])
     "#{path_getter(component).singularize}_category_path"

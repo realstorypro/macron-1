@@ -66,7 +66,7 @@ class DisplayController < MetaController
     end
   
     def track_promo
-      return true unless @promo
+      return true if @promo.length == 0
       track(
           event: "Promo Viewed",
           props: {
