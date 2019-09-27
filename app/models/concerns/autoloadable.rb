@@ -4,46 +4,33 @@ module Autoloadable
   extend ActiveSupport::Concern
 
   included do
-    # the views are plural
-    class_name = self.name.downcase.pluralize
+    component = Component.new(klass: self)
+    config = component.config
+    fields = component.view("new")
 
-    # except for site settings
-    if class_name.include?("sitesettings")
-      class_name = self.name.downcase.singularize
-      class_name = class_name.gsub("sitesettings", "site_settings")
-      class_name = class_name.gsub("::", "_")
-    end
-
-    # and elements
-    if class_name.include?("elements")
-      class_name = self.name.downcase.singularize
-      class_name = class_name.gsub("::", "_")
-    end
-
-    setting = SettingInterface.new(Settings)
     data_type = DataType.new()
-
-    # pull in the fields
-    fields = setting.fetch_setting("views.#{class_name}.new")
-
-    # pull in configuration
-    config = setting.fetch_setting("views.#{class_name}.config")
 
     # removing non payloadable fields
     rejected_types = %w(header association dropdown).freeze
 
+    # loading non payloadable fields from the config
     rejected_names = config&.rejected_field_names.split(" ")
 
+    # removing both filed types and field names from the fields array
     fields = fields.reject { |field| rejected_types.include?(field[1].type) }
     fields = fields.reject { |field| rejected_names.include?(field[0].to_s) }
 
-    # adding payload
+    # adding fields and validations to the model utilizing Payloadble concern
+    # The validations added on update. This allows for items such as elements
+    # to be created without any of the required fields filled out.
     fields.each do |field|
       content_attr field[0], data_type.which?(field[1].type)
       validates_presence_of field[0], on: :update if field[1].required
     end
 
-    # setting defaults
+    # Setting defaults for new keys. This is useful for things like Site Settings
+    # It allows us to add new keys, and have the defaults be automatically set
+    # Every time the model is reloaded.
     if config&.set_defaults
       instance = self.first_or_create!
 
