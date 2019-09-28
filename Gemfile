@@ -46,7 +46,7 @@ gem "phonelib"
 gem "iso_country_codes"
 gem "countries"
 
-# gem "rack-mini-profiler"
+gem "rack-mini-profiler"
 
 # Pagination
 gem "kaminari", github: "kaminari/kaminari", branch: "master"
