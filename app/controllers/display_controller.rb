@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class DisplayController < MetaController
-  before_action :entry_class
   before_action :fetch_categories, only: [:index]
   before_action :set_index_seo_meta, only: [:index]
   before_action :find_related_content, only: [:show]
@@ -15,12 +14,12 @@ class DisplayController < MetaController
 
   def index
     @entries = if params[:category]
-      entry_class.published.joins(:category)
+      component.klass.published.joins(:category)
                   .where(categories: { slug: params[:category] })
                   .order("published_date desc")
                   .page params[:page]
     else
-      entry_class.all.published.order("published_date desc").page params[:page]
+      component.klass.all.published.order("published_date desc").page params[:page]
     end
     authorize @entries
   end
@@ -55,7 +54,7 @@ class DisplayController < MetaController
       track(
         event: "Viewed Content",
         props: {
-            type: component_name.downcase.singularize,
+            type: component.name.downcase.singularize,
             id: @entry.id,
             name: @entry.name,
             slug: @entry.slug,

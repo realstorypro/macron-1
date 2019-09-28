@@ -39,7 +39,7 @@ module Admin
         permission: policy(@entry).destroy?,
         data: {
           method: "delete",
-          confirm: "Are you sure you want to delete this #{component_name.downcase.singularize}?"
+          confirm: "Are you sure you want to delete this #{component.name.downcase.singularize}?"
         }
       )
 
@@ -86,7 +86,7 @@ module Admin
     end
 
     def set_breadcrumb
-      semantic_breadcrumb component_name, index_path("admin")
+      semantic_breadcrumb component.name, index_path("admin")
     end
   end
 end
