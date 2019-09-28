@@ -31,7 +31,16 @@ module Admin
       end
 
       semantic_breadcrumb @entry.email, "#"
+
+      # The crud.coffee widget needs this in order to re-load the page after edit
+      response_status :success
+
       render "admin/crud/show"
+    end
+
+    def update
+      @entry.admin_applying_update = true
+      super
     end
 
     # handles banning users

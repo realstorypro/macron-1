@@ -63,20 +63,20 @@ class DisplayController < MetaController
         }
       )
     end
-  
+
     def track_promo
       return true if @promo.length == 0
       track(
-          event: "Promo Viewed",
-          props: {
-            id: @promo.last.id,
-            name: @promo.last.name,
-          }
+        event: "Promo Viewed",
+        props: {
+          id: @promo.last.id,
+          name: @promo.last.name,
+        }
       )
     end
 
     def store_location
-        session[:current_location] = request.fullpath
+      session[:current_location] = request.fullpath
       end
 
     def fetch_categories
