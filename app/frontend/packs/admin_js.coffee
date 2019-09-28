@@ -1,10 +1,14 @@
 import {} from 'jquery-ujs'
-import uploadcare from 'uploadcare-widget'
+
 import Turbolinks from 'turbolinks'
 import semantic_js from '../semantic/dist/semantic.min'
 
 import Chartkick from "chartkick"
 import Chart from "chart.js"
+
+import uploadcare from 'uploadcare-widget'
+import uploadcareTabEffects from 'uploadcare-widget-tab-effects'
+uploadcare.registerTab('preview', uploadcareTabEffects)
 
 Turbolinks.start()
 

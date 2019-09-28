@@ -1,8 +1,9 @@
-= content_for :microdata
-  = render 'microdata'
-= component 'article details'
-  - @entry.areas.select do |area|
-    - if area.type.include?('Header')
-      - area.elements.each do |element|
-        == Elements::ElementCell.(element)
-  = render 'partials/show_content'
+- cache @entry
+  = content_for :microdata
+    = render 'microdata'
+  = component 'article details'
+    - @entry.areas.select do |area|
+      - if area.type.include?('Header')
+        - area.elements.each do |element|
+          == Elements::ElementCell.(element)
+    = render 'partials/show_content'
