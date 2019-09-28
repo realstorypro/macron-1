@@ -19,7 +19,7 @@ describe Admin::CrudController, type: :controller do
   end
 
   def controller_class
-    controller.instance_variable_get(:@entry_class)
+    controller.instance_variable_get(:@component).klass
   end
 
   def controller_entry(controller)

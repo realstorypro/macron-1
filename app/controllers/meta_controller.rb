@@ -4,22 +4,20 @@ class MetaController < ApplicationController
   include SettingsHelper
   include PathHelper
 
-  before_action :entry_class
-  before_action :component_name, only: %i[create update destroy]
   before_action :load_entry, only: %i[show edit update destroy]
 
   def index
-    @entries = entry_class.all.order("name")
+    @entries = component.klass.all.order("name")
     authorize @entries
   end
 
   def show
-    # needed for the the CRUD widget to re-load the page on edit
+    # The crud.coffee widget needs this in order to re-load the page after edit
     response_status :success
   end
 
   def new
-    @entry = entry_class.new
+    @entry = component.klass.new
     @colors = Color.all
     authorize @entry
     render :new, layout: false
@@ -31,9 +29,9 @@ class MetaController < ApplicationController
   end
 
   def create
-    @entry = entry_class.new(entry_params)
+    @entry = component.klass.new(entry_params)
     if @entry.save
-      flash[:success] = "#{component_name} was successfully created."
+      flash[:success] = "#{component.name} was successfully created."
       response_status :success
       response_redirect helpers.meta_show_path(@entry, determine_namespace)
     else
@@ -44,7 +42,7 @@ class MetaController < ApplicationController
 
   def update
     if @entry.update(entry_params)
-      flash[:success] = "#{component_name} was successfully updated."
+      flash[:success] = "#{component.name} was successfully updated."
       response_status :success
       redirect_back(fallback_location: admin_root_path, turbolinks: false)
     else
@@ -55,43 +53,36 @@ class MetaController < ApplicationController
 
   def destroy
     @entry.destroy
-    flash[:success] = "#{component_name} was successfully updated."
+    flash[:success] = "#{component.name} was successfully updated."
     response_status :success
     redirect_to helpers.meta_index_path determine_namespace
   end
 
     private
-      # returns the entry class
-      def entry_class
-        @entry_class ||= settings("components.#{params[:component]}.klass", fatal_exception: true).classify.constantize
-      end
-
-      # returns the component name
-      def component_name
-        @component_name ||= settings("components.#{params[:component]}.name")
+      # loads a component based the component key
+      def component
+        @component ||= Core::Component.new(key: params[:component])
       end
 
       def load_entry
-        @entry = if slugged?(entry_class)
-          entry_class.friendly.find(params[:id])
+        @entry = if slugged?(component.klass)
+          component.klass.friendly.find(params[:id])
         else
-          entry_class.find(params[:id])
+          component.klass.find(params[:id])
         end
         authorize @entry
       end
 
       def entry_params
-        allowed_attrs = set_allowed_attrs
-        component_class = settings("components.#{params[:component]}.klass").downcase
-        # we only want the class name without any other prefxes
-        component_class = component_class.split("::").last.to_sym
-        params.require(component_class).permit(*allowed_attrs)
+        component = Core::Component.new(key: params[:component])
+        allowed_attrs = set_allowed_attrs(component)
+        params.require(component.classpath).permit(*allowed_attrs)
       end
 
-      # sets the allowed attributes
-      def set_allowed_attrs
+      # sets the allowed attributes based on the component configuration
+      def set_allowed_attrs(component)
+        fields = component.view("new")
         allowed_attrs = %i[id]
-        fields = settings("views.#{params[:component]}.new", fatal_exception: true)
         fields.each do |field|
           case field[1].type
           when "association" then allowed_attrs.append(Hash["#{node_name(field).to_s.singularize}_ids", []])
