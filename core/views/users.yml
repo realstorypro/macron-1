@@ -4,9 +4,6 @@ views:
       set_defaults: false
       rejected_field_names: 'name slug published_date'
     new:
-      email:
-        label: 'Email'
-        type: 'string'
       roles:
         label: 'Role'
         type: 'association_dropdown'
@@ -34,8 +31,14 @@ views:
       meta_header:
         type: 'header'
         text: 'Meta'
+      username:
+        label: 'User Name'
+        type: 'string'
       email:
         label: 'Email'
+        type: 'string'
+      phone_number:
+        label: 'Phone'
         type: 'string'
       created_at:
         label: 'Joined'
@@ -43,17 +46,53 @@ views:
       roles:
         label: 'Role'
         type: 'unlinked_list'
-      profile_header:
-        type: 'header'
-        text: 'Profile'
-      username:
-        label: 'User Name'
-        type: 'string'
       verified:
         label: 'Verified Profile'
         type: 'string'
         association: 'profile'
+      profile_header:
+        type: 'header'
+        text: 'Profile'
       avatar_with_default:
         label: 'Avatar'
         type: 'image'
+        association: 'profile'
+      cover:
+        label: 'Profile Cover'
+        type: 'image'
+        association: 'profile'
+      first_name:
+        label: 'First Name'
+        type: 'string'
+        association: 'profile'
+      last_name:
+        label: 'Last Name'
+        type: 'string'
+        association: 'profile'
+      bio:
+        label: 'Bio'
+        type: 'text'
+        association: 'profile'
+      job:
+        label: 'Job'
+        type: 'text'
+        association: 'profile'
+      education:
+        label: 'Education'
+        type: 'text'
+        association: 'profile'
+      url:
+        label: 'Website'
+        type: 'text'
+        association: 'profile'
+      web_header:
+        type: 'header'
+        text: 'Social Media'
+      twitter:
+        label: 'Twitter'
+        type: 'text'
+        association: 'profile'
+      instagram:
+        label: 'Instagram'
+        type: 'text'
         association: 'profile'
