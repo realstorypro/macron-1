@@ -38,6 +38,11 @@ module Admin
       render "admin/crud/show"
     end
 
+    def update
+      @entry.admin_applying_update = true
+      super
+    end
+
     # handles banning users
     def ban
       load_entry

@@ -15,10 +15,8 @@ class Profile < ApplicationRecord
 
   def erase_profile!
     self.avatar = nil
-    self.location = nil
-    self.age = nil
-    self.signature = nil
-    self.title = nil
+    self.cover = nil
+    self.bio = nil
     self.twitter = nil
     self.instagram = nil
     self.url = nil
