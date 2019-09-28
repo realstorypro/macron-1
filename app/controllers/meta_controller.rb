@@ -86,22 +86,15 @@ class MetaController < ApplicationController
         authorize @entry
       end
 
-      # used by both 'create' and 'update' actions
-      # the require namespace for is generated from the class name
-      # the module namespace is removed.
       def entry_params
-        allowed_attrs = set_allowed_attrs
-        component_class = @component.self.klass.downcase
-
-        # we only want the class name without any other prefxes
-        component_class = component_class.split("::").last.to_sym
-
-        params.require(component_class).permit(*allowed_attrs)
+        component = Core::Component.new(key: params[:component])
+        allowed_attrs = set_allowed_attrs(component)
+        params.require(component.classpath).permit(*allowed_attrs)
       end
 
       # sets the allowed attributes based on the component configuration
-      def set_allowed_attrs
-        fields = @component.view("new")
+      def set_allowed_attrs(component)
+        fields = component.view("new")
         allowed_attrs = %i[id]
         fields.each do |field|
           case field[1].type

@@ -39,6 +39,12 @@ module Core
       @self.name
     end
 
+    # @return [String] returns a classpath, which
+    # can be used to set the required params
+    def classpath
+      @self.klass.downcase.gsub("::", "_")
+    end
+
     ##### Component Lookups #####
 
     # pass a component name and get a component back
