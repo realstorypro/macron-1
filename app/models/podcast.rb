@@ -4,7 +4,8 @@ class Podcast < Entry
   include Autoloadable
   include Activitible
 
-  before_save :embed_audio
+  # disabling this. we probably wont use it, because of areas and embeds.
+  # before_save :embed_audio
   content_attr :embedded_audio, :string
 
   validates_presence_of :category

@@ -15,7 +15,7 @@ module Admin
           data: { widget: "clicker", action: "click" }
         )
       end
-      @entries = entry_class.all.order("users.created_at desc")
+      @entries = component.klass.all.order("users.created_at desc")
       render "admin/crud/index"
     end
 
@@ -36,14 +36,12 @@ module Admin
 
     # handles banning users
     def ban
-      entry_class
       load_entry
       @entry.ban!
       redirect_to helpers.meta_show_path @entry.id, determine_namespace
     end
 
     def unban
-      entry_class
       load_entry
       @entry.unban!
       redirect_to helpers.meta_show_path @entry.id, determine_namespace
@@ -51,42 +49,36 @@ module Admin
 
     # handles verifying users
     def verify
-      entry_class
       load_entry
       @entry.verify_profile!
       redirect_to helpers.meta_show_path @entry.id, determine_namespace
     end
 
     def unverify
-      entry_class
       load_entry
       @entry.unverify_profile!
       redirect_to helpers.meta_show_path @entry.id, determine_namespace
     end
 
     def enable_help
-      entry_class
       load_entry
       @entry.enable_help!
       redirect_back(fallback_location: admin_root_path)
     end
 
     def disable_help
-      entry_class
       load_entry
       @entry.disable_help!
       redirect_back(fallback_location: admin_root_path)
     end
 
     def enable_advanced
-      entry_class
       load_entry
       @entry.enable_advanced!
       redirect_back(fallback_location: admin_root_path)
     end
 
     def disable_advanced
-      entry_class
       load_entry
       @entry.disable_advanced!
       redirect_back(fallback_location: admin_root_path)
@@ -102,7 +94,7 @@ module Admin
           permission: policy(@entry).destroy?,
           data: {
             method: "delete",
-            confirm: "Are you sure you want to delete this #{component_name.downcase.singularize}?"
+            confirm: "Are you sure you want to delete this #{component.name.downcase.singularize}?"
           }
         )
       end
