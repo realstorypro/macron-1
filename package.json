@@ -91,6 +91,7 @@
     "underscore": "^1.8.3",
     "uploadcare": "^0.4.5",
     "uploadcare-widget": "^3.6.1",
+    "uploadcare-widget-tab-effects": "^1.4.6",
     "v-tooltip": "^2.0.1",
     "velocity-animate": "^1.5.2",
     "vue": "^2.5.16",
