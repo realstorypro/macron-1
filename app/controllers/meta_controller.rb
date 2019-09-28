@@ -4,7 +4,6 @@ class MetaController < ApplicationController
   include SettingsHelper
   include PathHelper
 
-  before_action :load_component
   before_action :entry_class
   before_action :component_name, only: %i[create update destroy]
   before_action :load_entry, only: %i[show edit update destroy]
@@ -15,7 +14,7 @@ class MetaController < ApplicationController
   end
 
   def show
-    # The CRUD JS widget needs this in order to re-load the page after edit
+    # The crud.coffee widget needs this in order to re-load the page after edit
     response_status :success
   end
 
@@ -34,7 +33,7 @@ class MetaController < ApplicationController
   def create
     @entry = entry_class.new(entry_params)
     if @entry.save
-      flash[:success] = "#{component_name} was successfully created."
+      flash[:success] = "#{component.name} was successfully created."
       response_status :success
       response_redirect helpers.meta_show_path(@entry, determine_namespace)
     else
@@ -45,7 +44,7 @@ class MetaController < ApplicationController
 
   def update
     if @entry.update(entry_params)
-      flash[:success] = "#{component_name} was successfully updated."
+      flash[:success] = "#{component.name} was successfully updated."
       response_status :success
       redirect_back(fallback_location: admin_root_path, turbolinks: false)
     else
@@ -56,25 +55,20 @@ class MetaController < ApplicationController
 
   def destroy
     @entry.destroy
-    flash[:success] = "#{component_name} was successfully updated."
+    flash[:success] = "#{component.name} was successfully updated."
     response_status :success
     redirect_to helpers.meta_index_path determine_namespace
   end
 
     private
-      # loads a component based the id
-      def load_component
+      # loads a component based the component key
+      def component
         @component ||= Core::Component.new(key: params[:component])
       end
 
       # returns a class object for the entry
       def entry_class
-        @entry_class ||= @component.klass
-      end
-
-      # returns the component name
-      def component_name
-        @component.name
+        @entry_class ||= component.klass
       end
 
       def load_entry
