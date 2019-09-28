@@ -4,12 +4,10 @@ class MetaController < ApplicationController
   include SettingsHelper
   include PathHelper
 
-  before_action :entry_class
-  before_action :component_name, only: %i[create update destroy]
   before_action :load_entry, only: %i[show edit update destroy]
 
   def index
-    @entries = entry_class.all.order("name")
+    @entries = component.klass.all.order("name")
     authorize @entries
   end
 
@@ -19,7 +17,7 @@ class MetaController < ApplicationController
   end
 
   def new
-    @entry = entry_class.new
+    @entry = component.klass.new
     @colors = Color.all
     authorize @entry
     render :new, layout: false
@@ -31,7 +29,7 @@ class MetaController < ApplicationController
   end
 
   def create
-    @entry = entry_class.new(entry_params)
+    @entry = component.klass.new(entry_params)
     if @entry.save
       flash[:success] = "#{component.name} was successfully created."
       response_status :success
@@ -66,16 +64,11 @@ class MetaController < ApplicationController
         @component ||= Core::Component.new(key: params[:component])
       end
 
-      # returns a class object for the entry
-      def entry_class
-        @entry_class ||= component.klass
-      end
-
       def load_entry
-        @entry = if slugged?(entry_class)
-          entry_class.friendly.find(params[:id])
+        @entry = if slugged?(component.klass)
+          component.klass.friendly.find(params[:id])
         else
-          entry_class.find(params[:id])
+          component.klass.find(params[:id])
         end
         authorize @entry
       end
