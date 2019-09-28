@@ -67,7 +67,7 @@ class User < ApplicationRecord
   # the account is created without a phone number
   # we only want to validate presence on the update
   # unless the update is performed by an admin
-  validates_presence_of :phone_number, on: :update, unless: -> { defined?(admin_applying_update) && admin_applying_update == true}
+  validates_presence_of :phone_number, on: :update, unless: -> { defined?(admin_applying_update) && admin_applying_update == true }
 
   # we are checking for an areacode + phone number uniquness
   # in the future we may have to allow for the same phone number

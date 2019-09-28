@@ -20,14 +20,10 @@ module Core
     ##### Accessors #####
 
     # @return [String] a unique key by which component can be accessed.
-    def key
-      @key
-    end
+    attr_reader :key
 
     # @return [Object] the YML interpretation of component
-    def self
-      @self
-    end
+    attr_reader :self
 
     # @return [Class] returns a class tied to a component.
     def klass
@@ -101,11 +97,9 @@ module Core
     end
 
     private
-
-    # shortcut for site settings
-    def s(path)
-      SettingProxy.instance.s(path)
-    end
-
+      # shortcut for site settings
+      def s(path)
+        SettingProxy.instance.s(path)
+      end
   end
 end

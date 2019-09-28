@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
 settings = SettingProxy.instance
 
 describe Core::Component, "component tester for macron-1" do
-  @components = settings.fetch('components')
+  @components = settings.fetch("components")
 
   @components.each do |component|
     it "#{component[1].name} can create a component from symbol name" do
@@ -24,7 +26,7 @@ describe Core::Component, "component tester for macron-1" do
   end
 
   it "it can create a component from a string class name" do
-    component = Core::Component.new(klass: 'Tag')
+    component = Core::Component.new(klass: "Tag")
   end
 
   it "it can create a component from an actual class" do
@@ -32,14 +34,12 @@ describe Core::Component, "component tester for macron-1" do
   end
 
   it "can access config" do
-    component = Core::Component.new(klass: 'Tag')
+    component = Core::Component.new(klass: "Tag")
     component.config
   end
 
   it "can access new view" do
-    component = Core::Component.new(klass: 'Tag')
-    component.view('new')
+    component = Core::Component.new(klass: "Tag")
+    component.view("new")
   end
-
-
 end
