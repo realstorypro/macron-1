@@ -6,14 +6,20 @@ module Activitible
   included do
     has_many :activities, as: :subject
     after_create :log_activity
+    after_save :publishing_checks
     before_destroy :destroy_activity
 
-    # logs the activity for the class
+    # only log activity if the class doesn't
+    # respond to the publish date
     def log_activity
+      create_activity unless self.respond_to?(:published_date)
+    end
+
+    def create_activity
       Activity.create(
-        actor: self.user,
-        subject: self,
-        action: "created"
+          actor: self.user,
+          subject: self,
+          action: "created"
       )
     end
 
@@ -22,6 +28,21 @@ module Activitible
         actor: self.user,
         subject: self
       ).first.destroy
+    end
+
+    def publishing_checks
+      return true unless self.respond_to?(:published_date)
+
+      # destroy old activities if entry changed published date
+      # or user id.
+      if  self.saved_changes.include?("published_date") || self.saved_changes.include?("user_id")
+        Activity.where( subject: self ).delete_all
+      end
+
+      # create a publishing record
+      unless self.published_date.nil?
+        create_activity
+      end
     end
   end
 end
