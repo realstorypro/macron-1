@@ -6,7 +6,7 @@ FactoryBot.define do
     description { Faker::Name.name }
     body { Faker::Demographic.race }
     long_title { Faker::Name.name }
-    published_date { Faker::Date.forward(7) }
+    published_date { Faker::Date.backward(7) }
     landscape_image { Faker::Avatar.image }
     card_image { Faker::Avatar.image }
     image_alt { Faker::Name.name }
