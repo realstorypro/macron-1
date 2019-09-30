@@ -18,9 +18,6 @@ class Entry < ApplicationRecord
   after_update :ping_sitemap unless Rails.env.test? || Rails.env.development?
   after_create :ping_sitemap unless Rails.env.test? || Rails.env.development?
 
-  # TODO: This needs to be implemented
-  # after_update :delete_old_author_activity
-
   belongs_to :user, optional: true
   has_many :comments, as: :commentable
   has_many :areas, as: :areable

@@ -15,11 +15,5 @@ class Activity < ApplicationRecord
       "activity_#{self.actor.id}",
         activity_id: self.id
     )
-
-    # TODO: Remove this .. maybe?
-    # ActionCable.server.broadcast(
-    #     "activities",
-    #     activity_id: self.id
-    # )
   end
 end
