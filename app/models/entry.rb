@@ -25,7 +25,7 @@ class Entry < ApplicationRecord
 
   # Security
   def self.policy_class
-    MetaPolicy
+    EntryPolicy
   end
 
   def ping_sitemap

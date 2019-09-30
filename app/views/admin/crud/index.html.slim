@@ -1,4 +1,4 @@
-- if policy(@entries).show?
+- if policy(@entries).index?
   = segment class: 'details basic no padding', dynamic: :on, id: 'details'
     = grid "#{'divided' if current_user.help}"
       = column size: (current_user.help ? 10 : 16)
