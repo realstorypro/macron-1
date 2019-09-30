@@ -17,6 +17,15 @@ class Category < ApplicationRecord
   has_many :events
   has_many :products
 
+  before_destroy :unpublish_entries
+
+  def unpublish_entries
+    self.entries.each do |entry|
+      entry.published_date = nil
+      entry.save(validate: false)
+    end
+  end
+
   def self.policy_class
     MetaPolicy
   end
