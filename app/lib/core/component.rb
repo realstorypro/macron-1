@@ -38,7 +38,13 @@ module Core
     # @return [String] returns a classpath, which
     # can be used to set the required params
     def classpath
-      @self.klass.downcase.gsub("::", "_")
+      # todo this is an ugly hack and should be obliterated once
+      # the site settings are refactored. at that point we should
+      # uncomment the beauty below
+      # @self.klass.downcase.gsub("::", "_")
+
+      classpath = @self.klass.downcase.gsub("::", "_")
+      classpath.gsub("sitesettings", "site_settings")
     end
 
     ##### Component Lookups #####

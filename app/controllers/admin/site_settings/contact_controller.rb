@@ -25,11 +25,6 @@ module Admin::SiteSettings
         @entry = SiteSettings::Contact.instance
       end
 
-      def entry_params
-        allowed_attrs = set_allowed_attrs
-        params.require(:site_settings_contact).permit(*allowed_attrs)
-      end
-
       def set_breadcrumb
         semantic_breadcrumb "Settings", admin_settings_root_path
         semantic_breadcrumb "Contact", admin_settings_contact_path
