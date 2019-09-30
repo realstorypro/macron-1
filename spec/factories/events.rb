@@ -13,7 +13,7 @@ FactoryBot.define do
     location { Faker::Demographic.race }
     long_title { Faker::Name.name }
     long_summary { Faker::Demographic.race }
-    published_date { Faker::Date.forward(7) }
+    published_date { Faker::Date.backward(7) }
     fullscreen_image { Faker::Avatar.image }
     landscape_image { Faker::Avatar.image }
     card_image { Faker::Avatar.image }

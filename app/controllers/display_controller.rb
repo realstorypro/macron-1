@@ -27,6 +27,7 @@ class DisplayController < MetaController
   def show
     # caches the show content for 30 minutes
     expires_in 30.minutes
+    authorize @entry
   end
 
   private

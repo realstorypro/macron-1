@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :article do
     name { Faker::Name.name }
     description { Faker::Name.name }
-    published_date { Faker::Date.forward(7) }
+    published_date { Faker::Date.backward(7) }
     landscape_image { Faker::Avatar.image }
     card_image { Faker::Avatar.image }
     image_alt { Faker::Name.name }
