@@ -1,18 +1,35 @@
 - cache @entry
   = content_for :microdata
     = render 'microdata'
+    = render 'partials/breadcrumb_markup'
 
-  = h2 'breadcrumb'
-    .ui.breadcrumb.large
-      .section = link_to params[:component].capitalize, meta_index_path
-      = divider text: '/'
-      .section = link_to params[:category].capitalize, send(meta_category_path, params[:category])
 
   = component 'article details'
+    = h2 'breadcrumb'
+      .ui.breadcrumb.large
+        .section = link_to params[:component].capitalize, meta_index_path
+        = divider text: '/'
+        .section = link_to params[:category].capitalize, send(meta_category_path, params[:category])
+
     - @entry.areas.select do |area|
       - if area.type.include?('Header')
         - area.elements.each do |element|
           == Elements::ElementCell.(element)
+
+    = widget 'normal rich text'
+      - @entry.areas.select do |area|
+        - if area.type.include?('Content')
+          - area.elements.each do |element|
+            == Elements::ElementCell.(element)
+
+      - @entry.areas.select do |area|
+        - if area.type.include?('Reference') && area.elements.count > 0
+          = header class: 'divider horizontal', tag: :h6
+            = "Reference".pluralize(area.elements.count)
+          = list 'bulleted relaxed'
+            - area.elements.each do |element|
+              == Elements::ElementCell.(element)
+
     = render 'partials/show_content'
 
   .fullversion

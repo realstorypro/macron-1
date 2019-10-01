@@ -1,22 +1,8 @@
-= content_for :microdata
-  = render 'partials/breadcrumb_markup'
 = container 'wide'
   = grid
     = row
       = column computer: 11, tablet: 16, mobile: 16, class: "context"
         = widget 'normal rich text'
           // render the content area
-          - @entry.areas.select do |area|
-            - if area.type.include?('Content')
-              - area.elements.each do |element|
-                == Elements::ElementCell.(element)
 
             // render the reference area
-          - @entry.areas.select do |area|
-            - if area.type.include?('Reference') && area.elements.count > 0
-              = header class: 'divider horizontal', tag: :h6
-                = icon 'graduation cap'
-                = "Reference".pluralize(area.elements.count)
-              = list 'bulleted relaxed'
-                - area.elements.each do |element|
-                  == Elements::ElementCell.(element)
