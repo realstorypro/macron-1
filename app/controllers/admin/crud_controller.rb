@@ -61,7 +61,7 @@ module Admin
           url: send(preview_path, @entry.category.slug, @entry.slug),
           permission: policy(@entry).edit?,
           data: { widget: "previewer", action: "desktop" }
-        )
+        ) unless @entry.category.nil?
 
         add_to_actions(
           text: "Mobile Preview",
@@ -70,7 +70,7 @@ module Admin
           url: send(preview_path, @entry.category.slug, @entry.slug),
           permission: policy(@entry).edit?,
           data: { widget: "previewer", action: "mobile" }
-        )
+        ) unless @entry.category.nil?
 
         add_to_actions(
           text: "Writer Mode",
@@ -79,7 +79,7 @@ module Admin
           url: send(preview_path, @entry.category.slug, @entry.slug),
           permission: policy(@entry).edit?,
           data: { widget: "focus", action: "focus" }
-        )
+        ) unless @entry.category.nil?
       end
 
       semantic_breadcrumb @entry.name.truncate(30), "#"

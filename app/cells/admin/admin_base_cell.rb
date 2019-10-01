@@ -120,7 +120,7 @@ module Admin
       end
 
       # applies the scope to the query if one is defined
-      value = value.send scope(field) if scope(field)
+      value = value.send scope(field) if scope(field) unless value.nil?
       value
     end
 
