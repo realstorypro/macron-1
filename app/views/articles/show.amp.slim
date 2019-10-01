@@ -1,0 +1,19 @@
+- cache @entry
+  = content_for :microdata
+    = render 'microdata'
+
+  = h2 'breadcrumb'
+    .ui.breadcrumb.large
+      .section = link_to params[:component].capitalize, meta_index_path
+      = divider text: '/'
+      .section = link_to params[:category].capitalize, send(meta_category_path, params[:category])
+
+  = component 'article details'
+    - @entry.areas.select do |area|
+      - if area.type.include?('Header')
+        - area.elements.each do |element|
+          == Elements::ElementCell.(element)
+    = render 'partials/show_content'
+
+  .fullversion
+    = link_to 'Read Full Version', "#"

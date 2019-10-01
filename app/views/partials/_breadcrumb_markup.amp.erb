@@ -1,0 +1,22 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "<%= params[:component].capitalize %>",
+    "item": "<%= ss('general.url') + meta_index_path %>"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "<%= params[:category].capitalize %>",
+    "item": "<%= ss('general.url') + send(meta_category_path, params[:category]) %>"
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "name": "<%= @entry.name %>",
+    "item": "<%= ss('general.url') + send(meta_category_path, params[:category]) + "/#{@entry.slug}" %>"
+  }]
+}
+</script>
