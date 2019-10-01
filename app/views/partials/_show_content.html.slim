@@ -16,7 +16,7 @@
               - @entry.areas.select do |area|
                 - if area.type.include?('Content')
                   - area.elements.each do |element|
-                    == Elements::ElementCell.(element)
+                    == Elements::ElementCell.(element, request: request)
 
                 // render the reference area
               - @entry.areas.select do |area|
@@ -26,8 +26,7 @@
                     = "Reference".pluralize(area.elements.count)
                   = list 'bulleted relaxed'
                     - area.elements.each do |element|
-                      == Elements::ElementCell.(element)
-
+                      == Elements::ElementCell.(element, request: request)
           = column computer: 5, tablet: 16, mobile: 16
             = segment 'basic sticky'
               = h5 'horizontal divider'

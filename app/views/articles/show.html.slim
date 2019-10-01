@@ -5,5 +5,5 @@
     - @entry.areas.select do |area|
       - if area.type.include?('Header')
         - area.elements.each do |element|
-          == Elements::ElementCell.(element)
+          == Elements::ElementCell.(element, request: request)
     = render 'partials/show_content'

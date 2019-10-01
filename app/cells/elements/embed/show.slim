@@ -2,6 +2,9 @@
   - if model.embedded == false || model.embedded.blank?
     = h6 text: 'Embed Is Not Available (For The URL Inserted)', class: 'horizontal divider'
   - else
-    = model.embedded.html_safe
+    - if options[:request].format.symbol == :amp
+      = model.embedded_amp.html_safe
+    - else
+      = model.embedded.html_safe
 - else
   = h6 text: 'Embed (No URL Inserted)', class: 'horizontal divider'

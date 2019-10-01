@@ -4,6 +4,8 @@ html lang="en"
     = render 'layouts/partials/head'
     = render 'layouts/partials/org_microdata'
     = yield :microdata
+    - if @amped
+      link rel="amphtml" href=url_for(format: :amp, only_path: false)
 
   body class="#{controller_name} #{action_name.downcase.gsub('-',' ')}"
     = render 'layouts/partials/drawers'

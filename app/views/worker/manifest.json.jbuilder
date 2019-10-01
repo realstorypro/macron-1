@@ -5,6 +5,8 @@ json.short_name ss("general.name")
 json.lang "en-US"
 json.start_url "/"
 json.display "standalone"
+
+# TODO: pull from theme settings
 json.theme_color "#000"
 json.background_color "#000"
 

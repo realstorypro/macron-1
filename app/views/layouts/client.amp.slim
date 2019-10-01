@@ -1,0 +1,34 @@
+doctype html
+html[amp lang="en"]
+  head
+    link[rel="canonical" href=url_for(only_path: false)]
+    - if ss('theme.branding.icon') && ss('theme.branding.icon').blank?
+      = display_meta_tags reverse: true, site: ss('general.name'), description: ss('general.description'),
+              og: {site_name: ss('general.name')},
+              twitter: {site: ss('contact.twitter')}
+    - else
+      = display_meta_tags reverse: true, site: ss('general.name'), description: ss('general.description')
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"]
+    link rel="manifest" href="/manifest.json"
+
+    script[async src="https://cdn.ampproject.org/v0.js"]
+    script[async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"]
+    script[async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"]
+
+
+    = yield :microdata
+    style[amp-boilerplate]
+      | body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    noscript
+      style[amp-boilerplate]
+        | body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+    - if Rails.application.assets && Rails.application.assets['amp/init']
+      style[amp-custom]
+        = Rails.application.assets['amp/init'].to_s.html_safe
+    - else
+      style[amp-custom]
+        = File.read("#{Rails.root}/public#{stylesheet_path('amp/init', host: nil)}")
+  body
+    amp-install-serviceworker[src= "/worker.js" layout= "nodisplay"]
+    = yield
