@@ -35,6 +35,11 @@ module Core
       @self.name
     end
 
+    # @return [Boolean] a setting whether the component is amped
+    def amped?
+      @self.amped
+    end
+
     # @return [String] returns a classpath, which
     # can be used to set the required params
     def classpath

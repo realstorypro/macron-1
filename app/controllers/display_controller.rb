@@ -28,6 +28,7 @@ class DisplayController < MetaController
     # caches the show content for 30 minutes
     expires_in 30.minutes
     authorize @entry
+    @amped = true if component.amped?
   end
 
   private

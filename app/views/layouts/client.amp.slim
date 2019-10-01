@@ -1,7 +1,7 @@
 doctype html
 html[amp lang="en"]
   head
-    link[rel="canonical" href=url_for(format: :html, only_path: false)]
+    link[rel="canonical" href=url_for(only_path: false)]
     - if ss('theme.branding.icon') && ss('theme.branding.icon').blank?
       = display_meta_tags reverse: true, site: ss('general.name'), description: ss('general.description'),
               og: {site_name: ss('general.name')},

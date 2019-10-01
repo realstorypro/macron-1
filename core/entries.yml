@@ -12,6 +12,7 @@ components:
     klass: 'Article'
     path: 'articles'
     focusable: true
+    amped: true
     enabled: true
     areas:
       - header
@@ -40,6 +41,7 @@ components:
     klass: 'Discussion'
     path: 'discussions'
     focusable: true
+    amped: true
     enabled: true
     areas:
       - header
