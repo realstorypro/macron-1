@@ -4,7 +4,7 @@
     = render 'partials/breadcrumb_markup'
 
 
-  = component 'article details'
+  = component 'amp details'
     = h2 'breadcrumb'
       .ui.breadcrumb.large
         .section = link_to params[:component].capitalize, meta_index_path
@@ -14,13 +14,13 @@
     - @entry.areas.select do |area|
       - if area.type.include?('Header')
         - area.elements.each do |element|
-          == Elements::ElementCell.(element)
+          == Elements::ElementCell.(element, request: request)
 
     = widget 'normal rich text'
       - @entry.areas.select do |area|
         - if area.type.include?('Content')
           - area.elements.each do |element|
-            == Elements::ElementCell.(element)
+            == Elements::ElementCell.(element, request: request)
 
       - @entry.areas.select do |area|
         - if area.type.include?('Reference') && area.elements.count > 0
@@ -28,9 +28,9 @@
             = "Reference".pluralize(area.elements.count)
           = list 'bulleted relaxed'
             - area.elements.each do |element|
-              == Elements::ElementCell.(element)
+              == Elements::ElementCell.(element, request: request)
 
     = render 'partials/show_content'
 
   .fullversion
-    = link_to 'Read Full Version', "#"
+    = link_to 'Read Full Version', url_for(format: :html, only_path: false)
