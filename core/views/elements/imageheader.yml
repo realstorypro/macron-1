@@ -32,3 +32,11 @@ views:
         label: 'Landscape Image'
         type: 'image'
         size: ['2560','1456']
+      vertical_image:
+        label: 'Vertical Image'
+        type: 'image'
+        size: ['1456','2560']
+      alt_text:
+        label: 'Alt. Text'
+        type: 'string'
+        hint: 'Describe the image for visually impaired'

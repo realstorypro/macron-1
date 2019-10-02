@@ -1,5 +1,10 @@
 = fragment "header fullscreen #{model.color if model.respond_to?(:color)}"
-  == Vue::CoverCell.(nil, image: model.landscape_image)  if model.respond_to?(:landscape_image)
+
+  - if model.respond_to?(:landscape_image) && model.respond_to?(:vertical_image)
+    == Vue::CoverCell.(nil, landscape_image: model.landscape_image, vertical_image: model.vertical_image)
+  - elsif model.respond_to?(:landscape_image)
+    == Vue::CoverCell.(nil, image: model.landscape_image)
+
   = container
     = grid 'centered'
       = column computer: 14, tablet: 16, mobile: 16
