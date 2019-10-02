@@ -1,5 +1,5 @@
 = widget name: 'comments', id: 'comments', class: 'hidden', vue: :on, data: {user: current_user&.id, component: component, record: model.slug}
-  .posts v-if="comments && comments.length"
+  .posts v-if="comments && count"
     .post v-for="(comment, index) in comments"
       .meta
         .created

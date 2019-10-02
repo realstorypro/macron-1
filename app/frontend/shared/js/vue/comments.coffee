@@ -3,6 +3,7 @@ import Vent from '../core/vent'
 import Vue from 'vue/dist/vue.esm'
 import turbolinks_adapter from './mixins/turbolinks'
 
+import store from './store/comment_store'
 import axios from 'axios'
 import moment from 'moment'
 import _ from 'underscore'
@@ -40,48 +41,51 @@ class Comments
       components: { avatar, dropdown }
       data:
         comment_empty: true
-        comments: []
+        # comments: []
         current_user: $("##{widget.id}").data('user')
         component: $("##{widget.id}").data('component')
         record: $("##{widget.id}").data('record')
 
       mounted: ->
-        $R.options =
-          minHeight: '180px'
-          toolbarFixed: false
-          autoparseVideo: false
-          buttons: ['format','bold','ul','line']
-          buttonsHideOnMobile: ['format','ul','line']
-          formatting: ['p']
-          formattingAdd:
-            "large-header":
-              title: 'Large Header',
-              api: 'module.block.format',
-              args:
-                'tag': 'h2'
-            "small-header":
-              title: 'Small Header',
-              api: 'module.block.format',
-              args:
-                'tag': 'h4'
+        store.dispatch('loadComments', { @component, @record })
+
+        # $R.options =
+        #   minHeight: '180px'
+        #   toolbarFixed: false
+        #   autoparseVideo: false
+        #   buttons: ['format','bold','ul','line']
+        #   buttonsHideOnMobile: ['format','ul','line']
+        #   formatting: ['p']
+        #   formattingAdd:
+        #     "large-header":
+        #       title: 'Large Header',
+        #       api: 'module.block.format',
+        #       args:
+        #         'tag': 'h2'
+        #     "small-header":
+        #       title: 'Small Header',
+        #       api: 'module.block.format',
+        #       args:
+        #         'tag': 'h4'
 
 
-        $R "##{widget.id} .comment.box",
-          placeholder: "Type your reply here ..."
-          callbacks:
-            keyup: (e)=>
-              @comment_empty = $R("##{widget.id} .comment.box").editor.isEmpty()
+        # $R "##{widget.id} .comment.box",
+        #   placeholder: "Type your reply here ..."
+        #   callbacks:
+        #     keyup: (e)=>
+        #       @comment_empty = $R("##{widget.id} .comment.box").editor.isEmpty()
 
 
+
+      computed:
+        comments: ->
+          store.state.comments
+
+        count: ->
+          store.state.comments.length
 
       created: ->
-          axios.get('/comments/',
-            params:
-              component: @component
-              record_id: @record
-          ).then (response) =>
-            @comments = response.data.comments
-            $("##{widget.id}").removeClass('hidden')
+          $("##{widget.id}").removeClass('hidden')
 
 
       filters:
