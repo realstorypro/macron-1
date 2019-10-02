@@ -30,7 +30,6 @@ store = new (Vuex.Store)(
 
   actions:
     loadComments: ({commit}, {component, record}) ->
-      console.log 'loadComments', component, record
       axios.get("/comments/",
         params:
           component: component
@@ -46,10 +45,10 @@ store = new (Vuex.Store)(
     #     commit('clear_new_comments')
     #      commit('append_comments', response.data)
 
-    # subscribeToUpdaes: ({commit}, {user_id})->
-    #   cable.subscriptions.create { channel: 'ActivityChannel', user_id: user_id },
-    #     received: (data) ->
-    #       commit('add_new_comment', data.comment_id)
+    subscribeToUpdates: ({commit}, {component, record})->
+      cable.subscriptions.create { channel: 'CommentChannel', component: component, record: record},
+        received: (data) ->
+          commit('add_new_comment', data.comment_id)
 
 )
 

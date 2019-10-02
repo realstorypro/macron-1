@@ -1,15 +1,24 @@
 # frozen_string_literal: true
 
 class Comment < ApplicationRecord
-  before_save :sanitize_comment
-  belongs_to :commentable, polymorphic: true
-  has_many :comments, as: :commentable
-
   include Activitible
 
+  belongs_to :commentable, polymorphic: true
+  has_many :comments, as: :commentable
   belongs_to :user, counter_cache: true
 
   validates :body, presence: true
+
+  before_save :sanitize_comment
+  after_create :broadcast_activity
+
+
+  def broadcast_activity
+    # ActionCable.server.broadcast(
+    #     "activity_#{self.actor.id}",
+    #     activity_id: self.id
+    # )
+  end
 
   def self.policy_class
     CommentPolicy

@@ -47,33 +47,34 @@ class Comments
         record: $("##{widget.id}").data('record')
 
       mounted: ->
+        store.dispatch('subscribeToUpdates', { @component, @record })
         store.dispatch('loadComments', { @component, @record })
 
-        # $R.options =
-        #   minHeight: '180px'
-        #   toolbarFixed: false
-        #   autoparseVideo: false
-        #   buttons: ['format','bold','ul','line']
-        #   buttonsHideOnMobile: ['format','ul','line']
-        #   formatting: ['p']
-        #   formattingAdd:
-        #     "large-header":
-        #       title: 'Large Header',
-        #       api: 'module.block.format',
-        #       args:
-        #         'tag': 'h2'
-        #     "small-header":
-        #       title: 'Small Header',
-        #       api: 'module.block.format',
-        #       args:
-        #         'tag': 'h4'
+        $R.options =
+          minHeight: '180px'
+          toolbarFixed: false
+          autoparseVideo: false
+          buttons: ['format','bold','ul','line']
+          buttonsHideOnMobile: ['format','ul','line']
+          formatting: ['p']
+          formattingAdd:
+            "large-header":
+              title: 'Large Header',
+              api: 'module.block.format',
+              args:
+                'tag': 'h2'
+            "small-header":
+              title: 'Small Header',
+              api: 'module.block.format',
+              args:
+                'tag': 'h4'
 
 
-        # $R "##{widget.id} .comment.box",
-        #   placeholder: "Type your reply here ..."
-        #   callbacks:
-        #     keyup: (e)=>
-        #       @comment_empty = $R("##{widget.id} .comment.box").editor.isEmpty()
+        $R "##{widget.id} .comment.box",
+          placeholder: "Type your reply here ..."
+          callbacks:
+            keyup: (e)=>
+              @comment_empty = $R("##{widget.id} .comment.box").editor.isEmpty()
 
 
 
