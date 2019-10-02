@@ -28,7 +28,7 @@ html[amp lang="en"]
         = Rails.application.assets['amp/init'].to_s.html_safe
     - else
       style[amp-custom]
-        = File.read("#{Rails.root}/public#{stylesheet_path('amp/init', host: nil)}")
+        = File.read("#{Rails.root}/public#{stylesheet_path('amp/init', host: nil)}".gsub(Rails.application.config.action_controller.asset_host, ""))
   body
     amp-install-serviceworker[src= "/worker.js" layout= "nodisplay"]
     = yield

@@ -1,9 +1,9 @@
 - if model.image
   figure.image class="#{model.alignment if model.alignment}"
     - if options[:request].format.symbol == :amp
-      amp-img[src=model.image alt=model.alt_text width="537" height="522" layout="responsive"]
+      amp-img[src="#{model.image}#{model.alt_text.underscore}.#{model.format}" alt=model.alt_text width=model.width height=model.height layout="responsive"]
     - else
-      = image_tag model.image, class: image_class, alt: model.alt_text
+      = image_tag "#{model.image}#{model.alt_text.underscore}.#{model.format}", class: image_class, alt: model.alt_text
     - if model.caption
       p.caption
         em= model.caption

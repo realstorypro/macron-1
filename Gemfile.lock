@@ -223,6 +223,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
+    fastimage (2.1.7)
     ffi (1.11.1)
     fog-aws (3.5.2)
       fog-core (~> 2.1)
@@ -605,6 +606,7 @@ DEPENDENCIES
   erubis
   factory_bot_rails (< 5.0)
   faker (= 1.9.6)
+  fastimage
   fog-aws
   friendly_id (~> 5.1.0)
   good_ui!

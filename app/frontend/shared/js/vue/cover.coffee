@@ -37,13 +37,18 @@ class Cover
         @image = $(@.$options.el).find('.image')
         @overlay = $(@.$options.el).find('.overlay')
 
-        image_url =  $(@.$options.el).data('image')
-        @image.css('background-image', "url(#{image_url})")
+        @regular =  $(@.$options.el).data('image')
+        @landscape =  $(@.$options.el).data('landscape-image')
+        @vertical =  $(@.$options.el).data('vertical-image')
 
+        @set_image_source()
         @resize()
 
         this.$nextTick =>
-          window.addEventListener 'resize', @resize
+          #window.addEventListener 'resize', @resize
+          window.addEventListener 'resize', =>
+            @set_image_source()
+            @resize()
 
 
       methods:
@@ -58,6 +63,18 @@ class Cover
 
           @overlay.css('width',width)
           @overlay.css('height',height)
+
+        # we want to be able to simply pass an image and not worry about vertical vs landscape
+        # if we do pass both vertical and landscape images we want the mto switch based the size
+        set_image_source: ->
+          if @regular
+            @image.css('background-image', "url(#{@regular})")
+          else
+            if utils.is_mobile()
+              @image.css('background-image', "url(#{@vertical})")
+            else
+              @image.css('background-image', "url(#{@landscape})")
+
 
 
 export { Cover as default }
