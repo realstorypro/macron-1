@@ -6,4 +6,4 @@
 # Mime::Type.register "text/richtext", :rtf
 
 #  Adding AMP
-Mime::Type.register 'text/html', :amp
+Mime::Type.register_alias "text/html", :amp
