@@ -76,6 +76,7 @@ gem "cells-slim"
 gem "chartkick"
 gem "simple_form"
 gem "readingtime"
+gem "fastimage"
 gem "webpacker", "~> 3.5"
 
 # File Upload
