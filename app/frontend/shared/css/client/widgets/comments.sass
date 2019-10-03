@@ -120,21 +120,26 @@
         margin-top: 0
 
   .new.comment
-    padding: 1em 0.5em
+    padding: 0.3em 0em
     border: $w-comments-new-comment-border
+    width: auto !important
+    max-width: 100% !important
 
     h5
       margin-bottom: 1.5em
 
+  .submit.button
+    width: 50%
+    margin: 0
 
-    .submit.button, .button.reset
-      margin-top: 1em
+    @include media("<tablet")
+      width: 100%
 
-    .submit.button
-      margin-right: 5px
+    // ensuring the the hidden utility class
+    // is not overriding the behavior of hidden content
+    .hidden
+      display: block
 
-    .button.reset
-      margin-left: 5px
 
 
   .unregistered.segment
@@ -144,6 +149,13 @@
       margin-bottom: 2em
 
 // Redactor Styling
+.redactor-box.redactor-styles-on
+  border: 0 !important
+
+.redactor-toolbar a, .redactor-air a
+  border-radius: 0 !important
+  box-shadow: 0px 0px 2px #00000075 !important
+
 
 .redactor-dropdown-item-large-header
   text-transform: uppercase

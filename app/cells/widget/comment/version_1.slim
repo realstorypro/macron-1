@@ -46,17 +46,17 @@
         = text class: 'centered'
           = "Bad news, your account has been banned and your ability to post replies has been disabled. On the upside, you can still view the site and read all of its content. If you believe this was done in error or would like to appeal our decision please send us an email at #{mail_to(support_email, support_email)}."
     - else
-      = h5 text: 'Something to add?'
-  = segment 'attached'
-    /textarea.comment.box
-  = buttons 'btwo two bottom attached'
-    = button class: 'primary submit', v:{'bind:class': '{disabled: comment_empty}'}
-      = icon 'pencil alternate'
-      | Post
-    = button class: 'reset secondary', v:{'bind:class': '{disabled: comment_empty}', 'on:click.prevent': 'reset_comment_box'}
-      = icon 'eraser'
-      | Erase
-
+      = header class: 'horizontal divider', tag: :h6
+        = icon 'comments'
+        | Something to add?
+      = segment 'new comment'
+        textarea.comment.box
+      = segment 'basic no padding center aligned'
+        = button class: 'secondary large submit vertical animated'
+          = content 'visible'
+            | SPEAK UP
+          = content 'hidden'
+            = icon 'volume up'
   = segment class: 'center aligned unregistered', v: {if: "!current_user"}
     = h5 class: 'centered dividing', text: 'Something to add? Join the discussion!'
     = buttons
