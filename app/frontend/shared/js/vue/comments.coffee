@@ -102,7 +102,7 @@ class Comments
           moment(datestamp).format('MMMM YYYY')
 
       methods:
-        add_comment: (e) ->
+        addComment: (e) ->
           comment_text = $R("##{widget.id} .comment.box", 'source.getCode')
 
           if comment_text != ''
@@ -125,19 +125,8 @@ class Comments
           else
             console.log 'the comment can not be empty!'
 
-        reset_comment_box: (e) ->
-          $R("##{widget.id} .comment.box").source.setCode('')
-
         destroy_comment: (comment) ->
-          axios.delete("/comments/#{comment.id}"
-            params:
-              component: @component
-              record_id: @record
-          ).then((response) =>
-            @comments = _.without(@comments, comment)
-          ).catch((response) =>
-            console.log response
-          )
+          store.dispatch('destroyComment', { @component, @record, comment })
 
         profile_link: (user) ->
           if @current_user == user.id

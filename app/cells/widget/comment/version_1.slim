@@ -39,7 +39,7 @@
       .content
         .text v-html='comment.body'
 
-  form.ui.form.reply @submit.prevent="add_comment($event)" v-if="current_user"
+  form.ui.form.reply v-if="current_user"
     - if current_user && current_user.has_role?(:banned)
       = segment 'new comment'
         = h5 class: 'centered', text: 'Unable to post replies'
@@ -52,7 +52,7 @@
       = segment 'new comment'
         textarea.comment.box
       = segment 'basic no padding center aligned'
-        = button class: 'secondary large submit vertical animated'
+        = button class: 'secondary large submit vertical animated', tag: 'div', v: {'on:click': 'addComment()'}
           = content 'visible'
             | SPEAK UP
           = content 'hidden'
