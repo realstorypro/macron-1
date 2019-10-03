@@ -58,16 +58,21 @@ class Comments
           buttonsHideOnMobile: ['format','ul','line']
           formatting: ['p']
           formattingAdd:
-            "large-header":
-              title: 'Large Header',
+            "small-header":
+              title: 'Normal',
               api: 'module.block.format',
               args:
-                'tag': 'h2'
+                'tag': 'p'
             "small-header":
-              title: 'Small Header',
+              title: 'Medium',
               api: 'module.block.format',
               args:
                 'tag': 'h4'
+            "large-header":
+              title: 'Large',
+              api: 'module.block.format',
+              args:
+                'tag': 'h2'
 
 
         $R "##{widget.id} .comment.box",
