@@ -41,10 +41,10 @@
 
   form.ui.form.reply v-if="current_user"
     - if current_user && current_user.has_role?(:banned)
-      = segment 'new comment'
-        = h5 class: 'centered', text: 'Unable to post replies'
+      = header class: 'horizontal divider', text: 'Unable to Post Replies', tag: :h6
+      = segment
         = text class: 'centered'
-          = "Bad news, your account has been banned and your ability to post replies has been disabled. On the upside, you can still view the site and read all of its content. If you believe this was done in error or would like to appeal our decision please send us an email at #{mail_to(support_email, support_email)}."
+          = "Bad news, your account has been blocked and your ability to post replies has been disabled. On the upside, you can still view the site and read all of its content. If you believe this was done in error or would like to appeal our decision please send us an email at #{mail_to(support_email, support_email)}."
     - else
       = header class: 'horizontal divider', tag: :h6
         = icon 'comments'
@@ -57,8 +57,9 @@
             | SPEAK UP
           = content 'hidden'
             = icon 'volume up'
+
+  = header class: 'horizontal divider', text: 'Something to add? Join the discussion!', tag: :h6, v: {if: "!current_user"}
   = segment class: 'center aligned unregistered', v: {if: "!current_user"}
-    = h5 class: 'centered dividing', text: 'Something to add? Join the discussion!'
     = buttons
       = button class: 'button secondary large', url: url_helpers.sign_in_path
         | Sign In
