@@ -3,6 +3,7 @@ import Vent from '../core/vent'
 import Vue from 'vue/dist/vue.esm'
 import turbolinks_adapter from './mixins/turbolinks'
 
+import store from './store/comment_store'
 import axios from 'axios'
 import moment from 'moment'
 import _ from 'underscore'
@@ -40,12 +41,15 @@ class Comments
       components: { avatar, dropdown }
       data:
         comment_empty: true
-        comments: []
+        # comments: []
         current_user: $("##{widget.id}").data('user')
         component: $("##{widget.id}").data('component')
         record: $("##{widget.id}").data('record')
 
       mounted: ->
+        store.dispatch('subscribeToUpdates', { @component, @record })
+        store.dispatch('loadComments', { @component, @record })
+
         $R.options =
           minHeight: '180px'
           toolbarFixed: false
@@ -54,16 +58,21 @@ class Comments
           buttonsHideOnMobile: ['format','ul','line']
           formatting: ['p']
           formattingAdd:
-            "large-header":
-              title: 'Large Header',
+            "small-header":
+              title: 'Normal',
               api: 'module.block.format',
               args:
-                'tag': 'h2'
+                'tag': 'p'
             "small-header":
-              title: 'Small Header',
+              title: 'Medium',
               api: 'module.block.format',
               args:
                 'tag': 'h4'
+            "large-header":
+              title: 'Large',
+              api: 'module.block.format',
+              args:
+                'tag': 'h2'
 
 
         $R "##{widget.id} .comment.box",
@@ -74,14 +83,15 @@ class Comments
 
 
 
+      computed:
+        comments: ->
+          store.state.comments
+
+        count: ->
+          store.state.comments.length
+
       created: ->
-          axios.get('/comments/',
-            params:
-              component: @component
-              record_id: @record
-          ).then (response) =>
-            @comments = response.data.comments
-            $("##{widget.id}").removeClass('hidden')
+          $("##{widget.id}").removeClass('hidden')
 
 
       filters:
@@ -92,7 +102,7 @@ class Comments
           moment(datestamp).format('MMMM YYYY')
 
       methods:
-        add_comment: (e) ->
+        addComment: (e) ->
           comment_text = $R("##{widget.id} .comment.box", 'source.getCode')
 
           if comment_text != ''
@@ -115,19 +125,8 @@ class Comments
           else
             console.log 'the comment can not be empty!'
 
-        reset_comment_box: (e) ->
-          $R("##{widget.id} .comment.box").source.setCode('')
-
         destroy_comment: (comment) ->
-          axios.delete("/comments/#{comment.id}"
-            params:
-              component: @component
-              record_id: @record
-          ).then((response) =>
-            @comments = _.without(@comments, comment)
-          ).catch((response) =>
-            console.log response
-          )
+          store.dispatch('destroyComment', { @component, @record, comment })
 
         profile_link: (user) ->
           if @current_user == user.id
