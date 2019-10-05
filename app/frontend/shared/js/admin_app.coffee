@@ -24,7 +24,6 @@ import Richtext from './widgets/richtext'
 import Navigation from './widgets/navigation'
 import ImagePreloader from './widgets/image_preloader'
 
-import Comments from './vue/comments'
 import CategoryFilter from './vue/category_filter'
 import NavigationButtons from './vue/navigation_buttons'
 import Sidenav from './vue/sidenav'
@@ -61,7 +60,6 @@ navigation = new Navigation
 image_preloader = new ImagePreloader
 
 # Vue Addons
-comments = new Comments
 category_filter = new CategoryFilter
 navigation_buttons = new NavigationButtons
 sidenav = new Sidenav

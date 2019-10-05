@@ -6,17 +6,21 @@ views:
     new:
       meta_header:
         type: 'header'
-        text: 'Meta Data'
+        text: 'Meta'
       name:
-        label: 'Short Title'
+        label: 'Title'
         type: 'string'
         maxlength: '70'
         hint: 'Limited to 70 characters'
       description:
-        label: 'Short Summary'
+        label: 'Description'
         type: 'text'
         maxlength: '160'
         hint: 'Limited to 160 characters'
+        required: true
+      user:
+        label: 'Author'
+        type: 'dropdown'
         required: true
       category:
         label: 'Category'
@@ -27,14 +31,10 @@ views:
       published_date:
         label: 'Published Date'
         type: 'datepicker'
-      user:
-        label: 'Author'
-        type: 'dropdown'
-        required: true
 
-      media_header:
+      images_header:
         type: 'header'
-        text: 'Media'
+        text: 'Images'
       landscape_image:
         label: 'Landscape Image'
         type: 'image'
@@ -56,18 +56,3 @@ views:
         type: 'string'
         hint: 'Vimeo or Youtube URL'
         required: true
-
-      details_header:
-        type: 'header'
-        text: 'Details'
-      long_title:
-        label: 'Long Title'
-        type: 'string'
-        maxlength: '85'
-        hint: 'Limited to 85 characters'
-        required: true
-      body:
-        label: 'Video Body'
-        type: 'rich'
-        required: true
-
