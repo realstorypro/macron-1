@@ -51,8 +51,3 @@ views:
         maxlength: '40'
         hint: 'Limited to 40 characters'
         required: true
-      video:
-        label: 'Video'
-        type: 'string'
-        hint: 'Vimeo or Youtube URL'
-        required: true
