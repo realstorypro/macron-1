@@ -6,8 +6,7 @@ views:
     new:
       video:
         label: 'Video'
-        type: 'string'
-        hint: 'Youtube or Vimeo URL'
+        type: 'video'
       title:
         label: 'Title'
         type: 'string'
