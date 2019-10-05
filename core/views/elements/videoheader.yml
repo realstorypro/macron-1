@@ -4,6 +4,42 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
-      default:
-        label: 'Text'
+      title:
+        label: 'Title'
         type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+      title_alignment:
+        label: 'Alignment'
+        type: 'fixed_dropdown'
+        options:
+          - 'left'
+          - 'centered'
+          - 'right'
+          - 'justified'
+      summary:
+        label: 'Summary'
+        type: 'text'
+      summary_alignment:
+        label: 'Alignment'
+        type: 'fixed_dropdown'
+        options:
+          - 'left'
+          - 'centered'
+          - 'right'
+          - 'justified'
+      video:
+        label: 'Video'
+        type: 'video'
+      landscape_image:
+        label: 'Background Landscape Image'
+        type: 'image'
+        size: ['2560','1456']
+      vertical_image:
+        label: 'Background Vertical Image'
+        type: 'image'
+        size: ['1456','2560']
+      alt_text:
+        label: 'Alt. Text'
+        type: 'string'
+        hint: 'Describe the image for visually impaired'

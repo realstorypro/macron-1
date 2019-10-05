@@ -16,5 +16,6 @@
                 policy: Pundit.policy(current_user, :headless),
                 menu: s('menu.elements'),
                 request: request,
+                parent_component: params[:parent_component],
                 show_icons: true,
                 site_settings: @site_settings)

@@ -5,7 +5,7 @@ class ImageInput < SimpleForm::Inputs::Base
   include SettingsHelper
   def input(_wrapper_options)
     image_size = size(attribute_name)
-    @builder.uploadcare_field(attribute_name, data: { 'images-only': true, crop: image_size, tabs: 'file camera url gphotos instagram' }).to_s.html_safe
+    @builder.uploadcare_field(attribute_name, data: { }).to_s.html_safe
   end
 
   private

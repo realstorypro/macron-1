@@ -24,6 +24,14 @@ module Navigation
           return false unless restricted_areas.any? { |area| area == request.filtered_parameters["area"] }
         end
 
+        # hide restricted components
+        restricted_components = settings("components.#{menu_item["component"]}.restricted.components")
+        if restricted_components
+          return false unless restricted_components.any? do |restricted_component|
+            restricted_component == options[:parent_component]
+          end
+        end
+
         return true if menu_item[:component] && options[:policy].index?(menu_item[:component])
         return true if menu_item[:component].nil?
         false
