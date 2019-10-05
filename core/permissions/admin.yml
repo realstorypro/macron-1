@@ -96,3 +96,5 @@ auth:
         all: 
       :elements_embededheader:
         all: 
+      :elements_videoheader:
+        all: 
