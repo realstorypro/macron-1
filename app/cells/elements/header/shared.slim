@@ -25,3 +25,7 @@
               = model.embedded.html_safe
           - else
             = h6 text: 'Embed (No URL Inserted)', class: 'horizontal divider'
+
+        // video logic
+        - if model.respond_to?(:embedded_video)
+          == Vue::VideoCell.(nil, url: model.embedded_video)

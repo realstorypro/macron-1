@@ -4,6 +4,10 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      video:
+        label: 'Video'
+        type: 'string'
+        hint: 'Youtube or Vimeo URL'
       title:
         label: 'Title'
         type: 'string'
@@ -17,20 +21,6 @@ views:
           - 'centered'
           - 'right'
           - 'justified'
-      summary:
-        label: 'Summary'
-        type: 'text'
-      summary_alignment:
-        label: 'Alignment'
-        type: 'fixed_dropdown'
-        options:
-          - 'left'
-          - 'centered'
-          - 'right'
-          - 'justified'
-      video:
-        label: 'Video'
-        type: 'video'
       landscape_image:
         label: 'Background Landscape Image'
         type: 'image'
