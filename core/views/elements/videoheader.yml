@@ -10,6 +10,7 @@ views:
       video_cover:
         label: 'Video Cover'
         type: 'image'
+        size: ['1972','1110']
       title:
         label: 'Title'
         type: 'string'

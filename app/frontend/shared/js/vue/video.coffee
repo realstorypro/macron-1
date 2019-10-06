@@ -2,7 +2,6 @@ import Utils from '../core/utils'
 import Vent from '../core/vent'
 import Vue from 'vue/dist/vue.esm'
 import turbolinks_adapter from './mixins/turbolinks'
-import Plyr from 'plyr'
 
 utils = new Utils
 vent = new Vent
@@ -29,15 +28,16 @@ class Video
     @app = new Vue
       el: "##{widget.id}"
       mixins: [turbolinks_adapter]
+      computed:
+        player: ->
+          @.$refs.plyr.player
       mounted: ->
-        player = new Plyr '#player',
-          title: 'Title Test'
-
-        @cover_element = $("#{@.$options.el} .cover")
-        @cover_element.animate {
-          opacity: 0
-        },300, =>
-          @cover_element.hide()
+        @player.on 'ready', =>
+          @cover_element = $("#{@.$options.el} .cover")
+          @cover_element.animate {
+            opacity: 0
+          },300, =>
+            @cover_element.hide()
 
         # $("#{@.$options.el} iframe").on 'load', =>
         #   @cover_element.animate {
