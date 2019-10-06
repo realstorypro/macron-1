@@ -1,21 +1,18 @@
 # frozen_string_literal: true
 
 module Elements
-  class HeaderCell < BaseElementCell
-    def show
-      render "shared"
-    end
+  class VideoheaderCell < HeaderCell
 
     def header_size
-      "fullscreen"
+      "fullscreen seventy mobile"
     end
 
     def title_extra_classes
-      ""
+      "video"
     end
 
     def title_alignment
-      model.title_alignment
+      "center"
     end
   end
 end

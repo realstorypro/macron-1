@@ -17,17 +17,18 @@ module Activitible
 
     def create_activity
       Activity.create(
-          actor: self.user,
-          subject: self,
-          action: "created"
+        actor: self.user,
+        subject: self,
+        action: "created"
       )
     end
 
     def destroy_activity
-      Activity.where(
+      activities = Activity.where(
         actor: self.user,
         subject: self
-      ).first.destroy
+      )
+      activities.first.destroy if activities.count > 0
     end
 
     def publishing_checks

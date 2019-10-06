@@ -1,4 +1,4 @@
-= fragment "header fullscreen #{model.color if model.respond_to?(:color)}"
+= fragment "header #{header_size} #{model.color if model.respond_to?(:color)}"
 
   - if model.respond_to?(:landscape_image) && model.respond_to?(:vertical_image)
     == Vue::CoverCell.(nil, landscape_image: model.landscape_image, vertical_image: model.vertical_image)
@@ -10,8 +10,9 @@
       = column computer: 14, tablet: 16, mobile: 16
 
         // heading and summary
-        = h1 class: "#{model.title_alignment} aligned"
-          = model.title
+        - if model.respond_to?(:title)
+          = h1 class: "#{title_alignment} aligned #{title_extra_classes}"
+            = model.title
         - unless !model.respond_to?(:summary) || model.summary.blank?
           .summary class="#{model.summary_alignment}"
             = simple_format(model.summary)
@@ -25,3 +26,7 @@
               = model.embedded.html_safe
           - else
             = h6 text: 'Embed (No URL Inserted)', class: 'horizontal divider'
+
+        // video logic
+        - if model.respond_to?(:video)
+          == Vue::VideoCell.(nil, video: model.video, video_cover: model.video_cover)

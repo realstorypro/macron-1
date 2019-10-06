@@ -1,13 +1,7 @@
-= component 'video details'
-  = fragment 'header fullscreen'
-    == Vue::CoverCell.(nil, overlay_background: ss('theme.global.overlay_background'), image: @entry.landscape_image)
-    = container
-      = grid 'centered'
-        = row
-          = column computer: 12, tablet: 16, mobile: 16
-            = h1
-              = @entry.long_title
-          = column computer: 12, tablet: 16, mobile: 16
-            == Vue::VideoCell.(nil, url: @entry.embedded_video)
-
+- cache @entry
+  = component 'video details'
+    - @entry.areas.select do |area|
+      - if area.type.include?('Header')
+        - area.elements.each do |element|
+          == Elements::ElementCell.(element, request: request)
   = render 'partials/show_content'

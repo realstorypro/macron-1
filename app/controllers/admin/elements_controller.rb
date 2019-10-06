@@ -8,8 +8,9 @@ module Admin
     skip_before_action :set_breadcrumb
 
     def pick_element
-      # TODO this may be unnecessary. Remove once tested.
-      # parent = parent_class.find(params[:parent_id])
+      # we are not using this, but we can use it in the future
+      # when we start putting elements inside of elements
+      # @parent = parent_class.find(params[:parent_id])
       render :pick_element, layout: false
     end
 

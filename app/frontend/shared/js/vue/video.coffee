@@ -28,12 +28,19 @@ class Video
     @app = new Vue
       el: "##{widget.id}"
       mixins: [turbolinks_adapter]
+      data:
+        options:
+          controls: ['play-large', 'progress', 'current-time', 'mute', 'volume', 'pip', 'settings']
+      computed:
+        player: ->
+          @.$refs.plyr.player
       mounted: ->
-        @cover_element = $("#{@.$options.el} .cover")
-        $("#{@.$options.el} iframe").on 'load', =>
+        @player.on 'ready', =>
+          @cover_element = $("#{@.$options.el} .cover")
           @cover_element.animate {
-             opacity: 0
-           },300, =>
+            opacity: 0
+          },300, =>
             @cover_element.hide()
+
 
 export { Video as default }

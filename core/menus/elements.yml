@@ -52,3 +52,8 @@ menu:
       component: elements_embededheader
       icon: hdd
       enabled: true
+    - name: Video Header
+      hint: " A header with an embedded video."
+      component: elements_videoheader
+      icon: play circle outline
+      enabled: true

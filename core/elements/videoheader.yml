@@ -1,0 +1,13 @@
+components:
+  elements_videoheader:
+    name: 'Video Header'
+    description: ' An image header with an embedded video.'
+    icon: 'play circle outline'
+    klass: 'Elements::Videoheader'
+    path: 'elements'
+    restricted:
+      areas:
+        - header
+      components:
+        - videos
+    enabled: true

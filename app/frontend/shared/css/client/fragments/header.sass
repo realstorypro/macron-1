@@ -20,6 +20,11 @@
   &.eighty
     min-height: 80vh
 
+  &.seventy.mobile
+    @include media("<tablet")
+      min-height: 70vh
+
+
   .header.breadcrumb
     a, .divider
       font-size: $f-header-breadcrumb-font-size
@@ -39,6 +44,15 @@
     // justified overrides
     &.justified
       margin-bottom: 0em
+
+    // video header
+    &.video
+      font-size: 2.0em
+      margin-bottom: 1.0em
+
+      @include media("<desktop")
+        font-size: 1.2em
+        margin-bottom: 1.5em
 
   .meta
     @include media("<desktop")

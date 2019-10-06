@@ -53,6 +53,10 @@ components:
     path: 'videos'
     focusable: true
     enabled: true
+    areas:
+      - header
+      - content
+      - reference
 
   podcasts:
     klass: 'Podcast'

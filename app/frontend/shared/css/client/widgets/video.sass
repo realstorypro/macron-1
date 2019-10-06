@@ -1,9 +1,13 @@
 .video.widget
   .embed.container
     position: relative
-    padding-bottom: 56.25%
     overflow: hidden
     box-shadow: $w-video-box-shadow
+
+    video
+      height: 555px
+      @include media("<tablet")
+        height: 191px
 
     .cover
       position: absolute
@@ -13,9 +17,5 @@
       height: 100%
       background: lighten($black, 10)
 
-    iframe,object,embed
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
+    .ui.huge.text.loader
+      padding-top: 4.128571rem
