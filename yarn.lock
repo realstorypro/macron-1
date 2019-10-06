@@ -9395,7 +9395,7 @@ pluralize@^7.0.0:
   resolved "https://registry.npmjs.org/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
 
-plyr@^3.5.6:
+plyr@^3.5.2, plyr@^3.5.6:
   version "3.5.6"
   resolved "https://registry.npmjs.org/plyr/-/plyr-3.5.6.tgz#1679d098af3fd0541bba62bc03f662f7c9ae6f2b"
   integrity sha512-buudbt2qwZYjEdBXW9DvQ7t/LqaSbv9tSjCrqg7nTXVM5BXNdhuiJCyvko+5+DFMdp30mliyKGoOHGXz43OwrA==
@@ -13531,6 +13531,13 @@ vue-pluralize@^0.0.2:
   integrity sha512-NT4Uv/j40yO+yCLIij4nZl9csaXemTqNekYxk7mH+L4t2HZhiJxcg0tc/Q3X6gKv3iaY46Vhz/edDBuH2E6F6w==
   dependencies:
     pluralize "^7.0.0"
+
+vue-plyr@^5.1.3:
+  version "5.1.3"
+  resolved "https://registry.npmjs.org/vue-plyr/-/vue-plyr-5.1.3.tgz#38da58f71b952c3dbfa8c7fccc5b2471a118c654"
+  integrity sha512-Nx9uyn7OUfJ4FlcWs4u2N1YHuAdVhmlc/CEbT8IvwFOU9WP/8nxwOxMoAycMWrHK23a4MdYjrADEKC2QHWsw4A==
+  dependencies:
+    plyr "^3.5.2"
 
 vue-resize@^0.4.5:
   version "0.4.5"

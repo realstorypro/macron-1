@@ -32,11 +32,17 @@ class Video
       mounted: ->
         player = new Plyr '#player',
           title: 'Title Test'
+
         @cover_element = $("#{@.$options.el} .cover")
-        $("#{@.$options.el} iframe").on 'load', =>
-          @cover_element.animate {
-            opacity: 0
-          },300, =>
-            @cover_element.hide()
+        @cover_element.animate {
+          opacity: 0
+        },300, =>
+          @cover_element.hide()
+
+        # $("#{@.$options.el} iframe").on 'load', =>
+        #   @cover_element.animate {
+        #     opacity: 0
+        #   },300, =>
+        #     @cover_element.hide()
 
 export { Video as default }

@@ -7,6 +7,9 @@ views:
       video:
         label: 'Video'
         type: 'video'
+      video_cover:
+        label: 'Video Cover'
+        type: 'image'
       title:
         label: 'Title'
         type: 'string'

@@ -1,7 +1,7 @@
-= widget name: 'video', id: 'video', vue: :on, data: {url: options[:video]}
-    .embed.container
-        video#player
-            source src="#{options[:url]}"
-        .cover
-            .ui.active.dimmer
-                .ui.text.large.loader
+= widget name: 'video', id: 'video', vue: :on
+  .embed.container
+    vue-plyr
+      video src="#{options[:video]}"
+    .cover
+      .ui.active.dimmer
+        .ui.text.large.loader

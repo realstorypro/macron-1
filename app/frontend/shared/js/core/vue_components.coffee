@@ -10,7 +10,7 @@ import VueTouch from 'vue-touch'
 import ToggleButton from 'vue-js-toggle-button'
 import Notifications from 'vue-notification'
 import velocity      from 'velocity-animate'
-
+import VuePlyr from 'vue-plyr'
 
 Vue.use(VModal)
 Vue.use(Vuex)
@@ -20,3 +20,4 @@ Vue.use(VuePluralize)
 Vue.use(VueTouch)
 Vue.use(ToggleButton)
 Vue.use(Notifications, {velocity})
+Vue.use(VuePlyr)

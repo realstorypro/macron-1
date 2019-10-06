@@ -6,7 +6,9 @@
     box-shadow: $w-video-box-shadow
 
     video
-      height: 500px
+      max-height: 555px
+      @include media("<tablet")
+        //height: auto
 
     .cover
       position: absolute
