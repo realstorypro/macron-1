@@ -20,6 +20,11 @@
   &.eighty
     min-height: 80vh
 
+  &.half.mobile
+    @include media("<tablet")
+      min-height: 60vh
+
+
   .header.breadcrumb
     a, .divider
       font-size: $f-header-breadcrumb-font-size

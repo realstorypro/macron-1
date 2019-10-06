@@ -5,5 +5,9 @@ module Elements
     def show
       render "shared"
     end
+
+    def header_size
+      "fullscreen"
+    end
   end
 end

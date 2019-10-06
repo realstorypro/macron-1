@@ -1,4 +1,4 @@
-= fragment "header fullscreen #{model.color if model.respond_to?(:color)}"
+= fragment "header #{header_size} #{model.color if model.respond_to?(:color)}"
 
   - if model.respond_to?(:landscape_image) && model.respond_to?(:vertical_image)
     == Vue::CoverCell.(nil, landscape_image: model.landscape_image, vertical_image: model.vertical_image)
