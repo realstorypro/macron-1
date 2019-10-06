@@ -4,11 +4,11 @@ module Elements
   class VideoheaderCell < HeaderCell
 
     def header_size
-      "fullscreen half mobile"
+      "fullscreen seventy mobile"
     end
 
     def title_extra_classes
-      ""
+      "video"
     end
 
     def title_alignment

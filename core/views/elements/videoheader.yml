@@ -7,8 +7,8 @@ views:
       title:
         label: 'Title'
         type: 'string'
-        maxlength: '85'
-        hint: 'Limited to 85 characters'
+        maxlength: '50'
+        hint: 'Limited to 50 characters'
       video:
         label: 'Video'
         type: 'video'
