@@ -31,6 +31,8 @@ module Admin
         "#{time_ago_in_words(value)} ago"
       when :image
         render_image(value, "small")
+      when :video
+        render_video(value)
       when :dropdown
         render_linked_item (value)
       when :association
@@ -93,6 +95,11 @@ module Admin
       when "tiny"
         image_tag(src, class: "ui rounded tiny image")
       end
+    end
+
+    # returns a video
+    def render_video(src)
+      video_tag(src, controls: true)
     end
 
     # renders a colored tag

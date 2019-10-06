@@ -4,8 +4,9 @@ class DisplayDataType
   def initialize(options = {})
     defaults = {
       date_datatypes: %w(date datepicker),
-      text_datatypes: %w(text rich video),
+      text_datatypes: %w(text rich),
       image_datatypes: %w(image),
+      video_datatypes: %w(video),
       string_datatypes: %w(string fixed_dropdown),
       dropdown_datatypes: %w(dropdown),
       association_datatypes: %w(association),
@@ -19,6 +20,7 @@ class DisplayDataType
     @date_datatypes = options[:date_datatypes]
     @text_datatypes = options[:text_datatypes]
     @image_datatypes = options[:image_datatypes]
+    @video_datatypes = options[:video_datatypes]
     @string_datatypes = options[:string_datatypes]
     @dropdown_datatypes = options[:dropdown_datatypes]
     @association_datatypes = options[:association_datatypes]
@@ -32,6 +34,7 @@ class DisplayDataType
     return :date if @date_datatypes.include?(type)
     return :text if @text_datatypes.include?(type)
     return :image if @image_datatypes.include?(type)
+    return :video if @video_datatypes.include?(type)
     return :string if @string_datatypes.include?(type)
     return :dropdown if @dropdown_datatypes.include?(type)
     return :association if @association_datatypes.include?(type)
