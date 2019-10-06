@@ -30,7 +30,6 @@ class Video
       mixins: [turbolinks_adapter]
       data:
         options:
-          title: 'Hello World'
           controls: ['play-large', 'progress', 'current-time', 'mute', 'volume', 'pip', 'settings']
       computed:
         player: ->
