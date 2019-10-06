@@ -6,5 +6,13 @@ module Elements
     def header_size
       "fullscreen half mobile"
     end
+
+    def title_extra_classes
+      ""
+    end
+
+    def title_alignment
+      "center"
+    end
   end
 end

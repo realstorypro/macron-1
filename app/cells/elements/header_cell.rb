@@ -9,5 +9,13 @@ module Elements
     def header_size
       "fullscreen"
     end
+
+    def title_extra_classes
+      ""
+    end
+
+    def title_alignment
+      model.title_alignment
+    end
   end
 end

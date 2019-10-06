@@ -4,7 +4,7 @@ class DisplayDataType
   def initialize(options = {})
     defaults = {
       date_datatypes: %w(date datepicker),
-      text_datatypes: %w(text rich),
+      text_datatypes: %w(text rich video),
       image_datatypes: %w(image),
       string_datatypes: %w(string fixed_dropdown),
       dropdown_datatypes: %w(dropdown),

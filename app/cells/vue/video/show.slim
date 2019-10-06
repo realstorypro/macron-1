@@ -1,6 +1,6 @@
 = widget name: 'video', id: 'video', vue: :on
   .embed.container
-    vue-plyr ref="plyr"
+    vue-plyr ref="plyr" :options="options"
       video src="#{options[:video]}" poster=options[:video_cover]
     .cover
       .ui.active.dimmer

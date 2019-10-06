@@ -4,6 +4,11 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      title:
+        label: 'Title'
+        type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
       video:
         label: 'Video'
         type: 'video'
@@ -11,19 +16,6 @@ views:
         label: 'Video Cover'
         type: 'image'
         size: ['1972','1110']
-      title:
-        label: 'Title'
-        type: 'string'
-        maxlength: '85'
-        hint: 'Limited to 85 characters'
-      title_alignment:
-        label: 'Alignment'
-        type: 'fixed_dropdown'
-        options:
-          - 'left'
-          - 'centered'
-          - 'right'
-          - 'justified'
       landscape_image:
         label: 'Background Landscape Image'
         type: 'image'

@@ -10,8 +10,9 @@
       = column computer: 14, tablet: 16, mobile: 16
 
         // heading and summary
-        = h1 class: "#{model.title_alignment} aligned"
-          = model.title
+        - if model.respond_to?(:title)
+          = h1 class: "#{title_alignment} aligned #{title_extra_classes}"
+            = model.title
         - unless !model.respond_to?(:summary) || model.summary.blank?
           .summary class="#{model.summary_alignment}"
             = simple_format(model.summary)
