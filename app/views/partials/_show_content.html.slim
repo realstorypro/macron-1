@@ -1,34 +1,35 @@
+/= h2 'breadcrumb'
+            .ui.breadcrumb.large
+              .section = link_to params[:component].capitalize, meta_index_path
+              = divider text: '/'
+              .section = link_to params[:category].capitalize, send(meta_category_path, params[:category])
+
 = content_for :microdata
   = render 'partials/breadcrumb_markup'
-= widget 'sticky'
-  = fragment 'content'
-    = container 'wide'
-      = grid
-        = row
-          = column computer: 11, tablet: 16, mobile: 16, class: "context"
-            = h2 'breadcrumb'
-              .ui.breadcrumb.large
-                .section = link_to params[:component].capitalize, meta_index_path
-                = divider text: '/'
-                .section = link_to params[:category].capitalize, send(meta_category_path, params[:category])
-            = widget 'normal rich text'
-              // render the content area
-              - @entry.areas.select do |area|
-                - if area.type.include?('Content')
-                  - area.elements.each do |element|
+= fragment 'content'
+  // render the content area
+  - @entry.areas.select do |area|
+    - if area.type.include?('Content')
+      - area.elements.each do |element|
+        - if element.class.to_s.include?('header')
+          == Elements::ElementCell.(element, request: request)
+        - else
+          = widget 'normal rich text'
+            = container 'wide'
+              = grid
+                = row
+                  = column computer: 11, tablet: 16, mobile: 16, class: "centered"
                     == Elements::ElementCell.(element, request: request)
 
-                // render the reference area
-              - @entry.areas.select do |area|
-                - if area.type.include?('Reference') && area.elements.count > 0
-                  = header class: 'divider horizontal', tag: :h6
-                    = icon 'graduation cap'
-                    = "Reference".pluralize(area.elements.count)
-                  = list 'bulleted relaxed'
-                    - area.elements.each do |element|
-                      == Elements::ElementCell.(element, request: request)
-          = column computer: 5, tablet: 16, mobile: 16
-            = segment 'basic sticky'
+              // render the reference area
+            /- @entry.areas.select do |area|
+              - if area.type.include?('Reference') && area.elements.count > 0
+                = header class: 'divider horizontal', tag: :h6
+                  = icon 'graduation cap'
+                  = "Reference".pluralize(area.elements.count)
+                = list 'bulleted relaxed'
+                  - area.elements.each do |element|
+                    == Elements::ElementCell.(element, request: request)
 
 = render "partials/engager"
 - if current_user
