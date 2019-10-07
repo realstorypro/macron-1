@@ -8,13 +8,13 @@
   - @entry.areas.select do |area|
     - if area.type.include?('Header')
       - area.elements.each do |element|
-        == Elements::ElementCell.(element, request: request)
+        == Elements::ElementCell.(element, request: request, amped: true)
 
   = widget 'normal rich text'
     - @entry.areas.select do |area|
       - if area.type.include?('Content')
         - area.elements.each do |element|
-          == Elements::ElementCell.(element, request: request)
+          == Elements::ElementCell.(element, request: request, amped: true)
 
     - @entry.areas.select do |area|
       - if area.type.include?('Reference') && area.elements.count > 0
@@ -22,6 +22,10 @@
           = "Reference".pluralize(area.elements.count)
         = list 'bulleted relaxed'
           - area.elements.each do |element|
-            == Elements::ElementCell.(element, request: request)
-  .fullversion
-    = link_to 'Read Full Version', url_for(only_path: false)
+            == Elements::ElementCell.(element, request: request, amped: true)
+  .not.available.comments
+    h5
+      | Comments Unavailable
+      br
+      | on Lite Version
+    = link_to 'Switch Full Version', url_for(only_path: false)

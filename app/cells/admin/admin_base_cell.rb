@@ -99,7 +99,7 @@ module Admin
 
     # returns a video
     def render_video(src)
-      video_tag(src, controls: true)
+      video_tag(src, controls: true, width: "250")
     end
 
     # renders a colored tag

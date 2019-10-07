@@ -52,6 +52,7 @@ components:
     klass: 'Video'
     path: 'videos'
     focusable: true
+    amped: true
     enabled: true
     areas:
       - header
