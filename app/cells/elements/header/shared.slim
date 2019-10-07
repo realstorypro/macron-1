@@ -30,3 +30,4 @@
         // video logic
         - if model.respond_to?(:video)
           == Vue::VideoCell.(nil, video: model.video, video_cover: model.video_cover)
+          = render 'video_microdata'
