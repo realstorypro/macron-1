@@ -1,0 +1,13 @@
+script type="application/ld+json"
+  | {
+  |   "@context": "https://schema.org",
+  |   "@type": "VideoObject",
+  |   "name": "#{model.title}",
+  |   "description": "#{model.video_description}",
+  |   "thumbnailUrl": [
+  |     "#{model.landscape_image}",
+  |     "#{model.vertical_image}"
+  |   ],
+  |   "contentUrl": "#{model.video}",
+  |   "uploadDate": "#{model.updated_at.strftime('%Y-%m-%dT%l:%M:%S%z')}"
+  | }

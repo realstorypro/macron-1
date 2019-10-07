@@ -12,6 +12,10 @@ views:
       video:
         label: 'Video'
         type: 'video'
+      video_description:
+        label: 'Video Description'
+        type: 'string'
+        hint: 'Short description of what the video is about.'
       video_cover:
         label: 'Video Cover'
         type: 'image'

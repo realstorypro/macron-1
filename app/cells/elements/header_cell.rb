@@ -17,5 +17,10 @@ module Elements
     def title_alignment
       model.title_alignment
     end
+
+    def amped
+      return true if options[:amped]
+      false
+    end
   end
 end
