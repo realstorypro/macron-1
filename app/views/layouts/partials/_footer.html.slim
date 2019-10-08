@@ -1,10 +1,10 @@
 = segment "footer fragment vertical #{footer_class}"
   = container 'center aligned wide'
     = grid "stackable left aligned mobile #{footer_item_order}"
-      = column size: 8, class: 'middle aligned link holder computer only'
+      = column computer: 8, tablet: 8, mobile: 16, class: 'middle aligned link holder computer only tablet only'
         = list "copyright horizontal mini divided link #{footer_item_class}"
           = item
             | &copy; 2018 - 2019. All Rights Reserved.
-      = column computer: 8, mobile: 16, class: 'middle right aligned column logo holder mobile-center'
+      = column computer: 8, tablet: 8, mobile: 16, class: 'middle right aligned column logo holder mobile-center'
         = link_to t('app.powered_by_url'), target: "_blank"
           = image_tag ('icon.png'), class: 'ui image footer', alt: 'logik logo'
