@@ -29,6 +29,10 @@ class DisplayController < MetaController
     expires_in 30.minutes
     authorize @entry
     @amped = true if component.amped?
+
+    # used for breadcrumb generation
+    @breadcrumbs_displayed = false
+    @previous_element = nil
   end
 
   private

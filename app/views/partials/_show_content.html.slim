@@ -1,5 +1,7 @@
+
 = content_for :microdata
   = render 'partials/breadcrumb_markup'
+
 
 
 - @entry.areas.select do |area|
@@ -13,12 +15,28 @@
       - if element.class.to_s.include?('header')
         == Elements::ElementCell.(element, request: request)
       - else
+        // breadcrumb logic
+        - if (@previous_element == nil || @previous_element.class.to_s.include?('header')) && !@breadcrumbs_displayed
+          = fragment 'breadcrumb'
+            = container 'wide'
+              = grid
+                = row
+                  = column computer: 11, tablet: 16, mobile: 16, class: "centered"
+                    = h2 'breadcrumb'
+                      .ui.breadcrumb.large
+                        .section = link_to params[:component].capitalize, meta_index_path
+                        = divider text: '/'
+                        .section = link_to params[:category].capitalize, send(meta_category_path, params[:category])
+
+          - @breadcrumbs_displayed = true
+
         = widget 'normal rich text'
           = container 'wide'
             = grid
               = row
                 = column computer: 11, tablet: 16, mobile: 16, class: "centered"
                   == Elements::ElementCell.(element, request: request)
+        - @previous_element = element
 
 = render "partials/engager"
 - if current_user
