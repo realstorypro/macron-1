@@ -30,7 +30,7 @@ class DisplayController < MetaController
     authorize @entry
     @amped = true if component.amped?
 
-    # used for breadcrumb generation
+    # used for breadcrumb logic generation
     @breadcrumbs_displayed = false
     @previous_element = nil
   end
