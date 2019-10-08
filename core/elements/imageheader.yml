@@ -8,4 +8,5 @@ components:
     restricted:
       areas:
         - header
+        - content
     enabled: true

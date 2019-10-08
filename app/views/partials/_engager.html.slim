@@ -8,5 +8,15 @@
           = column computer: 5, tablet: 16, mobile: 16
             = sticky
               = fragment 'sidebar'
-                == Widget::RelatedCell.(@related_content, layout: :regular, headless: true, category: true, icon: false) unless @related_content.blank?
-                == Widget::PromotionCell.(@promo, layout: :sidebar) unless @promo.blank?
+                = h5 'horizontal divider'
+                  | Author
+                == vue_widget name: 'author', user: @entry.user, current_user: current_user, data: {user_id: @entry.user.id, supporting: (current_user ? current_user.supporting?(@entry.user) : false)}
+                == vue_widget name: 'actioner', current_user: current_user, data: {component: params[:component], subject_id: @entry.id}
+= fragment 'tertiary'
+  = container "wide"
+    = grid 'divided'
+      = row
+        = column computer: 8, tablet: 16, mobile: 16
+          == Widget::RelatedCell.(@related_content, layout: :regular, headless: true, category: true, icon: true) unless @related_content.blank?
+        = column computer: 8, tablet: 16, mobile: 16
+          == Widget::PromotionCell.(@promo, layout: :sidebar) unless @promo.blank?

@@ -1,38 +1,39 @@
 = content_for :microdata
   = render 'partials/breadcrumb_markup'
-= widget 'sticky'
-  = fragment 'content'
-    = container 'wide'
-      = grid
-        = row
-          = column computer: 11, tablet: 16, mobile: 16, class: "context"
-            = h2 'breadcrumb'
-              .ui.breadcrumb.large
-                .section = link_to params[:component].capitalize, meta_index_path
-                = divider text: '/'
-                .section = link_to params[:category].capitalize, send(meta_category_path, params[:category])
-            = widget 'normal rich text'
-              // render the content area
-              - @entry.areas.select do |area|
-                - if area.type.include?('Content')
-                  - area.elements.each do |element|
-                    == Elements::ElementCell.(element, request: request)
 
-                // render the reference area
-              - @entry.areas.select do |area|
-                - if area.type.include?('Reference') && area.elements.count > 0
-                  = header class: 'divider horizontal', tag: :h6
-                    = icon 'graduation cap'
-                    = "Reference".pluralize(area.elements.count)
-                  = list 'bulleted relaxed'
-                    - area.elements.each do |element|
-                      == Elements::ElementCell.(element, request: request)
-          = column computer: 5, tablet: 16, mobile: 16
-            = segment 'basic sticky'
-              = h5 'horizontal divider'
-                | Author
-              == vue_widget name: 'author', user: @entry.user, current_user: current_user, data: { user_id: @entry.user.id, supporting: (current_user ? current_user.supporting?(@entry.user) : false) }
-              == vue_widget name: 'actioner', current_user: current_user, data: { component: params[:component], subject_id: @entry.id }
+- @entry.areas.select do |area|
+  - if area.type.include?('Header')
+    - area.elements.each do |element|
+      == Elements::ElementCell.(element, request: request)
+
+- @entry.areas.select do |area|
+  - if area.type.include?('Content')
+    - area.elements.each do |element|
+      - if element.class.to_s.include?('header')
+        == Elements::ElementCell.(element, request: request)
+      - else
+        // breadcrumb logic
+        - if (@previous_element == nil || @previous_element.class.to_s.include?('header')) && !@breadcrumbs_displayed
+          = fragment 'breadcrumb'
+            = container 'wide'
+              = grid
+                = row
+                  = column computer: 11, tablet: 16, mobile: 16, class: "centered"
+                    = h2 'breadcrumb'
+                      .ui.breadcrumb.large
+                        .section = link_to params[:component].capitalize, meta_index_path
+                        = divider text: '/'
+                        .section = link_to params[:category].capitalize, send(meta_category_path, params[:category])
+
+          - @breadcrumbs_displayed = true
+
+        = widget 'normal rich text'
+          = container 'wide'
+            = grid
+              = row
+                = column computer: 11, tablet: 16, mobile: 16, class: "centered"
+                  == Elements::ElementCell.(element, request: request)
+        - @previous_element = element
 
 = render "partials/engager"
 - if current_user
