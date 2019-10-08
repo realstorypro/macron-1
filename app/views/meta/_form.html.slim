@@ -7,11 +7,9 @@
             = left
               =h4 text: "#{action_name} #{component_name.singularize.capitalize}"
             = right
-              = button url: '#', class: 'basic', data: { action: 'close', widget: 'drawer' }
-                = icon 'close'
+              = button url: '#', class: 'black', data: { action: 'close', widget: 'drawer' }
                 | Close
               = button url: '#', class: 'positive', data: { action: 'save', widget: 'crud' }
-                = icon 'save'
                 | Save
 
   = container

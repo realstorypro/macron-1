@@ -35,7 +35,7 @@
                 | Video Unavailable
                 br
                 |on Lite Version
-              = "#{link_to('Switch to Full Version', options[:request].original_url)}"
+              = "#{link_to('Switch to Full Version', options[:request].original_url, class: 'full version switch')}"
 
           - else
             == Vue::VideoCell.(nil, video: model.video, video_cover: model.video_cover)
