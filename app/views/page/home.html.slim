@@ -2,7 +2,7 @@
   ==  Widget::HomepageCell.(@featured, site_settings: @site_settings) unless @featured.empty?
   = container 'wide'
     = grid
-      = column computer: 16, class: 'computer only tablet only'
+      = column computer: 16, class: 'computer only'
         = cards 'three fluid'
           - cache @discussions
             - @discussions.each do |discussion|
@@ -14,7 +14,7 @@
                     = discussion.name
                   = description
                     = discussion.description
-      = column mobile: 16, class: 'mobile only'
+      = column mobile: 16, class: 'tablet only mobile only'
         - cache @discussions
           - @discussions.each do |discussion|
             = link_to discussion_details_path(discussion.category.slug, discussion.slug), class: "ui card fluid", data: { preloadable: true} do
