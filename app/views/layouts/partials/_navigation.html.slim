@@ -32,6 +32,8 @@
             = link_to sign_in_path, data: { preloadable: true }
               = button "sign in inverted large #{ss('theme.header.button_color')} #{'flush ' if ss('theme.header.menu_position') == 'left'}"
                 | Sign In
+              = button "sign in regular large #{ss('theme.header.button_color')} #{'flush ' if ss('theme.header.menu_position') == 'left'}"
+                | Sign In
         - if ss('theme.header.menu_position') == 'right'
           = item tag: :button, class: 'enhanced button icon hamburger right', title: 'Menu Link', url: '', v: {'on:click.prevent': "toggle_sidenav()"}
             = icon class: 'large sidebar', title: 'hamburger link'

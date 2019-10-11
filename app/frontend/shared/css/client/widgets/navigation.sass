@@ -35,6 +35,20 @@ $w-nav-mobile-logo-padding: 0
     @else
       display: none
 
+@mixin regular_signin($action)
+  .sign.in.regular
+    @if $action == show
+      display: block
+    @else
+      display: none
+
+@mixin inverted_signin($action)
+  .sign.in.inverted
+    @if $action == show
+      display: block
+    @else
+      display: none
+
 @mixin regular_font()
   i.icon
     color: $black
@@ -163,11 +177,15 @@ $w-nav-mobile-logo-padding: 0
   &[class*="regular expanded"]
     @include regular_logo(show)
     @include inverted_logo(hide)
+    @include regular_signin(show)
+    @include inverted_signin(hide)
     @include regular_font
 
   &[class*="inverted expanded"]
     @include regular_logo(hide)
     @include inverted_logo(show)
+    @include regular_signin(hide)
+    @include inverted_signin(show)
     @include inverted_font
 
   @each $color in $g-colors-list
@@ -179,11 +197,15 @@ $w-nav-mobile-logo-padding: 0
     &[class*="regular collapsed"]
       @include regular_logo(show)
       @include inverted_logo(hide)
+      @include regular_signin(show)
+      @include inverted_signin(hide)
       @include regular_font
 
     &[class*="inverted collapsed"]
       @include regular_logo(hide)
       @include inverted_logo(show)
+      @include regular_signin(hide)
+      @include inverted_signin(show)
       @include inverted_font
 
     @each $color in $g-colors-list
