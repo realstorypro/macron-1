@@ -102,3 +102,5 @@ auth:
         all: 
       :elements_oversizedquote:
         all: 
+      :elements_oversizedembed:
+        all: 

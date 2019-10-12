@@ -23,7 +23,7 @@ menu:
       icon: image
       enabled: true
     - name: Oversized Image
-      hint: "An oversized image with optional title and caption."
+      hint: An oversized image with optional title and caption.
       component: elements_oversizedimage
       icon: image
       enabled: true
@@ -66,4 +66,9 @@ menu:
       hint: " A header with an embedded video."
       component: elements_videoheader
       icon: play circle outline
+      enabled: true
+    - name: Oversized Embed
+      hint: " An oversized link embedded into content."
+      component: elements_oversizedembed
+      icon: plug
       enabled: true
