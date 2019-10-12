@@ -20,7 +20,7 @@ menu:
       hint: Discussions look & feel
       path: admin_settings_theme_discussion
       icon: comments
-      enabled: false
+      enabled: true
     - name: Pocasts
       hint: Podcasts look & feel
       path: admin_settings_theme_podcast

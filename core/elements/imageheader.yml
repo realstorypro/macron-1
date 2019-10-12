@@ -8,5 +8,6 @@ components:
     restricted:
       areas:
         - header
-        - content
+      components:
+        - articles
     enabled: true

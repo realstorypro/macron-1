@@ -8,4 +8,6 @@ components:
     restricted:
       areas:
         - header
+      components:
+        - discussions
     enabled: true

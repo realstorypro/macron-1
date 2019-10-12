@@ -7,9 +7,14 @@
     padding-top: $f-header-mobile-padding-top
     padding-bottom: $f-header-mobile-padding-bottom
 
+  // white overrides
   &.white
     border-bottom: $s-white-border-color
     padding-top: $f-header-padding-top + 1em
+
+    h1.header, p
+      color: $black !important
+      text-shadow: 1px 1px 2px #00000036 !important
 
   &.fullscreen
     min-height: 100vh
@@ -23,14 +28,6 @@
   &.seventy.mobile
     @include media("<tablet")
       min-height: 70vh
-
-
-  .header.breadcrumb
-    a, .divider
-      font-size: $f-header-breadcrumb-font-size
-      @include media("<desktop")
-        font-size: $f-header-mobile-breadcrumb-font-size
-
 
   h1.header
     font-size: $f-header-h1-font-size
@@ -96,11 +93,6 @@
 .header.fragment.image
   background: $f-header-image-background-color
 
-  .header.breadcrumb
-    a, .divider
-      text-shadow: $f-header-image-box-shadow
-      color: $f-header-image-breadcrumb-color
-
   h1.header
     color: $f-header-image-text-color
     text-shadow: $f-header-image-box-shadow
@@ -127,15 +119,6 @@
 
     @include media("<desktop")
       padding-top: $f-header-mobile-padding-top
-
-    .header.breadcrumb
-      a, .divider
-        @if index($g-colors-regular, $color)
-          color: $f-header-colored-breadcrumb-color
-          text-shadow: $f-header-colored-box-shadow
-        @else
-          text-shadow: $f-header-colored-inverted-box-shadow
-          color: $f-header-colored-inverted-breadcrumb-color
 
     h1.header, p
       @if index($g-colors-regular, $color)
