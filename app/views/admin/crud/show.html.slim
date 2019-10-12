@@ -28,10 +28,3 @@
           - if component_areas&.include?('content')
             = segment 'center aligned basic empty element'
               = link_to "Add Content Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'content', title: 'Page Body'), class: 'ui button blue', data: { widget: "crud", action: "new" }
-            br
-
-          - if component_areas&.include?('reference')
-            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'reference', title: 'References',  controller_namespace: self.controller.class.parent.to_s)
-          - if component_areas&.include?('reference')
-            = segment 'center aligned basic empty element'
-              = link_to "Add Reference Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'reference', title: 'References'), class: 'ui button blue', data: {widget: "crud", action: "new"}
