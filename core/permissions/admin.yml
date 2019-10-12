@@ -104,3 +104,5 @@ auth:
         all: 
       :elements_oversizedembed:
         all: 
+      :elements_colorblock:
+        all: 

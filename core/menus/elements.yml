@@ -72,3 +72,8 @@ menu:
       component: elements_oversizedembed
       icon: plug
       enabled: true
+    - name: Color Block
+      hint: " An oversized color block with optional title and description."
+      component: elements_colorblock
+      icon: tint
+      enabled: true
