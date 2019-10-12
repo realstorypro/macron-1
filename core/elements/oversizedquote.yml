@@ -1,0 +1,11 @@
+components:
+  elements_oversizedquote:
+    name: 'Oversized Quote'
+    description: ' An oversized quote with an image.'
+    icon: 'quote left'
+    klass: 'Elements::Oversizedquote'
+    path: 'elements'
+    enabled: true
+    restricted:
+      areas:
+        - content

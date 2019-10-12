@@ -100,3 +100,5 @@ auth:
         all: 
       :elements_oversizedimage:
         all: 
+      :elements_oversizedquote:
+        all: 
