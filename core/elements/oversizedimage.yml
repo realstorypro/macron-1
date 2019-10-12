@@ -1,0 +1,11 @@
+components:
+  elements_oversizedimage:
+    name: 'Oversized Image'
+    description: ' An oversized image with optional title and caption.'
+    icon: 'images'
+    klass: 'Elements::Oversizedimage'
+    path: 'elements'
+    enabled: true
+    restricted:
+      areas:
+        - content

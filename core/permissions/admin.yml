@@ -98,3 +98,5 @@ auth:
         all: 
       :elements_videoheader:
         all: 
+      :elements_oversizedimage:
+        all: 
