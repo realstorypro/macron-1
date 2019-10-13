@@ -24,6 +24,7 @@ class Video
 
   setup: (widget) ->
     utils.log 'setup', 'setup()', 'video'
+    console.log widget
 
     @app = new Vue
       el: "##{widget.id}"
@@ -33,7 +34,7 @@ class Video
           controls: ['play-large', 'progress', 'current-time', 'mute', 'volume', 'pip', 'settings']
       computed:
         player: ->
-          @.$refs.plyr.player
+          @.$refs["#{widget.id}"].player
       mounted: ->
         @player.on 'ready', =>
           @cover_element = $("#{@.$options.el} .cover")
