@@ -33,6 +33,9 @@ class DisplayController < MetaController
     # used for breadcrumb logic generation
     @breadcrumbs_displayed = false
     @previous_element = nil
+
+    # oversized elemnent classes
+    @oversized_elements = %w(oversized header)
   end
 
   private

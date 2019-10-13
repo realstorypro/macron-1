@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Elements
-  class OversizedimageCell < BaseElementCell
+  class OversizedimageCell < HeaderCell
   end
 end

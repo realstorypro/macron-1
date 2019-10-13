@@ -9,7 +9,7 @@
 - @entry.areas.select do |area|
   - if area.type.include?('Content')
     - area.elements.each do |element|
-      - if element.class.to_s.include?('oversized')
+      - if @oversized_elements.any? {|oversized| element.class.to_s.downcase.include?(oversized) }
         == Elements::ElementCell.(element, request: request)
       - else
         // breadcrumb logic
