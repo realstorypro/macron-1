@@ -35,7 +35,7 @@ class DisplayController < MetaController
     @previous_element = nil
 
     # oversized elemnent classes
-    @oversized_elements = %w(oversized header)
+    @oversized_elements = %w(oversized header colorblock)
   end
 
   private

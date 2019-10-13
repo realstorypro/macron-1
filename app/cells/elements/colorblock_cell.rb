@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Elements
-  class ColorblockCell < BaseElementCell
+  class ColorblockCell <  HeaderCell
   end
 end
