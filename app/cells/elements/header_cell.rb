@@ -10,6 +10,19 @@ module Elements
       "fullscreen"
     end
 
+    # ##############
+    # title portion
+    # ##############
+
+    def has_title
+      return true if model.respond_to?(:title) && !model.title.blank?
+      false
+    end
+
+    def title
+      model.title
+    end
+
     def title_extra_classes
       ""
     end
@@ -18,6 +31,65 @@ module Elements
       model.title_alignment
     end
 
+    # ##############
+    # summary portion
+    # ##############
+    def has_summary
+      return true if model.respond_to?(:summary) && !model.summary.blank?
+      false
+    end
+
+    def summary_alignment
+      return options[:summary_alignment] if model.respond_to?(:summary_alignment)
+      "left"
+    end
+
+    def summary_extra_classes
+      ""
+    end
+
+    # ##############
+    # credit portion
+    # ##############
+    def has_credit
+      return true if model.respond_to?(:credit) && !model.credit.blank?
+      false
+    end
+
+    def credit
+      return options[:summary_alignment] if model.respond_to?(:summary_alignment)
+    end
+
+
+    # ##############
+    # embed portion
+    # ##############
+    def has_embed
+      return true if model.respond_to?(:url)
+      false
+    end
+
+
+    # ##############
+    # video portion
+    # ##############
+    def has_video
+      return true if model.respond_to?(:video) && !model.video.blank?
+      false
+    end
+
+    def video
+      model.video
+    end
+
+    def video_cover
+      return model.video_cover if model.respond_to?(:video_cover)
+      ""
+    end
+
+    # ##############
+    # amped portion
+    # ##############
     def amped
       return true if options[:amped]
       false

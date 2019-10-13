@@ -12,7 +12,7 @@
     border-bottom: $s-white-border-color
     padding-top: $f-header-padding-top + 1em
 
-    h1.header, p
+    h1.header, h5.header, p
       color: $black !important
       text-shadow: 1px 1px 2px #00000036 !important
 
@@ -75,10 +75,24 @@
       @include media("<desktop")
         font-size: $f-header-mobile-p-font-size
 
+    &.larger
+      p
+        font-size: 2.5em
+        @include media("<desktop")
+          font-size: 1.8em
+
+    &.uppercased
+      p
+        text-transform: uppercase
+
   // iframely embed
   .iframely-embed
     margin-top: 3.5em
     background: $white
+
+  // caption
+  .credit
+    margin-top: 2em
 
 
 
@@ -93,7 +107,7 @@
 .header.fragment.image
   background: $f-header-image-background-color
 
-  h1.header
+  h1.header, h5.header
     color: $f-header-image-text-color
     text-shadow: $f-header-image-box-shadow
 
@@ -120,7 +134,7 @@
     @include media("<desktop")
       padding-top: $f-header-mobile-padding-top
 
-    h1.header, p
+    h1.header, h5.header, p
       @if index($g-colors-regular, $color)
         color: $f-header-colored-text-color
         text-shadow: $f-header-colored-box-shadow
