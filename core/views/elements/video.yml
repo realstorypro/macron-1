@@ -1,0 +1,34 @@
+views:
+  elements_video:
+    config:
+      set_defaults: true
+      rejected_field_names: ''
+    new:
+      title:
+        label: 'Title'
+        type: 'string'
+        maxlength: '50'
+        hint: 'Limited to 50 characters'
+      video:
+        label: 'Video'
+        type: 'video'
+      video_description:
+        label: 'Video Description'
+        type: 'string'
+        hint: 'Short description of what the video is about.'
+      video_cover:
+        label: 'Video Cover'
+        type: 'image'
+        size: ['1972','1110']
+      landscape_image:
+        label: 'Background Landscape Image'
+        type: 'image'
+        size: ['2560','1456']
+      vertical_image:
+        label: 'Background Vertical Image'
+        type: 'image'
+        size: ['1456','2560']
+      alt_text:
+        label: 'Alt. Text'
+        type: 'string'
+        hint: 'Describe the image for visually impaired'
