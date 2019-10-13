@@ -5,7 +5,7 @@ module Vue
     include GoodUi::Helpers
 
     def player_id
-      @id ||= rand(1..5)
+      @id ||= rand(1..10000)
     end
   end
 end
