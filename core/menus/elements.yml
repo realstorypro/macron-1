@@ -77,3 +77,8 @@ menu:
       component: elements_colorblock
       icon: tint
       enabled: true
+    - name: Video
+      hint: " An oversized block with video element and optional title."
+      component: elements_video
+      icon: video
+      enabled: true

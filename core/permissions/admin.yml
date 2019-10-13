@@ -106,3 +106,5 @@ auth:
         all: 
       :elements_colorblock:
         all: 
+      :elements_video:
+        all: 
