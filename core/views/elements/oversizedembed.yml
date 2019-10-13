@@ -4,6 +4,24 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
-      default:
-        label: 'Text'
+      title:
+        label: 'Title'
         type: 'string'
+        maxlength: '85'
+        hint: 'Limited to 85 characters'
+      title_alignment:
+        label: 'Alignment'
+        type: 'fixed_dropdown'
+        options:
+          - 'left'
+          - 'centered'
+          - 'right'
+          - 'justified'
+      url:
+        label: 'URL'
+        type: 'string'
+        hint: 'URL to be Embedded'
+      color:
+        label: 'Background Color'
+        type: 'color'
+        default: 'black'
