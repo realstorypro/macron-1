@@ -42,17 +42,21 @@ class Video
           },300, =>
             @cover_element.hide()
 
-        setTimeout (=>
-          # braodcast the video being played on play
-          @player.on 'play', =>
-            vent.channel().trigger "playing:video", widget.id
+        # braodcast the video being played on play
+        @player.on 'play', =>
+          vent.channel().trigger "playing:video", widget.id
 
-          vent.channel().on "playing:video", (video) =>
-            if video != widget.id
-              console.log "we are #{widget.id } and we stop #{video}"
-              @player.pip = false
-              @player.stop()
-        ), 50
+        # stop playing video and turn off pip if another video is playing
+        vent.channel().on "playing:video", (video) =>
+          if video != widget.id
+            console.log "we are #{widget.id } and we stop #{video}"
+            @player.pip = false
+            @player.stop()
+
+      beforeDestroy: ->
+        @player = @.$refs["#{widget.id}"].player
+        @player.pip = false
+
 
 
 export { Video as default }
