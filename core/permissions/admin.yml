@@ -98,3 +98,13 @@ auth:
         all: 
       :elements_videoheader:
         all: 
+      :elements_oversizedimage:
+        all: 
+      :elements_oversizedquote:
+        all: 
+      :elements_oversizedembed:
+        all: 
+      :elements_colorblock:
+        all: 
+      :elements_video:
+        all: 

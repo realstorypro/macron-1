@@ -11,6 +11,8 @@ class Sticky
 
     instance
 
+    @timeouts = []
+
   reinit: () ->
     @teardown()
     @setup()
@@ -21,11 +23,11 @@ class Sticky
 
     unless utils.is_mobile()
 
-      $(".widget.sticky").each (index, item) ->
+      $(".widget.sticky").each (index, item) =>
         random_id =  Math.floor(Math.random() * 100)
 
 
-        setTimeout (->
+        sticky_timeout = setTimeout (->
           context_height = $(item).find('.context').height()
           sticky_height = $(item).find('.ui.sticky').height()
 
@@ -43,10 +45,12 @@ class Sticky
                 $(item).find('.ui.sticky').css('width', "#{bottom_width}px")
         ), 2000
 
+        @timeouts.push(sticky_timeout)
 
 
 
   teardown: () ->
     utils.log 'teardown', 'teardown()', 'sticky'
+    clearTimeout(timeout) for timeout in @timeouts unless utils.is_mobile()
 
 export { Sticky as default }

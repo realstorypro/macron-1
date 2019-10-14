@@ -10,15 +10,19 @@
       = column computer: 14, tablet: 16, mobile: 16
 
         // heading and summary
-        - if model.respond_to?(:title)
-          = h1 class: "#{title_alignment} aligned #{title_extra_classes}"
-            = model.title
-        - unless !model.respond_to?(:summary) || model.summary.blank?
-          .summary class="#{model.summary_alignment}"
+        - if has_title
+          = h1 class: "#{title_alignment} aligned #{title_extra_classes}", text: title
+
+        - if has_summary
+          .summary class="#{summary_alignment} #{summary_extra_classes}"
             = simple_format(model.summary)
 
+        - if has_credit
+          .credit
+            = h5 class: 'horizontal divider', text: model.credit
+
         // the embed logic
-        - if model.respond_to?(:url)
+        - if has_embed
           - if model.url
             - if model.embedded == false || model.embedded.blank?
               = h6 text: 'Embed Is Not Available (For The URL Inserted)', class: 'horizontal divider'
@@ -28,7 +32,7 @@
             = h6 text: 'Embed (No URL Inserted)', class: 'horizontal divider'
 
         // video logic
-        - if model.respond_to?(:video)
+        - if has_video
           - if amped
             .not.available.video
               h5
@@ -38,5 +42,5 @@
               = "#{link_to('Switch to Full Version', options[:request].original_url, class: 'full version switch')}"
 
           - else
-            == Vue::VideoCell.(nil, video: model.video, video_cover: model.video_cover)
+            == Vue::VideoCell.(nil, video: video, video_cover: video_cover)
             = render 'video_microdata'

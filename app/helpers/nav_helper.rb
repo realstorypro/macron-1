@@ -21,34 +21,34 @@ module NavHelper
 
     elsif controller_name == "discussions" && action_name.downcase == "show"
       menu_style = ss("theme.discussion.menu_style")
-      category_color = @entry.category.color.name
+      entry_menu_color = @entry.menu_color
 
       # we want to eliminate transparency if the background is set as solid
       # we only want to show the border if both category and menu colors are white
       if menu_style == "solid"
-        if category_color == "white" && menu_color == "white"
+        if entry_menu_color == "white" && menu_color == "white"
           menu_class(expanded_color: menu_color, collapsed_color: menu_color, bordered: true, transparent: false)
         else
           menu_class(expanded_color: menu_color, collapsed_color: menu_color, transparent: false)
         end
       elsif menu_style == "matching solid"
-        if category_color == "white" && menu_color == "white"
-          menu_class(expanded_color: menu_color, collapsed_color: category_color, bordered: true, transparent: false)
+        if entry_menu_color == "white" && menu_color == "white"
+          menu_class(expanded_color: menu_color, collapsed_color: entry_menu_color, bordered: true, transparent: false)
         else
-          menu_class(expanded_color: menu_color, collapsed_color: category_color, transparent: false)
+          menu_class(expanded_color: menu_color, collapsed_color: entry_menu_color, transparent: false)
         end
 
       elsif menu_style == "transparent"
-        if category_color == "white"
-          menu_class(expanded_color: category_color, collapsed_color: menu_color, bordered: true, transparent: true)
+        if entry_menu_color == "white"
+          menu_class(expanded_color: entry_menu_color, collapsed_color: menu_color, bordered: true, transparent: true)
         else
-          menu_class(expanded_color: category_color, collapsed_color: menu_color, transparent: true)
+          menu_class(expanded_color: entry_menu_color, collapsed_color: menu_color, transparent: true)
         end
       elsif menu_style == "matching transparent"
-        if category_color == "white"
-          menu_class(expanded_color: category_color, collapsed_color: category_color, bordered: true, transparent: true)
+        if entry_menu_color == "white"
+          menu_class(expanded_color: entry_menu_color, collapsed_color: entry_menu_color, bordered: true, transparent: true)
         else
-          menu_class(expanded_color: category_color, collapsed_color: category_color, transparent: true)
+          menu_class(expanded_color: entry_menu_color, collapsed_color: entry_menu_color, transparent: true)
         end
       end
     elsif %w[sessions registrations passwords confirmations].include?(controller_name)

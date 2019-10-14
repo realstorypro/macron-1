@@ -1,0 +1,11 @@
+components:
+  elements_video:
+    name: 'Video'
+    description: ' An oversized block with video element and optional title.'
+    icon: 'video'
+    klass: 'Elements::Video'
+    path: 'elements'
+    enabled: true
+    restricted:
+      areas:
+        - content

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Elements
-  class VideoheaderCell < HeaderCell
+  class VideoCell < HeaderCell
     def header_size
       "fullscreen seventy mobile"
     end

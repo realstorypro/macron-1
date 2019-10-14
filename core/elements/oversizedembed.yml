@@ -1,0 +1,11 @@
+components:
+  elements_oversizedembed:
+    name: 'Oversized Embed'
+    description: ' An oversized link embedded into content.'
+    icon: 'plug'
+    klass: 'Elements::Oversizedembed'
+    path: 'elements'
+    enabled: true
+    restricted:
+      areas:
+        - content
