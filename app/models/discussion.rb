@@ -18,16 +18,22 @@ class Discussion < Entry
     self.areas.each do |area|
       unless area_found
         if area.type == 'Areas::Header'
-          area_color = area.elements.first.color
-
-          if area_color
-            self.menu_color = area_color
-          else
+          if area.elements.first.nil?
+            area_found = true
             self.menu_color = 'black'
-          end
+            self.save
+          else
+            area_color = area.elements.first.color
 
-          self.save
-          area_found = true
+            if area_color
+              self.menu_color = area_color
+            else
+              self.menu_color = 'black'
+            end
+
+            area_found = true
+            self.save
+          end
         end
       end
     end

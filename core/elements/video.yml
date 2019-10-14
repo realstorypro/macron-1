@@ -6,3 +6,6 @@ components:
     klass: 'Elements::Video'
     path: 'elements'
     enabled: true
+    restricted:
+      areas:
+        - content
