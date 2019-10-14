@@ -25,4 +25,4 @@ menu:
       hint: Podcasts look & feel
       path: admin_settings_theme_podcast
       icon: podcast
-      enabled: false
+      enabled: true
