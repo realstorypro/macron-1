@@ -6,3 +6,6 @@ components:
     klass: 'Elements::Colorblock'
     path: 'elements'
     enabled: true
+    restricted:
+      areas:
+        - content
