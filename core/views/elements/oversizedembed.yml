@@ -9,6 +9,7 @@ views:
         type: 'string'
         maxlength: '85'
         hint: 'Limited to 85 characters'
+        advanced: true
       title_alignment:
         label: 'Alignment'
         type: 'fixed_dropdown'
@@ -17,6 +18,7 @@ views:
           - 'centered'
           - 'right'
           - 'justified'
+        advanced: true
       url:
         label: 'URL'
         type: 'string'

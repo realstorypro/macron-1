@@ -17,6 +17,7 @@ views:
           - 'centered'
           - 'right'
           - 'justified'
+        advanced: true
       summary:
         label: 'Caption'
         type: 'text'
@@ -28,6 +29,7 @@ views:
           - 'centered'
           - 'right'
           - 'justified'
+        advanced: true
       landscape_image:
         label: 'Background Landscape Image'
         type: 'image'
@@ -37,6 +39,6 @@ views:
         type: 'image'
         size: ['1456','2560']
       alt_text:
-        label: 'Alt. Text'
+        label: 'Image Description'
         type: 'string'
-        hint: 'Describe the image for visually impaired'
+        hint: 'Describe the image for visually impaired, i.e. a horse eating a carrot.'

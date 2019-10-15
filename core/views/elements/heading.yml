@@ -10,6 +10,7 @@ views:
       subheader:
         label: 'Sub-header'
         type: 'string'
+        advanced: true
       size:
         label: 'Size'
         type: 'fixed_dropdown'

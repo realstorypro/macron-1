@@ -17,6 +17,7 @@ views:
           - 'centered'
           - 'right'
           - 'justified'
+        advanced: true
       summary:
         label: 'Summary'
         type: 'text'
@@ -28,6 +29,7 @@ views:
           - 'centered'
           - 'right'
           - 'justified'
+        advanced: true
       landscape_image:
         label: 'Background Landscape Image'
         type: 'image'

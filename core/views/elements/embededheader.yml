@@ -17,6 +17,7 @@ views:
           - 'centered'
           - 'right'
           - 'justified'
+        advanced: true
       url:
         label: 'URL'
         type: 'string'
