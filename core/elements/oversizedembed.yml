@@ -7,5 +7,8 @@ components:
     path: 'elements'
     enabled: true
     restricted:
+      components:
+        - articles
+        - videos
       areas:
         - content
