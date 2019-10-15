@@ -48,7 +48,7 @@ menu:
       icon: newspaper
       enabled: true
     - name: Image Header
-      hint: " An image header with title and optional summary."
+      hint: Insert page header with background image, title, and optional summary.
       component: elements_imageheader
       icon: camera retro
       enabled: true
@@ -64,6 +64,7 @@ menu:
       enabled: true
     - name: Video Header
       hint: " A header with an embedded video."
+      hint: Insert page header with background image, video and optional title.
       component: elements_videoheader
       icon: play circle outline
       enabled: true
