@@ -87,7 +87,11 @@ components:
 
   users:
     name: 'Users'
-    description: 'Allows for user management'
+    description:  View account details, manage roles, verify profiles, and ban trolls.
+                  <br>
+                  <br>
+                  Learn more at our
+                  <a href="http://help.goodlogik.com/support/solutions/articles/47000473645-users" target="_blank">Help Desk</a>.
 
   pages:
     name: 'Pages'
@@ -95,11 +99,11 @@ components:
 
   articles:
     name: 'Articles'
-    description:  Long form text content with oversized images, quotes and embeds
-                  optimized for both mobile and desktop.
+    description:  Long-form content with oversized images, quotes and embeds
+                  Optimized for both desktop and mobile.
                   <br>
                   <br>
-                  Learn more about more about the uses cases on our 
+                  Learn more at our 
                   <a href="http://help.goodlogik.com/support/solutions/articles/47000461143-articles" target="_blank">Help Desk</a>.
 
   events:
@@ -116,16 +120,21 @@ components:
 
   discussions:
     name: 'Discussions'
-    description:  Short form text content with regular images, quotes and embeds
+    description:  Short-form text content with embeds, images, and quotes
                   optimized for both mobile and desktop.
                   <br>
                   <br>
-                  Learn more about more about the uses cases on our 
+                  Learn more at our
                   <a href="http://help.goodlogik.com/support/solutions/articles/47000461143-articles" target="_blank">Help Desk</a>.
 
   videos:
     name: 'Videos'
-    description: 'Provides video capabilities'
+    description:  Short and long-form video content with oversized images, quotes, embeds and videos.
+                  Optimized for both desktop and mobile.
+                  <br>
+                  <br>
+                  Learn more at our
+                  <a href="http://help.goodlogik.com/support/solutions/articles/47000473643-videos" target="_blank">Help Desk</a>.
 
   podcasts:
     name: 'Podcasts'
@@ -141,15 +150,27 @@ components:
 
   promotions:
     name: 'Promotions'
-    description: 'Provides ad capabilities'
+    description:  Create native, data-driven ads and link them to resources outside of the platform.
+                  <br>
+                  <br>
+                  Learn more at our
+                  <a href="http://help.goodlogik.com/support/solutions/articles/47000473674-promotions" target="_blank">Help Desk</a>.
 
   tags:
     name: 'Tags'
-    description: 'Provides tagging capabilities'
+    description:  Organize and link content accross different types and categories.
+                  <br>
+                  <br>
+                  Learn more at our
+                  <a href="http://help.goodlogik.com/support/solutions/articles/47000473676-tags" target="_blank">Help Desk</a>.
 
   categories:
     name: 'Categories'
-    description: 'Provides categorization capabilities'
+    description:  Create structure for your content with color-coded categories.
+                  <br>
+                  <br>
+                  Learn more at our
+                  <a href="http://help.goodlogik.com/support/solutions/articles/47000473675-categories" target="_blank">Help Desk</a>.
 
   reports:
     name: 'Reports'
