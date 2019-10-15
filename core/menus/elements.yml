@@ -22,7 +22,7 @@ menu:
       component: elements_image
       icon: image
       enabled: true
-    - name: Oversized Image
+    - name: Image
       hint: An oversized image with optional title and caption.
       component: elements_oversizedimage
       icon: image
@@ -32,7 +32,7 @@ menu:
       component: elements_blockquote
       icon: quote left
       enabled: true
-    - name: Oversized Quote
+    - name: Quote
       hint: " An oversized quote with an image."
       component: elements_oversizedquote
       icon: quote left
@@ -67,7 +67,7 @@ menu:
       component: elements_videoheader
       icon: play circle outline
       enabled: true
-    - name: Oversized Embed
+    - name: Embed
       hint: " An oversized link embedded into content."
       component: elements_oversizedembed
       icon: plug
