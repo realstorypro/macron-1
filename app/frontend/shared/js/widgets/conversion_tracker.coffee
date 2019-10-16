@@ -25,7 +25,6 @@ class ConversionTracker
       url = window.location.href
 
       ahoy.track event, {name, id, page, url}
-      analytics.track(event, {name, id, page, url})
 
   teardown: () ->
     utils.log 'teardown', 'teardown()', 'conversion_tracker'

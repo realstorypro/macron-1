@@ -4,6 +4,9 @@ import Turbolinks from 'turbolinks'
 import semantic_js from '../semantic/dist/semantic.min'
 import ahoy from 'ahoy.js'
 
+# disable cookies
+ahoy.configure({cookies: false})
+
 Turbolinks.start()
 ahoy.trackView()
 
@@ -48,6 +51,3 @@ document.addEventListener 'turbolinks:load', ->
   app.reload()
 
   ahoy.trackView()
-
-  unless typeof(window.segment_js_write_key) == 'undefined'
-    analytics.page()

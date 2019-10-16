@@ -14,12 +14,9 @@ class PhonesController < ApplicationController
   before_action :set_country_codes, only: %i[edit update]
 
   def edit
-    # track the user sign in
-    identify
-
     # track phone edit
     track(
-      event: "phone edit",
+      event: "phone number edit",
       props: {
         location: "phone"
       }
@@ -42,7 +39,7 @@ class PhonesController < ApplicationController
   def verify
     # track phone verification
     track(
-      event: "phone verification",
+      event: "phone number verification",
       props: {
           location: "phone"
       }

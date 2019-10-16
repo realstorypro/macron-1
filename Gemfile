@@ -29,7 +29,6 @@ gem "acts_as_votable", "~> 0.12.0"
 
 # Analytics
 gem "ahoy_matey"
-gem "analytics-ruby"
 gem "blazer"
 gem "groupdate"
 
@@ -56,6 +55,7 @@ gem "devise"
 gem "devise-async"
 gem "rolify"
 gem "pundit"
+gem "logstop"
 
 # SEO
 gem "meta-tags"
