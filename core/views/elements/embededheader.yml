@@ -12,6 +12,7 @@ views:
       title_alignment:
         label: 'Alignment'
         type: 'fixed_dropdown'
+        icon: 'align left'
         options:
           - 'left'
           - 'centered'
@@ -21,8 +22,8 @@ views:
       url:
         label: 'URL'
         type: 'string'
-        hint: 'URL to be Embedded'
+        hint: 'Link to Embed'
       color:
-        label: 'Background Color'
+        label: 'Background'
         type: 'color'
         default: 'black'

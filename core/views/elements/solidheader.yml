@@ -12,6 +12,7 @@ views:
       title_alignment:
         label: 'Alignment'
         type: 'fixed_dropdown'
+        icon: 'align left'
         options:
           - 'left'
           - 'centered'
@@ -24,6 +25,7 @@ views:
       summary_alignment:
         label: 'Alignment'
         type: 'fixed_dropdown'
+        icon: 'align left'
         options:
           - 'left'
           - 'centered'
@@ -31,6 +33,6 @@ views:
           - 'justified'
         advanced: true
       color:
-        label: 'Background Color'
+        label: 'Background'
         type: 'color'
         default: 'black'
