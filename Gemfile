@@ -32,6 +32,10 @@ gem "ahoy_matey"
 gem "blazer"
 gem "groupdate"
 
+# Security
+gem "lockbox"
+gem "blind_index"
+
 # Databases
 gem "pg", ">= 0.18", "< 2.0"
 gem "redis"
