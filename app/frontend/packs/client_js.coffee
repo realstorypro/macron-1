@@ -5,9 +5,9 @@ import semantic_js from '../semantic/dist/semantic.min'
 import ahoy from 'ahoy.js'
 
 # disable cookies
-ahoy.configure({cookies: false})
 
 Turbolinks.start()
+ahoy.configure({cookies: true})
 ahoy.trackView()
 
 import Settings from '../shared/js/core/settings'

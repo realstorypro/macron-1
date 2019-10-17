@@ -2,14 +2,11 @@
 
 # rubocop:disable ClassAndModuleChildren
 class Ahoy::Store < Ahoy::DatabaseStore
-  def authenticate(data)
-    # disables automatic linking of visits and users
-  end
 end
 
 # set to true for JavaScript tracking
 Ahoy.api = true
-# rubocop:enable ClassAndModuleChildren
-
 Ahoy.mask_ips = true
-Ahoy.cookies = false
+Ahoy.server_side_visits = :when_needed
+Ahoy.visit_duration = 24.hours
+# rubocop:enable ClassAndModuleChildren

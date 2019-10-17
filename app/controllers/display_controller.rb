@@ -60,6 +60,7 @@ class DisplayController < MetaController
     end
 
     def track_view
+      return true if request.env['HTTP_TURBOLINKS_REFERRER'].present?
       track(
         event: "Viewed Content",
         props: {
@@ -74,6 +75,7 @@ class DisplayController < MetaController
     end
 
     def track_promo
+      return true if request.env['HTTP_TURBOLINKS_REFERRER'].present?
       return true if @promo.length == 0
       track(
         event: "Promo Viewed",
@@ -85,6 +87,7 @@ class DisplayController < MetaController
     end
 
     def store_location
+      return true if request.env['HTTP_TURBOLINKS_REFERRER'].present?
       session[:current_location] = request.fullpath
       end
 
