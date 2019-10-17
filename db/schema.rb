@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_16_201903) do
+ActiveRecord::Schema.define(version: 2019_10_16_231541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -332,10 +332,14 @@ ActiveRecord::Schema.define(version: 2019_10_16_201903) do
     t.integer "sash_id"
     t.integer "energy", default: 0
     t.boolean "bypass2fa", default: false
+    t.string "email"
     t.string "email_ciphertext"
     t.string "email_bidx"
+    t.string "phone_number_ciphertext"
+    t.string "phone_number_bidx"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email_bidx"], name: "index_users_on_email_bidx", unique: true
+    t.index ["phone_number_bidx"], name: "index_users_on_phone_number_bidx", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["slug"], name: "index_users_on_slug", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true

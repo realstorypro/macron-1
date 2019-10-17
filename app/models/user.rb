@@ -7,6 +7,9 @@ class User < ApplicationRecord
   encrypts :email
   blind_index :email
 
+  encrypts :phone_number
+  blind_index :email_number
+
   has_merit
 
   include SettingsHelper
