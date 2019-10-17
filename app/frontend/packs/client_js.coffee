@@ -8,7 +8,7 @@ import ahoy from 'ahoy.js'
 
 Turbolinks.start()
 ahoy.configure({cookies: true})
-ahoy.trackView()
+#ahoy.trackView()
 
 import Settings from '../shared/js/core/settings'
 import App from '../shared/js/client_app'
