@@ -50,4 +50,4 @@ document.addEventListener 'turbolinks:load', ->
   utils.log 'status', 'app.reload()'
   app.reload()
 
-  ahoy.trackView()
+  #ahoy.trackView()
