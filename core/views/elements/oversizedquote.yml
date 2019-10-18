@@ -23,6 +23,7 @@ views:
         type: 'image'
         size: ['1456','2560']
       alt_text:
-        label: 'Image Description'
+        label: 'Background Description'
+        icon: 'image'
         type: 'string'
         hint: 'Describe the image for visually impaired (i.e. a horse eating a carrot).'

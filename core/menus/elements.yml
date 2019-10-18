@@ -27,6 +27,11 @@ menu:
       component: elements_oversizedimage
       icon: image
       enabled: true
+    - name: Video
+      hint: "An oversized video block with optional title."
+      component: elements_video
+      icon: video
+      enabled: true
     - name: Quote
       hint: Add a quote with an authors name.
       component: elements_blockquote
@@ -77,9 +82,4 @@ menu:
       hint: " An oversized color block with optional title and description."
       component: elements_colorblock
       icon: tint
-      enabled: true
-    - name: Video
-      hint: " An oversized block with video element and optional title."
-      component: elements_video
-      icon: video
       enabled: true

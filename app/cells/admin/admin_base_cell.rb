@@ -19,7 +19,7 @@ module Admin
       type = field_type(field)
 
       # header does not have value so we want to ignore it
-      value = field_value(field, row) unless type == "header" || type == 'divider'
+      value = field_value(field, row) unless type == "header" || type == "divider"
 
       # guard close to exit if there is no value
       return if value.nil?

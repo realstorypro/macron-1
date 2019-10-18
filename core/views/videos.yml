@@ -34,20 +34,35 @@ views:
 
       images_header:
         type: 'header'
-        text: 'Images'
+        text: 'Featured Widget'
       landscape_image:
         label: 'Landscape Image'
         type: 'image'
+        icon: 'image'
         size: ['2048','1024']
         required: true
       card_image:
-        label: 'Card Image'
+        label: 'Card Sized Image'
         type: 'image'
+        icon: 'image'
         size: ['1100','900']
         required: true
       image_alt:
         label: 'Image Description'
         type: 'string'
         maxlength: '40'
-        hint: 'Limited to 40 characters'
+        hint: 'Describe the image for visually impaired (i.e. a horse eating a carrot).'
         required: true
+      social_header:
+        type: 'header'
+        text: 'Social Sharing'
+      social_image:
+        label: 'Social Media Image'
+        type: 'image'
+        icon: 'image'
+        size: ['2048','1024']
+      social_alt:
+        label: 'Image Description'
+        type: 'string'
+        maxlength: '40'
+        hint: 'Describe the image for visually impaired (i.e. a horse eating a carrot).'
