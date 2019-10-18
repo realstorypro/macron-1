@@ -33,11 +33,13 @@ views:
           - 'justified'
         advanced: true
       landscape_image:
-        label: 'Desktop Image'
+        label: 'Desktop Background'
         type: 'image'
+        icon: 'image'
         size: ['2560','1456']
       vertical_image:
-        label: 'Mobile Image'
+        label: 'Mobile Background'
+        icon: 'image'
         type: 'image'
         size: ['1456','2560']
       alt_text:

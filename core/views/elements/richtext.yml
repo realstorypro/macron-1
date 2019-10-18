@@ -5,5 +5,5 @@ views:
       rejected_field_names: ''
     new:
       rich:
-        label: 'Text'
+        label: 'Rich Text'
         type: 'rich'

@@ -1,6 +1,6 @@
 components:
   elements_oversizedimage:
-    name: 'Oversized Image'
+    name: 'Image'
     description: ' An oversized image with optional title and caption.'
     icon: 'images'
     klass: 'Elements::Oversizedimage'

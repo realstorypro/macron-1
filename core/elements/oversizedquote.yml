@@ -1,6 +1,6 @@
 components:
   elements_oversizedquote:
-    name: 'Oversized Quote'
+    name: 'Quote'
     description: ' An oversized quote with an image.'
     icon: 'quote left'
     klass: 'Elements::Oversizedquote'

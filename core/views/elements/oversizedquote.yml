@@ -11,14 +11,16 @@ views:
         label: 'Author'
         type: 'string'
       landscape_image:
-        label: 'Background Landscape Image'
+        label: 'Desktop Background'
         type: 'image'
+        icon: 'image'
         size: ['2560','1456']
       vertical_image:
-        label: 'Background Vertical Image'
+        label: 'Mobile Background'
+        icon: 'image'
         type: 'image'
         size: ['1456','2560']
       alt_text:
         label: 'Image Description'
         type: 'string'
-        hint: 'Describe the image for visually impaired, i.e. a horse eating a carrot.'
+        hint: 'Describe the image for visually impaired (i.e. a horse eating a carrot).'

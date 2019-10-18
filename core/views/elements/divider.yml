@@ -5,10 +5,10 @@ views:
       rejected_field_names: ''
     new:
       header:
-        label: 'Text'
+        label: 'Heading Text'
         type: 'string'
       icon:
-        label: 'Icon'
+        label: 'Divider Icon'
         type: 'fixed_dropdown'
         options:
           - 'angle down'
