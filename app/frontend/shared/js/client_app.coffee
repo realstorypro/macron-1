@@ -18,6 +18,7 @@ import Navigation from './widgets/navigation'
 import ImagePreloader from './widgets/image_preloader'
 import LinkPreloader from './widgets/link_preloader'
 import ConversionTracker from './widgets/conversion_tracker'
+import ViewTracker from './widgets/view_tracker'
 import ShopifyButton from './widgets/shopify_button'
 
 import Comments from './vue/comments'
@@ -61,6 +62,7 @@ navigation = new Navigation
 image_preloader = new ImagePreloader
 link_preloader = new LinkPreloader
 conversion_tracker = new ConversionTracker
+view_tracker = new ViewTracker
 shopify_button = new ShopifyButton
 
 # Vue Addons
@@ -104,6 +106,7 @@ class Client_app
     image_preloader.setup()
     link_preloader.setup()
     conversion_tracker.setup()
+    view_tracker.setup()
     shopify_button.setup()
     navigation.setup()
 
@@ -129,6 +132,7 @@ class Client_app
     image_preloader.teardown()
     link_preloader.teardown()
     conversion_tracker.teardown()
+    view_tracker.teardown()
     shopify_button.teardown()
     navigation.teardown()
 

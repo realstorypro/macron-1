@@ -4,11 +4,8 @@ import Turbolinks from 'turbolinks'
 import semantic_js from '../semantic/dist/semantic.min'
 import ahoy from 'ahoy.js'
 
-# disable cookies
-
 Turbolinks.start()
 ahoy.configure({cookies: true})
-#ahoy.trackView()
 
 import Settings from '../shared/js/core/settings'
 import App from '../shared/js/client_app'
@@ -49,5 +46,3 @@ $ ->
 document.addEventListener 'turbolinks:load', ->
   utils.log 'status', 'app.reload()'
   app.reload()
-
-  #ahoy.trackView()

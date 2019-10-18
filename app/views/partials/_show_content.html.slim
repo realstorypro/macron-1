@@ -1,6 +1,11 @@
 = content_for :microdata
   = render 'partials/breadcrumb_markup'
 
+// tracking integration
+div data-tracked-page="true" data-event="Viewed Content" data-props=@tracking_props.to_json
+-if @promo_tracking_props
+  div data-tracked-page="true" data-event="Viewed Promo" data-props=@promo_tracking_props.to_json
+
 - @entry.areas.select do |area|
   - if area.type.include?('Header')
     - area.elements.each do |element|
