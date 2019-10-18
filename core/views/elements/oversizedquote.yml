@@ -6,9 +6,11 @@ views:
     new:
       summary:
         label: 'Quote'
+        icon: 'heading'
         type: 'text'
       credit:
         label: 'Author'
+        icon: 'text width'
         type: 'string'
       landscape_image:
         label: 'Desktop Background'
