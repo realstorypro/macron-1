@@ -18,10 +18,11 @@ class CommentsController < ApplicationController
     render status: 500, json: { notice: "unable to add record" } unless @comment.save
 
     track(
-      event: "Left comment",
+      event: "Left Comment",
       props: {
         type: params[:component].singularize,
-        id: @comment.id, slug: params[:record_id]
+        id: @comment.id, slug: params[:record_id],
+        entry_id: @commentable.id
       }
     )
   end

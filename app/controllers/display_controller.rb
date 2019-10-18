@@ -75,7 +75,8 @@ class DisplayController < MetaController
     @promo_tracking_props = {
         id: @promo.last.id,
         name: @promo.last.name,
-        tags: @promo.last.tags.collect(&:name)
+        tags: @promo.last.tags.collect(&:name),
+        entry_id: @entry.id
     }
   end
 
