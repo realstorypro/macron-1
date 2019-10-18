@@ -8,6 +8,8 @@ FactoryBot.define do
     landscape_image { Faker::Avatar.image }
     card_image { Faker::Avatar.image }
     image_alt { Faker::Name.name }
+    social_image { Faker::Avatar.image }
+    social_alt { Faker::Name.name }
     association :category, factory: :category
     association :user
     after(:create) do |article|
