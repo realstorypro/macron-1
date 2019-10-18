@@ -25,8 +25,6 @@ class PageController < ApplicationController
                                      .includes(category: :color).order("published_date desc")
                       .where.not(published_date: nil)
                       .limit(ss("theme.homepage.discussion_items"))
-
-    track(event: "Viewed Homepage")
   end
 
   def sitemap
