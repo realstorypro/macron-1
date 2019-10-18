@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/LineLength
+
 require "friendly_id"
 
 class User < ApplicationRecord
@@ -202,3 +204,4 @@ class User < ApplicationRecord
     ActionCable.server.broadcast("user_#{self.id}", user_id: self.id)
   end
 end
+# rubocop:enable Metrics/LineLength

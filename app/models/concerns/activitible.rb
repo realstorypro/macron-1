@@ -37,7 +37,7 @@ module Activitible
       # destroy old activities if entry changed published date
       # or user id.
       if  self.saved_changes.include?("published_date") || self.saved_changes.include?("user_id")
-        Activity.where( subject: self ).delete_all
+        Activity.where(subject: self).delete_all
       end
 
       # create a publishing record

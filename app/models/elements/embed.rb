@@ -32,7 +32,7 @@ module Elements
         end
 
         self.embedded_amp = parsed_response
-        end
+      end
       end
   end
 end

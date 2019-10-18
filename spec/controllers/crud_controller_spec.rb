@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable BlockLength
+# rubocop:disable Metrics/BlockLength
 
 require "rails_helper"
 include ApplicationHelper
@@ -364,4 +364,4 @@ describe Admin::CrudController, type: :controller do
   end
 end
 
-# rubocop:enable BlockLength
+# rubocop:enable Metrics/BlockLength

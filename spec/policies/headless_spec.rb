@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable BlockLength
+# rubocop:disable Metrics/BlockLength
 
 require "rails_helper"
 
@@ -118,4 +118,4 @@ describe HeadlessPolicy, "Headless Policy for logged out users" do
   end
 end
 
-# rubocop:enable BlockLength
+# rubocop:enable Metrics/BlockLength

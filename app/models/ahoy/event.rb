@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable ClassAndModuleChildren
+# rubocop:disable Style/ClassAndModuleChildren
 class Ahoy::Event < ApplicationRecord
   include Ahoy::QueryMethods
 
@@ -9,4 +9,4 @@ class Ahoy::Event < ApplicationRecord
   belongs_to :visit
   belongs_to :user, optional: true
 end
-# rubocop:enable ClassAndModuleChildren
+# rubocop:enable Style/ClassAndModuleChildren
