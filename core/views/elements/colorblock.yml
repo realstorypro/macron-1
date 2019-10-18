@@ -6,12 +6,14 @@ views:
     new:
       title:
         label: 'Title'
+        icon: 'heading'
         type: 'string'
         maxlength: '85'
         hint: 'Limited to 85 characters'
       title_alignment:
         label: 'Alignment'
         type: 'fixed_dropdown'
+        icon: 'align left'
         options:
           - 'left'
           - 'centered'
@@ -20,10 +22,12 @@ views:
         advanced: true
       summary:
         label: 'Summary'
+        icon: 'text width'
         type: 'text'
       summary_alignment:
         label: 'Alignment'
         type: 'fixed_dropdown'
+        icon: 'align left'
         options:
           - 'left'
           - 'centered'
@@ -31,6 +35,7 @@ views:
           - 'justified'
         advanced: true
       color:
-        label: 'Background Color'
+        label: 'Background'
+        icon: 'circle'
         type: 'color'
         default: 'black'

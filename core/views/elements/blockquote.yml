@@ -4,9 +4,11 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
-      body:
-        label: 'Body'
-        type: 'text'
       author:
         label: 'Author'
+        icon: 'heading'
         type: 'string'
+      body:
+        label: 'Summary'
+        icon: 'text width'
+        type: 'text'

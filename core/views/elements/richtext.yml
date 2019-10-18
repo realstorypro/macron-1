@@ -6,4 +6,5 @@ views:
     new:
       rich:
         label: 'Text'
+        icon: 'list ul'
         type: 'rich'

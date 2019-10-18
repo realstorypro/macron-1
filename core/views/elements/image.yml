@@ -6,16 +6,16 @@ views:
     new:
       image:
         label: 'Image'
+        icon: 'image'
         type: 'image'
       alt_text:
-        label: 'Image Description'
+        label: 'Description'
+        icon: 'image'
         type: 'string'
         hint: 'Describe the image for visually impaired, i.e. a horse eating a carrot.'
-      caption:
-        label: 'Caption'
-        type: 'string'
       size:
         label: 'Size'
+        icon: 'image'
         type: 'fixed_dropdown'
         options:
           - fluid
@@ -28,6 +28,7 @@ views:
         advanced: true
       alignment:
         label: 'Alignment'
+        icon: 'image'
         type: 'fixed_dropdown'
         options:
           - left
@@ -35,6 +36,7 @@ views:
           - right
       style:
         label: 'Style'
+        icon: 'image'
         type: 'fixed_dropdown'
         options:
           - none
@@ -42,3 +44,7 @@ views:
           - rounded
           - circular
         advanced: true
+      caption:
+        label: 'Caption'
+        icon: 'text width'
+        type: 'string'

@@ -5,7 +5,7 @@ views:
       rejected_field_names: 'name slug published_date'
     basiclist:
       name:
-        label: 'Short Title'
+        label: 'Title'
         type: 'string'
       published_date:
         label: 'Published'

@@ -6,29 +6,36 @@ views:
     new:
       title:
         label: 'Title'
+        icon: 'heading'
         type: 'string'
         maxlength: '50'
         hint: 'Limited to 50 characters'
       video:
         label: 'Video'
+        icon: 'video'
         type: 'video'
-      video_cover:
-        label: 'Video Cover'
-        type: 'image'
-        size: ['1972','1110']
       video_description:
-        label: 'Description'
+        label: 'Video Description'
+        icon: 'video'
         type: 'string'
         hint: 'Short description of what the video is about.'
-      landscape_image:
-        label: 'Desktop Image'
+      video_cover:
+        label: 'Video Cover'
+        icon: 'image'
         type: 'image'
+        size: ['1972','1110']
+      landscape_image:
+        label: 'Desktop Background'
+        type: 'image'
+        icon: 'image'
         size: ['2560','1456']
       vertical_image:
-        label: 'Mobile Image'
+        label: 'Mobile Background'
+        icon: 'image'
         type: 'image'
         size: ['1456','2560']
       alt_text:
-        label: 'Alt. Text'
+        label: 'Background Description'
+        icon: 'image'
         type: 'string'
-        hint: 'Describe the image for visually impaired'
+        hint: 'Describe the image for visually impaired (i.e. a horse eating a carrot).'

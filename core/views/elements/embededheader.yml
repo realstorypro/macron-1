@@ -6,9 +6,11 @@ views:
     new:
       title:
         label: 'Title'
+        icon: 'heading'
         type: 'string'
         maxlength: '85'
         hint: 'Limited to 85 characters'
+        advanced: true
       title_alignment:
         label: 'Alignment'
         type: 'fixed_dropdown'
@@ -21,9 +23,11 @@ views:
         advanced: true
       url:
         label: 'URL'
+        icon: 'globe'
         type: 'string'
-        hint: 'Link to Embed'
+        hint: 'URL to be Embedded'
       color:
         label: 'Background'
+        icon: 'circle'
         type: 'color'
         default: 'black'

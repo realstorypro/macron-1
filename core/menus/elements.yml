@@ -23,9 +23,14 @@ menu:
       icon: image
       enabled: true
     - name: Image
-      hint: An oversized image with optional title and caption.
+      hint: Insert oversized image with optional title and caption.
       component: elements_oversizedimage
       icon: image
+      enabled: true
+    - name: Video
+      hint: "Insert oversized video with optional title."
+      component: elements_video
+      icon: video
       enabled: true
     - name: Quote
       hint: Add a quote with an authors name.
@@ -33,7 +38,7 @@ menu:
       icon: quote left
       enabled: true
     - name: Quote
-      hint: " An oversized quote with an image."
+      hint: "Insert oversized quote with a background image."
       component: elements_oversizedquote
       icon: quote left
       enabled: true
@@ -43,12 +48,12 @@ menu:
       icon: graduation cap
       enabled: true
     - name: Solid Header
-      hint: Insert page header with solid background, title, and optional summary.
+      hint: Insert header with solid background, title, and optional summary.
       component: elements_solidheader
       icon: newspaper
       enabled: true
     - name: Image Header
-      hint: Insert page header with background image, title, and optional summary.
+      hint: Insert header with background image, title, and optional summary.
       component: elements_imageheader
       icon: camera retro
       enabled: true
@@ -58,28 +63,22 @@ menu:
       icon: plug
       enabled: true
     - name: Embeded Header
-      hint: Insert page header with solid background, title, and rich media (i.e. tweet) from a link.
+      hint: Insert header with solid background, title, and rich media (i.e. tweet) from a link.
       component: elements_embededheader
       icon: hdd
       enabled: true
     - name: Video Header
-      hint: " A header with an embedded video."
-      hint: Insert page header with background image, video and optional title.
+      hint: Insert video header with background image and an optional title.
       component: elements_videoheader
       icon: play circle outline
       enabled: true
     - name: Embed
-      hint: " An oversized link embedded into content."
+      hint: "Insert oversized link embedded into content."
       component: elements_oversizedembed
       icon: plug
       enabled: true
     - name: Color Block
-      hint: " An oversized color block with optional title and description."
+      hint: " Insert oversized color block with optional title and description."
       component: elements_colorblock
       icon: tint
-      enabled: true
-    - name: Video
-      hint: " An oversized block with video element and optional title."
-      component: elements_video
-      icon: video
       enabled: true

@@ -6,5 +6,6 @@ views:
     new:
       url:
         label: 'URL'
+        icon: 'globe'
         type: 'string'
         hint: 'URL to be Embedded'

@@ -5,14 +5,17 @@ views:
       rejected_field_names: ''
     new:
       header:
-        label: 'Header'
+        label: 'Heading'
+        icon: 'heading'
         type: 'string'
       subheader:
-        label: 'Sub-header'
+        label: 'Sub-Heading'
+        icon: 'font'
         type: 'string'
         advanced: true
       size:
         label: 'Size'
+        icon: 'text height'
         type: 'fixed_dropdown'
         options:
           - 'H1'
