@@ -9,27 +9,33 @@ views:
         text: 'Meta'
       name:
         label: 'Title'
+        icon: 'heading'
         type: 'string'
         maxlength: '70'
         hint: 'Limited to 70 characters'
       description:
         label: 'Description'
+        icon: 'text width'
         type: 'text'
         maxlength: '160'
         hint: 'Limited to 160 characters'
         required: true
       user:
         label: 'Author'
+        icon: 'user'
         type: 'dropdown'
         required: true
       category:
         label: 'Category'
+        icon: 'folder'
         type: 'dropdown'
       tags:
         label: 'Tags'
+        icon: 'tag'
         type: 'association'
       published_date:
         label: 'Published Date'
+        icon: 'calendar'
         type: 'datepicker'
 
       images_header:
