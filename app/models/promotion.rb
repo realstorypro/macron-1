@@ -2,5 +2,6 @@
 
 class Promotion < Entry
   include Autoloadable
+  include Taggable
   validates :url, url: true
 end

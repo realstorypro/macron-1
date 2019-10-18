@@ -14,17 +14,6 @@ class PhonesController < ApplicationController
   before_action :set_country_codes, only: %i[edit update]
 
   def edit
-    # track the user sign in
-    identify
-
-    # track phone edit
-    track(
-      event: "phone edit",
-      props: {
-        location: "phone"
-      }
-    )
-
     # We want to make sure that the phone number can not be edited
     # if it has already been verified.
     # This prevents unauthorized phone number change
@@ -40,13 +29,6 @@ class PhonesController < ApplicationController
   end
 
   def verify
-    # track phone verification
-    track(
-      event: "phone verification",
-      props: {
-          location: "phone"
-      }
-    )
     client = Twilio::REST::Client.new
     session[:otp_number] = rand.to_s[2..5]
 
@@ -62,14 +44,6 @@ class PhonesController < ApplicationController
 
   def verify_otp
     if params[:verification][:code] && params[:verification][:code] == session[:otp_number]
-      # track successful phone verification
-      track(
-        event: "successful verification",
-        props: {
-          location: "phone"
-        }
-      )
-
       # verifies the session
       session[:verified] = true
 
@@ -91,13 +65,6 @@ class PhonesController < ApplicationController
                     flash: { success: "You've been signed in successfully." }
       end
     else
-      # track successful phone verification
-      track(
-        event: "unsuccessful verification",
-        props: {
-            location: "phone"
-        }
-      )
       redirect_to phone_verify_path, flash: { error: "The code you've entered is incorrect." }
     end
   end

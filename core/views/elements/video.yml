@@ -12,20 +12,20 @@ views:
       video:
         label: 'Video'
         type: 'video'
-      video_description:
-        label: 'Video Description'
-        type: 'string'
-        hint: 'Short description of what the video is about.'
       video_cover:
         label: 'Video Cover'
         type: 'image'
         size: ['1972','1110']
+      video_description:
+        label: 'Description'
+        type: 'string'
+        hint: 'Short description of what the video is about.'
       landscape_image:
-        label: 'Background Landscape Image'
+        label: 'Desktop Image'
         type: 'image'
         size: ['2560','1456']
       vertical_image:
-        label: 'Background Vertical Image'
+        label: 'Mobile Image'
         type: 'image'
         size: ['1456','2560']
       alt_text:

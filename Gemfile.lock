@@ -87,10 +87,12 @@ GEM
       geocoder (>= 1.4.5)
       safely_block (>= 0.2.1)
     ambry (1.0.0)
-    analytics-ruby (2.2.7)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    argon2 (2.0.2)
+      ffi (~> 1.9)
+      ffi-compiler (>= 0.1)
     ast (2.4.0)
     bcrypt (3.1.13)
     better_errors (2.5.1)
@@ -105,6 +107,9 @@ GEM
       chartkick (>= 3.2)
       railties (>= 5)
       safely_block (>= 0.1.1)
+    blind_index (1.0.1)
+      activesupport (>= 5)
+      argon2 (>= 2)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
     builder (3.2.3)
@@ -225,6 +230,9 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     fastimage (2.1.7)
     ffi (1.11.1)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
     fog-aws (3.5.2)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -287,6 +295,8 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
+    lockbox (0.2.4)
+    logstop (0.2.4)
     loofah (2.3.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -584,10 +594,10 @@ DEPENDENCIES
   acts_as_list
   acts_as_votable (~> 0.12.0)
   ahoy_matey
-  analytics-ruby
   better_errors
   binding_of_caller
   blazer
+  blind_index
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15, < 4.0)
@@ -620,6 +630,8 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   kaminari!
   listen (>= 3.0.5, < 3.2)
+  lockbox
+  logstop
   merit
   meta-tags
   parallel_tests

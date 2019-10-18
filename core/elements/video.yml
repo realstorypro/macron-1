@@ -9,3 +9,5 @@ components:
     restricted:
       areas:
         - content
+      components:
+        - videos

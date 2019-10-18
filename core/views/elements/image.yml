@@ -8,9 +8,9 @@ views:
         label: 'Image'
         type: 'image'
       alt_text:
-        label: 'Alt. Text'
+        label: 'Image Description'
         type: 'string'
-        hint: 'Describe the image for visually impaired'
+        hint: 'Describe the image for visually impaired, i.e. a horse eating a carrot.'
       caption:
         label: 'Caption'
         type: 'string'
@@ -25,6 +25,7 @@ views:
           - small
           - mini
           - tiny
+        advanced: true
       alignment:
         label: 'Alignment'
         type: 'fixed_dropdown'
@@ -40,3 +41,4 @@ views:
           - bordered
           - rounded
           - circular
+        advanced: true

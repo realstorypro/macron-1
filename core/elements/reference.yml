@@ -5,7 +5,7 @@ components:
     icon: 'graduation cap'
     klass: 'Elements::Reference'
     path: 'elements'
-    enabled: true
+    enabled: false
     restricted:
       areas:
-        - reference
+        - content

@@ -36,7 +36,6 @@ class Video
         # per this https://github.com/redxtech/vue-plyr/issues/54
 
         @.$nextTick ->
-          console.log 'dat tick', "player_#{widget.id}"
           video_player = document.getElementById("player_#{widget.id}")
           video_player.addEventListener 'ready', =>
           

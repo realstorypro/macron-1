@@ -70,7 +70,11 @@ module CrudHelper
   end
 
   def field_label(field)
-    field[1].label
+    if field[1].respond_to?(:icon)
+      "#{icon(field[1].icon)} #{field[1].label}".html_safe
+    else
+      field[1].label
+    end
   end
 
   def field_hint(field)

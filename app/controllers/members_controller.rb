@@ -5,8 +5,7 @@ class MembersController < DisplayController
   layout "layouts/client"
   before_action :preload_entry, only: [:show]
   before_action :set_show_seo_meta, :set_twitter_meta, :set_og_meta, :set_article_meta, only: [:show]
-  skip_before_action :find_related_promo, :find_related_content, :set_article_meta
-  skip_after_action :track_promo, :track_view
+  skip_before_action :find_related_promo, :find_related_content, :set_article_meta, :tracking_props, :tracking_promo_props
 
   def index
     # we're not offering an index view

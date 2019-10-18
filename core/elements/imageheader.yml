@@ -1,7 +1,7 @@
 components:
   elements_imageheader:
     name: 'Image Header'
-    description: ' An image header with title and optional summary'
+    description: ' An page header with image, title and summary'
     icon: 'camera retro'
     klass: 'Elements::Imageheader'
     path: 'elements'

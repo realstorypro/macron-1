@@ -5,7 +5,7 @@ import semantic_js from '../semantic/dist/semantic.min'
 import ahoy from 'ahoy.js'
 
 Turbolinks.start()
-ahoy.trackView()
+ahoy.configure({cookies: true})
 
 import Settings from '../shared/js/core/settings'
 import App from '../shared/js/client_app'
@@ -46,8 +46,3 @@ $ ->
 document.addEventListener 'turbolinks:load', ->
   utils.log 'status', 'app.reload()'
   app.reload()
-
-  ahoy.trackView()
-
-  unless typeof(window.segment_js_write_key) == 'undefined'
-    analytics.page()

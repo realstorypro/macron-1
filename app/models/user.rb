@@ -3,6 +3,13 @@
 require "friendly_id"
 
 class User < ApplicationRecord
+  # encrypted fields
+  encrypts :email
+  blind_index :email
+
+  encrypts :phone_number
+  blind_index :email_number
+
   has_merit
 
   include SettingsHelper
@@ -14,7 +21,7 @@ class User < ApplicationRecord
 
   # Include default devise modules. Others available are:
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :validatable
 
   rolify role_cname: "Role", before_add: :clear_existing_roles!
   friendly_id :username, use: :slugged
@@ -113,7 +120,7 @@ class User < ApplicationRecord
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if (login = conditions.delete(:login))
-      where(conditions).where(["username = :value OR lower(email) = lower(:value)", { value: login }]).first
+      where(email: login).or(self.where(username: :login)).first
     elsif conditions[:username].nil?
       where(conditions).first
     else

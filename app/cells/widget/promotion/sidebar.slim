@@ -2,7 +2,7 @@
   = segment 'no padding'
     - @model.each do |ad|
       = preload_image ad.image
-      a href=ad.url target="_blank" data-tracked-click="true" data-event="Clicked Link" data-id=ad.id data-name=ad.name
+      a href=ad.url target="_blank" data-tracked-click="true" data-event="Clicked Promo" data-id=ad.id data-name=ad.name
         = overlay
         = content 'holder'
           = h4 text: ad.title
