@@ -6,6 +6,7 @@ views:
     new:
       title:
         label: 'Title'
+        icon: 'heading'
         type: 'string'
         maxlength: '85'
         hint: 'Limited to 85 characters'
@@ -21,6 +22,7 @@ views:
         advanced: true
       summary:
         label: 'Summary'
+        icon: 'text width'
         type: 'text'
       summary_alignment:
         label: 'Alignment'
@@ -34,5 +36,6 @@ views:
         advanced: true
       color:
         label: 'Background'
+        icon: 'circle'
         type: 'color'
         default: 'black'

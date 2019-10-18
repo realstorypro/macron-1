@@ -32,17 +32,17 @@ views:
         label: 'Published Date'
         type: 'datepicker'
 
-      images_header:
+      social_header:
         type: 'header'
-        text: 'Images'
-      landscape_image:
-        label: 'Landscape Image'
+        text: 'Social Sharing'
+      social_image:
+        label: 'Social Media Image'
         type: 'image'
+        icon: 'image'
         size: ['2048','1024']
-        required: true
-      image_alt:
+      social_alt:
         label: 'Image Description'
+        icon: 'image'
         type: 'string'
         maxlength: '40'
-        hint: 'Limited to 40 characters'
-        required: true
+        hint: 'Describe the image for visually impaired (i.e. a horse eating a carrot).'
