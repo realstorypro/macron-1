@@ -1,48 +1,48 @@
 spells:
+  hilarious:
+    name: "Crippling Laughter"
+    color: "orange"
+    icon: 'smile outline'
+    path: comedian
+    base_points: 5
+    energy: 10
+    level: 1
+    direction: 'positive'
+    description: 'A spell of unstoppable laughter by cast by Jesters of Danish Court.'
+    castTime: 1500
+
+  love:
+    name: "Love & Adoration"
+    color: "pink"
+    icon: 'heart'
+    path: empath
+    base_points: 5
+    energy: 10
+    level: 1
+    direction: 'positive'
+    description: 'A spell of transformation and empathy often cast by mythical Aphrodite.'
+    castTime: 1500
+
   eurika:
     name: "Eurika"
-    color: "green"
+    color: "blue"
     icon: 'flask'
     path: scientist
     base_points: 5
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of scientifc agreement first cast by Archimedes.'
-    castTime: 1500
-
-  abbastanza:
-    name: "Abbastanza"
-    color: "red"
-    icon: 'flask'
-    path: scientist
-    base_points: 5
-    energy: 10
-    level: 1
-    direction: 'negative'
-    description: 'A spell of scientifc disagreement first cast by Galileo Galilei.'
+    description: 'A spell of scientific discovery first cast by Archimedes of Greece.'
     castTime: 1500
 
   veritas:
-    name: "Veritas"
-    color: "green"
+    name: "Truth"
+    color: "brown"
     icon: 'book'
     path: historian
     base_points: 5
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of historical agreement first cast by Titus Livius.'
-    castTime: 1500
-
-  apketa:
-    name: "Apketa"
-    color: "red"
-    icon: 'book'
-    path: historian
-    base_points: 5
-    energy: 10
-    level: 1
-    direction: 'negative'
-    description: 'A spell of historical dis-agreement first cast by Herodotus.'
+    description: 'A spell of historical accuracy first cast by Titus Livius of Italy.'
     castTime: 1500

@@ -1,6 +1,6 @@
 <template lang="pug">
     v-popover(class="entry points" name="supapopover" placement="top" trigger="hover" delay="400")
-        span.spell.point
+        span.spell.point(v-bind:class="[color]")
             animated-number(:value="points" :format-value="formatToInt" :duration="400")
             i.icon(v-bind:class="[icon, color]")
         template(slot="popover" class="yellow")
