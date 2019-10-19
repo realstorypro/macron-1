@@ -17,10 +17,10 @@ class Discussion < Entry
     area_found = false
     self.areas.each do |area|
       unless area_found
-        if area.type == 'Areas::Header'
+        if area.type == "Areas::Header"
           if area.elements.first.nil?
             area_found = true
-            self.menu_color = 'black'
+            self.menu_color = "black"
             self.save
           else
             area_color = area.elements.first.color
@@ -28,7 +28,7 @@ class Discussion < Entry
             if area_color
               self.menu_color = area_color
             else
-              self.menu_color = 'black'
+              self.menu_color = "black"
             end
 
             area_found = true
@@ -38,5 +38,4 @@ class Discussion < Entry
       end
     end
   end
-
 end

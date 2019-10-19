@@ -1,4 +1,4 @@
-# rubocop:disable FrozenStringLiteralComment
+# rubocop:disable Style/FrozenStringLiteralComment
 
 require "rails_helper"
 
@@ -50,4 +50,4 @@ describe "Settings Meta Routing Spec", type: :feature do
   end
 end
 
-# rubocop:enable FrozenStringLiteralComment
+# rubocop:enable Style/FrozenStringLiteralComment

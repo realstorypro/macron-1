@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-# rubocop:disable BlockLength
+# rubocop:disable Metrics/BlockLength
 describe PathHelper, "path helper" do
   before(:each) do
     @component = :articles
@@ -82,4 +82,4 @@ describe PathHelper, "meta plular path helper" do
     expect(helper.meta_delete_path(@entry, :admin)).to eq "/admin/articles/#{@entry.slug}"
   end
 end
-# rubocop:enable BlockLength
+# rubocop:enable Metrics/BlockLength

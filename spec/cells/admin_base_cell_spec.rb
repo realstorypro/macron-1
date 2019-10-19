@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-# rubocop:disable BlockLength
-# rubocop:disable MixinUsage
-# rubocop:disable InverseMethods
+# rubocop:disable Metrics/BlockLength
+# rubocop:disable Style/MixinUsage
+# rubocop:disable Style/InverseMethods
 require "rails_helper"
 include SettingsHelper
 include CrudHelper
@@ -93,6 +93,6 @@ describe Admin::AdminBaseCell, type: "feature" do
     end
   end
 end
-# rubocop:enable BlockLength
-# rubocop:enable MixinUsage
-# rubocop:enable InverseMethods
+# rubocop:enable Metrics/BlockLength
+# rubocop:enable Style/MixinUsage
+# rubocop:enable Style/InverseMethods

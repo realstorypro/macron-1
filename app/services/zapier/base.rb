@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable GlobalVars
+# rubocop:disable Style/GlobalVars
 module Zapier
   class Base
     include HTTParty
@@ -39,4 +39,4 @@ module Zapier
       end
   end
 end
-# rubocop:enable GlobalVars
+# rubocop:enable Style/GlobalVars

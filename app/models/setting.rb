@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable GlobalVars
+# rubocop:disable Style/GlobalVars
 
 class Setting < ApplicationRecord
   include Payloadable
@@ -25,4 +25,4 @@ class Setting < ApplicationRecord
     end
 end
 
-# rubocop:enable GlobalVars
+# rubocop:enable Style/GlobalVars

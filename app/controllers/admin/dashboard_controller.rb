@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable DateTime
+# rubocop:disable Style/DateTime
 require_dependency "application_controller"
 
 module Admin

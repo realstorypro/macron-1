@@ -2,6 +2,5 @@
 
 module Elements
   class OversizedembedCell <  HeaderCell
-
   end
 end

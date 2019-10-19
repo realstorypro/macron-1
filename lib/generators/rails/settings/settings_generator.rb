@@ -1,5 +1,5 @@
-# rubocop:disable FrozenStringLiteralComment
-# rubocop:disable LineLength
+# rubocop:disable Style/FrozenStringLiteralComment
+# rubocop:disable Metrics/LineLength
 
 class Rails::SettingsGenerator < Rails::Generators::NamedBase
   require "yaml"
@@ -31,5 +31,5 @@ class Rails::SettingsGenerator < Rails::Generators::NamedBase
   end
 end
 
-# rubocop:enable FrozenStringLiteralComment
-# rubocop:enable LineLength
+# rubocop:enable Style/FrozenStringLiteralComment
+# rubocop:enable Metrics/LineLength

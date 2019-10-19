@@ -1,4 +1,4 @@
-# rubocop:disable BlockLength
+# rubocop:disable Metrics/BlockLength
 require "rails_helper"
 
 describe Admin::ActionsCell, type: "feature" do
@@ -109,4 +109,4 @@ describe Admin::ActionsCell, type: "feature" do
     end
   end
 end
-# rubocop:enable BlockLength
+# rubocop:enable Metrics/BlockLength

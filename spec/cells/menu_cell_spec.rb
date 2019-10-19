@@ -1,5 +1,5 @@
-# rubocop:disable BlockLength
-# rubocop:disable MixinUsage
+# rubocop:disable Metrics/BlockLength
+# rubocop:disable Style/MixinUsage
 require "rails_helper"
 include SettingsHelper
 
@@ -60,5 +60,5 @@ describe MenuCell, type: "feature" do
     expect(cell_content).to have_text "Privacy Policy"
   end
 end
-# rubocop:enable BlockLength
-# rubocop:enable MixinUsage
+# rubocop:enable Metrics/BlockLength
+# rubocop:enable Style/MixinUsage

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/LineLength
+
 # handles the display of the article model
 class MembersController < DisplayController
   layout "layouts/client"
@@ -70,3 +72,4 @@ class MembersController < DisplayController
       end
     end
 end
+# rubocop:enable Metrics/LineLength

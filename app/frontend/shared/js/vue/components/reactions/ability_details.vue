@@ -1,6 +1,6 @@
 <template lang="pug">
     .wrapper
-        h5.ui.header
+        h5.ui.header(v-bind:class='[color]')
             i.icon.huge(v-bind:class='[icon, color]')
             .content {{ name }}
         .detail-wrapper

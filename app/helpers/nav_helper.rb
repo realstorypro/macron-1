@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/LineLength
+
 module NavHelper
   def menu_color_class
     transparent_controllers = %w(articles videos events store members profile)
@@ -108,3 +110,4 @@ module NavHelper
       rendering
     end
 end
+# rubocop:enable Metrics/LineLength

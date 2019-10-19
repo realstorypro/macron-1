@@ -1,10 +1,20 @@
 paths:
+  comedian:
+    skill: "Comedian"
+    icon: "smile outline"
+    description: A path of Comedy
+
+  empath:
+    skill: "Empath"
+    icon: "heart"
+    description: A path of Love
+
   scientist:
     skill: "Scientist"
     icon: "flask"
-    description: A path of a Yogi
+    description: A path of Science
 
   historian:
     skill: "Historian"
     icon: "book"
-    description: A path of a Yogi
+    description: A path of a History

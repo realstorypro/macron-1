@@ -16,9 +16,9 @@ views:
       published_date:
         label: 'Published Date'
         type: 'datepicker'
-      ad_header:
+      promo_header:
         type: 'header'
-        text: 'Ad'
+        text: 'Promo'
       image:
         label: 'Image'
         type: 'image'

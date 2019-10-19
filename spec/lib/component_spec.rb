@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Lint/UselessAssignment
 require "rails_helper"
 
 settings = SettingProxy.instance
@@ -43,3 +44,4 @@ describe Core::Component, "component tester for macron-1" do
     component.view("new")
   end
 end
+# rubocop:enable Lint/UselessAssignment

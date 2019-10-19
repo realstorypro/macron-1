@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable BlockLength
+# rubocop:disable Metrics/BlockLength
 require "rails_helper"
 include SettingsHelper
 
@@ -161,4 +161,4 @@ describe User, type: :model do
     end
   end
 end
-# rubocop:enable BlockLength
+# rubocop:enable Metrics/BlockLength

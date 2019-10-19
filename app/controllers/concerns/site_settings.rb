@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable GlobalVars
+# rubocop:disable Style/GlobalVars
 
 module SiteSettings
   extend ActiveSupport::Concern
@@ -15,4 +15,4 @@ module SiteSettings
     end
 end
 
-# rubocop:enable GlobalVars
+# rubocop:enable Style/GlobalVars

@@ -22,6 +22,5 @@ module Elements
       return true unless self.image
       self.format = FastImage.type(self.image)
     end
-
   end
 end

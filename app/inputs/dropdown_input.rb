@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable LineLength
+# rubocop:disable Metrics/LineLength
 # custom 'dropdown' input type for simple_form
 class DropdownInput < SimpleForm::Inputs::Base
   def input(_wrapper_options)
@@ -8,4 +8,4 @@ class DropdownInput < SimpleForm::Inputs::Base
     @builder.collection_select("#{attribute_name}_id", collection.all, :id, :name, { prompt: "Select #{attribute_name.capitalize}" }, { class: "ui search dropdown" }).to_s.html_safe
   end
 end
-# rubocop:enable LineLength
+# rubocop:enable Metrics/LineLength

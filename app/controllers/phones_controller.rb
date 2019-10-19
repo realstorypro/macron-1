@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-# rubocop:disable CyclomaticComplexity
-# rubocop:disable PerceivedComplexity
-# rubocop:disable EmptyWhen
-# rubocop:disable AbcSize
+# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/PerceivedComplexity
+# rubocop:disable Lint/EmptyWhen
+# rubocop:disable Metrics/AbcSize
 require_dependency "application_controller"
 
 class PhonesController < ApplicationController
@@ -92,7 +92,7 @@ class PhonesController < ApplicationController
       params.require(:user).permit(:country, :phone_number)
     end
 end
-# rubocop:enable CyclomaticComplexity
-# rubocop:enable PerceivedComplexity
-# rubocop:enable EmptyWhen
-# rubocop:enable AbcSize
+# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/PerceivedComplexity
+# rubocop:enable Lint/EmptyWhen
+# rubocop:enable Metrics/AbcSize
