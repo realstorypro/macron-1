@@ -20,7 +20,7 @@ spells:
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of transformation and empathy often cast by mythical Aphrodite.'
+    description: 'A spell of empathy often cast by mythical Aphrodite.'
     castTime: 1500
 
   eurika:
