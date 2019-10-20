@@ -8,7 +8,8 @@ auth:
         read: 
       users:
         read: 
-        moderate: 
+        moderate:
+        verify:
       members:
         read: 
       profiles:
@@ -25,15 +26,45 @@ auth:
         all: 
       videos:
         all: 
-      podcasts:
-        all: 
+      promotions:
+        all:
       categories:
-        read: 
+        all:
       tags:
-        read: 
+        all:
       support:
         all: 
-      events:
-        all: 
-      store:
-        all: 
+      elements_heading:
+        all:
+      elements:
+        all:
+      :elements_divider:
+        all:
+      :elements_richtext:
+        all:
+      :elements_image:
+        all:
+      :elements_blockquote:
+        all:
+      :elements_reference:
+        all:
+      :elements_solidheader:
+        all:
+      :elements_imageheader:
+        all:
+      :elements_embed:
+        all:
+      :elements_embededheader:
+        all:
+      :elements_videoheader:
+        all:
+      :elements_oversizedimage:
+        all:
+      :elements_oversizedquote:
+        all:
+      :elements_oversizedembed:
+        all:
+      :elements_colorblock:
+        all:
+      :elements_video:
+        all:
