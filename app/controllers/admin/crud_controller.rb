@@ -54,15 +54,39 @@ module Admin
       )
 
       if s("components.#{params[:component]}.focusable")
-        add_to_actions(
-          text: "Desktop Preview",
-          class: "purple enhanced hidden",
-          id: "desktop-browser-preview",
-          url: send(preview_path, @entry.category.slug, @entry.slug),
-          permission: policy(@entry).edit?,
-          data: { widget: "previewer", action: "desktop" }
-        ) unless @entry.category.nil?
+        if current_user.advanced
+          add_to_actions(
+            text: "Simple Mode",
+            class: "white left floated hidden",
+            icon: "exclamation circle",
+            id: "advanced-mode",
+            url: disable_advanced_admin_user_path(current_user.id),
+            permission: policy(current_user).enable_advanced?,
+            data: { widget: "clicker", action: "click" }
+          )
+        else
+          add_to_actions(
+            text: "Advanced Mode",
+            class: "white left floated hidden",
+            icon: "exclamation circle",
+            id: "advanced-mode",
+            url: enable_advanced_admin_user_path(current_user.id),
+            permission: policy(current_user).enable_advanced?,
+            data: { widget: "clicker", action: "click" }
+          )
+        end
+      end
 
+      add_to_actions(
+        text: "Writer Mode",
+        class: "grey enhanced right floated",
+        id: "focus-mode",
+        url: send(preview_path, @entry.category.slug, @entry.slug),
+        permission: policy(@entry).edit?,
+        data: { widget: "focus", action: "focus" }
+      ) unless @entry.category.nil?
+
+      if s("components.#{params[:component]}.focusable")
         add_to_actions(
           text: "Mobile Preview",
           class: "blue enhanced hidden",
@@ -73,12 +97,12 @@ module Admin
         ) unless @entry.category.nil?
 
         add_to_actions(
-          text: "Writer Mode",
-          class: "grey enhanced",
-          id: "focus-mode",
+          text: "Desktop Preview",
+          class: "purple enhanced hidden",
+          id: "desktop-browser-preview",
           url: send(preview_path, @entry.category.slug, @entry.slug),
           permission: policy(@entry).edit?,
-          data: { widget: "focus", action: "focus" }
+          data: { widget: "previewer", action: "desktop" }
         ) unless @entry.category.nil?
       end
 

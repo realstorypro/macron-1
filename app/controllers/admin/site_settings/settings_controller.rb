@@ -21,7 +21,7 @@ module Admin::SiteSettings
       end
       if current_user.advanced
         add_to_actions(
-          text: "Regular Mode",
+          text: "Simple Mode",
           class: "blue",
           icon: "exclamation circle",
           url: disable_advanced_admin_user_path(current_user.id),

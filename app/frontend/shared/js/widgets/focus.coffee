@@ -39,7 +39,11 @@ class Focus
     $('#delete-button').toggle()
     $('#edit-button').toggle()
 
+    # Toggle the Action Bar Width
+    $('.action.bar .ui.right').toggleClass(('full-width'))
+
     # Showing the Preview Buttons
+    $('#advanced-mode').toggleClass('hidden')
     $('#desktop-browser-preview').toggleClass('hidden')
     $('#mobile-browser-preview').toggleClass('hidden')
 
