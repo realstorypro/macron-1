@@ -58,6 +58,7 @@ module Admin
           add_to_actions(
             text: "Simple Mode",
             class: "white left floated hidden",
+            dynamic: true,
             icon: "exclamation circle",
             id: "advanced-mode",
             url: disable_advanced_admin_user_path(current_user.id),
@@ -68,6 +69,7 @@ module Admin
           add_to_actions(
             text: "Advanced Mode",
             class: "white left floated hidden",
+            dynamic: true,
             icon: "exclamation circle",
             id: "advanced-mode",
             url: enable_advanced_admin_user_path(current_user.id),
