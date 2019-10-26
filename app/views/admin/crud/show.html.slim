@@ -1,11 +1,6 @@
-= segment class: 'basic no padding', id: "user-help", dynamic: :on
-  - if current_user.help
-    = column size: 16
-      = render 'partials/side_help'
-
 = segment class: 'basic no padding'
   = grid
-    = row
+    = row 'entry details'
       = column
         == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
 

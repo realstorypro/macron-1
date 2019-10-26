@@ -45,6 +45,8 @@ class Focus
     # Toggle Focus Text
     $('#focus-mode').toggleText('Writer Mode','Exit Writer Mode')
 
+    $('.entry.details').slideToggle()
+
   setup: ->
     utils.log 'setup', 'setup()', 'focus'
 

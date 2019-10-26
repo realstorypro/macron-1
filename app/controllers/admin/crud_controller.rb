@@ -77,18 +77,14 @@ module Admin
             data: { widget: "clicker", action: "click" }
           )
         end
-      end
-
-      add_to_actions(
-        text: "Writer Mode",
-        class: "grey enhanced right floated",
-        id: "focus-mode",
-        url: send(preview_path, @entry.category.slug, @entry.slug),
-        permission: policy(@entry).edit?,
-        data: { widget: "focus", action: "focus" }
-      ) unless @entry.category.nil?
-
-      if s("components.#{params[:component]}.focusable")
+        add_to_actions(
+          text: "Writer Mode",
+          class: "grey enhanced right floated",
+          id: "focus-mode",
+          url: send(preview_path, @entry.category.slug, @entry.slug),
+          permission: policy(@entry).edit?,
+          data: { widget: "focus", action: "focus" }
+        ) unless @entry.category.nil?
         add_to_actions(
           text: "Mobile Preview",
           class: "blue enhanced hidden",
