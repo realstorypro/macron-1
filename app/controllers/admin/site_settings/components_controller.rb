@@ -38,25 +38,6 @@ module Admin::SiteSettings
             data: { widget: "clicker", action: "click" }
           )
         end
-        if current_user.advanced
-          add_to_actions(
-            text: "Regular Mode",
-            class: "blue",
-            icon: "exclamation circle",
-            url: disable_advanced_admin_user_path(current_user.id),
-            permission: policy(current_user).enable_advanced?,
-            data: { widget: "clicker", action: "click" }
-          )
-        else
-          add_to_actions(
-            text: "Advanced Mode",
-            class: "red",
-            icon: "exclamation circle",
-            url: enable_advanced_admin_user_path(current_user.id),
-            permission: policy(current_user).enable_advanced?,
-            data: { widget: "clicker", action: "click" }
-          )
-        end
       end
 
       def set_breadcrumb
