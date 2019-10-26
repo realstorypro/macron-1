@@ -27,6 +27,7 @@ class Sorter
   reinit: ->
     @teardown()
     @setup()
+    @toggle() if $('.page.builder').hasClass('active')
 
   setup: ->
     utils.log 'setup', 'setup()', 'sorter'
@@ -54,7 +55,7 @@ class Sorter
     $(sortable).each ->
       @.destroy()
 
-    @sortable = []
+    sortable = []
 
 
 export { Sorter as default }

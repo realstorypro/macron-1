@@ -9,7 +9,7 @@ class Element < ApplicationRecord
   after_commit :set_sort
 
   def set_sort
-    if self.elementable
+    if self.elementable && position.nil?
       update_column 'position', self.elementable.elements.count
     end
   end
