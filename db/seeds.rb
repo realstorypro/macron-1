@@ -9,6 +9,5 @@ if User.find_by_email("support@goodlogik.com").nil?
   user.password = password
   user.password_confirmation = password
   user.add_role "admin"
-  user.confirm
   user.save!
 end
