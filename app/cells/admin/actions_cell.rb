@@ -30,6 +30,18 @@ module Admin
       options[:labeled]
     end
 
+    def dynamic_class(action)
+      if action[:dynamic]
+        "dynamic"
+      end
+    end
+
+    def dynamic_id(action)
+      if action[:dynamic] && action[:id]
+        "dynamic_#{action[:id]}"
+      end
+    end
+
     # returns the icons position
     def icon_position
       # defaults return to left unless we explicitly pass icon position

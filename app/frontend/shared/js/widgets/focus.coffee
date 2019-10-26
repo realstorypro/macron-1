@@ -39,11 +39,19 @@ class Focus
     $('#delete-button').toggle()
     $('#edit-button').toggle()
 
-    # Showing the Preview Buttons
-    $('#desktop-browser-preview').toggleClass('hidden')
-    $('#mobile-browser-preview').toggleClass('hidden')
+    # Toggle the Action Bar Width
+    $('.action.bar .ui.right').toggleClass(('full-width'))
 
+    # Toggle Focus Text
     $('#focus-mode').toggleText('Writer Mode','Exit Writer Mode')
+
+    # Toggle Entry Details
+    $('.entry.details').slideToggle()
+
+    # Toggle Page Builder
+    $('.page.builder').toggleClass('active')
+
+    vent.channel().trigger "widget:sorter", action: "toggle"
 
   setup: ->
     utils.log 'setup', 'setup()', 'focus'
