@@ -5,21 +5,20 @@
         == Admin::DetailsCell.(nil, records: @entry, user: current_user, fields: component_show_fields, controller_namespace: self.controller.class.parent.to_s )
 
     = row
-      = column size: 16, id: 'content-pane', dynamic: :on
+      = column size: 16
 
         br
-        br
-
         = widget name: 'page builder'
-          - if component_areas&.include?('header')
-            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'header', title: 'Page Header', controller_namespace: self.controller.class.parent.to_s)
-          - if component_areas&.include?('header')
-            = segment 'center aligned basic empty element'
-              = link_to "Add Header Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'header', title: 'Full Screen Header'), class: 'ui button blue', data: { widget: "crud", action: "new" }
-            br
+          span class="dynamic" id='content-pane'
+            - if component_areas&.include?('header')
+              == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'header', title: 'Page Header', controller_namespace: self.controller.class.parent.to_s)
+            - if component_areas&.include?('header')
+              = segment 'center aligned basic empty element'
+                = link_to "Add Header Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'header', title: 'Full Screen Header'), class: 'ui button blue', data: { widget: "crud", action: "new" }
+              br
 
-          - if component_areas&.include?('content')
-            == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'content', title: 'Page Body',  controller_namespace: self.controller.class.parent.to_s)
-          - if component_areas&.include?('content')
-            = segment 'center aligned basic empty element'
-              = link_to "Add Content Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'content', title: 'Page Body'), class: 'ui button blue', data: { widget: "crud", action: "new" }
+            - if component_areas&.include?('content')
+              == Admin::ElementsCell.(nil, user: current_user, areas: @entry.areas, area: 'content', title: 'Page Body',  controller_namespace: self.controller.class.parent.to_s)
+            - if component_areas&.include?('content')
+              = segment 'center aligned basic empty element'
+                = link_to "Add Content Element", pick_element_admin_elements_path(parent_component: params[:component], parent_id: @entry.id, area: 'content', title: 'Page Body'), class: 'ui button blue', data: { widget: "crud", action: "new" }
