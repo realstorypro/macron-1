@@ -45,7 +45,13 @@ class Focus
     # Toggle Focus Text
     $('#focus-mode').toggleText('Writer Mode','Exit Writer Mode')
 
+    # Toggle Entry Details
     $('.entry.details').slideToggle()
+
+    # Toggle Page Builder
+    $('.page.builder').toggleClass('active')
+
+    vent.channel().trigger "widget:sorter", action: "toggle"
 
   setup: ->
     utils.log 'setup', 'setup()', 'focus'
