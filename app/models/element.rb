@@ -10,7 +10,7 @@ class Element < ApplicationRecord
 
   def set_sort
     if self.elementable && position.nil?
-      update_column 'position', self.elementable.elements.count
+      update_column "position", self.elementable.elements.count
     end
   end
 

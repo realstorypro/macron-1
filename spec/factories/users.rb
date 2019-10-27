@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :user, aliases: [:member] do
     email { Faker::Internet.unique.email }
-    username { rand(1..5).to_s + Faker::Internet.unique.email }
+    username { Faker::Internet.username + rand(2..10800000).to_s }
     password { Faker::Internet.password }
 
     after(:create) do |user|
