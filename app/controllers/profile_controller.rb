@@ -13,7 +13,7 @@ class ProfileController < MembersController
     # TODO: we want to refactor this entire thing to make profile updates
     # look more user friendly
     if @entry.update(entry_params)
-      flash[:success] = "#{component_name} was successfully updated."
+      flash[:success] = "Profile successfully updated."
       response_status :success
       # needed for the the CRUD widget to re-load the page on edit
       redirect_back(fallback_location: admin_root_path)

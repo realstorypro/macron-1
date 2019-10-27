@@ -57,7 +57,8 @@ class User < ApplicationRecord
 
   # Validations
   validates :username, presence: true, uniqueness: { case_sensitive: false }
-  validate :validate_username
+  validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true,
+                      message: "Invalid username. Only letters, numbers and underscores are allowed."
   validates_presence_of :username, :slug, :email
 
   # Adding Alias
@@ -109,10 +110,6 @@ class User < ApplicationRecord
   def add_subscription
     return unless newsletter == "1"
     Zapier::NewsletterSubscription.new(self).post_to_zapier
-  end
-
-  def validate_username
-    errors.add(:username, :invalid) if User.where(email: username).exists?
   end
 
   def unverify_phone_if_changed
