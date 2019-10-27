@@ -1,7 +1,6 @@
 import Utils from '../core/utils'
 import Vent from '../core/vent'
 import Vue from 'vue/dist/vue.esm'
-import turbolinks_adapter from './mixins/turbolinks'
 
 import store from './store/comment_store'
 import axios from 'axios'
@@ -37,7 +36,6 @@ class Comments
 
     @app = new Vue
       el: "##{widget.id}"
-      mixins: [turbolinks_adapter]
       components: { avatar, dropdown }
       data:
         comment_empty: true

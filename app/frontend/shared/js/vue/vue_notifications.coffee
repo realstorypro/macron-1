@@ -1,6 +1,5 @@
 import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
-import turbolinks_adapter from './mixins/turbolinks'
 
 import Utils from '../core/utils'
 import Vent from '../core/vent'
@@ -16,7 +15,6 @@ class VueNotifications extends Common
 
     @app = new Vue
       el: "##{widget.id}"
-      mixins: [turbolinks_adapter]
       data: ->
         widget: $("##{widget.id}").data()
       computed: 

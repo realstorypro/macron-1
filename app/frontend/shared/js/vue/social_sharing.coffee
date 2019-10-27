@@ -1,6 +1,5 @@
 import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
-import turbolinks_adapter from './mixins/turbolinks'
 import VueGoodshareTumblr from 'vue-goodshare/src/providers/Tumblr.vue'
 import VueGoodshareFacebook from 'vue-goodshare/src/providers/Facebook.vue'
 import VueGoodshareTwitter from 'vue-goodshare/src/providers/Twitter.vue'
@@ -22,7 +21,6 @@ class SocialSharing extends Common
 
     @app = new Vue
       el: "##{widget.id}"
-      mixins: [turbolinks_adapter]
       components: { VueGoodshareTumblr,VueGoodshareFacebook, VueGoodshareTwitter, VueGoodshareLinkedin, VueGoodshareReddit, VueGoodsharePinterest }
       data:
         flipped: false

@@ -1,7 +1,6 @@
 import Utils from '../core/utils'
 import Vent from '../core/vent'
 import Vue from 'vue/dist/vue.esm'
-import turbolinks_adapter from './mixins/turbolinks'
 import store from './store/feed_store'
 import axios from 'axios'
 import moment from 'moment'
@@ -31,7 +30,6 @@ class Feed
 
     @app = new Vue
       el: "##{widget.id}"
-      mixins: [turbolinks_adapter]
       mounted: ->
         @user_id = $(@.$options.el).data('user-id')
 

@@ -1,6 +1,7 @@
 # Used to Import Global Components to Vue
 import Vue from 'vue/dist/vue.esm'
 
+import TurbolinksAdapter from 'vue-turbolinks'
 import VModal from 'vue-js-modal'
 import Vuex from 'vuex'
 import VTooltip from 'v-tooltip'
@@ -12,6 +13,7 @@ import Notifications from 'vue-notification'
 import velocity      from 'velocity-animate'
 import VuePlyr from 'vue-plyr'
 
+Vue.use(TurbolinksAdapter)
 Vue.use(VModal)
 Vue.use(Vuex)
 Vue.use(VTooltip)

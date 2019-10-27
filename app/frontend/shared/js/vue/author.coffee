@@ -1,6 +1,5 @@
 import Vue from 'vue/dist/vue.esm'
 import Common from '../core/common'
-import turbolinks_adapter from './mixins/turbolinks'
 import axios from 'axios'
 import store from './store/author_store'
 
@@ -19,7 +18,6 @@ class Author extends Common
 
     @app = new Vue
       el: "##{widget.id}"
-      mixins: [turbolinks_adapter]
       store: store
       components:
         'avatar': Avatar
