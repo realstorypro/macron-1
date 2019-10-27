@@ -2,7 +2,7 @@ MACRON-1
 --------
 [![codecov](https://codecov.io/gh/leouofa/aquarius/branch/master/graph/badge.svg?token=SpfdxrArOG)](https://codecov.io/gh/leouofa/aquarius)
 
-# Local Setup
+# Local Development
 
 ### Setting Up Database
 You can import the database from an existing Heroku application with __pg:pull__ command.  
