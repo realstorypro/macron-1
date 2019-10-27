@@ -16,7 +16,7 @@ class ViewTracker
 
   setup: () ->
     utils.log 'setup', 'setup()', 'view_tracker'
-    $('[data-tracked-page').each ->
+    $('[data-tracked-page]').each ->
       event = $(@).data('event')
       props = $(@).data('props')
       ahoy.track event, props
