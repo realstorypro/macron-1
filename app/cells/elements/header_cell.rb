@@ -40,7 +40,7 @@ module Elements
     end
 
     def summary_alignment
-      return options[:summary_alignment] if model.respond_to?(:summary_alignment)
+      return model.summary_alignment if model.respond_to?(:summary_alignment)
       "left"
     end
 
@@ -54,10 +54,6 @@ module Elements
     def has_credit
       return true if model.respond_to?(:credit) && !model.credit.blank?
       false
-    end
-
-    def credit
-      return options[:summary_alignment] if model.respond_to?(:summary_alignment)
     end
 
 
