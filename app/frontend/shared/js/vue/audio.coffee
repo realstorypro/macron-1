@@ -1,7 +1,6 @@
 import Utils from '../core/utils'
 import Vent from '../core/vent'
 import Vue from 'vue/dist/vue.esm'
-import turbolinks_adapter from './mixins/turbolinks'
 
 utils = new Utils
 vent = new Vent
@@ -27,7 +26,6 @@ class Audio
 
     @app = new Vue
       el: "##{widget.id}"
-      mixins: [turbolinks_adapter]
       mounted: ->
         @cover_element = $("#{@.$options.el} .cover")
         $("#{@.$options.el} iframe").on 'load', =>
