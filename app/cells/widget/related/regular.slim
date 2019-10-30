@@ -2,6 +2,7 @@
   = widget 'related'
     = segment 'basic'
       = widget name: "table listing #{'headless' unless options[:header]}"
+        = h5 text: 'Recommended Content'
         = table 'very basic unstackable'
           - if options[:header]
             thead
