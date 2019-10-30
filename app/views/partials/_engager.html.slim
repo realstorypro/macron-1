@@ -18,5 +18,5 @@
       = row
         = column computer: 8, tablet: 16, mobile: 16
           == Widget::RelatedCell.(@related_content, layout: :regular, headless: true, category: true, icon: true) unless @related_content.blank?
-        = column computer: 8, tablet: 16, mobile: 16
+        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
           == Widget::PromotionCell.(@promo, layout: :sidebar) unless @promo.blank?
