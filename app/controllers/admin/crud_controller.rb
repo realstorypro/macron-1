@@ -48,7 +48,7 @@ module Admin
         class: "primary enhanced",
         icon: "edit",
         id: "edit-button",
-        url: send(edit_path("admin"), @entry),
+        url: send(edit_path("admin"), @entry.id),
         permission: policy(@entry).edit?,
         data: { widget: "crud", action: "edit" }
       )

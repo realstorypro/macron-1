@@ -194,6 +194,11 @@ defaults:
     css_class: 'widget'
     ui: :off
 
+  element:
+    tag: div
+    css_class: 'element'
+    ui: :off
+
 
   # non semantic ui components
   overlay:

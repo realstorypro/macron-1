@@ -1,4 +1,5 @@
 - if model.rich
-  = formatted_text
+  .alignment class="#{model.alignment if model.alignment}"
+    = formatted_text
 - else
   = h5 text: 'No Rich Text Inserted', class: 'horizontal divider'

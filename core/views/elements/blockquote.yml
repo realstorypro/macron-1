@@ -12,3 +12,12 @@ views:
         label: 'Summary'
         icon: 'text width'
         type: 'text'
+      alignment:
+        label: 'Alignment'
+        type: 'fixed_dropdown'
+        icon: 'align left'
+        options:
+          - 'left'
+          - 'centered'
+          - 'right'
+        advanced: true

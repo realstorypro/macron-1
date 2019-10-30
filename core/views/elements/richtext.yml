@@ -8,3 +8,11 @@ views:
         label: 'Text'
         icon: 'list ul'
         type: 'rich'
+      alignment:
+        label: 'Alignment'
+        type: 'fixed_dropdown'
+        icon: 'align left'
+        options:
+          - 'left'
+          - 'centered'
+          - 'right'

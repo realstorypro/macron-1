@@ -1,11 +1,13 @@
 - if model.body
-  = h6 class: 'horizontal divider'
-    = icon 'quote left'
-  = simple_format(model.body)
-  p.author
-    = "&ndash; #{model.author}"
-  = h6 class: 'horizontal divider bottom quote'
-    = icon 'quote right'
+  = element "blockquote #{model.alignment}"
+    = h6 class: 'horizontal divider'
+      = icon 'quote left'
+    = simple_format(model.body)
+    - if model.author.length > 0
+      p.author
+        = "~ #{model.author}"
+    = h6 class: 'horizontal divider bottom quote'
+      = icon 'quote right'
 
 -else
   = h5 text: 'No Blockquote Inserted', class: 'horizontal divider'
