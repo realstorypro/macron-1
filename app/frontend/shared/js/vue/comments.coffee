@@ -10,6 +10,10 @@ import _ from 'underscore'
 import avatar from 'vue-avatar'
 import dropdown from './components/dropdown'
 
+# Factor In
+import { Editor, EditorContent } from 'tiptap'
+
+# Factor Out
 import redactor from '../plugins/redactor/redactor'
 
 utils = new Utils
@@ -43,41 +47,44 @@ class Comments
         current_user: $("##{widget.id}").data('user')
         component: $("##{widget.id}").data('component')
         record: $("##{widget.id}").data('record')
+        editor: null
 
+      components: {'editor-content': EditorContent}
       mounted: ->
         store.dispatch('subscribeToUpdates', { @component, @record })
         store.dispatch('loadComments', { @component, @record })
+        @editor = new Editor()
 
-        $R.options =
-          minHeight: '180px'
-          toolbarFixed: false
-          autoparseVideo: false
-          buttons: ['format','bold','ul','line']
-          buttonsHideOnMobile: ['format','ul','line']
-          formatting: ['p']
-          formattingAdd:
-            "small-header":
-              title: 'Normal',
-              api: 'module.block.format',
-              args:
-                'tag': 'p'
-            "small-header":
-              title: 'Medium',
-              api: 'module.block.format',
-              args:
-                'tag': 'h4'
-            "large-header":
-              title: 'Large',
-              api: 'module.block.format',
-              args:
-                'tag': 'h2'
+        # $R.options =
+        #   minHeight: '180px'
+        #   toolbarFixed: false
+        #   autoparseVideo: false
+        #   buttons: ['format','bold','ul','line']
+        #   buttonsHideOnMobile: ['format','ul','line']
+        #   formatting: ['p']
+        #   formattingAdd:
+        #     "small-header":
+        #       title: 'Normal',
+        #       api: 'module.block.format',
+        #       args:
+        #         'tag': 'p'
+        #     "small-header":
+        #       title: 'Medium',
+        #       api: 'module.block.format',
+        #       args:
+        #         'tag': 'h4'
+        #     "large-header":
+        #       title: 'Large',
+        #       api: 'module.block.format',
+        #       args:
+        #         'tag': 'h2'
 
 
-        $R "##{widget.id} .comment.box",
-          placeholder: "Type your reply here ..."
-          callbacks:
-            keyup: (e)=>
-              @comment_empty = $R("##{widget.id} .comment.box").editor.isEmpty()
+        # $R "##{widget.id} .comment.box",
+        #   placeholder: "Type your reply here ..."
+        #   callbacks:
+        #     keyup: (e)=>
+        #       @comment_empty = $R("##{widget.id} .comment.box").editor.isEmpty()
 
 
 

@@ -50,7 +50,9 @@
         = icon 'comments'
         | Something to add?
       = segment 'new comment'
-        textarea.comment.box
+        // textarea.comment.box
+        editor-menu-bar :editor="editor"
+        editor-content :editor="editor"
       = segment 'basic no padding center aligned'
         = button class: 'secondary large submit vertical animated', tag: 'div', v: {'on:click': 'addComment()'}
           = content 'visible'
