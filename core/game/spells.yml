@@ -1,6 +1,6 @@
 spells:
   hilarious:
-    name: "Crippling Laughter"
+    name: "Tickle Attack"
     color: "orange"
     icon: 'smile outline'
     path: comedian
@@ -8,23 +8,23 @@ spells:
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of unstoppable laughter by cast by Jesters of Danish Court.'
+    description: 'A spell of unstoppable laughter first cast by the Jesters of Danish Court.'
     castTime: 1500
 
   love:
-    name: "Love & Adoration"
+    name: "Its Love"
     color: "pink"
     icon: 'heart'
-    path: empath
+    path: lover
     base_points: 5
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of empathy often cast by mythical Aphrodite.'
+    description: 'A spell of love frequently cast by mythical Aphrodite.'
     castTime: 1500
 
   eurika:
-    name: "Eurika"
+    name: "Eurika!"
     color: "blue"
     icon: 'flask'
     path: scientist
@@ -36,7 +36,7 @@ spells:
     castTime: 1500
 
   veritas:
-    name: "Truth"
+    name: "Truth. Be. Told."
     color: "brown"
     icon: 'book'
     path: historian

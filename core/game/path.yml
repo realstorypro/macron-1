@@ -4,8 +4,8 @@ paths:
     icon: "smile outline"
     description: A path of Comedy
 
-  empath:
-    skill: "Empath"
+  lover:
+    skill: "Lover"
     icon: "heart"
     description: A path of Love
 
