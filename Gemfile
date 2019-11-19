@@ -78,10 +78,11 @@ gem "cells"
 gem "cells-rails"
 gem "cells-slim"
 gem "chartkick"
-gem "simple_form"
+gem "simple_form", "5.0.0"
 gem "readingtime"
 gem "fastimage"
 gem "webpacker", "~> 3.5"
+gem "sprockets", "3.7.2"
 
 # File Upload
 gem "uploadcare-rails", "~> 1.1"
