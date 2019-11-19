@@ -13,7 +13,7 @@ div data-tracked-page="true" data-event="Viewed Content" data-props=@tracking_pr
 
 - @entry.areas.select do |area|
   - if area.type.include?('Content')
-    - area.elements.each do |element|
+    - area.elements.each_with_index do |element, index|
       - if @oversized_elements.any? {|oversized| element.class.to_s.downcase.include?(oversized) }
         == Elements::ElementCell.(element, request: request)
       - else
@@ -32,7 +32,7 @@ div data-tracked-page="true" data-event="Viewed Content" data-props=@tracking_pr
 
           - @breadcrumbs_displayed = true
 
-        = widget 'normal rich text'
+        = widget "normal rich text #{'last' if (area.elements.count - 1) == index}"
           = container 'wide'
             = grid
               = row
