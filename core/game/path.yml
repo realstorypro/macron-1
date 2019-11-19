@@ -1,9 +1,4 @@
 paths:
-  comedian:
-    skill: "Comedian"
-    icon: "smile outline"
-    description: A path of Comedy
-
   lover:
     skill: "Lover"
     icon: "heart"

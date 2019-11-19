@@ -1,16 +1,4 @@
 spells:
-  hilarious:
-    name: "Laugh"
-    color: "orange"
-    icon: 'smile outline'
-    path: comedian
-    base_points: 5
-    energy: 10
-    level: 1
-    direction: 'positive'
-    description: 'A spell of unstoppable laughter first cast by the Jesters of Danish Court.'
-    castTime: 1500
-
   love:
     name: "Love"
     color: "pink"
@@ -20,29 +8,29 @@ spells:
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of love frequently cast by mythical Aphrodite.'
+    description: 'A spell of love first cast by a girlfriend of Aphrodite.'
     castTime: 1500
 
-  eurika:
-    name: "Eurika!"
+  history:
+    name: "History"
     color: "blue"
+    icon: 'pencil'
+    path: historian
+    base_points: 5
+    energy: 10
+    level: 1
+    direction: 'positive'
+    description: 'A spell of written history first used by caveman artists.'
+    castTime: 1500
+
+  discovery:
+    name: "Discovery"
+    color: "orange"
     icon: 'flask'
     path: scientist
     base_points: 5
     energy: 10
     level: 1
     direction: 'positive'
-    description: 'A spell of scientific discovery first cast by Archimedes of Greece.'
-    castTime: 1500
-
-  veritas:
-    name: "Truth. Be. Told."
-    color: "brown"
-    icon: 'book'
-    path: historian
-    base_points: 5
-    energy: 10
-    level: 1
-    direction: 'positive'
-    description: 'A spell of historical accuracy first cast by Titus Livius of Italy.'
+    description: 'A spell of scientific discovery often cast by Archimedes of Greece.'
     castTime: 1500
