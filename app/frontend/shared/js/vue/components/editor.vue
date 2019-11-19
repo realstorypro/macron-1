@@ -21,7 +21,7 @@
 
 <script lang="coffee">
     import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-    import { Bold, Italic, Heading, BulletList, OrderedList, ListItem, HorizontalRule, Placeholder } from 'tiptap-extensions'
+    import { Bold, Heading, HorizontalRule, Placeholder } from 'tiptap-extensions'
 
     export default
         components: {EditorContent, EditorMenuBar}
@@ -30,7 +30,6 @@
         data: ->
             editor: new Editor
                 extensions: [new Bold,
-                    new Italic,
                     new Heading,
                     new HorizontalRule,
                     new Placeholder(
