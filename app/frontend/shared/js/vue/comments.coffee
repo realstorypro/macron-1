@@ -11,7 +11,7 @@ import avatar from 'vue-avatar'
 import dropdown from './components/dropdown'
 
 # Factor In
-import { Editor, EditorContent } from 'tiptap'
+import EditorComponent from './components/editor'
 
 # Factor Out
 import redactor from '../plugins/redactor/redactor'
@@ -40,7 +40,7 @@ class Comments
 
     @app = new Vue
       el: "##{widget.id}"
-      components: { avatar, dropdown }
+      #components: { avatar, dropdown }
       data:
         comment_empty: true
         # comments: []
@@ -49,11 +49,10 @@ class Comments
         record: $("##{widget.id}").data('record')
         editor: null
 
-      components: {'editor-content': EditorContent}
+      components: {'editor-component': EditorComponent}
       mounted: ->
         store.dispatch('subscribeToUpdates', { @component, @record })
         store.dispatch('loadComments', { @component, @record })
-        @editor = new Editor()
 
         # $R.options =
         #   minHeight: '180px'

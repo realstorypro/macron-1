@@ -120,13 +120,27 @@
         margin-top: 0
 
   .new.comment
-    padding: 0.3em 0em
+    padding: 0em 0em 1em 0
     border: $w-comments-new-comment-border
     width: auto !important
     max-width: 100% !important
 
     h5
       margin-bottom: 1.5em
+
+    .reply
+      font-weight: 800
+      padding: 1em 0.5em 1em 0
+      border: none
+
+      &:before
+        display: none
+
+    .editor-content
+      padding: 0em 1em
+
+      .ProseMirror:focus
+        outline: none
 
   .submit.button
     width: 50%
@@ -144,23 +158,3 @@
 
   .unregistered.segment
     padding: 3.5em 2em
-
-
-// Redactor Styling
-.redactor-box.redactor-styles-on
-  border: 0 !important
-
-.redactor-toolbar a, .redactor-air a
-  border-radius: 0 !important
-  box-shadow: 0px 0px 2px #00000075 !important
-
-
-.redactor-dropdown-item-large-header
-  text-transform: uppercase
-  font-weight: bold
-  font-size: $w-comments-large-header-font-size
-
-.redactor-dropdown-item-small-header
-  text-transform: uppercase
-  font-weight: bold
-  font-size: $w-comments-small-header-font-size

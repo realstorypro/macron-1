@@ -92,6 +92,7 @@
     "shopify-buy": "^1.9.1",
     "sortablejs": "^1.7.0",
     "tiptap": "^1.26.4",
+    "tiptap-extensions": "^1.28.4",
     "turbolinks": "^5.0.3",
     "underscore": "^1.8.3",
     "uploadcare": "^0.4.5",
