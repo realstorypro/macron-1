@@ -50,13 +50,7 @@
         = icon 'comments'
         | Something to add?
       = segment 'new comment'
-        editor-component
-      //= segment 'basic no padding center aligned'
-        = button class: 'secondary large submit vertical animated', tag: 'div', v: {'on:click': 'addComment()'}
-          = content 'visible'
-            | SPEAK UP
-          = content 'hidden'
-            = icon 'volume up'
+        editor-component v-on:post-reply="postReply($event)"
 
   = header class: 'horizontal divider', text: 'Something to add? Join the discussion!', tag: :h6, v: {if: "!current_user"}
   = segment class: 'center aligned unregistered', v: {if: "!current_user"}

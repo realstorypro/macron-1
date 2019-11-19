@@ -8,15 +8,11 @@
                     i.icon.paragraph
                 .item(:class="{ 'active': isActive.bold()}" @click.prevent="commands.bold")
                     i.icon.bold
-                //.item(:class="{ 'active': isActive.italic()}" @click.prevent="commands.italic")
-                //    i.icon.italic
-                .item(:class="{ 'active': isActive.ordered_list()}" @click.prevent="commands.ordered_list")
-                    i.icon.list.ol
                 .item(:class="{ 'active': isActive.horizontal_rule()}" @click.prevent="commands.horizontal_rule")
                     i.icon.minus
                 .right.menu
                     .item.reply
-                        .ui.button.red
+                        .ui.button.compact.red(@click.prevent="postReply")
                             i.icon.paper.plane
                             | &nbsp;
                             | REPLY
@@ -25,7 +21,7 @@
 
 <script lang="coffee">
     import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-    import { Bold, Italic, Heading, BulletList, OrderedList, ListItem, HorizontalRule } from 'tiptap-extensions'
+    import { Bold, Italic, Heading, BulletList, OrderedList, ListItem, HorizontalRule, Placeholder } from 'tiptap-extensions'
 
     export default
         components: {EditorContent, EditorMenuBar}
@@ -33,6 +29,33 @@
             commands: Array
         data: ->
             editor: new Editor
-                extensions: [new Bold, new Italic, new Heading, new BulletList, new OrderedList, new ListItem, new HorizontalRule ]
-        mounted: ->
+                extensions: [new Bold,
+                    new Italic,
+                    new Heading,
+                    new HorizontalRule,
+                    new Placeholder(
+                        emptyNodeClass: 'is-empty'
+                        emptyNodeText: 'Enter your reply here ...'
+                        showOnlyWhenEditable: true
+                  )
+                ]
+                onUpdate: ({getJSON, getHTML}) =>
+                    @html =  getHTML()
+            html: null
+        methods:
+            postReply: ->
+                @.$emit('post-reply', @html)
+                @editor.clearContent()
+        beforeDestroy: ->
+            @editor.destroy()
 </script>
+
+<style lang="scss">
+    .editor p.is-empty:first-child::before {
+        content: attr(data-empty-text);
+        float: left;
+        color: #aaa;
+        pointer-events: none;
+        height: 0;
+    }
+</style>

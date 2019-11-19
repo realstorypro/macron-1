@@ -13,9 +13,6 @@ import dropdown from './components/dropdown'
 # Factor In
 import EditorComponent from './components/editor'
 
-# Factor Out
-import redactor from '../plugins/redactor/redactor'
-
 utils = new Utils
 vent = new Vent
 
@@ -40,52 +37,15 @@ class Comments
 
     @app = new Vue
       el: "##{widget.id}"
-      #components: { avatar, dropdown }
       data:
         comment_empty: true
-        # comments: []
         current_user: $("##{widget.id}").data('user')
         component: $("##{widget.id}").data('component')
         record: $("##{widget.id}").data('record')
-        editor: null
-
-      components: {'editor-component': EditorComponent}
+      components: {'editor-component': EditorComponent, 'avatar': avatar, 'dropdown': dropdown}
       mounted: ->
         store.dispatch('subscribeToUpdates', { @component, @record })
         store.dispatch('loadComments', { @component, @record })
-
-        # $R.options =
-        #   minHeight: '180px'
-        #   toolbarFixed: false
-        #   autoparseVideo: false
-        #   buttons: ['format','bold','ul','line']
-        #   buttonsHideOnMobile: ['format','ul','line']
-        #   formatting: ['p']
-        #   formattingAdd:
-        #     "small-header":
-        #       title: 'Normal',
-        #       api: 'module.block.format',
-        #       args:
-        #         'tag': 'p'
-        #     "small-header":
-        #       title: 'Medium',
-        #       api: 'module.block.format',
-        #       args:
-        #         'tag': 'h4'
-        #     "large-header":
-        #       title: 'Large',
-        #       api: 'module.block.format',
-        #       args:
-        #         'tag': 'h2'
-
-
-        # $R "##{widget.id} .comment.box",
-        #   placeholder: "Type your reply here ..."
-        #   callbacks:
-        #     keyup: (e)=>
-        #       @comment_empty = $R("##{widget.id} .comment.box").editor.isEmpty()
-
-
 
       computed:
         comments: ->
@@ -106,29 +66,17 @@ class Comments
           moment(datestamp).format('MMMM YYYY')
 
       methods:
-        addComment: (e) ->
-          comment_text = $R("##{widget.id} .comment.box", 'source.getCode')
-
-          if comment_text != ''
+        postReply: (reply) ->
+          if reply != ''
             axios.post("/comments/",
               component: @component
               record_id: @record
-              body: comment_text
+              body: reply
             ).then((response) =>
               @comments.push response.data
-              $R("##{widget.id} .comment.box").source.setCode('')
-
-              $('html, body').animate { scrollTop: $('.posts').offset().top + $('.posts').outerHeight(true) - 100 }, 800
-
-
-              comment_text = ''
-              @comment_empty = true
             ).catch((response) =>
               console.log response
             )
-          else
-            console.log 'the comment can not be empty!'
-
         destroy_comment: (comment) ->
           store.dispatch('destroyComment', { @component, @record, comment })
 
