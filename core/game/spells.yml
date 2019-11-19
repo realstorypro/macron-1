@@ -1,6 +1,6 @@
 spells:
   hilarious:
-    name: "Tickle Attack"
+    name: "Laugh"
     color: "orange"
     icon: 'smile outline'
     path: comedian
@@ -12,7 +12,7 @@ spells:
     castTime: 1500
 
   love:
-    name: "Its Love"
+    name: "Love"
     color: "pink"
     icon: 'heart'
     path: lover

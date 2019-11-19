@@ -5,6 +5,11 @@
   margin-top: 3em
 
 .rich.text.widget
+  &.last
+    margin-bottom: 3em
+    @include media("<tablet")
+      margin-bottom: 2em
+
   .alignment
     &.left
      text-align: left
