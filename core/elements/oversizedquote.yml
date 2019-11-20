@@ -1,6 +1,6 @@
 components:
   elements_oversizedquote:
-    name: 'Quote'
+    name: 'Full Screen Quote'
     description: ' An oversized quote with an image.'
     icon: 'quote left'
     klass: 'Elements::Oversizedquote'
@@ -10,5 +10,6 @@ components:
       components:
         - articles
         - videos
+        - discussions
       areas:
         - content

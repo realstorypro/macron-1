@@ -10,5 +10,6 @@ components:
       components:
         - articles
         - videos
+        - discussions
       areas:
         - content
