@@ -22,10 +22,10 @@ menu:
       component: elements_image
       icon: image
       enabled: true
-    - name: Image
-      hint: Insert oversized image with optional title and caption.
+    - name: Full-Screen Image
+      hint: Insert full screen image with optional title and caption.
       component: elements_oversizedimage
-      icon: image
+      icon: images
       enabled: true
     - name: Video
       hint: "Insert oversized video with optional title."
@@ -37,8 +37,8 @@ menu:
       component: elements_blockquote
       icon: quote left
       enabled: true
-    - name: Quote
-      hint: "Insert oversized quote with a background image."
+    - name: Full-Screen Quote
+      hint: "Insert full-screen quote with a background image."
       component: elements_oversizedquote
       icon: quote left
       enabled: true

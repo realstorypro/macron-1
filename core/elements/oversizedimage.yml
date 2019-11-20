@@ -1,7 +1,7 @@
 components:
   elements_oversizedimage:
-    name: 'Image'
-    description: ' An oversized image with optional title and caption.'
+    name: 'Full-Screen Image'
+    description: ' A full-screen image with optional title and caption.'
     icon: 'images'
     klass: 'Elements::Oversizedimage'
     path: 'elements'
