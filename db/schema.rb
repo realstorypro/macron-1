@@ -306,6 +306,7 @@ ActiveRecord::Schema.define(version: 2019_10_16_231541) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -330,14 +331,15 @@ ActiveRecord::Schema.define(version: 2019_10_16_231541) do
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
     t.integer "sash_id"
+    t.integer "level", default: 0
     t.integer "energy", default: 0
     t.boolean "bypass2fa", default: false
-    t.string "email"
     t.string "email_ciphertext"
     t.string "email_bidx"
     t.string "phone_number_ciphertext"
     t.string "phone_number_bidx"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["email_bidx"], name: "index_users_on_email_bidx", unique: true
     t.index ["phone_number_bidx"], name: "index_users_on_phone_number_bidx", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

@@ -8,6 +8,13 @@ GIT
       rails (> 5.2.0)
 
 GIT
+  remote: https://github.com/goodlogik/hypershield.git
+  revision: fba3cd44df2d0dc37bdbb4a18922a545420e389e
+  specs:
+    hypershield (0.1.1)
+      activerecord (>= 5)
+
+GIT
   remote: https://github.com/kaminari/kaminari.git
   revision: ff5c8425eb7191a4e1cb6013b2a15bf38a725a5f
   branch: master
@@ -626,6 +633,7 @@ DEPENDENCIES
   guard-rubocop
   heroku-deflater
   httparty
+  hypershield!
   iso_country_codes
   jbuilder (~> 2.5)
   kaminari!
