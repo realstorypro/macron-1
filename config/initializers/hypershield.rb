@@ -1,5 +1,5 @@
 Hypershield.schemas = {
-    hypershield: {
+    shield: {
         blacklist: %w(activities areas ar_internal_metadata blazer_audits
             blazer_checks blazer_dashboard_queries blazer_dashboards blazer_queries
             badges_sashes
