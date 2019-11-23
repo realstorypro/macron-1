@@ -12,6 +12,8 @@ heroku pg:pull heroku_db_name aquarius_development --app heroku_app_name
 foreman run rake components:setup
 ```
 
+### Setting up Hypershield
+
 ### Setting Environment Variables
 The environmental variables are stored in a .env file. They can be pulled down from an existing Heroku app.
 
