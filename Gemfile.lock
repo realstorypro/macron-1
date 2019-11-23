@@ -9,7 +9,8 @@ GIT
 
 GIT
   remote: https://github.com/goodlogik/hypershield.git
-  revision: fba3cd44df2d0dc37bdbb4a18922a545420e389e
+  revision: 65da7d83e872e64bb29c0ffd449281175874da1f
+  branch: blacklist
   specs:
     hypershield (0.1.1)
       activerecord (>= 5)
@@ -221,7 +222,7 @@ GEM
     errbase (0.2.0)
     erubi (1.9.0)
     erubis (2.7.0)
-    excon (0.68.0)
+    excon (0.69.1)
     execjs (2.7.0)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -336,7 +337,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
-    parallel (1.19.0)
+    parallel (1.19.1)
     parallel_tests (2.29.2)
       parallel
     parser (2.6.5.0)
@@ -356,8 +357,8 @@ GEM
     rack (2.0.7)
     rack-cache (1.10.0)
       rack (>= 0.4)
-    rack-cors (1.0.6)
-      rack (>= 1.6.0)
+    rack-cors (1.1.0)
+      rack (>= 2.0.0)
     rack-protection (2.0.7)
       rack
     rack-proxy (0.6.5)

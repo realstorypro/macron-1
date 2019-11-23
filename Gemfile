@@ -30,7 +30,7 @@ gem "acts_as_votable", "~> 0.12.0"
 # Analytics
 gem "ahoy_matey"
 gem "blazer"
-gem 'hypershield', github: "goodlogik/hypershield"
+gem 'hypershield', github: "goodlogik/hypershield", branch: "blacklist"
 gem "groupdate"
 
 # Security
