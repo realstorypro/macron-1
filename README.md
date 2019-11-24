@@ -14,6 +14,9 @@ foreman run rake components:setup
 
 ### Setting up Hypershield
 
+#### Locally
+#### On Heroku
+
 ### Setting Environment Variables
 The environmental variables are stored in a .env file. They can be pulled down from an existing Heroku app.
 
