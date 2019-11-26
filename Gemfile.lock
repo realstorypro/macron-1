@@ -8,6 +8,14 @@ GIT
       rails (> 5.2.0)
 
 GIT
+  remote: https://github.com/goodlogik/hypershield.git
+  revision: 65da7d83e872e64bb29c0ffd449281175874da1f
+  branch: blacklist
+  specs:
+    hypershield (0.1.1)
+      activerecord (>= 5)
+
+GIT
   remote: https://github.com/kaminari/kaminari.git
   revision: ff5c8425eb7191a4e1cb6013b2a15bf38a725a5f
   branch: master
@@ -214,7 +222,7 @@ GEM
     errbase (0.2.0)
     erubi (1.9.0)
     erubis (2.7.0)
-    excon (0.68.0)
+    excon (0.69.1)
     execjs (2.7.0)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -228,7 +236,7 @@ GEM
     faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
     fastimage (2.1.7)
-    ffi (1.11.2)
+    ffi (1.11.3)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -296,7 +304,7 @@ GEM
       ruby_dep (~> 1.2)
     lockbox (0.2.4)
     logstop (0.2.5)
-    loofah (2.3.1)
+    loofah (2.4.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.13)
@@ -320,7 +328,7 @@ GEM
     multi_json (1.14.1)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    necromancer (0.5.0)
+    necromancer (0.5.1)
     nenv (0.3.0)
     nio4r (2.5.2)
     nokogiri (1.10.5)
@@ -329,7 +337,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
-    parallel (1.19.0)
+    parallel (1.19.1)
     parallel_tests (2.29.2)
       parallel
     parser (2.6.5.0)
@@ -349,8 +357,8 @@ GEM
     rack (2.0.7)
     rack-cache (1.10.0)
       rack (>= 0.4)
-    rack-cors (1.0.6)
-      rack (>= 1.6.0)
+    rack-cors (1.1.0)
+      rack (>= 2.0.0)
     rack-protection (2.0.7)
       rack
     rack-proxy (0.6.5)
@@ -465,7 +473,7 @@ GEM
     rubocop-rails (2.3.2)
       rack (>= 1.1)
       rubocop (>= 0.72.0)
-    rubocop-rails_config (0.8.0)
+    rubocop-rails_config (0.8.1)
       railties (>= 3.0)
       rubocop (~> 0.76)
       rubocop-performance (~> 1.3)
@@ -533,11 +541,11 @@ GEM
     tilt (2.0.10)
     tty-color (0.5.0)
     tty-cursor (0.7.0)
-    tty-prompt (0.19.0)
+    tty-prompt (0.20.0)
       necromancer (~> 0.5.0)
       pastel (~> 0.7.0)
-      tty-reader (~> 0.6.0)
-    tty-reader (0.6.0)
+      tty-reader (~> 0.7.0)
+    tty-reader (0.7.0)
       tty-cursor (~> 0.7)
       tty-screen (~> 0.7)
       wisper (~> 2.0.0)
@@ -626,6 +634,7 @@ DEPENDENCIES
   guard-rubocop
   heroku-deflater
   httparty
+  hypershield!
   iso_country_codes
   jbuilder (~> 2.5)
   kaminari!
