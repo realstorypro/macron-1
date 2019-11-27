@@ -4,6 +4,26 @@ import Turbolinks from 'turbolinks'
 import semantic_js from '../semantic/dist/semantic.min'
 import ahoy from 'ahoy.js'
 
+import CookieConsent from '../shared/js/plugins/consent/src/models/CookieConsent'
+consent = new CookieConsent
+  container: document.getElementById("consent")
+  type: "informational"
+  palette:
+    popup:
+      background: "#000"
+      text: "#fff"
+    button:
+      background: "#fff"
+      text: '#000'
+  content:
+    href: "/privacy-policy"
+    target: ""
+  position: 'bottom'
+  dismissOnWindowClick: true
+
+
+
+
 Turbolinks.start()
 ahoy.configure({cookies: true})
 
@@ -46,3 +66,4 @@ $ ->
 document.addEventListener 'turbolinks:load', ->
   utils.log 'status', 'app.reload()'
   app.reload()
+
