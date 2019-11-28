@@ -16,7 +16,6 @@ class Feed
   constructor: ->
     if !instance
       instance = this
-
     else
       instance
 

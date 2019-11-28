@@ -8,7 +8,6 @@ import Vue from './core/vue'
 import VueComponents from './core/vue_components'
 
 import Notifications from './widgets/notifications'
-import Consent from './widgets/consent'
 import Drawer from './widgets/drawer'
 import Crud from './widgets/crud'
 import Checkbox from './widgets/checkbox'
@@ -37,6 +36,7 @@ import Actioner from './vue/actioner'
 import ReactionsModal from './vue/reactions_modal'
 import SignInModal from './vue/sign_in_modal'
 import VueNotifications from './vue/vue_notifications'
+import Consent from './vue/consent'
 
 
 import Cable from './core/cable'
@@ -53,7 +53,6 @@ utils =  new Utils
 
 # Regular Widgets
 notifications = new Notifications
-consent = new Consent
 drawer = new Drawer
 crud = new Crud
 checkbox = new Checkbox
@@ -83,6 +82,7 @@ actioner = new Actioner
 reactions_modal = new ReactionsModal
 sign_in_modal = new SignInModal
 vue_notifications = new VueNotifications
+consent = new Consent
 
 class Client_app
 
@@ -101,7 +101,6 @@ class Client_app
     vue.setup()
 
     notifications.setup()
-    consent.setup()
     checkbox.setup()
     dropdown.setup()
     multiselect.setup()
@@ -128,7 +127,6 @@ class Client_app
     dispatcher.teardown()
 
     notifications.teardown()
-    consent.teardown()
     checkbox.teardown()
     dropdown.teardown()
     multiselect.teardown()
