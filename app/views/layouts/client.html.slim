@@ -28,5 +28,20 @@ html lang="en"
 
       = render 'layouts/partials/footer'
       == vue_widget name: 'vue notifications'
-      #consent
-    = render 'layouts/partials/loading_js'
+      = widget name: 'consent'
+        = container 'wide'
+          = row
+            = column size: 16
+              = segment 'piled'
+                = h5
+                  | You Are Safe Here
+                = text
+                  | We use cookies to personalize your content and to analyze our traffic.
+                = text
+                  | You consent to our cookies if you continue to use our website.
+                = text 'small'
+                  | We will never share your personal information with third parties, or use it against you.
+                = button 'fluid teal'
+                  | I Accept
+
+      = render 'layouts/partials/loading_js'
