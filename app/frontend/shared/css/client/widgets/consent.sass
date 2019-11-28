@@ -3,7 +3,10 @@
   bottom: 10px
   width: 100%
   z-index: 100
+  display: none
 
   .segment
     width: 400px
     margin-left: auto
+    @include media("<tablet")
+      width: 100%

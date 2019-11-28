@@ -3,12 +3,14 @@
     = column size: 16
       = segment 'piled'
         = h5
-          | You Are Safe Here
+          = image_tag ss('theme.branding.icon'), class: 'ui image mini'
+          = content
+            | A Safe Space
         = text
-          | We use cookies to personalize your content and to analyze our traffic.
-        = text
+          = "We use cookies to store your preferences and analyze how #{ss('general.name')} is used. "
+          | We do not share your personal information with any 3rd parties.
+          br
+          br
           | You consent to our cookies if you continue to use our website.
-        = text 'small'
-          | We will never share your personal information with third parties, or use it against you.
-        = button class: 'fluid teal', v: {'on:click': 'accept()'}
-          | I Accept
+        = button class: 'fluid black', v: {'on:click': 'accept()'}
+          | I Consent

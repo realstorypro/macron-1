@@ -26,10 +26,14 @@ class Consent
     @app = new Vue
       el: "##{widget.id}"
       mounted: ->
-        console.log 'consent loaded'
+        unless $cookies.get('cookie_policy')
+          $("##{widget.id}").fadeIn()
+
       methods:
         accept: ->
-          console.log 'i accept'
+          $cookies.set('cookie_policy',true)
+          $("##{widget.id}").fadeOut()
+
 
 export { Consent as default }
 

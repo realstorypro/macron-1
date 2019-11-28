@@ -12,6 +12,7 @@ import ToggleButton from 'vue-js-toggle-button'
 import Notifications from 'vue-notification'
 import velocity      from 'velocity-animate'
 import VuePlyr from 'vue-plyr'
+import VueCookies from 'vue-cookies'
 
 Vue.use(TurbolinksAdapter)
 Vue.use(VModal)
@@ -23,3 +24,4 @@ Vue.use(VueTouch)
 Vue.use(ToggleButton)
 Vue.use(Notifications, {velocity})
 Vue.use(VuePlyr)
+Vue.use(VueCookies)
