@@ -52,10 +52,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
 
     def load_country_codes
-      country_codes = IsoCountryCodes.for_select.select do |country|
-        country[0].include?("United States of America") ||
-            country[0] == "Brazil"
-      end
+      country_codes = IsoCountryCodes.for_select
 
       country_codes.sort_by! { |m| m[0].downcase }
 

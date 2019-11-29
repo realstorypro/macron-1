@@ -35,11 +35,17 @@ class PhonesController < ApplicationController
     country_prefix = ISO3166::Country.find_country_by_alpha2(current_user.country).country_code
 
 
-    client.messages.create({
+    begin
+      client.messages.create({
          from: ENV["TWILIO_PHONE_NUMBER"],
          to: "+#{country_prefix}#{current_user.phone_number}",
          body: "Your Verification Code is #{session[:otp_number]}"
-     }) unless Rails.env.test?
+      })
+    rescue => exception
+      redirect_to edit_phone_path, flash: { error: "The phone number you've entered is invalid." }
+      return
+    end
+
   end
 
   def verify_otp
@@ -75,10 +81,7 @@ class PhonesController < ApplicationController
 
   private
     def country_codes
-      country_codes = IsoCountryCodes.for_select.select do |country|
-        country[0].include?("United States of America") ||
-          country[0] == "Brazil"
-      end
+      country_codes = IsoCountryCodes.for_select
 
       country_codes.sort_by! { |m| m[0].downcase }
 
