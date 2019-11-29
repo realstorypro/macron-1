@@ -72,8 +72,6 @@ auth:
         all: 
       store:
         read: 
-      pages:
-        all: 
       elements_heading:
         all: 
       elements:

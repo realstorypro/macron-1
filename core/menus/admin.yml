@@ -13,12 +13,6 @@ menu:
       icon: users
       enabled: true
 
-    - name: Pages
-      component: pages
-      path: admin_pages
-      icon: sticky note
-      enabled: true
-
     - name: Articles
       component: articles
       path: admin_articles

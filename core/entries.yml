@@ -1,13 +1,4 @@
 components:
-  pages:
-    klass: 'Page'
-    path: 'pages'
-    focusable: false
-    enabled: true
-    areas:
-      - header
-      - content
-
   articles:
     klass: 'Article'
     path: 'articles'

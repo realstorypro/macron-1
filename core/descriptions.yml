@@ -93,10 +93,6 @@ components:
                   Learn more at our
                   <a href="http://help.goodlogik.com/support/solutions/articles/47000473645-users" target="_blank">Help Desk</a>.
 
-  pages:
-    name: 'Pages'
-    description: 'Provides page creation capabilities'
-
   articles:
     name: 'Articles'
     description:  Long-form content with oversized images, quotes and embeds
