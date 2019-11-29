@@ -6,7 +6,7 @@
 <title>
   Class: Video
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -95,7 +95,7 @@
   
   <dl>
       <dt>Includes:</dt>
-      <dd><span class='object_link'><a href="Autoloadable.html" title="Autoloadable (module)">Autoloadable</a></span></dd>
+      <dd><span class='object_link'><a href="Activitible.html" title="Activitible (module)">Activitible</a></span>, <span class='object_link'><a href="Autoloadable.html" title="Autoloadable (module)">Autoloadable</a></span></dd>
   </dl>
   
   
@@ -117,61 +117,6 @@
 
 
 
-  
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#approved_video_provider-instance_method" title="#approved_video_provider (instance method)">#<strong>approved_video_provider</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#embed_video-instance_method" title="#embed_video (instance method)">#<strong>embed_video</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
 
   
   
@@ -187,6 +132,13 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  <h2>Method Summary</h2>
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Entry.html" title="Entry (class)">Entry</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Entry.html#ping_sitemap-instance_method" title="Entry#ping_sitemap (method)">#ping_sitemap</a></span>, <span class='object_link'><a href="Entry.html#policy_class-class_method" title="Entry.policy_class (method)">policy_class</a></span></p>
@@ -240,113 +192,20 @@
   
   
   
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="approved_video_provider-instance_method">
   
-    #<strong>approved_video_provider</strong>  &#x21d2; <tt>Object</tt> 
   
-
   
-
   
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-15
-16
-17
-18
-19</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/models/video.rb', line 15</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_approved_video_provider'>approved_video_provider</span>
-  <span class='id identifier rubyid_services'>services</span> <span class='op'>=</span> <span class='qwords_beg'>%w[</span><span class='tstring_content'>vimeo</span><span class='words_sep'> </span><span class='tstring_content'>youtube</span><span class='tstring_end'>]</span></span>
-  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_services'>services</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_service'>service</span><span class='op'>|</span> <span class='id identifier rubyid_video'>video</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_service'>service</span> <span class='rbrace'>}</span>
-  <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:video</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Only Vimeo and Youtube URLs are allowed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="embed_video-instance_method">
   
-    #<strong>embed_video</strong>  &#x21d2; <tt>Object</tt> 
   
-
   
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/models/video.rb', line 21</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_embed_video'>embed_video</span>
-  <span class='comment'># vimeo post processing
-</span>  <span class='kw'>if</span> <span class='id identifier rubyid_video'>video</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vimeo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_embedded_video'>embedded_video</span> <span class='op'>=</span> <span class='id identifier rubyid_video'>video</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vimeo.com/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>player.vimeo.com/video/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-
-  <span class='comment'># youtube post processing
-</span>  <span class='kw'>if</span> <span class='id identifier rubyid_video'>video</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>youtube</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='comment'># makes regular video embeddable
-</span>    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_embedded_video'>embedded_video</span> <span class='op'>=</span> <span class='id identifier rubyid_video'>video</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>www.youtube.com/watch?v=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>www.youtube.com/embed/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-
-    <span class='comment'># removes the ampersand from a string
-</span>    <span class='id identifier rubyid_ampersand_location'>ampersand_location</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_embedded_video'>embedded_video</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_ampersand_location'>ampersand_location</span>
-      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_embedded_video'>embedded_video</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_embedded_video'>embedded_video</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='lparen'>(</span><span class='id identifier rubyid_ampersand_location'>ampersand_location</span> <span class='op'>-</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:45 2019 by
+  Generated on Fri Nov 29 12:30:14 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

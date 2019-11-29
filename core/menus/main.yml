@@ -6,16 +6,6 @@ menu:
       icon: compass
       enabled: true
 
-    - name: Store
-      component: store
-      path: store_index
-      enabled: true
-
-    - name: Events
-      component: events
-      path: events
-      enabled: true
-
     - name: Articles
       component: articles
       path: articles
@@ -24,11 +14,6 @@ menu:
     - name: Videos
       component: videos
       path: videos
-      enabled: true
-
-    - name: Podcasts
-      component: podcasts
-      path: podcasts
       enabled: true
 
     - name: Discussions

@@ -8,7 +8,7 @@ module Elements
 
     def alignment
       return "#{model.alignment} aligned" unless model.alignment.nil?
-      ''
+      ""
     end
   end
 end

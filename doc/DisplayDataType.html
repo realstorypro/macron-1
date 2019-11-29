@@ -6,7 +6,7 @@
 <title>
   Class: DisplayDataType
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -219,7 +219,9 @@
 26
 27
 28
-29</pre>
+29
+30
+31</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/lib/display_data_type.rb', line 4</span>
@@ -229,6 +231,7 @@
     <span class='label'>date_datatypes:</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>date</span><span class='words_sep'> </span><span class='tstring_content'>datepicker</span><span class='tstring_end'>)</span></span><span class='comma'>,</span>
     <span class='label'>text_datatypes:</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>text</span><span class='words_sep'> </span><span class='tstring_content'>rich</span><span class='tstring_end'>)</span></span><span class='comma'>,</span>
     <span class='label'>image_datatypes:</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>image</span><span class='tstring_end'>)</span></span><span class='comma'>,</span>
+    <span class='label'>video_datatypes:</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>video</span><span class='tstring_end'>)</span></span><span class='comma'>,</span>
     <span class='label'>string_datatypes:</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>string</span><span class='words_sep'> </span><span class='tstring_content'>fixed_dropdown</span><span class='tstring_end'>)</span></span><span class='comma'>,</span>
     <span class='label'>dropdown_datatypes:</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>dropdown</span><span class='tstring_end'>)</span></span><span class='comma'>,</span>
     <span class='label'>association_datatypes:</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>association</span><span class='tstring_end'>)</span></span><span class='comma'>,</span>
@@ -242,6 +245,7 @@
   <span class='ivar'>@date_datatypes</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:date_datatypes</span><span class='rbracket'>]</span>
   <span class='ivar'>@text_datatypes</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:text_datatypes</span><span class='rbracket'>]</span>
   <span class='ivar'>@image_datatypes</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:image_datatypes</span><span class='rbracket'>]</span>
+  <span class='ivar'>@video_datatypes</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:video_datatypes</span><span class='rbracket'>]</span>
   <span class='ivar'>@string_datatypes</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:string_datatypes</span><span class='rbracket'>]</span>
   <span class='ivar'>@dropdown_datatypes</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dropdown_datatypes</span><span class='rbracket'>]</span>
   <span class='ivar'>@association_datatypes</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:association_datatypes</span><span class='rbracket'>]</span>
@@ -299,8 +303,6 @@
       <pre class="lines">
 
 
-31
-32
 33
 34
 35
@@ -310,15 +312,19 @@
 39
 40
 41
-42</pre>
+42
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/lib/display_data_type.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'app/lib/display_data_type.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_which?'>which?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='symbol'>:date</span> <span class='kw'>if</span> <span class='ivar'>@date_datatypes</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='symbol'>:text</span> <span class='kw'>if</span> <span class='ivar'>@text_datatypes</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='symbol'>:image</span> <span class='kw'>if</span> <span class='ivar'>@image_datatypes</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='symbol'>:video</span> <span class='kw'>if</span> <span class='ivar'>@video_datatypes</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='symbol'>:string</span> <span class='kw'>if</span> <span class='ivar'>@string_datatypes</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='symbol'>:dropdown</span> <span class='kw'>if</span> <span class='ivar'>@dropdown_datatypes</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='symbol'>:association</span> <span class='kw'>if</span> <span class='ivar'>@association_datatypes</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
@@ -337,9 +343,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:46 2019 by
+  Generated on Fri Nov 29 12:30:16 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

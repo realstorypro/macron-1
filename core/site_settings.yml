@@ -53,11 +53,6 @@ components:
     path: 'admin_settings_theme_footer'
     enabled: true
 
-  site_settings_theme_podcast:
-    klass: 'SiteSettings::Theme::Podcast'
-    path: 'admin_settings_theme_podcast'
-    enabled: true
-
   site_settings_theme_article:
     klass: 'SiteSettings::Theme::Article'
     path: 'admin_settings_theme_article'

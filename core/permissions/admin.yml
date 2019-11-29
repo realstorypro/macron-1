@@ -20,8 +20,6 @@ auth:
         all: 
       videos:
         all: 
-      podcasts:
-        all: 
       promotions:
         all: 
       categories:
@@ -50,8 +48,6 @@ auth:
         all: 
       support:
         all: 
-      site_settings_theme_podcast:
-        all: 
       site_settings_theme_global:
         all: 
       site_settings_theme_footer:
@@ -65,14 +61,6 @@ auth:
       site_settings_theme_authentication:
         all: 
       site_settings_theme_branding:
-        all: 
-      events:
-        all: 
-      products:
-        all: 
-      store:
-        read: 
-      pages:
         all: 
       elements_heading:
         all: 

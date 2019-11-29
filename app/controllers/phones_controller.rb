@@ -41,11 +41,10 @@ class PhonesController < ApplicationController
          to: "+#{country_prefix}#{current_user.phone_number}",
          body: "Your Verification Code is #{session[:otp_number]}"
       })
-    rescue => exception
+    rescue => _exception
       redirect_to edit_phone_path, flash: { error: "The phone number you've entered is invalid." }
       return
     end
-
   end
 
   def verify_otp

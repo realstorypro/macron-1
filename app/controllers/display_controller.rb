@@ -47,7 +47,7 @@ class DisplayController < MetaController
 
 
     def find_related_content
-      taggings = Tagging.where(tag_id: @entry.tags.map(&:id), taggable_type: %w(Article Video Discussion Podcast Event))
+      taggings = Tagging.where(tag_id: @entry.tags.map(&:id), taggable_type: %w(Article Video Discussion))
                         .where.not(taggable_id: @entry.id)
       content_ids = taggings.map(&:taggable_id)
       @related_content = Entry.published.where(id: content_ids)

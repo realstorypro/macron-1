@@ -6,7 +6,7 @@
 <title>
   Class: Comment
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -91,6 +91,11 @@
   
   
   
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Activitible.html" title="Activitible (module)">Activitible</a></span></dd>
+  </dl>
+  
   
 
   
@@ -142,8 +147,46 @@
       
     </ul>
   
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#broadcast_activity-instance_method" title="#broadcast_activity (instance method)">#<strong>broadcast_activity</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
 
 
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -171,12 +214,12 @@
       <pre class="lines">
 
 
-12
-13
-14</pre>
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/comment.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'app/models/comment.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_policy_class'>policy_class</span>
   <span class='const'><span class='object_link'><a href="CommentPolicy.html" title="CommentPolicy (class)">CommentPolicy</a></span></span>
@@ -188,12 +231,54 @@
     
   </div>
 
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="broadcast_activity-instance_method">
+  
+    #<strong>broadcast_activity</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/comment.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_broadcast_activity'>broadcast_activity</span>
+  <span class='comment'># ActionCable.server.broadcast(
+</span>  <span class='comment'>#     &quot;activity_#{self.actor.id}&quot;,
+</span>  <span class='comment'>#     activity_id: self.id
+</span>  <span class='comment'># )
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:45 2019 by
+  Generated on Fri Nov 29 12:30:14 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

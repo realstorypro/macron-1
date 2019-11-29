@@ -6,7 +6,7 @@
 <title>
   Class: Admin::SiteSettings::Theme::ThemeHeaderController
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -194,7 +194,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../PathHelper.html" title="PathHelper (module)">PathHelper</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../../../PathHelper.html#delete_path-instance_method" title="PathHelper#delete_path (method)">#delete_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#edit_path-instance_method" title="PathHelper#edit_path (method)">#edit_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#index_path-instance_method" title="PathHelper#index_path (method)">#index_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_delete_path-instance_method" title="PathHelper#meta_delete_path (method)">#meta_delete_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_edit_path-instance_method" title="PathHelper#meta_edit_path (method)">#meta_edit_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_index_path-instance_method" title="PathHelper#meta_index_path (method)">#meta_index_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_new_path-instance_method" title="PathHelper#meta_new_path (method)">#meta_new_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_show_path-instance_method" title="PathHelper#meta_show_path (method)">#meta_show_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#new_path-instance_method" title="PathHelper#new_path (method)">#new_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#show_path-instance_method" title="PathHelper#show_path (method)">#show_path</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../../../PathHelper.html#delete_path-instance_method" title="PathHelper#delete_path (method)">#delete_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#edit_path-instance_method" title="PathHelper#edit_path (method)">#edit_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#index_path-instance_method" title="PathHelper#index_path (method)">#index_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_category_path-instance_method" title="PathHelper#meta_category_path (method)">#meta_category_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_delete_path-instance_method" title="PathHelper#meta_delete_path (method)">#meta_delete_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_edit_path-instance_method" title="PathHelper#meta_edit_path (method)">#meta_edit_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_index_path-instance_method" title="PathHelper#meta_index_path (method)">#meta_index_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_new_path-instance_method" title="PathHelper#meta_new_path (method)">#meta_new_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#meta_show_path-instance_method" title="PathHelper#meta_show_path (method)">#meta_show_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#new_path-instance_method" title="PathHelper#new_path (method)">#new_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#preview_path-instance_method" title="PathHelper#preview_path (method)">#preview_path</a></span>, <span class='object_link'><a href="../../../PathHelper.html#show_path-instance_method" title="PathHelper#show_path (method)">#show_path</a></span></p>
 
   
   
@@ -227,7 +227,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../Trackable.html" title="Trackable (module)">Trackable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../../../Trackable.html#identify-instance_method" title="Trackable#identify (method)">#identify</a></span>, <span class='object_link'><a href="../../../Trackable.html#track-instance_method" title="Trackable#track (method)">#track</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../../../Trackable.html#track-instance_method" title="Trackable#track (method)">#track</a></span></p>
 
   
   
@@ -270,12 +270,14 @@
 17
 18
 19
-20</pre>
+20
+21</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/controllers/admin/site_settings/theme/theme_header_controller.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span>
+  <span class='kw'>super</span>
   <span class='id identifier rubyid_add_to_actions'>add_to_actions</span><span class='lparen'>(</span>
     <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Edit</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='label'>class:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>primary</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
@@ -297,9 +299,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:52 2019 by
+  Generated on Fri Nov 29 12:30:23 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

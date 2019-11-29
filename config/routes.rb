@@ -64,18 +64,6 @@ Rails.application.routes.draw do
   get "videos/:category", to: "videos#index", as: "video_category", component: "videos"
   get "videos/:category/:id", to: "videos#show", as: "video_details", component: "videos"
 
-  resources :podcasts, component: "podcasts", only: %i[index]
-  get "podcasts/:category", to: "podcasts#index", as: "podcast_category", component: "podcasts"
-  get "podcasts/:category/:id", to: "podcasts#show", as: "podcast_details", component: "podcasts"
-
-  resources :events, component: "events", only: %i[index]
-  get "events/:category", to: "events#index", as: "event_category", component: "events"
-  get "events/:category/:id", to: "events#show", as: "event_details", component: "events"
-
-  resources :store, component: "store", only: %i[index]
-  get "store/:category", to: "store#index", as: "store_category", component: "store"
-  get "store/:category/:id", to: "store#show", as: "store_details", component: "store"
-
   post "newsletter/subscribe/", to: "newsletter#subscribe"
 
   # Comments API
@@ -103,14 +91,10 @@ Rails.application.routes.draw do
       get "disable_advanced", on: :member
     end
 
-    resources :pages, component: "pages", controller: "crud"
     resources :articles, component: "articles", controller: "crud"
-    resources :events, component: "events", controller: "crud"
-    resources :products, component: "products", controller: "crud"
     resources :discussions, component: "discussions", controller: "crud"
     resources :videos, component: "videos", controller: "crud"
-    resources :podcasts, component: "podcasts", controller: "crud"
-    
+
     resources :promotions, component: "promotions", controller: "crud"
     resources :tags, component: "tags", controller: "crud"
     resources :categories, component: "categories", controller: "crud"
@@ -132,7 +116,6 @@ Rails.application.routes.draw do
         resource :authentication, controller: "theme_authentication", component: "site_settings_theme_authentication"
         resource :video, controller: "theme_video", component: "site_settings_theme_video"
         resource :article, controller: "theme_article", component: "site_settings_theme_article"
-        resource :podcast, controller: "theme_podcast", component: "site_settings_theme_podcast"
         resource :footer, controller: "theme_footer", component: "site_settings_theme_footer"
         resource :header, controller: "theme_header", component: "site_settings_theme_header"
         resource :global, controller: "theme_global", component: "site_settings_theme_global"

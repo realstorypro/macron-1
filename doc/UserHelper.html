@@ -6,7 +6,7 @@
 <title>
   Module: UserHelper
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -106,7 +106,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#avatar_thumbnail-instance_method" title="#avatar_thumbnail (instance method)">#<strong>avatar_thumbnail</strong>(user = current_user)  &#x21d2; Object </a>
+      <a href="#avatar_thumbnail-instance_method" title="#avatar_thumbnail (instance method)">#<strong>avatar_thumbnail</strong>(user = current_user, resize = true)  &#x21d2; Object </a>
     
 
     
@@ -121,8 +121,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>renders profile avatar if one has been uploaded todo: remove helper and
-utilize the avatar function on user model.</p>
+<p>renders profile avatar if one has been uploaded todo: remove helper and utilize the avatar function on user model.</p>
 </div></span>
   
 </li>
@@ -140,7 +139,7 @@ utilize the avatar function on user model.</p>
       <div class="method_details first">
   <h3 class="signature first" id="avatar_thumbnail-instance_method">
   
-    #<strong>avatar_thumbnail</strong>(user = current_user)  &#x21d2; <tt>Object</tt> 
+    #<strong>avatar_thumbnail</strong>(user = current_user, resize = true)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -149,8 +148,7 @@ utilize the avatar function on user model.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>renders profile avatar if one has been uploaded todo: remove helper and
-utilize the avatar function on user model</p>
+<p>renders profile avatar if one has been uploaded todo: remove helper and utilize the avatar function on user model</p>
 
 
   </div>
@@ -170,14 +168,22 @@ utilize the avatar function on user model</p>
 9
 10
 11
-12</pre>
+12
+13
+14
+15
+16</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/helpers/user_helper.rb', line 6</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_avatar_thumbnail'>avatar_thumbnail</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='id identifier rubyid_current_user'>current_user</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_avatar_thumbnail'>avatar_thumbnail</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='id identifier rubyid_current_user'>current_user</span><span class='comma'>,</span> <span class='id identifier rubyid_resize'>resize</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:avatar</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span><span class='period'>.</span><span class='id identifier rubyid_avatar'>avatar</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>==</span> <span class='kw'>false</span>
-    <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span><span class='period'>.</span><span class='id identifier rubyid_avatar'>avatar</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-/resize/600x600/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-/resize/70x70/-/quality/lightest/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_resize'>resize</span>
+      <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span><span class='period'>.</span><span class='id identifier rubyid_avatar'>avatar</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-/resize/600x600/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-/resize/70x70/-/quality/lightest/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span><span class='period'>.</span><span class='id identifier rubyid_avatar'>avatar</span>
+    <span class='kw'>end</span>
   <span class='kw'>else</span>
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default-avatar.jpg</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
@@ -192,9 +198,9 @@ utilize the avatar function on user model</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:44 2019 by
+  Generated on Fri Nov 29 12:30:13 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

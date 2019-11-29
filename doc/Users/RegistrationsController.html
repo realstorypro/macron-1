@@ -6,7 +6,7 @@
 <title>
   Class: Users::RegistrationsController
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -138,6 +138,28 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -163,7 +185,6 @@
       <pre class="lines">
 
 
-9
 10
 11
 12
@@ -185,10 +206,11 @@
 28
 29
 30
-31</pre>
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/users/registrations_controller.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/users/registrations_controller.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
   <span class='kw'>super</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_created_user'>created_user</span><span class='op'>|</span>
@@ -218,14 +240,52 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    #<strong>update</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/users/registrations_controller.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
+  <span class='comment'># we want to un-verify the session if the phone number has changed
+</span>  <span class='id identifier rubyid_pre_update_phone_number'>pre_update_phone_number</span> <span class='op'>=</span> <span class='id identifier rubyid_resource'>resource</span><span class='period'>.</span><span class='id identifier rubyid_phone_number'>phone_number</span>
+  <span class='kw'>super</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_updated_user'>updated_user</span><span class='op'>|</span>
+    <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:verified</span><span class='rbracket'>]</span><span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_updated_user'>updated_user</span><span class='period'>.</span><span class='id identifier rubyid_phone_number'>phone_number</span> <span class='op'>!=</span> <span class='id identifier rubyid_pre_update_phone_number'>pre_update_phone_number</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:51 2019 by
+  Generated on Fri Nov 29 12:30:22 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

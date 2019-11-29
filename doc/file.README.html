@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -57,96 +57,178 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'>
-<h2 id="label-AQUARIUS">AQUARIUS</h2>
+      <div id="content"><div id='filecontents'><h2>MACRON-1</h2>
 
-<p><a href="https://codecov.io/gh/leouofa/aquarius"><img
-src="https://codecov.io/gh/leouofa/aquarius/branch/master/graph/badge.svg?token=SpfdxrArOG"></a></p>
+<p><a href="https://codecov.io/gh/leouofa/aquarius"><img src="https://codecov.io/gh/leouofa/aquarius/branch/master/graph/badge.svg?token=SpfdxrArOG" alt="codecov"></a></p>
 
-<h5 id="label-22with+great+power+comes+great+responsibility-22">“with great power comes great responsibility”</h5>
+<h1>Local Development</h1>
 
-<p><img
-src="https://user-images.githubusercontent.com/433219/40011503-dbe773e4-575c-11e8-9c2c-dbb35c84dc1c.jpeg"></p>
+<h3>Setting Up Database</h3>
 
-<h1 id="label-Running+Localy">Running Localy</h1>
+<p>You can import the database from an existing Heroku application with <strong>pg:pull</strong> command.  </p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_foreman'>foreman</span> <span class='id identifier rubyid_start'>start</span> <span class='op'>-</span><span class='op'>-</span><span class='id identifier rubyid_procfile'>procfile</span><span class='op'>=</span><span class='const'>Procfile</span><span class='period'>.</span><span class='id identifier rubyid_dev'>dev</span>
-</code></pre>
-
-<h2 id="label-Preparation">Preparation</h2>
-
-<pre class="code ruby"><code class="ruby">
-# pull the database
-heroku pg:pull postgresql-symmetrical-54909 aquarius_development --app demo-idealogic-io-305
+<pre class="code bash"><code class="bash">heroku pg:pull heroku_db_name aquarius_development --app heroku_app_name
 foreman run rake components:setup
 </code></pre>
 
-<h2 id="label-Enviornment+Variables">Enviornment Variables</h2>
+<h3>Setting up Hypershield</h3>
 
-<pre class="code ruby"><code class="ruby"><span class='const'>FROM_EMAIL</span><span class='op'>=</span><span class='id identifier rubyid_noreply'>noreply</span><span class='ivar'>@idealogic</span><span class='period'>.</span><span class='id identifier rubyid_io'>io</span>
-<span class='const'>UPLOADCARE_PRIVATE_KEY</span>
-<span class='const'>UPLOADCARE_PUBLIC_KEY</span>
-<span class='const'>URL</span>
+<h4>Locally</h4>
+
+<h4>On Heroku</h4>
+
+<h3>Setting Environment Variables</h3>
+
+<p>The environmental variables are stored in a .env file. They can be pulled down from an existing Heroku app.</p>
+
+<pre class="code bash"><code class="bash">heroku config -s -a heroku_app_name &gt; .env
 </code></pre>
 
-<h3 id="label-Mail+-28Development-29">Mail (Development)</h3>
+<h3>Setting up Mailcatcher</h3>
 
-<p>We&#39;re utilizing the mailcatcher to catch the mail send in development
-environment.</p>
+<p>We&#39;re using the mailcatcher to catch the mail send in development environment.</p>
 
-<p>If you don&#39;t have the gem already installed you do it by running the
-following <code>   gem install mailcatcher </code></p>
+<p>Install the gem by running</p>
 
-<p>You can then start the mail catcher via <code>   mailcatcher </code></p>
-
-<p>You can read the sent mail by pointing the web browser to <strong><a
-href="http://127.0.0.1:1080">127.0.0.1:1080</a>/</strong></p>
-
-<h1 id="label-Framework">Framework</h1>
-
-<h2 id="label-Site+Settings">Site Settings</h2>
-
-<p>The site settings are stored in <strong>SiteSettings</strong> and include
-the <strong>Autoloadable</strong> module. “` ruby</p>
-
-<h2 id="label-Article+Settings">Article Settings</h2>
-
-<p>module SiteSettings::Theme  class Article &lt; Setting  include
-Autoloadable  end end</p>
-
-<pre class="code ruby"><code class="ruby">
-<span class='comment'>## Authentication
-</span><span class='const'>The</span> <span class='id identifier rubyid_authentication'>authentication</span> <span class='id identifier rubyid_is'>is</span> <span class='id identifier rubyid_driven'>driven</span> <span class='id identifier rubyid_by'>by</span> <span class='id identifier rubyid_the'>the</span> <span class='id identifier rubyid_auth'>auth</span><span class='period'>.</span><span class='id identifier rubyid_yml'>yml</span> <span class='id identifier rubyid_file'>file</span> <span class='id identifier rubyid_located'>located</span> <span class='id identifier rubyid_under'>under</span> <span class='id identifier rubyid__core'>_core</span><span class='op'>/</span><span class='id identifier rubyid_auth'>auth</span><span class='period'>.</span><span class='id identifier rubyid_yml_'>yml_</span> <span class='kw'>and</span> <span class='id identifier rubyid_is'>is</span> <span class='id identifier rubyid_structured'>structured</span> <span class='id identifier rubyid_as'>as</span> <span class='id identifier rubyid_follows'>follows</span>
+<pre class="code bash"><code class="bash">  gem install mailcatcher
 </code></pre>
 
-<p>yml roles: abilities: actions: permissions:  - role:  - ability “`</p>
+<p>Start the mail catcher server with</p>
 
-<h4 id="label-Helpful+Documents">Helpful Documents</h4>
+<pre class="code bash"><code class="bash">  mailcatcher
+</code></pre>
+
+<p>You can read sent mail by at  <strong><a href="http://127.0.0.1:1080/">http://127.0.0.1:1080/</a></strong></p>
+
+<h3>Running It</h3>
+
+<pre class="code bash"><code class="bash">./bin/webpack-dev-server
+foreman run sidekiq -C config/sidekiq.yml --verbose
+foreman run rails s
+</code></pre>
+
+<h1>Pull Requests</h1>
+
+<p>All changes must come in ways of pull requests and never committed directly to master. </p>
+
+<p>The must be precompiled locally prior to submitting a PR. This can be done by running the following command.</p>
+
+<pre class="code bash"><code class="bash">rm -rf public/packs; foreman run rake assets:precompile; git add .; gcam &#39;precompiled assets&#39;
+</code></pre>
+
+<h1>Framework</h1>
+
+<h2>Authentication</h2>
+
+<p>The authentication is driven by the auth.yml file located under <em>core/auth.yml</em> and is structured as follows</p>
+
+<pre class="code yml"><code class="yml">roles:
+abilities:
+actions:
+permissions:
+    - role:
+        - ability
+</code></pre>
+
+<h2>Site Settings</h2>
+
+<p>Every implementation of the platform can have its own settings stored in the database. 
+We refer to them as &quot;Site Settings&quot;.</p>
+
+<h3>Modules</h3>
+
+<p>The Site Setting modules are configured under <strong>/core/site_settings.yml</strong></p>
+
+<pre class="code yaml"><code class="yaml">site_settings_theme_branding:
+    klass: &#39;SiteSettings::Theme::Branding&#39;
+    path: &#39;admin_settings_theme_branding&#39;
+    enabled: true
+</code></pre>
+
+<p>The site settings are stored under <strong>SiteSettings</strong> namespace and include the <strong>Autoloadable</strong> module.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'>## Article Settings
+</span>
+<span class='kw'>module</span> <span class='const'><span class='object_link'><a href="SiteSettings.html" title="SiteSettings (module)">SiteSettings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SiteSettings/Theme.html" title="SiteSettings::Theme (module)">Theme</a></span></span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Article.html" title="Article (class)">Article</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Setting.html" title="Setting (class)">Setting</a></span></span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="Autoloadable.html" title="Autoloadable (module)">Autoloadable</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+</code></pre>
+
+<h3>Menus</h3>
+
+<p>In order for the modules to be viewable on the backend they must be enabled in the settings under <strong>core/menus/site_settings</strong></p>
+
+<pre class="code yaml"><code class="yaml">menu:
+  settings:
+    - section:
+      - name: General
+        hint: Set name, description, and url
+        path: admin_settings_general
+        icon: setting
+        enabled: true
+</code></pre>
+
+<h2>Components</h2>
+
+<p>All components are defined under components.yml</p>
+
+<h2>Areas</h2>
+
+<p>There are 3 areas in the application, which are defined under under <strong>/app/models/areas/</strong>.</p>
+
+<ul>
+<li>Header</li>
+<li>Content</li>
+<li>Footer</li>
+</ul>
+
+<p>Every component can have those areas enabled. By default none are enabled.</p>
+
+<pre class="code yml"><code class="yml">  discussions:
+    klass: &#39;Discussion&#39;
+    path: &#39;discussions&#39;
+    enabled: true
+    areas:
+      - content
+</code></pre>
+
+<h2>Elements</h2>
+
+<ul>
+<li>Elements are defined in components.yml (change that )</li>
+<li>The Menu Elements are also defined in menu/elements.yml (maybe change that)</li>
+</ul>
+
+<h4>Helpful Documents</h4>
 
 <p>Documentation that may be useful to developers.</p>
 
-<h5 id="label-Testing">Testing</h5>
-<ul><li>
-<p><a
-href="https://wyeworks.com/blog/2018/1/16/Testing-Vuejs-in-Rails-with-Webpacker-and-Jest">wyeworks.com/blog/2018/1/16/Testing-Vuejs-in-Rails-with-Webpacker-and-Jest</a></p>
-</li></ul>
+<h5>Testing</h5>
 
-<h5 id="label-Security">Security</h5>
-<ul><li>
-<p><a
-href="https://bauland42.com/ruby-on-rails-content-security-policy-csp">bauland42.com/ruby-on-rails-content-security-policy-csp</a>/</p>
-</li></ul>
+<ul>
+<li><a href="https://wyeworks.com/blog/2018/1/16/Testing-Vuejs-in-Rails-with-Webpacker-and-Jest">https://wyeworks.com/blog/2018/1/16/Testing-Vuejs-in-Rails-with-Webpacker-and-Jest</a></li>
+</ul>
 
-<h5 id="label-Deployment">Deployment</h5>
-<ul><li>
-<p><a href="https://app.forestadmin.com">app.forestadmin.com</a>/</p>
-</li></ul>
+<h5>Security</h5>
+
+<ul>
+<li><a href="https://bauland42.com/ruby-on-rails-content-security-policy-csp/">https://bauland42.com/ruby-on-rails-content-security-policy-csp/</a></li>
+</ul>
+
+<h5>Deployment</h5>
+
+<ul>
+<li><a href="https://app.forestadmin.com/">https://app.forestadmin.com/</a></li>
+</ul>
 </div></div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:44 2019 by
+  Generated on Fri Nov 29 12:30:13 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

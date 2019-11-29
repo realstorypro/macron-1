@@ -7,12 +7,8 @@ module EntryHelper
       article_details_url(entry.category.slug, entry.slug)
     elsif entry.type == "Video"
       video_details_url(entry.category.slug, entry.slug)
-    elsif entry.type == "Podcast"
-      podcast_details_url(entry.category.slug, entry.slug)
     elsif entry.type == "Discussion"
       discussion_details_url(entry.category.slug, entry.slug)
-    elsif entry.type == "Event"
-      event_details_url(entry.category.slug, entry.slug)
     end
   end
 
