@@ -2,15 +2,15 @@
   = row
     = column size: 16
       = segment 'piled'
-        = h5
-          = image_tag ss('theme.branding.icon'), class: 'ui image mini'
+        = header 'tiny'
+          = icon 'lock'
           = content
-            | A Safe Space
+            | Privacy First
         = text
-          = "We use cookies to store your preferences and analyze how #{ss('general.name')} is used. "
-          | We do not share your personal information with any 3rd parties.
-          br
-          br
-          | You consent to our cookies if you continue to use our website.
+          | We encrypt everything, and do not share anything with any 3rd party.
+        = text
+          = "We use cookies to store your preferences and analyze how #{ss('general.name')} is used."
+        = text
+          | You agree to our use of cookies if you continue to use our website.
         = button class: 'fluid black', v: {'on:click': 'accept()'}
-          | I Consent
+          | I Agree
