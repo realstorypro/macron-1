@@ -1,7 +1,7 @@
 - if model.header
-  = header tag: (model.size.blank? == true ? 'h1' : model.size)
+  = header tag: (model.size.blank? == true ? 'h1' : model.size), class: alignment
     = model.header
-    - if model.subheader
+    - if model.subheader && !model.subheader.blank? && !alignment.include?('justified')
       = header 'sub'
         = model.subheader
 - else

@@ -1,7 +1,7 @@
 components:
   elements_oversizedembed:
-    name: 'Embed'
-    description: ' An oversized link embedded into content.'
+    name: 'Full-Screen Embed'
+    description: 'Full-Screen link embedded into content.'
     icon: 'plug'
     klass: 'Elements::Oversizedembed'
     path: 'elements'

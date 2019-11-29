@@ -1,5 +1,6 @@
 - if model.header
-    = header class: 'divider horizontal', tag: :h6
+    = header class: "divider horizontal #{'hidden' if is_hidden?}", tag: (model.size.blank? == true ? 'h6' : model.size)
+      - unless is_hidden?
         = icon model.icon
         = model.header
 - else

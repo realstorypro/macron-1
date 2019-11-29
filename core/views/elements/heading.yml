@@ -23,3 +23,13 @@ views:
           - 'H3'
           - 'H4'
           - 'H5'
+      alignment:
+        label: 'Alignment'
+        type: 'fixed_dropdown'
+        icon: 'align left'
+        options:
+          - 'left'
+          - 'centered'
+          - 'right'
+          - 'justified'
+        advanced: true
