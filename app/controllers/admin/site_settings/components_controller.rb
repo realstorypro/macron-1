@@ -11,7 +11,7 @@ module Admin::SiteSettings
     before_action :append_actions, only: :index
 
     def index
-      @components = SiteSettings::Component.all.order(:name)
+      @components = SiteSettings::Component.where.not("name like ?", "%elements%").order(:name)
     end
 
     def disable
