@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rake::Task["hypershield:refresh"].clear
 
 namespace :hypershield do
