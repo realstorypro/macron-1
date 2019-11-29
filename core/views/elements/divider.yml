@@ -4,6 +4,25 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      size:
+        label: 'Size'
+        icon: 'text height'
+        type: 'fixed_dropdown'
+        options:
+          - 'H1'
+          - 'H2'
+          - 'H3'
+          - 'H4'
+          - 'H5'
+          - 'H6'
+      hidden:
+        label: 'Hidden Divider'
+        default: 'no'
+        type: 'fixed_dropdown'
+        options:
+          - no
+          - yes
+        advanced: true
       header:
         label: 'Heading'
         icon: 'heading'
@@ -15,5 +34,9 @@ views:
         options:
           - 'angle down'
           - 'angle double down'
+          - 'coffee'
+          - 'chess'
+          - 'chess knight'
+          - 'envelope'
           - 'flag checkered'
           - 'heart'
