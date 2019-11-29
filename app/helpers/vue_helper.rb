@@ -5,6 +5,7 @@ module VueHelper
   # loads vue widget
   def vue_widget(options)
     options[:current_user] = current_user if current_user
+    options[:site_settings] = @site_settings
     Vue::WidgetCell.(nil, options)
   end
 end

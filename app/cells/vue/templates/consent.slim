@@ -1,0 +1,16 @@
+= container 'wide'
+  = row
+    = column size: 16
+      = segment 'piled'
+        = header 'tiny'
+          = icon 'lock'
+          = content
+            | Privacy First
+        = text
+          | We encrypt everything, and do not share anything with any 3rd party.
+        = text
+          = "We use cookies to store your preferences and analyze how #{ss('general.name')} is used."
+        = text
+          | You agree to our use of cookies if you continue to use our website.
+        = button class: 'fluid black', v: {'on:click': 'accept()'}
+          | I Agree

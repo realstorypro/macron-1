@@ -36,6 +36,7 @@ import Actioner from './vue/actioner'
 import ReactionsModal from './vue/reactions_modal'
 import SignInModal from './vue/sign_in_modal'
 import VueNotifications from './vue/vue_notifications'
+import Consent from './vue/consent'
 
 
 import Cable from './core/cable'
@@ -81,6 +82,7 @@ actioner = new Actioner
 reactions_modal = new ReactionsModal
 sign_in_modal = new SignInModal
 vue_notifications = new VueNotifications
+consent = new Consent
 
 class Client_app
 

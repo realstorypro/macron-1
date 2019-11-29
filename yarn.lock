@@ -13783,6 +13783,11 @@ vue-avatar@^2.1.1:
   resolved "https://registry.npmjs.org/vue-avatar/-/vue-avatar-2.1.8.tgz#3a8069aa70ecbf89eea2440a7b54f716a46f9935"
   integrity sha512-IrtZV4D90yfvnSz/04cYUnc//Lu83xGwREoxLJ5B6YFB4fj1BgqKZSZolO/yg48J/HhEhHLMnjGNg5sqj5cZKA==
 
+vue-cookies@^1.5.13:
+  version "1.5.13"
+  resolved "https://registry.npmjs.org/vue-cookies/-/vue-cookies-1.5.13.tgz#b1ca79a2663bf9a4f36982557011cab5ee2196c0"
+  integrity sha512-8pjpXnvbNWx1Lft0t3MJnW+ylv0Wa2Tb6Ch617u/pQah3+SfXUZZdkh3EL3bSpe/Sw2Wdw3+DhycgQsKANSxXg==
+
 vue-goodshare@^0.9.3:
   version "0.9.3"
   resolved "https://registry.npmjs.org/vue-goodshare/-/vue-goodshare-0.9.3.tgz#89d902a28a98c2c0e1f949c92cdd217299d3d8b8"
