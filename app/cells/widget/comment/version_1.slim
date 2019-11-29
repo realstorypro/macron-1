@@ -52,7 +52,9 @@
       = segment 'new comment'
         editor-component v-on:post-reply="postReply($event)"
 
-  = header class: 'horizontal divider', text: 'Something to add? Join the discussion!', tag: :h6, v: {if: "!current_user"}
+  = header class: 'horizontal divider', tag: :h6, v: {if: "!current_user"}
+    = icon 'comments'
+    | Add New Comment
   = segment class: 'center aligned unregistered', v: {if: "!current_user"}
     = buttons
       = button class: 'button secondary large', url: url_helpers.sign_in_path
