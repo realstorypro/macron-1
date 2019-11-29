@@ -8,8 +8,6 @@ auth:
         read: 
       videos:
         read: 
-      podcasts:
-        read: 
       comments:
         read: 
       profiles:
@@ -17,8 +15,4 @@ auth:
       members:
         read: 
       promotions:
-        read: 
-      events:
-        read: 
-      store:
         read: 

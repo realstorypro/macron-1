@@ -25,12 +25,6 @@ menu:
       icon: video
       enabled: true
 
-    - name: Podcasts
-      component: podcasts
-      path: admin_podcasts
-      icon: podcast
-      enabled: true
-
     - name: Discussions
       component: discussions
       path: admin_discussions
@@ -38,18 +32,6 @@ menu:
       enabled: true
 
   - section:
-    - name: Events
-      component: events
-      path: admin_events
-      icon: calendar outline
-      enabled: true
-
-    - name: Products
-      component: products
-      path: admin_products
-      icon: shopping basket
-      enabled: true
-
     - name: Promotions
       component: promotions
       path: admin_promotions

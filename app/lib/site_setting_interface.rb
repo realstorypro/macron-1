@@ -27,7 +27,6 @@ class SiteSettingInterface
     site_settings[:theme][:global] = SiteSettings::Theme::Global.instance.payload
     site_settings[:theme][:header] = SiteSettings::Theme::Header.instance.payload
     site_settings[:theme][:homepage] = SiteSettings::Theme::Homepage.instance.payload
-    site_settings[:theme][:podcast] = SiteSettings::Theme::Podcast.instance.payload
     site_settings[:theme][:video] = SiteSettings::Theme::Video.instance.payload
 
     site_settings = site_settings.to_json

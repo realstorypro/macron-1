@@ -21,8 +21,3 @@ menu:
       path: admin_settings_theme_discussion
       icon: comments
       enabled: true
-    - name: Pocasts
-      hint: Podcasts look & feel
-      path: admin_settings_theme_podcast
-      icon: podcast
-      enabled: true

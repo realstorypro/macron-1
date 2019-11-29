@@ -31,48 +31,6 @@ tests:
           - create
           - destroy
 
-    - component: events
-      admin:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - destroy
-      frontend:
-        - index
-        - show
-      crud:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - create
-        - destroy
-
-    - component: products
-      admin:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - destroy
-      crud:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - create
-        - destroy
-
-    - component: store
-      frontend:
-      - index
-      - show
-
 
     - component: discussions
       admin:
@@ -95,26 +53,6 @@ tests:
         - destroy
 
     - component: videos
-      admin:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - destroy
-      frontend:
-        - index
-        - show
-      crud:
-        - index
-        - show
-        - new
-        - edit
-        - update
-        - create
-        - destroy
-
-    - component: podcasts
       admin:
         - index
         - show
@@ -235,11 +173,6 @@ tests:
         - edit
 
     - component: site_settings_theme_footer
-      admin_settings:
-        - index
-        - edit
-
-    - component: site_settings_theme_podcast
       admin_settings:
         - index
         - edit

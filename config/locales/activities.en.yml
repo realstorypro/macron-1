@@ -4,12 +4,8 @@ en:
       created: " published "
     video:
       created: " published "
-    podcast:
-      created: " published "
     discussion:
       created: " published "
-    event:
-      created: " is promoting "
     comment:
       created: " commented on "
     reply:

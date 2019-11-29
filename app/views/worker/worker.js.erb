@@ -4,9 +4,7 @@ self.addEventListener('install', function(event) {
             return cache.addAll([
               "/",
               <%=  "'/articles/',".html_safe if component_enabled?(:articles) %>
-              <%=  "'/events/',".html_safe if component_enabled?(:events) %>
               <%=  "'/videos/',".html_safe if component_enabled?(:videos) %>
-              <%=  "'/podcasts/',".html_safe if component_enabled?(:podcasts) %>
               <%=  "'/discussions/',".html_safe if component_enabled?(:discussions) %>
              "/worker.js",
               "https://fonts.googleapis.com/css?family=Releway|Roboto",

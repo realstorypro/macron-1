@@ -20,9 +20,3 @@ auth:
         read: 
       promotions:
         read: 
-      podcasts:
-        read: 
-      events:
-        read: 
-      store:
-        read: 

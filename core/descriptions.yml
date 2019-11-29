@@ -43,10 +43,6 @@ components:
     name: 'Footer Theme Settings'
     description: 'Provides header theme settings capabilities'
 
-  site_settings_theme_podcast:
-    name: 'Podcast Theme Settings'
-    description: 'Provides header theme settings capabilities'
-
   site_settings_theme_article:
     name: 'Article Theme Settings'
     description: 'Provides header theme settings capabilities'
@@ -102,18 +98,6 @@ components:
                   Learn more at our 
                   <a href="http://help.goodlogik.com/support/solutions/articles/47000461143-articles" target="_blank">Help Desk</a>.
 
-  events:
-    name: 'Events'
-    description: 'Provides event publishing capabilities'
-
-  products:
-    name: 'Products'
-    description: 'Provides product selling capabilities'
-
-  store:
-    name: 'Store'
-    description: 'Provides product selling capabilities'
-
   discussions:
     name: 'Discussions'
     description:  Short-form text content with embeds, images, and quotes
@@ -131,10 +115,6 @@ components:
                   <br>
                   Learn more at our
                   <a href="http://help.goodlogik.com/support/solutions/articles/47000473643-videos" target="_blank">Help Desk</a>.
-
-  podcasts:
-    name: 'Podcasts'
-    description: 'Provides podcasting capabilities'
 
   profiles:
     name: 'Profile'

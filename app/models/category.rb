@@ -13,9 +13,6 @@ class Category < ApplicationRecord
   has_many :discussions
   has_many :articles
   has_many :videos
-  has_many :podcasts
-  has_many :events
-  has_many :products
 
   before_destroy :unpublish_entries
 

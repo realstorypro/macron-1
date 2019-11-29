@@ -82,10 +82,6 @@
 
           = h5 class: 'dividing', text: 'Contributions'
           = table 'very basic unstackable highlights'
-            - if @member.events.count > 0
-              tr
-                td.center.left.aligned.collapsing = icon 'calendar'
-                td.left.aligned = pluralize(@member.events.count, "Event")
             - if @member.articles.count > 0
               tr
                 td.center.left.aligned.collapsing = icon 'file alternate'
@@ -94,10 +90,6 @@
               tr
                 td.center.left.aligned.collapsing = icon 'video'
                 td.left.aligned = pluralize(@member.videos.count, "Video")
-            - if @member.podcasts.count > 0
-              tr
-                td.center.left.aligned.collapsing = icon 'podcast'
-                td.left.aligned = pluralize(@member.podcasts.count, "Podcast")
             - if @member.discussions.count > 0
               tr
                 td.center.left.aligned.collapsing = icon 'thumb tack'
