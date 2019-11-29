@@ -3,12 +3,12 @@ menu:
   elements:
   - section:
     - name: Heading
-      hint: Add different size headings with optional sub-headings.
+      hint: Insert different size heading with optional sub-heading and alignment options.
       component: elements_heading
       icon: heading
       enabled: true
     - name: Divider
-      hint: Insert a line divider with optional heading and an icon.
+      hint: Insert horizontal divider with optional icon and heading.
       component: elements_divider
       icon: ellipsis horizontal
       enabled: true
@@ -17,18 +17,28 @@ menu:
       component: elements_richtext
       icon: file alternate
       enabled: true
+    - name: Embed
+      hint: "Insert rich media (i.e. tweet) from a link."
+      component: elements_embed
+      icon: plug
+      enabled: true
     - name: Image
       hint: Insert an image, with optional alignment and formatting options.
       component: elements_image
       icon: image
+      enabled: true
+    - name: Full-Screen Embed
+      hint: "Insert full-screen link embedded into content."
+      component: elements_oversizedembed
+      icon: plug
       enabled: true
     - name: Full-Screen Image
       hint: Insert full screen image with optional title and caption.
       component: elements_oversizedimage
       icon: images
       enabled: true
-    - name: Video
-      hint: "Insert oversized video with optional title."
+    - name: Full-Screen Video
+      hint: "Insert full-screen video with optional title."
       component: elements_video
       icon: video
       enabled: true
@@ -57,11 +67,6 @@ menu:
       component: elements_imageheader
       icon: camera retro
       enabled: true
-    - name: Embed
-      hint: "Insert rich media (i.e. tweet) from a link."
-      component: elements_embed
-      icon: plug
-      enabled: true
     - name: Embeded Header
       hint: Insert header with solid background, title, and rich media (i.e. tweet) from a link.
       component: elements_embededheader
@@ -72,13 +77,8 @@ menu:
       component: elements_videoheader
       icon: play circle outline
       enabled: true
-    - name: Embed
-      hint: "Insert oversized link embedded into content."
-      component: elements_oversizedembed
-      icon: plug
-      enabled: true
     - name: Color Block
-      hint: " Insert oversized color block with optional title and description."
+      hint: " Insert color block with optional title and description."
       component: elements_colorblock
       icon: tint
       enabled: true

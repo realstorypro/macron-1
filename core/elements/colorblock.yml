@@ -1,7 +1,7 @@
 components:
   elements_colorblock:
     name: 'Color Block'
-    description: ' An oversized color block with optional title and description.'
+    description: ' Full-screen color block with optional title and description.'
     icon: 'tint'
     klass: 'Elements::Colorblock'
     path: 'elements'

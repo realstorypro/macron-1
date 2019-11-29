@@ -1,7 +1,7 @@
 components:
   elements_video:
-    name: 'Video'
-    description: ' An oversized block with video element and optional title.'
+    name: 'Full-Screen Video'
+    description: ' Full-screen video block with optional title.'
     icon: 'video'
     klass: 'Elements::Video'
     path: 'elements'
@@ -10,4 +10,5 @@ components:
       areas:
         - content
       components:
+        - articles
         - videos
