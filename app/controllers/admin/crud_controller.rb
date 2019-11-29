@@ -56,7 +56,7 @@ module Admin
       if s("components.#{params[:component]}.focusable")
         if current_user.advanced
           add_to_actions(
-            text: "Simple Mode",
+            text: "Exit Advanced Mode",
             class: "white left floated hidden",
             dynamic: true,
             icon: "exclamation circle",
