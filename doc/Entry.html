@@ -6,7 +6,7 @@
 <title>
   Class: Entry
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -93,7 +93,7 @@
   
   <dl>
       <dt>Includes:</dt>
-      <dd><span class='object_link'><a href="Categorizable.html" title="Categorizable (module)">Categorizable</a></span>, <span class='object_link'><a href="Nameable.html" title="Nameable (module)">Nameable</a></span>, <span class='object_link'><a href="Payloadable.html" title="Payloadable (module)">Payloadable</a></span>, <span class='object_link'><a href="Seoable.html" title="Seoable (module)">Seoable</a></span>, <span class='object_link'><a href="Slugged.html" title="Slugged (module)">Slugged</a></span>, <span class='object_link'><a href="Taggable.html" title="Taggable (module)">Taggable</a></span></dd>
+      <dd><span class='object_link'><a href="Categorizable.html" title="Categorizable (module)">Categorizable</a></span>, <span class='object_link'><a href="Nameable.html" title="Nameable (module)">Nameable</a></span>, <span class='object_link'><a href="Payloadable.html" title="Payloadable (module)">Payloadable</a></span>, <span class='object_link'><a href="Pointable.html" title="Pointable (module)">Pointable</a></span>, <span class='object_link'><a href="Seoable.html" title="Seoable (module)">Seoable</a></span>, <span class='object_link'><a href="Slugged.html" title="Slugged (module)">Slugged</a></span>, <span class='object_link'><a href="Taggable.html" title="Taggable (module)">Taggable</a></span></dd>
   </dl>
   
   
@@ -110,7 +110,7 @@
 
 <div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="Advertisement.html" title="Advertisement (class)">Advertisement</a></span>, <span class='object_link'><a href="Article.html" title="Article (class)">Article</a></span>, <span class='object_link'><a href="Discussion.html" title="Discussion (class)">Discussion</a></span>, <span class='object_link'><a href="Event.html" title="Event (class)">Event</a></span>, <span class='object_link'><a href="Page.html" title="Page (class)">Page</a></span>, <span class='object_link'><a href="Podcast.html" title="Podcast (class)">Podcast</a></span>, <span class='object_link'><a href="Product.html" title="Product (class)">Product</a></span>, <span class='object_link'><a href="Video.html" title="Video (class)">Video</a></span></p>
+  <p class="children"><span class='object_link'><a href="Article.html" title="Article (class)">Article</a></span>, <span class='object_link'><a href="Discussion.html" title="Discussion (class)">Discussion</a></span>, <span class='object_link'><a href="Promotion.html" title="Promotion (class)">Promotion</a></span>, <span class='object_link'><a href="Video.html" title="Video (class)">Video</a></span></p>
 </div>
 
 
@@ -144,7 +144,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Security.</p>
+</div></span>
   
 </li>
 
@@ -233,6 +235,13 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
@@ -247,21 +256,32 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Security</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/entry.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'app/models/entry.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_policy_class'>policy_class</span>
-  <span class='const'><span class='object_link'><a href="MetaPolicy.html" title="MetaPolicy (class)">MetaPolicy</a></span></span>
+  <span class='const'><span class='object_link'><a href="EntryPolicy.html" title="EntryPolicy (class)">EntryPolicy</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -289,12 +309,12 @@
       <pre class="lines">
 
 
-25
-26
-27</pre>
+31
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/entry.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'app/models/entry.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ping_sitemap'>ping_sitemap</span>
   <span class='const'><span class='object_link'><a href="SitemapPingJob.html" title="SitemapPingJob (class)">SitemapPingJob</a></span></span><span class='period'>.</span><span class='id identifier rubyid_perform_later'>perform_later</span>
@@ -309,9 +329,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:44 2019 by
+  Generated on Fri Nov 29 12:30:14 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

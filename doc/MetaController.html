@@ -6,7 +6,7 @@
 <title>
   Class: MetaController
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -294,7 +294,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="PathHelper.html" title="PathHelper (module)">PathHelper</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="PathHelper.html#delete_path-instance_method" title="PathHelper#delete_path (method)">#delete_path</a></span>, <span class='object_link'><a href="PathHelper.html#edit_path-instance_method" title="PathHelper#edit_path (method)">#edit_path</a></span>, <span class='object_link'><a href="PathHelper.html#index_path-instance_method" title="PathHelper#index_path (method)">#index_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_delete_path-instance_method" title="PathHelper#meta_delete_path (method)">#meta_delete_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_edit_path-instance_method" title="PathHelper#meta_edit_path (method)">#meta_edit_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_index_path-instance_method" title="PathHelper#meta_index_path (method)">#meta_index_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_new_path-instance_method" title="PathHelper#meta_new_path (method)">#meta_new_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_show_path-instance_method" title="PathHelper#meta_show_path (method)">#meta_show_path</a></span>, <span class='object_link'><a href="PathHelper.html#new_path-instance_method" title="PathHelper#new_path (method)">#new_path</a></span>, <span class='object_link'><a href="PathHelper.html#show_path-instance_method" title="PathHelper#show_path (method)">#show_path</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="PathHelper.html#delete_path-instance_method" title="PathHelper#delete_path (method)">#delete_path</a></span>, <span class='object_link'><a href="PathHelper.html#edit_path-instance_method" title="PathHelper#edit_path (method)">#edit_path</a></span>, <span class='object_link'><a href="PathHelper.html#index_path-instance_method" title="PathHelper#index_path (method)">#index_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_category_path-instance_method" title="PathHelper#meta_category_path (method)">#meta_category_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_delete_path-instance_method" title="PathHelper#meta_delete_path (method)">#meta_delete_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_edit_path-instance_method" title="PathHelper#meta_edit_path (method)">#meta_edit_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_index_path-instance_method" title="PathHelper#meta_index_path (method)">#meta_index_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_new_path-instance_method" title="PathHelper#meta_new_path (method)">#meta_new_path</a></span>, <span class='object_link'><a href="PathHelper.html#meta_show_path-instance_method" title="PathHelper#meta_show_path (method)">#meta_show_path</a></span>, <span class='object_link'><a href="PathHelper.html#new_path-instance_method" title="PathHelper#new_path (method)">#new_path</a></span>, <span class='object_link'><a href="PathHelper.html#preview_path-instance_method" title="PathHelper#preview_path (method)">#preview_path</a></span>, <span class='object_link'><a href="PathHelper.html#show_path-instance_method" title="PathHelper#show_path (method)">#show_path</a></span></p>
 
   
   
@@ -327,7 +327,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Trackable.html" title="Trackable (module)">Trackable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Trackable.html#identify-instance_method" title="Trackable#identify (method)">#identify</a></span>, <span class='object_link'><a href="Trackable.html#track-instance_method" title="Trackable#track (method)">#track</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Trackable.html#track-instance_method" title="Trackable#track (method)">#track</a></span></p>
 
   
   
@@ -359,7 +359,6 @@
       <pre class="lines">
 
 
-30
 31
 32
 33
@@ -369,15 +368,16 @@
 37
 38
 39
-40</pre>
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
-  <span class='ivar'>@entry</span> <span class='op'>=</span> <span class='id identifier rubyid_entry_class'>entry_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_entry_params'>entry_params</span><span class='rparen'>)</span>
+  <span class='ivar'>@entry</span> <span class='op'>=</span> <span class='id identifier rubyid_component'>component</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_entry_params'>entry_params</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@entry</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
-    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component_name'>component_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> was successfully created.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> was successfully created.</span><span class='tstring_end'>&quot;</span></span>
     <span class='id identifier rubyid_response_status'>response_status</span> <span class='symbol'>:success</span>
     <span class='id identifier rubyid_response_redirect'>response_redirect</span> <span class='id identifier rubyid_helpers'>helpers</span><span class='period'>.</span><span class='id identifier rubyid_meta_show_path'>meta_show_path</span><span class='lparen'>(</span><span class='ivar'>@entry</span><span class='comma'>,</span> <span class='id identifier rubyid_determine_namespace'>determine_namespace</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
@@ -405,19 +405,19 @@
       <pre class="lines">
 
 
-53
 54
 55
 56
 57
-58</pre>
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span>
   <span class='ivar'>@entry</span><span class='period'>.</span><span class='id identifier rubyid_destroy'>destroy</span>
-  <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component_name'>component_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> was successfully updated.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> was successfully updated.</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_response_status'>response_status</span> <span class='symbol'>:success</span>
   <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_helpers'>helpers</span><span class='period'>.</span><span class='id identifier rubyid_meta_index_path'>meta_index_path</span> <span class='id identifier rubyid_determine_namespace'>determine_namespace</span>
 <span class='kw'>end</span></pre>
@@ -441,13 +441,13 @@
       <pre class="lines">
 
 
-25
 26
 27
-28</pre>
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span>
   <span class='ivar'>@colors</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Color.html" title="Color (class)">Color</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
@@ -473,16 +473,16 @@
       <pre class="lines">
 
 
+9
+10
 11
-12
-13
-14</pre>
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
-  <span class='ivar'>@entries</span> <span class='op'>=</span> <span class='id identifier rubyid_entry_class'>entry_class</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@entries</span> <span class='op'>=</span> <span class='id identifier rubyid_component'>component</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_authorize'>authorize</span> <span class='ivar'>@entries</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -505,18 +505,18 @@
       <pre class="lines">
 
 
-18
 19
 20
 21
 22
-23</pre>
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span>
-  <span class='ivar'>@entry</span> <span class='op'>=</span> <span class='id identifier rubyid_entry_class'>entry_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@entry</span> <span class='op'>=</span> <span class='id identifier rubyid_component'>component</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='ivar'>@colors</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Color.html" title="Color (class)">Color</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
   <span class='id identifier rubyid_authorize'>authorize</span> <span class='ivar'>@entry</span>
   <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:new</span><span class='comma'>,</span> <span class='label'>layout:</span> <span class='kw'>false</span>
@@ -541,12 +541,18 @@
       <pre class="lines">
 
 
-16</pre>
+14
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 14</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span>
+  <span class='comment'># The crud.coffee widget needs this in order to re-load the page after edit
+</span>  <span class='id identifier rubyid_response_status'>response_status</span> <span class='symbol'>:success</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -567,7 +573,6 @@
       <pre class="lines">
 
 
-42
 43
 44
 45
@@ -576,16 +581,17 @@
 48
 49
 50
-51</pre>
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/meta_controller.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
   <span class='kw'>if</span> <span class='ivar'>@entry</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_entry_params'>entry_params</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component_name'>component_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> was successfully updated.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> was successfully updated.</span><span class='tstring_end'>&quot;</span></span>
     <span class='id identifier rubyid_response_status'>response_status</span> <span class='symbol'>:success</span>
-    <span class='id identifier rubyid_redirect_back'>redirect_back</span><span class='lparen'>(</span><span class='label'>fallback_location:</span> <span class='id identifier rubyid_admin_root_path'>admin_root_path</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_redirect_back'>redirect_back</span><span class='lparen'>(</span><span class='label'>fallback_location:</span> <span class='id identifier rubyid_admin_root_path'>admin_root_path</span><span class='comma'>,</span> <span class='label'>turbolinks:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_response_status'>response_status</span> <span class='symbol'>:error</span>
     <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:edit</span><span class='comma'>,</span> <span class='label'>layout:</span> <span class='kw'>false</span>
@@ -601,9 +607,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:48 2019 by
+  Generated on Fri Nov 29 12:30:18 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

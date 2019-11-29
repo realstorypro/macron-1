@@ -6,7 +6,7 @@
 <title>
   Class: ImageInput
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -190,17 +190,17 @@
       <pre class="lines">
 
 
-6
-7
 8
-9</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/inputs/image_input.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'app/inputs/image_input.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_input'>input</span><span class='lparen'>(</span><span class='id identifier rubyid__wrapper_options'>_wrapper_options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_image_size'>image_size</span> <span class='op'>=</span> <span class='id identifier rubyid_size'>size</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_uploadcare_field'>uploadcare_field</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>images-only</span><span class='label_end'>&#39;:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>crop:</span> <span class='id identifier rubyid_image_size'>image_size</span> <span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_html_safe'>html_safe</span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_uploadcare_field'>uploadcare_field</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>images-only</span><span class='label_end'>&#39;:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>crop:</span> <span class='id identifier rubyid_image_size'>image_size</span><span class='comma'>,</span> <span class='label'>tabs:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>file camera url gphotos instagram</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_html_safe'>html_safe</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -212,9 +212,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:45 2019 by
+  Generated on Fri Nov 29 12:30:15 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

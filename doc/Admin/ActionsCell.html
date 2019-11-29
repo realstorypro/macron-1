@@ -6,7 +6,7 @@
 <title>
   Class: Admin::ActionsCell
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -91,7 +91,7 @@
   
   <dl>
       <dt>Includes:</dt>
-      <dd><span class='object_link'><a href="../ApplicationHelper.html" title="ApplicationHelper (module)">ApplicationHelper</a></span>, DcUi::Helpers</dd>
+      <dd><span class='object_link'><a href="../ApplicationHelper.html" title="ApplicationHelper (module)">ApplicationHelper</a></span>, GoodUi::Helpers</dd>
   </dl>
   
   
@@ -125,6 +125,50 @@
   <span class="summary_signature">
     
       <a href="#actions-instance_method" title="#actions (instance method)">#<strong>actions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dynamic_class-instance_method" title="#dynamic_class (instance method)">#<strong>dynamic_class</strong>(action)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dynamic_id-instance_method" title="#dynamic_id (instance method)">#<strong>dynamic_id</strong>(action)  &#x21d2; Object </a>
     
 
     
@@ -233,10 +277,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Options &#39;show:&#39; as [&#39;buttons&#39;, &#39;dropdown&#39;] the
-rendering style &#39;icons: true&#39; shows the icons
-&#39;icon_position:&#39; as [&#39;:left&#39;, &#39;:right&#39;] - where the
-icon sits &#39;labeled: true&#39; makes the button a labeled button.</p>
+<p>Options &#39;show:&#39; as [&#39;buttons&#39;, &#39;dropdown&#39;] the rendering style &#39;icons: true&#39; shows the icons &#39;icon_position:&#39; as [&#39;:left&#39;, &#39;:right&#39;] - where the icon sits &#39;labeled: true&#39; makes the button a labeled button.</p>
 </div></span>
   
 </li>
@@ -253,6 +294,17 @@ icon sits &#39;labeled: true&#39; makes the button a labeled button.</p>
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../ActivityHelper.html" title="ActivityHelper (module)">ActivityHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ActivityHelper.html#activity_verb-instance_method" title="ActivityHelper#activity_verb (method)">#activity_verb</a></span></p>
+
   
   
   
@@ -328,7 +380,7 @@ icon sits &#39;labeled: true&#39; makes the button a labeled button.</p>
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../PathHelper.html" title="PathHelper (module)">PathHelper</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../PathHelper.html#delete_path-instance_method" title="PathHelper#delete_path (method)">#delete_path</a></span>, <span class='object_link'><a href="../PathHelper.html#edit_path-instance_method" title="PathHelper#edit_path (method)">#edit_path</a></span>, <span class='object_link'><a href="../PathHelper.html#index_path-instance_method" title="PathHelper#index_path (method)">#index_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_delete_path-instance_method" title="PathHelper#meta_delete_path (method)">#meta_delete_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_edit_path-instance_method" title="PathHelper#meta_edit_path (method)">#meta_edit_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_index_path-instance_method" title="PathHelper#meta_index_path (method)">#meta_index_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_new_path-instance_method" title="PathHelper#meta_new_path (method)">#meta_new_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_show_path-instance_method" title="PathHelper#meta_show_path (method)">#meta_show_path</a></span>, <span class='object_link'><a href="../PathHelper.html#new_path-instance_method" title="PathHelper#new_path (method)">#new_path</a></span>, <span class='object_link'><a href="../PathHelper.html#show_path-instance_method" title="PathHelper#show_path (method)">#show_path</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../PathHelper.html#delete_path-instance_method" title="PathHelper#delete_path (method)">#delete_path</a></span>, <span class='object_link'><a href="../PathHelper.html#edit_path-instance_method" title="PathHelper#edit_path (method)">#edit_path</a></span>, <span class='object_link'><a href="../PathHelper.html#index_path-instance_method" title="PathHelper#index_path (method)">#index_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_category_path-instance_method" title="PathHelper#meta_category_path (method)">#meta_category_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_delete_path-instance_method" title="PathHelper#meta_delete_path (method)">#meta_delete_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_edit_path-instance_method" title="PathHelper#meta_edit_path (method)">#meta_edit_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_index_path-instance_method" title="PathHelper#meta_index_path (method)">#meta_index_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_new_path-instance_method" title="PathHelper#meta_new_path (method)">#meta_new_path</a></span>, <span class='object_link'><a href="../PathHelper.html#meta_show_path-instance_method" title="PathHelper#meta_show_path (method)">#meta_show_path</a></span>, <span class='object_link'><a href="../PathHelper.html#new_path-instance_method" title="PathHelper#new_path (method)">#new_path</a></span>, <span class='object_link'><a href="../PathHelper.html#preview_path-instance_method" title="PathHelper#preview_path (method)">#preview_path</a></span>, <span class='object_link'><a href="../PathHelper.html#show_path-instance_method" title="PathHelper#show_path (method)">#show_path</a></span></p>
 
   
   
@@ -340,6 +392,28 @@ icon sits &#39;labeled: true&#39; makes the button a labeled button.</p>
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../SettingsHelper.html" title="SettingsHelper (module)">SettingsHelper</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="../SettingsHelper.html#node_name-instance_method" title="SettingsHelper#node_name (method)">#node_name</a></span>, <span class='object_link'><a href="../SettingsHelper.html#node_value-instance_method" title="SettingsHelper#node_value (method)">#node_value</a></span>, <span class='object_link'><a href="../SettingsHelper.html#s-instance_method" title="SettingsHelper#s (method)">#s</a></span>, <span class='object_link'><a href="../SettingsHelper.html#settings-instance_method" title="SettingsHelper#settings (method)">#settings</a></span>, <span class='object_link'><a href="../SettingsHelper.html#ss-instance_method" title="SettingsHelper#ss (method)">#ss</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../ComponentHelper.html" title="ComponentHelper (module)">ComponentHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ComponentHelper.html#component_enabled%3F-instance_method" title="ComponentHelper#component_enabled? (method)">#component_enabled?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../VueHelper.html" title="VueHelper (module)">VueHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../VueHelper.html#vue_widget-instance_method" title="VueHelper#vue_widget (method)">#vue_widget</a></span></p>
 
   
 
@@ -378,6 +452,74 @@ icon sits &#39;labeled: true&#39; makes the button a labeled button.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="dynamic_class-instance_method">
+  
+    #<strong>dynamic_class</strong>(action)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/cells/admin/actions_cell.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dynamic_class'>dynamic_class</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_action'>action</span><span class='lbracket'>[</span><span class='symbol'>:dynamic</span><span class='rbracket'>]</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dynamic</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dynamic_id-instance_method">
+  
+    #<strong>dynamic_id</strong>(action)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/cells/admin/actions_cell.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dynamic_id'>dynamic_id</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_action'>action</span><span class='lbracket'>[</span><span class='symbol'>:dynamic</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_action'>action</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dynamic_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_action'>action</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="icon_position-instance_method">
   
     #<strong>icon_position</strong>  &#x21d2; <tt>Object</tt> 
@@ -403,14 +545,14 @@ icon sits &#39;labeled: true&#39; makes the button a labeled button.</p>
       <pre class="lines">
 
 
-34
-35
-36
-37
-38</pre>
+46
+47
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/cells/admin/actions_cell.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'app/cells/admin/actions_cell.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_icon_position'>icon_position</span>
   <span class='comment'># defaults return to left unless we explicitly pass icon position
@@ -542,10 +684,7 @@ icon sits &#39;labeled: true&#39; makes the button a labeled button.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Options &#39;show:&#39; as [&#39;buttons&#39;, &#39;dropdown&#39;] the
-rendering style &#39;icons: true&#39; shows the icons
-&#39;icon_position:&#39; as [&#39;:left&#39;, &#39;:right&#39;] - where the
-icon sits &#39;labeled: true&#39; makes the button a labeled button</p>
+<p>Options &#39;show:&#39; as [&#39;buttons&#39;, &#39;dropdown&#39;] the rendering style &#39;icons: true&#39; shows the icons &#39;icon_position:&#39; as [&#39;:left&#39;, &#39;:right&#39;] - where the icon sits &#39;labeled: true&#39; makes the button a labeled button</p>
 
 
   </div>
@@ -585,9 +724,9 @@ icon sits &#39;labeled: true&#39; makes the button a labeled button</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:47 2019 by
+  Generated on Fri Nov 29 12:30:17 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   Module: NavHelper
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -88,7 +88,18 @@
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>rubocop:disable Metrics/LineLength</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -149,8 +160,6 @@
       <pre class="lines">
 
 
-4
-5
 6
 7
 8
@@ -213,14 +222,13 @@
 65
 66
 67
-68
-69</pre>
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/helpers/nav_helper.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'app/helpers/nav_helper.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_menu_color_class'>menu_color_class</span>
-  <span class='id identifier rubyid_transparent_controllers'>transparent_controllers</span> <span class='op'>=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>articles</span><span class='words_sep'> </span><span class='tstring_content'>videos</span><span class='words_sep'> </span><span class='tstring_content'>events</span><span class='words_sep'> </span><span class='tstring_content'>store</span><span class='tstring_end'>)</span></span>
+  <span class='id identifier rubyid_transparent_controllers'>transparent_controllers</span> <span class='op'>=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>articles</span><span class='words_sep'> </span><span class='tstring_content'>videos</span><span class='words_sep'> </span><span class='tstring_content'>events</span><span class='words_sep'> </span><span class='tstring_content'>store</span><span class='words_sep'> </span><span class='tstring_content'>members</span><span class='words_sep'> </span><span class='tstring_content'>profile</span><span class='tstring_end'>)</span></span>
   <span class='id identifier rubyid_menu_color'>menu_color</span> <span class='op'>=</span> <span class='id identifier rubyid_ss'>ss</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>theme.header.menu_color</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
   <span class='comment'># in case of homepage apply the homepage colors
@@ -239,39 +247,36 @@
 
   <span class='kw'>elsif</span> <span class='id identifier rubyid_controller_name'>controller_name</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discussions</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_action_name'>action_name</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>show</span><span class='tstring_end'>&quot;</span></span>
     <span class='id identifier rubyid_menu_style'>menu_style</span> <span class='op'>=</span> <span class='id identifier rubyid_ss'>ss</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>theme.discussion.menu_style</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_category_color'>category_color</span> <span class='op'>=</span> <span class='ivar'>@entry</span><span class='period'>.</span><span class='id identifier rubyid_category'>category</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+    <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span> <span class='op'>=</span> <span class='ivar'>@entry</span><span class='period'>.</span><span class='id identifier rubyid_menu_color'>menu_color</span>
 
     <span class='comment'># we want to eliminate transparency if the background is set as solid
 </span>    <span class='comment'># we only want to show the border if both category and menu colors are white
 </span>    <span class='kw'>if</span> <span class='id identifier rubyid_menu_style'>menu_style</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>solid</span><span class='tstring_end'>&quot;</span></span>
-      <span class='kw'>if</span> <span class='id identifier rubyid_category_color'>category_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_menu_color'>menu_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_menu_color'>menu_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>bordered:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>false</span><span class='rparen'>)</span>
       <span class='kw'>else</span>
         <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>false</span><span class='rparen'>)</span>
       <span class='kw'>end</span>
     <span class='kw'>elsif</span> <span class='id identifier rubyid_menu_style'>menu_style</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>matching solid</span><span class='tstring_end'>&quot;</span></span>
-      <span class='kw'>if</span> <span class='id identifier rubyid_category_color'>category_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_menu_color'>menu_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span>
-        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_category_color'>category_color</span><span class='comma'>,</span> <span class='label'>bordered:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_menu_color'>menu_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span><span class='comma'>,</span> <span class='label'>bordered:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>false</span><span class='rparen'>)</span>
       <span class='kw'>else</span>
-        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_category_color'>category_color</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>false</span><span class='rparen'>)</span>
       <span class='kw'>end</span>
 
     <span class='kw'>elsif</span> <span class='id identifier rubyid_menu_style'>menu_style</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>transparent</span><span class='tstring_end'>&quot;</span></span>
-      <span class='kw'>if</span> <span class='id identifier rubyid_category_color'>category_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span>
-        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_category_color'>category_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>bordered:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>bordered:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>true</span><span class='rparen'>)</span>
       <span class='kw'>else</span>
-        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_category_color'>category_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>true</span><span class='rparen'>)</span>
       <span class='kw'>end</span>
     <span class='kw'>elsif</span> <span class='id identifier rubyid_menu_style'>menu_style</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>matching transparent</span><span class='tstring_end'>&quot;</span></span>
-      <span class='kw'>if</span> <span class='id identifier rubyid_category_color'>category_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span>
-        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_category_color'>category_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_category_color'>category_color</span><span class='comma'>,</span> <span class='label'>bordered:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>white</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span><span class='comma'>,</span> <span class='label'>bordered:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>true</span><span class='rparen'>)</span>
       <span class='kw'>else</span>
-        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_category_color'>category_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_category_color'>category_color</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>expanded_color:</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_entry_menu_color'>entry_menu_color</span><span class='comma'>,</span> <span class='label'>transparent:</span> <span class='kw'>true</span><span class='rparen'>)</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
-  <span class='kw'>elsif</span> <span class='qwords_beg'>%w[</span><span class='tstring_content'>members</span><span class='words_sep'> </span><span class='tstring_content'>profile</span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_controller_name'>controller_name</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_color'>color</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>black</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id identifier rubyid_menu_class'>menu_class</span><span class='lparen'>(</span><span class='label'>transparent:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>expanded_color:</span> <span class='id identifier rubyid_color'>color</span><span class='comma'>,</span> <span class='label'>collapsed_color:</span> <span class='id identifier rubyid_menu_color'>menu_color</span><span class='rparen'>)</span>
   <span class='kw'>elsif</span> <span class='qwords_beg'>%w[</span><span class='tstring_content'>sessions</span><span class='words_sep'> </span><span class='tstring_content'>registrations</span><span class='words_sep'> </span><span class='tstring_content'>passwords</span><span class='words_sep'> </span><span class='tstring_content'>confirmations</span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_controller_name'>controller_name</span><span class='rparen'>)</span>
     <span class='comment'># auth fullscreen image option
 </span>    <span class='comment'># we want to have an inverted logo that&#39;s why we&#39;re passing the *expanded_color: black*
@@ -295,9 +300,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:44 2019 by
+  Generated on Fri Nov 29 12:30:13 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>

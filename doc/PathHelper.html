@@ -6,7 +6,7 @@
 <title>
   Module: PathHelper
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -96,8 +96,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Responsible for generating &#39;meta&#39; paths from the component &amp;
-entry</p>
+<p>Responsible for generating &#39;meta&#39; paths from the component &amp; entry</p>
 
 
   </div>
@@ -183,6 +182,30 @@ entry</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>Generates the paths as strings.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#meta_category_path-instance_method" title="#meta_category_path (instance method)">#<strong>meta_category_path</strong>(component = params[:component])  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>used for generating a breadcrumb category link.</p>
 </div></span>
   
 </li>
@@ -318,6 +341,32 @@ entry</p>
 
   
     <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#preview_path-instance_method" title="#preview_path (instance method)">#<strong>preview_path</strong>(component = params[:component])  &#x21d2; Object </a>
+    
+
+    
+      (also: #show_details)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>used for the previews in the curd.</p>
+</div></span>
   
 </li>
 
@@ -469,6 +518,47 @@ entry</p>
   <span class='kw'>else</span>
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_in_namespace'>in_namespace</span><span class='lparen'>(</span><span class='id identifier rubyid_namespace'>namespace</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>_index_path</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="meta_category_path-instance_method">
+  
+    #<strong>meta_category_path</strong>(component = params[:component])  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>used for generating a breadcrumb category link</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/helpers/path_helper.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_meta_category_path'>meta_category_path</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:component</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_getter'>path_getter</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_singularize'>singularize</span><span class='embexpr_end'>}</span><span class='tstring_content'>_category_path</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -667,6 +757,51 @@ entry</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="preview_path-instance_method">
+  
+    #<strong>preview_path</strong>(component = params[:component])  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='show_details-instance_method'>show_details</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>used for the previews in the curd</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/helpers/path_helper.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_preview_path'>preview_path</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:component</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_getter'>path_getter</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_singularize'>singularize</span><span class='embexpr_end'>}</span><span class='tstring_content'>_details_path</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="show_path-instance_method">
   
     #<strong>show_path</strong>(namespace = nil, component = params[:component])  &#x21d2; <tt>Object</tt> 
@@ -701,9 +836,9 @@ entry</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 12 09:19:44 2019 by
+  Generated on Fri Nov 29 12:30:13 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.0).
+  0.9.20 (ruby-2.6.1).
 </div>
 
     </div>
