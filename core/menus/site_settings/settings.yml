@@ -1,7 +1,7 @@
 menu:
   settings:
     - section:
-      - name: General
+      - name: Global
         hint: Set name, description, and url
         path: admin_settings_general
         icon: setting
