@@ -3,7 +3,7 @@
 // ********************** //
 
 $red            : #B03060;
-$orange         : #ff6d00;
+$orange         : #ff9900;
 $yellow         : #ffbf00;
 $olive          : #32CD32;
 $green          : #21BA45;
@@ -23,8 +23,8 @@ $medium-shading: rgba(34, 36, 38, 0.15);
 
 // Default Color Map
 $g-colors-list: orange violet grey white yellow red blue olive green teal purple pink brown black;
-$g-colors-regular: orange violet grey white yellow;
-$g-colors-inverted: red blue olive green teal purple pink brown black;
+$g-colors-regular: violet grey white yellow;
+$g-colors-inverted: red orange blue olive green teal purple pink brown black;
 $g-colors-map: (
         red: $red,
         orange: $orange,
@@ -65,8 +65,8 @@ $w-homepage-header-colors-regular: violet grey white;
 // Homepage Overlay Colors Map
 $w-homepage-header-colors-map: (
         red: darken($red, 30),
-        orange: darken($orange,40),
-        yellow: darken($yellow, 40),
+        orange: darken($orange,30),
+        yellow: darken($yellow, 38),
         olive: $olive,
         green: $green,
         teal: $teal,

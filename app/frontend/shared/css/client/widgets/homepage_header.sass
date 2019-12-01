@@ -225,6 +225,16 @@
           @else
             color: $white
 
+        .meta
+          @if index($w-homepage-header-colors-regular, $color)
+            color: $black
+            .icon
+              color: $black
+          @else
+            color: $white
+            .icon
+              color: $white
+
     // Gradient Color Generation
     @each $color in $g-colors-list
       &.gradient.#{$color}
