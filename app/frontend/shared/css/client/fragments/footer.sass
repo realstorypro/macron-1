@@ -8,13 +8,13 @@ $f-ftr-link-transition: 0.4s all
 @mixin footer_style($style)
   .item,
   .ui.list .item a
-    @if style == regular
+    @if $style == regular
       color: $black
     @else
       color: $white
 
   .ui.list .item a
-    @if style == regular
+    @if $style == regular
       &:hover
         color: rgba($black, 0.7)
     @else
@@ -23,13 +23,13 @@ $f-ftr-link-transition: 0.4s all
 
   .ui.list.copyright
       .item, .item a, a.item
-        @if style == regular
+        @if $style == regular
           color: $black
         @else
           color: $white
 
       .item
-        @if style == regular
+        @if $style == regular
           border-left: 1px solid $black
         @else
           border-left: 1px solid $white
@@ -37,7 +37,7 @@ $f-ftr-link-transition: 0.4s all
           border-left: none
 
         &:hover
-          @if style == regular
+          @if $style == regular
             color: $black !important
           @else
             color: $white !important
@@ -50,7 +50,6 @@ $f-ftr-link-transition: 0.4s all
   padding: $f-ftr-padding
 
   @include media("<tablet")
-    // padding: $f-ftr-mobile-padding
     padding: $f-ftr-mobile-padding
 
   h5
@@ -91,7 +90,6 @@ $f-ftr-link-transition: 0.4s all
       padding-bottom: 0.25em !important
 
   .logo.holder
-    text-align: right
     @include media("<tablet")
       text-align: center
       padding-top: 0.25em !important

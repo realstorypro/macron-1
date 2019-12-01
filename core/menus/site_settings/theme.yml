@@ -23,7 +23,7 @@ menu:
       icon: window maximize
       enabled: true
     - name: Footer
-      hint: Footer variants & styling
+      hint: Set the style for footer and enter the copyright content.
       path: admin_settings_theme_footer
       icon: window maximize flipped vertically
       enabled: true

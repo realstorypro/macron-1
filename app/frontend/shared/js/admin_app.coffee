@@ -27,7 +27,6 @@ import ImagePreloader from './widgets/image_preloader'
 import CategoryFilter from './vue/category_filter'
 import NavigationButtons from './vue/navigation_buttons'
 import Sidenav from './vue/sidenav'
-import Newsletter from './vue/newsletter'
 import Video from './vue/video'
 import Cover from './vue/cover'
 
@@ -63,7 +62,6 @@ image_preloader = new ImagePreloader
 category_filter = new CategoryFilter
 navigation_buttons = new NavigationButtons
 sidenav = new Sidenav
-newsletter = new Newsletter
 video = new Video
 cover = new Cover
 
