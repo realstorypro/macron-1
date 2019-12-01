@@ -9,13 +9,13 @@ div data-tracked-page="true" data-event="Viewed Content" data-props=@tracking_pr
 - @entry.areas.select do |area|
   - if area.type.include?('Header')
     - area.elements.each do |element|
-      == Elements::ElementCell.(element, request: request)
+      == Elements::ElementCell.(element, request: request, site_settings: @site_settings)
 
 - @entry.areas.select do |area|
   - if area.type.include?('Content')
     - area.elements.each_with_index do |element, index|
       - if @oversized_elements.any? {|oversized| element.class.to_s.downcase.include?(oversized) }
-        == Elements::ElementCell.(element, request: request)
+        == Elements::ElementCell.(element, request: request, site_settings: @site_settings)
       - else
         // breadcrumb logic
         - if (@previous_element == nil || @previous_element.class.to_s.include?('header')) && !@breadcrumbs_displayed
@@ -37,7 +37,7 @@ div data-tracked-page="true" data-event="Viewed Content" data-props=@tracking_pr
             = grid
               = row
                 = column computer: 11, tablet: 16, mobile: 16, class: "centered"
-                  == Elements::ElementCell.(element, request: request)
+                  == Elements::ElementCell.(element, request: request, site_settings: @site_settings)
         - @previous_element = element
 
 = render "partials/engager"

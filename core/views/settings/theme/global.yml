@@ -4,44 +4,17 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
-      font_header:
+      configuration_header:
         advanced: true
         type: 'header'
-        text: 'Fonts '
-
-      header_font:
-        advanced: true
-        label: 'Header'
-        type: 'fixed_dropdown'
-        options:
-        - Lato
-        - Relevay
-        - Roboto
-        required: true
-        default: 'Relevay'
-
-      body_font:
-        advanced: true
-        label: 'Body'
-        type: 'fixed_dropdown'
-        options:
-        - Lato
-        - Relevay
-        - Roboto
-        required: true
-        default: 'Roboto'
-
-      overlay_header:
-        advanced: true
-        type: 'header'
-        text: 'Overlays'
+        text: 'Configuration'
 
       overlay_background:
         advanced: true
-        label: 'Background Style'
+        label: 'Overlay Background Style'
         type: 'fixed_dropdown'
         options:
-        - auto
+        - normal
         - fixed
         required: true
-        default: 'auto'
+        default: 'normal'
