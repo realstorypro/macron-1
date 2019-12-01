@@ -8,7 +8,7 @@ menu:
       enabled: true
       advanced: true
     - name: Branding
-      hint: Logos & icons
+      hint: Upload your logo and brand icons.
       path: admin_settings_theme_branding
       icon: paint brush
       enabled: true
