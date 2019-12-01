@@ -1,7 +1,7 @@
 // tracking integration
 div data-tracked-page="true" data-event="Viewed Homepage" data-props='{"featured_items": "#{@featured.count}", "discussion_items": "#{@discussions.count}"}'
 
-= component class: "homepage", style: "padding-top: #{ss('theme.homepage.content_top_padding')}em; border-top: 3.8em solid #{ss("theme.homepage.menu_color")}"
+= component class: "homepage", style: "padding-top: #{ss('theme.homepage.content_top_padding')}em; border-top: 3.8em solid #{get_color_value(ss("theme.homepage.menu_color"))}"
   ==  Widget::HomepageCell.(@featured, site_settings: @site_settings) unless @featured.empty?
   = container 'wide'
     = grid

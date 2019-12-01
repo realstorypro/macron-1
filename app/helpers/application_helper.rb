@@ -2,6 +2,7 @@
 
 # TODO: Refactor and figure out what's needed
 module ApplicationHelper
+  include ColorHelper
   include VueHelper
   include SettingsHelper
   include ComponentHelper
