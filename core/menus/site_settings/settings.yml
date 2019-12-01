@@ -12,7 +12,7 @@ menu:
         icon: address card
         enabled: true
       - name: Theme
-        hint: Adjust the way the platform looks.
+        hint: Change the look and feel of the platform.
         path: admin_settings_theme_root
         icon: paint brush
         enabled: true
