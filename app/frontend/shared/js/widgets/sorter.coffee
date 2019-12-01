@@ -39,6 +39,10 @@ class Sorter
       if widget.length > 0
         sortable_item = Sortable.create widget[0],
           disabled: true
+          onStart: ->
+            $(@.el).addClass('dragging')
+          onEnd: ->
+            $(@.el).removeClass('dragging')
           onSort: ->
             axios.post target, { order: @.toArray() }
 

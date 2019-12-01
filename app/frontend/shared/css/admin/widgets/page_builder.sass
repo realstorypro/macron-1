@@ -34,8 +34,21 @@
       display: none
 
 .page.builder.widget.active
+  .sortable-ghost
+    background: #eee
+
+  .element.sortable-chosen
+    .button
+      display: none
+
+  .dragging .element
+    //font-size: 0.7em
+    .button
+      display: none
+
   .element
     border: 1px dashed lighten($blue, 20)
+    transition: 0.1s all
 
   .empty.element.segment
     display: block
