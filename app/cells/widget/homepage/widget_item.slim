@@ -3,15 +3,14 @@
   = preload_image @item.landscape_image + "-/quality/lightest/-/progressive/yes/", image_class, @item.image_alt if @image == 'landscape'
   = link_to show_link(@item), class: 'activatable', data: { preloadable: true}
     = overlay "#{@size} #{overlay_color} #{overlay_background}"
-      /= meta
+      = meta
         - if content_icons == 'show'
           = show_icon(@item)
-        - if comment_count == 'show'
-          = icon 'comment outline large'
+        - if comment_count == 'show' && @item.comments.count > 0
+          | &nbsp;
+          = icon 'volume up large'
           = @item.comments.count
       = content @size
         = h3 class: "#{'marginless' unless @description}"
-          /= header subheader_class
-            = @item.category.name
           = @item.name
         = summary text: @item.description, class: "#{'shortened' unless @description}"
