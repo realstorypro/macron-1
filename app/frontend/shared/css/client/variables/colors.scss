@@ -58,11 +58,15 @@ $w-nav-colors-map: (
         black: $black,
         white: $white );
 
+
+// Homepage Regular Colors Map
+$w-homepage-header-colors-regular: violet grey white;
+
 // Homepage Overlay Colors Map
 $w-homepage-header-colors-map: (
-        red: $red,
-        orange: $orange,
-        yellow: $yellow,
+        red: darken($red, 30),
+        orange: darken($orange,40),
+        yellow: darken($yellow, 40),
         olive: $olive,
         green: $green,
         teal: $teal,
