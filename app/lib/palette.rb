@@ -6,20 +6,20 @@ class Palette
   def initialize(options = {})
     defaults = {
         colors: %w(red orange yellow olive green teal blue violet purple pink brown grey black white ),
-        inverted: %w(red orange blue olive green teal purple pink brown black),
+        inverted: %w(red orange blue green teal violet purple pink brown black),
         color_map: {
           red: "B03060",
           orange: "ff9900",
           yellow: "FFD700",
-          olive: "32CD32",
+          olive: "29e061",
           green: "21BA45",
           teal: "008080",
           blue: "2185D0",
           violet: "EE82EE",
           purple: "B413EC",
-          pink: "FF1493",
-          brown: "A52A2A",
-          grey: "A0A0A0",
+          pink: "ff14c2",
+          brown: "8c3636",
+          grey: "e8e8e8",
           black: "666666",
           white: "000000"
         }
