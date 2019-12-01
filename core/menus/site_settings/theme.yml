@@ -13,12 +13,12 @@ menu:
       icon: paint brush
       enabled: true
     - name: Authentication
-      hint: Verbiage & background styling
+      hint: Set authentication background and customize the sign-in/signup headings.
       path: admin_settings_theme_authentication
       icon: lock
       enabled: true
     - name: Header
-      hint: Navigation styling
+      hint: Set the style for navigation, and adjust the logo size.
       path: admin_settings_theme_header
       icon: window maximize
       enabled: true
