@@ -6,8 +6,12 @@
           = item
             = ss('theme.footer.copyright').html_safe
       = column computer: 8, tablet: 8, mobile: 16, class: "middle aligned #{footer_icon_order} column logo holder mobile-center"
-        - if ENV['branded']
-          = link_to t('app.powered_by_url'), target: "_blank"
+        - if ENV['BRANDED'] == 'true'
+          - if ENV['AFFILIATE']
+            = link_to "https://www.goodlogik.com?via=#{ENV['AFFILIATE']}", target: "_blank"
+              = image_tag ('icon.png'), class: 'ui image footer', alt: 'logik logo'
+          - else
             = image_tag ('icon.png'), class: 'ui image footer', alt: 'logik logo'
+
         - else
           = image_tag footer_icon, class: 'ui image footer'
