@@ -76,7 +76,8 @@ module Widget
     end
 
     def overlay_background
-      ss("theme.homepage.overlay_background")
+      #ss("theme.homepage.overlay_background")
+      "normal"
     end
 
     def image_style
