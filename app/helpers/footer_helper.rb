@@ -30,10 +30,10 @@ module FooterHelper
 
   def footer_icon
     palette = Palette.new
-    if palette.contrast(ss("theme.footer.color")) == 'inverted'
-      ss('theme.branding.inverted_icon')
+    if palette.contrast(ss("theme.footer.color")) == "inverted"
+      ss("theme.branding.inverted_icon")
     else
-      ss('theme.branding.icon')
+      ss("theme.branding.icon")
     end
   end
 
