@@ -21,7 +21,11 @@ components:
 
   site_settings_theme:
     name: 'Theme Settings'
-    description: 'Provides general settings capabilities'
+    description: >
+      Configure the look and feel of your platform.
+      <br><br>
+      Learn more at our
+      <a href="http://help.goodlogik.com/support/solutions/articles/47001001253-theme" target="_blank">Help Desk</a>
 
   site_settings_theme_homepage:
     name: 'Homepage Theme Settings'
@@ -74,8 +78,10 @@ components:
   site_settings:
     name: 'Settings'
     description: >
-                  Provides settings capabilities like a boss.
-                  <strong>Click advanced mode to ball.</strong>
+                  Configure the platform to your heart's desire.
+                  <br><br>
+                  Learn more at our
+                  <a href="http://help.goodlogik.com/support/solutions/articles/47001001238-settings" target="_blank">Help Desk</a>
 
   members:
     name: 'Members'
@@ -84,8 +90,7 @@ components:
   users:
     name: 'Users'
     description:  View account details, manage roles, verify profiles, and ban trolls.
-                  <br>
-                  <br>
+                  <br><br>
                   Learn more at our
                   <a href="http://help.goodlogik.com/support/solutions/articles/47000473645-users" target="_blank">Help Desk</a>.
 

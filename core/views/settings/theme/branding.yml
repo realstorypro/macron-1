@@ -23,3 +23,9 @@ views:
         size: ['180','180']
         required: true
         default: 'icon.png'
+      inverted_icon:
+        label: 'Inverted Icon'
+        type: 'image'
+        size: ['180','180']
+        required: true
+        default: 'icon.png'

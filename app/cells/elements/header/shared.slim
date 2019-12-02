@@ -1,9 +1,9 @@
 = fragment "header #{header_size} #{model.color if model.respond_to?(:color)}"
 
   - if model.respond_to?(:landscape_image) && model.respond_to?(:vertical_image)
-    == Vue::CoverCell.(nil, landscape_image: model.landscape_image, vertical_image: model.vertical_image)
+    == Vue::CoverCell.(nil, overlay_background: ss("theme.global.overlay_background"), landscape_image: model.landscape_image, vertical_image: model.vertical_image)
   - elsif model.respond_to?(:landscape_image)
-    == Vue::CoverCell.(nil, image: model.landscape_image)
+    == Vue::CoverCell.(nil, overlay_background: ss("theme.global.overlay_background"), image: model.landscape_image)
 
   = container
     = grid 'centered'

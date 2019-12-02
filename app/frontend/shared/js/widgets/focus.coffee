@@ -43,7 +43,7 @@ class Focus
     $('.action.bar .ui.right').toggleClass(('full-width'))
 
     # Toggle Focus Text
-    $('#focus-mode').toggleText('Writer Mode','Exit Writer Mode')
+    $('#focus-mode').toggleText('Enter Writer Mode','Exit Writer Mode')
 
     # Toggle Entry Details
     $('.entry.details').slideToggle()

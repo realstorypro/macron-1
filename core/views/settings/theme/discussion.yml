@@ -4,13 +4,14 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
+      nav_header:
+        type: 'header'
+        text: 'Navigation'
       menu_style:
         advanced: true
-        label: 'Menu Style'
+        label: 'Menu Background'
         type: 'fixed_dropdown'
         options:
         - solid
         - transparent
-        - matching solid
-        - matching transparent
         default: 'transparent'

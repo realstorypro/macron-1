@@ -4,47 +4,48 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
-      configuration_header:
+      nav_header:
         type: 'header'
-        text: 'Configuration'
+        text: 'Navigation'
       menu_color:
         label: 'Menu Color'
         type: 'color'
         default: 'black'
 
+      content_top_padding:
+        label: 'Content Top Padding'
+        type: 'integer'
+        hint: '(In EM)'
+        default: 0
+
+      homepage_header:
+        type: 'header'
+        text: 'Homepage'
       overlay_color:
         label: 'Overlay Color'
         type: 'color'
         default: 'black'
 
-      overlay_background:
-        advanced: true
-        label: 'Overlay Background'
-        type: 'fixed_dropdown'
-        options:
-        - normal
-        - gradient
-        default: 'normal'
+      # disabled until we're ready to invest time in making gradients look good
+      # overlay_background:
+      #   advanced: true
+      #   label: 'Overlay Background'
+      #   type: 'fixed_dropdown'
+      #   options:
+      #   - normal
+      #   - gradient
+      #   default: 'normal'
 
-      image_style:
-        advanced: true
-        label: 'Image Style'
-        type: 'fixed_dropdown'
-        options:
-        - normal
-        - fixed
-        default: 'normal'
 
-      category_style:
-        advanced: true
-        label: 'Category Style'
-        type: 'fixed_dropdown'
-        options:
-        - normal
-        - divided
-        - white boxed
-        - black boxed
-        default: 'normal'
+      # disabled until we're ready to invest time in making image styles look good
+      # image_style:
+      #   advanced: true
+      #   label: 'Image Style'
+      #   type: 'fixed_dropdown'
+      #   options:
+      #   - normal
+      #   - fixed
+      #   default: 'normal'
 
       item_order:
         advanced: true
@@ -76,12 +77,6 @@ views:
         - 6
         default: 6
 
-      content_top_padding:
-        advanced: true
-        label: 'Content Top Padding'
-        type: 'integer'
-        hint: '(In EM)'
-        default: 0
 
       content_icons:
         advanced: true

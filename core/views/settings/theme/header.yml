@@ -8,21 +8,19 @@ views:
         type: 'header'
         text: 'Navigation'
       menu_color:
-        label: 'Color'
+        label: 'Background Color'
         type: 'color'
         required: true
         default: 'black'
 
       button_color:
-        advanced: true
         label: 'Button Color'
         type: 'color'
         required: true
         default: 'black'
 
       menu_position:
-        advanced: true
-        label: 'Menu Position'
+        label: 'Hamburger Position'
         type: 'fixed_dropdown'
         options:
         - 'left'
@@ -32,19 +30,17 @@ views:
 
       logo_header:
         type: 'header'
-        text: 'Logo'
+        text: 'Logo Width'
 
       desktop_logo_size:
-        advanced: true
-        label: 'Desktop Logo Width'
+        label: 'Desktop Width'
         type: 'string'
         hint: '(in pixels)'
         maxlength: '3'
         default: 150
 
       mobile_logo_size:
-        advanced: true
-        label: 'Mobile Logo Width'
+        label: 'Mobile Width'
         type: 'string'
         hint: '(in pixels)'
         maxlength: '3'

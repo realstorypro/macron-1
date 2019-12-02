@@ -21,8 +21,8 @@ module Admin::SiteSettings
       end
       if current_user.advanced
         add_to_actions(
-          text: "Simple Mode",
-          class: "blue",
+          text: "Exit Advanced Mode",
+          class: "red",
           icon: "exclamation circle",
           url: disable_advanced_admin_user_path(current_user.id),
           permission: policy(current_user).enable_advanced?,
@@ -30,7 +30,7 @@ module Admin::SiteSettings
         )
       else
         add_to_actions(
-          text: "Advanced Mode",
+          text: "Enter Advanced Mode",
           class: "red",
           icon: "exclamation circle",
           url: enable_advanced_admin_user_path(current_user.id),

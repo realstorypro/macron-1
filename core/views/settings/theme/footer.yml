@@ -14,33 +14,6 @@ views:
         required: true
         default: 'black'
 
-      button_color:
-        advanced: true
-        label: 'Button Color'
-        type: 'color'
-        required: true
-        default: 'white'
-
-      button_style:
-        advanced: true
-        label: 'Button Style'
-        type: 'fixed_dropdown'
-        options:
-        - regular
-        - inverted
-        required: true
-        default: 'regular'
-
-      icon:
-        advanced: true
-        label: 'Icon'
-        type: 'fixed_dropdown'
-        options:
-        - show
-        - hide
-        required: true
-        default: 'show'
-
       item_order:
         advanced: true
         label: 'Column Order'
@@ -55,15 +28,8 @@ views:
         type: 'header'
         text: 'Content'
 
-      about:
-        label: 'About Us'
-        type: 'rich'
-        hint: 'Write two short paragraphs describing the web site.'
-        required: true
-        default: '<p>Lorem ipsum dolor sit amet</p>'
-
-      copyrights:
+      copyright:
         label: 'Copyrights'
         type: 'string'
         required: true
-        default: '2017-2018 Logik'
+        default: '&copy; 2019 GoodLogik'

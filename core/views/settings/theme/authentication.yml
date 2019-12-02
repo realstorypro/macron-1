@@ -8,31 +8,31 @@ views:
         type: 'header'
         text: 'Configuration'
       sign_up_title:
-        advanced: true
-        label: '"Sign up" Title'
+        label: '"Sign Up" Title'
         type: 'string'
         hint: 'Title of the Sign Up Box'
         required: true
         default: 'Sign Up'
 
       sign_up_subtitle:
-        advanced: true
-        label: '"Sign Up" sub title'
+        label: '"Sign Up" Sub-title'
         type: 'string'
         hint: 'Sub Title of the Sign Up Box'
         required: true
         default: 'Join The Community'
 
       sign_in_title:
-        advanced: true
-        label: '"Sign in" title'
+        label: '"Sign In" Title'
         type: 'string'
         hint: 'Title of the Sign In Box'
         required: true
         default: 'Sign In'
 
+      images_header:
+        type: 'header'
+        text: 'Images'
       auth_background:
-        label: 'Authentication'
+        label: 'Authentication Background'
         type: 'image'
         size: ['2560','1600']
         required: true

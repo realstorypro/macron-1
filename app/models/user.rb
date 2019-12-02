@@ -23,7 +23,7 @@ class User < ApplicationRecord
 
   # Include default devise modules. Others available are:
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :trackable
 
   rolify role_cname: "Role", before_add: :clear_existing_roles!
   friendly_id :username, use: :slugged

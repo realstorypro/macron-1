@@ -67,7 +67,7 @@ module Admin
           )
         else
           add_to_actions(
-            text: "Advanced Mode",
+            text: "Enter Advanced Mode",
             class: "white left floated hidden",
             dynamic: true,
             icon: "exclamation circle",
@@ -78,7 +78,7 @@ module Admin
           )
         end
         add_to_actions(
-          text: "Writer Mode",
+          text: "Enter Writer Mode",
           class: "grey enhanced right floated",
           id: "focus-mode",
           url: send(preview_path, @entry.category.slug, @entry.slug),

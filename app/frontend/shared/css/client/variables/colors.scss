@@ -3,17 +3,17 @@
 // ********************** //
 
 $red            : #B03060;
-$orange         : #ff6d00;
+$orange         : #ff9900;
 $yellow         : #ffbf00;
-$olive          : #32CD32;
+$olive          : #29e061;
 $green          : #21BA45;
 $teal           : #008080;
 $blue           : #2185D0;
 $violet         : #EE82EE;
 $purple         : #B413EC;
-$pink           : #FF1493;
-$brown          : #A52A2A;
-$grey           : #A0A0A0;
+$pink           : #ff14c2;
+$brown          : #8c3636;
+$grey           : #e8e8e8;
 $black          : #000000;
 $white          : #FFFFFF;
 
@@ -23,8 +23,8 @@ $medium-shading: rgba(34, 36, 38, 0.15);
 
 // Default Color Map
 $g-colors-list: orange violet grey white yellow red blue olive green teal purple pink brown black;
-$g-colors-regular: orange violet grey white yellow;
-$g-colors-inverted: red blue olive green teal purple pink brown black;
+$g-colors-regular: grey white yellow olive;
+$g-colors-inverted: red orange blue green teal violet purple pink brown black;
 $g-colors-map: (
         red: $red,
         orange: $orange,
@@ -58,106 +58,110 @@ $w-nav-colors-map: (
         black: $black,
         white: $white );
 
+
+// Homepage Regular Colors Map
+$w-homepage-header-colors-regular: none;
+
 // Homepage Overlay Colors Map
 $w-homepage-header-colors-map: (
-        red: $red,
-        orange: $orange,
-        yellow: $yellow,
-        olive: $olive,
-        green: $green,
-        teal: $teal,
-        blue: $blue,
-        violet: $violet,
-        purple: $purple,
-        pink: $pink,
-        brown: $brown,
-        grey: $grey,
-        black: $black,
-        white: $white );
+        red: darken($red, 30),
+        orange: darken($orange,30),
+        yellow: darken($yellow, 38),
+        olive: darken($olive,35),
+        green: darken($green,30),
+        teal: darken($teal,22),
+        blue: darken($blue,35),
+        violet: darken($violet, 50),
+        purple: darken($purple, 30),
+        pink: darken($pink, 45),
+        brown: darken($brown,35),
+        grey: darken($grey, 65),
+        black: lighten($black, 9),
+        white: darken($white, 60) );
 
 // Homepage Overlay Gradient Maps
 $lg-overlay-dir: to bottom;
 $sm-overlay-dir: to bottom left;
 
 $w-homepage-header-overlay-gradient-map: (
-        red: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, red), 0.15), rgba(map-get($g-colors-map, red), 0.85) 70%),
-        orange: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, orange), 0.15), rgba(map-get($g-colors-map, orange), 0.85) 70%),
-        yellow: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, yellow), 0.15), rgba(map-get($g-colors-map, yellow), 0.85) 70%),
-        olive: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, olive), 0.15), rgba(map-get($g-colors-map, olive), 0.85) 70%),
-        green: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, green), 0.15), rgba(map-get($g-colors-map, green), 0.85) 70%),
-        teal: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, teal), 0.15), rgba(map-get($g-colors-map, teal), 0.85) 70%),
-        blue: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, blue), 0.15), rgba(map-get($g-colors-map, blue), 0.85) 70%),
-        violet: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, violet), 0.05), rgba(map-get($g-colors-map, violet), 0.70) 70%),
-        purple: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, purple), 0.15), rgba(map-get($g-colors-map, purple), 0.85) 70%),
-        pink: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, pink), 0.05), rgba(map-get($g-colors-map, pink), 0.70) 70%),
-        brown: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, brown), 0.05), rgba(map-get($g-colors-map, brown), 0.70) 70%),
-        grey: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, grey), 0.05), rgba(map-get($g-colors-map, grey), 0.70) 70%),
-        black: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, black), 0.05), rgba(map-get($g-colors-map, black), 0.70) 70%),
-        white: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, white), 0.05), rgba(map-get($g-colors-map, white), 0.70) 70%));
+        red: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, red), 0.15), rgba(map-get($w-homepage-header-colors-map, red), 0.85) 70%),
+        orange: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, orange), 0.15), rgba(map-get($w-homepage-header-colors-map, orange), 0.85) 70%),
+        yellow: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, yellow), 0.15), rgba(map-get($w-homepage-header-colors-map, yellow), 0.85) 70%),
+        olive: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, olive), 0.15), rgba(map-get($w-homepage-header-colors-map, olive), 0.85) 70%),
+        green: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, green), 0.15), rgba(map-get($w-homepage-header-colors-map, green), 0.85) 70%),
+        teal: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, teal), 0.15), rgba(map-get($w-homepage-header-colors-map, teal), 0.85) 70%),
+        blue: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, blue), 0.15), rgba(map-get($w-homepage-header-colors-map, blue), 0.85) 70%),
+        violet: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, violet), 0.05), rgba(map-get($w-homepage-header-colors-map, violet), 0.70) 70%),
+        purple: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, purple), 0.15), rgba(map-get($w-homepage-header-colors-map, purple), 0.85) 70%),
+        pink: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, pink), 0.05), rgba(map-get($w-homepage-header-colors-map, pink), 0.70) 70%),
+        brown: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, brown), 0.05), rgba(map-get($w-homepage-header-colors-map, brown), 0.70) 70%),
+        grey: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, grey), 0.05), rgba(map-get($w-homepage-header-colors-map, grey), 0.70) 70%),
+        black: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, black), 0.05), rgba(map-get($w-homepage-header-colors-map, black), 0.70) 70%),
+        white: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, white), 0.05), rgba(map-get($w-homepage-header-colors-map, white), 0.70) 70%));
 
 $w-homepage-header-overlay-gradient-map-tiny: (
-        red: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, red), 0.65), rgba(map-get($g-colors-map, red), 0.75)),
-        orange: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, orange), 0.65), rgba(map-get($g-colors-map, orange), 0.75)),
-        yellow: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, yellow), 0.65), rgba(map-get($g-colors-map, yellow), 0.75)),
-        olive: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, olive), 0.65), rgba(map-get($g-colors-map, olive), 0.75)),
-        green: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, green), 0.65), rgba(map-get($g-colors-map, green), 0.75)),
-        teal: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, teal), 0.65), rgba(map-get($g-colors-map, teal), 0.75)),
-        blue: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, blue), 0.65), rgba(map-get($g-colors-map, blue), 0.75)),
-        violet: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, violet), 0.65), rgba(map-get($g-colors-map, violet), 0.75)),
-        purple: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, purple), 0.65), rgba(map-get($g-colors-map, purple), 0.75)),
-        pink: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, pink), 0.65), rgba(map-get($g-colors-map, pink), 0.75)),
-        brown: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, brown), 0.65), rgba(map-get($g-colors-map, brown), 0.75)),
-        grey: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, grey), 0.65), rgba(map-get($g-colors-map, grey), 0.75)),
-        black: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, black), 0.65), rgba(map-get($g-colors-map, black), 0.75)),
-        white: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, white), 0.65), rgba(map-get($g-colors-map, white), 0.75)));
+        red: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, red), 0.65), rgba(map-get($w-homepage-header-colors-map, red), 0.75)),
+        orange: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, orange), 0.65), rgba(map-get($w-homepage-header-colors-map, orange), 0.75)),
+        yellow: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, yellow), 0.65), rgba(map-get($w-homepage-header-colors-map, yellow), 0.75)),
+        olive: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, olive), 0.65), rgba(map-get($w-homepage-header-colors-map, olive), 0.75)),
+        green: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, green), 0.65), rgba(map-get($w-homepage-header-colors-map, green), 0.75)),
+        teal: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, teal), 0.65), rgba(map-get($w-homepage-header-colors-map, teal), 0.75)),
+        blue: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, blue), 0.65), rgba(map-get($w-homepage-header-colors-map, blue), 0.75)),
+        violet: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, violet), 0.65), rgba(map-get($w-homepage-header-colors-map, violet), 0.75)),
+        purple: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, purple), 0.65), rgba(map-get($w-homepage-header-colors-map, purple), 0.75)),
+        pink: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, pink), 0.65), rgba(map-get($w-homepage-header-colors-map, pink), 0.75)),
+        brown: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, brown), 0.65), rgba(map-get($w-homepage-header-colors-map, brown), 0.75)),
+        grey: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, grey), 0.65), rgba(map-get($w-homepage-header-colors-map, grey), 0.75)),
+        black: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, black), 0.65), rgba(map-get($w-homepage-header-colors-map, black), 0.75)),
+        white: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, white), 0.65), rgba(map-get($w-homepage-header-colors-map, white), 0.75)));
 
 $w-homepage-header-overlay-gradient-map-small: (
-        red: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, red), 0.65), rgba(map-get($g-colors-map, red), 0.75)),
-        orange: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, orange), 0.65), rgba(map-get($g-colors-map, orange), 0.75)),
-        yellow: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, yellow), 0.65), rgba(map-get($g-colors-map, yellow), 0.75)),
-        olive: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, olive), 0.65), rgba(map-get($g-colors-map, olive), 0.75)),
-        green: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, green), 0.65), rgba(map-get($g-colors-map, green), 0.75)),
-        teal: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, teal), 0.65), rgba(map-get($g-colors-map, teal), 0.75)),
-        blue: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, blue), 0.65), rgba(map-get($g-colors-map, blue), 0.75)),
-        violet: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, violet), 0.65), rgba(map-get($g-colors-map, violet), 0.75)),
-        purple: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, purple), 0.65), rgba(map-get($g-colors-map, purple), 0.75)),
-        pink: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, pink), 0.65), rgba(map-get($g-colors-map, pink), 0.75)),
-        brown: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, brown), 0.65), rgba(map-get($g-colors-map, brown), 0.75)),
-        grey: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, grey), 0.65), rgba(map-get($g-colors-map, grey), 0.75)),
-        black: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, black), 0.65), rgba(map-get($g-colors-map, black), 0.75)),
-        white: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, white), 0.65), rgba(map-get($g-colors-map, white), 0.75)));
+        red: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, red), 0.65), rgba(map-get($w-homepage-header-colors-map, red), 0.75)),
+        orange: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, orange), 0.65), rgba(map-get($w-homepage-header-colors-map, orange), 0.75)),
+        yellow: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, yellow), 0.65), rgba(map-get($w-homepage-header-colors-map, yellow), 0.75)),
+        olive: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, olive), 0.65), rgba(map-get($w-homepage-header-colors-map, olive), 0.75)),
+        green: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, green), 0.65), rgba(map-get($w-homepage-header-colors-map, green), 0.75)),
+        teal: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, teal), 0.65), rgba(map-get($w-homepage-header-colors-map, teal), 0.75)),
+        blue: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, blue), 0.65), rgba(map-get($w-homepage-header-colors-map, blue), 0.75)),
+        violet: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, violet), 0.65), rgba(map-get($w-homepage-header-colors-map, violet), 0.75)),
+        purple: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, purple), 0.65), rgba(map-get($w-homepage-header-colors-map, purple), 0.75)),
+        pink: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, pink), 0.65), rgba(map-get($w-homepage-header-colors-map, pink), 0.75)),
+        brown: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, brown), 0.65), rgba(map-get($w-homepage-header-colors-map, brown), 0.75)),
+        grey: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, grey), 0.65), rgba(map-get($w-homepage-header-colors-map, grey), 0.75)),
+        black: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, black), 0.65), rgba(map-get($w-homepage-header-colors-map, black), 0.75)),
+        white: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, white), 0.65), rgba(map-get($w-homepage-header-colors-map, white), 0.75)));
 
 $w-homepage-header-overlay-gradient-map-short: (
-        red: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, red), 0.65), rgba(map-get($g-colors-map, red), 0.75) 40%),
-        orange: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, orange), 0.65), rgba(map-get($g-colors-map, orange), 0.75) 40%),
-        yellow: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, yellow), 0.65), rgba(map-get($g-colors-map, yellow), 0.75) 40%),
-        olive: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, olive), 0.65), rgba(map-get($g-colors-map, olive), 0.75) 40%),
-        green: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, green), 0.65), rgba(map-get($g-colors-map, green), 0.75) 40%),
-        teal: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, teal), 0.65), rgba(map-get($g-colors-map, teal), 0.75) 40%),
-        blue: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, blue), 0.65), rgba(map-get($g-colors-map, blue), 0.75) 40%),
-        violet: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, violet), 0.65), rgba(map-get($g-colors-map, violet), 0.75) 40%),
-        purple: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, purple), 0.65), rgba(map-get($g-colors-map, purple), 0.75) 40%),
-        pink: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, pink), 0.65), rgba(map-get($g-colors-map, pink), 0.75) 40%),
-        brown: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, brown), 0.65), rgba(map-get($g-colors-map, brown), 0.75) 40%),
-        grey: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, grey), 0.65), rgba(map-get($g-colors-map, grey), 0.75) 40%),
-        black: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, black), 0.65), rgba(map-get($g-colors-map, black), 0.75) 40%),
-        white: linear-gradient($sm-overlay-dir, rgba(map-get($g-colors-map, white), 0.65), rgba(map-get($g-colors-map, white), 0.75) 40%));
+        red: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, red), 0.65), rgba(map-get($w-homepage-header-colors-map, red), 0.75) 40%),
+        orange: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, orange), 0.65), rgba(map-get($w-homepage-header-colors-map, orange), 0.75) 40%),
+        yellow: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, yellow), 0.65), rgba(map-get($w-homepage-header-colors-map, yellow), 0.75) 40%),
+        olive: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, olive), 0.65), rgba(map-get($w-homepage-header-colors-map, olive), 0.75) 40%),
+        green: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, green), 0.65), rgba(map-get($w-homepage-header-colors-map, green), 0.75) 40%),
+        teal: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, teal), 0.65), rgba(map-get($w-homepage-header-colors-map, teal), 0.75) 40%),
+        blue: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, blue), 0.65), rgba(map-get($w-homepage-header-colors-map, blue), 0.75) 40%),
+        violet: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, violet), 0.65), rgba(map-get($w-homepage-header-colors-map, violet), 0.75) 40%),
+        purple: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, purple), 0.65), rgba(map-get($w-homepage-header-colors-map, purple), 0.75) 40%),
+        pink: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, pink), 0.65), rgba(map-get($w-homepage-header-colors-map, pink), 0.75) 40%),
+        brown: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, brown), 0.65), rgba(map-get($w-homepage-header-colors-map, brown), 0.75) 40%),
+        grey: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, grey), 0.65), rgba(map-get($w-homepage-header-colors-map, grey), 0.75) 40%),
+        black: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, black), 0.65), rgba(map-get($w-homepage-header-colors-map, black), 0.75) 40%),
+        white: linear-gradient($sm-overlay-dir, rgba(map-get($w-homepage-header-colors-map, white), 0.65), rgba(map-get($w-homepage-header-colors-map, white), 0.75) 40%));
 
 $w-homepage-header-overlay-gradient-map-tall: (
-        red: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, red), 0.65), rgba(map-get($g-colors-map, red), 0.75) 40%),
-        orange: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, orange), 0.65), rgba(map-get($g-colors-map, orange), 0.75) 40%),
-        yellow: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, yellow), 0.65), rgba(map-get($g-colors-map, yellow), 0.75) 40%),
-        olive: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, olive), 0.65), rgba(map-get($g-colors-map, olive), 0.75) 40%),
-        green: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, green), 0.65), rgba(map-get($g-colors-map, green), 0.75) 40%),
-        teal: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, teal), 0.65), rgba(map-get($g-colors-map, teal), 0.75) 40%),
-        blue: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, blue), 0.65), rgba(map-get($g-colors-map, blue), 0.75) 40%),
-        violet: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, violet), 0.65), rgba(map-get($g-colors-map, violet), 0.75) 40%),
-        purple: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, purple), 0.65), rgba(map-get($g-colors-map, purple), 0.75) 40%),
-        pink: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, pink), 0.65), rgba(map-get($g-colors-map, pink), 0.75) 40%),
-        brown: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, brown), 0.65), rgba(map-get($g-colors-map, brown), 0.75) 40%),
-        grey: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, grey), 0.65), rgba(map-get($g-colors-map, grey), 0.75) 40%),
-        black: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, black), 0.65), rgba(map-get($g-colors-map, black), 0.75) 40%),
-        white: linear-gradient($lg-overlay-dir, rgba(map-get($g-colors-map, white), 0.65), rgba(map-get($g-colors-map, white), 0.75) 40%));
+        red: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, red), 0.65), rgba(map-get($w-homepage-header-colors-map, red), 0.75) 40%),
+        orange: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, orange), 0.65), rgba(map-get($w-homepage-header-colors-map, orange), 0.75) 40%),
+        yellow: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, yellow), 0.65), rgba(map-get($w-homepage-header-colors-map, yellow), 0.75) 40%),
+        olive: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, olive), 0.65), rgba(map-get($w-homepage-header-colors-map, olive), 0.75) 40%),
+        green: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, green), 0.65), rgba(map-get($w-homepage-header-colors-map, green), 0.75) 40%),
+        teal: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, teal), 0.65), rgba(map-get($w-homepage-header-colors-map, teal), 0.75) 40%),
+        blue: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, blue), 0.65), rgba(map-get($w-homepage-header-colors-map, blue), 0.75) 40%),
+        violet: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, violet), 0.65), rgba(map-get($w-homepage-header-colors-map, violet), 0.75) 40%),
+        purple: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, purple), 0.65), rgba(map-get($w-homepage-header-colors-map, purple), 0.75) 40%),
+        pink: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, pink), 0.65), rgba(map-get($w-homepage-header-colors-map, pink), 0.75) 40%),
+        brown: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, brown), 0.65), rgba(map-get($w-homepage-header-colors-map, brown), 0.75) 40%),
+        grey: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, grey), 0.65), rgba(map-get($w-homepage-header-colors-map, grey), 0.75) 40%),
+        black: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, black), 0.65), rgba(map-get($w-homepage-header-colors-map, black), 0.75) 40%),
+        white: linear-gradient($lg-overlay-dir, rgba(map-get($w-homepage-header-colors-map, white), 0.65), rgba(map-get($w-homepage-header-colors-map, white), 0.75) 40%));
 
 // Profile Card Color Map
 $c-profile-colors-alpha: 0.5;

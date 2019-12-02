@@ -1,10 +1,13 @@
 = segment "footer fragment vertical #{footer_class}"
   = container 'center aligned wide'
     = grid "stackable left aligned mobile #{footer_item_order}"
-      = column computer: 8, tablet: 8, mobile: 16, class: 'middle aligned link holder computer only tablet only'
+      = column computer: 8, tablet: 8, mobile: 16, class: "middle aligned #{footer_copyright_order} link holder computer only tablet only"
         = list "copyright horizontal mini divided link #{footer_item_class}"
           = item
-            | &copy; 2018 - 2019. All Rights Reserved.
-      = column computer: 8, tablet: 8, mobile: 16, class: 'middle right aligned column logo holder mobile-center'
-        = link_to t('app.powered_by_url'), target: "_blank"
-          = image_tag ('icon.png'), class: 'ui image footer', alt: 'logik logo'
+            = ss('theme.footer.copyright').html_safe
+      = column computer: 8, tablet: 8, mobile: 16, class: "middle aligned #{footer_icon_order} column logo holder mobile-center"
+        - if ENV['branded']
+          = link_to t('app.powered_by_url'), target: "_blank"
+            = image_tag ('icon.png'), class: 'ui image footer', alt: 'logik logo'
+        - else
+          = image_tag footer_icon, class: 'ui image footer'

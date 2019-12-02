@@ -97,7 +97,7 @@ module Admin
       def add_delete_ability
         add_to_actions(
           text: "Delete",
-          class: "basic",
+          class: "red",
           icon: "remove",
           url: send(delete_path("admin"), @entry),
           permission: policy(@entry).destroy?,
@@ -142,7 +142,7 @@ module Admin
       end
       def add_verify_ability
         add_to_actions(
-          text: "Verify",
+          text: "Verify Account",
           class: "blue",
           icon: "ban",
           url: verify_admin_user_path(@entry),
@@ -153,7 +153,7 @@ module Admin
 
       def add_unverify_ability
         add_to_actions(
-          text: "Unverify",
+          text: "Unverify Account",
           class: "blue",
           icon: "ban",
           url: unverify_admin_user_path(@entry),

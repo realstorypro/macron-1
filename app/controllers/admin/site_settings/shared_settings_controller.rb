@@ -11,16 +11,6 @@ module Admin::SiteSettings
 
     private
       def append_actions
-        unless current_user.help
-          add_to_actions(
-            text: "Help",
-            class: "",
-            icon: "question circle",
-            url: enable_help_admin_user_path(current_user.id),
-            permission: policy(current_user).enable_help?,
-            data: { widget: "clicker", action: "click" }
-          )
-        end
       end
   end
 end

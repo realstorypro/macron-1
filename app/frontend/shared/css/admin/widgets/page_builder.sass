@@ -34,8 +34,17 @@
       display: none
 
 .page.builder.widget.active
+  .sortable-ghost
+    background: #efefef
+    border: 2px solid lighten($blue, 20) !important
+
+  .element.sortable-chosen
+    background: #efefef
+    border: 2px solid lighten($blue, 20) !important
+
   .element
     border: 1px dashed lighten($blue, 20)
+    transition: 0.1s all
 
   .empty.element.segment
     display: block
