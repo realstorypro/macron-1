@@ -2,7 +2,7 @@ menu:
   theme_components:
   - section:
     - name: Homepage
-      hint: Homepage look & feel
+      hint: Set the homepage colors along with the number of featured items and discussions.
       path: admin_settings_theme_homepage
       icon: home
       enabled: true
@@ -17,7 +17,7 @@ menu:
       icon: video
       enabled: false
     - name: Discussions
-      hint: Discussions look & feel
+      hint: Set the menu style for discussion details.
       path: admin_settings_theme_discussion
       icon: comments
       enabled: true
