@@ -13,7 +13,6 @@ views:
         default: 'black'
 
       content_top_padding:
-        advanced: true
         label: 'Content Top Padding'
         type: 'integer'
         hint: '(In EM)'

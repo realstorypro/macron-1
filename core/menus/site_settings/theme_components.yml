@@ -21,3 +21,4 @@ menu:
       path: admin_settings_theme_discussion
       icon: comments
       enabled: true
+      advanced: true
