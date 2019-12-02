@@ -80,7 +80,8 @@ module Widget
     end
 
     def image_style
-      ss("theme.homepage.image_style")
+      #ss("theme.homepage.image_style")
+      "normal"
     end
 
     def category_style
