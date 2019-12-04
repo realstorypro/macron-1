@@ -31,5 +31,4 @@ html[amp lang="en"]
         = File.read("#{Rails.root}/public#{stylesheet_path('amp/init', host: nil)}".gsub(Rails.application.config.action_controller.asset_host, ""))
   body
     amp-install-serviceworker[src= "/worker.js" layout= "nodisplay"]
-    = render "layouts/partials/amp_analytics"
     = yield
