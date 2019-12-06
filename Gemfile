@@ -9,7 +9,7 @@ ruby "2.6.1"
 gem "acts_as_list"
 gem "rails", "~> 5.2.0"
 gem "bootsnap", ">= 1.1.0", require: false
-gem "puma", "~> 3.11"
+gem "puma", "~> 3.12"
 gem "sitemap_generator"
 gem "httparty"
 gem "validate_url"
