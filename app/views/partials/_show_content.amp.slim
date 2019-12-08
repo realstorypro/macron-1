@@ -8,13 +8,13 @@
   - @entry.areas.select do |area|
     - if area.type.include?('Header')
       - area.elements.each do |element|
-        == Elements::ElementCell.(element, request: request, amped: true)
+        == Elements::ElementCell.(element, request: request, site_settings: @site_settings, amped: true)
 
   = widget 'normal rich text'
     - @entry.areas.select do |area|
       - if area.type.include?('Content')
         - area.elements.each do |element|
-          == Elements::ElementCell.(element, request: request, amped: true)
+          == Elements::ElementCell.(element, request: request, site_settings: @site_settings, amped: true)
 
     - @entry.areas.select do |area|
       - if area.type.include?('Reference') && area.elements.count > 0
@@ -22,7 +22,7 @@
           = "Reference".pluralize(area.elements.count)
         = list 'bulleted relaxed'
           - area.elements.each do |element|
-            == Elements::ElementCell.(element, request: request, amped: true)
+            == Elements::ElementCell.(element, request: request, site_settings: @site_settings, amped: true)
   .not.available.comments
     h5
       | Comments Unavailable

@@ -34,6 +34,14 @@ views:
         icon: 'image'
         type: 'image'
         size: ['1456','2560']
+      overlay_background:
+        advanced: true
+        label: 'Background Style'
+        type: 'fixed_dropdown'
+        options:
+          - normal
+          - fixed
+        default: 'normal'
       alt_text:
         label: 'Background Description'
         icon: 'image'

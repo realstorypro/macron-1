@@ -10,6 +10,13 @@ module Elements
       "fullscreen"
     end
 
+    def overlay_background
+      if model.respond_to?(:overlay_background) && !model.overlay_background.blank?
+        return model.overlay_background
+      end
+      ss("theme.global.overlay_background")
+    end
+
     # ##############
     # title portion
     # ##############
