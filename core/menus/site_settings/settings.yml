@@ -23,8 +23,8 @@ menu:
         enabled: true
         advanced: true
       - name: Integrations
-        hint: Manage webhooks and other integrations
+        hint: Use webhooks to integrate the platform with other services.
         path: admin_settings_integration
         icon: plug
-        enabled: false
+        enabled: true
         advanced: true
