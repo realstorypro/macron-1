@@ -10,15 +10,9 @@ json.display "standalone"
 json.theme_color "#000"
 json.background_color "#000"
 
-if ENV["BRANDED"] == "true"
-  icons = [
-    { src: image_url("icon.png"), sizes: "512x512" },
-  ]
-else
-  icons = [
-    { src: ss("theme.branding.app_icon"), sizes: "512x512" },
-  ]
-end
+icons = [
+  { src: ss("theme.branding.app_icon"), sizes: "512x512" },
+]
 
 json.icons do
   json.merge! icons
