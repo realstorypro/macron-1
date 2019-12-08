@@ -7,7 +7,7 @@ ruby "2.6.1"
 
 # Core
 gem "acts_as_list"
-gem "rails", "~> 5.2.0"
+gem "rails", "5.2.3"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "puma", "~> 3.11"
 gem "sitemap_generator"

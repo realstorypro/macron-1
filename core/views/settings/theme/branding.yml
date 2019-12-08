@@ -4,9 +4,9 @@ views:
       set_defaults: true
       rejected_field_names: ''
     new:
-      configuration_header:
+      platform_header:
         type: 'header'
-        text: 'Configuration'
+        text: 'Platform'
       logo:
         label: 'Logo'
         type: 'image'
@@ -27,5 +27,14 @@ views:
         label: 'Inverted Icon'
         type: 'image'
         size: ['180','180']
+        required: true
+        default: 'icon.png'
+      app_header:
+        type: 'header'
+        text: 'App'
+      app_icon:
+        label: 'App Icon'
+        type: 'image'
+        size: ['512','512']
         required: true
         default: 'icon.png'
