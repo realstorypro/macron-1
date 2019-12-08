@@ -35,7 +35,7 @@ module Admin
         class: "negative enhanced",
         icon: "eraser",
         id: "delete-button",
-        url: send(delete_path("admin"), @entry),
+        url: send(delete_path("admin"), @entry.id),
         permission: policy(@entry).destroy?,
         data: {
           method: "delete",
@@ -89,7 +89,7 @@ module Admin
           text: "Mobile Preview",
           class: "blue enhanced hidden",
           id: "mobile-browser-preview",
-          url: send(preview_path, @entry.category.slug, @entry.slug),
+          url: send(preview_path, @entry.category.slug, @entry.id),
           permission: policy(@entry).edit?,
           data: { widget: "previewer", action: "mobile" }
         ) unless @entry.category.nil?
@@ -98,7 +98,7 @@ module Admin
           text: "Desktop Preview",
           class: "purple enhanced hidden",
           id: "desktop-browser-preview",
-          url: send(preview_path, @entry.category.slug, @entry.slug),
+          url: send(preview_path, @entry.category.slug, @entry.id),
           permission: policy(@entry).edit?,
           data: { widget: "previewer", action: "desktop" }
         ) unless @entry.category.nil?
