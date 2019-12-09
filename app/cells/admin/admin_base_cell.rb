@@ -19,14 +19,18 @@ module Admin
       type = field_type(field)
 
       # header does not have value so we want to ignore it
+      # unless the field is "published", we want to display the unpublished tag
       value = field_value(field, row) unless type == "header" || type == "divider"
 
       # guard close to exit if there is no value
-      return if value.nil?
+      return if value.nil? && data_type.which?(type) != :published
 
       case data_type.which?(type)
       when :string, :text, :integer
         value
+      when :published
+        return "#{time_ago_in_words(value)} ago" unless value.blank? || value.to_s.length == 0
+        "<div class='ui label purple'>not published</div>".html_safe
       when :date
         "#{time_ago_in_words(value)} ago"
       when :image

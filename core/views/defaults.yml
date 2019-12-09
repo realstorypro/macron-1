@@ -9,7 +9,7 @@ views:
         type: 'string'
       published_date:
         label: 'Published'
-        type: 'string'
+        type: 'published'
     list:
       name:
         label: 'Title'
@@ -23,4 +23,4 @@ views:
         type: 'unlinked_list'
       published_date:
         label: 'Published'
-        type: 'string'
+        type: 'published'

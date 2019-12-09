@@ -13,7 +13,8 @@ class DisplayDataType
       linked_list_datatypes: %w(linked_list),
       unlinked_list_datatypes: %w(unlinked_list),
       color_datatypes: %w(color),
-      integer_datatypes: %w(integer)
+      integer_datatypes: %w(integer),
+      published_datatypes: %w(published)
     }
     options = defaults.merge(options)
 
@@ -28,6 +29,7 @@ class DisplayDataType
     @unlinked_list_datatypes = options[:unlinked_list_datatypes]
     @color_datatypes = options[:color_datatypes]
     @integer_datatypes = options[:integer_datatypes]
+    @published_datatypes = options[:published_datatypes]
   end
 
   def which?(type)
@@ -41,6 +43,7 @@ class DisplayDataType
     return :linked_list if @linked_list_datatypes.include?(type)
     return :unlinked_list if @unlinked_list_datatypes.include?(type)
     return :color if @color_datatypes.include?(type)
+    return :published if @published_datatypes.include?(type)
     :integer if @integer_datatypes.include?(type)
   end
 end

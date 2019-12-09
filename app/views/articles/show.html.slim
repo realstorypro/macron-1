@@ -1,4 +1,7 @@
-= content_for :microdata
-  = render 'microdata'
+// hiding the microdata to prevent errors with unpublished content
+- unless @entry.published_date.blank?
+  = content_for :microdata
+    = render 'microdata'
+
 = component 'article details'
   = render 'partials/show_content'
