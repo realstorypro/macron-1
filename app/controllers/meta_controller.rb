@@ -7,7 +7,7 @@ class MetaController < ApplicationController
   before_action :load_entry, only: %i[show edit update destroy]
 
   def index
-    @entries = component.klass.all.order("name")
+    @entries = component.klass.all.order("published_date desc")
     authorize @entries
   end
 
