@@ -3,7 +3,7 @@
 module Widget
   class PromotionCell < BaseCell
     cache :show do
-      [model.first.id, model.first.updated_at]
+      options[:entry_id].to_s + model.cache_key
     end
   end
 end

@@ -3,7 +3,7 @@
 module Widget
   class RelatedCell < BaseCell
     cache :show do
-      model.cache_key
+      options[:entry_id].to_s + model.cache_key
     end
 
     def show_icon(item, options = {})
