@@ -2,6 +2,10 @@
 
 module Widget
   class RelatedCell < BaseCell
+    cache :show do
+      model.cache_key
+    end
+
     def show_icon(item, options = {})
       defaults = { size: "", style: "bordered", contrast: "" }
       options = defaults.merge(options)
