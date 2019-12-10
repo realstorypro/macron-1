@@ -7,7 +7,7 @@ class MetaController < ApplicationController
   before_action :load_entry, only: %i[show edit update destroy]
 
   def index
-    if component.klass.column_names.include? :published_date
+    if component.klass.column_names.include?("published_date")
       @entries = component.klass.all.order("published_date desc")
     else
       @entries = component.klass.all.order("name")
