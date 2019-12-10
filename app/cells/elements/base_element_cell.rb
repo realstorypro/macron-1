@@ -7,6 +7,10 @@ module Elements
 
     delegate :url_helpers, to: "::Rails.application.routes"
 
+    cache :show do
+      [model.id, model.updated_at]
+    end
+
     def show
       render
     end
