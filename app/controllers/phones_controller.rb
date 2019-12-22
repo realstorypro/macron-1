@@ -4,6 +4,7 @@
 # rubocop:disable Metrics/PerceivedComplexity
 # rubocop:disable Lint/EmptyWhen
 # rubocop:disable Metrics/AbcSize
+# rubocop:disable Style/RedundantReturn
 require_dependency "application_controller"
 
 class PhonesController < ApplicationController
@@ -98,3 +99,4 @@ end
 # rubocop:enable Metrics/PerceivedComplexity
 # rubocop:enable Lint/EmptyWhen
 # rubocop:enable Metrics/AbcSize
+# rubocop:enable Style/RedundantReturn

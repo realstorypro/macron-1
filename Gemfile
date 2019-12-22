@@ -103,6 +103,7 @@ end
 
 
 group :development do
+  gem "foreman"
   gem "rb-readline"
   gem "rails-erd"
 
