@@ -52,6 +52,12 @@
   },
   "environments": {
     "test": {
+      "formation": {
+        "test": {
+          "quantity": 1,
+          "size": "performance-l"
+        }
+      },
       "env": {
         "SEGMENT_JS_WRITE_KEY": "5M3f2gqW6yK3MdRopnlP5L6Kaksisrf8",
         "SEGMENT_WRITE_KEY": "VSpwniL70DaLTmBIZV9ZfiFHGAlTlv3X",
