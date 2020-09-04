@@ -76,7 +76,7 @@
     "less": "^2.7.3",
     "moment": "^2.22.2",
     "node-gyp": "^3.8.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "npm": "^5.8.0",
     "numeral": "^2.0.6",
     "pickadate-webpack": "^3.5.6",
